@@ -1,0 +1,9 @@
+{
+	"@history":true,
+	"$configs":{
+		"$valuePath":{"type":"path"},
+		"$supportsInterval":{"type":"list/historyInterval"},
+		"$supportsRollup":{"type":"list/historyRollup"}
+	},
+	"getHistory":{"$is":"action/getHistory"}
+}

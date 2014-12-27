@@ -1,0 +1,9 @@
+{
+	"@dglogik":true,
+	"$permissions":[
+		{"group":"DGLogik", "allow":"config"},
+		{"user":"Samrg", "allow":"config"},
+		{"group":"QA", "allow":"read"},
+		{"group":"guest", "allow":"none"}
+	]
+}

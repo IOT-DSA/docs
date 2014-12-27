@@ -1,0 +1,11 @@
+{
+	"$params":[
+		{"name":"timerange","type":"timerange"},
+  		{"name":"interval","type":"interval"},
+  		{"name":"rollup","type":"enum/historyRollup"}
+	],
+	"$columns":[
+		{"name":"ts","type":"time"},
+		{"name":"value","type":"object"}
+	]
+}

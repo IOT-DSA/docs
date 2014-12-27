@@ -1,0 +1,11 @@
+{
+	"$type":"number",
+	"$unit":"°C",
+	"$hasValue":true,
+	"configs":{
+		"$max":{"type":"number"},
+		"$min":{"type":"number", "min":-273.15},
+		"$precision":{"type":"int", "min":0},
+		"$status":{"type":"enum/pointStatus"}
+	}
+}

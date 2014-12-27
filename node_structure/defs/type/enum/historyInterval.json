@@ -1,0 +1,3 @@
+{
+	"$enums":["default","none","oneYear","threeMonths","oneMonth","oneWeek","oneDay","twelveHours","sixHours","fourHours","threeHours","twoHours","oneHour","thirtyMinutes","twentyMinutes","fifteenMinutes","tenMinutes","fiveMinutes","oneMinute","thirtySeconds","fifteenSeconds","tenSeconds","fiveSeconds","oneSecond"]
+}

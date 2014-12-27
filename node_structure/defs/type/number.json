@@ -1,0 +1,6 @@
+{
+	"$configs":{
+		"max":{"type":"number"},
+		"min":{"type":"number"}
+	}
+}
