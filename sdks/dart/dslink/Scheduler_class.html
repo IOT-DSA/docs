@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scheduler class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the Scheduler class from the dslink library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink/index.html">dslink</a></li>
+                    <li><a href="dslink/Scheduler_class.html">Scheduler</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">Scheduler</span> <span class="kind">class</span>
+            </h1>
+            <p class="subtitle">
+                
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="Scheduler" class="callable">
+                <span class="name"><a href="dslink/Scheduler/Scheduler.html">Scheduler</a></span><span class="signature">()</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+    <section class="summary" id="static-properties">
+        <h2>Static Properties</h2>
+
+        <dl class="properties">
+            <dt id="currentTimer" class="property">
+                <a href="dslink/Scheduler/currentTimer.html"><span class="name ">currentTimer</span></a>
+                <span class="returntype">Timer</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>        </dl>
+    </section>
+
+    <section id="static-methods-summary" class="summary">
+        <h2>Static Methods</h2>
+        <dl class="callables">
+            <dt id="cancelCurrentTimer" class="callable">
+                <a href="dslink/Scheduler/cancelCurrentTimer.html"><span class="name ">cancelCurrentTimer</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="every" class="callable">
+                <a href="dslink/Scheduler/every.html"><span class="name ">every</span></a><span class="signature">(<wbr><span class="parameter" id="every-param-interval"><span class="parameter-name">interval</span></span>, <span class="parameter" id="every-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Timer</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="repeat" class="callable">
+                <a href="dslink/Scheduler/repeat.html"><span class="name ">repeat</span></a><span class="signature">(<wbr><span class="parameter" id="repeat-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="repeat-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="tick" class="callable">
+                <a href="dslink/Scheduler/tick.html"><span class="name ">tick</span></a><span class="signature">(<wbr><span class="parameter" id="tick-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="tick-param-interval"><span class="type-annotation"><a href="dslink/Interval_class.html">Interval</a></span> <span class="parameter-name">interval</span></span>, <span class="parameter" id="tick-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="runLater" class="callable">
+                <a href="dslink/Scheduler/runLater.html"><span class="name ">runLater</span></a><span class="signature">(<wbr><span class="parameter" id="runLater-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="later" class="callable">
+                <a href="dslink/Scheduler/later.html"><span class="name ">later</span></a><span class="signature">(<wbr><span class="parameter" id="later-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="after" class="callable">
+                <a href="dslink/Scheduler/after.html"><span class="name ">after</span></a><span class="signature">(<wbr><span class="parameter" id="after-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="after-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="runAfter" class="callable">
+                <a href="dslink/Scheduler/runAfter.html"><span class="name ">runAfter</span></a><span class="signature">(<wbr><span class="parameter" id="runAfter-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="runAfter-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Timer</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

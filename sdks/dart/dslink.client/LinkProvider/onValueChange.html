@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>onValueChange method - LinkProvider class - dslink.client library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the onValueChange method from the LinkProvider class, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.client/index.html">dslink.client</a></li>
+                    <li><a href="dslink.client/LinkProvider_class.html">LinkProvider</a></li>
+                    <li><a href="dslink.client/LinkProvider/onValueChange.html">onValueChange</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">onValueChange</span> <span class="kind">method</span>
+            </h1>
+            <p class="subtitle">
+                Retrieves a Broadcast Stream which subscribes to path with the specified cacheLevel.
+The node is only subscribed if there is at least one stream subscription.
+When the stream subscription count goes to 0, the node is unsubscribed from.
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Stream&lt;<a href="dslink.common/ValueUpdate_class.html">ValueUpdate</a>&gt;</span>
+            <span class="name ">onValueChange</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br>{<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+        <p>Retrieves a Broadcast Stream which subscribes to path with the specified cacheLevel.
+The node is only subscribed if there is at least one stream subscription.
+When the stream subscription count goes to 0, the node is unsubscribed from.</p>
+    
+    </section>
+    
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

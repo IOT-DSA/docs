@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>addStream method - BroadcastStreamController class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the addStream method from the BroadcastStreamController class, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.utils/index.html">dslink.utils</a></li>
+                    <li><a href="dslink.utils/BroadcastStreamController_class.html">BroadcastStreamController</a></li>
+                    <li><a href="dslink.utils/BroadcastStreamController/addStream.html">addStream</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">addStream</span> <span class="kind">method</span>
+            </h1>
+            <p class="subtitle">
+                Receives events from [source] and puts them into this controller's stream.
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Future</span>
+            <span class="name ">addStream</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="addStream-param-source"><span class="type-annotation">Stream&lt;T&gt;</span> <span class="parameter-name">source</span></span>,<br>{<span class="parameter" id="addStream-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span>: <span class="default-value">true</span></span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+        <p>Receives events from [source] and puts them into this controller's stream.</p>
+<p>Returns a future which completes when the source stream is done.</p>
+<p>Events must not be added directly to this controller using [add],
+[addError], [close] or [addStream], until the returned future
+is complete.</p>
+<p>Data and error events are forwarded to this controller's stream. A done
+event on the source will end the <code>addStream</code> operation and complete the
+returned future.</p>
+<p>If [cancelOnError] is true, only the first error on [source] is
+forwarded to the controller's stream, and the <code>addStream</code> ends
+after this. If [cancelOnError] is false, all errors are forwarded
+and only a done event will end the <code>addStream</code>.</p>
+    
+    </section>
+    
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

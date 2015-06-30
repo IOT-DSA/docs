@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>handleError method - CachedStreamWrapper class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the handleError method from the CachedStreamWrapper class, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.utils/index.html">dslink.utils</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper_class.html">CachedStreamWrapper</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper/handleError.html">handleError</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">handleError</span> <span class="kind">method</span>
+            </h1>
+            <p class="subtitle">
+                Creates a wrapper Stream that intercepts some errors from this stream.
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Stream&lt;T&gt;</span>
+            <span class="name ">handleError</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>,<br>{<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+        <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
+<p>If this stream sends an error that matches [test], then it is intercepted
+by the [handle] function.</p>
+<p>The [onError] callback must be of type <code>void onError(error)</code> or
+<code>void onError(error, StackTrace stackTrace)</code>. Depending on the function
+type the the stream either invokes [onError] with or without a stack
+trace. The stack trace argument might be <code>null</code> if the stream itself
+received an error without stack trace.</p>
+<p>An asynchronous error <code class="prettyprint">e</code> is matched by a test function if <code class="prettyprint">test(e)</code>
+returns true. If [test] is omitted, every error is considered matching.</p>
+<p>If the error is intercepted, the [handle] function can decide what to do
+with it. It can throw if it wants to raise a new (or the same) error,
+or simply return to make the stream forget the error.</p>
+<p>If you need to transform an error into a data event, use the more generic
+[Stream.transform] to handle the event by writing a data event to
+the output sink.</p>
+<p>The returned stream is a broadcast stream if this stream is.
+If a broadcast stream is listened to more than once, each subscription
+will individually perform the <code>test</code> and handle the error.</p>
+    
+    </section>
+    
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>timeout method - CachedStreamWrapper class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the timeout method from the CachedStreamWrapper class, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.utils/index.html">dslink.utils</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper_class.html">CachedStreamWrapper</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper/timeout.html">timeout</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">timeout</span> <span class="kind">method</span>
+            </h1>
+            <p class="subtitle">
+                Creates a new stream with the same events as this stream.
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Stream</span>
+            <span class="name ">timeout</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>,<br>{<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>}
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+        <p>Creates a new stream with the same events as this stream.</p>
+<p>Whenever more than [timeLimit] passes between two events from this stream,
+the [onTimeout] function is called.</p>
+<p>The countdown doesn't start until the returned stream is listened to.
+The countdown is reset every time an event is forwarded from this stream,
+or when the stream is paused and resumed.</p>
+<p>The [onTimeout] function is called with one argument: an
+[EventSink] that allows putting events into the returned stream.
+This <code>EventSink</code> is only valid during the call to <code>onTimeout</code>.</p>
+<p>If <code>onTimeout</code> is omitted, a timeout will just put a [TimeoutException]
+into the error channel of the returned stream.</p>
+<p>The returned stream is a broadcast stream if this stream is.
+If a broadcast stream is listened to more than once, each subscription
+will have its individually timer that starts counting on listen,
+and the subscriptions' timers can be paused individually.</p>
+    
+    </section>
+    
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

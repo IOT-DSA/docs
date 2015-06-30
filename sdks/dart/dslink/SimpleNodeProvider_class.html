@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SimpleNodeProvider class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the SimpleNodeProvider class from the dslink library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink/index.html">dslink</a></li>
+                    <li><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">SimpleNodeProvider</span> <span class="kind">class</span>
+            </h1>
+            <p class="subtitle">
+                
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated class-relationships">
+            <li>Object</li>
+            <li><a href="dslink.responder/NodeProvider_class.html">NodeProvider</a></li>
+            <li><a href="dslink.responder/NodeProviderImpl_class.html">NodeProviderImpl</a></li>
+            <li>SimpleNodeProvider</li>
+        </ul></dd>
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.responder/SerializableNodeProvider_class.html">SerializableNodeProvider</a></li>
+                    <li><a href="dslink.responder/MutableNodeProvider_class.html">MutableNodeProvider</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="SimpleNodeProvider" class="callable">
+                <span class="name"><a href="dslink/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Instance Properties</h2>
+
+        <dl class="properties">
+            <dt id="nodes" class="property">
+                <a href="dslink/SimpleNodeProvider/nodes.html"><span class="name ">nodes</span></a>
+                <span class="returntype">Map&lt;String,<a href="dslink.responder/LocalNode_class.html">LocalNode</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="permissions" class="property">
+                <a href="dslink/SimpleNodeProvider/permissions.html"><span class="name ">permissions</span></a>
+                <span class="returntype"><a href="dslink.responder/IPermissionManager_class.html">IPermissionManager</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="root" class="property">
+                <a href="dslink/SimpleNodeProvider/root.html"><span class="name ">root</span></a>
+                <span class="returntype"><a href="dslink.responder/SimpleNode_class.html">SimpleNode</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section id="instance-methods-summary" class="summary">
+        <h2>Instance Methods</h2>
+        <dl class="callables">
+            <dt id="getNode" class="callable">
+                <a href="dslink/SimpleNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                get an existing node or create a dummy node for requester to listen on
+            </dd>
+            <dt id="init" class="callable">
+                <a href="dslink/SimpleNodeProvider/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="save" class="callable">
+                <a href="dslink/SimpleNodeProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">Map</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="updateValue" class="callable">
+                <a href="dslink/SimpleNodeProvider/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="addNode" class="callable">
+                <a href="dslink/SimpleNodeProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="removeNode" class="callable">
+                <a href="dslink/SimpleNodeProvider/removeNode.html"><span class="name ">removeNode</span></a><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="createResponder" class="callable">
+                <a href="dslink/SimpleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Responder_class.html">Responder</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+
+        </dl>
+    </section>
+
+    <section id="operators-summary" class="summary">
+        <h2>Operators</h2>
+        <dl class="callables">
+
+            <dt id="operator ~" class="callable">
+                <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="operator []" class="callable">
+                <a href="dslink.responder/NodeProvider/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                get an existing node or create a dummy node for requester to listen on
+            </dd>
+        </dl>
+    </section>
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

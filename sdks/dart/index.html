@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dslink - Dart API docs</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href=".">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="dslink API docs, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">dslink</span> <span class="kind">package</span>
+            </h1>
+            <p class="subtitle">
+                
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+      <section class="desc markdown">
+      
+          <h1>DSLink SDK for Dart <a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart"><a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg"><img alt="Build Status" src="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg"></img></a></a></h1>
+<p>DSLink SDK for Dart</p>
+<h2>Getting Started</h2>
+<h3>Prerequisites</h3><ul><li><a href="https://git-scm.com/downloads">Git</a></li><li><a href="https://www.dartlang.org/downloads/">Dart SDK</a></li></ul>
+<h3>Install</h3>
+<pre class="bash"><code>pub global activate -sgit https://github.com/IOT-DSA/sdk-dslink-dart.git # Globally install the DSA Dart SDK
+</code></pre>
+<h3>Start a Broker</h3>
+<pre class="bash"><code>dsbroker # If you have the pub global executable path setup.
+pub global run dslink:broker # If you do not have the pub global executable path setup.
+</code></pre>
+<p>To connect a broker to another broker:</p>
+<pre class="bash"><code>dsbroker --broker http://my.broker.org:8080/conn # Connect a broker to another broker
+</code></pre>
+<p>You can edit the server configuration using <code>broker.json</code>. For more information about broker configuration, see <a href="https://github.com/IOT-DSA/sdk-dslink-dart/wiki/Configuring-a-Broker">this page</a>.</p>
+<h3>Create a Link</h3>
+<p>For more examples, see <a href="https://github.com/IOT-DSA/sdk-dslink-dart/tree/master/example">this page</a>.</p>
+<pre class="dart"><code>import "package:dslink/dslink.dart";
+
+LinkProvider link;
+
+main(List&lt;String&gt; args) async {
+  // Process the arguments and initializes the default nodes.
+  link = new LinkProvider(args, "Simple-", defaultNodes: {
+    "Message": {
+      r"$type": "string", // The type of the node is a string.
+      r"$writable": "write", // This node's value can be set by a responder link.
+      "?value": "Hello World" // The default message value.
+    }
+  });
+
+  // Connect to the broker.
+  link.connect();
+
+  // Save the message when it changes.
+  link.onValueChange("/Message").listen((_) =&gt; link.save());
+}
+</code></pre>
+<h3>Start a Link</h3>
+<pre class="bash"><code>dart path/to/link.dart # Start a link that connects to a broker at http://127.0.0.1:8080/conn
+dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that connects to the specified broker.
+</code></pre>
+<h2>Links</h2><ul><li><a href="http://iot-dsa.org/">DSA Site</a></li><li><a href="https://github.com/IOT-DSA/docs/wiki">DSA Wiki</a></li></ul>
+      
+      </section>
+      
+    <section class="summary" id="libraries">
+      <h2>Libraries</h2>
+      <dl>
+          <dt>
+            <span class="name "><a href="dslink/index.html">dslink</a></span>
+          </dt>
+          <dd>
+            
+            DSLink SDK for the Dart VM
+Requires dart:io
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.broker/index.html">dslink.broker</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.browser/index.html">dslink.browser</a></span>
+          </dt>
+          <dd>
+            
+            Main DSLink API for Browsers
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.browser_client/index.html">dslink.browser_client</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.client/index.html">dslink.client</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.common/index.html">dslink.common</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.io/index.html">dslink.io</a></span>
+          </dt>
+          <dd>
+            
+            DSLink SDK IO Utilities
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.nodes/index.html">dslink.nodes</a></span>
+          </dt>
+          <dd>
+            
+            Helper Nodes for Responders
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.requester/index.html">dslink.requester</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.responder/index.html">dslink.responder</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.server/index.html">dslink.server</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.socket_client/index.html">dslink.socket_client</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.socket_server/index.html">dslink.socket_server</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.utils/index.html">dslink.utils</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+          <dt>
+            <span class="name "><a href="dslink.worker/index.html">dslink.worker</a></span>
+          </dt>
+          <dd>
+            <span class="undocumented">Library not documented.</span>
+            
+          </dd>
+      </dl>
+    </section>
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

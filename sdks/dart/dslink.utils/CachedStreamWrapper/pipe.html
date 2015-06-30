@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pipe method - CachedStreamWrapper class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the pipe method from the CachedStreamWrapper class, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.utils/index.html">dslink.utils</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper_class.html">CachedStreamWrapper</a></li>
+                    <li><a href="dslink.utils/CachedStreamWrapper/pipe.html">pipe</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">pipe</span> <span class="kind">method</span>
+            </h1>
+            <p class="subtitle">
+                Pipe the events of this stream into [streamConsumer].
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Future</span>
+            <span class="name ">pipe</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer&lt;T&gt;</span> <span class="parameter-name">streamConsumer</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+        <p>Pipe the events of this stream into [streamConsumer].</p>
+<p>The events of this stream are added to <code>streamConsumer</code> using
+[StreamConsumer.addStream].
+The <code>streamConsumer</code> is closed when this stream has been successfully added
+to it - when the future returned by <code>addStream</code> completes without an error.</p>
+<p>Returns a future which completes when the stream has been consumed
+and the consumer has been closed.</p>
+<p>The returned future completes with the same result as the future returned
+by [StreamConsumer.close].
+If the adding of the stream itself fails in some way,
+then the consumer is expected to be closed, and won't be closed again.
+In that case the returned future completes with the error from calling
+<code>addStream</code>.</p>
+    
+    </section>
+    
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

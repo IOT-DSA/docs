@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HttpServerLink class - dslink.server library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the HttpServerLink class from the dslink.server library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.server/index.html">dslink.server</a></li>
+                    <li><a href="dslink.server/HttpServerLink_class.html">HttpServerLink</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">HttpServerLink</span> <span class="kind">class</span>
+            </h1>
+            <p class="subtitle">
+                a server link for both http and ws
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <section class="desc markdown">
+    
+        <p>a server link for both http and ws</p>
+    
+    </section>
+    
+    <section>
+        <dl class="dl-horizontal">
+
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.common/ServerLink_class.html">ServerLink</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="HttpServerLink" class="callable">
+                <span class="name"><a href="dslink.server/HttpServerLink/HttpServerLink.html">HttpServerLink</a></span><span class="signature">(<span class="parameter" id="-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>, <span class="parameter" id="-param-publicKey"><span class="type-annotation"><a href="dslink/PublicKey_class.html">PublicKey</a></span> <span class="parameter-name">publicKey</span></span>, <span class="parameter" id="-param-linkManager"><span class="type-annotation"><a href="dslink/ServerLinkManager_class.html">ServerLinkManager</a></span> <span class="parameter-name">linkManager</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider_class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>, <span class="parameter" id="-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-enableTimeout"><span class="type-annotation">bool</span> <span class="parameter-name">enableTimeout</span>: <span class="default-value">false</span></span>})</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Instance Properties</h2>
+
+        <dl class="properties">
+            <dt id="trusted" class="property">
+                <a href="dslink.server/HttpServerLink/trusted.html"><span class="name ">trusted</span></a>
+                <span class="returntype">bool</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="dsId" class="property">
+                <a href="dslink.server/HttpServerLink/dsId.html"><span class="name ">dsId</span></a>
+                <span class="returntype">String</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="session" class="property">
+                <a href="dslink.server/HttpServerLink/session.html"><span class="name ">session</span></a>
+                <span class="returntype">String</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="onRequesterReadyCompleter" class="property">
+                <a href="dslink.server/HttpServerLink/onRequesterReadyCompleter.html"><span class="name ">onRequesterReadyCompleter</span></a>
+                <span class="returntype">Completer&lt;<a href="dslink.requester/Requester_class.html">Requester</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="requester" class="property">
+                <a href="dslink.server/HttpServerLink/requester.html"><span class="name ">requester</span></a>
+                <span class="returntype"><a href="dslink.requester/Requester_class.html">Requester</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="responder" class="property">
+                <a href="dslink.server/HttpServerLink/responder.html"><span class="name ">responder</span></a>
+                <span class="returntype"><a href="dslink.responder/Responder_class.html">Responder</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="publicKey" class="property">
+                <a href="dslink.server/HttpServerLink/publicKey.html"><span class="name ">publicKey</span></a>
+                <span class="returntype"><a href="dslink.pk/PublicKey_class.html">PublicKey</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="tempNonce" class="property">
+                <a href="dslink.server/HttpServerLink/tempNonce.html"><span class="name ">tempNonce</span></a>
+                <span class="returntype"><a href="dslink.pk/ECDH_class.html">ECDH</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    nonce for authentication, don't overwrite existing nonce
+            </dd>            <dt id="verifiedNonce" class="property">
+                <a href="dslink.server/HttpServerLink/verifiedNonce.html"><span class="name ">verifiedNonce</span></a>
+                <span class="returntype"><a href="dslink.pk/ECDH_class.html">ECDH</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    nonce after user verified the public key
+            </dd>            <dt id="connection" class="property">
+                <a href="dslink.server/HttpServerLink/connection.html"><span class="name ">connection</span></a>
+                <span class="returntype"><a href="dslink.common/ServerConnection_class.html">ServerConnection</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="enableTimeout" class="property">
+                <a href="dslink.server/HttpServerLink/enableTimeout.html"><span class="name ">enableTimeout</span></a>
+                <span class="returntype">bool</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="salts" class="property">
+                <a href="dslink.server/HttpServerLink/salts.html"><span class="name ">salts</span></a>
+                <span class="returntype">List&lt;String&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    3 salts, salt saltS saltL
+            </dd>            <dt id="isRequester" class="property">
+                <a href="dslink.server/HttpServerLink/isRequester.html"><span class="name ">isRequester</span></a>
+                <span class="returntype">bool</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="isResponder" class="property">
+                <a href="dslink.server/HttpServerLink/isResponder.html"><span class="name ">isResponder</span></a>
+                <span class="returntype">bool</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    by default it's a responder only link
+            </dd>            <dt id="onRequesterReady" class="property">
+                <a href="dslink.server/HttpServerLink/onRequesterReady.html"><span class="name ">onRequesterReady</span></a>
+                <span class="returntype">Future&lt;<a href="dslink.requester/Requester_class.html">Requester</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="nonce" class="property">
+                <a href="dslink.server/HttpServerLink/nonce.html"><span class="name ">nonce</span></a>
+                <span class="returntype"><a href="dslink.pk/ECDH_class.html">ECDH</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="valid" class="property">
+                <a href="dslink.server/HttpServerLink/valid.html"><span class="name ">valid</span></a>
+                <span class="returntype">bool</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section id="instance-methods-summary" class="summary">
+        <h2>Instance Methods</h2>
+        <dl class="callables">
+            <dt id="initLink" class="callable">
+                <a href="dslink.server/HttpServerLink/initLink.html"><span class="name ">initLink</span></a><span class="signature">(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>})
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="verifySalt" class="callable">
+                <a href="dslink.server/HttpServerLink/verifySalt.html"><span class="name ">verifySalt</span></a><span class="signature">(<wbr><span class="parameter" id="verifySalt-param-type"><span class="type-annotation">int</span> <span class="parameter-name">type</span></span>, <span class="parameter" id="verifySalt-param-hash"><span class="type-annotation">String</span> <span class="parameter-name">hash</span></span>)
+                    &#8594;
+                    <span class="returntype">bool</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="nonceChanged" class="callable">
+                <a href="dslink.server/HttpServerLink/nonceChanged.html"><span class="name ">nonceChanged</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="handleHttpUpdate" class="callable">
+                <a href="dslink.server/HttpServerLink/handleHttpUpdate.html"><span class="name ">handleHttpUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleHttpUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="handleStreamUpdate" class="callable">
+                <a href="dslink.server/HttpServerLink/handleStreamUpdate.html"><span class="name ">handleStreamUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="handleWsUpdate" class="callable">
+                <a href="dslink.server/HttpServerLink/handleWsUpdate.html"><span class="name ">handleWsUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleWsUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="createWsConnection" class="callable">
+                <a href="dslink.server/HttpServerLink/createWsConnection.html"><span class="name ">createWsConnection</span></a><span class="signature">(<wbr><span class="parameter" id="createWsConnection-param-websocket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">websocket</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.server/ServerWebSocket_class.html">ServerWebSocket</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="createStreamConnection" class="callable">
+                <a href="dslink.server/HttpServerLink/createStreamConnection.html"><span class="name ">createStreamConnection</span></a><span class="signature">(<wbr><span class="parameter" id="createStreamConnection-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.common/StreamConnection_class.html">StreamConnection</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+
+        </dl>
+    </section>
+
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

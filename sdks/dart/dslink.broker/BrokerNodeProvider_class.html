@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BrokerNodeProvider class - dslink.broker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the BrokerNodeProvider class from the dslink.broker library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+                <ol class="breadcrumbs gt-separated">
+                    <li><a href="index.html">dslink</a></li>
+                    <li><a href="dslink.broker/index.html">dslink.broker</a></li>
+                    <li><a href="dslink.broker/BrokerNodeProvider_class.html">BrokerNodeProvider</a></li>
+                </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <span class="">BrokerNodeProvider</span> <span class="kind">class</span>
+            </h1>
+            <p class="subtitle">
+                
+            </p>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated class-relationships">
+            <li>Object</li>
+            <li><a href="dslink.responder/NodeProvider_class.html">NodeProvider</a></li>
+            <li><a href="dslink.responder/NodeProviderImpl_class.html">NodeProviderImpl</a></li>
+            <li>BrokerNodeProvider</li>
+        </ul></dd>
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.common/ServerLinkManager_class.html">ServerLinkManager</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="BrokerNodeProvider" class="callable">
+                <span class="name"><a href="dslink.broker/BrokerNodeProvider/BrokerNodeProvider.html">BrokerNodeProvider</a></span><span class="signature">()</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Instance Properties</h2>
+
+        <dl class="properties">
+            <dt id="nodes" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/nodes.html"><span class="name ">nodes</span></a>
+                <span class="returntype">Map&lt;String,<a href="dslink.responder/LocalNode_class.html">LocalNode</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    map that holds all nodes
+a node is not in parent node's children when real data/connection doesn't exist
+but instance is still there
+            </dd>            <dt id="conns" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/conns.html"><span class="name ">conns</span></a>
+                <span class="returntype">Map&lt;String,<a href="dslink.broker/RemoteLinkManager_class.html">RemoteLinkManager</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    connName to connection
+            </dd>            <dt id="permissions" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/permissions.html"><span class="name ">permissions</span></a>
+                <span class="returntype"><a href="dslink.responder/IPermissionManager_class.html">IPermissionManager</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="connsNode" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/connsNode.html"><span class="name ">connsNode</span></a>
+                <span class="returntype"><a href="dslink.responder/LocalNodeImpl_class.html">LocalNodeImpl</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="usersNode" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/usersNode.html"><span class="name ">usersNode</span></a>
+                <span class="returntype"><a href="dslink.responder/LocalNodeImpl_class.html">LocalNodeImpl</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="defsNode" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/defsNode.html"><span class="name ">defsNode</span></a>
+                <span class="returntype"><a href="dslink.responder/LocalNodeImpl_class.html">LocalNodeImpl</a></span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="rootStructure" class="property">
+                <a href="dslink.broker/BrokerNodeProvider/rootStructure.html"><span class="name ">rootStructure</span></a>
+                <span class="returntype">Map</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section id="instance-methods-summary" class="summary">
+        <h2>Instance Methods</h2>
+        <dl class="callables">
+            <dt id="initSys" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/initSys.html"><span class="name ">initSys</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="loadDef" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/loadDef.html"><span class="name ">loadDef</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                load a fixed profile map
+            </dd>
+            <dt id="registerInvokableProfile" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/registerInvokableProfile.html"><span class="name ">registerInvokableProfile</span></a><span class="signature">(<wbr><span class="parameter" id="registerInvokableProfile-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="loadUserNodes" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/loadUserNodes.html"><span class="name ">loadUserNodes</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="saveUsrNodes" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/saveUsrNodes.html"><span class="name ">saveUsrNodes</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">Map</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="loadConns" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/loadConns.html"><span class="name ">loadConns</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="saveConns" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/saveConns.html"><span class="name ">saveConns</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">Map</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="clearConns" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/clearConns.html"><span class="name ">clearConns</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="setNode" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/setNode.html"><span class="name ">setNode</span></a><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-newNode"><span class="type-annotation"><a href="dslink/LocalNode_class.html">LocalNode</a></span> <span class="parameter-name">newNode</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                add a node to the tree
+            </dd>
+            <dt id="getNode" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                load a local node
+            </dd>
+            <dt id="getConnPath" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/getConnPath.html"><span class="name ">getConnPath</span></a><span class="signature">(<wbr><span class="parameter" id="getConnPath-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                    &#8594;
+                    <span class="returntype">String</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="addLink" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/addLink.html"><span class="name ">addLink</span></a><span class="signature">(<wbr><span class="parameter" id="addLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink_class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="getLink" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/getLink.html"><span class="name ">getLink</span></a><span class="signature">(<wbr><span class="parameter" id="getLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
+                    &#8594;
+                    <span class="returntype"><a href="dslink.common/ServerLink_class.html">ServerLink</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="removeLink" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/removeLink.html"><span class="name ">removeLink</span></a><span class="signature">(<wbr><span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink_class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="getRequester" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/getRequester.html"><span class="name ">getRequester</span></a><span class="signature">(<wbr><span class="parameter" id="getRequester-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.requester/Requester_class.html">Requester</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="getResponder" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/getResponder.html"><span class="name ">getResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider_class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Responder_class.html">Responder</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="createResponder" class="callable">
+                <a href="dslink.broker/BrokerNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Responder_class.html">Responder</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+
+        </dl>
+    </section>
+
+    <section id="operators-summary" class="summary">
+        <h2>Operators</h2>
+        <dl class="callables">
+
+            <dt id="operator ~" class="callable">
+                <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="operator []" class="callable">
+                <a href="dslink.responder/NodeProvider/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                get an existing node or create a dummy node for requester to listen on
+            </dd>
+        </dl>
+    </section>
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+function initScroller() {
+    window.addEventListener('scroll', function(e){
+        var header = document.querySelector("header");
+
+        if (header) {
+          var position = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (position >= 128) {
+              header.classList.add("header-fixed");
+          } else if (header.classList.contains("header-fixed")) {
+              header.classList.remove("header-fixed");
+          }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    prettyPrint();
+    initScroller();
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>
