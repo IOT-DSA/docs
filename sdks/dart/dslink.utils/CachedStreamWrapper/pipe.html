@@ -39,7 +39,7 @@
                 <span class="">pipe</span> <span class="kind">method</span>
             </h1>
             <p class="subtitle">
-                Pipe the events of this stream into [streamConsumer].
+                Binds this stream as the input of the provided [StreamConsumer].
             </p>
         </div>
     </div>
@@ -58,19 +58,10 @@
 
     <section class="desc markdown">
     
-        <p>Pipe the events of this stream into [streamConsumer].</p>
-<p>The events of this stream are added to <code>streamConsumer</code> using
-[StreamConsumer.addStream].
-The <code>streamConsumer</code> is closed when this stream has been successfully added
-to it - when the future returned by <code>addStream</code> completes without an error.</p>
+        <p>Binds this stream as the input of the provided [StreamConsumer].</p>
+<p>The <code>streamConsumer</code> is closed when the stream has been added to it.</p>
 <p>Returns a future which completes when the stream has been consumed
 and the consumer has been closed.</p>
-<p>The returned future completes with the same result as the future returned
-by [StreamConsumer.close].
-If the adding of the stream itself fails in some way,
-then the consumer is expected to be closed, and won't be closed again.
-In that case the returned future completes with the error from calling
-<code>addStream</code>.</p>
     
     </section>
     

@@ -39,7 +39,7 @@
                 <span class="">close</span> <span class="kind">method</span>
             </h1>
             <p class="subtitle">
-                Tells the stream sink that no futher streams will be added.
+                As [EventSink.close], but returns a future.
             </p>
         </div>
     </div>
@@ -54,19 +54,8 @@
 
     <section class="desc markdown">
     
-        <p>Tells the stream sink that no futher streams will be added.</p>
-<p>This allows the stream sink to complete any remaining work and release
-resources that are no longer needed</p>
-<p>Returns a future which is completed when the stream sink has shut down.
-If cleaning up can fail, the error may be reported in the returned future,
-otherwise it completes with <code>null</code>.</p>
+        <p>As [EventSink.close], but returns a future.</p>
 <p>Returns the same future as [done].</p>
-<p>The stream sink may close before the [close] method is called, either due
-to an error or because it is itself provding events to someone who has
-stopped listening. In that case, the [done] future is completed first,
-and the <code>close</code> method will return the <code>done</code> future when called.</p>
-<p>Unifies [StreamConsumer.close] and [EventSink.close] which both mark their
-object as not expecting any further events.</p>
     
     </section>
     
