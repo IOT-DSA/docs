@@ -39,7 +39,9 @@
                 <span class="">handleStreamUpdate</span> <span class="kind">method</span>
             </h1>
             <p class="subtitle">
-                
+                /    if (requester == null) {
+/      throw HttpStatus.FORBIDDEN;
+/    }
             </p>
         </div>
     </div>
@@ -52,10 +54,17 @@
             <span class="name ">handleStreamUpdate</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>
+                <span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>,<br><span class="parameter" id="handleStreamUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>
             </div>
             )    </section>
 
+    <section class="desc markdown">
+    
+        <p>/    if (requester == null) {
+/      throw HttpStatus.FORBIDDEN;
+/    }</p>
+    
+    </section>
     
 </div> <!-- container -->
 

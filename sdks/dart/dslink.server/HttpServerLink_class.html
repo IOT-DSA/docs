@@ -72,7 +72,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="HttpServerLink" class="callable">
-                <span class="name"><a href="dslink.server/HttpServerLink/HttpServerLink.html">HttpServerLink</a></span><span class="signature">(<span class="parameter" id="-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>, <span class="parameter" id="-param-publicKey"><span class="type-annotation"><a href="dslink/PublicKey_class.html">PublicKey</a></span> <span class="parameter-name">publicKey</span></span>, <span class="parameter" id="-param-linkManager"><span class="type-annotation"><a href="dslink/ServerLinkManager_class.html">ServerLinkManager</a></span> <span class="parameter-name">linkManager</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider_class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>, <span class="parameter" id="-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-enableTimeout"><span class="type-annotation">bool</span> <span class="parameter-name">enableTimeout</span>: <span class="default-value">false</span></span>})</span>
+                <span class="name"><a href="dslink.server/HttpServerLink/HttpServerLink.html">HttpServerLink</a></span><span class="signature">(<span class="parameter" id="-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>, <span class="parameter" id="-param-publicKey"><span class="type-annotation"><a href="dslink/PublicKey_class.html">PublicKey</a></span> <span class="parameter-name">publicKey</span></span>, <span class="parameter" id="-param-linkManager"><span class="type-annotation"><a href="dslink/ServerLinkManager_class.html">ServerLinkManager</a></span> <span class="parameter-name">linkManager</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider_class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>, <span class="parameter" id="-param-enableTimeout"><span class="type-annotation">bool</span> <span class="parameter-name">enableTimeout</span>: <span class="default-value">false</span></span>})</span>
             </dt>
             <dd>
                 
@@ -87,19 +87,7 @@
         <h2>Instance Properties</h2>
 
         <dl class="properties">
-            <dt id="trusted" class="property">
-                <a href="dslink.server/HttpServerLink/trusted.html"><span class="name ">trusted</span></a>
-                <span class="returntype">bool</span>
-                
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-    </div>
-    
-            </dd>            <dt id="dsId" class="property">
+            <dt id="dsId" class="property">
                 <a href="dslink.server/HttpServerLink/dsId.html"><span class="name ">dsId</span></a>
                 <span class="returntype">String</span>
                 
@@ -299,7 +287,7 @@
         <h2>Instance Methods</h2>
         <dl class="callables">
             <dt id="initLink" class="callable">
-                <a href="dslink.server/HttpServerLink/initLink.html"><span class="name ">initLink</span></a><span class="signature">(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>})
+                <a href="dslink.server/HttpServerLink/initLink.html"><span class="name ">initLink</span></a><span class="signature">(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
                     &#8594;
                     <span class="returntype">Future</span>
                 </span>
@@ -328,28 +316,20 @@
             <dd>
                 
             </dd>
-            <dt id="handleHttpUpdate" class="callable">
-                <a href="dslink.server/HttpServerLink/handleHttpUpdate.html"><span class="name ">handleHttpUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleHttpUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>)
-                    &#8594;
-                    <span class="returntype">void</span>
-                </span>
-                
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="handleStreamUpdate" class="callable">
-                <a href="dslink.server/HttpServerLink/handleStreamUpdate.html"><span class="name ">handleStreamUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>)
+                <a href="dslink.server/HttpServerLink/handleStreamUpdate.html"><span class="name ">handleStreamUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter_class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>, <span class="parameter" id="handleStreamUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>)
                     &#8594;
                     <span class="returntype">void</span>
                 </span>
                 
             </dt>
             <dd>
-                
+                /    if (requester == null) {
+/      throw HttpStatus.FORBIDDEN;
+/    }
             </dd>
             <dt id="handleWsUpdate" class="callable">
-                <a href="dslink.server/HttpServerLink/handleWsUpdate.html"><span class="name ">handleWsUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleWsUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>)
+                <a href="dslink.server/HttpServerLink/handleWsUpdate.html"><span class="name ">handleWsUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleWsUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="handleWsUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>)
                     &#8594;
                     <span class="returntype">void</span>
                 </span>
