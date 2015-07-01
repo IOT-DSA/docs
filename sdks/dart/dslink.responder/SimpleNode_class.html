@@ -349,6 +349,36 @@ A flexible node implementation that should fit most use cases.</p>
             <dd>
                 This is called when this node is invoked.
             </dd>
+            <dt id="onSetValue" class="callable">
+                <a href="dslink.responder/SimpleNode/onSetValue.html"><span class="name ">onSetValue</span></a><span class="signature">(<wbr><span class="parameter" id="onSetValue-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="onSetConfig" class="callable">
+                <a href="dslink.responder/SimpleNode/onSetConfig.html"><span class="name ">onSetConfig</span></a><span class="signature">(<wbr><span class="parameter" id="onSetConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onSetConfig-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="onSetAttribute" class="callable">
+                <a href="dslink.responder/SimpleNode/onSetAttribute.html"><span class="name ">onSetAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="onSetAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onSetAttribute-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
             <dt id="onSubscribe" class="callable">
                 <a href="dslink.responder/SimpleNode/onSubscribe.html"><span class="name ">onSubscribe</span></a><span class="signature">(<wbr>)
                     &#8594;
@@ -448,6 +478,36 @@ A flexible node implementation that should fit most use cases.</p>
             </dt>
             <dd>
                 remove node and return name
+            </dd>
+            <dt id="setAttribute" class="callable">
+                <a href="dslink.responder/SimpleNode/setAttribute.html"><span class="name ">setAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="setConfig" class="callable">
+                <a href="dslink.responder/SimpleNode/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="setValue" class="callable">
+                <a href="dslink.responder/SimpleNode/setValue.html"><span class="name ">setValue</span></a><span class="signature">(<wbr><span class="parameter" id="setValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setValue-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setValue-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>, [<span class="parameter" id="setValue-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                set node value
             </dd>
 
             <dt id="getAttribute" class="callable">
@@ -570,28 +630,8 @@ A flexible node implementation that should fit most use cases.</p>
             <dd>
                 
             </dd>
-            <dt id="setAttribute" class="callable">
-                <a href="dslink.responder/LocalNodeImpl/setAttribute.html"><span class="name ">setAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>)
-                    &#8594;
-                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
-                </span>
-                <span class="is-inherited">Inherited</span>
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="removeAttribute" class="callable">
                 <a href="dslink.responder/LocalNodeImpl/removeAttribute.html"><span class="name ">removeAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>)
-                    &#8594;
-                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
-                </span>
-                <span class="is-inherited">Inherited</span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="setConfig" class="callable">
-                <a href="dslink.responder/LocalNodeImpl/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                     &#8594;
                     <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
                 </span>
@@ -609,16 +649,6 @@ A flexible node implementation that should fit most use cases.</p>
             </dt>
             <dd>
                 
-            </dd>
-            <dt id="setValue" class="callable">
-                <a href="dslink.responder/LocalNodeImpl/setValue.html"><span class="name ">setValue</span></a><span class="signature">(<wbr><span class="parameter" id="setValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setValue-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setValue-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>, [<span class="parameter" id="setValue-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
-                    &#8594;
-                    <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
-                </span>
-                <span class="is-inherited">Inherited</span>
-            </dt>
-            <dd>
-                set node value
             </dd>
             <dt id="serialize" class="callable">
                 <a href="dslink.responder/LocalNodeImpl/serialize.html"><span class="name ">serialize</span></a><span class="signature">(<wbr><span class="parameter" id="serialize-param-withChildren"><span class="type-annotation">bool</span> <span class="parameter-name">withChildren</span></span>)
