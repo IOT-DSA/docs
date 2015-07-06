@@ -78,10 +78,10 @@
                 <span class="name"><a href="dslink.nodes/DeleteActionNode/DeleteActionNode.html">DeleteActionNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-targetPath"><span class="type-annotation">String</span> <span class="parameter-name">targetPath</span></span>)</span>
             </dt>
             <dd>
-                When this action is invoked, <a href="dslink.nodes/DeleteActionNode/provider.html">provider.removeNode</a> will be called with <a href="dslink.nodes/DeleteActionNode/targetPath.html">targetPath</a>.
+                When this action is invoked, provider.removeNode will be called with <a href="dslink.nodes/DeleteActionNode/targetPath.html">targetPath</a>.
             </dd>
             <dt id="DeleteActionNode.forParent" class="callable">
-                <span class="name"><a href="dslink.nodes/DeleteActionNode/DeleteActionNode.forParent.html">DeleteActionNode.forParent</a></span><span class="signature">(<span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a href="dslink/NodeProvider_class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>
+                <span class="name"><a href="dslink.nodes/DeleteActionNode/DeleteActionNode.forParent.html">DeleteActionNode.forParent</a></span><span class="signature">(<span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>
             </dt>
             <dd>
                 When this action is invoked, provider.removeNode will be called with the parent of this action.
@@ -99,18 +99,6 @@
             <dt id="targetPath" class="property">
                 <a href="dslink.nodes/DeleteActionNode/targetPath.html"><span class="name ">targetPath</span></a>
                 <span class="returntype">String</span>
-                
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-    </div>
-    
-            </dd>            <dt id="provider" class="property">
-                <a href="dslink.nodes/DeleteActionNode/provider.html"><span class="name ">provider</span></a>
-                <span class="returntype"><a href="dslink.responder/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span>
                 
             </dt>
             <dd>
@@ -304,6 +292,18 @@
             </dd>            <dt id="loaded" class="property">
                 <a href="dslink.responder/LocalNodeImpl/loaded.html"><span class="name ">loaded</span></a>
                 <span class="returntype">bool</span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="provider" class="property">
+                <a href="dslink.responder/SimpleNode/provider.html"><span class="name ">provider</span></a>
+                <span class="returntype"><a href="dslink.responder/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span>
                 <span class="is-inherited">Inherited</span>
             </dt>
             <dd>
@@ -563,7 +563,7 @@
                 
             </dd>
             <dt id="load" class="callable">
-                <a href="dslink.responder/SimpleNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, [<span class="parameter" id="load-param-provider"><span class="type-annotation"><a href="dslink/NodeProviderImpl_class.html">NodeProviderImpl</a></span> <span class="parameter-name">provider</span></span>])
+                <a href="dslink.responder/SimpleNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                     &#8594;
                     <span class="returntype">void</span>
                 </span>

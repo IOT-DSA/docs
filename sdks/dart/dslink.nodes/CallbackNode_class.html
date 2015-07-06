@@ -75,7 +75,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="CallbackNode" class="callable">
-                <span class="name"><a href="dslink.nodes/CallbackNode/CallbackNode.html">CallbackNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="-param-onActionInvoke"><span class="type-annotation">dynamic</span> <span class="parameter-name">onActionInvoke</span>(<span class="parameter" id="ActionFunction-param-params"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">params</span></span>)</span>, <span class="parameter" id="-param-onChildAdded"><span class="type-annotation">void</span> <span class="parameter-name">onChildAdded</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a href="dslink/Node_class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>, <span class="parameter" id="-param-onChildRemoved"><span class="type-annotation">void</span> <span class="parameter-name">onChildRemoved</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a href="dslink/Node_class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>, <span class="parameter" id="-param-onCreated"><span class="type-annotation">void</span> <span class="parameter-name">onCreated</span>()</span>, <span class="parameter" id="-param-onRemoving"><span class="type-annotation">void</span> <span class="parameter-name">onRemoving</span>()</span>, <span class="parameter" id="-param-onLoadChild"><span class="type-annotation"><a href="dslink.responder/SimpleNode_class.html">SimpleNode</a></span> <span class="parameter-name">onLoadChild</span>(<span class="parameter" id="LoadChildCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="LoadChildCallback-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="LoadChildCallback-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>})</span>
+                <span class="name"><a href="dslink.nodes/CallbackNode/CallbackNode.html">CallbackNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-onActionInvoke"><span class="type-annotation">dynamic</span> <span class="parameter-name">onActionInvoke</span>(<span class="parameter" id="ActionFunction-param-params"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">params</span></span>)</span>, <span class="parameter" id="-param-onChildAdded"><span class="type-annotation">void</span> <span class="parameter-name">onChildAdded</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a href="dslink/Node_class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>, <span class="parameter" id="-param-onChildRemoved"><span class="type-annotation">void</span> <span class="parameter-name">onChildRemoved</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a href="dslink/Node_class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>, <span class="parameter" id="-param-onCreated"><span class="type-annotation">void</span> <span class="parameter-name">onCreated</span>()</span>, <span class="parameter" id="-param-onRemoving"><span class="type-annotation">void</span> <span class="parameter-name">onRemoving</span>()</span>, <span class="parameter" id="-param-onLoadChild"><span class="type-annotation"><a href="dslink.responder/SimpleNode_class.html">SimpleNode</a></span> <span class="parameter-name">onLoadChild</span>(<span class="parameter" id="LoadChildCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="LoadChildCallback-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="LoadChildCallback-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>})</span>
             </dt>
             <dd>
                 
@@ -346,6 +346,18 @@
             </dd>            <dt id="loaded" class="property">
                 <a href="dslink.responder/LocalNodeImpl/loaded.html"><span class="name ">loaded</span></a>
                 <span class="returntype">bool</span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>            <dt id="provider" class="property">
+                <a href="dslink.responder/SimpleNode/provider.html"><span class="name ">provider</span></a>
+                <span class="returntype"><a href="dslink.responder/SimpleNodeProvider_class.html">SimpleNodeProvider</a></span>
                 <span class="is-inherited">Inherited</span>
             </dt>
             <dd>
@@ -655,7 +667,7 @@
                 
             </dd>
             <dt id="load" class="callable">
-                <a href="dslink.responder/SimpleNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, [<span class="parameter" id="load-param-provider"><span class="type-annotation"><a href="dslink/NodeProviderImpl_class.html">NodeProviderImpl</a></span> <span class="parameter-name">provider</span></span>])
+                <a href="dslink.responder/SimpleNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                     &#8594;
                     <span class="returntype">void</span>
                 </span>
