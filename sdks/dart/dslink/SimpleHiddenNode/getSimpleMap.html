@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>close method - BroadcastStreamController class - dslink.utils library - Dart API</title>
+    <title>getSimpleMap method - SimpleHiddenNode class - dslink library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the close method from the BroadcastStreamController class, for the Dart programming language.">
+    <meta name="description" content="API docs for the getSimpleMap method from the SimpleHiddenNode class, for the Dart programming language.">
 
     <!-- Do not remove placeholder -->
     <!-- Header Placeholder -->
@@ -27,19 +27,19 @@
         <div class="container">
                 <ol class="breadcrumbs gt-separated">
                     <li><a href="index.html">dslink</a></li>
-                    <li><a href="dslink.utils/index.html">dslink.utils</a></li>
-                    <li><a href="dslink.utils/BroadcastStreamController_class.html">BroadcastStreamController</a></li>
-                    <li><a href="dslink.utils/BroadcastStreamController/close.html">close</a></li>
+                    <li><a href="dslink/index.html">dslink</a></li>
+                    <li><a href="dslink/SimpleHiddenNode_class.html">SimpleHiddenNode</a></li>
+                    <li><a href="dslink/SimpleHiddenNode/getSimpleMap.html">getSimpleMap</a></li>
                 </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <span class="">close</span> <span class="kind">method</span>
+                <span class="">getSimpleMap</span> <span class="kind">method</span>
             </h1>
             <p class="subtitle">
-                Tells the stream sink that no futher streams will be added.
+                
             </p>
         </div>
     </div>
@@ -48,27 +48,10 @@
 <div class="container">
 
     <section class="multi-line-signature">
-            <span class="returntype">Future</span>
-            <span class="name ">close</span>(
+            <span class="returntype">Map</span>
+            <span class="name ">getSimpleMap</span>(
             )    </section>
 
-    <section class="desc markdown">
-    
-        <p>Tells the stream sink that no futher streams will be added.</p>
-<p>This allows the stream sink to complete any remaining work and release
-resources that are no longer needed</p>
-<p>Returns a future which is completed when the stream sink has shut down.
-If cleaning up can fail, the error may be reported in the returned future,
-otherwise it completes with <code>null</code>.</p>
-<p>Returns the same future as [done].</p>
-<p>The stream sink may close before the [close] method is called, either due
-to an error or because it is itself provding events to someone who has
-stopped listening. In that case, the [done] future is completed first,
-and the <code>close</code> method will return the <code>done</code> future when called.</p>
-<p>Unifies [StreamConsumer.close] and [EventSink.close] which both mark their
-object as not expecting any further events.</p>
-    
-    </section>
     
 </div> <!-- container -->
 
