@@ -387,7 +387,7 @@
                 
             </dt>
             <dd>
-                Tells the stream sink that no futher streams will be added.
+                As [EventSink.close], but returns a future.
             </dd>
             <dt id="createSession" class="callable">
                 <a href="dslink.worker/WorkerSocket/createSession.html"><span class="name ">createSession</span></a><span class="signature">(<wbr>)
@@ -501,7 +501,7 @@ into zero or more events.
                 <span class="is-inherited">Inherited</span>
             </dt>
             <dd>
-                Pipe the events of this stream into streamConsumer.
+                Binds this stream as the input of the provided StreamConsumer.
             </dd>
             <dt id="transform" class="callable">
                 <a href=""><span class="name ">transform</span></a><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer</span> <span class="parameter-name">streamTransformer</span></span>)
@@ -722,7 +722,7 @@ occured.
                 <span class="is-inherited">Inherited</span>
             </dt>
             <dd>
-                Pipe the events of this stream into streamConsumer.
+                Binds this stream as the input of the provided StreamConsumer.
             </dd>
             <dt id="take" class="callable">
                 <a href=""><span class="name ">take</span></a><span class="signature">(<wbr><span class="parameter" id="take-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
