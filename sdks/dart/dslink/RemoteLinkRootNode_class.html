@@ -62,10 +62,14 @@
         <dt>Implements</dt>
             <dd>
                 <ul class="comma-separated class-relationships">
-                    <li><a href="dslink.responder/LocalNodeImpl_class.html">LocalNodeImpl</a></li>
+                    <li><a href="dslink.broker/BrokerNode_class.html">BrokerNode</a></li>
                 </ul>
             </dd>
 
+        <dt>Mixes-in</dt>
+        <dd><ul class="comma-separated class-relationships">
+            <li><a href="dslink.broker/BrokerNodePermission_class.html">BrokerNodePermission</a></li>
+        </ul></dd>
 
         </dl>
     </section>
@@ -102,6 +106,18 @@
         read / write
     </div>
     
+            </dd>            <dt id="pchildren" class="property">
+                <a href="dslink/RemoteLinkRootNode/pchildren.html"><span class="name ">pchildren</span></a>
+                <span class="returntype">Map&lt;String,<a href="dslink.broker/VirtualNodePermissioin_class.html">VirtualNodePermissioin</a>&gt;</span>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    children list only for permissions
             </dd>            <dt id="loaded" class="property">
                 <a href="dslink/RemoteLinkRootNode/loaded.html"><span class="name ">loaded</span></a>
                 <span class="returntype">bool</span>
@@ -331,6 +347,42 @@
         
     </div>
     
+            </dd>            <dt id="permissionList" class="property">
+                <a href="dslink.broker/BrokerNodePermission/permissionList.html"><span class="name ">permissionList</span></a>
+                <span class="returntype">List&lt;<a href="dslink.broker/PermissionPair_class.html">PermissionPair</a>&gt;</span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="idPermissions" class="property">
+                <a href="dslink.broker/BrokerNodePermission/idPermissions.html"><span class="name ">idPermissions</span></a>
+                <span class="returntype">Map&lt;String,int&gt;</span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>            <dt id="defaultPermission" class="property">
+                <a href="dslink.broker/BrokerNodePermission/defaultPermission.html"><span class="name ">defaultPermission</span></a>
+                <span class="returntype">int</span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
             </dd>            <dt id="parentNode" class="property">
                 <a href="dslink.responder/LocalNodeImpl/parentNode.html"><span class="name ">parentNode</span></a>
                 <span class="returntype"><a href="dslink.responder/LocalNode_class.html">LocalNode</a></span>
@@ -438,6 +490,16 @@
             </dt>
             <dd>
                 clear all configs attributes and children
+            </dd>
+            <dt id="getPermission" class="callable">
+                <a href="dslink/RemoteLinkRootNode/getPermission.html"><span class="name ">getPermission</span></a><span class="signature">(<wbr><span class="parameter" id="getPermission-param-paths"><span class="type-annotation">Iterator&lt;String&gt;</span> <span class="parameter-name">paths</span></span>, <span class="parameter" id="getPermission-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="getPermission-param-permission"><span class="type-annotation">int</span> <span class="parameter-name">permission</span></span>)
+                    &#8594;
+                    <span class="returntype">int</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
             </dd>
 
             <dt id="getAttribute" class="callable">
@@ -639,6 +701,26 @@
             </dt>
             <dd>
                 set node value
+            </dd>
+            <dt id="loadPermission" class="callable">
+                <a href="dslink.broker/BrokerNodePermission/loadPermission.html"><span class="name ">loadPermission</span></a><span class="signature">(<wbr><span class="parameter" id="loadPermission-param-l"><span class="type-annotation">List</span> <span class="parameter-name">l</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="serializePermission" class="callable">
+                <a href="dslink.broker/BrokerNodePermission/serializePermission.html"><span class="name ">serializePermission</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">List</span>
+                </span>
+                <span class="is-inherited">Inherited</span>
+            </dt>
+            <dd>
+                
             </dd>
         </dl>
     </section>
