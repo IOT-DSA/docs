@@ -82,6 +82,7 @@
       <li><a href="dslink.nodes/DeleteActionNode-class.html#provider">provider</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html#removed">removed</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html#serializable">serializable</a></li>
+      <li><a href="dslink.nodes/DeleteActionNode-class.html#name">name</a></li>
 
       <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html#DeleteActionNode">DeleteActionNode</a></li>
@@ -128,6 +129,8 @@
       <li><a href="dslink.nodes/DeleteActionNode-class.html#onChildAdded">onChildAdded</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html#onLoadChild">onLoadChild</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html#createChild">createChild</a></li>
+      <li><a href="dslink.nodes/DeleteActionNode-class.html#remove">remove</a></li>
+      <li><a href="dslink.nodes/DeleteActionNode-class.html#attach">attach</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -440,6 +443,19 @@ Map of Child Name to Child Node
     Marks this node as being serializable.
 If true, this node can be serialized into a JSON file and then loaded back.
 If false, this node can't be serialized into a JSON file.
+            </dd>
+            <dt id="name" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.responder/SimpleNode/name.html"><span class="name ">name</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
             </dd>
         </dl>
     </section>
@@ -857,6 +873,28 @@ Otherwise this will fetch a child.
               </dt>
               <dd>
                   
+              </dd>
+              <dt id="remove" class="callable">
+                  <a href="dslink.responder/SimpleNode/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Remove this node from it's parent.
+              </dd>
+              <dt id="attach" class="callable">
+                  <a href="dslink.responder/SimpleNode/attach.html"><span class="name ">attach</span></a><span class="signature">(<wbr><span class="parameter" id="attach-param-input"><span class="parameter-name">input</span></span>, {<span class="parameter" id="attach-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>})
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Add this node to the given node.
+If input is a String, it is interpreted as a node path and resolved to a node.
+If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be attached to that.
               </dd>
           </dl>
       </section>
