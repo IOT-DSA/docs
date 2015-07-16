@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DsTimer class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the DsTimer class from the dslink.utils library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                <li><a href="dslink.utils/DsTimer-class.html">DsTimer</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> DsTimer
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.utils/DsTimer-class.html#static-properties">Static Properties</a></li>
+            <li><a href="dslink.utils/DsTimer-class.html#static-methods">Static Methods</a></li>
+            <li><a href="dslink.utils/DsTimer-class.html#constructors">Constructors</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+      <li class="section-title"><a href="#static-properties">Static properties</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerTs50">timerTs50</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerTimer">timerTimer</a></li>
+
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#millisecondsSinceEpoch">millisecondsSinceEpoch</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#waitAndRun">waitAndRun</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#callLater">callLater</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerOnceBefore">timerOnceBefore</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerOnceAfter">timerOnceAfter</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerOnceBetween">timerOnceBetween</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#timerCancel">timerCancel</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#runNow">runNow</a></li>
+
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/DsTimer-class.html#DsTimer">DsTimer</a></li>
+
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+
+
+    <section class="summary" id="static-properties">
+        <h2>Static Properties</h2>
+
+        <dl class="properties">
+            <dt id="timerTs50" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.utils/DsTimer/timerTs50.html"><span class="name ">timerTs50</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="timerTimer" class="property">
+                <span class="top-level-variable-type">Timer</span>
+                <a href="dslink.utils/DsTimer/timerTimer.html"><span class="name ">timerTimer</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary" id="static-methods">
+        <h2>Static Methods</h2>
+        <dl class="callables">
+            <dt id="millisecondsSinceEpoch" class="callable">
+                <a href="dslink.utils/DsTimer/millisecondsSinceEpoch.html"><span class="name ">millisecondsSinceEpoch</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">int</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="waitAndRun" class="callable">
+                <a href="dslink.utils/DsTimer/waitAndRun.html"><span class="name ">waitAndRun</span></a><span class="signature">(<wbr><span class="parameter" id="waitAndRun-param-time"><span class="type-annotation">Duration</span> <span class="parameter-name">time</span></span>, <span class="parameter" id="waitAndRun-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="callLater" class="callable">
+                <a href="dslink.utils/DsTimer/callLater.html"><span class="name ">callLater</span></a><span class="signature">(<wbr><span class="parameter" id="callLater-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="timerOnceBefore" class="callable">
+                <a href="dslink.utils/DsTimer/timerOnceBefore.html"><span class="name ">timerOnceBefore</span></a><span class="signature">(<wbr><span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                do nothng if the callback is already in the list and will get called after 0 ~ N ms
+            </dd>
+            <dt id="timerOnceAfter" class="callable">
+                <a href="dslink.utils/DsTimer/timerOnceAfter.html"><span class="name ">timerOnceAfter</span></a><span class="signature">(<wbr><span class="parameter" id="timerOnceAfter-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceAfter-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                do nothng if the callback is already in the list and will get called after N or more ms
+            </dd>
+            <dt id="timerOnceBetween" class="callable">
+                <a href="dslink.utils/DsTimer/timerOnceBetween.html"><span class="name ">timerOnceBetween</span></a><span class="signature">(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>, <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                do nothing if the callback is already in the list and will get called after M to N ms
+            </dd>
+            <dt id="timerCancel" class="callable">
+                <a href="dslink.utils/DsTimer/timerCancel.html"><span class="name ">timerCancel</span></a><span class="signature">(<wbr><span class="parameter" id="timerCancel-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="runNow" class="callable">
+                <a href="dslink.utils/DsTimer/runNow.html"><span class="name ">runNow</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="DsTimer" class="callable">
+                <span class="name"><a href="dslink.utils/DsTimer/DsTimer.html">DsTimer</a></span><span class="signature">()</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

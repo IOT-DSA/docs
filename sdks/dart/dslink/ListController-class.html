@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ListController class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the ListController class from the dslink library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink/dslink-library.html">dslink</a></li>
+                <li><a href="dslink/ListController-class.html">ListController</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> ListController
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink/ListController-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink/ListController-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink/ListController-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink/ListController-class.html#node">node</a></li>
+      <li><a href="dslink/ListController-class.html#requester">requester</a></li>
+      <li><a href="dslink/ListController-class.html#request">request</a></li>
+      <li><a href="dslink/ListController-class.html#disconnectTs">disconnectTs</a></li>
+      <li><a href="dslink/ListController-class.html#changes">changes</a></li>
+      <li><a href="dslink/ListController-class.html#stream">stream</a></li>
+      <li><a href="dslink/ListController-class.html#initialized">initialized</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink/ListController-class.html#ListController">ListController</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink/ListController-class.html#onDisconnect">onDisconnect</a></li>
+      <li><a href="dslink/ListController-class.html#onReconnect">onReconnect</a></li>
+      <li><a href="dslink/ListController-class.html#onUpdate">onUpdate</a></li>
+      <li><a href="dslink/ListController-class.html#loadProfile">loadProfile</a></li>
+      <li><a href="dslink/ListController-class.html#onProfileUpdated">onProfileUpdated</a></li>
+      <li><a href="dslink/ListController-class.html#onStartListen">onStartListen</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.requester/RequestUpdater-class.html">RequestUpdater</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="node" class="property">
+                <span class="top-level-variable-type"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span>
+                <a href="dslink/ListController/node.html"><span class="name ">node</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="requester" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
+                <a href="dslink/ListController/requester.html"><span class="name ">requester</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="request" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Request-class.html">Request</a></span>
+                <a href="dslink/ListController/request.html"><span class="name ">request</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="disconnectTs" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink/ListController/disconnectTs.html"><span class="name ">disconnectTs</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="changes" class="property">
+                <span class="top-level-variable-type">LinkedHashSet&lt;String&gt;</span>
+                <a href="dslink/ListController/changes.html"><span class="name ">changes</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="stream" class="property">
+                <span class="top-level-variable-type">Stream&lt;<a href="dslink.requester/RequesterListUpdate-class.html">RequesterListUpdate</a>&gt;</span>
+                <a href="dslink/ListController/stream.html"><span class="name ">stream</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="initialized" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink/ListController/initialized.html"><span class="name ">initialized</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="ListController" class="callable">
+                <span class="name"><a href="dslink/ListController/ListController.html">ListController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="onDisconnect" class="callable">
+                  <a href="dslink/ListController/onDisconnect.html"><span class="name ">onDisconnect</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onReconnect" class="callable">
+                  <a href="dslink/ListController/onReconnect.html"><span class="name ">onReconnect</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onUpdate" class="callable">
+                  <a href="dslink/ListController/onUpdate.html"><span class="name ">onUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="onUpdate-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="onUpdate-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, <span class="parameter" id="onUpdate-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="onUpdate-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>, <span class="parameter" id="onUpdate-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="loadProfile" class="callable">
+                  <a href="dslink/ListController/loadProfile.html"><span class="name ">loadProfile</span></a><span class="signature">(<wbr><span class="parameter" id="loadProfile-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onProfileUpdated" class="callable">
+                  <a href="dslink/ListController/onProfileUpdated.html"><span class="name ">onProfileUpdated</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onStartListen" class="callable">
+                  <a href="dslink/ListController/onStartListen.html"><span class="name ">onStartListen</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

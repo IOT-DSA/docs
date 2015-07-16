@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IPermissionManager class - dslink.browser library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the IPermissionManager class from the dslink.browser library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                <li><a href="dslink.browser/IPermissionManager-class.html">IPermissionManager</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> IPermissionManager
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.browser/IPermissionManager-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.browser/IPermissionManager-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.browser/IPermissionManager-class.html#IPermissionManager">IPermissionManager</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.browser/IPermissionManager-class.html#getPermission">getPermission</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+
+
+
+
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="IPermissionManager" class="callable">
+                <span class="name"><a href="dslink.browser/IPermissionManager/IPermissionManager.html">IPermissionManager</a></span><span class="signature">()</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="getPermission" class="callable">
+                  <a href="dslink.browser/IPermissionManager/getPermission.html"><span class="name ">getPermission</span></a><span class="signature">(<wbr><span class="parameter" id="getPermission-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="getPermission-param-resp"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">resp</span></span>)
+                      &#8594;
+                      <span class="returntype">int</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

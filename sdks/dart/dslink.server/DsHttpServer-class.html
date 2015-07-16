@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DsHttpServer class - dslink.server library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the DsHttpServer class from the dslink.server library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
+                <li><a href="dslink.server/DsHttpServer-class.html">DsHttpServer</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> DsHttpServer
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.server/DsHttpServer-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink.server/DsHttpServer-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.server/DsHttpServer-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#dsId">dsId</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#publicKey">publicKey</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#updateInterval">updateInterval</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#nodeProvider">nodeProvider</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#httpServer">httpServer</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#onServerReady">onServerReady</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#DsHttpServer.start">DsHttpServer.start</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.server/DsHttpServer-class.html#stop">stop</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="dsId" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.server/DsHttpServer/dsId.html"><span class="name ">dsId</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="publicKey" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.server/DsHttpServer/publicKey.html"><span class="name ">publicKey</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="updateInterval" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.server/DsHttpServer/updateInterval.html"><span class="name ">updateInterval</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="nodeProvider" class="property">
+                <span class="top-level-variable-type"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span>
+                <a href="dslink.server/DsHttpServer/nodeProvider.html"><span class="name ">nodeProvider</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="httpServer" class="property">
+                <span class="top-level-variable-type">HttpServer</span>
+                <a href="dslink.server/DsHttpServer/httpServer.html"><span class="name ">httpServer</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="onServerReady" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href="dslink.server/DsHttpServer/onServerReady.html"><span class="name ">onServerReady</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="DsHttpServer.start" class="callable">
+                <span class="name"><a href="dslink.server/DsHttpServer/DsHttpServer.start.html">DsHttpServer.start</a></span><span class="signature">(<span class="parameter" id="start-param-address"><span class="parameter-name">address</span></span>, {<span class="parameter" id="start-param-httpPort"><span class="type-annotation">int</span> <span class="parameter-name">httpPort</span>: <span class="default-value">8080</span></span>, <span class="parameter" id="start-param-httpsPort"><span class="type-annotation">int</span> <span class="parameter-name">httpsPort</span>: <span class="default-value">8443</span></span>, <span class="parameter" id="start-param-certificateName"><span class="type-annotation">String</span> <span class="parameter-name">certificateName</span></span>, <span class="parameter" id="start-param-linkManager"><span class="parameter-name">linkManager</span></span>, <span class="parameter" id="start-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>})</span>
+            </dt>
+            <dd>
+                to open a secure server, SecureSocket.initialize() need to be called before start()
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="stop" class="callable">
+                  <a href="dslink.server/DsHttpServer/stop.html"><span class="name ">stop</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

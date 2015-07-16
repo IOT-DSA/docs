@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RespSubscribeController class - dslink.browser library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the RespSubscribeController class from the dslink.browser library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> RespSubscribeController
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.browser/RespSubscribeController-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink.browser/RespSubscribeController-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.browser/RespSubscribeController-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#node">node</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#response">response</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#sid">sid</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#lastValues">lastValues</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#permitted">permitted</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#cacheLevel">cacheLevel</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#RespSubscribeController">RespSubscribeController</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#addValue">addValue</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#mergeValues">mergeValues</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#process">process</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html#destroy">destroy</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="node" class="property">
+                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
+                <a href="dslink.browser/RespSubscribeController/node.html"><span class="name ">node</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="response" class="property">
+                <span class="top-level-variable-type"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span>
+                <a href="dslink.browser/RespSubscribeController/response.html"><span class="name ">response</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="sid" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.browser/RespSubscribeController/sid.html"><span class="name ">sid</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastValues" class="property">
+                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+                <a href="dslink.browser/RespSubscribeController/lastValues.html"><span class="name ">lastValues</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="permitted" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.browser/RespSubscribeController/permitted.html"><span class="name ">permitted</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        write-only
+        
+    </div>
+    
+            </dd>
+            <dt id="cacheLevel" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.browser/RespSubscribeController/cacheLevel.html"><span class="name ">cacheLevel</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="RespSubscribeController" class="callable">
+                <span class="name"><a href="dslink.browser/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></span><span class="signature">(<span class="parameter" id="-param-response"><span class="type-annotation"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>, <span class="parameter" id="-param-_permitted"><span class="type-annotation">bool</span> <span class="parameter-name">_permitted</span></span>, <span class="parameter" id="-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="addValue" class="callable">
+                  <a href="dslink.browser/RespSubscribeController/addValue.html"><span class="name ">addValue</span></a><span class="signature">(<wbr><span class="parameter" id="addValue-param-val"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">val</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="mergeValues" class="callable">
+                  <a href="dslink.browser/RespSubscribeController/mergeValues.html"><span class="name ">mergeValues</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="process" class="callable">
+                  <a href="dslink.browser/RespSubscribeController/process.html"><span class="name ">process</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">List</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="destroy" class="callable">
+                  <a href="dslink.browser/RespSubscribeController/destroy.html"><span class="name ">destroy</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

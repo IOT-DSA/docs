@@ -25,24 +25,55 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-                <ol class="breadcrumbs gt-separated">
-                    <li><a href="index.html">dslink</a></li>
-                </ol>
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+            </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <span class="">dslink</span> <span class="kind">package</span>
+                <div class="kind">package</div> dslink
             </h1>
-            <p class="subtitle">
+            <!-- p class="subtitle">
                 
-            </p>
+            </p -->
         </div>
+        <ul class="subnav">
+            <li><a href="index.html#libraries">Libraries</a></li>
+        </ul>
     </div>
 </header>
 
 <div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <ol id="sidebar">
+      <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
+      <li><a href="index.html#dslink">dslink</a></li>
+      <li><a href="index.html#dslink.broker">dslink.broker</a></li>
+      <li><a href="index.html#dslink.browser">dslink.browser</a></li>
+      <li><a href="index.html#dslink.browser_client">dslink.browser_client</a></li>
+      <li><a href="index.html#dslink.client">dslink.client</a></li>
+      <li><a href="index.html#dslink.common">dslink.common</a></li>
+      <li><a href="index.html#dslink.io">dslink.io</a></li>
+      <li><a href="index.html#dslink.nodes">dslink.nodes</a></li>
+      <li><a href="index.html#dslink.requester">dslink.requester</a></li>
+      <li><a href="index.html#dslink.responder">dslink.responder</a></li>
+      <li><a href="index.html#dslink.server">dslink.server</a></li>
+      <li><a href="index.html#dslink.socket_client">dslink.socket_client</a></li>
+      <li><a href="index.html#dslink.socket_server">dslink.socket_server</a></li>
+      <li><a href="index.html#dslink.utils">dslink.utils</a></li>
+      <li><a href="index.html#dslink.worker">dslink.worker</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
 
       <section class="desc markdown">
       
@@ -95,106 +126,106 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
     <section class="summary" id="libraries">
       <h2>Libraries</h2>
       <dl>
-          <dt>
-            <span class="name "><a href="dslink/index.html">dslink</a></span>
+          <dt id="dslink">
+            <span class="name "><a href="dslink/dslink-library.html">dslink</a></span>
           </dt>
           <dd>
             
             Entry Point for the DSLink SDK for the Dart VM
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.broker/index.html">dslink.broker</a></span>
+          <dt id="dslink.broker">
+            <span class="name "><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></span>
           </dt>
           <dd>
             
             DSA Broker Implementation
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.browser/index.html">dslink.browser</a></span>
+          <dt id="dslink.browser">
+            <span class="name "><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></span>
           </dt>
           <dd>
             
             Main DSLink API for Browsers
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.browser_client/index.html">dslink.browser_client</a></span>
+          <dt id="dslink.browser_client">
+            <span class="name "><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></span>
           </dt>
           <dd>
             
             Base API for DSA in the Browser
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.client/index.html">dslink.client</a></span>
+          <dt id="dslink.client">
+            <span class="name "><a href="dslink.client/dslink.client-library.html">dslink.client</a></span>
           </dt>
           <dd>
             
             Provides the base APIs for the DSLink SDK on the Dart VM.
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.common/index.html">dslink.common</a></span>
+          <dt id="dslink.common">
+            <span class="name "><a href="dslink.common/dslink.common-library.html">dslink.common</a></span>
           </dt>
           <dd>
             
             Shared APIs between all DSA Components.
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.io/index.html">dslink.io</a></span>
+          <dt id="dslink.io">
+            <span class="name "><a href="dslink.io/dslink.io-library.html">dslink.io</a></span>
           </dt>
           <dd>
             
             DSLink SDK IO Utilities
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.nodes/index.html">dslink.nodes</a></span>
+          <dt id="dslink.nodes">
+            <span class="name "><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></span>
           </dt>
           <dd>
             
             Helper Nodes for Responders
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.requester/index.html">dslink.requester</a></span>
+          <dt id="dslink.requester">
+            <span class="name "><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></span>
           </dt>
           <dd>
             
             DSA Requester API
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.responder/index.html">dslink.responder</a></span>
+          <dt id="dslink.responder">
+            <span class="name "><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></span>
           </dt>
           <dd>
             
             DSA Responder API
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.server/index.html">dslink.server</a></span>
+          <dt id="dslink.server">
+            <span class="name "><a href="dslink.server/dslink.server-library.html">dslink.server</a></span>
           </dt>
           <dd>
             
             DSA Broker Server
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.socket_client/index.html">dslink.socket_client</a></span>
+          <dt id="dslink.socket_client">
+            <span class="name "><a href="dslink.socket_client/dslink.socket_client-library.html">dslink.socket_client</a></span>
           </dt>
           <dd>
             
             Placeholder for future socket client support.
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.socket_server/index.html">dslink.socket_server</a></span>
+          <dt id="dslink.socket_server">
+            <span class="name "><a href="dslink.socket_server/dslink.socket_server-library.html">dslink.socket_server</a></span>
           </dt>
           <dd>
             
             Placeholder for future socket server support.
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.utils/index.html">dslink.utils</a></span>
+          <dt id="dslink.utils">
+            <span class="name "><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></span>
           </dt>
           <dd>
             
             Common Utilities for DSA Components
           </dd>
-          <dt>
-            <span class="name "><a href="dslink.worker/index.html">dslink.worker</a></span>
+          <dt id="dslink.worker">
+            <span class="name "><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></span>
           </dt>
           <dd>
             
@@ -203,6 +234,9 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
       </dl>
     </section>
 
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>
@@ -223,25 +257,48 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
 
 <script src="static-assets/prettify.js"></script>
 <script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
 function initScroller() {
-    window.addEventListener('scroll', function(e){
-        var header = document.querySelector("header");
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
 
-        if (header) {
-          var position = window.pageYOffset || document.documentElement.scrollTop;
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
 
-          if (position >= 128) {
-              header.classList.add("header-fixed");
-          } else if (header.classList.contains("header-fixed")) {
-              header.classList.remove("header-fixed");
-          }
-        }
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
     });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    prettyPrint();
-    initScroller();
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
 });
 </script>
 <!-- Do not remove placeholder -->

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interval class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the Interval class from the dslink.utils library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                <li><a href="dslink.utils/Interval-class.html">Interval</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> Interval
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.utils/Interval-class.html#static-properties">Static Properties</a></li>
+            <li><a href="dslink.utils/Interval-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink.utils/Interval-class.html#constructors">Constructors</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+      <li class="section-title"><a href="#static-properties">Static properties</a></li>
+      <li><a href="dslink.utils/Interval-class.html#ONE_MILLISECOND">ONE_MILLISECOND</a></li>
+      <li><a href="dslink.utils/Interval-class.html#TWO_MILLISECONDS">TWO_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#FOUR_MILLISECONDS">FOUR_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#EIGHT_MILLISECONDS">EIGHT_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#SIXTEEN_MILLISECONDS">SIXTEEN_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#THIRTY_MILLISECONDS">THIRTY_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#FIFTY_MILLISECONDS">FIFTY_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#ONE_HUNDRED_MILLISECONDS">ONE_HUNDRED_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#TWO_HUNDRED_MILLISECONDS">TWO_HUNDRED_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#THREE_HUNDRED_MILLISECONDS">THREE_HUNDRED_MILLISECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#QUARTER_SECOND">QUARTER_SECOND</a></li>
+      <li><a href="dslink.utils/Interval-class.html#HALF_SECOND">HALF_SECOND</a></li>
+      <li><a href="dslink.utils/Interval-class.html#ONE_SECOND">ONE_SECOND</a></li>
+      <li><a href="dslink.utils/Interval-class.html#TWO_SECONDS">TWO_SECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#THREE_SECONDS">THREE_SECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#FOUR_SECONDS">FOUR_SECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#FIVE_SECONDS">FIVE_SECONDS</a></li>
+      <li><a href="dslink.utils/Interval-class.html#ONE_MINUTE">ONE_MINUTE</a></li>
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink.utils/Interval-class.html#duration">duration</a></li>
+      <li><a href="dslink.utils/Interval-class.html#inMilliseconds">inMilliseconds</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/Interval-class.html#Interval">Interval</a></li>
+      <li><a href="dslink.utils/Interval-class.html#Interval.forMilliseconds">Interval.forMilliseconds</a></li>
+      <li><a href="dslink.utils/Interval-class.html#Interval.forSeconds">Interval.forSeconds</a></li>
+      <li><a href="dslink.utils/Interval-class.html#Interval.forMinutes">Interval.forMinutes</a></li>
+      <li><a href="dslink.utils/Interval-class.html#Interval.forHours">Interval.forHours</a></li>
+
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+
+
+    <section class="summary" id="static-properties">
+        <h2>Static Properties</h2>
+
+        <dl class="properties">
+            <dt id="ONE_MILLISECOND" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/ONE_MILLISECOND.html"><span class="name ">ONE_MILLISECOND</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="TWO_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/TWO_MILLISECONDS.html"><span class="name ">TWO_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="FOUR_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/FOUR_MILLISECONDS.html"><span class="name ">FOUR_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="EIGHT_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/EIGHT_MILLISECONDS.html"><span class="name ">EIGHT_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="SIXTEEN_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/SIXTEEN_MILLISECONDS.html"><span class="name ">SIXTEEN_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="THIRTY_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/THIRTY_MILLISECONDS.html"><span class="name ">THIRTY_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="FIFTY_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/FIFTY_MILLISECONDS.html"><span class="name ">FIFTY_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="ONE_HUNDRED_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/ONE_HUNDRED_MILLISECONDS.html"><span class="name ">ONE_HUNDRED_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="TWO_HUNDRED_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/TWO_HUNDRED_MILLISECONDS.html"><span class="name ">TWO_HUNDRED_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="THREE_HUNDRED_MILLISECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/THREE_HUNDRED_MILLISECONDS.html"><span class="name ">THREE_HUNDRED_MILLISECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="QUARTER_SECOND" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/QUARTER_SECOND.html"><span class="name ">QUARTER_SECOND</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="HALF_SECOND" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/HALF_SECOND.html"><span class="name ">HALF_SECOND</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="ONE_SECOND" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/ONE_SECOND.html"><span class="name ">ONE_SECOND</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="TWO_SECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/TWO_SECONDS.html"><span class="name ">TWO_SECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="THREE_SECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/THREE_SECONDS.html"><span class="name ">THREE_SECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="FOUR_SECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/FOUR_SECONDS.html"><span class="name ">FOUR_SECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="FIVE_SECONDS" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/FIVE_SECONDS.html"><span class="name ">FIVE_SECONDS</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="ONE_MINUTE" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Interval-class.html">Interval</a></span>
+                <a href="dslink.utils/Interval/ONE_MINUTE.html"><span class="name ">ONE_MINUTE</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="duration" class="property">
+                <span class="top-level-variable-type">Duration</span>
+                <a href="dslink.utils/Interval/duration.html"><span class="name ">duration</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="inMilliseconds" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.utils/Interval/inMilliseconds.html"><span class="name ">inMilliseconds</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="Interval" class="callable">
+                <span class="name"><a href="dslink.utils/Interval/Interval.html">Interval</a></span><span class="signature">(<span class="parameter" id="-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>)</span>
+            </dt>
+            <dd>
+                <div class="constructor-modifier">
+                    const
+                </div>
+                
+            </dd>
+            <dt id="Interval.forMilliseconds" class="callable">
+                <span class="name"><a href="dslink.utils/Interval/Interval.forMilliseconds.html">Interval.forMilliseconds</a></span><span class="signature">(<span class="parameter" id="forMilliseconds-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="Interval.forSeconds" class="callable">
+                <span class="name"><a href="dslink.utils/Interval/Interval.forSeconds.html">Interval.forSeconds</a></span><span class="signature">(<span class="parameter" id="forSeconds-param-seconds"><span class="type-annotation">int</span> <span class="parameter-name">seconds</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="Interval.forMinutes" class="callable">
+                <span class="name"><a href="dslink.utils/Interval/Interval.forMinutes.html">Interval.forMinutes</a></span><span class="signature">(<span class="parameter" id="forMinutes-param-minutes"><span class="type-annotation">int</span> <span class="parameter-name">minutes</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="Interval.forHours" class="callable">
+                <span class="name"><a href="dslink.utils/Interval/Interval.forHours.html">Interval.forHours</a></span><span class="signature">(<span class="parameter" id="forHours-param-hours"><span class="type-annotation">int</span> <span class="parameter-name">hours</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

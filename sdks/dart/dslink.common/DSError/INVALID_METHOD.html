@@ -25,30 +25,33 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-                <ol class="breadcrumbs gt-separated">
-                    <li><a href="index.html">dslink</a></li>
-                    <li><a href="dslink.common/index.html">dslink.common</a></li>
-                    <li><a href="dslink.common/DSError_class.html">DSError</a></li>
-                    <li><a href="dslink.common/DSError/INVALID_METHOD.html">INVALID_METHOD</a></li>
-                </ol>
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+                <li><a href="dslink.common/DSError-class.html">DSError</a></li>
+                <li><a href="dslink.common/DSError/INVALID_METHOD.html">INVALID_METHOD</a></li>
+            </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <span class="">INVALID_METHOD</span> <span class="kind">property</span>
+                <div class="kind">property</div> INVALID_METHOD
             </h1>
-            <p class="subtitle">
+            <!-- p class="subtitle">
                 
-            </p>
+            </p -->
         </div>
+        <ul class="subnav">
+        </ul>
     </div>
 </header>
 
 <div class="container">
 
   <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink.common/DSError_class.html">DSError</a></span>
+      <span class="returntype"><a href="dslink/DSError-class.html">DSError</a></span>
       <span class="name ">INVALID_METHOD</span>
       <div class="readable-writable">
           read-only
@@ -78,25 +81,48 @@
 
 <script src="static-assets/prettify.js"></script>
 <script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
 function initScroller() {
-    window.addEventListener('scroll', function(e){
-        var header = document.querySelector("header");
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
 
-        if (header) {
-          var position = window.pageYOffset || document.documentElement.scrollTop;
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
 
-          if (position >= 128) {
-              header.classList.add("header-fixed");
-          } else if (header.classList.contains("header-fixed")) {
-              header.classList.remove("header-fixed");
-          }
-        }
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
     });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    prettyPrint();
-    initScroller();
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
 });
 </script>
 <!-- Do not remove placeholder -->

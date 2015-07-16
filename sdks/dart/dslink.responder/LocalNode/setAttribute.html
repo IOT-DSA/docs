@@ -25,34 +25,37 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-                <ol class="breadcrumbs gt-separated">
-                    <li><a href="index.html">dslink</a></li>
-                    <li><a href="dslink.responder/index.html">dslink.responder</a></li>
-                    <li><a href="dslink.responder/LocalNode_class.html">LocalNode</a></li>
-                    <li><a href="dslink.responder/LocalNode/setAttribute.html">setAttribute</a></li>
-                </ol>
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+                <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
+                <li><a href="dslink.responder/LocalNode/setAttribute.html">setAttribute</a></li>
+            </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <span class="">setAttribute</span> <span class="kind">method</span>
+                <div class="kind">method</div> setAttribute
             </h1>
-            <p class="subtitle">
+            <!-- p class="subtitle">
                 
-            </p>
+            </p -->
         </div>
+        <ul class="subnav">
+        </ul>
     </div>
 </header>
 
 <div class="container">
 
     <section class="multi-line-signature">
-            <span class="returntype"><a href="dslink.responder/Response_class.html">Response</a></span>
+            <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
             <span class="name ">setAttribute</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>,<br><span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder_class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response_class.html">Response</a></span> <span class="parameter-name">response</span></span>
+                <span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>,<br><span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>
             </div>
             )    </section>
 
@@ -77,25 +80,48 @@
 
 <script src="static-assets/prettify.js"></script>
 <script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
 function initScroller() {
-    window.addEventListener('scroll', function(e){
-        var header = document.querySelector("header");
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
 
-        if (header) {
-          var position = window.pageYOffset || document.documentElement.scrollTop;
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
 
-          if (position >= 128) {
-              header.classList.add("header-fixed");
-          } else if (header.classList.contains("header-fixed")) {
-              header.classList.remove("header-fixed");
-          }
-        }
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
     });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    prettyPrint();
-    initScroller();
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
 });
 </script>
 <!-- Do not remove placeholder -->

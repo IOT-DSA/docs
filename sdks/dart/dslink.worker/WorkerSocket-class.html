@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WorkerSocket class - dslink.worker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the WorkerSocket class from the dslink.worker library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></li>
+                <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> WorkerSocket
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.worker/WorkerSocket-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink.worker/WorkerSocket-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.worker/WorkerSocket-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#receiver">receiver</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#isWorker">isWorker</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#isMaster">isMaster</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#sessions">sessions</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#done">done</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#isBroadcast">isBroadcast</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#length">length</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#isEmpty">isEmpty</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#first">first</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#last">last</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#single">single</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#first">first</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#last">last</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#single">single</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#WorkerSocket.master">WorkerSocket.master</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#WorkerSocket.worker">WorkerSocket.worker</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#waitFor">waitFor</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#init">init</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#addMethod">addMethod</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#callMethod">callMethod</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#getMethod">getMethod</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#ping">ping</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#add">add</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#send">send</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#addError">addError</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#addStream">addStream</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#stop">stop</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#close">close</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#createSession">createSession</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#listen">listen</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#kill">kill</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asBroadcastStream">asBroadcastStream</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#where">where</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#map">map</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asyncMap">asyncMap</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asyncExpand">asyncExpand</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#handleError">handleError</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#expand">expand</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#pipe">pipe</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#transform">transform</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#reduce">reduce</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#fold">fold</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#join">join</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#contains">contains</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#forEach">forEach</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#every">every</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#any">any</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#toList">toList</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#toSet">toSet</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#drain">drain</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#take">take</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#takeWhile">takeWhile</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#skip">skip</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#skipWhile">skipWhile</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#distinct">distinct</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#firstWhere">firstWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#lastWhere">lastWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#singleWhere">singleWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#elementAt">elementAt</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#timeout">timeout</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#pipe">pipe</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#take">take</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#map">map</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#distinct">distinct</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#takeWhile">takeWhile</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#fold">fold</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#toSet">toSet</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#firstWhere">firstWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#forEach">forEach</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#skipWhile">skipWhile</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asyncExpand">asyncExpand</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#lastWhere">lastWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#singleWhere">singleWhere</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asyncMap">asyncMap</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#handleError">handleError</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#reduce">reduce</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#transform">transform</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#every">every</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#any">any</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#toList">toList</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#where">where</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#asBroadcastStream">asBroadcastStream</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#skip">skip</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#expand">expand</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html#elementAt">elementAt</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated dark class-relationships">
+            <li>Object</li>
+            <li>Stream</li>
+            <li>WorkerSocket</li>
+        </ul></dd>
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li>StreamSink</li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="receiver" class="property">
+                <span class="top-level-variable-type">ReceivePort</span>
+                <a href="dslink.worker/WorkerSocket/receiver.html"><span class="name ">receiver</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="isWorker" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.worker/WorkerSocket/isWorker.html"><span class="name ">isWorker</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="isMaster" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.worker/WorkerSocket/isMaster.html"><span class="name ">isMaster</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="sessions" class="property">
+                <span class="top-level-variable-type">Stream&lt;<a href="dslink.worker/WorkerSession-class.html">WorkerSession</a>&gt;</span>
+                <a href="dslink.worker/WorkerSocket/sessions.html"><span class="name ">sessions</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="done" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href="dslink.worker/WorkerSocket/done.html"><span class="name ">done</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+
+            <dt id="isBroadcast" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href=""><span class="name ">isBroadcast</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="length" class="property">
+                <span class="top-level-variable-type">Future&lt;int&gt;</span>
+                <a href=""><span class="name ">length</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="isEmpty" class="property">
+                <span class="top-level-variable-type">Future&lt;bool&gt;</span>
+                <a href=""><span class="name ">isEmpty</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="first" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">first</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="last" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">last</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="single" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">single</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="first" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">first</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="last" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">last</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="single" class="property">
+                <span class="top-level-variable-type">Future</span>
+                <a href=""><span class="name ">single</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="WorkerSocket.master" class="callable">
+                <span class="name"><a href="dslink.worker/WorkerSocket/WorkerSocket.master.html">WorkerSocket.master</a></span><span class="signature">(<span class="parameter" id="master-param-receiver"><span class="type-annotation">ReceivePort</span> <span class="parameter-name">receiver</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="WorkerSocket.worker" class="callable">
+                <span class="name"><a href="dslink.worker/WorkerSocket/WorkerSocket.worker.html">WorkerSocket.worker</a></span><span class="signature">(<span class="parameter" id="worker-param-port"><span class="type-annotation">SendPort</span> <span class="parameter-name">port</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="waitFor" class="callable">
+                  <a href="dslink.worker/WorkerSocket/waitFor.html"><span class="name ">waitFor</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="init" class="callable">
+                  <a href="dslink.worker/WorkerSocket/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String,<a href="dslink.worker/Producer.html">Producer</a>&gt;</span> <span class="parameter-name">methods</span></span>})
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="addMethod" class="callable">
+                  <a href="dslink.worker/WorkerSocket/addMethod.html"><span class="name ">addMethod</span></a><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-producer"><span class="type-annotation">dynamic</span> <span class="parameter-name">producer</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="callMethod" class="callable">
+                  <a href="dslink.worker/WorkerSocket/callMethod.html"><span class="name ">callMethod</span></a><span class="signature">(<wbr><span class="parameter" id="callMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="callMethod-param-argument"><span class="parameter-name">argument</span></span>])
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="getMethod" class="callable">
+                  <a href="dslink.worker/WorkerSocket/getMethod.html"><span class="name ">getMethod</span></a><span class="signature">(<wbr><span class="parameter" id="getMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.worker/WorkerMethod.html">WorkerMethod</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="ping" class="callable">
+                  <a href="dslink.worker/WorkerSocket/ping.html"><span class="name ">ping</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="add" class="callable">
+                  <a href="dslink.worker/WorkerSocket/add.html"><span class="name ">add</span></a><span class="signature">(<wbr><span class="parameter" id="add-param-event"><span class="parameter-name">event</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Send a data event to a stream.
+              </dd>
+              <dt id="send" class="callable">
+                  <a href="dslink.worker/WorkerSocket/send.html"><span class="name ">send</span></a><span class="signature">(<wbr><span class="parameter" id="send-param-event"><span class="parameter-name">event</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="addError" class="callable">
+                  <a href="dslink.worker/WorkerSocket/addError.html"><span class="name ">addError</span></a><span class="signature">(<wbr><span class="parameter" id="addError-param-errorEvent"><span class="parameter-name">errorEvent</span></span>, [<span class="parameter" id="addError-param-stackTrace"><span class="type-annotation">StackTrace</span> <span class="parameter-name">stackTrace</span></span>])
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Send an async error to a stream.
+              </dd>
+              <dt id="addStream" class="callable">
+                  <a href="dslink.worker/WorkerSocket/addStream.html"><span class="name ">addStream</span></a><span class="signature">(<wbr><span class="parameter" id="addStream-param-stream"><span class="type-annotation">Stream</span> <span class="parameter-name">stream</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Consumes the elements of [stream].
+              </dd>
+              <dt id="stop" class="callable">
+                  <a href="dslink.worker/WorkerSocket/stop.html"><span class="name ">stop</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="close" class="callable">
+                  <a href="dslink.worker/WorkerSocket/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  As [EventSink.close], but returns a future.
+              </dd>
+              <dt id="createSession" class="callable">
+                  <a href="dslink.worker/WorkerSocket/createSession.html"><span class="name ">createSession</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSession-class.html">WorkerSession</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="listen" class="callable">
+                  <a href="dslink.worker/WorkerSocket/listen.html"><span class="name ">listen</span></a><span class="signature">(<wbr><span class="parameter" id="listen-param-onData"><span class="type-annotation">void</span> <span class="parameter-name">onData</span>(<span class="parameter" id="onData-param-event"><span class="parameter-name">event</span></span>)</span>, {<span class="parameter" id="listen-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, <span class="parameter" id="listen-param-onDone"><span class="type-annotation">void</span> <span class="parameter-name">onDone</span>()</span>, <span class="parameter" id="listen-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span></span>})
+                      &#8594;
+                      <span class="returntype">StreamSubscription</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Adds a subscription to this stream.
+              </dd>
+              <dt id="kill" class="callable">
+                  <a href="dslink.worker/WorkerSocket/kill.html"><span class="name ">kill</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">bool</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+              <dt id="asBroadcastStream" class="callable">
+                  <a href=""><span class="name ">asBroadcastStream</span></a><span class="signature">(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Returns a multi-subscription stream that produces the same events as this.
+              </dd>
+              <dt id="where" class="callable">
+                  <a href=""><span class="name ">where</span></a><span class="signature">(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that discards some data events.
+              </dd>
+              <dt id="map" class="callable">
+                  <a href=""><span class="name ">map</span></a><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream that converts each element of this stream
+to a new value using the convert function.
+              </dd>
+              <dt id="asyncMap" class="callable">
+                  <a href=""><span class="name ">asyncMap</span></a><span class="signature">(<wbr><span class="parameter" id="asyncMap-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream with each data event of this stream asynchronously
+mapped to a new event.
+              </dd>
+              <dt id="asyncExpand" class="callable">
+                  <a href=""><span class="name ">asyncExpand</span></a><span class="signature">(<wbr><span class="parameter" id="asyncExpand-param-convert"><span class="type-annotation">Stream</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream with the events of a stream per original event.
+              </dd>
+              <dt id="handleError" class="callable">
+                  <a href=""><span class="name ">handleError</span></a><span class="signature">(<wbr><span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, {<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a wrapper Stream that intercepts some errors from this stream.
+              </dd>
+              <dt id="expand" class="callable">
+                  <a href=""><span class="name ">expand</span></a><span class="signature">(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that converts each element
+into zero or more events.
+              </dd>
+              <dt id="pipe" class="callable">
+                  <a href=""><span class="name ">pipe</span></a><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer</span> <span class="parameter-name">streamConsumer</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Binds this stream as the input of the provided StreamConsumer.
+              </dd>
+              <dt id="transform" class="callable">
+                  <a href=""><span class="name ">transform</span></a><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer</span> <span class="parameter-name">streamTransformer</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Chains this stream as the input of the provided StreamTransformer.
+              </dd>
+              <dt id="reduce" class="callable">
+                  <a href=""><span class="name ">reduce</span></a><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">T</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying combine.
+              </dd>
+              <dt id="fold" class="callable">
+                  <a href=""><span class="name ">fold</span></a><span class="signature">(<wbr><span class="parameter" id="fold-param-initialValue"><span class="parameter-name">initialValue</span></span>, <span class="parameter" id="fold-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying combine.
+              </dd>
+              <dt id="join" class="callable">
+                  <a href=""><span class="name ">join</span></a><span class="signature">(<wbr>[<span class="parameter" id="join-param-separator"><span class="type-annotation">String</span> <span class="parameter-name">separator</span> = <span class="default-value">""</span></span>])
+                      &#8594;
+                      <span class="returntype">Future&lt;String&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Collects string of data events' string representations.
+              </dd>
+              <dt id="contains" class="callable">
+                  <a href=""><span class="name ">contains</span></a><span class="signature">(<wbr><span class="parameter" id="contains-param-needle"><span class="type-annotation">Object</span> <span class="parameter-name">needle</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Checks whether needle occurs in the elements provided by this stream.
+              </dd>
+              <dt id="forEach" class="callable">
+                  <a href=""><span class="name ">forEach</span></a><span class="signature">(<wbr><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="action-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Executes action on each data event of the stream.
+              </dd>
+              <dt id="every" class="callable">
+                  <a href=""><span class="name ">every</span></a><span class="signature">(<wbr><span class="parameter" id="every-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Checks whether test accepts all elements provided by this stream.
+              </dd>
+              <dt id="any" class="callable">
+                  <a href=""><span class="name ">any</span></a><span class="signature">(<wbr><span class="parameter" id="any-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Checks whether test accepts any element provided by this stream.
+              </dd>
+              <dt id="toList" class="callable">
+                  <a href=""><span class="name ">toList</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;List&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Collects the data of this stream in a List.
+              </dd>
+              <dt id="toSet" class="callable">
+                  <a href=""><span class="name ">toSet</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;Set&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Collects the data of this stream in a Set.
+              </dd>
+              <dt id="drain" class="callable">
+                  <a href=""><span class="name ">drain</span></a><span class="signature">(<wbr>[<span class="parameter" id="drain-param-futureValue"><span class="parameter-name">futureValue</span></span>])
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Discards all data on the stream, but signals when it's done or an error
+occured.
+              </dd>
+              <dt id="take" class="callable">
+                  <a href=""><span class="name ">take</span></a><span class="signature">(<wbr><span class="parameter" id="take-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Provides at most the first n values of this stream.
+              </dd>
+              <dt id="takeWhile" class="callable">
+                  <a href=""><span class="name ">takeWhile</span></a><span class="signature">(<wbr><span class="parameter" id="takeWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Forwards data events while test is successful.
+              </dd>
+              <dt id="skip" class="callable">
+                  <a href=""><span class="name ">skip</span></a><span class="signature">(<wbr><span class="parameter" id="skip-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skips the first count data events from this stream.
+              </dd>
+              <dt id="skipWhile" class="callable">
+                  <a href=""><span class="name ">skipWhile</span></a><span class="signature">(<wbr><span class="parameter" id="skipWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skip data events from this stream while they are matched by test.
+              </dd>
+              <dt id="distinct" class="callable">
+                  <a href=""><span class="name ">distinct</span></a><span class="signature">(<wbr>[<span class="parameter" id="distinct-param-equals"><span class="type-annotation">bool</span> <span class="parameter-name">equals</span>(<span class="parameter" id="equals-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="equals-param-next"><span class="type-annotation">T</span> <span class="parameter-name">next</span></span>)</span>])
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skips data events if they are equal to the previous data event.
+              </dd>
+              <dt id="firstWhere" class="callable">
+                  <a href=""><span class="name ">firstWhere</span></a><span class="signature">(<wbr><span class="parameter" id="firstWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="firstWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the first element of this stream matching test.
+              </dd>
+              <dt id="lastWhere" class="callable">
+                  <a href=""><span class="name ">lastWhere</span></a><span class="signature">(<wbr><span class="parameter" id="lastWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="lastWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the last element in this stream matching test.
+              </dd>
+              <dt id="singleWhere" class="callable">
+                  <a href=""><span class="name ">singleWhere</span></a><span class="signature">(<wbr><span class="parameter" id="singleWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the single element in this stream matching test.
+              </dd>
+              <dt id="elementAt" class="callable">
+                  <a href=""><span class="name ">elementAt</span></a><span class="signature">(<wbr><span class="parameter" id="elementAt-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Returns the value of the indexth data event of this stream.
+              </dd>
+              <dt id="timeout" class="callable">
+                  <a href=""><span class="name ">timeout</span></a><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream with the same events as this stream.
+              </dd>
+              <dt id="pipe" class="callable">
+                  <a href=""><span class="name ">pipe</span></a><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer</span> <span class="parameter-name">streamConsumer</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Binds this stream as the input of the provided StreamConsumer.
+              </dd>
+              <dt id="take" class="callable">
+                  <a href=""><span class="name ">take</span></a><span class="signature">(<wbr><span class="parameter" id="take-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Provides at most the first n values of this stream.
+              </dd>
+              <dt id="map" class="callable">
+                  <a href=""><span class="name ">map</span></a><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream that converts each element of this stream
+to a new value using the convert function.
+              </dd>
+              <dt id="distinct" class="callable">
+                  <a href=""><span class="name ">distinct</span></a><span class="signature">(<wbr>[<span class="parameter" id="distinct-param-equals"><span class="type-annotation">bool</span> <span class="parameter-name">equals</span>(<span class="parameter" id="equals-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="equals-param-next"><span class="type-annotation">T</span> <span class="parameter-name">next</span></span>)</span>])
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skips data events if they are equal to the previous data event.
+              </dd>
+              <dt id="takeWhile" class="callable">
+                  <a href=""><span class="name ">takeWhile</span></a><span class="signature">(<wbr><span class="parameter" id="takeWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Forwards data events while test is successful.
+              </dd>
+              <dt id="fold" class="callable">
+                  <a href=""><span class="name ">fold</span></a><span class="signature">(<wbr><span class="parameter" id="fold-param-initialValue"><span class="parameter-name">initialValue</span></span>, <span class="parameter" id="fold-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying combine.
+              </dd>
+              <dt id="toSet" class="callable">
+                  <a href=""><span class="name ">toSet</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;Set&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Collects the data of this stream in a Set.
+              </dd>
+              <dt id="firstWhere" class="callable">
+                  <a href=""><span class="name ">firstWhere</span></a><span class="signature">(<wbr><span class="parameter" id="firstWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="firstWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the first element of this stream matching test.
+              </dd>
+              <dt id="forEach" class="callable">
+                  <a href=""><span class="name ">forEach</span></a><span class="signature">(<wbr><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="action-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Executes action on each data event of the stream.
+              </dd>
+              <dt id="skipWhile" class="callable">
+                  <a href=""><span class="name ">skipWhile</span></a><span class="signature">(<wbr><span class="parameter" id="skipWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skip data events from this stream while they are matched by test.
+              </dd>
+              <dt id="asyncExpand" class="callable">
+                  <a href=""><span class="name ">asyncExpand</span></a><span class="signature">(<wbr><span class="parameter" id="asyncExpand-param-convert"><span class="type-annotation">Stream</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream with the events of a stream per original event.
+              </dd>
+              <dt id="lastWhere" class="callable">
+                  <a href=""><span class="name ">lastWhere</span></a><span class="signature">(<wbr><span class="parameter" id="lastWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="lastWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the last element in this stream matching test.
+              </dd>
+              <dt id="singleWhere" class="callable">
+                  <a href=""><span class="name ">singleWhere</span></a><span class="signature">(<wbr><span class="parameter" id="singleWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Finds the single element in this stream matching test.
+              </dd>
+              <dt id="asyncMap" class="callable">
+                  <a href=""><span class="name ">asyncMap</span></a><span class="signature">(<wbr><span class="parameter" id="asyncMap-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream with each data event of this stream asynchronously
+mapped to a new event.
+              </dd>
+              <dt id="handleError" class="callable">
+                  <a href=""><span class="name ">handleError</span></a><span class="signature">(<wbr><span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, {<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a wrapper Stream that intercepts some errors from this stream.
+              </dd>
+              <dt id="reduce" class="callable">
+                  <a href=""><span class="name ">reduce</span></a><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">T</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying combine.
+              </dd>
+              <dt id="transform" class="callable">
+                  <a href=""><span class="name ">transform</span></a><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer</span> <span class="parameter-name">streamTransformer</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Chains this stream as the input of the provided StreamTransformer.
+              </dd>
+              <dt id="every" class="callable">
+                  <a href=""><span class="name ">every</span></a><span class="signature">(<wbr><span class="parameter" id="every-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Checks whether test accepts all elements provided by this stream.
+              </dd>
+              <dt id="any" class="callable">
+                  <a href=""><span class="name ">any</span></a><span class="signature">(<wbr><span class="parameter" id="any-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Checks whether test accepts any element provided by this stream.
+              </dd>
+              <dt id="toList" class="callable">
+                  <a href=""><span class="name ">toList</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;List&gt;</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Collects the data of this stream in a List.
+              </dd>
+              <dt id="where" class="callable">
+                  <a href=""><span class="name ">where</span></a><span class="signature">(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that discards some data events.
+              </dd>
+              <dt id="asBroadcastStream" class="callable">
+                  <a href=""><span class="name ">asBroadcastStream</span></a><span class="signature">(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Returns a multi-subscription stream that produces the same events as this.
+              </dd>
+              <dt id="skip" class="callable">
+                  <a href=""><span class="name ">skip</span></a><span class="signature">(<wbr><span class="parameter" id="skip-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Skips the first count data events from this stream.
+              </dd>
+              <dt id="expand" class="callable">
+                  <a href=""><span class="name ">expand</span></a><span class="signature">(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that converts each element
+into zero or more events.
+              </dd>
+              <dt id="elementAt" class="callable">
+                  <a href=""><span class="name ">elementAt</span></a><span class="signature">(<wbr><span class="parameter" id="elementAt-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  Returns the value of the indexth data event of this stream.
+              </dd>
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

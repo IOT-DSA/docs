@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CachedStreamWrapper class - dslink.utils library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the CachedStreamWrapper class from the dslink.utils library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> CachedStreamWrapper&ltT&gt
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.utils/CachedStreamWrapper-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#lastValue">lastValue</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#first">first</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#isBroadcast">isBroadcast</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#isEmpty">isEmpty</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#last">last</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#length">length</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#single">single</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#CachedStreamWrapper">CachedStreamWrapper</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#any">any</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#asBroadcastStream">asBroadcastStream</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#asyncExpand">asyncExpand</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#asyncMap">asyncMap</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#contains">contains</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#distinct">distinct</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#drain">drain</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#elementAt">elementAt</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#every">every</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#expand">expand</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#firstWhere">firstWhere</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#fold">fold</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#forEach">forEach</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#handleError">handleError</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#join">join</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#lastWhere">lastWhere</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#listen">listen</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#map">map</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#pipe">pipe</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#reduce">reduce</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#singleWhere">singleWhere</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#skip">skip</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#skipWhile">skipWhile</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#take">take</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#takeWhile">takeWhile</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#timeout">timeout</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#toList">toList</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#toSet">toSet</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#transform">transform</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper-class.html#where">where</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li>Stream&lt;T&gt;</li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="lastValue" class="property">
+                <span class="top-level-variable-type">T</span>
+                <a href="dslink.utils/CachedStreamWrapper/lastValue.html"><span class="name ">lastValue</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="first" class="property">
+                <span class="top-level-variable-type">Future&lt;T&gt;</span>
+                <a href="dslink.utils/CachedStreamWrapper/first.html"><span class="name ">first</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="isBroadcast" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.utils/CachedStreamWrapper/isBroadcast.html"><span class="name ">isBroadcast</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="isEmpty" class="property">
+                <span class="top-level-variable-type">Future&lt;bool&gt;</span>
+                <a href="dslink.utils/CachedStreamWrapper/isEmpty.html"><span class="name ">isEmpty</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="last" class="property">
+                <span class="top-level-variable-type">Future&lt;T&gt;</span>
+                <a href="dslink.utils/CachedStreamWrapper/last.html"><span class="name ">last</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="length" class="property">
+                <span class="top-level-variable-type">Future&lt;int&gt;</span>
+                <a href="dslink.utils/CachedStreamWrapper/length.html"><span class="name ">length</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="single" class="property">
+                <span class="top-level-variable-type">Future&lt;T&gt;</span>
+                <a href="dslink.utils/CachedStreamWrapper/single.html"><span class="name ">single</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="CachedStreamWrapper" class="callable">
+                <span class="name"><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></span><span class="signature">(<span class="parameter" id="-param-_stream"><span class="type-annotation">Stream&lt;T&gt;</span> <span class="parameter-name">_stream</span></span>, <span class="parameter" id="-param-_onListen"><span class="type-annotation">Function</span> <span class="parameter-name">_onListen</span></span>)</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="any" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/any.html"><span class="name ">any</span></a><span class="signature">(<wbr><span class="parameter" id="any-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Checks whether [test] accepts any element provided by this stream.
+              </dd>
+              <dt id="asBroadcastStream" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html"><span class="name ">asBroadcastStream</span></a><span class="signature">(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Returns a multi-subscription stream that produces the same events as this.
+              </dd>
+              <dt id="asyncExpand" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/asyncExpand.html"><span class="name ">asyncExpand</span></a><span class="signature">(<wbr><span class="parameter" id="asyncExpand-param-convert"><span class="type-annotation">Stream</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream with the events of a stream per original event.
+              </dd>
+              <dt id="asyncMap" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/asyncMap.html"><span class="name ">asyncMap</span></a><span class="signature">(<wbr><span class="parameter" id="asyncMap-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream with each data event of this stream asynchronously
+mapped to a new event.
+              </dd>
+              <dt id="contains" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/contains.html"><span class="name ">contains</span></a><span class="signature">(<wbr><span class="parameter" id="contains-param-needle"><span class="type-annotation">Object</span> <span class="parameter-name">needle</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Checks whether [needle] occurs in the elements provided by this stream.
+              </dd>
+              <dt id="distinct" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/distinct.html"><span class="name ">distinct</span></a><span class="signature">(<wbr>[<span class="parameter" id="distinct-param-equals"><span class="type-annotation">bool</span> <span class="parameter-name">equals</span>(<span class="parameter" id="equals-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="equals-param-next"><span class="type-annotation">T</span> <span class="parameter-name">next</span></span>)</span>])
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Skips data events if they are equal to the previous data event.
+              </dd>
+              <dt id="drain" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/drain.html"><span class="name ">drain</span></a><span class="signature">(<wbr>[<span class="parameter" id="drain-param-futureValue"><span class="parameter-name">futureValue</span></span>])
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Discards all data on the stream, but signals when it's done or an error
+occured.
+              </dd>
+              <dt id="elementAt" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/elementAt.html"><span class="name ">elementAt</span></a><span class="signature">(<wbr><span class="parameter" id="elementAt-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Returns the value of the [index]th data event of this stream.
+              </dd>
+              <dt id="every" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/every.html"><span class="name ">every</span></a><span class="signature">(<wbr><span class="parameter" id="every-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;bool&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Checks whether [test] accepts all elements provided by this stream.
+              </dd>
+              <dt id="expand" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/expand.html"><span class="name ">expand</span></a><span class="signature">(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that converts each element
+into zero or more events.
+              </dd>
+              <dt id="firstWhere" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/firstWhere.html"><span class="name ">firstWhere</span></a><span class="signature">(<wbr><span class="parameter" id="firstWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="firstWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Finds the first element of this stream matching [test].
+              </dd>
+              <dt id="fold" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/fold.html"><span class="name ">fold</span></a><span class="signature">(<wbr><span class="parameter" id="fold-param-initialValue"><span class="parameter-name">initialValue</span></span>, <span class="parameter" id="fold-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying [combine].
+              </dd>
+              <dt id="forEach" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/forEach.html"><span class="name ">forEach</span></a><span class="signature">(<wbr><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="action-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Executes [action] on each data event of the stream.
+              </dd>
+              <dt id="handleError" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/handleError.html"><span class="name ">handleError</span></a><span class="signature">(<wbr><span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, {<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a wrapper Stream that intercepts some errors from this stream.
+              </dd>
+              <dt id="join" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/join.html"><span class="name ">join</span></a><span class="signature">(<wbr>[<span class="parameter" id="join-param-separator"><span class="type-annotation">String</span> <span class="parameter-name">separator</span> = <span class="default-value">""</span></span>])
+                      &#8594;
+                      <span class="returntype">Future&lt;String&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Collects string of data events' string representations.
+              </dd>
+              <dt id="lastWhere" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/lastWhere.html"><span class="name ">lastWhere</span></a><span class="signature">(<wbr><span class="parameter" id="lastWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="lastWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Finds the last element in this stream matching [test].
+              </dd>
+              <dt id="listen" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/listen.html"><span class="name ">listen</span></a><span class="signature">(<wbr><span class="parameter" id="listen-param-onData"><span class="type-annotation">void</span> <span class="parameter-name">onData</span>(<span class="parameter" id="onData-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>, {<span class="parameter" id="listen-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, <span class="parameter" id="listen-param-onDone"><span class="type-annotation">void</span> <span class="parameter-name">onDone</span>()</span>, <span class="parameter" id="listen-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span></span>})
+                      &#8594;
+                      <span class="returntype">StreamSubscription&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Adds a subscription to this stream.
+              </dd>
+              <dt id="map" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/map.html"><span class="name ">map</span></a><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream that converts each element of this stream
+to a new value using the [convert] function.
+              </dd>
+              <dt id="pipe" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/pipe.html"><span class="name ">pipe</span></a><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer&lt;T&gt;</span> <span class="parameter-name">streamConsumer</span></span>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Binds this stream as the input of the provided [StreamConsumer].
+              </dd>
+              <dt id="reduce" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/reduce.html"><span class="name ">reduce</span></a><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">T</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Reduces a sequence of values by repeatedly applying [combine].
+              </dd>
+              <dt id="singleWhere" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/singleWhere.html"><span class="name ">singleWhere</span></a><span class="signature">(<wbr><span class="parameter" id="singleWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Finds the single element in this stream matching [test].
+              </dd>
+              <dt id="skip" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/skip.html"><span class="name ">skip</span></a><span class="signature">(<wbr><span class="parameter" id="skip-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Skips the first [count] data events from this stream.
+              </dd>
+              <dt id="skipWhile" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/skipWhile.html"><span class="name ">skipWhile</span></a><span class="signature">(<wbr><span class="parameter" id="skipWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Skip data events from this stream while they are matched by [test].
+              </dd>
+              <dt id="take" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/take.html"><span class="name ">take</span></a><span class="signature">(<wbr><span class="parameter" id="take-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Provides at most the first [n] values of this stream.
+              </dd>
+              <dt id="takeWhile" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/takeWhile.html"><span class="name ">takeWhile</span></a><span class="signature">(<wbr><span class="parameter" id="takeWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Forwards data events while [test] is successful.
+              </dd>
+              <dt id="timeout" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/timeout.html"><span class="name ">timeout</span></a><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>})
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream with the same events as this stream.
+              </dd>
+              <dt id="toList" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/toList.html"><span class="name ">toList</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;List&lt;T&gt;&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Collects the data of this stream in a [List].
+              </dd>
+              <dt id="toSet" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/toSet.html"><span class="name ">toSet</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future&lt;Set&lt;T&gt;&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Collects the data of this stream in a [Set].
+              </dd>
+              <dt id="transform" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/transform.html"><span class="name ">transform</span></a><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer&lt;T&gt;</span> <span class="parameter-name">streamTransformer</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Chains this stream as the input of the provided [StreamTransformer].
+              </dd>
+              <dt id="where" class="callable">
+                  <a href="dslink.utils/CachedStreamWrapper/where.html"><span class="name ">where</span></a><span class="signature">(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;T&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Creates a new stream from this stream that discards some data events.
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

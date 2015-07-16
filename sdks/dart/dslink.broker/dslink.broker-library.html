@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dslink.broker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="dslink.broker library API docs, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">library</div> dslink.broker
+            </h1>
+            <!-- p class="subtitle">
+                DSA Broker Implementation
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+            <li><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
+            <li><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#userNodeFunctions">userNodeFunctions</a></li>
+
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#startBrokerServer">startBrokerServer</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#addChildNode">addChildNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#addLink">addLink</a></li>
+
+
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerNodeProvider">BrokerNodeProvider</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerNode">BrokerNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerVersionNode">BrokerVersionNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#StartTimeNode">StartTimeNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#ClearConnsAction">ClearConnsAction</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RootNode">RootNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteLinkManager">RemoteLinkManager</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteLinkNode">RemoteLinkNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteLinkListController">RemoteLinkListController</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteLinkRootNode">RemoteLinkRootNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteLinkRootListController">RemoteLinkRootListController</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#RemoteRequester">RemoteRequester</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerDiscoveryClient">BrokerDiscoveryClient</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerDiscoverRequest">BrokerDiscoverRequest</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#PermissionPair">PermissionPair</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerNodePermission">BrokerNodePermission</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#VirtualNodePermissioin">VirtualNodePermissioin</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#BrokerPermissions">BrokerPermissions</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#UserNode">UserNode</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html#UserRootNode">UserRootNode</a></li>
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    <section class="desc markdown">
+    
+        <p>DSA Broker Implementation</p>
+    
+    </section>
+    
+
+
+    <section class="summary offset-anchor" id="properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="userNodeFunctions" class="property">
+                <span class="top-level-variable-type">Map</span>
+                <a href="dslink.broker/userNodeFunctions.html"><span class="name ">userNodeFunctions</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="functions">
+        <h2>Functions</h2>
+
+        <dl class="callables">
+            <dt id="startBrokerServer" class="callable">
+                <a href="dslink.broker/startBrokerServer.html"><span class="name ">startBrokerServer</span></a><span class="signature">(<wbr><span class="parameter" id="startBrokerServer-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>, {<span class="parameter" id="startBrokerServer-param-persist"><span class="type-annotation">bool</span> <span class="parameter-name">persist</span>: <span class="default-value">true</span></span>})
+                    &#8594;
+                    <span class="returntype">Future&lt;<a href="dslink.server/DsHttpServer-class.html">DsHttpServer</a>&gt;</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="addChildNode" class="callable">
+                <a href="dslink.broker/addChildNode.html"><span class="name ">addChildNode</span></a><span class="signature">(<wbr><span class="parameter" id="addChildNode-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="addChildNode-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="addChildNode-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="addChildNode-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="addLink" class="callable">
+                <a href="dslink.broker/addLink.html"><span class="name ">addLink</span></a><span class="signature">(<wbr><span class="parameter" id="addLink-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="addLink-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="addLink-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="addLink-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="classes">
+        <h2>Classes</h2>
+
+        <dl>
+            <dt id="BrokerNodeProvider">
+                <span class="name "><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerNode">
+                <span class="name "><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+            </dt>
+            <dd>
+                Wrapper node for brokers
+            </dd>
+            <dt id="BrokerVersionNode">
+                <span class="name "><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></span>
+            </dt>
+            <dd>
+                Version node
+            </dd>
+            <dt id="StartTimeNode">
+                <span class="name "><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></span>
+            </dt>
+            <dd>
+                Start Time node
+            </dd>
+            <dt id="ClearConnsAction">
+                <span class="name "><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></span>
+            </dt>
+            <dd>
+                Clear Conns node
+            </dd>
+            <dt id="RootNode">
+                <span class="name "><a href="dslink.broker/RootNode-class.html">RootNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkManager">
+                <span class="name "><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkNode">
+                <span class="name "><a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkListController">
+                <span class="name "><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkRootNode">
+                <span class="name "><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkRootListController">
+                <span class="name "><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteRequester">
+                <span class="name "><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerDiscoveryClient">
+                <span class="name "><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerDiscoverRequest">
+                <span class="name "><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="PermissionPair">
+                <span class="name "><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerNodePermission">
+                <span class="name "><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="VirtualNodePermissioin">
+                <span class="name "><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerPermissions">
+                <span class="name "><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="UserNode">
+                <span class="name "><a href="dslink.broker/UserNode-class.html">UserNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="UserRootNode">
+                <span class="name "><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

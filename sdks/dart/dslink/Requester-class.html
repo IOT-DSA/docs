@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Requester class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the Requester class from the dslink library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink/dslink-library.html">dslink</a></li>
+                <li><a href="dslink/Requester-class.html">Requester</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> Requester
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink/Requester-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink/Requester-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink/Requester-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink/Requester-class.html#nodeCache">nodeCache</a></li>
+      <li><a href="dslink/Requester-class.html#nextRid">nextRid</a></li>
+      <li><a href="dslink/Requester-class.html#nextSid">nextSid</a></li>
+      <li><a href="dslink/Requester-class.html#lastSentId">lastSentId</a></li>
+      <li><a href="dslink/Requester-class.html#connection">connection</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink/Requester-class.html#Requester">Requester</a></li>
+
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink/Requester-class.html#onData">onData</a></li>
+      <li><a href="dslink/Requester-class.html#doSend">doSend</a></li>
+      <li><a href="dslink/Requester-class.html#subscribe">subscribe</a></li>
+      <li><a href="dslink/Requester-class.html#unsubscribe">unsubscribe</a></li>
+      <li><a href="dslink/Requester-class.html#list">list</a></li>
+      <li><a href="dslink/Requester-class.html#invoke">invoke</a></li>
+      <li><a href="dslink/Requester-class.html#set">set</a></li>
+      <li><a href="dslink/Requester-class.html#remove">remove</a></li>
+      <li><a href="dslink/Requester-class.html#closeRequest">closeRequest</a></li>
+      <li><a href="dslink/Requester-class.html#onDisconnected">onDisconnected</a></li>
+      <li><a href="dslink/Requester-class.html#onReconnected">onReconnected</a></li>
+      <li><a href="dslink/Requester-class.html#addToSendList">addToSendList</a></li>
+      <li><a href="dslink/Requester-class.html#addProcessor">addProcessor</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated dark class-relationships">
+            <li>Object</li>
+            <li><a href="dslink.common/ConnectionHandler-class.html">ConnectionHandler</a></li>
+            <li>Requester</li>
+        </ul></dd>
+
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="nodeCache" class="property">
+                <span class="top-level-variable-type"><a href="dslink/RemoteNodeCache-class.html">RemoteNodeCache</a></span>
+                <a href="dslink/Requester/nodeCache.html"><span class="name ">nodeCache</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    caching of nodes
+            </dd>
+            <dt id="nextRid" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink/Requester/nextRid.html"><span class="name ">nextRid</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="nextSid" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink/Requester/nextSid.html"><span class="name ">nextSid</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastSentId" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink/Requester/lastSentId.html"><span class="name ">lastSentId</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+
+            <dt id="connection" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <a href="dslink.common/ConnectionHandler/connection.html"><span class="name ">connection</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="Requester" class="callable">
+                <span class="name"><a href="dslink/Requester/Requester.html">Requester</a></span><span class="signature">([<span class="parameter" id="-param-cache"><span class="type-annotation"><a href="dslink/RemoteNodeCache-class.html">RemoteNodeCache</a></span> <span class="parameter-name">cache</span></span>])</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="onData" class="callable">
+                  <a href="dslink/Requester/onData.html"><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="doSend" class="callable">
+                  <a href="dslink/Requester/doSend.html"><span class="name ">doSend</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">List</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  gather all the changes from
+              </dd>
+              <dt id="subscribe" class="callable">
+                  <a href="dslink/Requester/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span> = <span class="default-value">1</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.requester/ReqSubscribeListener-class.html">ReqSubscribeListener</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="unsubscribe" class="callable">
+                  <a href="dslink/Requester/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="list" class="callable">
+                  <a href="dslink/Requester/list.html"><span class="name ">list</span></a><span class="signature">(<wbr><span class="parameter" id="list-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype">Stream&lt;<a href="dslink.requester/RequesterListUpdate-class.html">RequesterListUpdate</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="invoke" class="callable">
+                  <a href="dslink/Requester/invoke.html"><span class="name ">invoke</span></a><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+                      &#8594;
+                      <span class="returntype">Stream&lt;<a href="dslink.requester/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="set" class="callable">
+                  <a href="dslink/Requester/set.html"><span class="name ">set</span></a><span class="signature">(<wbr><span class="parameter" id="set-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="set-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, [<span class="parameter" id="set-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.requester/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="remove" class="callable">
+                  <a href="dslink/Requester/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr><span class="parameter" id="remove-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.requester/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="closeRequest" class="callable">
+                  <a href="dslink/Requester/closeRequest.html"><span class="name ">closeRequest</span></a><span class="signature">(<wbr><span class="parameter" id="closeRequest-param-request"><span class="type-annotation"><a href="dslink/Request-class.html">Request</a></span> <span class="parameter-name">request</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  close the request from requester side and notify responder
+              </dd>
+              <dt id="onDisconnected" class="callable">
+                  <a href="dslink/Requester/onDisconnected.html"><span class="name ">onDisconnected</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onReconnected" class="callable">
+                  <a href="dslink/Requester/onReconnected.html"><span class="name ">onReconnected</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+              <dt id="addToSendList" class="callable">
+                  <a href="dslink.common/ConnectionHandler/addToSendList.html"><span class="name ">addToSendList</span></a><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="addProcessor" class="callable">
+                  <a href="dslink.common/ConnectionHandler/addProcessor.html"><span class="name ">addProcessor</span></a><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  <span class="is-inherited">inherited</span>
+              </dt>
+              <dd>
+                  a processor function that's called just before the data is sent
+same processor won't be added to the list twice
+inside processor, send() data that only need to appear once per data frame
+              </dd>
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

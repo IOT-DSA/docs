@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>dslink.responder library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="dslink.responder library API docs, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">library</div> dslink.responder
+            </h1>
+            <!-- p class="subtitle">
+                DSA Responder API
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+            <li><a href="dslink.responder/dslink.responder-library.html#classes">Classes</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#OnInvokeClosed">OnInvokeClosed</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#InvokeCallback">InvokeCallback</a></li>
+
+
+
+
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#classes">Classes</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#Responder">Responder</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#Response">Response</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#LocalNode">LocalNode</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#NodeProvider">NodeProvider</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#RespSubscribeListener">RespSubscribeListener</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SubscribeResponse">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#RespSubscribeController">RespSubscribeController</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#ListResponse">ListResponse</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#InvokeResponse">InvokeResponse</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#NodeProviderImpl">NodeProviderImpl</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#LocalNodeImpl">LocalNodeImpl</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#ConfigSetting">ConfigSetting</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#Configs">Configs</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#DefinitionNode">DefinitionNode</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SimpleTableResult">SimpleTableResult</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#AsyncTableResult">AsyncTableResult</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SerializableNodeProvider">SerializableNodeProvider</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#MutableNodeProvider">MutableNodeProvider</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SimpleNodeProvider">SimpleNodeProvider</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SimpleNode">SimpleNode</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#SimpleHiddenNode">SimpleHiddenNode</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#IPermissionManager">IPermissionManager</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html#DummyPermissionManager">DummyPermissionManager</a></li>
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    <section class="desc markdown">
+    
+        <p>DSA Responder API</p>
+    
+    </section>
+    
+
+    <section class="summary offset-anchor" id="typedefs">
+        <h2>Typedefs</h2>
+
+        <dl class="callables">
+            <dt id="OnInvokeClosed" class="callable">
+                <a href="dslink.responder/OnInvokeClosed.html"><span class="name ">OnInvokeClosed</span></a><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="InvokeCallback" class="callable">
+                <a href="dslink.responder/InvokeCallback.html"><span class="name ">InvokeCallback</span></a><span class="signature">(<wbr><span class="parameter" id="InvokeCallback-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="InvokeCallback-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="InvokeCallback-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="InvokeCallback-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
+                    &#8594;
+                    <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+                </span>
+                
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary offset-anchor" id="classes">
+        <h2>Classes</h2>
+
+        <dl>
+            <dt id="Responder">
+                <span class="name "><a href="dslink.responder/Responder-class.html">Responder</a></span>
+            </dt>
+            <dd>
+                a responder for one connection
+            </dd>
+            <dt id="Response">
+                <span class="name "><a href="dslink.responder/Response-class.html">Response</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="LocalNode">
+                <span class="name "><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+            </dt>
+            <dd>
+                a node that can be subscribed or listed by multiple responders
+            </dd>
+            <dt id="NodeProvider">
+                <span class="name "><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span>
+            </dt>
+            <dd>
+                node provider for responder
+one NodeProvider can be reused by multiple responders.
+            </dd>
+            <dt id="RespSubscribeListener">
+                <span class="name "><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="SubscribeResponse">
+                <span class="name "><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RespSubscribeController">
+                <span class="name "><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="ListResponse">
+                <span class="name "><a href="dslink.responder/ListResponse-class.html">ListResponse</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="InvokeResponse">
+                <span class="name "><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="NodeProviderImpl">
+                <span class="name "><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="LocalNodeImpl">
+                <span class="name "><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="ConfigSetting">
+                <span class="name "><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="Configs">
+                <span class="name "><a href="dslink.responder/Configs-class.html">Configs</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="DefinitionNode">
+                <span class="name "><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></span>
+            </dt>
+            <dd>
+                definition nodes are serializable node that won't change
+the only change will be a global upgrade
+            </dd>
+            <dt id="SimpleTableResult">
+                <span class="name "><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="AsyncTableResult">
+                <span class="name "><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="SerializableNodeProvider">
+                <span class="name "><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="MutableNodeProvider">
+                <span class="name "><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="SimpleNodeProvider">
+                <span class="name "><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="SimpleNode">
+                <span class="name "><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
+            </dt>
+            <dd>
+                A Simple Node Implementation
+A flexible node implementation that should fit most use cases.
+            </dd>
+            <dt id="SimpleHiddenNode">
+                <span class="name "><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="IPermissionManager">
+                <span class="name "><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="DummyPermissionManager">
+                <span class="name "><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

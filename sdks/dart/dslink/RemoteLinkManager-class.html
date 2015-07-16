@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RemoteLinkManager class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the RemoteLinkManager class from the dslink library, for the Dart programming language.">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink/dslink-library.html">dslink</a></li>
+                <li><a href="dslink/RemoteLinkManager-class.html">RemoteLinkManager</a></li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> RemoteLinkManager
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink/RemoteLinkManager-class.html#instance-properties">Properties</a></li>
+            <li><a href="dslink/RemoteLinkManager-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink/RemoteLinkManager-class.html#operators">Operators</a></li>
+            <li><a href="dslink/RemoteLinkManager-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#nodes">nodes</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#requester">requester</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#path">path</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#broker">broker</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#rootNode">rootNode</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#inTree">inTree</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#disconnected">disconnected</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#responders">responders</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#permissions">permissions</a></li>
+
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#RemoteLinkManager">RemoteLinkManager</a></li>
+
+      <li class="section-title"><a href="#operators">Operators</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#operator []">operator []</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#operator ~">operator ~</a></li>
+
+      <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#getResponder">getResponder</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#getNode">getNode</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#getRemoteNode">getRemoteNode</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#getDefNode">getDefNode</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#updateRemoteChildNode">updateRemoteChildNode</a></li>
+      <li><a href="dslink/RemoteLinkManager-class.html#createResponder">createResponder</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 main-content">
+
+    
+    <section>
+        <dl class="dl-horizontal">
+
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+                    <li><a href="dslink.requester/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="nodes" class="property">
+                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a>&gt;</span>
+                <a href="dslink/RemoteLinkManager/nodes.html"><span class="name ">nodes</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="requester" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
+                <a href="dslink/RemoteLinkManager/requester.html"><span class="name ">requester</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="path" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink/RemoteLinkManager/path.html"><span class="name ">path</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="broker" class="property">
+                <span class="top-level-variable-type"><a href="dslink/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
+                <a href="dslink/RemoteLinkManager/broker.html"><span class="name ">broker</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+            <dt id="rootNode" class="property">
+                <span class="top-level-variable-type"><a href="dslink/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></span>
+                <a href="dslink/RemoteLinkManager/rootNode.html"><span class="name ">rootNode</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="inTree" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink/RemoteLinkManager/inTree.html"><span class="name ">inTree</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="disconnected" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink/RemoteLinkManager/disconnected.html"><span class="name ">disconnected</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="responders" class="property">
+                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/Responder-class.html">Responder</a>&gt;</span>
+                <a href="dslink/RemoteLinkManager/responders.html"><span class="name ">responders</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="permissions" class="property">
+                <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
+                <a href="dslink/RemoteLinkManager/permissions.html"><span class="name ">permissions</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
+            </dd>
+
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="RemoteLinkManager" class="callable">
+                <span class="name"><a href="dslink/RemoteLinkManager/RemoteLinkManager.html">RemoteLinkManager</a></span><span class="signature">(<span class="parameter" id="-param-broker"><span class="type-annotation"><a href="dslink/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">broker</span></span>, <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-brokerProvider"><span class="type-annotation"><a href="dslink/NodeProviderImpl-class.html">NodeProviderImpl</a></span> <span class="parameter-name">brokerProvider</span></span>, [<span class="parameter" id="-param-rootNodeData"><span class="type-annotation">Map</span> <span class="parameter-name">rootNodeData</span></span>])</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+      <section class="summary" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator []" class="callable">
+                  <a href="dslink/RemoteLinkManager/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  get an existing node or create a dummy node for requester to listen on
+              </dd>
+              <dt id="operator ~" class="callable">
+                  <a href="dslink/RemoteLinkManager/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="getResponder" class="callable">
+                  <a href="dslink/RemoteLinkManager/getResponder.html"><span class="name ">getResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  multiple-requester is allowed, like from different browser tabs
+in this case they need multiple responders on broker side.
+              </dd>
+              <dt id="getNode" class="callable">
+                  <a href="dslink/RemoteLinkManager/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-fullPath"><span class="type-annotation">String</span> <span class="parameter-name">fullPath</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  get an existing node or create a dummy node for requester to listen on
+              </dd>
+              <dt id="getRemoteNode" class="callable">
+                  <a href="dslink/RemoteLinkManager/getRemoteNode.html"><span class="name ">getRemoteNode</span></a><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="getDefNode" class="callable">
+                  <a href="dslink/RemoteLinkManager/getDefNode.html"><span class="name ">getDefNode</span></a><span class="signature">(<wbr><span class="parameter" id="getDefNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>, <span class="parameter" id="getDefNode-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="updateRemoteChildNode" class="callable">
+                  <a href="dslink/RemoteLinkManager/updateRemoteChildNode.html"><span class="name ">updateRemoteChildNode</span></a><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  update node with a map.
+              </dd>
+              <dt id="createResponder" class="callable">
+                  <a href="dslink/RemoteLinkManager/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
+
+          </dl>
+      </section>
+
+    </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">package dslink</span>
+                &bull;
+                <span class="no-break">version 1.0.0</span>
+                &bull;
+                <span class="copyright no-break">
+                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>
