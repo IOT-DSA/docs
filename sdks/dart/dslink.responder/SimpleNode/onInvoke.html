@@ -41,6 +41,13 @@
             </h1>
             <!-- p class="subtitle">
                 This is called when this node is invoked.
+You can return the following types from this method:
+- Iterable
+- Map
+- <a href="dslink/Table-class.html">Table</a>
+- Stream
+- <a href="dslink/SimpleTableResult-class.html">SimpleTableResult</a>
+- <a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a>
             </p -->
         </div>
         <ul class="subnav">
@@ -61,7 +68,19 @@
 
     <section class="desc markdown">
     
-        <p>This is called when this node is invoked.</p>
+        <p>This is called when this node is invoked.
+You can return the following types from this method:
+- Iterable
+- Map
+- <a href="dslink/Table-class.html">Table</a>
+- Stream
+- <a href="dslink/SimpleTableResult-class.html">SimpleTableResult</a>
+- <a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></p>
+<p>You can also return a future (like if the method is async) of the following types:
+- Stream
+- Iterable
+- Map
+- <a href="dslink/Table-class.html">Table</a></p>
     
     </section>
     

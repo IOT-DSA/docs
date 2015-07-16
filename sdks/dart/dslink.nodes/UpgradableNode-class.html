@@ -435,7 +435,7 @@ Map of Child Name to Child Node
         
         read / write
     </div>
-    
+    Marks a node as being removed.
             </dd>
             <dt id="serializable" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -519,7 +519,8 @@ If false, this node can't be serialized into a JSON file.
                   
               </dt>
               <dd>
-                  after node is created
+                  Callback used to notify a node that it was created.
+This is called after a node is deserialized as well.
               </dd>
 
               <dt id="getAttribute" class="callable">
@@ -550,7 +551,7 @@ If false, this node can't be serialized into a JSON file.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  Adds a child to this node.
+                  Adds the given node as a child of this node with the given name.
               </dd>
               <dt id="removeChild" class="callable">
                   <a href="dslink.responder/SimpleNode/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
@@ -560,8 +561,10 @@ If false, this node can't be serialized into a JSON file.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  Remove a child from this node.
-[input] can be either an instance of [Node] or a [String].
+                  Removes a child from this node.
+If input is a String, a child named with the specified input is removed.
+If input is a Node, the child that owns that node is removed.
+The name of the removed node is returned.
               </dd>
               <dt id="getChild" class="callable">
                   <a href="dslink.common/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -684,7 +687,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  Called by the link internals to invoke this node.
+                  Handles the invoke method from the internals of the responder.
+Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node is invoked.
               </dd>
               <dt id="setAttribute" class="callable">
                   <a href="dslink.responder/SimpleNode/setAttribute.html"><span class="name ">setAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -785,6 +789,13 @@ Otherwise this will fetch a child.
               </dt>
               <dd>
                   This is called when this node is invoked.
+You can return the following types from this method:
+- Iterable
+- Map
+- <a href="dslink/Table-class.html">Table</a>
+- Stream
+- <a href="dslink/SimpleTableResult-class.html">SimpleTableResult</a>
+- <a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a>
               </dd>
               <dt id="onSetValue" class="callable">
                   <a href="dslink.responder/SimpleNode/onSetValue.html"><span class="name ">onSetValue</span></a><span class="signature">(<wbr><span class="parameter" id="onSetValue-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>)
@@ -794,7 +805,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  return true when value is rejected
+                  Callback used to accept or reject a value when it is set.
+Return true to reject the value, and false to accept it.
               </dd>
               <dt id="onSetConfig" class="callable">
                   <a href="dslink.responder/SimpleNode/onSetConfig.html"><span class="name ">onSetConfig</span></a><span class="signature">(<wbr><span class="parameter" id="onSetConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onSetConfig-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
@@ -804,7 +816,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  return true when value is rejected
+                  Callback used to accept or reject a value of a config when it is set.
+Return true to reject the value, and false to accept it.
               </dd>
               <dt id="onSetAttribute" class="callable">
                   <a href="dslink.responder/SimpleNode/onSetAttribute.html"><span class="name ">onSetAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="onSetAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onSetAttribute-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
@@ -814,7 +827,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  return true when value is rejected
+                  Callback used to accept or reject a value of an attribute when it is set.
+Return true to reject the value, and false to accept it.
               </dd>
               <dt id="onSubscribe" class="callable">
                   <a href="dslink.responder/SimpleNode/onSubscribe.html"><span class="name ">onSubscribe</span></a><span class="signature">(<wbr>)
@@ -834,7 +848,7 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  before node gets removed
+                  Callback used to notify a node that it is about to be removed.
               </dd>
               <dt id="onChildRemoved" class="callable">
                   <a href="dslink.responder/SimpleNode/onChildRemoved.html"><span class="name ">onChildRemoved</span></a><span class="signature">(<wbr><span class="parameter" id="onChildRemoved-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onChildRemoved-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
@@ -844,7 +858,7 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  after child node is removed
+                  Callback used to notify a node that one of it's children has been removed.
               </dd>
               <dt id="onChildAdded" class="callable">
                   <a href="dslink.responder/SimpleNode/onChildAdded.html"><span class="name ">onChildAdded</span></a><span class="signature">(<wbr><span class="parameter" id="onChildAdded-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onChildAdded-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
@@ -854,7 +868,7 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  after child node is created
+                  Callback used to notify a node that a child has been added to it.
               </dd>
               <dt id="onLoadChild" class="callable">
                   <a href="dslink.responder/SimpleNode/onLoadChild.html"><span class="name ">onLoadChild</span></a><span class="signature">(<wbr><span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
@@ -864,7 +878,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  override default node creation logic for children
+                  Callback to override how a child of this node is loaded.
+If this method returns null, the default strategy is used.
               </dd>
               <dt id="createChild" class="callable">
                   <a href="dslink.responder/SimpleNode/createChild.html"><span class="name ">createChild</span></a><span class="signature">(<wbr><span class="parameter" id="createChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="createChild-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>])
@@ -874,7 +889,8 @@ Otherwise this will fetch a child.
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Creates a child with the given name.
+If m is specified, the node is loaded with that map.
               </dd>
               <dt id="remove" class="callable">
                   <a href="dslink.responder/SimpleNode/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr>)

@@ -130,7 +130,8 @@
         
         read / write
     </div>
-    
+    Global instance.
+This is by default always the first instance of <a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
             </dd>
         </dl>
     </section>
@@ -151,7 +152,7 @@
         
         
     </div>
-    
+    All the nodes in this node provider.
             </dd>
             <dt id="root" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
@@ -164,7 +165,7 @@
         
         read / write
     </div>
-    
+    Root node
             </dd>
             <dt id="defs" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
@@ -177,7 +178,7 @@
         
         read / write
     </div>
-    
+    defs node
             </dd>
             <dt id="sys" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
@@ -190,7 +191,7 @@
         
         read / write
     </div>
-    
+    sys node
             </dd>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
@@ -203,7 +204,7 @@
         
         read / write
     </div>
-    
+    Permissions
             </dd>
 
         </dl>
@@ -217,7 +218,9 @@
                 <span class="name"><a href="dslink/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])</span>
             </dt>
             <dd>
-                
+                Creates a <a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
+If m and optionally profiles is specified,
+the provider is initialized with these values.
             </dd>
         </dl>
       </section>
@@ -270,7 +273,7 @@
                   
               </dt>
               <dd>
-                  
+                  Initialize the node provider.
               </dd>
               <dt id="save" class="callable">
                   <a href="dslink/SimpleNodeProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
@@ -280,7 +283,7 @@
                   
               </dt>
               <dd>
-                  
+                  Save the node provider to a map.
               </dd>
               <dt id="updateValue" class="callable">
                   <a href="dslink/SimpleNodeProvider/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
@@ -290,7 +293,7 @@
                   
               </dt>
               <dd>
-                  
+                  Updates the value of the node at [path] to the given [value].
               </dd>
               <dt id="addNode" class="callable">
                   <a href="dslink/SimpleNodeProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
@@ -300,7 +303,7 @@
                   
               </dt>
               <dd>
-                  
+                  Adds a node at the given [path] that is initialized with the given data in [m].
               </dd>
               <dt id="removeNode" class="callable">
                   <a href="dslink/SimpleNodeProvider/removeNode.html"><span class="name ">removeNode</span></a><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -310,7 +313,7 @@
                   
               </dt>
               <dd>
-                  
+                  Removes the node specified at [path].
               </dd>
               <dt id="createResponder" class="callable">
                   <a href="dslink/SimpleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
@@ -320,7 +323,7 @@
                   
               </dt>
               <dd>
-                  Create a Responder
+                  Creates a responder with the given dsId.
               </dd>
 
           </dl>
