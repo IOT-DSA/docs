@@ -67,6 +67,9 @@ A flexible node implementation that should fit most use cases.
       <li><a href="dslink.browser/SimpleNode-class.html#serializable">serializable</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#parent">parent</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#name">name</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html#displayName">displayName</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html#type">type</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html#writable">writable</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#profile">profile</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#attributes">attributes</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#configs">configs</a></li>
@@ -107,6 +110,8 @@ A flexible node implementation that should fit most use cases.
       <li><a href="dslink.browser/SimpleNode-class.html#subscribe">subscribe</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#onLoadChild">onLoadChild</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#createChild">createChild</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html#hasConfig">hasConfig</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html#hasAttribute">hasAttribute</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#remove">remove</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#attach">attach</a></li>
       <li><a href="dslink.browser/SimpleNode-class.html#addChild">addChild</a></li>
@@ -230,6 +235,45 @@ If false, this node can't be serialized into a JSON file.
         read-only
         
         
+    </div>
+    
+            </dd>
+            <dt id="displayName" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/SimpleNode/displayName.html"><span class="name ">displayName</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="type" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/SimpleNode/type.html"><span class="name ">type</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="writable" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/SimpleNode/writable.html"><span class="name ">writable</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
     </div>
     
             </dd>
@@ -652,6 +696,26 @@ If this method returns null, the default strategy is used.
               <dd>
                   Creates a child with the given name.
 If m is specified, the node is loaded with that map.
+              </dd>
+              <dt id="hasConfig" class="callable">
+                  <a href="dslink.browser/SimpleNode/hasConfig.html"><span class="name ">hasConfig</span></a><span class="signature">(<wbr><span class="parameter" id="hasConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype">bool</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Checks if this node has the specified config.
+              </dd>
+              <dt id="hasAttribute" class="callable">
+                  <a href="dslink.browser/SimpleNode/hasAttribute.html"><span class="name ">hasAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="hasAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype">bool</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Checks if this node has the specified attribute.
               </dd>
               <dt id="remove" class="callable">
                   <a href="dslink.browser/SimpleNode/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr>)
