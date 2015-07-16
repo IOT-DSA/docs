@@ -86,11 +86,9 @@
       <li><a href="dslink.server/HttpServerLink-class.html#initLink">initLink</a></li>
       <li><a href="dslink.server/HttpServerLink-class.html#verifySalt">verifySalt</a></li>
       <li><a href="dslink.server/HttpServerLink-class.html#nonceChanged">nonceChanged</a></li>
-      <li><a href="dslink.server/HttpServerLink-class.html#handleStreamUpdate">handleStreamUpdate</a></li>
       <li><a href="dslink.server/HttpServerLink-class.html#handleWsUpdate">handleWsUpdate</a></li>
       <li><a href="dslink.server/HttpServerLink-class.html#close">close</a></li>
       <li><a href="dslink.server/HttpServerLink-class.html#createWsConnection">createWsConnection</a></li>
-      <li><a href="dslink.server/HttpServerLink-class.html#createStreamConnection">createStreamConnection</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -304,7 +302,9 @@
         
         read / write
     </div>
-    
+    /    if (requester == null) {
+/      throw HttpStatus.FORBIDDEN;
+/    }
             </dd>
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
@@ -396,18 +396,6 @@
               <dd>
                   
               </dd>
-              <dt id="handleStreamUpdate" class="callable">
-                  <a href="dslink.server/HttpServerLink/handleStreamUpdate.html"><span class="name ">handleStreamUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleStreamUpdate-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter-class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>, <span class="parameter" id="handleStreamUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-                  
-              </dt>
-              <dd>
-                  /    if (requester == null) {
-/      throw HttpStatus.FORBIDDEN;
-/    }
-              </dd>
               <dt id="handleWsUpdate" class="callable">
                   <a href="dslink.server/HttpServerLink/handleWsUpdate.html"><span class="name ">handleWsUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="handleWsUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="handleWsUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>)
                       &#8594;
@@ -432,16 +420,6 @@
                   <a href="dslink.server/HttpServerLink/createWsConnection.html"><span class="name ">createWsConnection</span></a><span class="signature">(<wbr><span class="parameter" id="createWsConnection-param-websocket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">websocket</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.server/ServerWebSocket-class.html">ServerWebSocket</a></span>
-                  </span>
-                  
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="createStreamConnection" class="callable">
-                  <a href="dslink.server/HttpServerLink/createStreamConnection.html"><span class="name ">createStreamConnection</span></a><span class="signature">(<wbr><span class="parameter" id="createStreamConnection-param-adapter"><span class="type-annotation"><a href="dslink/StreamConnectionAdapter-class.html">StreamConnectionAdapter</a></span> <span class="parameter-name">adapter</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.common/StreamConnection-class.html">StreamConnection</a></span>
                   </span>
                   
               </dt>

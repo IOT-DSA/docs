@@ -294,7 +294,7 @@
         
         read / write
     </div>
-    absoulte node path from the responder root.
+    This node's profile.
             </dd>
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
@@ -307,7 +307,7 @@
         
         read / write
     </div>
-    
+    Node Attributes
             </dd>
             <dt id="configs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
@@ -320,7 +320,7 @@
         
         read / write
     </div>
-    
+    Node Configs
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
@@ -333,7 +333,8 @@
         
         read / write
     </div>
-    
+    Node Children
+Map of Child Name to Child Node
             </dd>
         </dl>
     </section>
@@ -472,7 +473,7 @@
                   
               </dd>
               <dt id="removeAttribute" class="callable">
-                  <a href="dslink/LocalNode/removeAttribute.html"><span class="name ">removeAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>])
+                  <a href="dslink/LocalNode/removeAttribute.html"><span class="name ">removeAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -482,7 +483,7 @@
                   
               </dd>
               <dt id="setConfig" class="callable">
-                  <a href="dslink/LocalNode/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, [<span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>])
+                  <a href="dslink/LocalNode/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -492,7 +493,7 @@
                   
               </dd>
               <dt id="removeConfig" class="callable">
-                  <a href="dslink/LocalNode/removeConfig.html"><span class="name ">removeConfig</span></a><span class="signature">(<wbr><span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>])
+                  <a href="dslink/LocalNode/removeConfig.html"><span class="name ">removeConfig</span></a><span class="signature">(<wbr><span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -520,7 +521,7 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Get an Attribute
               </dd>
               <dt id="getConfig" class="callable">
                   <a href="dslink.common/Node/getConfig.html"><span class="name ">getConfig</span></a><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -530,7 +531,7 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Get a Config
               </dd>
               <dt id="addChild" class="callable">
                   <a href="dslink.common/Node/addChild.html"><span class="name ">addChild</span></a><span class="signature">(<wbr><span class="parameter" id="addChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addChild-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
@@ -540,7 +541,7 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Adds a child to this node.
               </dd>
               <dt id="removeChild" class="callable">
                   <a href="dslink.common/Node/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
@@ -550,7 +551,8 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  remove node and return name
+                  Remove a child from this node.
+input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.
               </dd>
               <dt id="getChild" class="callable">
                   <a href="dslink.common/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -560,7 +562,7 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Get a Child Node
               </dd>
               <dt id="get" class="callable">
                   <a href="dslink.common/Node/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -570,17 +572,20 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Get a property of this node.
+If name starts with '$', this will fetch a config.
+If name starts with a '@', this will fetch an attribute.
+Otherwise this will fetch a child.
               </dd>
               <dt id="forEachChild" class="callable">
-                  <a href="dslink.common/Node/forEachChild.html"><span class="name ">forEachChild</span></a><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-String"><span class="parameter-name">String</span></span>, <span class="parameter" id="callback-param-Node"><span class="parameter-name">Node</span></span>)</span>)
+                  <a href="dslink.common/Node/forEachChild.html"><span class="name ">forEachChild</span></a><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Iterates over all the children of this node and passes them to the specified callback.
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <a href="dslink.common/Node/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
@@ -590,7 +595,7 @@
                   <span class="is-inherited">inherited</span>
               </dt>
               <dd>
-                  
+                  Gets a map for the data that will be listed in the parent node's children property.
               </dd>
           </dl>
       </section>

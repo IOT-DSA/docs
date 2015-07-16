@@ -39,7 +39,7 @@
                 <div class="kind">class</div> Path
             </h1>
             <!-- p class="subtitle">
-                Util class for ds node path and config/attribute path
+                Utility class for node and config/attribute paths.
             </p -->
         </div>
         <ul class="subnav">
@@ -74,7 +74,8 @@
       <li><a href="dslink/Path-class.html#parentPath">parentPath</a></li>
       <li><a href="dslink/Path-class.html#name">name</a></li>
       <li><a href="dslink/Path-class.html#valid">valid</a></li>
-      <li><a href="dslink/Path-class.html#absolute">absolute</a></li>
+      <li><a href="dslink/Path-class.html#parent">parent</a></li>
+      <li><a href="dslink/Path-class.html#isAbsolute">isAbsolute</a></li>
       <li><a href="dslink/Path-class.html#isRoot">isRoot</a></li>
       <li><a href="dslink/Path-class.html#isConfig">isConfig</a></li>
       <li><a href="dslink/Path-class.html#isAttribute">isAttribute</a></li>
@@ -85,6 +86,7 @@
 
 
       <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink/Path-class.html#child">child</a></li>
       <li><a href="dslink/Path-class.html#mergeBasePath">mergeBasePath</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -93,7 +95,7 @@
 
     <section class="desc markdown">
     
-        <p>Util class for ds node path and config/attribute path</p>
+        <p>Utility class for node and config/attribute paths.</p>
     
     </section>
     
@@ -114,7 +116,7 @@
         
         
     </div>
-    
+    Regular Expression for invalid characters in paths.
             </dd>
             <dt id="invalidNameChar" class="property">
                 <span class="top-level-variable-type">RegExp</span>
@@ -127,7 +129,7 @@
         
         
     </div>
-    
+    Regular Expression for invalid characters in names.
             </dd>
         </dl>
     </section>
@@ -193,7 +195,7 @@
         
         read / write
     </div>
-    
+    Real Path
             </dd>
             <dt id="parentPath" class="property">
                 <span class="top-level-variable-type">String</span>
@@ -206,7 +208,7 @@
         
         read / write
     </div>
-    
+    Real Parent Path
             </dd>
             <dt id="name" class="property">
                 <span class="top-level-variable-type">String</span>
@@ -219,7 +221,9 @@
         
         read / write
     </div>
-    root node has the name '/';
+    The name of this path.
+This is the last component of the path.
+For the root node, this is '/'
             </dd>
             <dt id="valid" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -232,11 +236,24 @@
         
         read / write
     </div>
+    If this path is invalid, this will be false. Otherwise this will be true.
+            </dd>
+            <dt id="parent" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Path-class.html">Path</a></span>
+                <a href="dslink/Path/parent.html"><span class="name ">parent</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
     
             </dd>
-            <dt id="absolute" class="property">
+            <dt id="isAbsolute" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink/Path/absolute.html"><span class="name ">absolute</span></a>
+                <a href="dslink/Path/isAbsolute.html"><span class="name ">isAbsolute</span></a>
                 
             </dt>
             <dd>
@@ -320,6 +337,16 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="child" class="callable">
+                  <a href="dslink/Path/child.html"><span class="name ">child</span></a><span class="signature">(<wbr><span class="parameter" id="child-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/Path-class.html">Path</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Get a child of this path.
+              </dd>
               <dt id="mergeBasePath" class="callable">
                   <a href="dslink/Path/mergeBasePath.html"><span class="name ">mergeBasePath</span></a><span class="signature">(<wbr><span class="parameter" id="mergeBasePath-param-base"><span class="type-annotation">String</span> <span class="parameter-name">base</span></span>, [<span class="parameter" id="mergeBasePath-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span> = <span class="default-value">false</span></span>])
                       &#8594;
@@ -328,7 +355,7 @@
                   
               </dt>
               <dd>
-                  
+                  Merges the base path with this path.
               </dd>
 
           </dl>
