@@ -65,6 +65,7 @@ A flexible node implementation that should fit most use cases.
       <li><a href="dslink/SimpleNode-class.html#provider">provider</a></li>
       <li><a href="dslink/SimpleNode-class.html#removed">removed</a></li>
       <li><a href="dslink/SimpleNode-class.html#serializable">serializable</a></li>
+      <li><a href="dslink/SimpleNode-class.html#parent">parent</a></li>
       <li><a href="dslink/SimpleNode-class.html#name">name</a></li>
       <li><a href="dslink/SimpleNode-class.html#profile">profile</a></li>
       <li><a href="dslink/SimpleNode-class.html#attributes">attributes</a></li>
@@ -81,7 +82,6 @@ A flexible node implementation that should fit most use cases.
       <li><a href="dslink/SimpleNode-class.html#disconnected">disconnected</a></li>
       <li><a href="dslink/SimpleNode-class.html#valueReady">valueReady</a></li>
       <li><a href="dslink/SimpleNode-class.html#hasSubscriber">hasSubscriber</a></li>
-      <li><a href="dslink/SimpleNode-class.html#parentNode">parentNode</a></li>
       <li><a href="dslink/SimpleNode-class.html#loaded">loaded</a></li>
 
       <li class="section-title"><a href="#constructors">Constructors</a></li>
@@ -206,6 +206,19 @@ A flexible node implementation that should fit most use cases.</p>
     Marks this node as being serializable.
 If true, this node can be serialized into a JSON file and then loaded back.
 If false, this node can't be serialized into a JSON file.
+            </dd>
+            <dt id="parent" class="property">
+                <span class="top-level-variable-type"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
+                <a href="dslink/SimpleNode/parent.html"><span class="name ">parent</span></a>
+                
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+    </div>
+    
             </dd>
             <dt id="name" class="property">
                 <span class="top-level-variable-type">String</span>
@@ -414,19 +427,6 @@ Map of Child Name to Child Node
         read-only
         
         
-    </div>
-    
-            </dd>
-            <dt id="parentNode" class="property">
-                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
-                <a href="dslink.responder/LocalNodeImpl/parentNode.html"><span class="name ">parentNode</span></a>
-                <span class="is-inherited">inherited</span>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
     </div>
     
             </dd>
