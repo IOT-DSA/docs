@@ -11,10 +11,10 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="static-assets/prettify.css">
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static-assets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
     <meta name="description" content="API docs for the Base64 class from the dslink.utils library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
     <!-- Header Placeholder -->
@@ -60,23 +60,23 @@
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
     <ol id="sidebar">
       <li class="section-title"><a href="#constants">Constants</a></li>
-      <li><a href="dslink.utils/Base64-class.html#PAD">PAD</a></li>
-      <li><a href="dslink.utils/Base64-class.html#CR">CR</a></li>
-      <li><a href="dslink.utils/Base64-class.html#LF">LF</a></li>
-      <li><a href="dslink.utils/Base64-class.html#SP">SP</a></li>
-      <li><a href="dslink.utils/Base64-class.html#PLUS">PLUS</a></li>
-      <li><a href="dslink.utils/Base64-class.html#SLASH">SLASH</a></li>
+      <li><a href="dslink.utils/Base64/PAD.html">PAD</a></li>
+      <li><a href="dslink.utils/Base64/CR.html">CR</a></li>
+      <li><a href="dslink.utils/Base64/LF.html">LF</a></li>
+      <li><a href="dslink.utils/Base64/SP.html">SP</a></li>
+      <li><a href="dslink.utils/Base64/PLUS.html">PLUS</a></li>
+      <li><a href="dslink.utils/Base64/SLASH.html">SLASH</a></li>
 
 
       <li class="section-title"><a href="#static-methods">Static methods</a></li>
-      <li><a href="dslink.utils/Base64-class.html#encodeString">encodeString</a></li>
-      <li><a href="dslink.utils/Base64-class.html#decodeString">decodeString</a></li>
-      <li><a href="dslink.utils/Base64-class.html#encode">encode</a></li>
-      <li><a href="dslink.utils/Base64-class.html#decode">decode</a></li>
+      <li><a href="dslink.utils/Base64/encodeString.html">encodeString</a></li>
+      <li><a href="dslink.utils/Base64/decodeString.html">decodeString</a></li>
+      <li><a href="dslink.utils/Base64/encode.html">encode</a></li>
+      <li><a href="dslink.utils/Base64/decode.html">decode</a></li>
 
 
       <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/Base64-class.html#Base64">Base64</a></li>
+      <li><a href="dslink.utils/Base64/Base64.html">Base64</a></li>
 
 
     </ol>
@@ -99,54 +99,78 @@
 
         <dl class="properties">
             <dt id="PAD" class="constant">
-                <span class="top-level-variable-type">const int</span>
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/PAD.html">PAD</a></span>
                 =
                 <span class="constant-value">61</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>            <dt id="CR" class="constant">
-                <span class="top-level-variable-type">const int</span>
+            </dd>
+            <dt id="CR" class="constant">
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/CR.html">CR</a></span>
                 =
                 <span class="constant-value">13</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>            <dt id="LF" class="constant">
-                <span class="top-level-variable-type">const int</span>
+            </dd>
+            <dt id="LF" class="constant">
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/LF.html">LF</a></span>
                 =
                 <span class="constant-value">10</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>            <dt id="SP" class="constant">
-                <span class="top-level-variable-type">const int</span>
+            </dd>
+            <dt id="SP" class="constant">
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/SP.html">SP</a></span>
                 =
                 <span class="constant-value">32</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>            <dt id="PLUS" class="constant">
-                <span class="top-level-variable-type">const int</span>
+            </dd>
+            <dt id="PLUS" class="constant">
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/PLUS.html">PLUS</a></span>
                 =
                 <span class="constant-value">43</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>            <dt id="SLASH" class="constant">
-                <span class="top-level-variable-type">const int</span>
+            </dd>
+            <dt id="SLASH" class="constant">
+                <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/SLASH.html">SLASH</a></span>
                 =
                 <span class="constant-value">47</span>
             </dt>
             <dd>
+                <div class="is-const">
+                    const
+                </div>
                 
-            </dd>        </dl>
+            </dd>
+        </dl>
     </section>
 
 
@@ -222,9 +246,13 @@
     <div class="container-fluid">
         <div class="container">
             <p class="text-center">
-                <span class="no-break">package dslink</span>
+
+                <span class="copyright no-break">dslink 1.0.0</span>
                 &bull;
-                <span class="no-break">version 1.0.0</span>
+                <span class="copyright no-break">
+                <a href="https://www.dartlang.org"><img src="static-assets/favicon.png" alt="Dart" title="Dart"
+                  width="24" height="24"></a> API Docs
+                </span>
                 &bull;
                 <span class="copyright no-break">
                     <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
