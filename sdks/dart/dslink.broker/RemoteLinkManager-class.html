@@ -81,6 +81,7 @@
       <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/getResponder.html">getResponder</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/getNode.html">getNode</a></li>
+      <li><a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/getRemoteNode.html">getRemoteNode</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/getDefNode.html">getDefNode</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
@@ -298,6 +299,17 @@ in this case they need multiple responders on broker side.
               </dt>
               <dd>
                   Gets an existing node.
+              </dd>
+              <dt id="getOrCreateNode" class="callable">
+                  <a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-fullPath"><span class="type-annotation">String</span> <span class="parameter-name">fullPath</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Gets a node at the given [path] if it exists.
+If it does not exist, create a new node and return it.
               </dd>
               <dt id="getRemoteNode" class="callable">
                   <a href="dslink.broker/RemoteLinkManager/getRemoteNode.html"><span class="name ">getRemoteNode</span></a><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>)

@@ -74,6 +74,7 @@
       <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></li>
+      <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -199,6 +200,17 @@
               </dt>
               <dd>
                   Create a Responder
+              </dd>
+              <dt id="getOrCreateNode" class="callable">
+                  <a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Gets a node at the given [path] if it exists.
+If it does not exist, create a new node and return it.
               </dd>
 
           </dl>

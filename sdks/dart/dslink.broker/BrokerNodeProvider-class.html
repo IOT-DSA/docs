@@ -92,6 +92,7 @@
       <li><a href="dslink.broker/BrokerNodeProvider/clearConns.html">clearConns</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/setNode.html">setNode</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a></li>
+      <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/getConnById.html">getConnById</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/getConnPath.html">getConnPath</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/makeConnPath.html">makeConnPath</a></li>
@@ -439,7 +440,18 @@ but instance is still there
                   
               </dt>
               <dd>
-                  load a local node
+                  Gets an existing node.
+              </dd>
+              <dt id="getOrCreateNode" class="callable">
+                  <a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  Gets a node at the given [path] if it exists.
+If it does not exist, create a new node and return it.
               </dd>
               <dt id="getConnById" class="callable">
                   <a href="dslink.broker/BrokerNodeProvider/getConnById.html"><span class="name ">getConnById</span></a><span class="signature">(<wbr><span class="parameter" id="getConnById-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>)
