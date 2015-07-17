@@ -72,6 +72,7 @@ A single node provider can be reused by multiple responder.
       <li><a href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
 
       <li class="section-title"><a href="#methods">Methods</a></li>
+      <li><a href="dslink.browser/NodeProvider/getNodeForResponder.html">getNodeForResponder</a></li>
       <li><a href="dslink.browser/NodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.browser/NodeProvider/createResponder.html">createResponder</a></li>
     </ol>
@@ -154,6 +155,16 @@ A single node provider can be reused by multiple responder.</p>
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="getNodeForResponder" class="callable">
+                  <a href="dslink.browser/NodeProvider/getNodeForResponder.html"><span class="name ">getNodeForResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getNodeForResponder-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink.browser/NodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -162,7 +173,7 @@ A single node provider can be reused by multiple responder.</p>
                   
               </dt>
               <dd>
-                  Gets an existing node, or creates a dummy node for a requester to listen on.
+                  Gets an existing node.
               </dd>
               <dt id="createResponder" class="callable">
                   <a href="dslink.browser/NodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
