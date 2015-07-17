@@ -88,7 +88,6 @@
       <li><a href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></li>
-      <li><a href="dslink.responder/NodeProvider/getNodeForResponder.html">getNodeForResponder</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -270,14 +269,15 @@ the provider is initialized with these values.
                   Gets an existing node.
               </dd>
               <dt id="getOrCreateNode" class="callable">
-                  <a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                  <a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="getOrCreateNode-param-temporary"><span class="type-annotation">bool</span> <span class="parameter-name">temporary</span>: <span class="default-value">false</span></span>})
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
                   
               </dt>
               <dd>
-                  
+                  Gets a node at the given path if it exists.
+If it does not exist, create a new node and return it.
               </dd>
               <dt id="createNode" class="callable">
                   <a href="dslink.responder/SimpleNodeProvider/createNode.html"><span class="name ">createNode</span></a><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -361,16 +361,6 @@ If a node already exists at this path, an exception is thrown.
                   Creates a responder with the given dsId.
               </dd>
 
-              <dt id="getNodeForResponder" class="callable">
-                  <a href="dslink.responder/NodeProvider/getNodeForResponder.html"><span class="name ">getNodeForResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getNodeForResponder-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
-                  </span>
-                  <span class="is-inherited">inherited</span>
-              </dt>
-              <dd>
-                  
-              </dd>
           </dl>
       </section>
 

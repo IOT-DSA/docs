@@ -40,7 +40,8 @@
                 <div class="kind">method</div> getOrCreateNode
             </h1>
             <!-- p class="subtitle">
-                
+                Gets a node at the given path if it exists.
+If it does not exist, create a new node and return it.
             </p -->
         </div>
         <ul class="subnav">
@@ -55,10 +56,17 @@
             <span class="name ">getOrCreateNode</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>
+                <span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br>{<span class="parameter" id="getOrCreateNode-param-temporary"><span class="type-annotation">bool</span> <span class="parameter-name">temporary</span>: <span class="default-value">false</span></span>}
             </div>
             )    </section>
 
+    <section class="desc markdown">
+    
+        <p>Gets a node at the given path if it exists.
+If it does not exist, create a new node and return it.</p>
+<p>When temporary is true, the node will not be inserted into the node provider.</p>
+    
+    </section>
     
 </div> <!-- container -->
 
