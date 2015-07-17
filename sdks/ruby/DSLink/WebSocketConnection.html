@@ -1,0 +1,965 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: DSLink::WebSocketConnection
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!DSLink/WebSocketConnection.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (W)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../DSLink.html" title="DSLink (module)">DSLink</a></span></span>
+     &raquo; 
+    <span class="title">WebSocketConnection</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: DSLink::WebSocketConnection
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">DSLink::WebSocketConnection</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">Celluloid</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/connection/websocket_connection.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#data_handler-instance_method" title="#data_handler (instance method)">- (Object) <strong>data_handler</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute data_handler.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">- (Object) <strong>connect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (WebSocketConnection) <strong>initialize</strong>(handshake) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of WebSocketConnection.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_close-instance_method" title="#on_close (instance method)">- (Object) <strong>on_close</strong>(code, reason) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_message-instance_method" title="#on_message (instance method)">- (Object) <strong>on_message</strong>(msg) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_open-instance_method" title="#on_open (instance method)">- (Object) <strong>on_open</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#receive_data-instance_method" title="#receive_data (instance method)">- (Object) <strong>receive_data</strong>(data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reconnect-instance_method" title="#reconnect (instance method)">- (Object) <strong>reconnect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#send_data-instance_method" title="#send_data (instance method)">- (Object) <strong>send_data</strong>(data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#setup_timers-instance_method" title="#setup_timers (instance method)">- (Object) <strong>setup_timers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown_connection-instance_method" title="#shutdown_connection (instance method)">- (Object) <strong>shutdown_connection</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>def handle_exit(actor, reason)     puts &#39;HANDLE&#39;     puts actor    
+puts reason end.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#teardown_timers-instance_method" title="#teardown_timers (instance method)">- (Object) <strong>teardown_timers</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="DSLink::WebSocketConnection (class)">WebSocketConnection</a></span></tt>) <strong>initialize</strong>(handshake) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of WebSocketConnection</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_handshake'>handshake</span><span class='rparen'>)</span>
+    <span class='ivar'>@handshake</span> <span class='op'>=</span> <span class='id identifier rubyid_handshake'>handshake</span>
+    <span class='ivar'>@data_handler</span> <span class='op'>=</span> <span class='const'>DSLink</span><span class='op'>::</span><span class='const'>DataHandler</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@ping_count</span> <span class='op'>=</span> <span class='int'>1</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="data_handler=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="data_handler-instance_method">
+  
+    - (<tt>Object</tt>) <strong>data_handler</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute data_handler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_data_handler'>data_handler</span>
+  <span class='ivar'>@data_handler</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="connect-instance_method">
+  
+    - (<tt>Object</tt>) <strong>connect</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect'>connect</span>
+    <span class='id identifier rubyid_teardown_timers'>teardown_timers</span>
+    <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_shutdown'>shutdown</span>  <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:shutdown</span>
+    <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_terminate'>terminate</span> <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:terminate</span>
+    <span class='kw'>if</span> <span class='ivar'>@handshake</span><span class='period'>.</span><span class='id identifier rubyid_do_handshake'>do_handshake</span>
+        <span class='ivar'>@interval</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='ivar'>@handshake</span><span class='period'>.</span><span class='id identifier rubyid_interval'>interval</span> <span class='op'>||</span> <span class='int'>100</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span> <span class='op'>/</span> <span class='float'>1000.0</span>
+        <span class='ivar'>@ws_uri</span> <span class='op'>=</span> <span class='ivar'>@handshake</span><span class='period'>.</span><span class='id identifier rubyid_auth_url'>auth_url</span>
+        <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='const'>DSLink</span><span class='op'>::</span><span class='const'>WebSocketClient</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@ws_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_current_actor'>current_actor</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+            <span class='id identifier rubyid_setup_timers'>setup_timers</span>
+        <span class='kw'>end</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_sleep'>sleep</span> <span class='int'>1</span>
+        <span class='id identifier rubyid_connect'>connect</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_close-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_close</strong>(code, reason) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_on_close'>on_close</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_reason'>reason</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_teardown_timers'>teardown_timers</span>
+    <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Websocket Disconnected </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_code'>code</span><span class='embexpr_end'>}</span><span class='tstring_content'>, </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reason'>reason</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_connect'>connect</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_message-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_message</strong>(msg) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_on_message'>on_message</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_receive_data'>receive_data</span><span class='lparen'>(</span><span class='id identifier rubyid_msg'>msg</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_msg'>msg</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span> <span class='const'>String</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="on_open-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_open</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_on_open'>on_open</span>
+    <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WebSocket Connected</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@reconnect_timer</span> <span class='op'>=</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_setup_timers'>setup_timers</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="receive_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>receive_data</strong>(data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_receive_data'>receive_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>onData: </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='ivar'>@salt</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>salt</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_data'>data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>salt</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='ivar'>@data_handler</span><span class='period'>.</span><span class='id identifier rubyid_handle_data'>handle_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='ivar'>@receive_timer</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reconnect-instance_method">
+  
+    - (<tt>Object</tt>) <strong>reconnect</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reconnect'>reconnect</span>
+    <span class='id identifier rubyid_teardown_timers'>teardown_timers</span>
+    <span class='kw'>begin</span>
+        <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_shutdown'>shutdown</span>  <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:shutdown</span>
+        <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_terminate'>terminate</span> <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:terminate</span>
+    <span class='kw'>rescue</span>
+        <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='kw'>end</span>
+    <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Reconnecting....</span><span class='tstring_end'>&quot;</span></span>
+    <span class='ivar'>@ws_uri</span> <span class='op'>=</span> <span class='ivar'>@handshake</span><span class='period'>.</span><span class='id identifier rubyid_generate_auth_url'>generate_auth_url</span><span class='lparen'>(</span><span class='ivar'>@salt</span><span class='rparen'>)</span>
+    <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='const'>DSLink</span><span class='op'>::</span><span class='const'>WebSocketClient</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@ws_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_current_actor'>current_actor</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
+        <span class='ivar'>@reconnect_timer</span> <span class='op'>=</span> <span class='int'>1</span>
+    <span class='kw'>else</span>
+        <span class='ivar'>@reconnect_timer</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@reconnect_timer</span> <span class='op'>*</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>60</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_min'>min</span>
+        <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Reconnect failed trying again in </span><span class='embexpr_beg'>#{</span><span class='ivar'>@reconnect_timer</span><span class='embexpr_end'>}</span><span class='tstring_content'> seconds</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_sleep'>sleep</span> <span class='ivar'>@reconnect_timer</span>
+        <span class='id identifier rubyid_reconnect'>reconnect</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="send_data-instance_method">
+  
+    - (<tt>Object</tt>) <strong>send_data</strong>(data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+104
+105
+106
+107
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 104</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_send_data'>send_data</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='kw'>unless</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span>
+        <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>send: </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_data'>data</span>
+        <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@send_timer</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="setup_timers-instance_method">
+  
+    - (<tt>Object</tt>) <strong>setup_timers</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_setup_timers'>setup_timers</span>
+    <span class='ivar'>@response_timer</span> <span class='op'>=</span> <span class='id identifier rubyid_every'>every</span><span class='lparen'>(</span><span class='ivar'>@interval</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@response_timer</span><span class='period'>.</span><span class='id identifier rubyid_pause'>pause</span>
+        <span class='ivar'>@data_handler</span><span class='period'>.</span><span class='id identifier rubyid_send_responses'>send_responses</span>
+        <span class='ivar'>@response_timer</span><span class='period'>.</span><span class='id identifier rubyid_resume'>resume</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@send_timer</span> <span class='op'>=</span> <span class='id identifier rubyid_after'>after</span> <span class='lparen'>(</span><span class='int'>50</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_send_data'>send_data</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='label'>ping:</span> <span class='ivar'>@ping_count</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+        <span class='ivar'>@ping_count</span> <span class='op'>+=</span> <span class='int'>1</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@receive_timer</span> <span class='op'>=</span> <span class='id identifier rubyid_after'>after</span> <span class='lparen'>(</span><span class='int'>60</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='const'>DSLinkLogger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WebSocket Closed due to inactivity</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_reconnect'>reconnect</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shutdown_connection-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shutdown_connection</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>def handle_exit(actor, reason)</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>HANDLE</span><span class='tstring_end'>&#39;</span></span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_actor'>actor</span>
+<span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_reason'>reason</span></code></pre>
+
+<p>end</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 119</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shutdown_connection'>shutdown_connection</span>
+    <span class='id identifier rubyid_teardown_timers'>teardown_timers</span>
+    <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_shutdown'>shutdown</span>  <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:shutdown</span>
+    <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_terminate'>terminate</span> <span class='kw'>if</span> <span class='ivar'>@conn</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span> <span class='symbol'>:terminate</span>
+    <span class='ivar'>@conn</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="teardown_timers-instance_method">
+  
+    - (<tt>Object</tt>) <strong>teardown_timers</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/connection/websocket_connection.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_teardown_timers'>teardown_timers</span>
+    <span class='ivar'>@response_timer</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>  <span class='kw'>unless</span> <span class='ivar'>@response_timer</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@send_timer</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>      <span class='kw'>unless</span> <span class='ivar'>@send_timer</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@receive_timer</span><span class='period'>.</span><span class='id identifier rubyid_cancel'>cancel</span>   <span class='kw'>unless</span> <span class='ivar'>@receive_timer</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+    <span class='ivar'>@response_timer</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@send_timer</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='ivar'>@receive_timer</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Fri Jul 17 18:33:37 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.0).
+</div>
+
+  </body>
+</html>
