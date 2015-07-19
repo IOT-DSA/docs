@@ -66,7 +66,7 @@
       <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.server/ServerWebSocket/onPingTimer.html">onPingTimer</a></li>
       <li><a href="">requireSend</a></li>
-      <li><a href="">addServerCommand</a></li>
+      <li><a href="">addConnCommand</a></li>
       <li><a href="">onData</a></li>
       <li><a href="">addData</a></li>
       <li><a href="">close</a></li>
@@ -151,19 +151,6 @@
     </div>
     
             </dd>
-            <dt id="pingCount" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href=""><span class="name ">pingCount</span></a>
-                <span class="is-inherited">inherited</span>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-    </div>
-    
-            </dd>
             <dt id="throughput" class="property">
                 <span class="top-level-variable-type">int</span>
                 <a href=""><span class="name ">throughput</span></a>
@@ -180,6 +167,19 @@
             <dt id="binaryInCache" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span>
                 <a href=""><span class="name ">binaryInCache</span></a>
+                <span class="is-inherited">inherited</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="msgId" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href=""><span class="name ">msgId</span></a>
                 <span class="is-inherited">inherited</span>
             </dt>
             <dd>
@@ -296,8 +296,8 @@
               <dd>
                   notify the connection channel need to send data
               </dd>
-              <dt id="addServerCommand" class="callable">
-                  <a href=""><span class="name ">addServerCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addServerCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addServerCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+              <dt id="addConnCommand" class="callable">
+                  <a href=""><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>

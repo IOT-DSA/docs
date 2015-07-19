@@ -71,6 +71,7 @@
 
       <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.common/Connection/requireSend.html">requireSend</a></li>
+      <li><a href="dslink.common/Connection/addConnCommand.html">addConnCommand</a></li>
       <li><a href="dslink.common/Connection/close.html">close</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -86,8 +87,7 @@
 
         <dt>Implemented by</dt>
         <dd><ul class="comma-separated class-relationships">
-            <li><a href="dslink.browser/ClientConnection-class.html">ClientConnection</a></li>
-            <li><a href="dslink.browser/ServerConnection-class.html">ServerConnection</a></li>
+            <li><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></li>
         </ul></dd>
         </dl>
     </section>
@@ -181,6 +181,16 @@
               </dt>
               <dd>
                   notify the connection channel need to send data
+              </dd>
+              <dt id="addConnCommand" class="callable">
+                  <a href="dslink.common/Connection/addConnCommand.html"><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+                  
+              </dt>
+              <dd>
+                  send a connection command
               </dd>
               <dt id="close" class="callable">
                   <a href="dslink.common/Connection/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
