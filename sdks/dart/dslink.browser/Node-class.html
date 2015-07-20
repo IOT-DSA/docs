@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li><a href="dslink.browser/Node-class.html">Node</a></li>
+                <li class="self-crumb">Node</li>
             </ol>
         </div>
     </nav>
@@ -51,46 +51,48 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.browser/Node/profile.html">profile</a></li>
-      <li><a href="dslink.browser/Node/attributes.html">attributes</a></li>
-      <li><a href="dslink.browser/Node/configs.html">configs</a></li>
-      <li><a href="dslink.browser/Node/children.html">children</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.browser/Node/Node.html">Node</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
-      <li><a href="dslink.browser/Node/getConfig.html">getConfig</a></li>
-      <li><a href="dslink.browser/Node/addChild.html">addChild</a></li>
-      <li><a href="dslink.browser/Node/removeChild.html">removeChild</a></li>
-      <li><a href="dslink.browser/Node/getChild.html">getChild</a></li>
-      <li><a href="dslink.browser/Node/get.html">get</a></li>
-      <li><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
-      <li><a href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.browser/Node-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/Node/profile.html">profile</a></li>
+        <li><a href="dslink.browser/Node/attributes.html">attributes</a></li>
+        <li><a href="dslink.browser/Node/configs.html">configs</a></li>
+        <li><a href="dslink.browser/Node/children.html">children</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/Node-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.browser/Node/Node.html">Node</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.browser/Node-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
+        <li><a href="dslink.browser/Node/getConfig.html">getConfig</a></li>
+        <li><a href="dslink.browser/Node/addChild.html">addChild</a></li>
+        <li><a href="dslink.browser/Node/removeChild.html">removeChild</a></li>
+        <li><a href="dslink.browser/Node/getChild.html">getChild</a></li>
+        <li><a href="dslink.browser/Node/get.html">get</a></li>
+        <li><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
+        <li><a href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>Base Class for any and all nodes in the SDK.
 If you are writing a link, please look at the [dslink.responder.SimpleNode] class.</p>
     
     </section>
-    
+
 
 
 
@@ -102,52 +104,52 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
             <dt id="profile" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
                 <a href="dslink.browser/Node/profile.html"><span class="name ">profile</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     This node's profile.
             </dd>
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
                 <a href="dslink.browser/Node/attributes.html"><span class="name ">attributes</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Node Attributes
             </dd>
             <dt id="configs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
                 <a href="dslink.browser/Node/configs.html"><span class="name ">configs</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Node Configs
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
                 <a href="dslink.browser/Node/children.html"><span class="name ">children</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Node Children
 Map of Child Name to Child Node
@@ -178,7 +180,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  
               </dt>
               <dd>
                   Get an Attribute
@@ -188,7 +189,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  
               </dt>
               <dd>
                   Get a Config
@@ -198,7 +198,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Adds a child to this node.
@@ -208,7 +207,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">String</span>
                   </span>
-                  
               </dt>
               <dd>
                   Remove a child from this node.
@@ -219,7 +217,6 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                       &#8594;
                       <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Get a Child Node
@@ -229,7 +226,6 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  
               </dt>
               <dd>
                   Get a property of this node.
@@ -242,7 +238,6 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Iterates over all the children of this node and passes them to the specified callback.
@@ -252,7 +247,6 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets a map for the data that will be listed in the parent node's children property.

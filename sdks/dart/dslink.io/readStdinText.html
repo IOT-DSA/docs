@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
-                <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
+                <li class="self-crumb">readStdinText</li>
             </ol>
         </div>
     </nav>
@@ -47,19 +47,48 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <h5><a href="dslink.io/dslink.io-library.html">dslink.io</a></h5>
+
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#functions">Functions</a></li>
+      <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
+      <li><a href="dslink.io/readStdinLines.html">readStdinLines</a></li>
+      <li><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></li>
+
+
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
+      <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype">Stream&lt;String&gt;</span>
             <span class="name ">readStdinText</span>(
             )    </section>
 
+    
     <section class="desc markdown">
+    
     
         <p>Read raw text from stdin.</p>
     
     </section>
-    
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
 </div> <!-- container -->
 
 <footer>

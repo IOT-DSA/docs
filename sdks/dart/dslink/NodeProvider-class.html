@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/NodeProvider-class.html">NodeProvider</a></li>
+                <li class="self-crumb">NodeProvider</li>
             </ol>
         </div>
     </nav>
@@ -52,41 +52,43 @@ A single node provider can be reused by multiple responder.
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink/NodeProvider/permissions.html">permissions</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink/NodeProvider/NodeProvider.html">NodeProvider</a></li>
-
-      <li class="section-title"><a href="#operators">Operators</a></li>
-      <li><a href="dslink/NodeProvider/operator_get.html">operator []</a></li>
-      <li><a href="dslink/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink/NodeProvider/getNode.html">getNode</a></li>
-      <li><a href="dslink/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
-      <li><a href="dslink/NodeProvider/createResponder.html">createResponder</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/NodeProvider/permissions.html">permissions</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/NodeProvider/NodeProvider.html">NodeProvider</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#operators">Operators</a></li>
+        <li><a href="dslink/NodeProvider/operator_get.html">operator []</a></li>
+        <li><a href="dslink/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#methods">Methods</a></li>
+        <li><a href="dslink/NodeProvider/getNode.html">getNode</a></li>
+        <li><a href="dslink/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
+        <li><a href="dslink/NodeProvider/createResponder.html">createResponder</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>Provides Nodes for a responder.
 A single node provider can be reused by multiple responder.</p>
     
     </section>
-    
+
 
 
 
@@ -98,15 +100,15 @@ A single node provider can be reused by multiple responder.</p>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
                 <a href="dslink/NodeProvider/permissions.html"><span class="name ">permissions</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        
     </div>
-    
+    Get Permissions.
             </dd>
 
         </dl>
@@ -133,7 +135,6 @@ A single node provider can be reused by multiple responder.</p>
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets an existing node, or creates a dummy node for a requester to listen on.
@@ -143,7 +144,6 @@ A single node provider can be reused by multiple responder.</p>
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Get the root node.
@@ -160,7 +160,6 @@ A single node provider can be reused by multiple responder.</p>
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets an existing node.
@@ -170,7 +169,6 @@ A single node provider can be reused by multiple responder.</p>
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets a node at the given path if it exists.
@@ -181,7 +179,6 @@ If it does not exist, create a new node and return it.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Create a Responder

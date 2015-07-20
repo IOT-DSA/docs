@@ -30,7 +30,7 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
                 <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-                <li><a href="dslink.utils/CachedStreamWrapper/asyncExpand.html">asyncExpand</a></li>
+                <li class="self-crumb">asyncExpand</li>
             </ol>
         </div>
     </nav>
@@ -48,7 +48,67 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <h5><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></h5>
+
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/lastValue.html">lastValue</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/first.html">first</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/isBroadcast.html">isBroadcast</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/isEmpty.html">isEmpty</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/last.html">last</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/length.html">length</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/single.html">single</a></li>
+    
+        <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#methods">Methods</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/any.html">any</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html">asBroadcastStream</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/asyncExpand.html">asyncExpand</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/asyncMap.html">asyncMap</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/contains.html">contains</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/distinct.html">distinct</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/drain.html">drain</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/elementAt.html">elementAt</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/every.html">every</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/expand.html">expand</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/firstWhere.html">firstWhere</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/fold.html">fold</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/forEach.html">forEach</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/handleError.html">handleError</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/join.html">join</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/lastWhere.html">lastWhere</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/listen.html">listen</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/map.html">map</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/pipe.html">pipe</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/reduce.html">reduce</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/singleWhere.html">singleWhere</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/skip.html">skip</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/skipWhile.html">skipWhile</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/take.html">take</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/takeWhile.html">takeWhile</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/timeout.html">timeout</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/toList.html">toList</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/toSet.html">toSet</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/transform.html">transform</a></li>
+        <li><a href="dslink.utils/CachedStreamWrapper/where.html">where</a></li>
+      </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype">Stream</span>
@@ -59,7 +119,9 @@
             </div>
             )    </section>
 
+    
     <section class="desc markdown">
+    
     
         <p>Creates a new stream with the events of a stream per original event.</p>
 <p>This acts like [expand], except that [convert] returns a [Stream]
@@ -71,7 +133,10 @@ just as if it returned an empty stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.</p>
     
     </section>
-    
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>

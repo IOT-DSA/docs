@@ -30,7 +30,7 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink/dslink-library.html">dslink</a></li>
                 <li><a href="dslink/NodeProvider-class.html">NodeProvider</a></li>
-                <li><a href="dslink/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
+                <li class="self-crumb">getOrCreateNode</li>
             </ol>
         </div>
     </nav>
@@ -49,7 +49,37 @@ If it does not exist, create a new node and return it.
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <h5><a href="dslink/NodeProvider-class.html">NodeProvider</a></h5>
+
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/NodeProvider/permissions.html">permissions</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/NodeProvider/NodeProvider.html">NodeProvider</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#operators">Operators</a></li>
+        <li><a href="dslink/NodeProvider/operator_get.html">operator []</a></li>
+        <li><a href="dslink/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+    
+        <li class="section-title"><a href="dslink/NodeProvider-class.html#methods">Methods</a></li>
+        <li><a href="dslink/NodeProvider/getNode.html">getNode</a></li>
+        <li><a href="dslink/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
+        <li><a href="dslink/NodeProvider/createResponder.html">createResponder</a></li>
+      </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
@@ -60,14 +90,19 @@ If it does not exist, create a new node and return it.
             </div>
             )    </section>
 
+    
     <section class="desc markdown">
+    
     
         <p>Gets a node at the given path if it exists.
 If it does not exist, create a new node and return it.</p>
 <p>When addToTree is false, the node will not be inserted into the node provider.</p>
     
     </section>
-    
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>

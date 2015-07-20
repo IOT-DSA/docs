@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li><a href="dslink.browser/ServerLink-class.html">ServerLink</a></li>
+                <li class="self-crumb">ServerLink</li>
             </ol>
         </div>
     </nav>
@@ -50,41 +50,43 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.browser/ServerLink/dsId.html">dsId</a></li>
-      <li><a href="dslink.browser/ServerLink/session.html">session</a></li>
-      <li><a href="dslink.browser/ServerLink/publicKey.html">publicKey</a></li>
-      <li><a href="dslink.common/Link/onRequesterReady.html">onRequesterReady</a></li>
-      <li><a href="dslink.common/Link/responder.html">responder</a></li>
-      <li><a href="dslink.common/Link/requester.html">requester</a></li>
-      <li><a href="dslink.common/Link/nonce.html">nonce</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.browser/ServerLink/ServerLink.html">ServerLink</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.browser/ServerLink/close.html">close</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.browser/ServerLink-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/ServerLink/dsId.html">dsId</a></li>
+        <li><a href="dslink.browser/ServerLink/session.html">session</a></li>
+        <li><a href="dslink.browser/ServerLink/publicKey.html">publicKey</a></li>
+        <li><a href="dslink.common/Link/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.common/Link/responder.html">responder</a></li>
+        <li><a href="dslink.common/Link/requester.html">requester</a></li>
+        <li><a href="dslink.common/Link/nonce.html">nonce</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/ServerLink-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.browser/ServerLink/ServerLink.html">ServerLink</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.browser/ServerLink-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/ServerLink/close.html">close</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>Base Class for Server Link implementations.</p>
     
     </section>
-    
+
     <section>
         <dl class="dl-horizontal">
 
@@ -110,11 +112,11 @@
             <dt id="dsId" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.browser/ServerLink/dsId.html"><span class="name ">dsId</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -123,11 +125,11 @@
             <dt id="session" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.browser/ServerLink/session.html"><span class="name ">session</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -136,11 +138,11 @@
             <dt id="publicKey" class="property">
                 <span class="top-level-variable-type"><a href="dslink/PublicKey-class.html">PublicKey</a></span>
                 <a href="dslink.browser/ServerLink/publicKey.html"><span class="name ">publicKey</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -150,52 +152,52 @@
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
                 <a href="dslink.common/Link/onRequesterReady.html"><span class="name ">onRequesterReady</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    trigger when requester channel is Ready
             </dd>
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
                 <a href="dslink.common/Link/responder.html"><span class="name ">responder</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
                 <a href="dslink.common/Link/requester.html"><span class="name ">requester</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
             <dt id="nonce" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ECDH-class.html">ECDH</a></span>
                 <a href="dslink.common/Link/nonce.html"><span class="name ">nonce</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
@@ -224,7 +226,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   

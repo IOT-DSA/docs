@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
-                <li><a href="dslink.browser_client/getPrivateKey.html">getPrivateKey</a></li>
+                <li class="self-crumb">getPrivateKey</li>
             </ol>
         </div>
     </nav>
@@ -48,7 +48,32 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <h5><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></h5>
+
+    <ol id="sidebar">
+
+
+
+      <li class="section-title"><a href="dslink.browser_client/dslink.browser_client-library.html#functions">Functions</a></li>
+      <li><a href="dslink.browser_client/getPrivateKey.html">getPrivateKey</a></li>
+
+
+      <li class="section-title"><a href="dslink.browser_client/dslink.browser_client-library.html#classes">Classes</a></li>
+      <li><a href="dslink.browser_client/DataStorage-class.html">DataStorage</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage-class.html">LocalDataStorage</a></li>
+      <li><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink-class.html">BrowserECDHLink</a></li>
+      <li><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></li>
+
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype">Future&lt;<a href="dslink.pk/PrivateKey-class.html">PrivateKey</a>&gt;</span>
@@ -59,13 +84,19 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
             </div>
             )    </section>
 
+    
     <section class="desc markdown">
+    
     
         <p>Get a Private Key using the specified storage strategy.
 If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.</p>
     
     </section>
-    
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+
 </div> <!-- container -->
 
 <footer>

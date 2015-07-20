@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
-                <li><a href="dslink.nodes/SingleNodeProvider-class.html">SingleNodeProvider</a></li>
+                <li class="self-crumb">SingleNodeProvider</li>
             </ol>
         </div>
     </nav>
@@ -51,41 +51,43 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/node.html">node</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/permissions.html">permissions</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/SingleNodeProvider.html">SingleNodeProvider</a></li>
-
-      <li class="section-title"><a href="#operators">Operators</a></li>
-      <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
-      <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></li>
-      <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/node.html">node</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/permissions.html">permissions</a></li>
+    
+        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/SingleNodeProvider.html">SingleNodeProvider</a></li>
+    
+        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#operators">Operators</a></li>
+        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+        <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+    
+        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#methods">Methods</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>A Node Provider for a Single Node</p>
     
     </section>
-    
+
     <section>
         <dl class="dl-horizontal">
 
@@ -111,11 +113,11 @@
             <dt id="node" class="property">
                 <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
                 <a href="dslink.nodes/SingleNodeProvider/node.html"><span class="name ">node</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -124,13 +126,13 @@
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
                 <a href="dslink.nodes/SingleNodeProvider/permissions.html"><span class="name ">permissions</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
@@ -160,9 +162,11 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Get the root node.
               </dd>
               <dt id="operator []" class="callable">
@@ -170,9 +174,11 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Gets an existing node, or creates a dummy node for a requester to listen on.
               </dd>
           </dl>
@@ -186,7 +192,6 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets an existing node.
@@ -196,7 +201,6 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Create a Responder
@@ -206,7 +210,6 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Gets a node at the given [path] if it exists.

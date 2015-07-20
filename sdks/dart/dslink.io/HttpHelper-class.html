@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
-                <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
+                <li class="self-crumb">HttpHelper</li>
             </ol>
         </div>
     </nav>
@@ -50,39 +50,41 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-      <li class="section-title"><a href="#static-properties">Static properties</a></li>
-      <li><a href="dslink.io/HttpHelper/client.html">client</a></li>
-
-      <li class="section-title"><a href="#static-methods">Static methods</a></li>
-      <li><a href="dslink.io/HttpHelper/createRequest.html">createRequest</a></li>
-      <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></li>
-      <li><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></li>
-      <li><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></li>
-      <li><a href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></li>
-
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></li>
-
-
-    </ol>
+      <ol id="sidebar">
+    
+        <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-properties">Static properties</a></li>
+        <li><a href="dslink.io/HttpHelper/client.html">client</a></li>
+    
+        <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-methods">Static methods</a></li>
+        <li><a href="dslink.io/HttpHelper/createRequest.html">createRequest</a></li>
+        <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></li>
+        <li><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></li>
+        <li><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></li>
+        <li><a href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></li>
+    
+    
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>Helpers for working with HTTP</p>
     
     </section>
-    
+
 
 
     <section class="summary" id="static-properties">
@@ -92,13 +94,13 @@
             <dt id="client" class="property">
                 <span class="top-level-variable-type">HttpClient</span>
                 <a href="dslink.io/HttpHelper/client.html"><span class="name ">client</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Main HTTP Client
             </dd>
@@ -113,7 +115,6 @@
                     &#8594;
                     <span class="returntype">Future&lt;HttpClientRequest&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Creates an HttpClientRequest with the given parameters.
@@ -126,7 +127,6 @@ headers specifies additional headers to set.
                     &#8594;
                     <span class="returntype">Future&lt;List&lt;int&gt;&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Reads the entire response as a list of bytes.
@@ -136,7 +136,6 @@ headers specifies additional headers to set.
                     &#8594;
                     <span class="returntype">Future&lt;String&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Fetches the specified url from HTTP.
@@ -147,7 +146,6 @@ If headers is specified, the headers will be added onto the request.
                     &#8594;
                     <span class="returntype">Future</span>
                 </span>
-                
             </dt>
             <dd>
                 Fetches the specified url from HTTP as JSON.
@@ -158,7 +156,6 @@ If headers is specified, the headers will be added onto the request.
                     &#8594;
                     <span class="returntype">Future&lt;WebSocket&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Custom WebSocket Connection logic.

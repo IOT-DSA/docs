@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></li>
+                <li class="self-crumb">ConnectionChannel</li>
             </ol>
         </div>
     </nav>
@@ -50,34 +50,42 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/onReceive.html">onReceive</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/isReady.html">isReady</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/connected.html">connected</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/onDisconnected.html">onDisconnected</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/onConnected.html">onConnected</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/ConnectionChannel.html">ConnectionChannel</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.browser/ConnectionChannel/sendWhenReady.html">sendWhenReady</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.browser/ConnectionChannel-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/onReceive.html">onReceive</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/isReady.html">isReady</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/connected.html">connected</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/onDisconnected.html">onDisconnected</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/onConnected.html">onConnected</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/ConnectionChannel-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/ConnectionChannel.html">ConnectionChannel</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.browser/ConnectionChannel-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/ConnectionChannel/sendWhenReady.html">sendWhenReady</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
     
+    <section class="desc markdown">
+    
+        <p class="no-docs">(Not documented.)</p>
+    
+        
+    
+    </section>
+
 
 
 
@@ -89,37 +97,37 @@
             <dt id="onReceive" class="property">
                 <span class="top-level-variable-type">Stream&lt;List&gt;</span>
                 <a href="dslink.browser/ConnectionChannel/onReceive.html"><span class="name ">onReceive</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        
     </div>
-    
+    receive data from method stream
             </dd>
             <dt id="isReady" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.browser/ConnectionChannel/isReady.html"><span class="name ">isReady</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        
     </div>
-    
+    whether the connection is ready to send and receive data
             </dd>
             <dt id="connected" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.browser/ConnectionChannel/connected.html"><span class="name ">connected</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -128,11 +136,11 @@
             <dt id="onDisconnected" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
                 <a href="dslink.browser/ConnectionChannel/onDisconnected.html"><span class="name ">onDisconnected</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -141,11 +149,11 @@
             <dt id="onConnected" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
                 <a href="dslink.browser/ConnectionChannel/onConnected.html"><span class="name ">onConnected</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -177,7 +185,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   raw connection need to handle error and resending of data, so it can only send one map at a time

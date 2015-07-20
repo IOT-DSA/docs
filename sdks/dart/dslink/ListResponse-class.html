@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/ListResponse-class.html">ListResponse</a></li>
+                <li class="self-crumb">ListResponse</li>
             </ol>
         </div>
     </nav>
@@ -50,36 +50,44 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink/ListResponse/node.html">node</a></li>
-      <li><a href="dslink/ListResponse/changes.html">changes</a></li>
-      <li><a href="dslink/ListResponse/initialResponse.html">initialResponse</a></li>
-      <li><a href="dslink.responder/Response/responder.html">responder</a></li>
-      <li><a href="dslink.responder/Response/rid.html">rid</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink/ListResponse/ListResponse.html">ListResponse</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink/ListResponse/changed.html">changed</a></li>
-      <li><a href="dslink/ListResponse/processor.html">processor</a></li>
-      <li><a href="dslink.responder/Response/close.html">close</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink/ListResponse-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/ListResponse/node.html">node</a></li>
+        <li><a href="dslink/ListResponse/changes.html">changes</a></li>
+        <li><a href="dslink/ListResponse/initialResponse.html">initialResponse</a></li>
+        <li><a href="dslink.responder/Response/responder.html">responder</a></li>
+        <li><a href="dslink.responder/Response/rid.html">rid</a></li>
+    
+        <li class="section-title"><a href="dslink/ListResponse-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/ListResponse/ListResponse.html">ListResponse</a></li>
+    
+    
+        <li class="section-title"><a href="dslink/ListResponse-class.html#methods">Methods</a></li>
+        <li><a href="dslink/ListResponse/changed.html">changed</a></li>
+        <li><a href="dslink/ListResponse/processor.html">processor</a></li>
+        <li><a href="dslink.responder/Response/close.html">close</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
     
+    <section class="desc markdown">
+    
+        <p class="no-docs">(Not documented.)</p>
+    
+        
+    
+    </section>
+
     <section>
         <dl class="dl-horizontal">
 
@@ -105,11 +113,11 @@
             <dt id="node" class="property">
                 <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
                 <a href="dslink/ListResponse/node.html"><span class="name ">node</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -118,26 +126,26 @@
             <dt id="changes" class="property">
                 <span class="top-level-variable-type">LinkedHashSet&lt;String&gt;</span>
                 <a href="dslink/ListResponse/changes.html"><span class="name ">changes</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
             <dt id="initialResponse" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink/ListResponse/initialResponse.html"><span class="name ">initialResponse</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
@@ -145,26 +153,26 @@
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
                 <a href="dslink.responder/Response/responder.html"><span class="name ">responder</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
                 <a href="dslink.responder/Response/rid.html"><span class="name ">rid</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
@@ -193,7 +201,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -203,7 +210,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -214,9 +220,11 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   close the request from responder side and also notify the requester
               </dd>
           </dl>

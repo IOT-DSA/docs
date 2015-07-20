@@ -28,7 +28,7 @@
             <button id="sidenav-toggle" type="button"> </button>
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                <li class="self-crumb">dslink.browser</li>
             </ol>
         </div>
     </nav>
@@ -51,7 +51,7 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
@@ -155,14 +155,16 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>Main DSLink API for Browsers</p>
     
     </section>
-    
+
     <section class="summary offset-anchor" id="constants">
         <h2>Constants</h2>
 
@@ -191,7 +193,6 @@
                     &#8594;
                     <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
                 </span>
-                
             </dt>
             <dd>
                 
@@ -201,7 +202,6 @@
                     &#8594;
                     <span class="returntype">void</span>
                 </span>
-                
             </dt>
             <dd>
                 
@@ -216,13 +216,13 @@
             <dt id="defaultProfileMap" class="property">
                 <span class="top-level-variable-type">Map</span>
                 <a href="dslink.browser/defaultProfileMap.html"><span class="name ">defaultProfileMap</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
@@ -238,7 +238,6 @@
                     &#8594;
                     <span class="returntype">void</span>
                 </span>
-                
             </dt>
             <dd>
                 Updates the log level to the level specified name.
@@ -248,7 +247,6 @@
                     &#8594;
                     <span class="returntype">List&lt;String&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 
@@ -258,7 +256,6 @@
                     &#8594;
                     <span class="returntype">Future&lt;<a href="dslink.pk/PrivateKey-class.html">PrivateKey</a>&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Get a Private Key using the specified storage strategy.
@@ -269,7 +266,6 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
                     &#8594;
                     <span class="returntype">List&lt;Map&lt;String&gt;&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 
@@ -279,7 +275,6 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
                     &#8594;
                     <span class="returntype">String</span>
                 </span>
-                
             </dt>
             <dd>
                 

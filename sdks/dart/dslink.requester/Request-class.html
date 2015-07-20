@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-                <li><a href="dslink.requester/Request-class.html">Request</a></li>
+                <li class="self-crumb">Request</li>
             </ol>
         </div>
     </nav>
@@ -50,41 +50,43 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.requester/Request/requester.html">requester</a></li>
-      <li><a href="dslink.requester/Request/rid.html">rid</a></li>
-      <li><a href="dslink.requester/Request/data.html">data</a></li>
-      <li><a href="dslink.requester/Request/updater.html">updater</a></li>
-      <li><a href="dslink.requester/Request/streamStatus.html">streamStatus</a></li>
-      <li><a href="dslink.requester/Request/isClosed.html">isClosed</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.requester/Request/Request.html">Request</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.requester/Request/resend.html">resend</a></li>
-      <li><a href="dslink.requester/Request/close.html">close</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.requester/Request-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.requester/Request/requester.html">requester</a></li>
+        <li><a href="dslink.requester/Request/rid.html">rid</a></li>
+        <li><a href="dslink.requester/Request/data.html">data</a></li>
+        <li><a href="dslink.requester/Request/updater.html">updater</a></li>
+        <li><a href="dslink.requester/Request/streamStatus.html">streamStatus</a></li>
+        <li><a href="dslink.requester/Request/isClosed.html">isClosed</a></li>
+    
+        <li class="section-title"><a href="dslink.requester/Request-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.requester/Request/Request.html">Request</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.requester/Request-class.html#methods">Methods</a></li>
+        <li><a href="dslink.requester/Request/resend.html">resend</a></li>
+        <li><a href="dslink.requester/Request/close.html">close</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>request class handles raw response from responder</p>
     
     </section>
-    
+
     <section>
         <dl class="dl-horizontal">
 
@@ -108,11 +110,11 @@
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
                 <a href="dslink.requester/Request/requester.html"><span class="name ">requester</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -121,11 +123,11 @@
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
                 <a href="dslink.requester/Request/rid.html"><span class="name ">rid</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -134,11 +136,11 @@
             <dt id="data" class="property">
                 <span class="top-level-variable-type">Map</span>
                 <a href="dslink.requester/Request/data.html"><span class="name ">data</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -147,11 +149,11 @@
             <dt id="updater" class="property">
                 <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
                 <a href="dslink.requester/Request/updater.html"><span class="name ">updater</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -160,24 +162,24 @@
             <dt id="streamStatus" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.requester/Request/streamStatus.html"><span class="name ">streamStatus</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
             <dt id="isClosed" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.requester/Request/isClosed.html"><span class="name ">isClosed</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -209,7 +211,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   resend the data if previous sending failed
@@ -219,7 +220,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   close the request from the client side

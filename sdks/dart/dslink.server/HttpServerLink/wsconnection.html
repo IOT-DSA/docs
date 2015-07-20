@@ -30,7 +30,7 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
                 <li><a href="dslink.server/HttpServerLink-class.html">HttpServerLink</a></li>
-                <li><a href="dslink.server/HttpServerLink/wsconnection.html">wsconnection</a></li>
+                <li class="self-crumb">wsconnection</li>
             </ol>
         </div>
     </nav>
@@ -50,26 +50,78 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
-  <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink.server/ServerWebSocket-class.html">ServerWebSocket</a></span>
-      <span class="name ">wsconnection</span>
-      <div class="readable-writable">
-          
-          
-          read / write
-      </div>
-  </section>
+<div class="row row-offcanvas row-offcanvas-left">
 
-    <section class="desc markdown">
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <h5><a href="dslink.server/HttpServerLink-class.html">HttpServerLink</a></h5>
+
+      <ol id="sidebar">
     
-        <p>/    if (requester == null) {
+    
+    
+        <li class="section-title"><a href="dslink.server/HttpServerLink-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.server/HttpServerLink/dsId.html">dsId</a></li>
+        <li><a href="dslink.server/HttpServerLink/session.html">session</a></li>
+        <li><a href="dslink.server/HttpServerLink/onRequesterReadyCompleter.html">onRequesterReadyCompleter</a></li>
+        <li><a href="dslink.server/HttpServerLink/requester.html">requester</a></li>
+        <li><a href="dslink.server/HttpServerLink/responder.html">responder</a></li>
+        <li><a href="dslink.server/HttpServerLink/publicKey.html">publicKey</a></li>
+        <li><a href="dslink.server/HttpServerLink/tempNonce.html">tempNonce</a></li>
+        <li><a href="dslink.server/HttpServerLink/verifiedNonce.html">verifiedNonce</a></li>
+        <li><a href="dslink.server/HttpServerLink/connection.html">connection</a></li>
+        <li><a href="dslink.server/HttpServerLink/enableTimeout.html">enableTimeout</a></li>
+        <li><a href="dslink.server/HttpServerLink/salts.html">salts</a></li>
+        <li><a href="dslink.server/HttpServerLink/isRequester.html">isRequester</a></li>
+        <li><a href="dslink.server/HttpServerLink/isResponder.html">isResponder</a></li>
+        <li><a href="dslink.server/HttpServerLink/wsconnection.html">wsconnection</a></li>
+        <li><a href="dslink.server/HttpServerLink/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.server/HttpServerLink/nonce.html">nonce</a></li>
+        <li><a href="dslink.server/HttpServerLink/valid.html">valid</a></li>
+    
+        <li class="section-title"><a href="dslink.server/HttpServerLink-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.server/HttpServerLink/HttpServerLink.html">HttpServerLink</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.server/HttpServerLink-class.html#methods">Methods</a></li>
+        <li><a href="dslink.server/HttpServerLink/initLink.html">initLink</a></li>
+        <li><a href="dslink.server/HttpServerLink/verifySalt.html">verifySalt</a></li>
+        <li><a href="dslink.server/HttpServerLink/nonceChanged.html">nonceChanged</a></li>
+        <li><a href="dslink.server/HttpServerLink/handleWsUpdate.html">handleWsUpdate</a></li>
+        <li><a href="dslink.server/HttpServerLink/close.html">close</a></li>
+        <li><a href="dslink.server/HttpServerLink/createWsConnection.html">createWsConnection</a></li>
+      </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="dslink.server/ServerWebSocket-class.html">ServerWebSocket</a></span>
+        <span class="name ">wsconnection</span>
+        <div class="readable-writable">
+            
+            
+            read / write
+            
+        </div>
+    </section>
+
+      
+      <section class="desc markdown">
+      
+      
+          <p>/    if (requester == null) {
 /      throw HttpStatus.FORBIDDEN;
 /    }</p>
-    
-    </section>
-    
+      
+      </section>
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>

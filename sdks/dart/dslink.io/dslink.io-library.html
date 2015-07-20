@@ -28,7 +28,7 @@
             <button id="sidenav-toggle" type="button"> </button>
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+                <li class="self-crumb">dslink.io</li>
             </ol>
         </div>
     </nav>
@@ -48,7 +48,7 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
@@ -69,14 +69,16 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>DSLink SDK IO Utilities</p>
     
     </section>
-    
+
 
 
 
@@ -89,7 +91,6 @@
                     &#8594;
                     <span class="returntype">Stream&lt;String&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Read raw text from stdin.
@@ -99,7 +100,6 @@
                     &#8594;
                     <span class="returntype">Stream&lt;String&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Read each line from stdin.
@@ -109,7 +109,6 @@
                     &#8594;
                     <span class="returntype">Future&lt;int&gt;</span>
                 </span>
-                
             </dt>
             <dd>
                 Generates a random socket port.

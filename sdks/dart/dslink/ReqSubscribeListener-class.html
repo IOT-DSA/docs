@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/ReqSubscribeListener-class.html">ReqSubscribeListener</a></li>
+                <li class="self-crumb">ReqSubscribeListener</li>
             </ol>
         </div>
     </nav>
@@ -50,39 +50,47 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink/ReqSubscribeListener/callback.html">callback</a></li>
-      <li><a href="dslink/ReqSubscribeListener/requester.html">requester</a></li>
-      <li><a href="dslink/ReqSubscribeListener/path.html">path</a></li>
-      <li><a href="dslink/ReqSubscribeListener/isPaused.html">isPaused</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink/ReqSubscribeListener/ReqSubscribeListener.html">ReqSubscribeListener</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink/ReqSubscribeListener/cancel.html">cancel</a></li>
-      <li><a href="dslink/ReqSubscribeListener/asFuture.html">asFuture</a></li>
-      <li><a href="dslink/ReqSubscribeListener/onData.html">onData</a></li>
-      <li><a href="dslink/ReqSubscribeListener/onDone.html">onDone</a></li>
-      <li><a href="dslink/ReqSubscribeListener/onError.html">onError</a></li>
-      <li><a href="dslink/ReqSubscribeListener/pause.html">pause</a></li>
-      <li><a href="dslink/ReqSubscribeListener/resume.html">resume</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink/ReqSubscribeListener-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/ReqSubscribeListener/callback.html">callback</a></li>
+        <li><a href="dslink/ReqSubscribeListener/requester.html">requester</a></li>
+        <li><a href="dslink/ReqSubscribeListener/path.html">path</a></li>
+        <li><a href="dslink/ReqSubscribeListener/isPaused.html">isPaused</a></li>
+    
+        <li class="section-title"><a href="dslink/ReqSubscribeListener-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/ReqSubscribeListener/ReqSubscribeListener.html">ReqSubscribeListener</a></li>
+    
+    
+        <li class="section-title"><a href="dslink/ReqSubscribeListener-class.html#methods">Methods</a></li>
+        <li><a href="dslink/ReqSubscribeListener/cancel.html">cancel</a></li>
+        <li><a href="dslink/ReqSubscribeListener/asFuture.html">asFuture</a></li>
+        <li><a href="dslink/ReqSubscribeListener/onData.html">onData</a></li>
+        <li><a href="dslink/ReqSubscribeListener/onDone.html">onDone</a></li>
+        <li><a href="dslink/ReqSubscribeListener/onError.html">onError</a></li>
+        <li><a href="dslink/ReqSubscribeListener/pause.html">pause</a></li>
+        <li><a href="dslink/ReqSubscribeListener/resume.html">resume</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
     
+    <section class="desc markdown">
+    
+        <p class="no-docs">(Not documented.)</p>
+    
+        
+    
+    </section>
+
     <section>
         <dl class="dl-horizontal">
 
@@ -108,50 +116,50 @@
             <dt id="callback" class="property">
                 <span class="top-level-variable-type">Function</span>
                 <a href="dslink/ReqSubscribeListener/callback.html"><span class="name ">callback</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
                 <a href="dslink/ReqSubscribeListener/requester.html"><span class="name ">requester</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
             <dt id="path" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink/ReqSubscribeListener/path.html"><span class="name ">path</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     
             </dd>
             <dt id="isPaused" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink/ReqSubscribeListener/isPaused.html"><span class="name ">isPaused</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -183,7 +191,6 @@
                       &#8594;
                       <span class="returntype">Future</span>
                   </span>
-                  
               </dt>
               <dd>
                   Cancels this subscription. It will no longer receive events.
@@ -193,7 +200,6 @@
                       &#8594;
                       <span class="returntype">Future</span>
                   </span>
-                  
               </dt>
               <dd>
                   Returns a future that handles the [onDone] and [onError] callbacks.
@@ -203,7 +209,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Set or override the data event handler of this subscription.
@@ -213,7 +218,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Set or override the done event handler of this subscription.
@@ -223,7 +227,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Set or override the error event handler of this subscription.
@@ -233,7 +236,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Request that the stream pauses events until further notice.
@@ -243,7 +245,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Resume after a pause.

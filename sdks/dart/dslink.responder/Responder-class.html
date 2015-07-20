@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
-                <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
+                <li class="self-crumb">Responder</li>
             </ol>
         </div>
     </nav>
@@ -50,53 +50,55 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
-      <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
-      <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
-      <li><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.responder/Responder/Responder.html">Responder</a></li>
-
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
-      <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
-      <li><a href="dslink.responder/Responder/onData.html">onData</a></li>
-      <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
-      <li><a href="dslink.responder/Responder/list.html">list</a></li>
-      <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
-      <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
-      <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
-      <li><a href="dslink.responder/Responder/set.html">set</a></li>
-      <li><a href="dslink.responder/Responder/remove.html">remove</a></li>
-      <li><a href="dslink.responder/Responder/close.html">close</a></li>
-      <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
-      <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
-      <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
-      <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.responder/Responder-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
+        <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
+        <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
+        <li><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
+    
+        <li class="section-title"><a href="dslink.responder/Responder-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.responder/Responder/Responder.html">Responder</a></li>
+    
+    
+        <li class="section-title"><a href="dslink.responder/Responder-class.html#methods">Methods</a></li>
+        <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
+        <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
+        <li><a href="dslink.responder/Responder/onData.html">onData</a></li>
+        <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
+        <li><a href="dslink.responder/Responder/list.html">list</a></li>
+        <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
+        <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
+        <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
+        <li><a href="dslink.responder/Responder/set.html">set</a></li>
+        <li><a href="dslink.responder/Responder/remove.html">remove</a></li>
+        <li><a href="dslink.responder/Responder/close.html">close</a></li>
+        <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
+        <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
+        <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+        <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
+        <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>a responder for one connection</p>
     
     </section>
-    
+
     <section>
         <dl class="dl-horizontal">
 
@@ -122,37 +124,37 @@
             <dt id="reqId" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.responder/Responder/reqId.html"><span class="name ">reqId</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     reqId can be a dsId or a user name
             </dd>
             <dt id="groups" class="property">
                 <span class="top-level-variable-type">List&lt;String&gt;</span>
                 <a href="dslink.responder/Responder/groups.html"><span class="name ">groups</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     list of permission group
             </dd>
             <dt id="nodeProvider" class="property">
                 <span class="top-level-variable-type"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span>
                 <a href="dslink.responder/Responder/nodeProvider.html"><span class="name ">nodeProvider</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -162,13 +164,13 @@
             <dt id="connection" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
                 <a href="dslink.common/ConnectionHandler/connection.html"><span class="name ">connection</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
@@ -197,7 +199,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -207,7 +208,6 @@
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -217,7 +217,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -227,7 +226,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -237,7 +235,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -247,7 +244,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -257,7 +253,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -267,7 +262,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -277,7 +271,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -287,7 +280,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -297,7 +289,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -307,7 +298,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -317,7 +307,6 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -328,9 +317,11 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   
               </dd>
               <dt id="addProcessor" class="callable">
@@ -338,9 +329,11 @@
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   a processor function that's called just before the data is sent
 same processor won't be added to the list twice
 inside processor, send() data that only need to appear once per data frame
@@ -350,9 +343,11 @@ inside processor, send() data that only need to appear once per data frame
                       &#8594;
                       <span class="returntype">List</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   gather all the changes from
               </dd>
           </dl>

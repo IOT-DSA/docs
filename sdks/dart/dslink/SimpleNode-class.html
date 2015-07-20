@@ -29,7 +29,7 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/SimpleNode-class.html">SimpleNode</a></li>
+                <li class="self-crumb">SimpleNode</li>
             </ol>
         </div>
     </nav>
@@ -52,101 +52,103 @@ A flexible node implementation that should fit most use cases.
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
 
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
-
-
-
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li><a href="dslink/SimpleNode/provider.html">provider</a></li>
-      <li><a href="dslink/SimpleNode/removed.html">removed</a></li>
-      <li><a href="dslink/SimpleNode/serializable.html">serializable</a></li>
-      <li><a href="dslink/SimpleNode/parent.html">parent</a></li>
-      <li><a href="dslink/SimpleNode/name.html">name</a></li>
-      <li><a href="dslink/SimpleNode/displayName.html">displayName</a></li>
-      <li><a href="dslink/SimpleNode/type.html">type</a></li>
-      <li><a href="dslink/SimpleNode/writable.html">writable</a></li>
-      <li><a href="dslink.common/Node/profile.html">profile</a></li>
-      <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
-      <li><a href="dslink.common/Node/configs.html">configs</a></li>
-      <li><a href="dslink.common/Node/children.html">children</a></li>
-      <li><a href="dslink.responder/LocalNode/path.html">path</a></li>
-      <li><a href="dslink.responder/LocalNode/callbacks.html">callbacks</a></li>
-      <li><a href="dslink.responder/LocalNode/listChangeController.html">listChangeController</a></li>
-      <li><a href="dslink.responder/LocalNode/listStream.html">listStream</a></li>
-      <li><a href="dslink.responder/LocalNode/lastValueUpdate.html">lastValueUpdate</a></li>
-      <li><a href="dslink.responder/LocalNode/value.html">value</a></li>
-      <li><a href="dslink.responder/LocalNode/exists.html">exists</a></li>
-      <li><a href="dslink.responder/LocalNode/listReady.html">listReady</a></li>
-      <li><a href="dslink.responder/LocalNode/disconnected.html">disconnected</a></li>
-      <li><a href="dslink.responder/LocalNode/valueReady.html">valueReady</a></li>
-      <li><a href="dslink.responder/LocalNode/hasSubscriber.html">hasSubscriber</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl/loaded.html">loaded</a></li>
-
-      <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink/SimpleNode/SimpleNode.html">SimpleNode</a></li>
-
-      <li class="section-title"><a href="#operators">Operators</a></li>
-      <li><a href="dslink/SimpleNode/operator_get.html">operator []</a></li>
-      <li><a href="dslink/SimpleNode/operator_put.html">operator []=</a></li>
-
-      <li class="section-title"><a href="#methods">Methods</a></li>
-      <li><a href="dslink/SimpleNode/load.html">load</a></li>
-      <li><a href="dslink/SimpleNode/save.html">save</a></li>
-      <li><a href="dslink/SimpleNode/invoke.html">invoke</a></li>
-      <li><a href="dslink/SimpleNode/onInvoke.html">onInvoke</a></li>
-      <li><a href="dslink/SimpleNode/onSetValue.html">onSetValue</a></li>
-      <li><a href="dslink/SimpleNode/onSetConfig.html">onSetConfig</a></li>
-      <li><a href="dslink/SimpleNode/onSetAttribute.html">onSetAttribute</a></li>
-      <li><a href="dslink/SimpleNode/onSubscribe.html">onSubscribe</a></li>
-      <li><a href="dslink/SimpleNode/onCreated.html">onCreated</a></li>
-      <li><a href="dslink/SimpleNode/onRemoving.html">onRemoving</a></li>
-      <li><a href="dslink/SimpleNode/onChildRemoved.html">onChildRemoved</a></li>
-      <li><a href="dslink/SimpleNode/onChildAdded.html">onChildAdded</a></li>
-      <li><a href="dslink/SimpleNode/subscribe.html">subscribe</a></li>
-      <li><a href="dslink/SimpleNode/onLoadChild.html">onLoadChild</a></li>
-      <li><a href="dslink/SimpleNode/createChild.html">createChild</a></li>
-      <li><a href="dslink/SimpleNode/hasConfig.html">hasConfig</a></li>
-      <li><a href="dslink/SimpleNode/hasAttribute.html">hasAttribute</a></li>
-      <li><a href="dslink/SimpleNode/remove.html">remove</a></li>
-      <li><a href="dslink/SimpleNode/attach.html">attach</a></li>
-      <li><a href="dslink/SimpleNode/addChild.html">addChild</a></li>
-      <li><a href="dslink/SimpleNode/removeChild.html">removeChild</a></li>
-      <li><a href="dslink/SimpleNode/setAttribute.html">setAttribute</a></li>
-      <li><a href="dslink/SimpleNode/setConfig.html">setConfig</a></li>
-      <li><a href="dslink/SimpleNode/setValue.html">setValue</a></li>
-      <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
-      <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
-      <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
-      <li><a href="dslink.common/Node/get.html">get</a></li>
-      <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
-      <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
-      <li><a href="dslink.responder/LocalNode/onStartListListen.html">onStartListListen</a></li>
-      <li><a href="dslink.responder/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
-      <li><a href="dslink.responder/LocalNode/unsubscribe.html">unsubscribe</a></li>
-      <li><a href="dslink.responder/LocalNode/updateValue.html">updateValue</a></li>
-      <li><a href="dslink.responder/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
-      <li><a href="dslink.responder/LocalNode/getSetPermission.html">getSetPermission</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl/removeConfig.html">removeConfig</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl/serialize.html">serialize</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl/updateList.html">updateList</a></li>
-    </ol>
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink/SimpleNode-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/SimpleNode/provider.html">provider</a></li>
+        <li><a href="dslink/SimpleNode/removed.html">removed</a></li>
+        <li><a href="dslink/SimpleNode/serializable.html">serializable</a></li>
+        <li><a href="dslink/SimpleNode/parent.html">parent</a></li>
+        <li><a href="dslink/SimpleNode/name.html">name</a></li>
+        <li><a href="dslink/SimpleNode/displayName.html">displayName</a></li>
+        <li><a href="dslink/SimpleNode/type.html">type</a></li>
+        <li><a href="dslink/SimpleNode/writable.html">writable</a></li>
+        <li><a href="dslink.common/Node/profile.html">profile</a></li>
+        <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
+        <li><a href="dslink.common/Node/configs.html">configs</a></li>
+        <li><a href="dslink.common/Node/children.html">children</a></li>
+        <li><a href="dslink.responder/LocalNode/path.html">path</a></li>
+        <li><a href="dslink.responder/LocalNode/callbacks.html">callbacks</a></li>
+        <li><a href="dslink.responder/LocalNode/listChangeController.html">listChangeController</a></li>
+        <li><a href="dslink.responder/LocalNode/listStream.html">listStream</a></li>
+        <li><a href="dslink.responder/LocalNode/lastValueUpdate.html">lastValueUpdate</a></li>
+        <li><a href="dslink.responder/LocalNode/value.html">value</a></li>
+        <li><a href="dslink.responder/LocalNode/exists.html">exists</a></li>
+        <li><a href="dslink.responder/LocalNode/listReady.html">listReady</a></li>
+        <li><a href="dslink.responder/LocalNode/disconnected.html">disconnected</a></li>
+        <li><a href="dslink.responder/LocalNode/valueReady.html">valueReady</a></li>
+        <li><a href="dslink.responder/LocalNode/hasSubscriber.html">hasSubscriber</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/loaded.html">loaded</a></li>
+    
+        <li class="section-title"><a href="dslink/SimpleNode-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/SimpleNode/SimpleNode.html">SimpleNode</a></li>
+    
+        <li class="section-title"><a href="dslink/SimpleNode-class.html#operators">Operators</a></li>
+        <li><a href="dslink/SimpleNode/operator_get.html">operator []</a></li>
+        <li><a href="dslink/SimpleNode/operator_put.html">operator []=</a></li>
+    
+        <li class="section-title"><a href="dslink/SimpleNode-class.html#methods">Methods</a></li>
+        <li><a href="dslink/SimpleNode/load.html">load</a></li>
+        <li><a href="dslink/SimpleNode/save.html">save</a></li>
+        <li><a href="dslink/SimpleNode/invoke.html">invoke</a></li>
+        <li><a href="dslink/SimpleNode/onInvoke.html">onInvoke</a></li>
+        <li><a href="dslink/SimpleNode/onSetValue.html">onSetValue</a></li>
+        <li><a href="dslink/SimpleNode/onSetConfig.html">onSetConfig</a></li>
+        <li><a href="dslink/SimpleNode/onSetAttribute.html">onSetAttribute</a></li>
+        <li><a href="dslink/SimpleNode/onSubscribe.html">onSubscribe</a></li>
+        <li><a href="dslink/SimpleNode/onCreated.html">onCreated</a></li>
+        <li><a href="dslink/SimpleNode/onRemoving.html">onRemoving</a></li>
+        <li><a href="dslink/SimpleNode/onChildRemoved.html">onChildRemoved</a></li>
+        <li><a href="dslink/SimpleNode/onChildAdded.html">onChildAdded</a></li>
+        <li><a href="dslink/SimpleNode/subscribe.html">subscribe</a></li>
+        <li><a href="dslink/SimpleNode/onLoadChild.html">onLoadChild</a></li>
+        <li><a href="dslink/SimpleNode/createChild.html">createChild</a></li>
+        <li><a href="dslink/SimpleNode/hasConfig.html">hasConfig</a></li>
+        <li><a href="dslink/SimpleNode/hasAttribute.html">hasAttribute</a></li>
+        <li><a href="dslink/SimpleNode/remove.html">remove</a></li>
+        <li><a href="dslink/SimpleNode/attach.html">attach</a></li>
+        <li><a href="dslink/SimpleNode/addChild.html">addChild</a></li>
+        <li><a href="dslink/SimpleNode/removeChild.html">removeChild</a></li>
+        <li><a href="dslink/SimpleNode/setAttribute.html">setAttribute</a></li>
+        <li><a href="dslink/SimpleNode/setConfig.html">setConfig</a></li>
+        <li><a href="dslink/SimpleNode/setValue.html">setValue</a></li>
+        <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
+        <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
+        <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
+        <li><a href="dslink.common/Node/get.html">get</a></li>
+        <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
+        <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
+        <li><a href="dslink.responder/LocalNode/onStartListListen.html">onStartListListen</a></li>
+        <li><a href="dslink.responder/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
+        <li><a href="dslink.responder/LocalNode/unsubscribe.html">unsubscribe</a></li>
+        <li><a href="dslink.responder/LocalNode/updateValue.html">updateValue</a></li>
+        <li><a href="dslink.responder/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
+        <li><a href="dslink.responder/LocalNode/getSetPermission.html">getSetPermission</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeConfig.html">removeConfig</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/serialize.html">serialize</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/updateList.html">updateList</a></li>
+      </ol>
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 main-content">
+  <div class="col-xs-12 col-sm-9">
 
+    
     <section class="desc markdown">
+    
     
         <p>A Simple Node Implementation
 A flexible node implementation that should fit most use cases.</p>
     
     </section>
-    
+
     <section>
         <dl class="dl-horizontal">
 
@@ -174,11 +176,11 @@ A flexible node implementation that should fit most use cases.</p>
             <dt id="provider" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
                 <a href="dslink/SimpleNode/provider.html"><span class="name ">provider</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
+        
         
         
     </div>
@@ -187,26 +189,26 @@ A flexible node implementation that should fit most use cases.</p>
             <dt id="removed" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink/SimpleNode/removed.html"><span class="name ">removed</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Marks a node as being removed.
             </dd>
             <dt id="serializable" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink/SimpleNode/serializable.html"><span class="name ">serializable</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
     Marks this node as being serializable.
 If true, this node can be serialized into a JSON file and then loaded back.
@@ -215,118 +217,122 @@ If false, this node can't be serialized into a JSON file.
             <dt id="parent" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
                 <a href="dslink/SimpleNode/parent.html"><span class="name ">parent</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        
     </div>
-    
+    Gets the parent node of this node.
             </dd>
             <dt id="name" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink/SimpleNode/name.html"><span class="name ">name</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        
     </div>
-    
+    Gets the name of this node.
+This is the last component of this node's path.
             </dd>
             <dt id="displayName" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink/SimpleNode/displayName.html"><span class="name ">displayName</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
-    
+    Gets the current display name of this node.
+This is the $name config. If it does not exist, then null is returned.
             </dd>
             <dt id="type" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink/SimpleNode/type.html"><span class="name ">type</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
-    
+    Gets the current value type of this node.
+This is the $type config. If it does not exist, then null is returned.
             </dd>
             <dt id="writable" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink/SimpleNode/writable.html"><span class="name ">writable</span></a>
-                
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        
     </div>
-    
+    Gets the current value of the $writable config.
+If it does not exist, then null is returned.
             </dd>
 
             <dt id="profile" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
                 <a href="dslink.common/Node/profile.html"><span class="name ">profile</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     This node's profile.
             </dd>
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
                 <a href="dslink.common/Node/attributes.html"><span class="name ">attributes</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     Node Attributes
             </dd>
             <dt id="configs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
                 <a href="dslink.common/Node/configs.html"><span class="name ">configs</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     Node Configs
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
                 <a href="dslink.common/Node/children.html"><span class="name ">children</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     Node Children
 Map of Child Name to Child Node
@@ -334,156 +340,162 @@ Map of Child Name to Child Node
             <dt id="path" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.responder/LocalNode/path.html"><span class="name ">path</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     Node Path
             </dd>
             <dt id="callbacks" class="property">
                 <span class="top-level-variable-type">Map&lt;Function,int&gt;</span>
                 <a href="dslink.responder/LocalNode/callbacks.html"><span class="name ">callbacks</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
+        , <span class="is-inherited">inherited</span>
     </div>
     Subscription Callbacks
             </dd>
             <dt id="listChangeController" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a>&lt;String&gt;</span>
                 <a href="dslink.responder/LocalNode/listChangeController.html"><span class="name ">listChangeController</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Changes to nodes will be added to this controller's stream.
+See [updateList].
             </dd>
             <dt id="listStream" class="property">
                 <span class="top-level-variable-type">Stream&lt;String&gt;</span>
                 <a href="dslink.responder/LocalNode/listStream.html"><span class="name ">listStream</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    List Stream.
+See [listChangeController].
             </dd>
             <dt id="lastValueUpdate" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
                 <a href="dslink.responder/LocalNode/lastValueUpdate.html"><span class="name ">lastValueUpdate</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Gets the last value update of this node.
             </dd>
             <dt id="value" class="property">
                 <span class="top-level-variable-type">dynamic</span>
                 <a href="dslink.responder/LocalNode/value.html"><span class="name ">value</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Gets the current value of this node.
             </dd>
             <dt id="exists" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.responder/LocalNode/exists.html"><span class="name ">exists</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Checks if this node exists.
+list and subscribe can be called on a node that doesn't exist
+Other things like set remove, and invoke can only be applied to an existing node.
             </dd>
             <dt id="listReady" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.responder/LocalNode/listReady.html"><span class="name ">listReady</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    whether the node is ready for returning a list response
             </dd>
             <dt id="disconnected" class="property">
                 <span class="top-level-variable-type">String</span>
                 <a href="dslink.responder/LocalNode/disconnected.html"><span class="name ">disconnected</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Disconnected Timestamp
             </dd>
             <dt id="valueReady" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.responder/LocalNode/valueReady.html"><span class="name ">valueReady</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Is the value ready?
             </dd>
             <dt id="hasSubscriber" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.responder/LocalNode/hasSubscriber.html"><span class="name ">hasSubscriber</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    Checks if this node has a subscriber.
+Use this for things like polling when you
+only want to do something if the node is subscribed to.
             </dd>
             <dt id="loaded" class="property">
                 <span class="top-level-variable-type">bool</span>
                 <a href="dslink.responder/LocalNodeImpl/loaded.html"><span class="name ">loaded</span></a>
-                <span class="is-inherited">inherited</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
+        , <span class="is-inherited">inherited</span>
     </div>
     
             </dd>
@@ -511,7 +523,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">dynamic</span>
                   </span>
-                  
               </dt>
               <dd>
                   Shortcut to [get].
@@ -521,7 +532,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">dynamic</span>
                   </span>
-                  
               </dt>
               <dd>
                   Set a config, attribute, or child on this node.
@@ -538,7 +548,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Load this node from the provided map as m.
@@ -548,7 +557,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
-                  
               </dt>
               <dd>
                   Save this node into a map.
@@ -558,7 +566,6 @@ Map of Child Name to Child Node
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Handles the invoke method from the internals of the responder.
@@ -569,7 +576,6 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
                       &#8594;
                       <span class="returntype">dynamic</span>
                   </span>
-                  
               </dt>
               <dd>
                   This is called when this node is invoked.
@@ -586,7 +592,6 @@ You can return the following types from this method:
                       &#8594;
                       <span class="returntype">bool</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to accept or reject a value when it is set.
@@ -597,7 +602,6 @@ Return true to reject the value, and false to accept it.
                       &#8594;
                       <span class="returntype">bool</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to accept or reject a value of a config when it is set.
@@ -608,7 +612,6 @@ Return true to reject the value, and false to accept it.
                       &#8594;
                       <span class="returntype">bool</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to accept or reject a value of an attribute when it is set.
@@ -619,7 +622,6 @@ Return true to reject the value, and false to accept it.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   
@@ -629,7 +631,6 @@ Return true to reject the value, and false to accept it.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to notify a node that it was created.
@@ -640,7 +641,6 @@ This is called after a node is deserialized as well.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to notify a node that it is about to be removed.
@@ -650,7 +650,6 @@ This is called after a node is deserialized as well.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to notify a node that one of it's children has been removed.
@@ -660,7 +659,6 @@ This is called after a node is deserialized as well.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback used to notify a node that a child has been added to it.
@@ -670,7 +668,6 @@ This is called after a node is deserialized as well.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Subscribes the given [callback] to this node.
@@ -680,7 +677,6 @@ This is called after a node is deserialized as well.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Callback to override how a child of this node is loaded.
@@ -691,7 +687,6 @@ If this method returns null, the default strategy is used.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Creates a child with the given name.
@@ -702,7 +697,6 @@ If m is specified, the node is loaded with that map.
                       &#8594;
                       <span class="returntype">bool</span>
                   </span>
-                  
               </dt>
               <dd>
                   Checks if this node has the specified config.
@@ -712,7 +706,6 @@ If m is specified, the node is loaded with that map.
                       &#8594;
                       <span class="returntype">bool</span>
                   </span>
-                  
               </dt>
               <dd>
                   Checks if this node has the specified attribute.
@@ -722,7 +715,6 @@ If m is specified, the node is loaded with that map.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Remove this node from it's parent.
@@ -732,7 +724,6 @@ If m is specified, the node is loaded with that map.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Add this node to the given node.
@@ -744,7 +735,6 @@ If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be 
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  
               </dt>
               <dd>
                   Adds the given node as a child of this node with the given name.
@@ -754,7 +744,6 @@ If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be 
                       &#8594;
                       <span class="returntype">String</span>
                   </span>
-                  
               </dt>
               <dd>
                   Removes a child from this node.
@@ -767,7 +756,6 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Called by the link internals to set an attribute on this node.
@@ -777,7 +765,6 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Called by the link internals to set a config on this node.
@@ -787,7 +774,6 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  
               </dt>
               <dd>
                   Called by the link internals to set a value of a node.
@@ -798,9 +784,11 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Get an Attribute
               </dd>
               <dt id="getConfig" class="callable">
@@ -808,9 +796,11 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Get a Config
               </dd>
               <dt id="getChild" class="callable">
@@ -818,9 +808,11 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Get a Child Node
               </dd>
               <dt id="get" class="callable">
@@ -828,9 +820,11 @@ The name of the removed node is returned.
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Get a property of this node.
 If name starts with '$', this will fetch a config.
 If name starts with a '@', this will fetch an attribute.
@@ -841,9 +835,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Iterates over all the children of this node and passes them to the specified callback.
               </dd>
               <dt id="getSimpleMap" class="callable">
@@ -851,9 +847,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Gets a map for the data that will be listed in the parent node's children property.
               </dd>
               <dt id="onStartListListen" class="callable">
@@ -861,9 +859,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Callback for when listing this node has started.
               </dd>
               <dt id="onAllListCancel" class="callable">
@@ -871,9 +871,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Callback for when all lists are canceled.
               </dd>
               <dt id="unsubscribe" class="callable">
@@ -881,9 +883,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Unsubscribe the given callback from this node.
               </dd>
               <dt id="updateValue" class="callable">
@@ -891,9 +895,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Updates this node's value to the specified <a href="dslink/LocalNode/value.html">value</a>.
               </dd>
               <dt id="getInvokePermission" class="callable">
@@ -901,9 +907,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">int</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Gets the invoke permission for this node.
               </dd>
               <dt id="getSetPermission" class="callable">
@@ -911,9 +919,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">int</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Gets the set permission for this node.
               </dd>
               <dt id="removeAttribute" class="callable">
@@ -921,9 +931,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Called by the link internals to remove an attribute from this node.
               </dd>
               <dt id="removeConfig" class="callable">
@@ -931,9 +943,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   Called by the link internals to remove a config from this node.
               </dd>
               <dt id="serialize" class="callable">
@@ -941,9 +955,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   
               </dd>
               <dt id="updateList" class="callable">
@@ -951,9 +967,11 @@ Otherwise this will fetch a child.
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
-                  <span class="is-inherited">inherited</span>
               </dt>
               <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
                   
               </dd>
           </dl>

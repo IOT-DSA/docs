@@ -30,7 +30,7 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
                 <li><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></li>
-                <li><a href="dslink.browser/DefinitionNode/invoke.html">invoke</a></li>
+                <li class="self-crumb">invoke</li>
             </ol>
         </div>
     </nav>
@@ -48,7 +48,75 @@
     </div>
 </header>
 
-<div class="container">
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <h5><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></h5>
+
+      <ol id="sidebar">
+    
+    
+    
+        <li class="section-title"><a href="dslink.browser/DefinitionNode-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/DefinitionNode/provider.html">provider</a></li>
+        <li><a href="dslink.common/Node/profile.html">profile</a></li>
+        <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
+        <li><a href="dslink.common/Node/configs.html">configs</a></li>
+        <li><a href="dslink.common/Node/children.html">children</a></li>
+        <li><a href="dslink.responder/LocalNode/path.html">path</a></li>
+        <li><a href="dslink.responder/LocalNode/callbacks.html">callbacks</a></li>
+        <li><a href="dslink.responder/LocalNode/listChangeController.html">listChangeController</a></li>
+        <li><a href="dslink.responder/LocalNode/listStream.html">listStream</a></li>
+        <li><a href="dslink.responder/LocalNode/lastValueUpdate.html">lastValueUpdate</a></li>
+        <li><a href="dslink.responder/LocalNode/value.html">value</a></li>
+        <li><a href="dslink.responder/LocalNode/exists.html">exists</a></li>
+        <li><a href="dslink.responder/LocalNode/listReady.html">listReady</a></li>
+        <li><a href="dslink.responder/LocalNode/disconnected.html">disconnected</a></li>
+        <li><a href="dslink.responder/LocalNode/valueReady.html">valueReady</a></li>
+        <li><a href="dslink.responder/LocalNode/hasSubscriber.html">hasSubscriber</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/loaded.html">loaded</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/DefinitionNode-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.browser/DefinitionNode/DefinitionNode.html">DefinitionNode</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/DefinitionNode-class.html#operators">Operators</a></li>
+        <li><a href="dslink.responder/LocalNode/operator_put.html">operator []=</a></li>
+        <li><a href="dslink.responder/LocalNode/operator_get.html">operator []</a></li>
+    
+        <li class="section-title"><a href="dslink.browser/DefinitionNode-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/DefinitionNode/setInvokeCallback.html">setInvokeCallback</a></li>
+        <li><a href="dslink.browser/DefinitionNode/invoke.html">invoke</a></li>
+        <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
+        <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
+        <li><a href="dslink.common/Node/addChild.html">addChild</a></li>
+        <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
+        <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
+        <li><a href="dslink.common/Node/get.html">get</a></li>
+        <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
+        <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
+        <li><a href="dslink.responder/LocalNode/onStartListListen.html">onStartListListen</a></li>
+        <li><a href="dslink.responder/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
+        <li><a href="dslink.responder/LocalNode/subscribe.html">subscribe</a></li>
+        <li><a href="dslink.responder/LocalNode/unsubscribe.html">unsubscribe</a></li>
+        <li><a href="dslink.responder/LocalNode/updateValue.html">updateValue</a></li>
+        <li><a href="dslink.responder/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
+        <li><a href="dslink.responder/LocalNode/getSetPermission.html">getSetPermission</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setAttribute.html">setAttribute</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setConfig.html">setConfig</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeConfig.html">removeConfig</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setValue.html">setValue</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/serialize.html">serialize</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/load.html">load</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/updateList.html">updateList</a></li>
+      </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
@@ -59,12 +127,17 @@
             </div>
             )    </section>
 
+    
     <section class="desc markdown">
+    
     
         <p>Called by the link internals to invoke this node.</p>
     
     </section>
-    
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>
