@@ -44,6 +44,7 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/Node-class.html#static-methods">Static Methods</a></li>
             <li><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
             <li><a href="dslink/Node-class.html#constructors">Constructors</a></li>
             <li><a href="dslink/Node-class.html#instance-methods">Methods</a></li>
@@ -59,6 +60,8 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
       <ol id="sidebar">
     
     
+        <li class="section-title"><a href="dslink/Node-class.html#static-methods">Static methods</a></li>
+        <li><a href="dslink/Node/getDisplayName.html">getDisplayName</a></li>
     
         <li class="section-title"><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink/Node/profile.html">profile</a></li>
@@ -78,6 +81,8 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
         <li><a href="dslink/Node/getChild.html">getChild</a></li>
         <li><a href="dslink/Node/get.html">get</a></li>
         <li><a href="dslink/Node/forEachChild.html">forEachChild</a></li>
+        <li><a href="dslink/Node/forEachConfig.html">forEachConfig</a></li>
+        <li><a href="dslink/Node/forEachAttribute.html">forEachAttribute</a></li>
         <li><a href="dslink/Node/getSimpleMap.html">getSimpleMap</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -96,6 +101,20 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
 
 
 
+    <section class="summary" id="static-methods">
+        <h2>Static Methods</h2>
+        <dl class="callables">
+            <dt id="getDisplayName" class="callable">
+                <a href="dslink/Node/getDisplayName.html"><span class="name ">getDisplayName</span></a><span class="signature">(<wbr><span class="parameter" id="getDisplayName-param-nameOrPath"><span class="type-annotation">String</span> <span class="parameter-name">nameOrPath</span></span>)
+                    &#8594;
+                    <span class="returntype">String</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
 
     <section class="summary" id="instance-properties">
         <h2>Properties</h2>
@@ -241,6 +260,24 @@ Otherwise this will fetch a child.
               </dt>
               <dd>
                   Iterates over all the children of this node and passes them to the specified callback.
+              </dd>
+              <dt id="forEachConfig" class="callable">
+                  <a href="dslink/Node/forEachConfig.html"><span class="name ">forEachConfig</span></a><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="forEachAttribute" class="callable">
+                  <a href="dslink/Node/forEachAttribute.html"><span class="name ">forEachAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <a href="dslink/Node/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
