@@ -60,9 +60,9 @@
     
     
         <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.responder/ListResponse/node.html">node</a></li>
         <li><a href="dslink.responder/ListResponse/changes.html">changes</a></li>
         <li><a href="dslink.responder/ListResponse/initialResponse.html">initialResponse</a></li>
+        <li><a href="dslink.responder/ListResponse/node.html">node</a></li>
         <li><a href="dslink.responder/Response/responder.html">responder</a></li>
         <li><a href="dslink.responder/Response/rid.html">rid</a></li>
     
@@ -72,14 +72,13 @@
     
         <li class="section-title"><a href="dslink.responder/ListResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
-        <li><a href="dslink.responder/ListResponse/processor.html">processor</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
+        <li><a href="dslink.responder/ListResponse/processor.html">processor</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -110,19 +109,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="node" class="property">
-                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
-                <a href="dslink.responder/ListResponse/node.html"><span class="name ">node</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
             <dt id="changes" class="property">
                 <span class="top-level-variable-type">LinkedHashSet&lt;String&gt;</span>
                 <a href="dslink.responder/ListResponse/changes.html"><span class="name ">changes</span></a>
@@ -134,7 +120,7 @@
         read / write
         
     </div>
-    
+    null
             </dd>
             <dt id="initialResponse" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -147,9 +133,21 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="node" class="property">
+                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
+                <a href="dslink.responder/ListResponse/node.html"><span class="name ">node</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
                 <a href="dslink.responder/Response/responder.html"><span class="name ">responder</span></a>
@@ -161,7 +159,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -174,7 +172,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
         </dl>
     </section>
@@ -205,16 +203,6 @@
               <dd>
                   
               </dd>
-              <dt id="processor" class="callable">
-                  <a href="dslink.responder/ListResponse/processor.html"><span class="name ">processor</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-
               <dt id="close" class="callable">
                   <a href="dslink.responder/Response/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
                       &#8594;
@@ -226,6 +214,15 @@
                     <span class="is-inherited">inherited</span>
                   </div>
                   close the request from responder side and also notify the requester
+              </dd>
+              <dt id="processor" class="callable">
+                  <a href="dslink.responder/ListResponse/processor.html"><span class="name ">processor</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
           </dl>
       </section>

@@ -60,8 +60,8 @@
     
     
         <li class="section-title"><a href="dslink.worker/Worker-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.worker/Worker/port.html">port</a></li>
         <li><a href="dslink.worker/Worker/metadata.html">metadata</a></li>
+        <li><a href="dslink.worker/Worker/port.html">port</a></li>
     
         <li class="section-title"><a href="dslink.worker/Worker-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.worker/Worker/Worker.html">Worker</a></li>
@@ -69,15 +69,14 @@
     
         <li class="section-title"><a href="dslink.worker/Worker-class.html#methods">Methods</a></li>
         <li><a href="dslink.worker/Worker/createSocket.html">createSocket</a></li>
-        <li><a href="dslink.worker/Worker/init.html">init</a></li>
         <li><a href="dslink.worker/Worker/get.html">get</a></li>
         <li><a href="dslink.worker/Worker/has.html">has</a></li>
+        <li><a href="dslink.worker/Worker/init.html">init</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -94,19 +93,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="port" class="property">
-                <span class="top-level-variable-type">SendPort</span>
-                <a href="dslink.worker/Worker/port.html"><span class="name ">port</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
             <dt id="metadata" class="property">
                 <span class="top-level-variable-type">Map&lt;String&gt;</span>
                 <a href="dslink.worker/Worker/metadata.html"><span class="name ">metadata</span></a>
@@ -118,9 +104,21 @@
         
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="port" class="property">
+                <span class="top-level-variable-type">SendPort</span>
+                <a href="dslink.worker/Worker/port.html"><span class="name ">port</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
         </dl>
     </section>
 
@@ -150,15 +148,6 @@
               <dd>
                   
               </dd>
-              <dt id="init" class="callable">
-                  <a href="dslink.worker/Worker/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String,<a href="dslink.worker/Producer.html">Producer</a>&gt;</span> <span class="parameter-name">methods</span></span>})
-                      &#8594;
-                      <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a>&gt;</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="get" class="callable">
                   <a href="dslink.worker/Worker/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
                       &#8594;
@@ -177,7 +166,15 @@
               <dd>
                   
               </dd>
-
+              <dt id="init" class="callable">
+                  <a href="dslink.worker/Worker/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String,<a href="dslink.worker/Producer.html">Producer</a>&gt;</span> <span class="parameter-name">methods</span></span>})
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a>&gt;</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
           </dl>
       </section>
 

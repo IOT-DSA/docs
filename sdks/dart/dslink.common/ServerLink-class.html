@@ -61,12 +61,12 @@
     
         <li class="section-title"><a href="dslink.common/ServerLink-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink.common/ServerLink/dsId.html">dsId</a></li>
-        <li><a href="dslink.common/ServerLink/session.html">session</a></li>
-        <li><a href="dslink.common/ServerLink/publicKey.html">publicKey</a></li>
-        <li><a href="dslink.common/Link/onRequesterReady.html">onRequesterReady</a></li>
-        <li><a href="dslink.common/Link/responder.html">responder</a></li>
-        <li><a href="dslink.common/Link/requester.html">requester</a></li>
         <li><a href="dslink.common/Link/nonce.html">nonce</a></li>
+        <li><a href="dslink.common/Link/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.common/ServerLink/publicKey.html">publicKey</a></li>
+        <li><a href="dslink.common/Link/requester.html">requester</a></li>
+        <li><a href="dslink.common/Link/responder.html">responder</a></li>
+        <li><a href="dslink.common/ServerLink/session.html">session</a></li>
     
         <li class="section-title"><a href="dslink.common/ServerLink-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.common/ServerLink/ServerLink.html">ServerLink</a></li>
@@ -79,7 +79,6 @@
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -126,33 +125,19 @@
     </div>
     dsId or username
             </dd>
-            <dt id="session" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.common/ServerLink/session.html"><span class="name ">session</span></a>
+            <dt id="nonce" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ECDH-class.html">ECDH</a></span>
+                <a href="dslink.common/Link/nonce.html"><span class="name ">nonce</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
-        
+        , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
-            <dt id="publicKey" class="property">
-                <span class="top-level-variable-type"><a href="dslink/PublicKey-class.html">PublicKey</a></span>
-                <a href="dslink.common/ServerLink/publicKey.html"><span class="name ">publicKey</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
-
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
                 <a href="dslink.common/Link/onRequesterReady.html"><span class="name ">onRequesterReady</span></a>
@@ -166,18 +151,18 @@
     </div>
     trigger when requester channel is Ready
             </dd>
-            <dt id="responder" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
-                <a href="dslink.common/Link/responder.html"><span class="name ">responder</span></a>
+            <dt id="publicKey" class="property">
+                <span class="top-level-variable-type"><a href="dslink/PublicKey-class.html">PublicKey</a></span>
+                <a href="dslink.common/ServerLink/publicKey.html"><span class="name ">publicKey</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only
         
         
-        , <span class="is-inherited">inherited</span>
+        
     </div>
-    
+    null
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
@@ -190,11 +175,11 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
-            <dt id="nonce" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ECDH-class.html">ECDH</a></span>
-                <a href="dslink.common/Link/nonce.html"><span class="name ">nonce</span></a>
+            <dt id="responder" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
+                <a href="dslink.common/Link/responder.html"><span class="name ">responder</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -203,7 +188,20 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
+            </dd>
+            <dt id="session" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.common/ServerLink/session.html"><span class="name ">session</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
             </dd>
         </dl>
     </section>
@@ -234,7 +232,6 @@
               <dd>
                   
               </dd>
-
           </dl>
       </section>
 

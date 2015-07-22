@@ -60,12 +60,12 @@
     
     
         <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.responder/RespSubscribeController/cacheLevel.html">cacheLevel</a></li>
+        <li><a href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a></li>
         <li><a href="dslink.responder/RespSubscribeController/node.html">node</a></li>
+        <li><a href="dslink.responder/RespSubscribeController/permitted.html">permitted</a></li>
         <li><a href="dslink.responder/RespSubscribeController/response.html">response</a></li>
         <li><a href="dslink.responder/RespSubscribeController/sid.html">sid</a></li>
-        <li><a href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a></li>
-        <li><a href="dslink.responder/RespSubscribeController/permitted.html">permitted</a></li>
-        <li><a href="dslink.responder/RespSubscribeController/cacheLevel.html">cacheLevel</a></li>
     
         <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.responder/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></li>
@@ -73,15 +73,14 @@
     
         <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#methods">Methods</a></li>
         <li><a href="dslink.responder/RespSubscribeController/addValue.html">addValue</a></li>
+        <li><a href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
         <li><a href="dslink.responder/RespSubscribeController/mergeValues.html">mergeValues</a></li>
         <li><a href="dslink.responder/RespSubscribeController/process.html">process</a></li>
-        <li><a href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -98,35 +97,9 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="node" class="property">
-                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
-                <a href="dslink.responder/RespSubscribeController/node.html"><span class="name ">node</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
-            <dt id="response" class="property">
-                <span class="top-level-variable-type"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span>
-                <a href="dslink.responder/RespSubscribeController/response.html"><span class="name ">response</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
-            <dt id="sid" class="property">
+            <dt id="cacheLevel" class="property">
                 <span class="top-level-variable-type">int</span>
-                <a href="dslink.responder/RespSubscribeController/sid.html"><span class="name ">sid</span></a>
+                <a href="dslink.responder/RespSubscribeController/cacheLevel.html"><span class="name ">cacheLevel</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -135,7 +108,7 @@
         read / write
         
     </div>
-    
+    null
             </dd>
             <dt id="lastValues" class="property">
                 <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
@@ -148,7 +121,20 @@
         read / write
         
     </div>
-    
+    null
+            </dd>
+            <dt id="node" class="property">
+                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
+                <a href="dslink.responder/RespSubscribeController/node.html"><span class="name ">node</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
             </dd>
             <dt id="permitted" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -161,11 +147,24 @@
         
         
     </div>
-    
+    null
             </dd>
-            <dt id="cacheLevel" class="property">
+            <dt id="response" class="property">
+                <span class="top-level-variable-type"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span>
+                <a href="dslink.responder/RespSubscribeController/response.html"><span class="name ">response</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="sid" class="property">
                 <span class="top-level-variable-type">int</span>
-                <a href="dslink.responder/RespSubscribeController/cacheLevel.html"><span class="name ">cacheLevel</span></a>
+                <a href="dslink.responder/RespSubscribeController/sid.html"><span class="name ">sid</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -174,9 +173,8 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
         </dl>
     </section>
 
@@ -206,6 +204,15 @@
               <dd>
                   
               </dd>
+              <dt id="destroy" class="callable">
+                  <a href="dslink.responder/RespSubscribeController/destroy.html"><span class="name ">destroy</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="mergeValues" class="callable">
                   <a href="dslink.responder/RespSubscribeController/mergeValues.html"><span class="name ">mergeValues</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -224,16 +231,6 @@
               <dd>
                   
               </dd>
-              <dt id="destroy" class="callable">
-                  <a href="dslink.responder/RespSubscribeController/destroy.html"><span class="name ">destroy</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-
           </dl>
       </section>
 

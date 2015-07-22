@@ -60,8 +60,8 @@
     
     
         <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.utils/DsJsonCodecImpl/encoder.html">encoder</a></li>
         <li><a href="dslink.utils/DsJsonCodecImpl/decoder.html">decoder</a></li>
+        <li><a href="dslink.utils/DsJsonCodecImpl/encoder.html">encoder</a></li>
     
         <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.utils/DsJsonCodecImpl/DsJsonCodecImpl.html">DsJsonCodecImpl</a></li>
@@ -69,15 +69,14 @@
     
         <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#methods">Methods</a></li>
         <li><a href="dslink.utils/DsJsonCodecImpl/decodeJson.html">decodeJson</a></li>
-        <li><a href="dslink.utils/DsJsonCodecImpl/encodeJson.html">encodeJson</a></li>
         <li><a href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html">decodeJsonFrame</a></li>
+        <li><a href="dslink.utils/DsJsonCodecImpl/encodeJson.html">encodeJson</a></li>
         <li><a href="dslink.utils/DsJsonCodecImpl/encodeJsonFrame.html">encodeJsonFrame</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -108,19 +107,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="encoder" class="property">
-                <span class="top-level-variable-type">JsonEncoder</span>
-                <a href="dslink.utils/DsJsonCodecImpl/encoder.html"><span class="name ">encoder</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
             <dt id="decoder" class="property">
                 <span class="top-level-variable-type">JsonDecoder</span>
                 <a href="dslink.utils/DsJsonCodecImpl/decoder.html"><span class="name ">decoder</span></a>
@@ -132,9 +118,21 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="encoder" class="property">
+                <span class="top-level-variable-type">JsonEncoder</span>
+                <a href="dslink.utils/DsJsonCodecImpl/encoder.html"><span class="name ">encoder</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
         </dl>
     </section>
 
@@ -164,19 +162,19 @@
               <dd>
                   
               </dd>
-              <dt id="encodeJson" class="callable">
-                  <a href="dslink.utils/DsJsonCodecImpl/encodeJson.html"><span class="name ">encodeJson</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJson-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encodeJson-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
+              <dt id="decodeJsonFrame" class="callable">
+                  <a href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html"><span class="name ">decodeJsonFrame</span></a><span class="signature">(<wbr><span class="parameter" id="decodeJsonFrame-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>, <span class="parameter" id="decodeJsonFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span> <span class="parameter-name">cache</span></span>)
                       &#8594;
-                      <span class="returntype">String</span>
+                      <span class="returntype">Object</span>
                   </span>
               </dt>
               <dd>
                   
               </dd>
-              <dt id="decodeJsonFrame" class="callable">
-                  <a href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html"><span class="name ">decodeJsonFrame</span></a><span class="signature">(<wbr><span class="parameter" id="decodeJsonFrame-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>, <span class="parameter" id="decodeJsonFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span> <span class="parameter-name">cache</span></span>)
+              <dt id="encodeJson" class="callable">
+                  <a href="dslink.utils/DsJsonCodecImpl/encodeJson.html"><span class="name ">encodeJson</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJson-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encodeJson-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
                       &#8594;
-                      <span class="returntype">Object</span>
+                      <span class="returntype">String</span>
                   </span>
               </dt>
               <dd>
@@ -191,7 +189,6 @@
               <dd>
                   
               </dd>
-
           </dl>
       </section>
 

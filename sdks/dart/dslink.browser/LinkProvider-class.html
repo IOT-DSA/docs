@@ -61,19 +61,19 @@
     
     
         <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/LinkProvider/link.html">link</a></li>
-        <li><a href="dslink.browser/LinkProvider/defaultNodes.html">defaultNodes</a></li>
-        <li><a href="dslink.browser/LinkProvider/profiles.html">profiles</a></li>
-        <li><a href="dslink.browser/LinkProvider/loadNodes.html">loadNodes</a></li>
-        <li><a href="dslink.browser/LinkProvider/provider.html">provider</a></li>
-        <li><a href="dslink.browser/LinkProvider/dataStore.html">dataStore</a></li>
-        <li><a href="dslink.browser/LinkProvider/privateKey.html">privateKey</a></li>
         <li><a href="dslink.browser/LinkProvider/brokerUrl.html">brokerUrl</a></li>
-        <li><a href="dslink.browser/LinkProvider/prefix.html">prefix</a></li>
+        <li><a href="dslink.browser/LinkProvider/dataStore.html">dataStore</a></li>
+        <li><a href="dslink.browser/LinkProvider/defaultNodes.html">defaultNodes</a></li>
         <li><a href="dslink.browser/LinkProvider/isRequester.html">isRequester</a></li>
         <li><a href="dslink.browser/LinkProvider/isResponder.html">isResponder</a></li>
-        <li><a href="dslink.browser/LinkProvider/requester.html">requester</a></li>
+        <li><a href="dslink.browser/LinkProvider/link.html">link</a></li>
+        <li><a href="dslink.browser/LinkProvider/loadNodes.html">loadNodes</a></li>
         <li><a href="dslink.browser/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.browser/LinkProvider/prefix.html">prefix</a></li>
+        <li><a href="dslink.browser/LinkProvider/privateKey.html">privateKey</a></li>
+        <li><a href="dslink.browser/LinkProvider/profiles.html">profiles</a></li>
+        <li><a href="dslink.browser/LinkProvider/provider.html">provider</a></li>
+        <li><a href="dslink.browser/LinkProvider/requester.html">requester</a></li>
     
         <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/LinkProvider/LinkProvider.html">LinkProvider</a></li>
@@ -83,16 +83,16 @@
         <li><a href="dslink.browser/LinkProvider/operator_bitwise_negate.html">operator ~</a></li>
     
         <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/LinkProvider/addNode.html">addNode</a></li>
+        <li><a href="dslink.browser/LinkProvider/close.html">close</a></li>
+        <li><a href="dslink.browser/LinkProvider/connect.html">connect</a></li>
+        <li><a href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
         <li><a href="dslink.browser/LinkProvider/init.html">init</a></li>
-        <li><a href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
         <li><a href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
+        <li><a href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
+        <li><a href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
         <li><a href="dslink.browser/LinkProvider/save.html">save</a></li>
         <li><a href="dslink.browser/LinkProvider/syncValue.html">syncValue</a></li>
-        <li><a href="dslink.browser/LinkProvider/connect.html">connect</a></li>
-        <li><a href="dslink.browser/LinkProvider/close.html">close</a></li>
-        <li><a href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
-        <li><a href="dslink.browser/LinkProvider/addNode.html">addNode</a></li>
-        <li><a href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
         <li><a href="dslink.browser/LinkProvider/updateValue.html">updateValue</a></li>
         <li><a href="dslink.browser/LinkProvider/val.html">val</a></li>
       </ol>
@@ -100,7 +100,6 @@
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -116,9 +115,9 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="link" class="property">
-                <span class="top-level-variable-type"><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></span>
-                <a href="dslink.browser/LinkProvider/link.html"><span class="name ">link</span></a>
+            <dt id="brokerUrl" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/LinkProvider/brokerUrl.html"><span class="name ">brokerUrl</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -127,59 +126,7 @@
         read / write
         
     </div>
-    
-            </dd>
-            <dt id="defaultNodes" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <a href="dslink.browser/LinkProvider/defaultNodes.html"><span class="name ">defaultNodes</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="profiles" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <a href="dslink.browser/LinkProvider/profiles.html"><span class="name ">profiles</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="loadNodes" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.browser/LinkProvider/loadNodes.html"><span class="name ">loadNodes</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="provider" class="property">
-                <span class="top-level-variable-type"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span>
-                <a href="dslink.browser/LinkProvider/provider.html"><span class="name ">provider</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
+    null
             </dd>
             <dt id="dataStore" class="property">
                 <span class="top-level-variable-type"><a href="dslink.browser/DataStorage-class.html">DataStorage</a></span>
@@ -192,11 +139,11 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="privateKey" class="property">
-                <span class="top-level-variable-type"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span>
-                <a href="dslink.browser/LinkProvider/privateKey.html"><span class="name ">privateKey</span></a>
+            <dt id="defaultNodes" class="property">
+                <span class="top-level-variable-type">Map</span>
+                <a href="dslink.browser/LinkProvider/defaultNodes.html"><span class="name ">defaultNodes</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -205,33 +152,7 @@
         read / write
         
     </div>
-    
-            </dd>
-            <dt id="brokerUrl" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/LinkProvider/brokerUrl.html"><span class="name ">brokerUrl</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="prefix" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/LinkProvider/prefix.html"><span class="name ">prefix</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
+    null
             </dd>
             <dt id="isRequester" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -244,7 +165,7 @@
         read / write
         
     </div>
-    
+    null
             </dd>
             <dt id="isResponder" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -257,20 +178,33 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="requester" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink.browser/LinkProvider/requester.html"><span class="name ">requester</span></a>
+            <dt id="link" class="property">
+                <span class="top-level-variable-type"><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></span>
+                <a href="dslink.browser/LinkProvider/link.html"><span class="name ">link</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
-        read-only
         
         
+        read / write
         
     </div>
-    
+    null
+            </dd>
+            <dt id="loadNodes" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.browser/LinkProvider/loadNodes.html"><span class="name ">loadNodes</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
             </dd>
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
@@ -283,9 +217,73 @@
         
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="prefix" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/LinkProvider/prefix.html"><span class="name ">prefix</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="privateKey" class="property">
+                <span class="top-level-variable-type"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span>
+                <a href="dslink.browser/LinkProvider/privateKey.html"><span class="name ">privateKey</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="profiles" class="property">
+                <span class="top-level-variable-type">Map</span>
+                <a href="dslink.browser/LinkProvider/profiles.html"><span class="name ">profiles</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="provider" class="property">
+                <span class="top-level-variable-type"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span>
+                <a href="dslink.browser/LinkProvider/provider.html"><span class="name ">provider</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="requester" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
+                <a href="dslink.browser/LinkProvider/requester.html"><span class="name ">requester</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
         </dl>
     </section>
 
@@ -323,51 +321,23 @@
               <dd>
                   
               </dd>
-
           </dl>
       </section>
 
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="init" class="callable">
-                  <a href="dslink.browser/LinkProvider/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>)
+              <dt id="addNode" class="callable">
+                  <a href="dslink.browser/LinkProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
-                      <span class="returntype">Future</span>
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
               </dt>
               <dd>
                   
               </dd>
-              <dt id="resetSavedNodes" class="callable">
-                  <a href="dslink.browser/LinkProvider/resetSavedNodes.html"><span class="name ">resetSavedNodes</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">Future</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="onValueChange" class="callable">
-                  <a href="dslink.browser/LinkProvider/onValueChange.html"><span class="name ">onValueChange</span></a><span class="signature">(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>})
-                      &#8594;
-                      <span class="returntype">Stream&lt;<a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="save" class="callable">
-                  <a href="dslink.browser/LinkProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">Future</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="syncValue" class="callable">
-                  <a href="dslink.browser/LinkProvider/syncValue.html"><span class="name ">syncValue</span></a><span class="signature">(<wbr><span class="parameter" id="syncValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+              <dt id="close" class="callable">
+                  <a href="dslink.browser/LinkProvider/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -384,15 +354,6 @@
               <dd>
                   
               </dd>
-              <dt id="close" class="callable">
-                  <a href="dslink.browser/LinkProvider/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink.browser/LinkProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -402,10 +363,19 @@
               <dd>
                   
               </dd>
-              <dt id="addNode" class="callable">
-                  <a href="dslink.browser/LinkProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+              <dt id="init" class="callable">
+                  <a href="dslink.browser/LinkProvider/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                      <span class="returntype">Future</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="onValueChange" class="callable">
+                  <a href="dslink.browser/LinkProvider/onValueChange.html"><span class="name ">onValueChange</span></a><span class="signature">(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>})
+                      &#8594;
+                      <span class="returntype">Stream&lt;<a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
@@ -413,6 +383,33 @@
               </dd>
               <dt id="removeNode" class="callable">
                   <a href="dslink.browser/LinkProvider/removeNode.html"><span class="name ">removeNode</span></a><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="resetSavedNodes" class="callable">
+                  <a href="dslink.browser/LinkProvider/resetSavedNodes.html"><span class="name ">resetSavedNodes</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="save" class="callable">
+                  <a href="dslink.browser/LinkProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">Future</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="syncValue" class="callable">
+                  <a href="dslink.browser/LinkProvider/syncValue.html"><span class="name ">syncValue</span></a><span class="signature">(<wbr><span class="parameter" id="syncValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -438,7 +435,6 @@
               <dd>
                   
               </dd>
-
           </dl>
       </section>
 

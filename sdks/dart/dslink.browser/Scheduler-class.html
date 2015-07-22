@@ -61,14 +61,14 @@
         <li><a href="dslink.browser/Scheduler/currentTimer.html">currentTimer</a></li>
     
         <li class="section-title"><a href="dslink.browser/Scheduler-class.html#static-methods">Static methods</a></li>
+        <li><a href="dslink.browser/Scheduler/after.html">after</a></li>
         <li><a href="dslink.browser/Scheduler/cancelCurrentTimer.html">cancelCurrentTimer</a></li>
         <li><a href="dslink.browser/Scheduler/every.html">every</a></li>
-        <li><a href="dslink.browser/Scheduler/repeat.html">repeat</a></li>
-        <li><a href="dslink.browser/Scheduler/tick.html">tick</a></li>
-        <li><a href="dslink.browser/Scheduler/runLater.html">runLater</a></li>
         <li><a href="dslink.browser/Scheduler/later.html">later</a></li>
-        <li><a href="dslink.browser/Scheduler/after.html">after</a></li>
+        <li><a href="dslink.browser/Scheduler/repeat.html">repeat</a></li>
         <li><a href="dslink.browser/Scheduler/runAfter.html">runAfter</a></li>
+        <li><a href="dslink.browser/Scheduler/runLater.html">runLater</a></li>
+        <li><a href="dslink.browser/Scheduler/tick.html">tick</a></li>
     
     
         <li class="section-title"><a href="dslink.browser/Scheduler-class.html#constructors">Constructors</a></li>
@@ -80,7 +80,6 @@
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -105,7 +104,7 @@
         
         
     </div>
-    
+    null
             </dd>
         </dl>
     </section>
@@ -113,6 +112,15 @@
     <section class="summary" id="static-methods">
         <h2>Static Methods</h2>
         <dl class="callables">
+            <dt id="after" class="callable">
+                <a href="dslink.browser/Scheduler/after.html"><span class="name ">after</span></a><span class="signature">(<wbr><span class="parameter" id="after-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="after-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
             <dt id="cancelCurrentTimer" class="callable">
                 <a href="dslink.browser/Scheduler/cancelCurrentTimer.html"><span class="name ">cancelCurrentTimer</span></a><span class="signature">(<wbr>)
                     &#8594;
@@ -131,6 +139,15 @@
             <dd>
                 
             </dd>
+            <dt id="later" class="callable">
+                <a href="dslink.browser/Scheduler/later.html"><span class="name ">later</span></a><span class="signature">(<wbr><span class="parameter" id="later-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                    &#8594;
+                    <span class="returntype">Future</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
             <dt id="repeat" class="callable">
                 <a href="dslink.browser/Scheduler/repeat.html"><span class="name ">repeat</span></a><span class="signature">(<wbr><span class="parameter" id="repeat-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="repeat-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
                     &#8594;
@@ -140,10 +157,10 @@
             <dd>
                 
             </dd>
-            <dt id="tick" class="callable">
-                <a href="dslink.browser/Scheduler/tick.html"><span class="name ">tick</span></a><span class="signature">(<wbr><span class="parameter" id="tick-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="tick-param-interval"><span class="type-annotation"><a href="dslink/Interval-class.html">Interval</a></span> <span class="parameter-name">interval</span></span>, <span class="parameter" id="tick-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+            <dt id="runAfter" class="callable">
+                <a href="dslink.browser/Scheduler/runAfter.html"><span class="name ">runAfter</span></a><span class="signature">(<wbr><span class="parameter" id="runAfter-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="runAfter-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
                     &#8594;
-                    <span class="returntype">Future</span>
+                    <span class="returntype">Timer</span>
                 </span>
             </dt>
             <dd>
@@ -158,28 +175,10 @@
             <dd>
                 
             </dd>
-            <dt id="later" class="callable">
-                <a href="dslink.browser/Scheduler/later.html"><span class="name ">later</span></a><span class="signature">(<wbr><span class="parameter" id="later-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+            <dt id="tick" class="callable">
+                <a href="dslink.browser/Scheduler/tick.html"><span class="name ">tick</span></a><span class="signature">(<wbr><span class="parameter" id="tick-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="tick-param-interval"><span class="type-annotation"><a href="dslink/Interval-class.html">Interval</a></span> <span class="parameter-name">interval</span></span>, <span class="parameter" id="tick-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
                     &#8594;
                     <span class="returntype">Future</span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="after" class="callable">
-                <a href="dslink.browser/Scheduler/after.html"><span class="name ">after</span></a><span class="signature">(<wbr><span class="parameter" id="after-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="after-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
-                    &#8594;
-                    <span class="returntype">Future</span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="runAfter" class="callable">
-                <a href="dslink.browser/Scheduler/runAfter.html"><span class="name ">runAfter</span></a><span class="signature">(<wbr><span class="parameter" id="runAfter-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="runAfter-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
-                    &#8594;
-                    <span class="returntype">Timer</span>
                 </span>
             </dt>
             <dd>

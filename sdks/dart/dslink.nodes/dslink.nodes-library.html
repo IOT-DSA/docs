@@ -57,27 +57,26 @@
 
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.nodes/ActionFunction.html">ActionFunction</a></li>
-      <li><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></li>
-      <li><a href="dslink.nodes/SimpleCallback.html">SimpleCallback</a></li>
       <li><a href="dslink.nodes/ChildChangedCallback.html">ChildChangedCallback</a></li>
       <li><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></li>
+      <li><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></li>
+      <li><a href="dslink.nodes/SimpleCallback.html">SimpleCallback</a></li>
 
 
 
 
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#classes">Classes</a></li>
+      <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></li>
       <li><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider-class.html">SingleNodeProvider</a></li>
       <li><a href="dslink.nodes/UpgradableNode-class.html">UpgradableNode</a></li>
-      <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -99,24 +98,6 @@
             <dd>
                 A function that is called when an action is invoked.
             </dd>
-            <dt id="NodeUpgradeFunction" class="callable">
-                <a href="dslink.nodes/NodeUpgradeFunction.html"><span class="name ">NodeUpgradeFunction</span></a><span class="signature">(<wbr><span class="parameter" id="NodeUpgradeFunction-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span></span>)
-                    &#8594;
-                    <span class="returntype">void</span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="SimpleCallback" class="callable">
-                <a href="dslink.nodes/SimpleCallback.html"><span class="name ">SimpleCallback</span></a><span class="signature">(<wbr>)
-                    &#8594;
-                    <span class="returntype">void</span>
-                </span>
-            </dt>
-            <dd>
-                Represents a Simple Callback Function
-            </dd>
             <dt id="ChildChangedCallback" class="callable">
                 <a href="dslink.nodes/ChildChangedCallback.html"><span class="name ">ChildChangedCallback</span></a><span class="signature">(<wbr><span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
                     &#8594;
@@ -135,6 +116,24 @@
             <dd>
                 Represents a function that is called on a node when a child is loading.
             </dd>
+            <dt id="NodeUpgradeFunction" class="callable">
+                <a href="dslink.nodes/NodeUpgradeFunction.html"><span class="name ">NodeUpgradeFunction</span></a><span class="signature">(<wbr><span class="parameter" id="NodeUpgradeFunction-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="SimpleCallback" class="callable">
+                <a href="dslink.nodes/SimpleCallback.html"><span class="name ">SimpleCallback</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+            </dt>
+            <dd>
+                Represents a Simple Callback Function
+            </dd>
         </dl>
     </section>
 
@@ -145,6 +144,12 @@
         <h2>Classes</h2>
 
         <dl>
+            <dt id="CallbackNode">
+                <span class="name "><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></span>
+            </dt>
+            <dd>
+                A Simple Node which delegates all basic methods to given functions.
+            </dd>
             <dt id="DeleteActionNode">
                 <span class="name "><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></span>
             </dt>
@@ -168,12 +173,6 @@
             </dt>
             <dd>
                 
-            </dd>
-            <dt id="CallbackNode">
-                <span class="name "><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></span>
-            </dt>
-            <dd>
-                A Simple Node which delegates all basic methods to given functions.
             </dd>
         </dl>
     </section>

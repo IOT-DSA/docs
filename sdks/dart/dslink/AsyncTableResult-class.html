@@ -61,27 +61,26 @@ This can be used to return asynchronous tables from actions.
     
     
         <li class="section-title"><a href="dslink/AsyncTableResult-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink/AsyncTableResult/response.html">response</a></li>
         <li><a href="dslink/AsyncTableResult/columns.html">columns</a></li>
-        <li><a href="dslink/AsyncTableResult/rows.html">rows</a></li>
-        <li><a href="dslink/AsyncTableResult/status.html">status</a></li>
         <li><a href="dslink/AsyncTableResult/meta.html">meta</a></li>
         <li><a href="dslink/AsyncTableResult/onClose.html">onClose</a></li>
+        <li><a href="dslink/AsyncTableResult/response.html">response</a></li>
+        <li><a href="dslink/AsyncTableResult/rows.html">rows</a></li>
+        <li><a href="dslink/AsyncTableResult/status.html">status</a></li>
     
         <li class="section-title"><a href="dslink/AsyncTableResult-class.html#constructors">Constructors</a></li>
         <li><a href="dslink/AsyncTableResult/AsyncTableResult.html">AsyncTableResult</a></li>
     
     
         <li class="section-title"><a href="dslink/AsyncTableResult-class.html#methods">Methods</a></li>
+        <li><a href="dslink/AsyncTableResult/close.html">close</a></li>
         <li><a href="dslink/AsyncTableResult/update.html">update</a></li>
         <li><a href="dslink/AsyncTableResult/write.html">write</a></li>
-        <li><a href="dslink/AsyncTableResult/close.html">close</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -98,19 +97,6 @@ This can be used to return asynchronous tables from actions.</p>
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="response" class="property">
-                <span class="top-level-variable-type"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
-                <a href="dslink/AsyncTableResult/response.html"><span class="name ">response</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    Invoke Response.
-            </dd>
             <dt id="columns" class="property">
                 <span class="top-level-variable-type">List</span>
                 <a href="dslink/AsyncTableResult/columns.html"><span class="name ">columns</span></a>
@@ -123,32 +109,6 @@ This can be used to return asynchronous tables from actions.</p>
         
     </div>
     Table Columns
-            </dd>
-            <dt id="rows" class="property">
-                <span class="top-level-variable-type">List</span>
-                <a href="dslink/AsyncTableResult/rows.html"><span class="name ">rows</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    Table Rows
-            </dd>
-            <dt id="status" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink/AsyncTableResult/status.html"><span class="name ">status</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    Stream Status
             </dd>
             <dt id="meta" class="property">
                 <span class="top-level-variable-type">Map</span>
@@ -176,7 +136,45 @@ This can be used to return asynchronous tables from actions.</p>
     </div>
     Handler for when this is closed.
             </dd>
-
+            <dt id="response" class="property">
+                <span class="top-level-variable-type"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
+                <a href="dslink/AsyncTableResult/response.html"><span class="name ">response</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    Invoke Response.
+            </dd>
+            <dt id="rows" class="property">
+                <span class="top-level-variable-type">List</span>
+                <a href="dslink/AsyncTableResult/rows.html"><span class="name ">rows</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    Table Rows
+            </dd>
+            <dt id="status" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink/AsyncTableResult/status.html"><span class="name ">status</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    Stream Status
+            </dd>
         </dl>
     </section>
 
@@ -197,6 +195,15 @@ This can be used to return asynchronous tables from actions.</p>
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="close" class="callable">
+                  <a href="dslink/AsyncTableResult/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  Closes this response.
+              </dd>
               <dt id="update" class="callable">
                   <a href="dslink/AsyncTableResult/update.html"><span class="name ">update</span></a><span class="signature">(<wbr><span class="parameter" id="update-param-rows"><span class="type-annotation">List</span> <span class="parameter-name">rows</span></span>, [<span class="parameter" id="update-param-stat"><span class="type-annotation">String</span> <span class="parameter-name">stat</span></span>, <span class="parameter" id="update-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>])
                       &#8594;
@@ -217,16 +224,6 @@ meta is the action result metadata.
               <dd>
                   Write this result to the result given by resp.
               </dd>
-              <dt id="close" class="callable">
-                  <a href="dslink/AsyncTableResult/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  Closes this response.
-              </dd>
-
           </dl>
       </section>
 

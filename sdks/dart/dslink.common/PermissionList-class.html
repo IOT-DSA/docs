@@ -60,23 +60,22 @@
     
     
         <li class="section-title"><a href="dslink.common/PermissionList-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.common/PermissionList/idMatchs.html">idMatchs</a></li>
-        <li><a href="dslink.common/PermissionList/groupMatchs.html">groupMatchs</a></li>
         <li><a href="dslink.common/PermissionList/defaultPermission.html">defaultPermission</a></li>
+        <li><a href="dslink.common/PermissionList/groupMatchs.html">groupMatchs</a></li>
+        <li><a href="dslink.common/PermissionList/idMatchs.html">idMatchs</a></li>
     
         <li class="section-title"><a href="dslink.common/PermissionList-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.common/PermissionList/PermissionList.html">PermissionList</a></li>
     
     
         <li class="section-title"><a href="dslink.common/PermissionList-class.html#methods">Methods</a></li>
-        <li><a href="dslink.common/PermissionList/updatePermissions.html">updatePermissions</a></li>
         <li><a href="dslink.common/PermissionList/getPermission.html">getPermission</a></li>
+        <li><a href="dslink.common/PermissionList/updatePermissions.html">updatePermissions</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -93,9 +92,9 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="idMatchs" class="property">
-                <span class="top-level-variable-type">Map&lt;String,int&gt;</span>
-                <a href="dslink.common/PermissionList/idMatchs.html"><span class="name ">idMatchs</span></a>
+            <dt id="defaultPermission" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.common/PermissionList/defaultPermission.html"><span class="name ">defaultPermission</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -104,7 +103,7 @@
         read / write
         
     </div>
-    
+    null
             </dd>
             <dt id="groupMatchs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,int&gt;</span>
@@ -117,11 +116,11 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="defaultPermission" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href="dslink.common/PermissionList/defaultPermission.html"><span class="name ">defaultPermission</span></a>
+            <dt id="idMatchs" class="property">
+                <span class="top-level-variable-type">Map&lt;String,int&gt;</span>
+                <a href="dslink.common/PermissionList/idMatchs.html"><span class="name ">idMatchs</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -130,9 +129,8 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
         </dl>
     </section>
 
@@ -153,15 +151,6 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="updatePermissions" class="callable">
-                  <a href="dslink.common/PermissionList/updatePermissions.html"><span class="name ">updatePermissions</span></a><span class="signature">(<wbr><span class="parameter" id="updatePermissions-param-data"><span class="type-annotation">List</span> <span class="parameter-name">data</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="getPermission" class="callable">
                   <a href="dslink.common/PermissionList/getPermission.html"><span class="name ">getPermission</span></a><span class="signature">(<wbr><span class="parameter" id="getPermission-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>)
                       &#8594;
@@ -171,7 +160,15 @@
               <dd>
                   
               </dd>
-
+              <dt id="updatePermissions" class="callable">
+                  <a href="dslink.common/PermissionList/updatePermissions.html"><span class="name ">updatePermissions</span></a><span class="signature">(<wbr><span class="parameter" id="updatePermissions-param-data"><span class="type-annotation">List</span> <span class="parameter-name">data</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
           </dl>
       </section>
 

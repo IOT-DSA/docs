@@ -61,39 +61,38 @@
       <li><a href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
 
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
-      <li><a href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
       <li><a href="dslink.broker/addChildNode.html">addChildNode</a></li>
       <li><a href="dslink.broker/addLink.html">addLink</a></li>
+      <li><a href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
 
 
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
-      <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
+      <li><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
+      <li><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></li>
+      <li><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></li>
+      <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
+      <li><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></li>
       <li><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></li>
-      <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></li>
-      <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
+      <li><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
+      <li><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
       <li><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></li>
       <li><a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a></li>
-      <li><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
-      <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
       <li><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></li>
+      <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
       <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
-      <li><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
-      <li><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
-      <li><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
-      <li><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></li>
-      <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
-      <li><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></li>
+      <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
+      <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
+      <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -127,15 +126,6 @@
         <h2>Functions</h2>
 
         <dl class="callables">
-            <dt id="startBrokerServer" class="callable">
-                <a href="dslink.broker/startBrokerServer.html"><span class="name ">startBrokerServer</span></a><span class="signature">(<wbr><span class="parameter" id="startBrokerServer-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>, {<span class="parameter" id="startBrokerServer-param-persist"><span class="type-annotation">bool</span> <span class="parameter-name">persist</span>: <span class="default-value">true</span></span>})
-                    &#8594;
-                    <span class="returntype">Future&lt;<a href="dslink.server/DsHttpServer-class.html">DsHttpServer</a>&gt;</span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="addChildNode" class="callable">
                 <a href="dslink.broker/addChildNode.html"><span class="name ">addChildNode</span></a><span class="signature">(<wbr><span class="parameter" id="addChildNode-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="addChildNode-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="addChildNode-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="addChildNode-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
                     &#8594;
@@ -154,6 +144,15 @@
             <dd>
                 
             </dd>
+            <dt id="startBrokerServer" class="callable">
+                <a href="dslink.broker/startBrokerServer.html"><span class="name ">startBrokerServer</span></a><span class="signature">(<wbr><span class="parameter" id="startBrokerServer-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>, {<span class="parameter" id="startBrokerServer-param-persist"><span class="type-annotation">bool</span> <span class="parameter-name">persist</span>: <span class="default-value">true</span></span>})
+                    &#8594;
+                    <span class="returntype">Future&lt;<a href="dslink.server/DsHttpServer-class.html">DsHttpServer</a>&gt;</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
         </dl>
     </section>
 
@@ -162,8 +161,14 @@
         <h2>Classes</h2>
 
         <dl>
-            <dt id="BrokerNodeProvider">
-                <span class="name "><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
+            <dt id="BrokerDiscoverRequest">
+                <span class="name "><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerDiscoveryClient">
+                <span class="name "><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></span>
             </dt>
             <dd>
                 
@@ -174,17 +179,29 @@
             <dd>
                 Wrapper node for brokers
             </dd>
+            <dt id="BrokerNodePermission">
+                <span class="name "><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerNodeProvider">
+                <span class="name "><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="BrokerPermissions">
+                <span class="name "><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
             <dt id="BrokerVersionNode">
                 <span class="name "><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></span>
             </dt>
             <dd>
                 Version node
-            </dd>
-            <dt id="StartTimeNode">
-                <span class="name "><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></span>
-            </dt>
-            <dd>
-                Start Time node
             </dd>
             <dt id="ClearConnsAction">
                 <span class="name "><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></span>
@@ -192,8 +209,14 @@
             <dd>
                 Clear Conns node
             </dd>
-            <dt id="RootNode">
-                <span class="name "><a href="dslink.broker/RootNode-class.html">RootNode</a></span>
+            <dt id="PermissionPair">
+                <span class="name "><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="RemoteLinkListController">
+                <span class="name "><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></span>
             </dt>
             <dd>
                 
@@ -210,8 +233,8 @@
             <dd>
                 
             </dd>
-            <dt id="RemoteLinkListController">
-                <span class="name "><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></span>
+            <dt id="RemoteLinkRootListController">
+                <span class="name "><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></span>
             </dt>
             <dd>
                 
@@ -222,53 +245,23 @@
             <dd>
                 
             </dd>
-            <dt id="RemoteLinkRootListController">
-                <span class="name "><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="RemoteRequester">
                 <span class="name "><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="BrokerDiscoveryClient">
-                <span class="name "><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></span>
+            <dt id="RootNode">
+                <span class="name "><a href="dslink.broker/RootNode-class.html">RootNode</a></span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="BrokerDiscoverRequest">
-                <span class="name "><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></span>
+            <dt id="StartTimeNode">
+                <span class="name "><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></span>
             </dt>
             <dd>
-                
-            </dd>
-            <dt id="PermissionPair">
-                <span class="name "><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="BrokerNodePermission">
-                <span class="name "><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="VirtualNodePermissioin">
-                <span class="name "><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="BrokerPermissions">
-                <span class="name "><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></span>
-            </dt>
-            <dd>
-                
+                Start Time node
             </dd>
             <dt id="UserNode">
                 <span class="name "><a href="dslink.broker/UserNode-class.html">UserNode</a></span>
@@ -278,6 +271,12 @@
             </dd>
             <dt id="UserRootNode">
                 <span class="name "><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="VirtualNodePermissioin">
+                <span class="name "><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></span>
             </dt>
             <dd>
                 

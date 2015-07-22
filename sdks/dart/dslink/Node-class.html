@@ -64,32 +64,31 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
         <li><a href="dslink/Node/getDisplayName.html">getDisplayName</a></li>
     
         <li class="section-title"><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink/Node/profile.html">profile</a></li>
         <li><a href="dslink/Node/attributes.html">attributes</a></li>
-        <li><a href="dslink/Node/configs.html">configs</a></li>
         <li><a href="dslink/Node/children.html">children</a></li>
+        <li><a href="dslink/Node/configs.html">configs</a></li>
+        <li><a href="dslink/Node/profile.html">profile</a></li>
     
         <li class="section-title"><a href="dslink/Node-class.html#constructors">Constructors</a></li>
         <li><a href="dslink/Node/Node.html">Node</a></li>
     
     
         <li class="section-title"><a href="dslink/Node-class.html#methods">Methods</a></li>
-        <li><a href="dslink/Node/getAttribute.html">getAttribute</a></li>
-        <li><a href="dslink/Node/getConfig.html">getConfig</a></li>
         <li><a href="dslink/Node/addChild.html">addChild</a></li>
-        <li><a href="dslink/Node/removeChild.html">removeChild</a></li>
-        <li><a href="dslink/Node/getChild.html">getChild</a></li>
-        <li><a href="dslink/Node/get.html">get</a></li>
+        <li><a href="dslink/Node/forEachAttribute.html">forEachAttribute</a></li>
         <li><a href="dslink/Node/forEachChild.html">forEachChild</a></li>
         <li><a href="dslink/Node/forEachConfig.html">forEachConfig</a></li>
-        <li><a href="dslink/Node/forEachAttribute.html">forEachAttribute</a></li>
+        <li><a href="dslink/Node/get.html">get</a></li>
+        <li><a href="dslink/Node/getAttribute.html">getAttribute</a></li>
+        <li><a href="dslink/Node/getChild.html">getChild</a></li>
+        <li><a href="dslink/Node/getConfig.html">getConfig</a></li>
         <li><a href="dslink/Node/getSimpleMap.html">getSimpleMap</a></li>
+        <li><a href="dslink/Node/removeChild.html">removeChild</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -120,19 +119,6 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="profile" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
-                <a href="dslink/Node/profile.html"><span class="name ">profile</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    This node's profile.
-            </dd>
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
                 <a href="dslink/Node/attributes.html"><span class="name ">attributes</span></a>
@@ -145,19 +131,6 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
         
     </div>
     Node Attributes
-            </dd>
-            <dt id="configs" class="property">
-                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink/Node/configs.html"><span class="name ">configs</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    Node Configs
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
@@ -173,7 +146,32 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
     Node Children
 Map of Child Name to Child Node
             </dd>
-
+            <dt id="configs" class="property">
+                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
+                <a href="dslink/Node/configs.html"><span class="name ">configs</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    Node Configs
+            </dd>
+            <dt id="profile" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
+                <a href="dslink/Node/profile.html"><span class="name ">profile</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    This node's profile.
+            </dd>
         </dl>
     </section>
 
@@ -194,24 +192,6 @@ Map of Child Name to Child Node
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="getAttribute" class="callable">
-                  <a href="dslink/Node/getAttribute.html"><span class="name ">getAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-                      &#8594;
-                      <span class="returntype">Object</span>
-                  </span>
-              </dt>
-              <dd>
-                  Get an Attribute
-              </dd>
-              <dt id="getConfig" class="callable">
-                  <a href="dslink/Node/getConfig.html"><span class="name ">getConfig</span></a><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-                      &#8594;
-                      <span class="returntype">Object</span>
-                  </span>
-              </dt>
-              <dd>
-                  Get a Config
-              </dd>
               <dt id="addChild" class="callable">
                   <a href="dslink/Node/addChild.html"><span class="name ">addChild</span></a><span class="signature">(<wbr><span class="parameter" id="addChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addChild-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
                       &#8594;
@@ -221,36 +201,14 @@ Map of Child Name to Child Node
               <dd>
                   Adds a child to this node.
               </dd>
-              <dt id="removeChild" class="callable">
-                  <a href="dslink/Node/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
+              <dt id="forEachAttribute" class="callable">
+                  <a href="dslink/Node/forEachAttribute.html"><span class="name ">forEachAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
                       &#8594;
-                      <span class="returntype">String</span>
+                      <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  Remove a child from this node.
-input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.
-              </dd>
-              <dt id="getChild" class="callable">
-                  <a href="dslink/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  Get a Child Node
-              </dd>
-              <dt id="get" class="callable">
-                  <a href="dslink/Node/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-                      &#8594;
-                      <span class="returntype">Object</span>
-                  </span>
-              </dt>
-              <dd>
-                  Get a property of this node.
-If name starts with '$', this will fetch a config.
-If name starts with a '@', this will fetch an attribute.
-Otherwise this will fetch a child.
+                  
               </dd>
               <dt id="forEachChild" class="callable">
                   <a href="dslink/Node/forEachChild.html"><span class="name ">forEachChild</span></a><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
@@ -270,14 +228,44 @@ Otherwise this will fetch a child.
               <dd>
                   
               </dd>
-              <dt id="forEachAttribute" class="callable">
-                  <a href="dslink/Node/forEachAttribute.html"><span class="name ">forEachAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+              <dt id="get" class="callable">
+                  <a href="dslink/Node/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype">Object</span>
                   </span>
               </dt>
               <dd>
-                  
+                  Get a property of this node.
+If name starts with '$', this will fetch a config.
+If name starts with a '@', this will fetch an attribute.
+Otherwise this will fetch a child.
+              </dd>
+              <dt id="getAttribute" class="callable">
+                  <a href="dslink/Node/getAttribute.html"><span class="name ">getAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype">Object</span>
+                  </span>
+              </dt>
+              <dd>
+                  Get an Attribute
+              </dd>
+              <dt id="getChild" class="callable">
+                  <a href="dslink/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  Get a Child Node
+              </dd>
+              <dt id="getConfig" class="callable">
+                  <a href="dslink/Node/getConfig.html"><span class="name ">getConfig</span></a><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype">Object</span>
+                  </span>
+              </dt>
+              <dd>
+                  Get a Config
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <a href="dslink/Node/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
@@ -288,7 +276,16 @@ Otherwise this will fetch a child.
               <dd>
                   Gets a map for the data that will be listed in the parent node's children property.
               </dd>
-
+              <dt id="removeChild" class="callable">
+                  <a href="dslink/Node/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
+                      &#8594;
+                      <span class="returntype">String</span>
+                  </span>
+              </dt>
+              <dd>
+                  Remove a child from this node.
+input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.
+              </dd>
           </dl>
       </section>
 

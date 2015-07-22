@@ -64,36 +64,35 @@
     
     
         <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/nodes.html">nodes</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/root.html">root</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/defs.html">defs</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/sys.html">sys</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/nodes.html">nodes</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/permissions.html">permissions</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/root.html">root</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/sys.html">sys</a></li>
     
         <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></li>
     
         <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#operators">Operators</a></li>
-        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
         <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
         <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/createNode.html">createNode</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/createResponder.html">createResponder</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/getNode.html">getNode</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/createNode.html">createNode</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/init.html">init</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></li>
         <li><a href="dslink.browser/SimpleNodeProvider/removeNode.html">removeNode</a></li>
-        <li><a href="dslink.browser/SimpleNodeProvider/createResponder.html">createResponder</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
+        <li><a href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -152,32 +151,6 @@ This is by default always the first instance of <a href="dslink/SimpleNodeProvid
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="nodes" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/LocalNode-class.html">LocalNode</a>&gt;</span>
-                <a href="dslink.browser/SimpleNodeProvider/nodes.html"><span class="name ">nodes</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    All the nodes in this node provider.
-            </dd>
-            <dt id="root" class="property">
-                <span class="top-level-variable-type"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
-                <a href="dslink.browser/SimpleNodeProvider/root.html"><span class="name ">root</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    Root node
-            </dd>
             <dt id="defs" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
                 <a href="dslink.browser/SimpleNodeProvider/defs.html"><span class="name ">defs</span></a>
@@ -191,18 +164,18 @@ This is by default always the first instance of <a href="dslink/SimpleNodeProvid
     </div>
     defs node
             </dd>
-            <dt id="sys" class="property">
-                <span class="top-level-variable-type"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
-                <a href="dslink.browser/SimpleNodeProvider/sys.html"><span class="name ">sys</span></a>
+            <dt id="nodes" class="property">
+                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/LocalNode-class.html">LocalNode</a>&gt;</span>
+                <a href="dslink.browser/SimpleNodeProvider/nodes.html"><span class="name ">nodes</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
+        read-only
         
         
-        read / write
         
     </div>
-    sys node
+    All the nodes in this node provider.
             </dd>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
@@ -217,7 +190,32 @@ This is by default always the first instance of <a href="dslink/SimpleNodeProvid
     </div>
     Permissions
             </dd>
-
+            <dt id="root" class="property">
+                <span class="top-level-variable-type"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
+                <a href="dslink.browser/SimpleNodeProvider/root.html"><span class="name ">root</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    Root node
+            </dd>
+            <dt id="sys" class="property">
+                <span class="top-level-variable-type"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
+                <a href="dslink.browser/SimpleNodeProvider/sys.html"><span class="name ">sys</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    sys node
+            </dd>
         </dl>
     </section>
 
@@ -239,19 +237,6 @@ the provider is initialized with these values.
       <section class="summary" id="operators">
           <h2>Operators</h2>
           <dl class="callables">
-
-              <dt id="operator ~" class="callable">
-                  <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Get the root node.
-              </dd>
               <dt id="operator []" class="callable">
                   <a href="dslink.responder/NodeProvider/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -264,12 +249,52 @@ the provider is initialized with these values.
                   </div>
                   Gets an existing node, or creates a dummy node for a requester to listen on.
               </dd>
+              <dt id="operator ~" class="callable">
+                  <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  Get the root node.
+              </dd>
           </dl>
       </section>
 
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="addNode" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  Adds a node at the given [path] that is initialized with the given data in [m].
+              </dd>
+              <dt id="createNode" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/createNode.html"><span class="name ">createNode</span></a><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  Creates a node at path.
+If a node already exists at this path, an exception is thrown.
+              </dd>
+              <dt id="createResponder" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  Creates a responder with the given dsId.
+              </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink.browser/SimpleNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -289,16 +314,6 @@ the provider is initialized with these values.
                   Gets a node at the given path if it exists.
 If it does not exist, create a new node and return it.
               </dd>
-              <dt id="createNode" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/createNode.html"><span class="name ">createNode</span></a><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  Creates a node at path.
-If a node already exists at this path, an exception is thrown.
-              </dd>
               <dt id="init" class="callable">
                   <a href="dslink.browser/SimpleNodeProvider/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])
                       &#8594;
@@ -307,42 +322,6 @@ If a node already exists at this path, an exception is thrown.
               </dt>
               <dd>
                   Initialize the node provider.
-              </dd>
-              <dt id="save" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">Map</span>
-                  </span>
-              </dt>
-              <dd>
-                  Save the node provider to a map.
-              </dd>
-              <dt id="updateValue" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  Updates the value of the node at [path] to the given [value].
-              </dd>
-              <dt id="setNode" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/setNode.html"><span class="name ">setNode</span></a><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  Sets the given node to the given path.
-              </dd>
-              <dt id="addNode" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/addNode.html"><span class="name ">addNode</span></a><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  Adds a node at the given [path] that is initialized with the given data in [m].
               </dd>
               <dt id="removeNode" class="callable">
                   <a href="dslink.browser/SimpleNodeProvider/removeNode.html"><span class="name ">removeNode</span></a><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -353,16 +332,33 @@ If a node already exists at this path, an exception is thrown.
               <dd>
                   Removes the node specified at [path].
               </dd>
-              <dt id="createResponder" class="callable">
-                  <a href="dslink.browser/SimpleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
+              <dt id="save" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/save.html"><span class="name ">save</span></a><span class="signature">(<wbr>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                      <span class="returntype">Map</span>
                   </span>
               </dt>
               <dd>
-                  Creates a responder with the given dsId.
+                  Save the node provider to a map.
               </dd>
-
+              <dt id="setNode" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/setNode.html"><span class="name ">setNode</span></a><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  Sets the given node to the given path.
+              </dd>
+              <dt id="updateValue" class="callable">
+                  <a href="dslink.browser/SimpleNodeProvider/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  Updates the value of the node at [path] to the given [value].
+              </dd>
           </dl>
       </section>
 

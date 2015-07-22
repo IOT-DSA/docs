@@ -60,16 +60,16 @@
     
     
         <li class="section-title"><a href="dslink/PassiveChannel-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink/PassiveChannel/onReceiveController.html">onReceiveController</a></li>
         <li><a href="dslink/PassiveChannel/conn.html">conn</a></li>
-        <li><a href="dslink/PassiveChannel/getData.html">getData</a></li>
         <li><a href="dslink/PassiveChannel/connected.html">connected</a></li>
-        <li><a href="dslink/PassiveChannel/onDisconnectController.html">onDisconnectController</a></li>
-        <li><a href="dslink/PassiveChannel/onConnectController.html">onConnectController</a></li>
-        <li><a href="dslink/PassiveChannel/onReceive.html">onReceive</a></li>
+        <li><a href="dslink/PassiveChannel/getData.html">getData</a></li>
         <li><a href="dslink/PassiveChannel/isReady.html">isReady</a></li>
-        <li><a href="dslink/PassiveChannel/onDisconnected.html">onDisconnected</a></li>
+        <li><a href="dslink/PassiveChannel/onConnectController.html">onConnectController</a></li>
         <li><a href="dslink/PassiveChannel/onConnected.html">onConnected</a></li>
+        <li><a href="dslink/PassiveChannel/onDisconnectController.html">onDisconnectController</a></li>
+        <li><a href="dslink/PassiveChannel/onDisconnected.html">onDisconnected</a></li>
+        <li><a href="dslink/PassiveChannel/onReceive.html">onReceive</a></li>
+        <li><a href="dslink/PassiveChannel/onReceiveController.html">onReceiveController</a></li>
     
         <li class="section-title"><a href="dslink/PassiveChannel-class.html#constructors">Constructors</a></li>
         <li><a href="dslink/PassiveChannel/PassiveChannel.html">PassiveChannel</a></li>
@@ -83,7 +83,6 @@
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -114,19 +113,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="onReceiveController" class="property">
-                <span class="top-level-variable-type">StreamController&lt;List&gt;</span>
-                <a href="dslink/PassiveChannel/onReceiveController.html"><span class="name ">onReceiveController</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
             <dt id="conn" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Connection-class.html">Connection</a></span>
                 <a href="dslink/PassiveChannel/conn.html"><span class="name ">conn</span></a>
@@ -138,20 +124,7 @@
         
         
     </div>
-    
-            </dd>
-            <dt id="getData" class="property">
-                <span class="top-level-variable-type">Function</span>
-                <a href="dslink/PassiveChannel/getData.html"><span class="name ">getData</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
+    null
             </dd>
             <dt id="connected" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -164,46 +137,20 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="onDisconnectController" class="property">
-                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink/PassiveChannel/onDisconnectController.html"><span class="name ">onDisconnectController</span></a>
+            <dt id="getData" class="property">
+                <span class="top-level-variable-type">Function</span>
+                <a href="dslink/PassiveChannel/getData.html"><span class="name ">getData</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
-        read-only
         
         
-        
-    </div>
-    
-            </dd>
-            <dt id="onConnectController" class="property">
-                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink/PassiveChannel/onConnectController.html"><span class="name ">onConnectController</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
+        read / write
         
     </div>
-    
-            </dd>
-            <dt id="onReceive" class="property">
-                <span class="top-level-variable-type">Stream&lt;List&gt;</span>
-                <a href="dslink/PassiveChannel/onReceive.html"><span class="name ">onReceive</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
+    null
             </dd>
             <dt id="isReady" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -216,11 +163,11 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="onDisconnected" class="property">
-                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink/PassiveChannel/onDisconnected.html"><span class="name ">onDisconnected</span></a>
+            <dt id="onConnectController" class="property">
+                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <a href="dslink/PassiveChannel/onConnectController.html"><span class="name ">onConnectController</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -229,7 +176,7 @@
         
         
     </div>
-    
+    null
             </dd>
             <dt id="onConnected" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -242,9 +189,60 @@
         
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="onDisconnectController" class="property">
+                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <a href="dslink/PassiveChannel/onDisconnectController.html"><span class="name ">onDisconnectController</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="onDisconnected" class="property">
+                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <a href="dslink/PassiveChannel/onDisconnected.html"><span class="name ">onDisconnected</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="onReceive" class="property">
+                <span class="top-level-variable-type">Stream&lt;List&gt;</span>
+                <a href="dslink/PassiveChannel/onReceive.html"><span class="name ">onReceive</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="onReceiveController" class="property">
+                <span class="top-level-variable-type">StreamController&lt;List&gt;</span>
+                <a href="dslink/PassiveChannel/onReceiveController.html"><span class="name ">onReceiveController</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
         </dl>
     </section>
 
@@ -285,7 +283,6 @@ requester and responder should handle the merging of methods
               <dd>
                   
               </dd>
-
           </dl>
       </section>
 

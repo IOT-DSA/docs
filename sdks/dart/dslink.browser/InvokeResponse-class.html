@@ -70,15 +70,14 @@
     
     
         <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>
-        <li><a href="dslink.browser/InvokeResponse/processor.html">processor</a></li>
         <li><a href="dslink.browser/InvokeResponse/close.html">close</a></li>
+        <li><a href="dslink.browser/InvokeResponse/processor.html">processor</a></li>
+        <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -120,7 +119,7 @@
         
         
     </div>
-    
+    null
             </dd>
             <dt id="onClose" class="property">
                 <span class="top-level-variable-type"><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span>
@@ -133,9 +132,8 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
                 <a href="dslink.responder/Response/responder.html"><span class="name ">responder</span></a>
@@ -147,7 +145,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -160,7 +158,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
         </dl>
     </section>
@@ -182,14 +180,14 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="updateStream" class="callable">
-                  <a href="dslink.browser/InvokeResponse/updateStream.html"><span class="name ">updateStream</span></a><span class="signature">(<wbr><span class="parameter" id="updateStream-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateStream-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateStream-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>: <span class="default-value">StreamStatus.open</span></span>, <span class="parameter" id="updateStream-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
+              <dt id="close" class="callable">
+                  <a href="dslink.browser/InvokeResponse/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  
+                  close the request from responder side and also notify the requester
               </dd>
               <dt id="processor" class="callable">
                   <a href="dslink.browser/InvokeResponse/processor.html"><span class="name ">processor</span></a><span class="signature">(<wbr>)
@@ -200,16 +198,15 @@
               <dd>
                   
               </dd>
-              <dt id="close" class="callable">
-                  <a href="dslink.browser/InvokeResponse/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
+              <dt id="updateStream" class="callable">
+                  <a href="dslink.browser/InvokeResponse/updateStream.html"><span class="name ">updateStream</span></a><span class="signature">(<wbr><span class="parameter" id="updateStream-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateStream-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateStream-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>: <span class="default-value">StreamStatus.open</span></span>, <span class="parameter" id="updateStream-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  close the request from responder side and also notify the requester
+                  
               </dd>
-
           </dl>
       </section>
 

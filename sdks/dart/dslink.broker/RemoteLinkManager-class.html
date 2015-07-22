@@ -61,15 +61,15 @@
     
     
         <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/nodes.html">nodes</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/requester.html">requester</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/path.html">path</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/broker.html">broker</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/rootNode.html">rootNode</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/inTree.html">inTree</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/disconnected.html">disconnected</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/responders.html">responders</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/inTree.html">inTree</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/nodes.html">nodes</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/path.html">path</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/permissions.html">permissions</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/requester.html">requester</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/responders.html">responders</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/rootNode.html">rootNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/RemoteLinkManager.html">RemoteLinkManager</a></li>
@@ -79,19 +79,18 @@
         <li><a href="dslink.broker/RemoteLinkManager/operator_bitwise_negate.html">operator ~</a></li>
     
         <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#methods">Methods</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/getResponder.html">getResponder</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/createResponder.html">createResponder</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/getDefNode.html">getDefNode</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/getNode.html">getNode</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html">getOrCreateNode</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/getRemoteNode.html">getRemoteNode</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/getDefNode.html">getDefNode</a></li>
+        <li><a href="dslink.broker/RemoteLinkManager/getResponder.html">getResponder</a></li>
         <li><a href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
-        <li><a href="dslink.broker/RemoteLinkManager/createResponder.html">createResponder</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -123,45 +122,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="nodes" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a>&gt;</span>
-                <a href="dslink.broker/RemoteLinkManager/nodes.html"><span class="name ">nodes</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
-            <dt id="requester" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink.broker/RemoteLinkManager/requester.html"><span class="name ">requester</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="path" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.broker/RemoteLinkManager/path.html"><span class="name ">path</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
             <dt id="broker" class="property">
                 <span class="top-level-variable-type"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
                 <a href="dslink.broker/RemoteLinkManager/broker.html"><span class="name ">broker</span></a>
@@ -173,33 +133,7 @@
         
         
     </div>
-    
-            </dd>
-            <dt id="rootNode" class="property">
-                <span class="top-level-variable-type"><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></span>
-                <a href="dslink.broker/RemoteLinkManager/rootNode.html"><span class="name ">rootNode</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="inTree" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.broker/RemoteLinkManager/inTree.html"><span class="name ">inTree</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
+    null
             </dd>
             <dt id="disconnected" class="property">
                 <span class="top-level-variable-type">String</span>
@@ -212,11 +146,11 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-            <dt id="responders" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/Responder-class.html">Responder</a>&gt;</span>
-                <a href="dslink.broker/RemoteLinkManager/responders.html"><span class="name ">responders</span></a>
+            <dt id="inTree" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.broker/RemoteLinkManager/inTree.html"><span class="name ">inTree</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -225,7 +159,33 @@
         read / write
         
     </div>
-    
+    null
+            </dd>
+            <dt id="nodes" class="property">
+                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a>&gt;</span>
+                <a href="dslink.broker/RemoteLinkManager/nodes.html"><span class="name ">nodes</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="path" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.broker/RemoteLinkManager/path.html"><span class="name ">path</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
             </dd>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
@@ -238,9 +198,47 @@
         
         
     </div>
-    
+    null
             </dd>
-
+            <dt id="requester" class="property">
+                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
+                <a href="dslink.broker/RemoteLinkManager/requester.html"><span class="name ">requester</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="responders" class="property">
+                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/Responder-class.html">Responder</a>&gt;</span>
+                <a href="dslink.broker/RemoteLinkManager/responders.html"><span class="name ">responders</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
+            <dt id="rootNode" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></span>
+                <a href="dslink.broker/RemoteLinkManager/rootNode.html"><span class="name ">rootNode</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        
+    </div>
+    null
+            </dd>
         </dl>
     </section>
 
@@ -278,22 +276,29 @@
               <dd>
                   Get the root node.
               </dd>
-
           </dl>
       </section>
 
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="getResponder" class="callable">
-                  <a href="dslink.broker/RemoteLinkManager/getResponder.html"><span class="name ">getResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
+              <dt id="createResponder" class="callable">
+                  <a href="dslink.broker/RemoteLinkManager/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
                   </span>
               </dt>
               <dd>
-                  multiple-requester is allowed, like from different browser tabs
-in this case they need multiple responders on broker side.
+                  Create a Responder
+              </dd>
+              <dt id="getDefNode" class="callable">
+                  <a href="dslink.broker/RemoteLinkManager/getDefNode.html"><span class="name ">getDefNode</span></a><span class="signature">(<wbr><span class="parameter" id="getDefNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>, <span class="parameter" id="getDefNode-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink.broker/RemoteLinkManager/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-fullPath"><span class="type-annotation">String</span> <span class="parameter-name">fullPath</span></span>)
@@ -323,14 +328,15 @@ If it does not exist, create a new node and return it.
               <dd>
                   
               </dd>
-              <dt id="getDefNode" class="callable">
-                  <a href="dslink.broker/RemoteLinkManager/getDefNode.html"><span class="name ">getDefNode</span></a><span class="signature">(<wbr><span class="parameter" id="getDefNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>, <span class="parameter" id="getDefNode-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
+              <dt id="getResponder" class="callable">
+                  <a href="dslink.broker/RemoteLinkManager/getResponder.html"><span class="name ">getResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
                       &#8594;
-                      <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
+                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
                   </span>
               </dt>
               <dd>
-                  
+                  multiple-requester is allowed, like from different browser tabs
+in this case they need multiple responders on broker side.
               </dd>
               <dt id="updateRemoteChildNode" class="callable">
                   <a href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html"><span class="name ">updateRemoteChildNode</span></a><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
@@ -341,16 +347,6 @@ If it does not exist, create a new node and return it.
               <dd>
                   update node with a map.
               </dd>
-              <dt id="createResponder" class="callable">
-                  <a href="dslink.broker/RemoteLinkManager/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  Create a Responder
-              </dd>
-
           </dl>
       </section>
 

@@ -57,32 +57,31 @@
     <ol id="sidebar">
 
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></li>
       <li><a href="dslink.worker/Producer.html">Producer</a></li>
+      <li><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></li>
       <li><a href="dslink.worker/WorkerMethod.html">WorkerMethod</a></li>
 
 
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#functions">Functions</a></li>
-      <li><a href="dslink.worker/createWorker.html">createWorker</a></li>
-      <li><a href="dslink.worker/createFakeWorker.html">createFakeWorker</a></li>
       <li><a href="dslink.worker/buildWorkerForScript.html">buildWorkerForScript</a></li>
+      <li><a href="dslink.worker/createFakeWorker.html">createFakeWorker</a></li>
+      <li><a href="dslink.worker/createWorker.html">createWorker</a></li>
+      <li><a href="dslink.worker/createWorkerPool.html">createWorkerPool</a></li>
       <li><a href="dslink.worker/createWorkerScript.html">createWorkerScript</a></li>
       <li><a href="dslink.worker/createWorkerScriptPool.html">createWorkerScriptPool</a></li>
-      <li><a href="dslink.worker/createWorkerPool.html">createWorkerPool</a></li>
 
 
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#classes">Classes</a></li>
-      <li><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></li>
       <li><a href="dslink.worker/Worker-class.html">Worker</a></li>
-      <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
+      <li><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></li>
       <li><a href="dslink.worker/WorkerSession-class.html">WorkerSession</a></li>
+      <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -95,19 +94,19 @@
         <h2>Typedefs</h2>
 
         <dl class="callables">
-            <dt id="WorkerFunction" class="callable">
-                <a href="dslink.worker/WorkerFunction.html"><span class="name ">WorkerFunction</span></a><span class="signature">(<wbr><span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)
+            <dt id="Producer" class="callable">
+                <a href="dslink.worker/Producer.html"><span class="name ">Producer</span></a><span class="signature">(<wbr><span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)
                     &#8594;
-                    <span class="returntype">void</span>
+                    <span class="returntype">dynamic</span>
                 </span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="Producer" class="callable">
-                <a href="dslink.worker/Producer.html"><span class="name ">Producer</span></a><span class="signature">(<wbr><span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)
+            <dt id="WorkerFunction" class="callable">
+                <a href="dslink.worker/WorkerFunction.html"><span class="name ">WorkerFunction</span></a><span class="signature">(<wbr><span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)
                     &#8594;
-                    <span class="returntype">dynamic</span>
+                    <span class="returntype">void</span>
                 </span>
             </dt>
             <dd>
@@ -130,10 +129,10 @@
         <h2>Functions</h2>
 
         <dl class="callables">
-            <dt id="createWorker" class="callable">
-                <a href="dslink.worker/createWorker.html"><span class="name ">createWorker</span></a><span class="signature">(<wbr><span class="parameter" id="createWorker-param-function"><span class="type-annotation">void</span> <span class="parameter-name">function</span>(<span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)</span>, {<span class="parameter" id="createWorker-param-metadata"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">metadata</span></span>})
+            <dt id="buildWorkerForScript" class="callable">
+                <a href="dslink.worker/buildWorkerForScript.html"><span class="name ">buildWorkerForScript</span></a><span class="signature">(<wbr><span class="parameter" id="buildWorkerForScript-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)
                     &#8594;
-                    <span class="returntype"><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></span>
+                    <span class="returntype"><a href="dslink.worker/Worker-class.html">Worker</a></span>
                 </span>
             </dt>
             <dd>
@@ -148,10 +147,19 @@
             <dd>
                 
             </dd>
-            <dt id="buildWorkerForScript" class="callable">
-                <a href="dslink.worker/buildWorkerForScript.html"><span class="name ">buildWorkerForScript</span></a><span class="signature">(<wbr><span class="parameter" id="buildWorkerForScript-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)
+            <dt id="createWorker" class="callable">
+                <a href="dslink.worker/createWorker.html"><span class="name ">createWorker</span></a><span class="signature">(<wbr><span class="parameter" id="createWorker-param-function"><span class="type-annotation">void</span> <span class="parameter-name">function</span>(<span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)</span>, {<span class="parameter" id="createWorker-param-metadata"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">metadata</span></span>})
                     &#8594;
-                    <span class="returntype"><a href="dslink.worker/Worker-class.html">Worker</a></span>
+                    <span class="returntype"><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="createWorkerPool" class="callable">
+                <a href="dslink.worker/createWorkerPool.html"><span class="name ">createWorkerPool</span></a><span class="signature">(<wbr><span class="parameter" id="createWorkerPool-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>, <span class="parameter" id="createWorkerPool-param-function"><span class="type-annotation">void</span> <span class="parameter-name">function</span>(<span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)</span>, {<span class="parameter" id="createWorkerPool-param-metadata"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">metadata</span></span>})
+                    &#8594;
+                    <span class="returntype"><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></span>
                 </span>
             </dt>
             <dd>
@@ -175,15 +183,6 @@
             <dd>
                 
             </dd>
-            <dt id="createWorkerPool" class="callable">
-                <a href="dslink.worker/createWorkerPool.html"><span class="name ">createWorkerPool</span></a><span class="signature">(<wbr><span class="parameter" id="createWorkerPool-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>, <span class="parameter" id="createWorkerPool-param-function"><span class="type-annotation">void</span> <span class="parameter-name">function</span>(<span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)</span>, {<span class="parameter" id="createWorkerPool-param-metadata"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">metadata</span></span>})
-                    &#8594;
-                    <span class="returntype"><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
         </dl>
     </section>
 
@@ -192,26 +191,26 @@
         <h2>Classes</h2>
 
         <dl>
-            <dt id="WorkerPool">
-                <span class="name "><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="Worker">
                 <span class="name "><a href="dslink.worker/Worker-class.html">Worker</a></span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="WorkerSocket">
-                <span class="name "><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></span>
+            <dt id="WorkerPool">
+                <span class="name "><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></span>
             </dt>
             <dd>
                 
             </dd>
             <dt id="WorkerSession">
                 <span class="name "><a href="dslink.worker/WorkerSession-class.html">WorkerSession</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="WorkerSocket">
+                <span class="name "><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></span>
             </dt>
             <dd>
                 

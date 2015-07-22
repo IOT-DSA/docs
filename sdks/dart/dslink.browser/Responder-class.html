@@ -60,38 +60,37 @@
     
     
         <li class="section-title"><a href="dslink.browser/Responder-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/Responder/reqId.html">reqId</a></li>
+        <li><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
         <li><a href="dslink.browser/Responder/groups.html">groups</a></li>
         <li><a href="dslink.browser/Responder/nodeProvider.html">nodeProvider</a></li>
-        <li><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
+        <li><a href="dslink.browser/Responder/reqId.html">reqId</a></li>
     
         <li class="section-title"><a href="dslink.browser/Responder-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/Responder/Responder.html">Responder</a></li>
     
     
         <li class="section-title"><a href="dslink.browser/Responder-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/Responder/updateGroups.html">updateGroups</a></li>
+        <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
         <li><a href="dslink.browser/Responder/addResponse.html">addResponse</a></li>
-        <li><a href="dslink.browser/Responder/onData.html">onData</a></li>
-        <li><a href="dslink.browser/Responder/updateResponse.html">updateResponse</a></li>
-        <li><a href="dslink.browser/Responder/list.html">list</a></li>
-        <li><a href="dslink.browser/Responder/subscribe.html">subscribe</a></li>
-        <li><a href="dslink.browser/Responder/unsubscribe.html">unsubscribe</a></li>
-        <li><a href="dslink.browser/Responder/invoke.html">invoke</a></li>
-        <li><a href="dslink.browser/Responder/set.html">set</a></li>
-        <li><a href="dslink.browser/Responder/remove.html">remove</a></li>
+        <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
         <li><a href="dslink.browser/Responder/close.html">close</a></li>
+        <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
+        <li><a href="dslink.browser/Responder/invoke.html">invoke</a></li>
+        <li><a href="dslink.browser/Responder/list.html">list</a></li>
+        <li><a href="dslink.browser/Responder/onData.html">onData</a></li>
         <li><a href="dslink.browser/Responder/onDisconnected.html">onDisconnected</a></li>
         <li><a href="dslink.browser/Responder/onReconnected.html">onReconnected</a></li>
-        <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-        <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
-        <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
+        <li><a href="dslink.browser/Responder/remove.html">remove</a></li>
+        <li><a href="dslink.browser/Responder/set.html">set</a></li>
+        <li><a href="dslink.browser/Responder/subscribe.html">subscribe</a></li>
+        <li><a href="dslink.browser/Responder/unsubscribe.html">unsubscribe</a></li>
+        <li><a href="dslink.browser/Responder/updateGroups.html">updateGroups</a></li>
+        <li><a href="dslink.browser/Responder/updateResponse.html">updateResponse</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -121,18 +120,18 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="reqId" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/Responder/reqId.html"><span class="name ">reqId</span></a>
+            <dt id="connection" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <a href="dslink.common/ConnectionHandler/connection.html"><span class="name ">connection</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
-        
+        , <span class="is-inherited">inherited</span>
     </div>
-    reqId can be a dsId or a user name
+    null
             </dd>
             <dt id="groups" class="property">
                 <span class="top-level-variable-type">List&lt;String&gt;</span>
@@ -160,19 +159,18 @@
     </div>
     caching of nodes
             </dd>
-
-            <dt id="connection" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
-                <a href="dslink.common/ConnectionHandler/connection.html"><span class="name ">connection</span></a>
+            <dt id="reqId" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/Responder/reqId.html"><span class="name ">reqId</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
         
         
         read / write
-        , <span class="is-inherited">inherited</span>
+        
     </div>
-    
+    reqId can be a dsId or a user name
             </dd>
         </dl>
     </section>
@@ -194,14 +192,19 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="updateGroups" class="callable">
-                  <a href="dslink.browser/Responder/updateGroups.html"><span class="name ">updateGroups</span></a><span class="signature">(<wbr><span class="parameter" id="updateGroups-param-vals"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">vals</span></span>)
+              <dt id="addProcessor" class="callable">
+                  <a href="dslink.common/ConnectionHandler/addProcessor.html"><span class="name ">addProcessor</span></a><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  a processor function that's called just before the data is sent
+same processor won't be added to the list twice
+inside processor, send() data that only need to appear once per data frame
               </dd>
               <dt id="addResponse" class="callable">
                   <a href="dslink.browser/Responder/addResponse.html"><span class="name ">addResponse</span></a><span class="signature">(<wbr><span class="parameter" id="addResponse-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -212,8 +215,20 @@
               <dd>
                   
               </dd>
-              <dt id="onData" class="callable">
-                  <a href="dslink.browser/Responder/onData.html"><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
+              <dt id="addToSendList" class="callable">
+                  <a href="dslink.common/ConnectionHandler/addToSendList.html"><span class="name ">addToSendList</span></a><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="close" class="callable">
+                  <a href="dslink.browser/Responder/close.html"><span class="name ">close</span></a><span class="signature">(<wbr><span class="parameter" id="close-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -221,8 +236,20 @@
               <dd>
                   
               </dd>
-              <dt id="updateResponse" class="callable">
-                  <a href="dslink.browser/Responder/updateResponse.html"><span class="name ">updateResponse</span></a><span class="signature">(<wbr><span class="parameter" id="updateResponse-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="updateResponse-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateResponse-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="updateResponse-param-columns"><span class="type-annotation">List&lt;<a href="dslink.common/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateResponse-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
+              <dt id="doSend" class="callable">
+                  <a href="dslink.common/ConnectionHandler/doSend.html"><span class="name ">doSend</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">List</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  gather all the changes from
+              </dd>
+              <dt id="invoke" class="callable">
+                  <a href="dslink.browser/Responder/invoke.html"><span class="name ">invoke</span></a><span class="signature">(<wbr><span class="parameter" id="invoke-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -239,53 +266,8 @@
               <dd>
                   
               </dd>
-              <dt id="subscribe" class="callable">
-                  <a href="dslink.browser/Responder/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="unsubscribe" class="callable">
-                  <a href="dslink.browser/Responder/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="invoke" class="callable">
-                  <a href="dslink.browser/Responder/invoke.html"><span class="name ">invoke</span></a><span class="signature">(<wbr><span class="parameter" id="invoke-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="set" class="callable">
-                  <a href="dslink.browser/Responder/set.html"><span class="name ">set</span></a><span class="signature">(<wbr><span class="parameter" id="set-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="remove" class="callable">
-                  <a href="dslink.browser/Responder/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr><span class="parameter" id="remove-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="close" class="callable">
-                  <a href="dslink.browser/Responder/close.html"><span class="name ">close</span></a><span class="signature">(<wbr><span class="parameter" id="close-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+              <dt id="onData" class="callable">
+                  <a href="dslink.browser/Responder/onData.html"><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -311,44 +293,59 @@
               <dd>
                   
               </dd>
-
-              <dt id="addToSendList" class="callable">
-                  <a href="dslink.common/ConnectionHandler/addToSendList.html"><span class="name ">addToSendList</span></a><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+              <dt id="remove" class="callable">
+                  <a href="dslink.browser/Responder/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr><span class="parameter" id="remove-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
                   
               </dd>
-              <dt id="addProcessor" class="callable">
-                  <a href="dslink.common/ConnectionHandler/addProcessor.html"><span class="name ">addProcessor</span></a><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
+              <dt id="set" class="callable">
+                  <a href="dslink.browser/Responder/set.html"><span class="name ">set</span></a><span class="signature">(<wbr><span class="parameter" id="set-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  a processor function that's called just before the data is sent
-same processor won't be added to the list twice
-inside processor, send() data that only need to appear once per data frame
+                  
               </dd>
-              <dt id="doSend" class="callable">
-                  <a href="dslink.common/ConnectionHandler/doSend.html"><span class="name ">doSend</span></a><span class="signature">(<wbr>)
+              <dt id="subscribe" class="callable">
+                  <a href="dslink.browser/Responder/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
-                      <span class="returntype">List</span>
+                      <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  gather all the changes from
+                  
+              </dd>
+              <dt id="unsubscribe" class="callable">
+                  <a href="dslink.browser/Responder/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="updateGroups" class="callable">
+                  <a href="dslink.browser/Responder/updateGroups.html"><span class="name ">updateGroups</span></a><span class="signature">(<wbr><span class="parameter" id="updateGroups-param-vals"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">vals</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="updateResponse" class="callable">
+                  <a href="dslink.browser/Responder/updateResponse.html"><span class="name ">updateResponse</span></a><span class="signature">(<wbr><span class="parameter" id="updateResponse-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="updateResponse-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateResponse-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="updateResponse-param-columns"><span class="type-annotation">List&lt;<a href="dslink.common/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateResponse-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
           </dl>
       </section>

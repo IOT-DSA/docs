@@ -56,43 +56,42 @@
     <ol id="sidebar">
 
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
 
 
 
 
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#classes">Classes</a></li>
+      <li><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.responder/Configs-class.html">Configs</a></li>
+      <li><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></li>
+      <li><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></li>
+      <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
+      <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
+      <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
+      <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+      <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
       <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
       <li><a href="dslink.responder/Response-class.html">Response</a></li>
-      <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
-      <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
-      <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
-      <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
       <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
-      <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
-      <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
-      <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
-      <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
-      <li><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></li>
-      <li><a href="dslink.responder/Configs-class.html">Configs</a></li>
-      <li><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></li>
-      <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
-      <li><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
-      <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
-      <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
-      <li><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></li>
       <li><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
-      <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
+      <li><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+      <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
+      <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -105,19 +104,19 @@
         <h2>Typedefs</h2>
 
         <dl class="callables">
-            <dt id="OnInvokeClosed" class="callable">
-                <a href="dslink.responder/OnInvokeClosed.html"><span class="name ">OnInvokeClosed</span></a><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
+            <dt id="InvokeCallback" class="callable">
+                <a href="dslink.responder/InvokeCallback.html"><span class="name ">InvokeCallback</span></a><span class="signature">(<wbr><span class="parameter" id="InvokeCallback-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="InvokeCallback-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="InvokeCallback-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="InvokeCallback-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
                     &#8594;
-                    <span class="returntype">void</span>
+                    <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
                 </span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="InvokeCallback" class="callable">
-                <a href="dslink.responder/InvokeCallback.html"><span class="name ">InvokeCallback</span></a><span class="signature">(<wbr><span class="parameter" id="InvokeCallback-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="InvokeCallback-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="InvokeCallback-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="InvokeCallback-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
+            <dt id="OnInvokeClosed" class="callable">
+                <a href="dslink.responder/OnInvokeClosed.html"><span class="name ">OnInvokeClosed</span></a><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
                     &#8594;
-                    <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+                    <span class="returntype">void</span>
                 </span>
             </dt>
             <dd>
@@ -133,6 +132,87 @@
         <h2>Classes</h2>
 
         <dl>
+            <dt id="AsyncTableResult">
+                <span class="name "><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></span>
+            </dt>
+            <dd>
+                An Asynchronous Table Result
+This can be used to return asynchronous tables from actions.
+            </dd>
+            <dt id="Configs">
+                <span class="name "><a href="dslink.responder/Configs-class.html">Configs</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="ConfigSetting">
+                <span class="name "><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="DefinitionNode">
+                <span class="name "><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></span>
+            </dt>
+            <dd>
+                definition nodes are serializable node that won't change
+the only change will be a global upgrade
+            </dd>
+            <dt id="DummyPermissionManager">
+                <span class="name "><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="InvokeResponse">
+                <span class="name "><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="IPermissionManager">
+                <span class="name "><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="ListResponse">
+                <span class="name "><a href="dslink.responder/ListResponse-class.html">ListResponse</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="LocalNode">
+                <span class="name "><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+            </dt>
+            <dd>
+                Base Class for responder-side nodes.
+            </dd>
+            <dt id="LocalNodeImpl">
+                <span class="name "><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="MutableNodeProvider">
+                <span class="name "><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></span>
+            </dt>
+            <dd>
+                Interface for node providers that are mutable.
+            </dd>
+            <dt id="NodeProvider">
+                <span class="name "><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span>
+            </dt>
+            <dd>
+                Provides Nodes for a responder.
+A single node provider can be reused by multiple responder.
+            </dd>
+            <dt id="NodeProviderImpl">
+                <span class="name "><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></span>
+            </dt>
+            <dd>
+                
+            </dd>
             <dt id="Responder">
                 <span class="name "><a href="dslink.responder/Responder-class.html">Responder</a></span>
             </dt>
@@ -145,18 +225,11 @@
             <dd>
                 
             </dd>
-            <dt id="LocalNode">
-                <span class="name "><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+            <dt id="RespSubscribeController">
+                <span class="name "><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></span>
             </dt>
             <dd>
-                Base Class for responder-side nodes.
-            </dd>
-            <dt id="NodeProvider">
-                <span class="name "><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span>
-            </dt>
-            <dd>
-                Provides Nodes for a responder.
-A single node provider can be reused by multiple responder.
+                
             </dd>
             <dt id="RespSubscribeListener">
                 <span class="name "><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
@@ -164,89 +237,14 @@ A single node provider can be reused by multiple responder.
             <dd>
                 
             </dd>
-            <dt id="SubscribeResponse">
-                <span class="name "><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="RespSubscribeController">
-                <span class="name "><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="ListResponse">
-                <span class="name "><a href="dslink.responder/ListResponse-class.html">ListResponse</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="InvokeResponse">
-                <span class="name "><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="NodeProviderImpl">
-                <span class="name "><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="LocalNodeImpl">
-                <span class="name "><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="ConfigSetting">
-                <span class="name "><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="Configs">
-                <span class="name "><a href="dslink.responder/Configs-class.html">Configs</a></span>
-            </dt>
-            <dd>
-                
-            </dd>
-            <dt id="DefinitionNode">
-                <span class="name "><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></span>
-            </dt>
-            <dd>
-                definition nodes are serializable node that won't change
-the only change will be a global upgrade
-            </dd>
-            <dt id="SimpleTableResult">
-                <span class="name "><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></span>
-            </dt>
-            <dd>
-                A simple table result.
-This is used to return simple tables from an action.
-            </dd>
-            <dt id="AsyncTableResult">
-                <span class="name "><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></span>
-            </dt>
-            <dd>
-                An Asynchronous Table Result
-This can be used to return asynchronous tables from actions.
-            </dd>
             <dt id="SerializableNodeProvider">
                 <span class="name "><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></span>
             </dt>
             <dd>
                 Interface for node providers that are serializable.
             </dd>
-            <dt id="MutableNodeProvider">
-                <span class="name "><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></span>
-            </dt>
-            <dd>
-                Interface for node providers that are mutable.
-            </dd>
-            <dt id="SimpleNodeProvider">
-                <span class="name "><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
+            <dt id="SimpleHiddenNode">
+                <span class="name "><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
             </dt>
             <dd>
                 
@@ -258,20 +256,21 @@ This can be used to return asynchronous tables from actions.
                 A Simple Node Implementation
 A flexible node implementation that should fit most use cases.
             </dd>
-            <dt id="SimpleHiddenNode">
-                <span class="name "><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
+            <dt id="SimpleNodeProvider">
+                <span class="name "><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
             </dt>
             <dd>
                 
             </dd>
-            <dt id="IPermissionManager">
-                <span class="name "><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></span>
+            <dt id="SimpleTableResult">
+                <span class="name "><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></span>
             </dt>
             <dd>
-                
+                A simple table result.
+This is used to return simple tables from an action.
             </dd>
-            <dt id="DummyPermissionManager">
-                <span class="name "><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></span>
+            <dt id="SubscribeResponse">
+                <span class="name "><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></span>
             </dt>
             <dd>
                 

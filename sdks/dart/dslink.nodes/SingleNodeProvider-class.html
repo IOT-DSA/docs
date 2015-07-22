@@ -68,19 +68,18 @@
         <li><a href="dslink.nodes/SingleNodeProvider/SingleNodeProvider.html">SingleNodeProvider</a></li>
     
         <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#operators">Operators</a></li>
-        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
         <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
         <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#methods">Methods</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
         <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></li>
+        <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
         <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -121,7 +120,7 @@
         
         
     </div>
-    
+    null
             </dd>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
@@ -134,9 +133,8 @@
         read / write
         
     </div>
-    
+    null
             </dd>
-
         </dl>
     </section>
 
@@ -156,19 +154,6 @@
       <section class="summary" id="operators">
           <h2>Operators</h2>
           <dl class="callables">
-
-              <dt id="operator ~" class="callable">
-                  <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Get the root node.
-              </dd>
               <dt id="operator []" class="callable">
                   <a href="dslink.responder/NodeProvider/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -181,21 +166,24 @@
                   </div>
                   Gets an existing node, or creates a dummy node for a requester to listen on.
               </dd>
+              <dt id="operator ~" class="callable">
+                  <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  Get the root node.
+              </dd>
           </dl>
       </section>
 
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="getNode" class="callable">
-                  <a href="dslink.nodes/SingleNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  Gets an existing node.
-              </dd>
               <dt id="createResponder" class="callable">
                   <a href="dslink.nodes/SingleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
                       &#8594;
@@ -204,6 +192,15 @@
               </dt>
               <dd>
                   Create a Responder
+              </dd>
+              <dt id="getNode" class="callable">
+                  <a href="dslink.nodes/SingleNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  Gets an existing node.
               </dd>
               <dt id="getOrCreateNode" class="callable">
                   <a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
@@ -215,7 +212,6 @@
                   Gets a node at the given [path] if it exists.
 If it does not exist, create a new node and return it.
               </dd>
-
           </dl>
       </section>
 

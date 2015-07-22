@@ -60,26 +60,25 @@
     
     
         <li class="section-title"><a href="dslink.browser/Request-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/Request/data.html">data</a></li>
+        <li><a href="dslink.browser/Request/isClosed.html">isClosed</a></li>
         <li><a href="dslink.browser/Request/requester.html">requester</a></li>
         <li><a href="dslink.browser/Request/rid.html">rid</a></li>
-        <li><a href="dslink.browser/Request/data.html">data</a></li>
-        <li><a href="dslink.browser/Request/updater.html">updater</a></li>
         <li><a href="dslink.browser/Request/streamStatus.html">streamStatus</a></li>
-        <li><a href="dslink.browser/Request/isClosed.html">isClosed</a></li>
+        <li><a href="dslink.browser/Request/updater.html">updater</a></li>
     
         <li class="section-title"><a href="dslink.browser/Request-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/Request/Request.html">Request</a></li>
     
     
         <li class="section-title"><a href="dslink.browser/Request-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/Request/resend.html">resend</a></li>
         <li><a href="dslink.browser/Request/close.html">close</a></li>
+        <li><a href="dslink.browser/Request/resend.html">resend</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -95,6 +94,32 @@
         <h2>Properties</h2>
 
         <dl class="properties">
+            <dt id="data" class="property">
+                <span class="top-level-variable-type">Map</span>
+                <a href="dslink.browser/Request/data.html"><span class="name ">data</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
+            <dt id="isClosed" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink.browser/Request/isClosed.html"><span class="name ">isClosed</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        
+    </div>
+    null
+            </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
                 <a href="dslink.browser/Request/requester.html"><span class="name ">requester</span></a>
@@ -106,7 +131,7 @@
         
         
     </div>
-    
+    null
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -119,20 +144,20 @@
         
         
     </div>
-    
+    null
             </dd>
-            <dt id="data" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <a href="dslink.browser/Request/data.html"><span class="name ">data</span></a>
+            <dt id="streamStatus" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/Request/streamStatus.html"><span class="name ">streamStatus</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
-        read-only
         
         
+        read / write
         
     </div>
-    
+    null
             </dd>
             <dt id="updater" class="property">
                 <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
@@ -147,33 +172,6 @@
     </div>
     raw request callback
             </dd>
-            <dt id="streamStatus" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/Request/streamStatus.html"><span class="name ">streamStatus</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
-            <dt id="isClosed" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.browser/Request/isClosed.html"><span class="name ">isClosed</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        
-    </div>
-    
-            </dd>
-
         </dl>
     </section>
 
@@ -194,15 +192,6 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="resend" class="callable">
-                  <a href="dslink.browser/Request/resend.html"><span class="name ">resend</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  resend the data if previous sending failed
-              </dd>
               <dt id="close" class="callable">
                   <a href="dslink.browser/Request/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -212,7 +201,15 @@
               <dd>
                   close the request from the client side
               </dd>
-
+              <dt id="resend" class="callable">
+                  <a href="dslink.browser/Request/resend.html"><span class="name ">resend</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  resend the data if previous sending failed
+              </dd>
           </dl>
       </section>
 

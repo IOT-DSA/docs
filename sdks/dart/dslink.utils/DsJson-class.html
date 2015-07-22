@@ -62,10 +62,10 @@
         <li><a href="dslink.utils/DsJson/instance.html">instance</a></li>
     
         <li class="section-title"><a href="dslink.utils/DsJson-class.html#static-methods">Static methods</a></li>
-        <li><a href="dslink.utils/DsJson/encode.html">encode</a></li>
         <li><a href="dslink.utils/DsJson/decode.html">decode</a></li>
-        <li><a href="dslink.utils/DsJson/encodeFrame.html">encodeFrame</a></li>
         <li><a href="dslink.utils/DsJson/decodeFrame.html">decodeFrame</a></li>
+        <li><a href="dslink.utils/DsJson/encode.html">encode</a></li>
+        <li><a href="dslink.utils/DsJson/encodeFrame.html">encodeFrame</a></li>
     
     
         <li class="section-title"><a href="dslink.utils/DsJson-class.html#constructors">Constructors</a></li>
@@ -73,16 +73,15 @@
     
     
         <li class="section-title"><a href="dslink.utils/DsJson-class.html#methods">Methods</a></li>
-        <li><a href="dslink.utils/DsJson/encodeJson.html">encodeJson</a></li>
         <li><a href="dslink.utils/DsJson/decodeJson.html">decodeJson</a></li>
-        <li><a href="dslink.utils/DsJson/encodeJsonFrame.html">encodeJsonFrame</a></li>
         <li><a href="dslink.utils/DsJson/decodeJsonFrame.html">decodeJsonFrame</a></li>
+        <li><a href="dslink.utils/DsJson/encodeJson.html">encodeJson</a></li>
+        <li><a href="dslink.utils/DsJson/encodeJsonFrame.html">encodeJsonFrame</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -120,7 +119,7 @@
         read / write
         
     </div>
-    
+    null
             </dd>
         </dl>
     </section>
@@ -128,15 +127,6 @@
     <section class="summary" id="static-methods">
         <h2>Static Methods</h2>
         <dl class="callables">
-            <dt id="encode" class="callable">
-                <a href="dslink.utils/DsJson/encode.html"><span class="name ">encode</span></a><span class="signature">(<wbr><span class="parameter" id="encode-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encode-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
-                    &#8594;
-                    <span class="returntype">String</span>
-                </span>
-            </dt>
-            <dd>
-                
-            </dd>
             <dt id="decode" class="callable">
                 <a href="dslink.utils/DsJson/decode.html"><span class="name ">decode</span></a><span class="signature">(<wbr><span class="parameter" id="decode-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)
                     &#8594;
@@ -146,8 +136,17 @@
             <dd>
                 
             </dd>
-            <dt id="encodeFrame" class="callable">
-                <a href="dslink.utils/DsJson/encodeFrame.html"><span class="name ">encodeFrame</span></a><span class="signature">(<wbr><span class="parameter" id="encodeFrame-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, <span class="parameter" id="encodeFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span> <span class="parameter-name">cache</span></span>, {<span class="parameter" id="encodeFrame-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
+            <dt id="decodeFrame" class="callable">
+                <a href="dslink.utils/DsJson/decodeFrame.html"><span class="name ">decodeFrame</span></a><span class="signature">(<wbr><span class="parameter" id="decodeFrame-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>, <span class="parameter" id="decodeFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span> <span class="parameter-name">cache</span></span>)
+                    &#8594;
+                    <span class="returntype">Object</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="encode" class="callable">
+                <a href="dslink.utils/DsJson/encode.html"><span class="name ">encode</span></a><span class="signature">(<wbr><span class="parameter" id="encode-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encode-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
                     &#8594;
                     <span class="returntype">String</span>
                 </span>
@@ -155,10 +154,10 @@
             <dd>
                 
             </dd>
-            <dt id="decodeFrame" class="callable">
-                <a href="dslink.utils/DsJson/decodeFrame.html"><span class="name ">decodeFrame</span></a><span class="signature">(<wbr><span class="parameter" id="decodeFrame-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>, <span class="parameter" id="decodeFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span> <span class="parameter-name">cache</span></span>)
+            <dt id="encodeFrame" class="callable">
+                <a href="dslink.utils/DsJson/encodeFrame.html"><span class="name ">encodeFrame</span></a><span class="signature">(<wbr><span class="parameter" id="encodeFrame-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, <span class="parameter" id="encodeFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span> <span class="parameter-name">cache</span></span>, {<span class="parameter" id="encodeFrame-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
                     &#8594;
-                    <span class="returntype">Object</span>
+                    <span class="returntype">String</span>
                 </span>
             </dt>
             <dd>
@@ -185,28 +184,10 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="encodeJson" class="callable">
-                  <a href="dslink.utils/DsJson/encodeJson.html"><span class="name ">encodeJson</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJson-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encodeJson-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
-                      &#8594;
-                      <span class="returntype">String</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="decodeJson" class="callable">
                   <a href="dslink.utils/DsJson/decodeJson.html"><span class="name ">decodeJson</span></a><span class="signature">(<wbr><span class="parameter" id="decodeJson-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)
                       &#8594;
                       <span class="returntype">Object</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="encodeJsonFrame" class="callable">
-                  <a href="dslink.utils/DsJson/encodeJsonFrame.html"><span class="name ">encodeJsonFrame</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJsonFrame-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, <span class="parameter" id="encodeJsonFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span> <span class="parameter-name">cache</span></span>, {<span class="parameter" id="encodeJsonFrame-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
-                      &#8594;
-                      <span class="returntype">String</span>
                   </span>
               </dt>
               <dd>
@@ -221,7 +202,24 @@
               <dd>
                   
               </dd>
-
+              <dt id="encodeJson" class="callable">
+                  <a href="dslink.utils/DsJson/encodeJson.html"><span class="name ">encodeJson</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJson-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, {<span class="parameter" id="encodeJson-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
+                      &#8594;
+                      <span class="returntype">String</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="encodeJsonFrame" class="callable">
+                  <a href="dslink.utils/DsJson/encodeJsonFrame.html"><span class="name ">encodeJsonFrame</span></a><span class="signature">(<wbr><span class="parameter" id="encodeJsonFrame-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>, <span class="parameter" id="encodeJsonFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span> <span class="parameter-name">cache</span></span>, {<span class="parameter" id="encodeJsonFrame-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>})
+                      &#8594;
+                      <span class="returntype">String</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
           </dl>
       </section>
 

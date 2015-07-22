@@ -64,18 +64,17 @@
     
     
         <li class="section-title"><a href="dslink.server/ServerWebSocket-class.html#methods">Methods</a></li>
-        <li><a href="dslink.server/ServerWebSocket/onPingTimer.html">onPingTimer</a></li>
-        <li><a href="">requireSend</a></li>
         <li><a href="">addConnCommand</a></li>
-        <li><a href="">onData</a></li>
         <li><a href="">addData</a></li>
         <li><a href="">close</a></li>
+        <li><a href="">onData</a></li>
+        <li><a href="dslink.server/ServerWebSocket/onPingTimer.html">onPingTimer</a></li>
+        <li><a href="">requireSend</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
         <p class="no-docs">(Not documented.)</p>
@@ -106,72 +105,6 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-
-            <dt id="onRequestReadyCompleter" class="property">
-                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href=""><span class="name ">onRequestReadyCompleter</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
-            </dd>
-            <dt id="clientLink" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ClientLink-class.html">ClientLink</a></span>
-                <a href=""><span class="name ">clientLink</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
-            </dd>
-            <dt id="socket" class="property">
-                <span class="top-level-variable-type">WebSocket</span>
-                <a href=""><span class="name ">socket</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
-            </dd>
-            <dt id="pingTimer" class="property">
-                <span class="top-level-variable-type">Timer</span>
-                <a href=""><span class="name ">pingTimer</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
-            </dd>
-            <dt id="throughput" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href=""><span class="name ">throughput</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
-            </dd>
             <dt id="binaryInCache" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span>
                 <a href=""><span class="name ">binaryInCache</span></a>
@@ -183,20 +116,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    
-            </dd>
-            <dt id="msgId" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href=""><span class="name ">msgId</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
+    null
             </dd>
             <dt id="binaryOutCache" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span>
@@ -209,11 +129,11 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
-            <dt id="responderChannel" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
-                <a href=""><span class="name ">responderChannel</span></a>
+            <dt id="clientLink" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ClientLink-class.html">ClientLink</a></span>
+                <a href=""><span class="name ">clientLink</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -222,33 +142,20 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
             </dd>
-            <dt id="requesterChannel" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
-                <a href=""><span class="name ">requesterChannel</span></a>
+            <dt id="msgId" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href=""><span class="name ">msgId</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
-        read-only
         
         
+        read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    
-            </dd>
-            <dt id="onRequesterReady" class="property">
-                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href=""><span class="name ">onRequesterReady</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        read-only
-        
-        
-        , <span class="is-inherited">inherited</span>
-    </div>
-    
+    null
             </dd>
             <dt id="onDisconnected" class="property">
                 <span class="top-level-variable-type">Future&lt;bool&gt;</span>
@@ -261,7 +168,98 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    
+    null
+            </dd>
+            <dt id="onRequesterReady" class="property">
+                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <a href=""><span class="name ">onRequesterReady</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="onRequestReadyCompleter" class="property">
+                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <a href=""><span class="name ">onRequestReadyCompleter</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="pingTimer" class="property">
+                <span class="top-level-variable-type">Timer</span>
+                <a href=""><span class="name ">pingTimer</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="requesterChannel" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <a href=""><span class="name ">requesterChannel</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="responderChannel" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <a href=""><span class="name ">responderChannel</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="socket" class="property">
+                <span class="top-level-variable-type">WebSocket</span>
+                <a href=""><span class="name ">socket</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+        
+        
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
+            </dd>
+            <dt id="throughput" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href=""><span class="name ">throughput</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        , <span class="is-inherited">inherited</span>
+    </div>
+    null
             </dd>
         </dl>
     </section>
@@ -283,28 +281,6 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="onPingTimer" class="callable">
-                  <a href="dslink.server/ServerWebSocket/onPingTimer.html"><span class="name ">onPingTimer</span></a><span class="signature">(<wbr><span class="parameter" id="onPingTimer-param-t"><span class="type-annotation">Timer</span> <span class="parameter-name">t</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-
-              <dt id="requireSend" class="callable">
-                  <a href=""><span class="name ">requireSend</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  notify the connection channel need to send data
-              </dd>
               <dt id="addConnCommand" class="callable">
                   <a href=""><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;
@@ -316,18 +292,6 @@
                     <span class="is-inherited">inherited</span>
                   </div>
                   add server command, will be called only when used as server connection
-              </dd>
-              <dt id="onData" class="callable">
-                  <a href=""><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-data"><span class="parameter-name">data</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  
               </dd>
               <dt id="addData" class="callable">
                   <a href=""><span class="name ">addData</span></a><span class="signature">(<wbr><span class="parameter" id="addData-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
@@ -352,6 +316,39 @@
                     <span class="is-inherited">inherited</span>
                   </div>
                   close the connection
+              </dd>
+              <dt id="onData" class="callable">
+                  <a href=""><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-data"><span class="parameter-name">data</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="onPingTimer" class="callable">
+                  <a href="dslink.server/ServerWebSocket/onPingTimer.html"><span class="name ">onPingTimer</span></a><span class="signature">(<wbr><span class="parameter" id="onPingTimer-param-t"><span class="type-annotation">Timer</span> <span class="parameter-name">t</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="requireSend" class="callable">
+                  <a href=""><span class="name ">requireSend</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  notify the connection channel need to send data
               </dd>
           </dl>
       </section>

@@ -60,19 +60,19 @@
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
       <ol id="sidebar">
         <li class="section-title"><a href="dslink.utils/Base64-class.html#constants">Constants</a></li>
-        <li><a href="dslink.utils/Base64/PAD.html">PAD</a></li>
         <li><a href="dslink.utils/Base64/CR.html">CR</a></li>
         <li><a href="dslink.utils/Base64/LF.html">LF</a></li>
-        <li><a href="dslink.utils/Base64/SP.html">SP</a></li>
+        <li><a href="dslink.utils/Base64/PAD.html">PAD</a></li>
         <li><a href="dslink.utils/Base64/PLUS.html">PLUS</a></li>
         <li><a href="dslink.utils/Base64/SLASH.html">SLASH</a></li>
+        <li><a href="dslink.utils/Base64/SP.html">SP</a></li>
     
     
         <li class="section-title"><a href="dslink.utils/Base64-class.html#static-methods">Static methods</a></li>
-        <li><a href="dslink.utils/Base64/encodeString.html">encodeString</a></li>
+        <li><a href="dslink.utils/Base64/decode.html">decode</a></li>
         <li><a href="dslink.utils/Base64/decodeString.html">decodeString</a></li>
         <li><a href="dslink.utils/Base64/encode.html">encode</a></li>
-        <li><a href="dslink.utils/Base64/decode.html">decode</a></li>
+        <li><a href="dslink.utils/Base64/encodeString.html">encodeString</a></li>
     
     
         <li class="section-title"><a href="dslink.utils/Base64-class.html#constructors">Constructors</a></li>
@@ -84,7 +84,6 @@
 
   <div class="col-xs-12 col-sm-9">
 
-    
     <section class="desc markdown">
     
     
@@ -100,18 +99,6 @@
         <h2>Constants</h2>
 
         <dl class="properties">
-            <dt id="PAD" class="constant">
-                <span class="top-level-variable-type">int</span>
-                <span class="name "><a href="dslink.utils/Base64/PAD.html">PAD</a></span>
-                =
-                <span class="constant-value">61</span>
-            </dt>
-            <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
-            </dd>
             <dt id="CR" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/CR.html">CR</a></span>
@@ -122,7 +109,7 @@
                 <div class="is-const">
                     const
                 </div>
-                
+                null
             </dd>
             <dt id="LF" class="constant">
                 <span class="top-level-variable-type">int</span>
@@ -134,19 +121,19 @@
                 <div class="is-const">
                     const
                 </div>
-                
+                null
             </dd>
-            <dt id="SP" class="constant">
+            <dt id="PAD" class="constant">
                 <span class="top-level-variable-type">int</span>
-                <span class="name "><a href="dslink.utils/Base64/SP.html">SP</a></span>
+                <span class="name "><a href="dslink.utils/Base64/PAD.html">PAD</a></span>
                 =
-                <span class="constant-value">32</span>
+                <span class="constant-value">61</span>
             </dt>
             <dd>
                 <div class="is-const">
                     const
                 </div>
-                
+                null
             </dd>
             <dt id="PLUS" class="constant">
                 <span class="top-level-variable-type">int</span>
@@ -158,7 +145,7 @@
                 <div class="is-const">
                     const
                 </div>
-                
+                null
             </dd>
             <dt id="SLASH" class="constant">
                 <span class="top-level-variable-type">int</span>
@@ -170,7 +157,19 @@
                 <div class="is-const">
                     const
                 </div>
-                
+                null
+            </dd>
+            <dt id="SP" class="constant">
+                <span class="top-level-variable-type">int</span>
+                <span class="name "><a href="dslink.utils/Base64/SP.html">SP</a></span>
+                =
+                <span class="constant-value">32</span>
+            </dt>
+            <dd>
+                <div class="is-const">
+                    const
+                </div>
+                null
             </dd>
         </dl>
     </section>
@@ -179,10 +178,10 @@
     <section class="summary" id="static-methods">
         <h2>Static Methods</h2>
         <dl class="callables">
-            <dt id="encodeString" class="callable">
-                <a href="dslink.utils/Base64/encodeString.html"><span class="name ">encodeString</span></a><span class="signature">(<wbr><span class="parameter" id="encodeString-param-content"><span class="type-annotation">String</span> <span class="parameter-name">content</span></span>, [<span class="parameter" id="encodeString-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span></span>, <span class="parameter" id="encodeString-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span>])
+            <dt id="decode" class="callable">
+                <a href="dslink.utils/Base64/decode.html"><span class="name ">decode</span></a><span class="signature">(<wbr><span class="parameter" id="decode-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
                     &#8594;
-                    <span class="returntype">String</span>
+                    <span class="returntype">Uint8List</span>
                 </span>
             </dt>
             <dd>
@@ -206,10 +205,10 @@
             <dd>
                 
             </dd>
-            <dt id="decode" class="callable">
-                <a href="dslink.utils/Base64/decode.html"><span class="name ">decode</span></a><span class="signature">(<wbr><span class="parameter" id="decode-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+            <dt id="encodeString" class="callable">
+                <a href="dslink.utils/Base64/encodeString.html"><span class="name ">encodeString</span></a><span class="signature">(<wbr><span class="parameter" id="encodeString-param-content"><span class="type-annotation">String</span> <span class="parameter-name">content</span></span>, [<span class="parameter" id="encodeString-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span></span>, <span class="parameter" id="encodeString-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span>])
                     &#8594;
-                    <span class="returntype">Uint8List</span>
+                    <span class="returntype">String</span>
                 </span>
             </dt>
             <dd>
