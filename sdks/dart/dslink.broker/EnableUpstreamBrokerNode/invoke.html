@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>invoke method - EnableUpstreamBrokerNode class - dslink.broker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the invoke method from the EnableUpstreamBrokerNode class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-toggle" type="button"> </button>
+            <ol class="breadcrumbs gt-separated">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                <li><a href="dslink.broker/EnableUpstreamBrokerNode-class.html">EnableUpstreamBrokerNode</a></li>
+                <li class="self-crumb">invoke</li>
+            </ol>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">method</div> invoke
+            </h1>
+            <!-- p class="subtitle">
+                Called by the link internals to invoke this node.
+            </p -->
+        </div>
+        <ul class="subnav">
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+<div class="row row-offcanvas row-offcanvas-left">
+
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+
+    <h5><a href="dslink.broker/EnableUpstreamBrokerNode-class.html">EnableUpstreamBrokerNode</a></h5>
+
+      <ol id="sidebar">
+    
+    
+    
+    
+        <li class="section-title"><a href="dslink.broker/EnableUpstreamBrokerNode-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.broker/EnableUpstreamBrokerNode/EnableUpstreamBrokerNode.html">EnableUpstreamBrokerNode</a></li>
+    
+        <li class="section-title"><a href="dslink.broker/EnableUpstreamBrokerNode-class.html#operators">Operators</a></li>
+        <li><a href="dslink.responder/LocalNode/operator_get.html">operator []</a></li>
+        <li><a href="dslink.responder/LocalNode/operator_put.html">operator []=</a></li>
+    
+        <li class="section-title"><a href="dslink.broker/EnableUpstreamBrokerNode-class.html#methods">Methods</a></li>
+        <li><a href="dslink.common/Node/addChild.html">addChild</a></li>
+        <li><a href="dslink.common/Node/forEachAttribute.html">forEachAttribute</a></li>
+        <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
+        <li><a href="dslink.common/Node/forEachConfig.html">forEachConfig</a></li>
+        <li><a href="dslink.common/Node/get.html">get</a></li>
+        <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
+        <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
+        <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
+        <li><a href="dslink.responder/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
+        <li><a href="dslink.broker/BrokerNode/getPermission.html">getPermission</a></li>
+        <li><a href="dslink.responder/LocalNode/getSetPermission.html">getSetPermission</a></li>
+        <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
+        <li><a href="dslink.broker/EnableUpstreamBrokerNode/invoke.html">invoke</a></li>
+        <li><a href="dslink.broker/BrokerNode/load.html">load</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
+        <li><a href="dslink.responder/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
+        <li><a href="dslink.responder/LocalNode/onStartListListen.html">onStartListListen</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
+        <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/removeConfig.html">removeConfig</a></li>
+        <li><a href="dslink.broker/BrokerNode/serialize.html">serialize</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/serializePermission.html">serializePermission</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setAttribute.html">setAttribute</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setConfig.html">setConfig</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/setValue.html">setValue</a></li>
+        <li><a href="dslink.responder/LocalNode/subscribe.html">subscribe</a></li>
+        <li><a href="dslink.responder/LocalNode/unsubscribe.html">unsubscribe</a></li>
+        <li><a href="dslink.responder/LocalNodeImpl/updateList.html">updateList</a></li>
+        <li><a href="dslink.responder/LocalNode/updateValue.html">updateValue</a></li>
+      </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9">
+
+    <section class="multi-line-signature">
+            <div>
+                <ol class="comma-separated metadata-annotations">
+                    <li class="metadata-annotation">@override</li>
+                </ol>
+            </div>
+            <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
+            <span class="name ">invoke</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>,<br><span class="parameter" id="invoke-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="invoke-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>,<br><span class="parameter" id="invoke-param-parentNode"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">parentNode</span></span>,<br>[<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>]
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+    
+        <p>Called by the link internals to invoke this node.</p>
+    
+    </section>
+
+  </div> <!-- /.col-xs-12.col-sm-9 -->
+
+</div> <!-- /.row-offcanvas -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  dslink 1.0.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script>
+// Adds a shadow for the top nav when the masthead is scrolled off the top.
+function initScroller() {
+  window.addEventListener('scroll', function(e){
+    var header = document.querySelector("header");
+
+    if (header) {
+      var position = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (position >= 136) {
+        header.classList.add("header-fixed");
+      } else if (header.classList.contains("header-fixed")) {
+        header.classList.remove("header-fixed");
+      }
+    }
+  });
+}
+
+function initSideNav() {
+  var button = document.getElementById('sidenav-toggle');
+  if (button) {
+    button.addEventListener('click', function(e) {
+      var elems = document.querySelectorAll('.row-offcanvas');
+      for (var i = 0; i < elems.length; i++) {
+        elems[i].classList.toggle('active');
+      }
+    });
+  }
+}
+
+// Make sure the anchors scroll past the fixed page header (#648).
+function shiftWindow() {
+  scrollBy(0, -68);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  prettyPrint();
+  initScroller();
+  initSideNav();
+
+  // Make sure the anchors scroll past the fixed page header (#648).
+  if (location.hash) shiftWindow();
+  window.addEventListener("hashchange", shiftWindow);
+});
+</script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>
