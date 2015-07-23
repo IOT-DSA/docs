@@ -62,7 +62,6 @@
         <li class="section-title"><a href="dslink.common/Connection-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink.common/Connection/onDisconnected.html">onDisconnected</a></li>
         <li><a href="dslink.common/Connection/onRequesterReady.html">onRequesterReady</a></li>
-        <li><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></li>
         <li><a href="dslink.common/Connection/requesterChannel.html">requesterChannel</a></li>
         <li><a href="dslink.common/Connection/responderChannel.html">responderChannel</a></li>
     
@@ -71,7 +70,6 @@
     
     
         <li class="section-title"><a href="dslink.common/Connection-class.html#methods">Methods</a></li>
-        <li><a href="dslink.common/Connection/ack.html">ack</a></li>
         <li><a href="dslink.common/Connection/addConnCommand.html">addConnCommand</a></li>
         <li><a href="dslink.common/Connection/close.html">close</a></li>
         <li><a href="dslink.common/Connection/requireSend.html">requireSend</a></li>
@@ -134,19 +132,6 @@
     </div>
     trigger when requester channel is Ready
             </dd>
-            <dt id="pendingAcks" class="property">
-                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
-                <a href="dslink.common/Connection/pendingAcks.html"><span class="name ">pendingAcks</span></a>
-            </dt>
-            <dd>
-                <div class="readable-writable">
-        
-        
-        read / write
-        
-    </div>
-    
-            </dd>
             <dt id="requesterChannel" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
                 <a href="dslink.common/Connection/requesterChannel.html"><span class="name ">requesterChannel</span></a>
@@ -193,15 +178,6 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="ack" class="callable">
-                  <a href="dslink.common/Connection/ack.html"><span class="name ">ack</span></a><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="addConnCommand" class="callable">
                   <a href="dslink.common/Connection/addConnCommand.html"><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;

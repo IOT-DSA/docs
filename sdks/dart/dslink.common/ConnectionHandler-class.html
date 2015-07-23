@@ -69,7 +69,7 @@
         <li class="section-title"><a href="dslink.common/ConnectionHandler-class.html#methods">Methods</a></li>
         <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
         <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-        <li><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+        <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
         <li><a href="dslink.common/ConnectionHandler/onData.html">onData</a></li>
         <li><a href="dslink.common/ConnectionHandler/onDisconnected.html">onDisconnected</a></li>
         <li><a href="dslink.common/ConnectionHandler/onReconnected.html">onReconnected</a></li>
@@ -141,7 +141,7 @@
           <h2>Methods</h2>
           <dl class="callables">
               <dt id="addProcessor" class="callable">
-                  <a href="dslink.common/ConnectionHandler/addProcessor.html"><span class="name ">addProcessor</span></a><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>)
+                  <a href="dslink.common/ConnectionHandler/addProcessor.html"><span class="name ">addProcessor</span></a><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -160,10 +160,10 @@ inside processor, send() data that only need to appear once per data frame
               <dd>
                   
               </dd>
-              <dt id="getSendingData" class="callable">
-                  <a href="dslink.common/ConnectionHandler/getSendingData.html"><span class="name ">getSendingData</span></a><span class="signature">(<wbr>)
+              <dt id="doSend" class="callable">
+                  <a href="dslink.common/ConnectionHandler/doSend.html"><span class="name ">doSend</span></a><span class="signature">(<wbr>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
+                      <span class="returntype">List</span>
                   </span>
               </dt>
               <dd>
