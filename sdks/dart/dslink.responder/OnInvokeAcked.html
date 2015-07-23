@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>prepareSendingData method - Response class - dslink.browser library - Dart API</title>
+    <title>OnInvokeAcked typedef - dslink.responder library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
-    <base href="../..">
+    <base href="..">
 
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="static-assets/prettify.css">
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the prepareSendingData method from the Response class, for the Dart programming language.">
+    <meta name="description" content="API docs for the OnInvokeAcked property from the dslink.responder library, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -28,16 +28,15 @@
             <button id="sidenav-toggle" type="button"> </button>
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li><a href="dslink.browser/Response-class.html">Response</a></li>
-                <li class="self-crumb">prepareSendingData</li>
+                <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+                <li class="self-crumb">OnInvokeAcked</li>
             </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> prepareSendingData
+                <div class="kind">typedef</div> OnInvokeAcked
             </h1>
             <!-- p class="subtitle">
                 
@@ -53,36 +52,55 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+    <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
 
-    <h5><a href="dslink.browser/Response-class.html">Response</a></h5>
+    <ol id="sidebar">
 
-      <ol id="sidebar">
-    
-    
-    
-        <li class="section-title"><a href="dslink.browser/Response-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/Response/responder.html">responder</a></li>
-        <li><a href="dslink.browser/Response/rid.html">rid</a></li>
-    
-        <li class="section-title"><a href="dslink.browser/Response-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.browser/Response/Response.html">Response</a></li>
-    
-    
-        <li class="section-title"><a href="dslink.browser/Response-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
-        <li><a href="dslink.browser/Response/close.html">close</a></li>
-        <li><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
-        <li><a href="dslink.browser/Response/startSendingData.html">startSendingData</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.responder/OnInvokeAcked.html">OnInvokeAcked</a></li>
+      <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
 
+
+
+
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#classes">Classes</a></li>
+      <li><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.responder/Configs-class.html">Configs</a></li>
+      <li><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></li>
+      <li><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></li>
+      <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
+      <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
+      <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
+      <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+      <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
+      <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
+      <li><a href="dslink.responder/Response-class.html">Response</a></li>
+      <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
+      <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
+      <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
+      <li><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
+      <li><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+      <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
+      <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
             <span class="returntype">void</span>
-            <span class="name ">prepareSendingData</span>(
+            <span class="name ">OnInvokeAcked</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="OnInvokeAcked-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>,<br><span class="parameter" id="OnInvokeAcked-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>,<br><span class="parameter" id="OnInvokeAcked-param-receivedAckId"><span class="type-annotation">int</span> <span class="parameter-name">receivedAckId</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -96,6 +114,7 @@
   </div> <!-- /.col-xs-12.col-sm-9 -->
 
 </div> <!-- /.row-offcanvas -->
+
 </div> <!-- container -->
 
 <footer>
