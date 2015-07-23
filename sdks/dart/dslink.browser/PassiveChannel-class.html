@@ -62,7 +62,7 @@
         <li class="section-title"><a href="dslink.browser/PassiveChannel-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink.browser/PassiveChannel/conn.html">conn</a></li>
         <li><a href="dslink.browser/PassiveChannel/connected.html">connected</a></li>
-        <li><a href="dslink.browser/PassiveChannel/getData.html">getData</a></li>
+        <li><a href="dslink.browser/PassiveChannel/handler.html">handler</a></li>
         <li><a href="dslink.browser/PassiveChannel/isReady.html">isReady</a></li>
         <li><a href="dslink.browser/PassiveChannel/onConnectController.html">onConnectController</a></li>
         <li><a href="dslink.browser/PassiveChannel/onConnected.html">onConnected</a></li>
@@ -76,6 +76,7 @@
     
     
         <li class="section-title"><a href="dslink.browser/PassiveChannel-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/PassiveChannel/getSendingData.html">getSendingData</a></li>
         <li><a href="dslink.browser/PassiveChannel/sendWhenReady.html">sendWhenReady</a></li>
         <li><a href="dslink.browser/PassiveChannel/updateConnect.html">updateConnect</a></li>
       </ol>
@@ -139,9 +140,9 @@
     </div>
     
             </dd>
-            <dt id="getData" class="property">
-                <span class="top-level-variable-type">Function</span>
-                <a href="dslink.browser/PassiveChannel/getData.html"><span class="name ">getData</span></a>
+            <dt id="handler" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></span>
+                <a href="dslink.browser/PassiveChannel/handler.html"><span class="name ">handler</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -263,8 +264,17 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="getSendingData" class="callable">
+                  <a href="dslink.browser/PassiveChannel/getSendingData.html"><span class="name ">getSendingData</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="sendWhenReady" class="callable">
-                  <a href="dslink.browser/PassiveChannel/sendWhenReady.html"><span class="name ">sendWhenReady</span></a><span class="signature">(<wbr><span class="parameter" id="sendWhenReady-param-getData"><span class="type-annotation">List</span> <span class="parameter-name">getData</span>()</span>)
+                  <a href="dslink.browser/PassiveChannel/sendWhenReady.html"><span class="name ">sendWhenReady</span></a><span class="signature">(<wbr><span class="parameter" id="sendWhenReady-param-handler"><span class="type-annotation"><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></span> <span class="parameter-name">handler</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>

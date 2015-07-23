@@ -67,6 +67,7 @@
         <li><a href="dslink.browser/WebSocketConnection/onConnect.html">onConnect</a></li>
         <li><a href="dslink.browser/WebSocketConnection/onDisconnected.html">onDisconnected</a></li>
         <li><a href="dslink.browser/WebSocketConnection/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></li>
         <li><a href="dslink.browser/WebSocketConnection/pingTimer.html">pingTimer</a></li>
         <li><a href="dslink.browser/WebSocketConnection/requesterChannel.html">requesterChannel</a></li>
         <li><a href="dslink.browser/WebSocketConnection/responderChannel.html">responderChannel</a></li>
@@ -77,6 +78,7 @@
     
     
         <li class="section-title"><a href="dslink.browser/WebSocketConnection-class.html#methods">Methods</a></li>
+        <li><a href="dslink.common/Connection/ack.html">ack</a></li>
         <li><a href="dslink.browser/WebSocketConnection/addConnCommand.html">addConnCommand</a></li>
         <li><a href="dslink.browser/WebSocketConnection/close.html">close</a></li>
         <li><a href="dslink.browser/WebSocketConnection/onPingTimer.html">onPingTimer</a></li>
@@ -97,13 +99,13 @@
     <section>
         <dl class="dl-horizontal">
 
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated dark class-relationships">
+            <li>Object</li>
+            <li><a href="dslink.common/Connection-class.html">Connection</a></li>
+            <li>WebSocketConnection</li>
+        </ul></dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated class-relationships">
-                    <li><a href="dslink.common/Connection-class.html">Connection</a></li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -207,6 +209,19 @@
     </div>
     
             </dd>
+            <dt id="pendingAcks" class="property">
+                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
+                <a href="dslink.common/Connection/pendingAcks.html"><span class="name ">pendingAcks</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        , <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
             <dt id="pingTimer" class="property">
                 <span class="top-level-variable-type">Timer</span>
                 <a href="dslink.browser/WebSocketConnection/pingTimer.html"><span class="name ">pingTimer</span></a>
@@ -279,6 +294,18 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="ack" class="callable">
+                  <a href="dslink.common/Connection/ack.html"><span class="name ">ack</span></a><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
               <dt id="addConnCommand" class="callable">
                   <a href="dslink.browser/WebSocketConnection/addConnCommand.html"><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;
