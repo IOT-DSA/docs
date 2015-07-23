@@ -68,7 +68,11 @@
     
     
         <li class="section-title"><a href="dslink.browser/Response-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
+        <li><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/Response/close.html">close</a></li>
+        <li><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
+        <li><a href="dslink.browser/Response/startSendingData.html">startSendingData</a></li>
       </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -76,12 +80,26 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">(Not documented.)</p>
+        <p class="no-docs">Not documented.</p>
     
         
     
     </section>
 
+    <section>
+        <dl class="dl-horizontal">
+
+
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+                </ul>
+            </dd>
+
+
+        </dl>
+    </section>
 
 
 
@@ -101,7 +119,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -114,7 +132,7 @@
         
         
     </div>
-    null
+    
             </dd>
         </dl>
     </section>
@@ -136,6 +154,24 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="ackReceived" class="callable">
+                  <a href="dslink.browser/Response/ackReceived.html"><span class="name ">ackReceived</span></a><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="ackWaiting" class="callable">
+                  <a href="dslink.browser/Response/ackWaiting.html"><span class="name ">ackWaiting</span></a><span class="signature">(<wbr><span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="close" class="callable">
                   <a href="dslink.browser/Response/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
                       &#8594;
@@ -144,6 +180,24 @@
               </dt>
               <dd>
                   close the request from responder side and also notify the requester
+              </dd>
+              <dt id="prepareSendingData" class="callable">
+                  <a href="dslink.browser/Response/prepareSendingData.html"><span class="name ">prepareSendingData</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="startSendingData" class="callable">
+                  <a href="dslink.browser/Response/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
           </dl>
       </section>
@@ -158,16 +212,18 @@
     <div class="container-fluid">
         <div class="container">
             <p class="text-center">
-
-                <span class="copyright no-break">dslink 1.0.0</span>
-                &bull;
-                <span class="copyright no-break">
-                <a href="https://www.dartlang.org"><img src="static-assets/favicon.png" alt="Dart" title="Dart"
-                  width="24" height="24"></a> API Docs
+                <span class="no-break">
+                  dslink 1.0.0 api docs
                 </span>
                 &bull;
                 <span class="copyright no-break">
-                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
                 </span>
             </p>
         </div>

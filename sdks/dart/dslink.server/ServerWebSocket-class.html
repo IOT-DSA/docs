@@ -64,6 +64,7 @@
     
     
         <li class="section-title"><a href="dslink.server/ServerWebSocket-class.html#methods">Methods</a></li>
+        <li><a href="dslink.common/Connection/ack.html">ack</a></li>
         <li><a href="">addConnCommand</a></li>
         <li><a href="">addData</a></li>
         <li><a href="">close</a></li>
@@ -77,7 +78,7 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">(Not documented.)</p>
+        <p class="no-docs">Not documented.</p>
     
         
     
@@ -89,6 +90,7 @@
         <dt>Extends</dt>
         <dd><ul class="gt-separated dark class-relationships">
             <li>Object</li>
+            <li><a href="dslink.common/Connection-class.html">Connection</a></li>
             <li>WebSocketConnection</li>
             <li>ServerWebSocket</li>
         </ul></dd>
@@ -116,7 +118,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="binaryOutCache" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span>
@@ -129,7 +131,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="clientLink" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ClientLink-class.html">ClientLink</a></span>
@@ -142,7 +144,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="msgId" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -155,7 +157,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="onDisconnected" class="property">
                 <span class="top-level-variable-type">Future&lt;bool&gt;</span>
@@ -168,7 +170,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -181,7 +183,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="onRequestReadyCompleter" class="property">
                 <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -194,7 +196,20 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
+            </dd>
+            <dt id="pendingAcks" class="property">
+                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
+                <a href="dslink.common/Connection/pendingAcks.html"><span class="name ">pendingAcks</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        
+        
+        read / write
+        , <span class="is-inherited">inherited</span>
+    </div>
+    
             </dd>
             <dt id="pingTimer" class="property">
                 <span class="top-level-variable-type">Timer</span>
@@ -207,7 +222,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="requesterChannel" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
@@ -220,7 +235,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="responderChannel" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
@@ -233,7 +248,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="socket" class="property">
                 <span class="top-level-variable-type">WebSocket</span>
@@ -246,7 +261,7 @@
         
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
             <dt id="throughput" class="property">
                 <span class="top-level-variable-type">int</span>
@@ -259,7 +274,7 @@
         read / write
         , <span class="is-inherited">inherited</span>
     </div>
-    null
+    
             </dd>
         </dl>
     </section>
@@ -281,6 +296,18 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="ack" class="callable">
+                  <a href="dslink.common/Connection/ack.html"><span class="name ">ack</span></a><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
               <dt id="addConnCommand" class="callable">
                   <a href=""><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;
@@ -363,16 +390,18 @@
     <div class="container-fluid">
         <div class="container">
             <p class="text-center">
-
-                <span class="copyright no-break">dslink 1.0.0</span>
-                &bull;
-                <span class="copyright no-break">
-                <a href="https://www.dartlang.org"><img src="static-assets/favicon.png" alt="Dart" title="Dart"
-                  width="24" height="24"></a> API Docs
+                <span class="no-break">
+                  dslink 1.0.0 api docs
                 </span>
                 &bull;
                 <span class="copyright no-break">
-                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
                 </span>
             </p>
         </div>

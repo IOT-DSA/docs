@@ -62,7 +62,7 @@
         <li class="section-title"><a href="dslink.browser/PassiveChannel-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink.browser/PassiveChannel/conn.html">conn</a></li>
         <li><a href="dslink.browser/PassiveChannel/connected.html">connected</a></li>
-        <li><a href="dslink.browser/PassiveChannel/getData.html">getData</a></li>
+        <li><a href="dslink.browser/PassiveChannel/handler.html">handler</a></li>
         <li><a href="dslink.browser/PassiveChannel/isReady.html">isReady</a></li>
         <li><a href="dslink.browser/PassiveChannel/onConnectController.html">onConnectController</a></li>
         <li><a href="dslink.browser/PassiveChannel/onConnected.html">onConnected</a></li>
@@ -76,6 +76,7 @@
     
     
         <li class="section-title"><a href="dslink.browser/PassiveChannel-class.html#methods">Methods</a></li>
+        <li><a href="dslink.browser/PassiveChannel/getSendingData.html">getSendingData</a></li>
         <li><a href="dslink.browser/PassiveChannel/sendWhenReady.html">sendWhenReady</a></li>
         <li><a href="dslink.browser/PassiveChannel/updateConnect.html">updateConnect</a></li>
       </ol>
@@ -85,7 +86,7 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">(Not documented.)</p>
+        <p class="no-docs">Not documented.</p>
     
         
     
@@ -124,7 +125,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="connected" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -137,11 +138,11 @@
         read / write
         
     </div>
-    null
+    
             </dd>
-            <dt id="getData" class="property">
-                <span class="top-level-variable-type">Function</span>
-                <a href="dslink.browser/PassiveChannel/getData.html"><span class="name ">getData</span></a>
+            <dt id="handler" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></span>
+                <a href="dslink.browser/PassiveChannel/handler.html"><span class="name ">handler</span></a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -150,7 +151,7 @@
         read / write
         
     </div>
-    null
+    
             </dd>
             <dt id="isReady" class="property">
                 <span class="top-level-variable-type">bool</span>
@@ -163,7 +164,7 @@
         read / write
         
     </div>
-    null
+    
             </dd>
             <dt id="onConnectController" class="property">
                 <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -176,7 +177,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="onConnected" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -189,7 +190,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="onDisconnectController" class="property">
                 <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -202,7 +203,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="onDisconnected" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
@@ -215,7 +216,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="onReceive" class="property">
                 <span class="top-level-variable-type">Stream&lt;List&gt;</span>
@@ -228,7 +229,7 @@
         
         
     </div>
-    null
+    
             </dd>
             <dt id="onReceiveController" class="property">
                 <span class="top-level-variable-type">StreamController&lt;List&gt;</span>
@@ -241,7 +242,7 @@
         
         
     </div>
-    null
+    
             </dd>
         </dl>
     </section>
@@ -263,8 +264,17 @@
       <section class="summary" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="getSendingData" class="callable">
+                  <a href="dslink.browser/PassiveChannel/getSendingData.html"><span class="name ">getSendingData</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype"><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="sendWhenReady" class="callable">
-                  <a href="dslink.browser/PassiveChannel/sendWhenReady.html"><span class="name ">sendWhenReady</span></a><span class="signature">(<wbr><span class="parameter" id="sendWhenReady-param-getData"><span class="type-annotation">List</span> <span class="parameter-name">getData</span>()</span>)
+                  <a href="dslink.browser/PassiveChannel/sendWhenReady.html"><span class="name ">sendWhenReady</span></a><span class="signature">(<wbr><span class="parameter" id="sendWhenReady-param-handler"><span class="type-annotation"><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></span> <span class="parameter-name">handler</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -296,16 +306,18 @@ requester and responder should handle the merging of methods
     <div class="container-fluid">
         <div class="container">
             <p class="text-center">
-
-                <span class="copyright no-break">dslink 1.0.0</span>
-                &bull;
-                <span class="copyright no-break">
-                <a href="https://www.dartlang.org"><img src="static-assets/favicon.png" alt="Dart" title="Dart"
-                  width="24" height="24"></a> API Docs
+                <span class="no-break">
+                  dslink 1.0.0 api docs
                 </span>
                 &bull;
                 <span class="copyright no-break">
-                    <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
                 </span>
             </p>
         </div>
