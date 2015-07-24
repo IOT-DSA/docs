@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/RemoteNode/resetNodeCache.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -102,9 +103,18 @@
 
     <section class="desc markdown">
     
+          <p>clear all configs attributes and children</p>
     
-        <p>clear all configs attributes and children</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// clear all configs attributes and children
+void resetNodeCache() {
+  configs.clear();
+  attributes.clear();
+  children.clear();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

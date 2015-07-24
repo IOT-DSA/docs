@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/LocalNodeImpl/load.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -130,10 +131,39 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void load(Map m) {
+  if (_loaded) {
+    configs.clear();
+    attributes.clear();
+    children.clear();
+  }
+  String childPathPre;
+  if (path == &apos;/&apos;) {
+    childPathPre = &apos;/&apos;;
+  } else {
+    childPathPre = &apos;$path/&apos;;
+  }
+  m.forEach((String key, value) {
+    if (key.startsWith(r&apos;$&apos;)) {
+      configs[key] = value;
+    } else if (key.startsWith(&apos;@&apos;)) {
+      attributes[key] = value;
+    } else if (value is Map) {
+      Node node = provider.getOrCreateNode(&apos;$childPathPre$key&apos;, false);
+      if (node is LocalNodeImpl) {
+        node.load(value);
+      }
+      children[key] = node;
+    }
+  });
+  _loaded = true;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

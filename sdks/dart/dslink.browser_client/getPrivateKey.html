@@ -44,6 +44,7 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser_client/getPrivateKey.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -53,8 +54,6 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></h5>
-
     <ol id="sidebar">
 
 
@@ -86,10 +85,30 @@ If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorag
 
     <section class="desc markdown">
     
-    
-        <p>Get a Private Key using the specified storage strategy.
+          <p>Get a Private Key using the specified storage strategy.
 If storage is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Get a Private Key using the specified storage strategy.
+/// If [storage] is not specified, it uses the [LocalDataStorage] class.
+Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
+  if (storage == null) {
+    storage = LocalDataStorage.INSTANCE;
+  }
+
+  if (await storage.has(&quot;dsa_key&quot;)) {
+    return new PrivateKey.loadFromString(await storage.get(&quot;dsa_key&quot;));
+  }
+
+  var key = await PrivateKey.generate();
+
+  await storage.store(&quot;dsa_key&quot;, key.saveToString());
+
+  return key;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

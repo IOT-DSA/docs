@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LocalNode/unsubscribe.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -126,9 +127,18 @@
 
     <section class="desc markdown">
     
+          <p>Unsubscribe the given callback from this node.</p>
     
-        <p>Unsubscribe the given callback from this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Unsubscribe the given [callback] from this node.
+void unsubscribe(callback(ValueUpdate update)) {
+  if (callbacks.containsKey(callback)) {
+    callbacks.remove(callback);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

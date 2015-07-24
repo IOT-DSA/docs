@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/ListController/loadProfile.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -97,10 +98,32 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void loadProfile(String defName) {
+  _ready = true;
+  String defPath = defName;
+  if (!defPath.startsWith(&apos;/&apos;)) {
+    defPath = &apos;/defs/profile/$defPath&apos;;
+  }
+  if (node.profile is RemoteNode &amp;&amp;
+      (node.profile as RemoteNode).remotePath == defPath) {
+    return;
+  }
+  node.profile = requester.nodeCache.getDefNode(defPath, defName);
+  if (defName == &apos;node&apos;) {
+    return;
+  }
+  if ((node.profile is RemoteNode) &amp;&amp; !(node.profile as RemoteNode).listed) {
+    _ready = false;
+    _profileLoader =
+        new ListDefListener(node.profile, requester, _onProfileUpdate);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

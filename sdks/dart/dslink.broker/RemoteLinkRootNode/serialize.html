@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkRootNode/serialize.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -146,10 +147,29 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Map serialize(bool withChildren) {
+  Map rslt = {};
+  configs.forEach((String name, Object val) {
+    rslt[name] = val;
+  });
+  attributes.forEach((String name, Object val) {
+    rslt[name] = val;
+  });
+  pchildren.forEach((String name, VirtualNodePermission val) {
+    rslt[name] = val.serialize();
+  });
+  List permissionData = this.serializePermission();
+  if (permissionData != null) {
+    rslt[&apos;?permissions&apos;] = permissionData;
+  }
+  return rslt;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

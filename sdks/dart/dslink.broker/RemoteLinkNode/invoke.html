@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkNode/invoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -135,9 +136,33 @@
 
     <section class="desc markdown">
     
+          <p>requester invoke function</p>
     
-        <p>requester invoke function</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// requester invoke function
+InvokeResponse invoke(
+    Map params, Responder responder, InvokeResponse response, LocalNode parentNode, [int maxPermission = Permission.CONFIG]) {
+  // TODO, when invoke closed without any data, also need to updateStream to close
+  StreamSubscription sub = _linkManager.requester
+  .invoke(remotePath, params)
+  .listen((RequesterInvokeUpdate update) {
+    if (update.error != null) {
+      response.close(update.error);
+    } else {
+      response.updateStream(update.updates,
+      streamStatus: update.streamStatus, columns: update.rawColumns, meta:update.meta);
+    }
+  }, onDone: () {
+    response.close();
+  });
+  response.onClose = (InvokeResponse rsp) {
+    sub.cancel();
+  };
+  return response;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

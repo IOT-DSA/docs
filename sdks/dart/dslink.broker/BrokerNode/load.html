@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNode/load.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -141,10 +142,19 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void load(Map m) {
+  super.load(m);
+  if (m[&apos;?permissions&apos;] is List) {
+    loadPermission(m[&apos;?permissions&apos;]);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

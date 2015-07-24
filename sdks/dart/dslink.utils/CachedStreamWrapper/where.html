@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/where.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,14 +122,18 @@
 
     <section class="desc markdown">
     
-    
-        <p>Creates a new stream from this stream that discards some data events.</p>
+          <p>Creates a new stream from this stream that discards some data events.</p>
 <p>The new stream sends the same error and done events as this stream,
 but it only sends the data events that satisfy the [test].</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually perform the <code>test</code>.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; where(bool test(T event)) =&gt; _stream.where(test);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

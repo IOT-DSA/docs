@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/every.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,11 +122,15 @@
 
     <section class="desc markdown">
     
-    
-        <p>Checks whether [test] accepts all elements provided by this stream.</p>
+          <p>Checks whether [test] accepts all elements provided by this stream.</p>
 <p>Completes the [Future] when the answer is known.
 If this stream reports an error, the [Future] will report that error.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;bool&gt; every(bool test(T element)) =&gt; _stream.every(test);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

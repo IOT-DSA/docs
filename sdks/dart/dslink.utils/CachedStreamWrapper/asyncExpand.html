@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/asyncExpand.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Creates a new stream with the events of a stream per original event.</p>
+          <p>Creates a new stream with the events of a stream per original event.</p>
 <p>This acts like [expand], except that [convert] returns a [Stream]
 instead of an [Iterable].
 The events of the returned stream becomes the events of the returned
@@ -131,6 +131,11 @@ stream, in the order they are produced.</p>
 just as if it returned an empty stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream asyncExpand(Stream convert(T event)) =&gt; _stream.asyncExpand(convert);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

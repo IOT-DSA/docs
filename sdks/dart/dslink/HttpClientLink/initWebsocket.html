@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/HttpClientLink/initWebsocket.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -100,10 +101,59 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
+  if (_closed) return;
+
+//    if (reconnect &amp;&amp; _httpConnection == null) {
+//      initHttp();
+//    }
+  try {
+    var socket = await HttpHelper.connectToWebSocket(&apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
+    _wsConnection = new WebSocketConnection(socket,
+        clientLink: this, enableTimeout: true);
+
+    logger.info(&quot;Connected&quot;);
+    if (!_onConnectedCompleter.isCompleted) {
+      _onConnectedCompleter.complete();
+    }
+
+    if (responder != null) {
+      responder.connection = _wsConnection.responderChannel;
+    }
+
+    if (requester != null) {
+      _wsConnection.onRequesterReady.then((channel) {
+        requester.connection = channel;
+        if (!_onRequesterReadyCompleter.isCompleted) {
+          _onRequesterReadyCompleter.complete(requester);
+        }
+      });
+    }
+    _wsConnection.onDisconnected.then((connection) {
+      initWebsocket();
+    });
+  } catch (error) {
+    logger.fine(error);
+    if (error is WebSocketException &amp;&amp;
+        error.message.contains(&apos;was not upgraded to websocket&apos;)) {
+      DsTimer.timerOnceAfter(connect, _connDelay * 1000);
+    } else if (reconnect) {
+      DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);
+      if (_wsDelay &lt; 60) _wsDelay++;
+    }
+//      else {
+//        initHttp();
+//        _wsDelay = 5;
+//        DsTimer.timerOnceAfter(initWebsocket, 5000);
+//      }
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodeProvider/loadDef.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -73,6 +74,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -116,9 +118,35 @@
 
     <section class="desc markdown">
     
+          <p>load a fixed profile map</p>
     
-        <p>load a fixed profile map</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// load a fixed profile map
+void loadDef() {
+  DefinitionNode profileNode = getOrCreateNode(&apos;/defs/profile&apos;, false);
+  defsNode.children[&apos;profile&apos;] = profileNode;
+  defaultProfileMap.forEach((String name, Map m) {
+    String path = &apos;/defs/profile/$name&apos;;
+    DefinitionNode node = getOrCreateNode(path, false);
+    node.load(m);
+    profileNode.children[name] = node;
+  });
+  File connsFile = new File(&quot;defs.json&quot;);
+  try {
+    String data = connsFile.readAsStringSync();
+    Map m = DsJson.decode(data);
+    m.forEach((String name, Map m) {
+      String path = &apos;/defs/$name&apos;;
+      DefinitionNode node = getOrCreateNode(path,false);
+      node.load(m);
+      defsNode.children[name] = node;
+    });
+  } catch (err) {
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

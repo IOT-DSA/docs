@@ -43,6 +43,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/addLink.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -52,8 +53,6 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
-
     <ol id="sidebar">
 
 
@@ -90,9 +89,10 @@
       <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
+      <li><a href="dslink.broker/UpstreamServerLink-class.html">UpstreamServerLink</a></li>
       <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
-      <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
+      <li><a href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -110,10 +110,53 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">InvokeResponse addLink(Map params, Responder responder, InvokeResponse response,
+    LocalNode parentNode) {
+  Object name = params[&apos;Name&apos;];
+  Object dsId = params[&apos;Id&apos;];
+  if (parentNode is UserNode &amp;&amp;
+      name is String &amp;&amp;
+      name != &apos;&apos; &amp;&amp;
+      !name.contains(Path.invalidNameChar) &amp;&amp;
+      !name.startsWith(r&apos;$&apos;) &amp;&amp;
+      !name.startsWith(&apos;!&apos;)) {
+    if (!(name as String).startsWith(&apos;#&apos;)) {
+      name = &apos;#$name&apos;;
+    }
+    if (parentNode.children.containsKey(name)) {
+      return response
+        ..close(new DSError(&apos;invalidParameter&apos;, msg: &apos;node already exist&apos;));
+    }
+    String userDsId = &apos;${parentNode.username}:$dsId&apos;;
+    String existingPath = parentNode.provider._id2connPath[userDsId];
+    if (existingPath != null &amp;&amp; existingPath.startsWith(&apos;/users/&apos;)) {
+      return response
+             ..close(new DSError(&apos;invalidParameter&apos;, msg: &apos;id already in use&apos;));
+    }
+    String path = &apos;${parentNode.path}/$name&apos;;
+    parentNode.provider._id2connPath[userDsId] = path;
+    parentNode.provider._connPath2id[path] = userDsId;
+
+    ServerLink link = parentNode.provider.getLink(userDsId);
+    if (link != null) {
+      link.close();
+      parentNode.provider.removeLink(link);
+    }
+    LocalNode node = responder.nodeProvider.getOrCreateNode(path, false);
+    node.configs[r&apos;$$dsId&apos;] = dsId;
+    parentNode.children[name] = node;
+    parentNode.updateList(name);
+    DsTimer.timerOnceBefore((responder.nodeProvider as BrokerNodeProvider).saveUsrNodes, 1000);
+
+  }
+  return response..close(DSError.INVALID_PARAMETER);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkNode/removeConfig.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -135,9 +136,26 @@
 
     <section class="desc markdown">
     
+          <p>Called by the link internals to remove a config from this node.</p>
     
-        <p>Called by the link internals to remove a config from this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Response removeConfig(String name, Responder responder, Response response) {
+  // TODO check permission on RemoteLinkRootNode
+  _linkManager.requester.remove(remotePath).then((update) {
+    response.close();
+  }).catchError((err) {
+    if (err is DSError) {
+      response.close(err);
+    } else {
+      // TODO need a broker setting to disable detail
+      response.close(new DSError(&apos;internalError&apos;, detail: &apos;$err&apos;));
+    }
+  });
+  return response;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

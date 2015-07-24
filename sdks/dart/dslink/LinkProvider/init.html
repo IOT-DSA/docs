@@ -46,6 +46,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LinkProvider/init.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -125,8 +126,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
 
     <section class="desc markdown">
     
-    
-        <p>Initializes the Link.
+          <p>Initializes the Link.
 There is no guarantee that the link will be ready when this method returns.
 If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not called prior to calling this method, it is called.</p>
 <p>This method handles the following:
@@ -136,6 +136,109 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
 - creating the actual link.
 - discovering brokers if that was enabled.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Initializes the Link.
+/// There is no guarantee that the link will be ready when this method returns.
+/// If the [configure] method is not called prior to calling this method, it is called.
+///
+/// This method handles the following:
+/// - calling [configure] if it has not been called.
+/// - creating a [provider] if it has not been created.
+/// - loading the nodes.json file.
+/// - creating the actual link.
+/// - discovering brokers if that was enabled.
+void init() {
+  if (!_configured) {
+    if (!configure()) {
+      return;
+    }
+  }
+
+  _initialized = true;
+
+  if (profiles != null) {
+    for (var key in profiles.keys.toList()) {
+      var value = profiles[key];
+
+      if (value is Type) {
+        var mirror = reflectClass(value);
+        profiles[key] = (String path) {
+          MethodMirror cm = mirror.declarations[mirror.simpleName];
+          var paramCount = cm.parameters.length;
+          var m = mirror.newInstance(const Symbol(&quot;&quot;), paramCount == 1 ? [path] : [path, provider]);
+          return m.reflectee;
+        };
+      } else if (value is _TwoArgumentProfileFunction) {
+        profiles[key] = (String path) {
+          return value(path, provider);
+        };
+      }
+    }
+  }
+
+  if (provider == null) {
+    provider = new SimpleNodeProvider(null, profiles);
+  }
+
+  if (provider is SerializableNodeProvider &amp;&amp;
+      !_reconnecting) {
+    _nodesFile = getConfig(&apos;nodes&apos;) == null
+        ? new File(&quot;${_basePath}/nodes.json&quot;)
+        : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+    Map loadedNodesData;
+
+    if (loadNodesJson) {
+      _nodesFile = getConfig(&apos;nodes&apos;) == null
+        ? new File(&quot;${_basePath}/nodes.json&quot;)
+        : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+      try {
+        String nodesStr = _nodesFile.readAsStringSync();
+        loadedNodesData = DsJson.decode(nodesStr);
+      } catch (err) {}
+    }
+
+    if (loadedNodesData != null) {
+      (provider as SerializableNodeProvider).init(loadedNodesData);
+    } else if (defaultNodes != null) {
+      (provider as SerializableNodeProvider).init(defaultNodes);
+    }
+  }
+
+  void doRun() {
+    link = new HttpClientLink(brokerUrl, prefix, privateKey,
+        isRequester: isRequester,
+        isResponder: isResponder,
+        nodeProvider: provider,
+        enableHttp: enableHttp,
+        home: home);
+    _ready = true;
+
+    if (_connectOnReady) {
+      connect();
+    }
+  }
+
+  if (_discoverBroker) {
+    var discovery = new BrokerDiscoveryClient();
+    new Future(() async {
+      await discovery.init();
+      try {
+        var broker = await chooseBroker(discovery.discover());
+        print(&quot;Discovered Broker at ${broker}&quot;);
+        brokerUrl = broker;
+        doRun();
+      } catch (e) {
+        print(&quot;Failed to discover a broker.&quot;);
+        exit(1);
+      }
+    });
+  } else {
+    doRun();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

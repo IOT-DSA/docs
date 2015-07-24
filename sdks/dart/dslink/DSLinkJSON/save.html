@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/DSLinkJSON/save.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -90,10 +91,30 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Map save() {
+  verify();
+
+  var map = new Map&lt;String, dynamic&gt;.from(_json != null ? _json : {});
+  map[&quot;name&quot;] = name;
+  map[&quot;version&quot;] = version;
+  map[&quot;description&quot;] = description;
+  map[&quot;main&quot;] = main;
+  map[&quot;engines&quot;] = engines;
+  map[&quot;configs&quot;] = configs;
+  map[&quot;getDependencies&quot;] = getDependencies;
+  for (var key in map.keys.toList()) {
+    if (map[key] == null) {
+      map.remove(key);
+    }
+  }
+  return map;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

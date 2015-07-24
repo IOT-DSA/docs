@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/LocalNode/subscribe.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -126,9 +127,17 @@
 
     <section class="desc markdown">
     
+          <p>Subscribes the given callback to this node.</p>
     
-        <p>Subscribes the given callback to this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Subscribes the given [callback] to this node.
+RespSubscribeListener subscribe(callback(ValueUpdate), [int cachelevel = 1]) {
+  callbacks[callback] = cachelevel;
+  return new RespSubscribeListener(this, callback);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

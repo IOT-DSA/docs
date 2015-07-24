@@ -46,6 +46,7 @@ When the stream subscription count goes to 0, the node is unsubscribed from.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.client/LinkProvider/onValueChange.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -129,11 +130,37 @@ When the stream subscription count goes to 0, the node is unsubscribed from.
 
     <section class="desc markdown">
     
-    
-        <p>Retrieves a Broadcast Stream which subscribes to path with the specified cacheLevel.
+          <p>Retrieves a Broadcast Stream which subscribes to path with the specified cacheLevel.
 The node is only subscribed if there is at least one stream subscription.
 When the stream subscription count goes to 0, the node is unsubscribed from.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Retrieves a Broadcast Stream which subscribes to [path] with the specified [cacheLevel].
+/// The node is only subscribed if there is at least one stream subscription.
+/// When the stream subscription count goes to 0, the node is unsubscribed from.
+Stream&lt;ValueUpdate&gt; onValueChange(String path, {int cacheLevel: 1}) {
+  RespSubscribeListener listener;
+  StreamController&lt;ValueUpdate&gt; controller;
+  int subs = 0;
+  controller = new StreamController&lt;ValueUpdate&gt;.broadcast(onListen: () {
+    subs++;
+    if (listener == null) {
+      listener = this[path].subscribe((ValueUpdate update) {
+        controller.add(update);
+      }, cacheLevel);
+    }
+  }, onCancel: () {
+    subs--;
+    if (subs == 0) {
+      listener.cancel();
+      listener = null;
+    }
+  });
+  return controller.stream;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

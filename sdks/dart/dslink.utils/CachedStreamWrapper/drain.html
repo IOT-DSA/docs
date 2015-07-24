@@ -45,6 +45,7 @@ occured.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/drain.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -122,8 +123,7 @@ occured.
 
     <section class="desc markdown">
     
-    
-        <p>Discards all data on the stream, but signals when it's done or an error
+          <p>Discards all data on the stream, but signals when it's done or an error
 occured.</p>
 <p>When subscribing using [drain], cancelOnError will be true. This means
 that the future will complete with the first error on the stream and then
@@ -131,6 +131,11 @@ cancel the subscription.</p>
 <p>In case of a <code>done</code> event the future completes with the given
 [futureValue].</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future drain([futureValue]) =&gt; _stream.drain(futureValue);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

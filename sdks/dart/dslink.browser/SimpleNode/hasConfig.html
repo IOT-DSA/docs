@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SimpleNode/hasConfig.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -153,9 +154,14 @@
 
     <section class="desc markdown">
     
+          <p>Checks if this node has the specified config.</p>
     
-        <p>Checks if this node has the specified config.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Checks if this node has the specified config.
+bool hasConfig(String name) =&gt; configs.containsKey(name.startsWith(r&quot;$&quot;) ? name : &apos;\$&apos; + name);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

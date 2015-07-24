@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.common/DSError/serialize.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -97,10 +98,31 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Map serialize() {
+  Map rslt = {};
+  if (msg != null) {
+    rslt[&apos;msg&apos;] = msg;
+  }
+  if (type != null) {
+    rslt[&apos;type&apos;] = type;
+  }
+  if (path != null) {
+    rslt[&apos;path&apos;] = path;
+  }
+  if (phase == ErrorPhase.request) {
+    rslt[&apos;phase&apos;] = ErrorPhase.request;
+  }
+  if (detail != null) {
+    rslt[&apos;detail&apos;] = detail;
+  }
+  return rslt;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

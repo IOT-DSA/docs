@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/SimpleNodeProvider/updateValue.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -109,9 +110,17 @@
 
     <section class="desc markdown">
     
+          <p>Updates the value of the node at [path] to the given [value].</p>
     
-        <p>Updates the value of the node at [path] to the given [value].</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void updateValue(String path, Object value) {
+  SimpleNode node = getNode(path);
+  node.updateValue(value);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

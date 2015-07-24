@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/Base64/decode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -94,10 +95,73 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">static Uint8List decode(String input) {
+  if (input == null) {
+    return null;
+  }
+  int len = input.length;
+  if (len == 0) {
+    return new Uint8List(0);
+  }
+
+  // Count &apos;\r&apos;, &apos;\n&apos; and illegal characters, For illegal characters,
+  // throw an exception.
+  int extrasLen = 0;
+  for (int i = 0; i &lt; len; i++) {
+    int c = _decodeTable[input.codeUnitAt(i)];
+    if (c &lt; 0) {
+      extrasLen++;
+      if (c == -2) {
+        return null;
+      }
+    }
+  }
+
+  int lenmis = (len - extrasLen) % 4;
+  if (lenmis == 2) {
+    input = &apos;$input==&apos;;
+    len += 2;
+  } else if (lenmis == 3) {
+    input = &apos;$input=&apos;;
+    len += 1;
+  } else if (lenmis == 1) {
+    return null;
+  }
+
+  // Count pad characters.
+  int padLength = 0;
+  for (int i = len - 1; i &gt;= 0; i--) {
+    int currentCodeUnit = input.codeUnitAt(i);
+    if (_decodeTable[currentCodeUnit] &gt; 0) break;
+    if (currentCodeUnit == PAD) padLength++;
+  }
+  int outputLen = (((len - extrasLen) * 6) &gt;&gt; 3) - padLength;
+  Uint8List out = new Uint8List(outputLen);
+
+  for (int i = 0, o = 0; o &lt; outputLen;) {
+    // Accumulate 4 valid 6 bit Base 64 characters into an int.
+    int x = 0;
+    for (int j = 4; j &gt; 0;) {
+      int c = _decodeTable[input.codeUnitAt(i++)];
+      if (c &gt;= 0) {
+        x = ((x &lt;&lt; 6) &amp; 0xFFFFFF) | c;
+        j--;
+      }
+    }
+    out[o++] = x &gt;&gt; 16;
+    if (o &lt; outputLen) {
+      out[o++] = (x &gt;&gt; 8) &amp; 0xFF;
+      if (o &lt; outputLen) out[o++] = x &amp; 0xFF;
+    }
+  }
+  return out;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

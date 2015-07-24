@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.common/Path/mergeBasePath.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -104,9 +105,37 @@
 
     <section class="desc markdown">
     
+          <p>Merges the base path with this path.</p>
     
-        <p>Merges the base path with this path.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Merges the [base] path with this path.
+void mergeBasePath(String base, [bool force = false]) {
+  if (base == null) {
+    return;
+  }
+
+  if (!isAbsolute) {
+    if (parentPath == &apos;&apos;) {
+      parentPath = base;
+    } else {
+      parentPath = &apos;$base/$parentPath&apos;;
+    }
+    path = &apos;$parentPath/$name&apos;;
+  } else if (force) {
+    // apply base path on a absolute path
+    if (name == &apos;&apos;) {
+      // map the root path
+      path = base;
+      _parse();
+    } else {
+      parentPath = &apos;$base$parentPath&apos;;
+      path = &apos;$parentPath/$name&apos;;
+    }
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

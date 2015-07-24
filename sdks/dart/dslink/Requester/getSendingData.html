@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/Requester/getSendingData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -98,9 +99,17 @@
 
     <section class="desc markdown">
     
+          <p>gather all the changes from</p>
     
-        <p>gather all the changes from</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">ProcessorResult getSendingData() {
+  ProcessorResult rslt = super.getSendingData();
+  lastSentId = nextRid - 1;
+  return rslt;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

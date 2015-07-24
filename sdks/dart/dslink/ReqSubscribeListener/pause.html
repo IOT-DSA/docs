@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/ReqSubscribeListener/pause.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -95,8 +96,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Request that the stream pauses events until further notice.</p>
+          <p>Request that the stream pauses events until further notice.</p>
 <p>While paused, the subscription will not fire any events.
 If it receives events from its source, they will be buffered until
 the subscription is resumed.
@@ -114,6 +114,11 @@ of resumes must be performed to resume the stream.</p>
 <p>Currently DOM streams silently drop events when the stream is paused. This
 is a bug and will be fixed.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void pause([Future resumeSignal]) {}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -45,6 +45,7 @@ If m is specified, the node is loaded with that map.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/SimpleNode/createChild.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -154,10 +155,19 @@ If m is specified, the node is loaded with that map.
 
     <section class="desc markdown">
     
-    
-        <p>Creates a child with the given name.
+          <p>Creates a child with the given name.
 If m is specified, the node is loaded with that map.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Creates a child with the given [name].
+/// If [m] is specified, the node is loaded with that map.
+SimpleNode createChild(String name, [Map m]) {
+  var tp = new Path(path).child(name).path;
+  return provider.addNode(tp, m == null ? {} : m);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

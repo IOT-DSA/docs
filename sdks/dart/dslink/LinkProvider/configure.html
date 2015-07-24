@@ -50,6 +50,7 @@ This includes:
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LinkProvider/configure.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -133,8 +134,7 @@ This includes:
 
     <section class="desc markdown">
     
-    
-        <p>Configure the link.
+          <p>Configure the link.
 If argp is provided for argument parsing, it is used.
 This includes:
 - processing command-line arguments
@@ -142,6 +142,228 @@ This includes:
 - loading dslink.json files
 - loading or creating private keys</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Configure the link.
+/// If [argp] is provided for argument parsing, it is used.
+/// This includes:
+/// - processing command-line arguments
+/// - setting broker urls
+/// - loading dslink.json files
+/// - loading or creating private keys
+bool configure({ArgParser argp, OptionResultsHandler optionsHandler}) {
+  _configured = true;
+
+  if (link != null) {
+    link.close();
+    link = null;
+  }
+
+  if (argp == null) {
+    argp = new ArgParser(allowTrailingOptions: !strictOptions);
+  }
+
+  argp.addOption(&quot;broker&quot;,
+      abbr: &quot;b&quot;,
+      help: &quot;Broker URL&quot;,
+      defaultsTo: &quot;http://127.0.0.1:8080/conn&quot;);
+  argp.addOption(&quot;name&quot;, abbr: &quot;n&quot;, help: &quot;Link Name&quot;);
+  argp.addOption(&quot;base-path&quot;, help: &quot;Base Path for DSLink&quot;);
+  argp.addOption(&quot;watch-file&quot;, help: &quot;Watch File for DSLink&quot;, hide: true);
+  argp.addOption(&quot;log-file&quot;, help: &quot;Log File for DSLink&quot;);
+  argp.addOption(&quot;log&quot;,
+      abbr: &quot;l&quot;,
+      allowed: Level.LEVELS.map((it) =&gt; it.name.toLowerCase()).toList()
+        ..addAll([&quot;auto&quot;, &quot;debug&quot;]),
+      help: &quot;Log Level&quot;,
+      defaultsTo: &quot;AUTO&quot;);
+  argp.addFlag(&quot;help&quot;,
+      abbr: &quot;h&quot;, help: &quot;Displays this Help Message&quot;, negatable: false);
+  argp.addFlag(&quot;discover&quot;,
+      abbr: &quot;d&quot;, help: &quot;Automatically Discover a Broker&quot;, negatable: false);
+
+  ArgResults opts = argp.parse(args);
+
+  if (opts[&quot;log&quot;] == &quot;auto&quot;) {
+    if (DEBUG_MODE) {
+      updateLogLevel(&quot;all&quot;);
+    } else {
+      updateLogLevel(defaultLogLevel);
+    }
+  } else {
+    updateLogLevel(opts[&quot;log&quot;]);
+  }
+
+  if (opts[&quot;base-path&quot;] != null) {
+    _basePath = opts[&quot;base-path&quot;];
+
+    if (_basePath.endsWith(&quot;/&quot;)) {
+      _basePath = _basePath.substring(0, _basePath.length - 1);
+    }
+  }
+
+  if (opts[&quot;watch-file&quot;] != null) {
+    _watchFile = opts[&quot;watch-file&quot;];
+  }
+
+  _logFile = opts[&quot;log-file&quot;];
+
+  if (_logFile != null) {
+    var file = new File(_logFile);
+    if (!file.existsSync()) {
+      file.createSync(recursive: true);
+    }
+    logger.clearListeners();
+    IOSink out = _logFileOut = file.openWrite(mode: FileMode.APPEND);
+    logger.onRecord.listen((record) {
+      out.writeln(&quot;[${new DateTime.now()}][${record.level.name}] ${record.message}&quot;);
+      if (record.error != null) {
+        out.writeln(record.error);
+      }
+
+      if (record.stackTrace != null) {
+        out.writeln(record.stackTrace);
+      }
+
+      out.flush();
+    });
+  }
+
+  if (_watchFile != null) {
+    var file = new File(_watchFile);
+    StreamSubscription sub;
+    sub = file.watch(events: FileSystemEvent.DELETE).listen((_) {
+      close();
+      sub.cancel();
+
+      if (_logFileOut != null) {
+        try {
+          _logFileOut.close();
+        } catch (e) {}
+      }
+    });
+  }
+
+  String helpStr =
+      &quot;usage: $command [--broker URL] [--log LEVEL] [--name NAME] [--discover]&quot;;
+
+  if (opts[&quot;help&quot;]) {
+    print(helpStr);
+    print(argp.usage);
+    if (exitOnFailure) {
+      exit(1);
+    } else {
+      return false;
+    }
+  }
+
+  brokerUrl = opts[&apos;broker&apos;];
+  if (brokerUrl == null &amp;&amp; !opts[&quot;discover&quot;]) {
+    print(
+        &quot;No Broker URL Specified. One of [--broker, --discover] is required.&quot;);
+    print(helpStr);
+    print(argp.usage);
+    if (exitOnFailure) {
+      exit(1);
+    } else {
+      return false;
+    }
+  }
+
+  String name = opts[&quot;name&quot;];
+
+  if (name != null) {
+    if (name.endsWith(&quot;-&quot;)) {
+      prefix = name;
+    } else {
+      prefix = &quot;${name}-&quot;;
+    }
+  }
+
+  // load configs
+  File dslinkFile = new File(&quot;${_basePath}/dslink.json&quot;);
+
+  if (dslinkFile.existsSync()) {
+    var e;
+    try {
+      String configStr = dslinkFile.readAsStringSync();
+      dslinkJson = DsJson.decode(configStr);
+    } catch (err) {
+      e = err;
+    }
+
+    if (dslinkJson == null) {
+      logger.severe(&quot;Invalid dslink.json&quot;, e);
+      if (exitOnFailure) {
+        exit(1);
+      } else {
+        return false;
+      }
+    }
+  } else {
+    dslinkJson = {};
+  }
+
+  if (brokerUrl != null) {
+    if (!brokerUrl.startsWith(&apos;http&apos;)) {
+      brokerUrl = &apos;http://$brokerUrl&apos;;
+    }
+  }
+
+  Uri brokerUri = Uri.parse(brokerUrl);
+
+  File keyFile = getConfig(&apos;key&apos;) == null
+      ? new File(&quot;${_basePath}/.dslink.key&quot;)
+      : new File.fromUri(Uri.parse(getConfig(&apos;key&apos;)));
+  String key;
+
+  try {
+    key = keyFile.readAsStringSync();
+    privateKey = new PrivateKey.loadFromString(key);
+  } catch (err) {}
+
+  if (key == null || key.length != 131) {
+    // 43 bytes d, 87 bytes Q, 1 space
+    // generate the key
+    if (DSRandom.instance.needsEntropy) {
+      String macs;
+      if (Platform.isWindows) {
+        macs = Process.runSync(&quot;getmac&quot;, []).stdout.toString();
+      } else {
+        try {
+          macs = Process.runSync(&quot;arp&quot;, [&quot;-an&quot;]).stdout.toString();
+        } catch (e) {
+          try {
+            var envs = &quot;&quot;;
+            for (var i in Platform.environment.keys) {
+              envs += &quot;${i}=${Platform.environment[i]}\n&quot;;
+            }
+            macs = envs;
+          } catch (e) {}
+        }
+      }
+      // randomize the PRNG with the system mac (as well as timestamp)
+      DSRandom.instance.addEntropy(macs);
+    }
+    privateKey = new PrivateKey.generateSync();
+    key = privateKey.saveToString();
+    if (savePrivateKey) {
+      keyFile.writeAsStringSync(key);
+    }
+  }
+
+  if (opts[&quot;discover&quot;]) {
+    _discoverBroker = true;
+  }
+
+  if (optionsHandler != null) {
+    optionsHandler(opts);
+  }
+
+  return true;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

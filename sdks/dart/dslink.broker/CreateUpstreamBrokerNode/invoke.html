@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/CreateUpstreamBrokerNode/invoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -120,9 +121,23 @@
 
     <section class="desc markdown">
     
+          <p>Called by the link internals to invoke this node.</p>
     
-        <p>Called by the link internals to invoke this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+InvokeResponse invoke(
+    Map params, Responder responder, InvokeResponse response, Node parentNode,
+    [int maxPermission = Permission.CONFIG]) {
+  var name = params[&quot;name&quot;];
+  var ourName = params[&quot;brokerName&quot;];
+  var url = params[&quot;url&quot;];
+  var b = provider.getOrCreateNode(&quot;/sys/upstream&quot;, false) as UpstreamNode;
+  b.addUpstreamConnection(name, url, ourName);
+  return response..close();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

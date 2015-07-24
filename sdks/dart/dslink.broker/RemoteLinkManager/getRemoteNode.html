@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkManager/getRemoteNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -103,10 +104,25 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">RemoteNode getRemoteNode(String rPath) {
+  String fullPath = path + rPath;
+  if (rPath == &apos;&apos;) {
+    rPath = &apos;/&apos;;
+  }
+  print(fullPath);
+  RemoteLinkNode node = nodes[rPath];
+  if (node == null) {
+    node = new RemoteLinkNode(fullPath, broker, rPath, this);
+    nodes[rPath] = node;
+  }
+  return node;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

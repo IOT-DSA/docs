@@ -46,6 +46,7 @@ node at the given path to the specified value, and return that value.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LinkProvider/val.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -129,11 +130,25 @@ node at the given path to the specified value, and return that value.
 
     <section class="desc markdown">
     
-    
-        <p>If only path is specified, this method fetches the value of the node at the given path.
+          <p>If only path is specified, this method fetches the value of the node at the given path.
 If value is also specified, it will set the value of the
 node at the given path to the specified value, and return that value.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// If only [path] is specified, this method fetches the value of the node at the given path.
+/// If [value] is also specified, it will set the value of the
+/// node at the given path to the specified value, and return that value.
+dynamic val(String path, [value = unspecified]) {
+  if (value is Unspecified) {
+    return this[path].lastValueUpdate.value;
+  } else {
+    updateValue(path, value);
+    return value;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

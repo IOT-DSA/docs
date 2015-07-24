@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/listen.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Adds a subscription to this stream.</p>
+          <p>Adds a subscription to this stream.</p>
 <p>On each data event from this stream, the subscriber's [onData] handler
 is called. If [onData] is null, nothing happens.</p>
 <p>On errors from this stream, the [onError] handler is given a
@@ -136,6 +136,18 @@ Otherwise it is called with just the error object.</p>
 <p>If [cancelOnError] is true, the subscription is ended when
 the first error is reported. The default is false.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">StreamSubscription&lt;T&gt; listen(void onData(T event),
+    {Function onError, void onDone(), bool cancelOnError}) {
+  if (_onListen != null) {
+    _onListen(onData);
+  }
+  return _stream.listen(onData,
+      onError: onError, onDone: onDone, cancelOnError: cancelOnError);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

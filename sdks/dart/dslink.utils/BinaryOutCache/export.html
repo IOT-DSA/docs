@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/BinaryOutCache/export.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -85,10 +86,42 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Uint8List export() {
+  //TODO send partial data;
+  int count = 0;
+  int totalLength = 0;
+  caches.forEach((int id, BinaryData data) {
+    ++count;
+    totalLength += data.bytes.lengthInBytes;
+  });
+  int headpos = 0;
+  int datapos = count * 9;
+  Uint8List output = new Uint8List(totalLength + datapos);
+  ByteData bytedata = new ByteData.view(output.buffer);
+  List idToRemove = [];
+  caches.forEach((int id, BinaryData data) {
+    bytedata.setUint32(headpos, datapos);
+    bytedata.setUint32(headpos + 4, id);
+//      if (partial) {
+//        bytedata.setUint8(headpos + 8, 1);
+//      } else {
+    idToRemove.add(id);
+//      }
+    output.setAll(headpos + 9, ByteDataUtil.toUint8List(data.bytes));
+    headpos += 9;
+    datapos += data.bytes.lengthInBytes;
+  });
+  for (int id in idToRemove) {
+    caches.remove(id);
+  }
+  return output;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

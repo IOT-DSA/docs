@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/BrowserUtils/createBinaryUrl.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -85,10 +86,17 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">static String createBinaryUrl(ByteData input,
+    {String type: &quot;application/octet-stream&quot;}) {
+  Uint8List data = ByteDataUtil.toUint8List(input);
+  return &quot;data:${type};base64,${CryptoUtils.bytesToBase64(data)}&quot;;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

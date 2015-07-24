@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodeProvider/addLink.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -73,6 +74,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -120,10 +122,36 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void addLink(ServerLink link) {
+  String str = link.dsId;
+  if (link.session != null) {
+    if (link.session.startsWith(&quot;upstream@&quot;)) {
+      str = &quot;${link.session.substring(9)}@${str}&quot;;
+    } else {
+      str = &apos;$str ${link.session}&apos;;
+    }
+  }
+
+  String connPath;
+  // TODO update children list of /conns node
+  if (_links.containsKey(str)) {
+    // TODO is it possible same link get added twice?
+  } else {
+    _links[str] = link;
+    if (link.session == null || link.session.startsWith(&quot;upstream@&quot;)) {
+      // don&apos;t create node for requester node with session
+      connPath = makeConnPath(str);
+      getOrCreateNode(connPath, false).configs[r&apos;$$dsId&apos;] = link.dsId;
+      logger.info(&apos;new node added at $connPath&apos;);
+    }
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

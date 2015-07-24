@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/Node/getAttribute.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -100,9 +101,23 @@
 
     <section class="desc markdown">
     
+          <p>Get an Attribute</p>
     
-        <p>Get an Attribute</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Get an Attribute
+Object getAttribute(String name) {
+  if (attributes.containsKey(name)) {
+    return attributes[name];
+  }
+
+  if (profile != null &amp;&amp; profile.attributes.containsKey(name)) {
+    return profile.attributes[name];
+  }
+  return null;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

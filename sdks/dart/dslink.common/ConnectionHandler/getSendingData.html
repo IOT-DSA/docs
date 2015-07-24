@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.common/ConnectionHandler/getSendingData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -87,9 +88,24 @@
 
     <section class="desc markdown">
     
+          <p>gather all the changes from</p>
     
-        <p>gather all the changes from</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// gather all the changes from
+ProcessorResult getSendingData() {
+  _pendingSend = false;
+  List&lt;ConnectionProcessor&gt; processors = _processors;
+  _processors = [];
+  for (ConnectionProcessor proc in processors) {
+    proc.startSendingData();
+  }
+  List&lt;Map&gt; rslt = _toSendList;
+  _toSendList = [];
+  return new ProcessorResult(rslt, processors);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

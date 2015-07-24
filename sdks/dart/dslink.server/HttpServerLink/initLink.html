@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.server/HttpServerLink/initLink.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -107,10 +108,42 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">initLink(HttpRequest request, bool clientRequester, bool clientResponder,
+    String serverDsId, String serverKey,
+    {String wsUri: &apos;/ws&apos;,
+    String httpUri: &apos;/http&apos;,
+    int updateInterval: 200,
+    bool trusted:false}) async {
+  isRequester = clientResponder;
+  isResponder = clientRequester;
+
+  // TODO(rinick): don&apos;t use a hardcoded id and public key
+  Map respJson = {
+    &quot;id&quot;:
+        serverDsId, //&quot;broker-dsa-VLK07CSRoX_bBTQm4uDIcgfU-jV-KENsp52KvDG_o8g&quot;,
+    &quot;publicKey&quot;: serverKey,
+    //&quot;vvOSmyXM084PKnlBz3SeKScDoFs6I_pdGAdPAB8tOKmA5IUfIlHefdNh1jmVfi1YBTsoYeXm2IH-hUZang48jr3DnjjI3MkDSPo1czrI438Cr7LKrca8a77JMTrAlHaOS2Yd9zuzphOdYGqOFQwc5iMNiFsPdBtENTlx15n4NGDQ6e3d8mrKiSROxYB9LrF1-53goDKvmHYnDA_fbqawokM5oA3sWUIq5uNdp55_cF68Lfo9q-ea8JEsHWyDH73FqNjUaPLFdgMl8aYl-sUGpdlMMMDwRq-hnwG3ad_CX5iFkiHpW-uWucta9i3bljXgyvJ7dtVqEUQBH-GaUGkC-w&quot;,
+    &quot;wsUri&quot;: wsUri,
+    &quot;httpUri&quot;: httpUri,
+    &quot;updateInterval&quot;: updateInterval
+  };
+  if (!trusted) {
+    tempNonce = await ECDH.assign(publicKey, verifiedNonce);
+    respJson[&quot;tempKey&quot;] = tempNonce.encodedPublicKey;
+    respJson[&quot;salt&quot;] = salts[0];
+    respJson[&quot;saltS&quot;] = salts[1];
+    respJson[&quot;saltL&quot;] = salts[2];
+  }
+  updateResponseBeforeWrite(request);
+  request.response.write(DsJson.encode(respJson));
+  request.response.close();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser_client/BrowserECDHLink/connect.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -94,10 +95,58 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">connect() async {
+  if (_closed) return;
+  lockCryptoProvider();
+  Uri connUri = Uri.parse(&apos;$_conn?dsId=$dsId&apos;);
+  logger.info(&apos;Connecting: $connUri&apos;);
+  try {
+    Map requestJson = {
+      &apos;publicKey&apos;: privateKey.publicKey.qBase64,
+      &apos;isRequester&apos;: requester != null,
+      &apos;isResponder&apos;: responder != null,
+      &apos;version&apos;: DSA_VERSION
+    };
+    HttpRequest request = await HttpRequest.request(connUri.toString(),
+        method: &apos;POST&apos;,
+        withCredentials: false,
+        mimeType: &apos;application/json&apos;,
+        sendData: DsJson.encode(requestJson));
+    Map serverConfig = DsJson.decode(request.responseText);
+    saltNameMap.forEach((name, idx) {
+      //read salts
+      salts[idx] = serverConfig[name];
+    });
+    String tempKey = serverConfig[&apos;tempKey&apos;];
+    _nonce = await privateKey.getSecret(tempKey);
+
+    if (serverConfig[&apos;wsUri&apos;] is String) {
+      _wsUpdateUri = &apos;${connUri.resolve(serverConfig[&apos;wsUri&apos;])}?dsId=$dsId&apos;
+          .replaceFirst(&apos;http&apos;, &apos;ws&apos;);
+    }
+
+    if (serverConfig[&apos;httpUri&apos;] is String) {
+      // TODO implement http
+      _httpUpdateUri =
+          &apos;${connUri.resolve(serverConfig[&apos;httpUri&apos;])}?dsId=$dsId&apos;;
+    }
+
+    initWebsocket(false);
+    _connDelay = 1;
+    _wsDelay = 1;
+    // initHttp();
+
+  } catch (err) {
+    DsTimer.timerOnceAfter(connect, _connDelay * 1000);
+    if (_connDelay &lt; 60) _connDelay++;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/TableColumn/parseColumns.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -91,9 +92,31 @@
 
     <section class="desc markdown">
     
+          <p>parse List of Map into TableColumn</p>
     
-        <p>parse List of Map into TableColumn</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// parse List of Map into TableColumn
+static List&lt;TableColumn&gt; parseColumns(List list) {
+  List&lt;TableColumn&gt; rslt = &lt;TableColumn&gt;[];
+  for (Object m in list) {
+    if (m is Map &amp;&amp; m[&apos;name&apos;] is String) {
+      String type = &apos;string&apos;;
+      if (m[&apos;type&apos;] is String) {
+        type = m[&apos;type&apos;];
+      }
+      rslt.add(new TableColumn(m[&apos;name&apos;], type, m[&apos;default&apos;]));
+    } else if (m is TableColumn) {
+      rslt.add(m);
+    } else {
+      // invalid column data
+      return null;
+    }
+  }
+  return rslt;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

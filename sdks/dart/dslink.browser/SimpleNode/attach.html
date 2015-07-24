@@ -46,6 +46,7 @@ If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be 
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SimpleNode/attach.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -155,11 +156,30 @@ If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be 
 
     <section class="desc markdown">
     
-    
-        <p>Add this node to the given node.
+          <p>Add this node to the given node.
 If input is a String, it is interpreted as a node path and resolved to a node.
 If input is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be attached to that.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Add this node to the given node.
+/// If [input] is a String, it is interpreted as a node path and resolved to a node.
+/// If [input] is a [SimpleNode], it will be attached to that.
+void attach(input, {String name}) {
+  if (name == null) {
+    name = this.name;
+  }
+
+  if (input is String) {
+    provider.getNode(input).addChild(name, this);
+  } else if (input is SimpleNode) {
+    input.addChild(name, this);
+  } else {
+    throw &quot;Invalid Input&quot;;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

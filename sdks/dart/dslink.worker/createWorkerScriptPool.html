@@ -43,6 +43,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.worker/createWorkerScriptPool.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -52,8 +53,6 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></h5>
-
     <ol id="sidebar">
 
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#typedefs">Typedefs</a></li>
@@ -93,10 +92,21 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">WorkerPool createWorkerScriptPool(int count, Uri uri,
+    {Map&lt;String, dynamic&gt; metadata}) {
+  var workers = [];
+  for (var i = 1; i &lt;= count; i++) {
+    workers.add(createWorkerScript(uri,
+        metadata: {&quot;workerId&quot;: i}..addAll(metadata == null ? {} : metadata)));
+  }
+  return new WorkerPool(workers);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

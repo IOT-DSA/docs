@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/ReqSubscribeListener/cancel.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -91,8 +92,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Cancels this subscription. It will no longer receive events.</p>
+          <p>Cancels this subscription. It will no longer receive events.</p>
 <p>May return a future which completes when the stream is done cleaning up.
 This can be used if the stream needs to release some resources
 that are needed for a following operation,
@@ -104,6 +104,17 @@ If the cleanup throws, which it really shouldn't, the returned future
 will be completed with that error.</p>
 <p>Returns <code>null</code> if there is no need to wait.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future cancel() {
+  if (callback != null) {
+    requester.unsubscribe(path, callback);
+    callback = null;
+  }
+  return null;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.nodes/DeleteActionNode/onInvoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -160,9 +161,18 @@
 
     <section class="desc markdown">
     
+          <p>Handles an action invocation and deletes the target path.</p>
     
-        <p>Handles an action invocation and deletes the target path.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Handles an action invocation and deletes the target path.
+@override
+Object onInvoke(Map&lt;String, dynamic&gt; params) {
+  provider.removeNode(targetPath);
+  return {};
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

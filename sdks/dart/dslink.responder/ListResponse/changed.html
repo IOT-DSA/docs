@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/ListResponse/changed.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -76,7 +77,7 @@
         <li><a href="dslink.responder/ListResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
-        <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
+        <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
       </ol>
 
@@ -95,10 +96,26 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void changed(String key) {
+  if (_permission == Permission.NONE) {
+    return;
+  }
+  if (_permission &lt; Permission.CONFIG &amp;&amp; key.startsWith(r&apos;$$&apos;)) {
+    return;
+  }
+  if (changes.isEmpty) {
+    changes.add(key);
+    prepareSending();
+  } else {
+    changes.add(key);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

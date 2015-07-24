@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/ListResponse/startSendingData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -76,7 +77,7 @@
         <li><a href="dslink.responder/ListResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
-        <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
+        <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
       </ol>
 
@@ -96,10 +97,108 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void startSendingData() {
+  _pendingSending = false;
+  Object updateIs;
+  Object updateBase;
+  List updateConfigs = [];
+  List updateAttributes = [];
+  List updateChildren = [];
+
+  if (node.disconnected != null) {
+    responder.updateResponse(
+        this,
+        [
+          [r&apos;$disconnectedTs&apos;, node.disconnected]
+        ],
+        streamStatus: StreamStatus.open);
+    _disconnectSent = true;
+    changes.clear();
+    return;
+  } else if (_disconnectSent &amp;&amp; !changes.contains(r&apos;$disconnectedTs&apos;)) {
+    _disconnectSent = false;
+    updateConfigs.add({&apos;name&apos;: r&apos;$disconnectedTs&apos;, &apos;change&apos;: &apos;remove&apos;});
+    if (node.configs.containsKey(r&apos;$disconnectedTs&apos;)) {
+      node.configs.remove(r&apos;$disconnectedTs&apos;);
+    }
+  }
+  // TODO handle permission and permission change
+
+  if (initialResponse || changes.contains(r&apos;$is&apos;)) {
+    initialResponse = false;
+    node.configs.forEach((name, value) {
+      Object update = [name, value];
+      if (name == r&apos;$is&apos;) {
+        updateIs = update;
+      } else if (name == r&apos;$base&apos;) {
+        updateBase = update;
+      } else if (_permission == Permission.CONFIG ||
+          !name.startsWith(r&apos;$$&apos;)) {
+        updateConfigs.add(update);
+      }
+    });
+    node.attributes.forEach((name, value) {
+      updateAttributes.add([name, value]);
+    });
+    node.children.forEach((name, LocalNode value) {
+      updateChildren.add([name, value.getSimpleMap()]);
+    });
+    if (updateIs == null) {
+      updateIs = [r&apos;$is&apos;, &apos;node&apos;];
+    }
+  } else {
+    for (String change in changes) {
+      Object update;
+      if (change.startsWith(r&apos;$&apos;)) {
+        if (node.configs.containsKey(change)) {
+          update = [change, node.configs[change]];
+        } else {
+          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+        }
+        if (_permission == Permission.CONFIG || !change.startsWith(r&apos;$$&apos;)) {
+          updateConfigs.add(update);
+        }
+      } else if (change.startsWith(r&apos;@&apos;)) {
+        if (node.attributes.containsKey(change)) {
+          update = [change, node.attributes[change]];
+        } else {
+          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+        }
+        updateAttributes.add(update);
+      } else {
+        if (node.children.containsKey(change)) {
+          update = [change, node.children[change].getSimpleMap()];
+        } else {
+          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+        }
+        updateChildren.add(update);
+      }
+    }
+  }
+
+  changes.clear();
+
+  List updates = [];
+  if (updateBase != null) {
+    updates.add(updateBase);
+  }
+  if (updateIs != null) {
+    updates.add(updateIs);
+  }
+  updates
+    ..addAll(updateConfigs)
+    ..addAll(updateAttributes)
+    ..addAll(updateChildren);
+
+  responder.updateResponse(this, updates, streamStatus: StreamStatus.open);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

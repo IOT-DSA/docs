@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/LocalNodeImpl/setConfig.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -130,9 +131,17 @@
 
     <section class="desc markdown">
     
+          <p>Called by the link internals to set a config on this node.</p>
     
-        <p>Called by the link internals to set a config on this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Response setConfig(
+    String name, Object value, Responder responder, Response response) {
+  var config = Configs.getConfig(name, profile);
+  return response..close(config.setConfig(value, this, responder));
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkManager/getDefNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -103,10 +104,25 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Node getDefNode(String rPath, String defName) {
+  if (DefaultDefNodes.nameMap.containsKey(defName)) {
+    return DefaultDefNodes.nameMap[defName];
+  }
+  // reuse local broker node and doesn&apos;t reload it
+  if (rPath.startsWith(&apos;/defs/&apos;) &amp;&amp; broker.nodes.containsKey(rPath)) {
+    LocalNode node = broker.nodes[rPath];
+    if (node is LocalNodeImpl &amp;&amp; node.loaded) {
+      return node;
+    }
+  }
+  return getRemoteNode(rPath);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

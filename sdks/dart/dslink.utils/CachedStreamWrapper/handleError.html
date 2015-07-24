@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/handleError.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
+          <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
 <p>If this stream sends an error that matches [test], then it is intercepted
 by the [handle] function.</p>
 <p>The [onError] callback must be of type <code>void onError(error)</code> or
@@ -142,6 +142,12 @@ the output sink.</p>
 If a broadcast stream is listened to more than once, each subscription
 will individually perform the <code>test</code> and handle the error.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; handleError(Function onError, {bool test(error)}) =&gt;
+    _stream.handleError(onError, test: test);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

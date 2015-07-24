@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/BrokerDiscoveryClient/init.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -88,10 +89,46 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future init([bool broadcast = false]) async {
+  _socket = await RawDatagramSocket.bind(&quot;0.0.0.0&quot;, broadcast ? 1900 : 0);
+
+  _socket.multicastHops = 10;
+  _socket.broadcastEnabled = true;
+  _socket.listen((RawSocketEvent event) {
+    if (event == RawSocketEvent.READ) {
+      var packet = _socket.receive();
+      _socket.writeEventsEnabled = true;
+
+      if (packet == null) {
+        return;
+      }
+
+      var data = UTF8.decode(packet.data);
+      _onMessage(packet, data);
+    }
+  });
+
+  _socket.writeEventsEnabled = true;
+
+  var interfaces = await NetworkInterface.list();
+  try {
+    for (var interface in interfaces) {
+      try {
+        _socket.joinMulticast(new InternetAddress(&quot;239.255.255.230&quot;), interface: interface);
+      } catch (e) {
+        _socket.joinMulticast(new InternetAddress(&quot;239.255.255.230&quot;), interface: interface);
+      }
+    }
+  } catch (e) {
+    _socket.joinMulticast(new InternetAddress(&quot;239.255.255.230&quot;));
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

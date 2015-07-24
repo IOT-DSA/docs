@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/ReqSubscribeController/listen.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -93,10 +94,34 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate), int cacheLevel) {
+  if (cacheLevel &lt; 1) cacheLevel = 1;
+  if (cacheLevel &gt; 1000000) cacheLevel = 1000000;
+  if (cacheLevel &gt; maxCache) {
+    maxCache = cacheLevel;
+    requester._subsciption.addSubscription(this, maxCache);
+  }
+
+  if (callbacks.containsKey(callback)) {
+    if (callbacks[callback] == maxCache &amp;&amp; cacheLevel &lt; maxCache) {
+      callbacks[callback] = cacheLevel;
+      updateCacheLevel();
+    } else {
+      callbacks[callback] = cacheLevel;
+    }
+  } else {
+    callbacks[callback] = cacheLevel;
+    if (_lastUpdate != null) {
+      callback(_lastUpdate);
+    }
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

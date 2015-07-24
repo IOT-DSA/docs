@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.requester/SubscribeRequest/removeSubscription.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -101,10 +102,22 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void removeSubscription(ReqSubscribeController controller) {
+  String path = controller.node.remotePath;
+  if (subsriptions.containsKey(path)) {
+    toRemove[subsriptions[path].sid] = subsriptions[path];
+    prepareSending();
+  } else if (subsriptionids.containsKey(controller.sid)) {
+    logger.severe(
+        &apos;unexpected remoteSubscription in the requester, sid: ${controller.sid}&apos;);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

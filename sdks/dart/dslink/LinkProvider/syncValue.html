@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LinkProvider/syncValue.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -127,9 +128,17 @@
 
     <section class="desc markdown">
     
+          <p>Gets the value for path and forcibly updates the value to the same exact value.</p>
     
-        <p>Gets the value for path and forcibly updates the value to the same exact value.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Gets the value for [path] and forcibly updates the value to the same exact value.
+void syncValue(String path) {
+  var n = this[path];
+  n.updateValue(n.lastValueUpdate.value, force: true);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -45,6 +45,7 @@ into zero or more events.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/expand.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -122,8 +123,7 @@ into zero or more events.
 
     <section class="desc markdown">
     
-    
-        <p>Creates a new stream from this stream that converts each element
+          <p>Creates a new stream from this stream that converts each element
 into zero or more events.</p>
 <p>Each incoming event is converted to an [Iterable] of new events,
 and each of these new events are then sent by the returned stream
@@ -132,6 +132,11 @@ in order.</p>
 If a broadcast stream is listened to more than once, each subscription
 will individually call <code>convert</code> and expand the events.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream expand(Iterable convert(T value)) =&gt; _stream.expand(convert);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

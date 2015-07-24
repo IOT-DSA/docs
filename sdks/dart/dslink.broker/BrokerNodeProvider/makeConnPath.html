@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodeProvider/makeConnPath.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -73,6 +74,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -120,10 +122,62 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">String makeConnPath(String fullId) {
+  if (_id2connPath.containsKey(fullId)) {
+    return _id2connPath[fullId];
+    // TODO is it possible same link get added twice?
+  } else if (fullId.contains(&quot;@&quot;)) {
+    var name = fullId.substring(0, fullId.indexOf(&quot;@&quot;));
+    return &apos;/upstream/$name&apos;;
+  } else if (fullId.length &lt; 43) {
+    // user link
+    String connPath = &apos;/conns/$fullId&apos;;
+    int count = 0;
+    // find a connName for it
+    while (_connPath2id.containsKey(connPath)) {
+      connPath = &apos;/conns/$fullId-${count++}&apos;;
+    }
+    _connPath2id[connPath] = fullId;
+    _id2connPath[fullId] = connPath;
+    return connPath;
+  } else {
+    // device link
+    String connPath;
+
+    String folderPath = &apos;/conns/&apos;;
+    String dsId = fullId;
+    if (fullId.contains(&apos;:&apos;)) {
+      // uname:dsId
+      List&lt;String&gt; u_id = fullId.split(&apos;:&apos;);
+      folderPath = &apos;/quarantine/${u_id[0]}/&apos;;
+      dsId = u_id[1];
+    }
+
+    // find a connName for it, keep append characters until find a new name
+    int i = 43;
+    if (dsId.length == 43) i = 42;
+    for (; i &gt;= 0; --i) {
+      connPath = &apos;$folderPath${dsId.substring(0, dsId.length - i)}&apos;;
+      if (i == 43 &amp;&amp; connPath.length &gt; 8 &amp;&amp; connPath.endsWith(&apos;-&apos;)) {
+        // remove the last - in the name;
+        connPath = connPath.substring(0, connPath.length - 1);
+      }
+      if (!_connPath2id.containsKey(connPath)) {
+        _connPath2id[connPath] = fullId;
+        _id2connPath[fullId] = connPath;
+        break;
+      }
+    }
+    DsTimer.timerOnceBefore(saveConns, 3000);
+    return connPath;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

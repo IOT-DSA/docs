@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/contains.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,11 +122,15 @@
 
     <section class="desc markdown">
     
-    
-        <p>Checks whether [needle] occurs in the elements provided by this stream.</p>
+          <p>Checks whether [needle] occurs in the elements provided by this stream.</p>
 <p>Completes the [Future] when the answer is known.
 If this stream reports an error, the [Future] will report that error.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;bool&gt; contains(Object needle) =&gt; _stream.contains(needle);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -45,6 +45,7 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/SimpleNode/invoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -154,10 +155,233 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
 
     <section class="desc markdown">
     
-    
-        <p>Handles the invoke method from the internals of the responder.
+          <p>Handles the invoke method from the internals of the responder.
 Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node is invoked.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Handles the invoke method from the internals of the responder.
+/// Use [onInvoke] to handle when a node is invoked.
+InvokeResponse invoke(Map params, Responder responder,
+    InvokeResponse response, LocalNode parentNode,
+    [int maxPermission = Permission.CONFIG]) {
+  Object rslt;
+  try {
+    rslt = onInvoke(params);
+  } catch (e, stack) {
+    var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
+    try {
+      error.detail = stack.toString();
+    } catch (e) {}
+    response.close(error);
+    return response;
+  }
+
+  var rtype = &quot;values&quot;;
+  if (configs.containsKey(r&quot;$result&quot;)) {
+    rtype = configs[r&quot;$result&quot;];
+  }
+
+  if (rslt == null) {
+    // Create a default result based on the result type
+    if (rtype == &quot;values&quot;) {
+      rslt = {};
+    } else if (rtype == &quot;table&quot;) {
+      rtype = [];
+    } else if (rtype == &quot;stream&quot;) {
+      rtype = [];
+    }
+  }
+
+  if (rslt is Iterable) {
+    response.updateStream(rslt.toList(), streamStatus: StreamStatus.closed);
+  } else if (rslt is Map) {
+    response.updateStream([rslt], streamStatus: StreamStatus.closed);
+  } else if (rslt is SimpleTableResult) {
+    response.updateStream(rslt.rows,
+        columns: rslt.columns, streamStatus: StreamStatus.closed);
+  } else if (rslt is AsyncTableResult) {
+    (rslt as AsyncTableResult).write(response);
+    response.onClose = (var response) {
+      if ((rslt as AsyncTableResult).onClose != null) {
+        (rslt as AsyncTableResult).onClose(response);
+      }
+    };
+    response.onAck = (var response, int waitingAckId, int receivedAckId) {
+       if ((rslt as AsyncTableResult).onAck != null) {
+         (rslt as AsyncTableResult).onAck(response, waitingAckId, receivedAckId);
+       }
+    };
+    return response;
+  } else if (rslt is Table) {
+    response.updateStream(rslt.rows,
+        columns: rslt.columns, streamStatus: StreamStatus.closed);
+  } else if (rslt is Stream) {
+    var r = new AsyncTableResult();
+
+    response.onClose = (var response) {
+      if (r.onClose != null) {
+        r.onClose(response);
+      }
+    };
+
+    Stream stream = rslt;
+
+    if (rtype == &quot;stream&quot;) {
+      StreamSubscription sub;
+
+      r.onClose = (_) {
+        if (sub != null) {
+          sub.cancel();
+        }
+      };
+
+      sub = stream.listen((v) {
+        if (v is TableMetadata) {
+          r.meta = v.meta;
+          return;
+        } else if (v is TableColumns) {
+          r.columns = v.columns.map((x) =&gt; x.getData()).toList();
+          return;
+        }
+
+        if (v is Iterable) {
+          r.update(v.toList());
+        } else if (v is Map) {
+          var meta;
+          if (v.containsKey(&quot;__META__&quot;)) {
+            meta = v[&quot;__META__&quot;];
+          }
+          r.update([v], null, meta);
+        } else {
+          throw new Exception(&quot;Unknown Value from Stream&quot;);
+        }
+      }, onDone: () {
+        r.close();
+      }, onError: (e, stack) {
+        var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
+        try {
+          error.detail = stack.toString();
+        } catch (e) {}
+        response.close(error);
+      }, cancelOnError: true);
+      r.write(response);
+      return response;
+    } else {
+      var list = [];
+      StreamSubscription sub;
+
+      r.onClose = (_) {
+        if (sub != null) {
+          sub.cancel();
+        }
+      };
+
+      sub = stream.listen((v) {
+        if (v is TableMetadata) {
+          r.meta = v.meta;
+          return;
+        } else if (v is TableColumns) {
+          r.columns = v.columns.map((x) =&gt; x.getData()).toList();
+          return;
+        }
+
+        if (v is Iterable) {
+          list.addAll(v);
+        } else if (v is Map) {
+          list.add(v);
+        } else {
+          throw new Exception(&quot;Unknown Value from Stream&quot;);
+        }
+      }, onDone: () {
+        r.update(list);
+        r.close();
+      }, onError: (e, stack) {
+        var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
+        try {
+          error.detail = stack.toString();
+        } catch (e) {}
+        response.close(error);
+      }, cancelOnError: true);
+    }
+    r.write(response);
+    return response;
+  } else if (rslt is Future) {
+    var r = new AsyncTableResult();
+
+    response.onClose = (var response) {
+      if (r.onClose != null) {
+        r.onClose(response);
+      }
+    };
+
+    rslt.then((value) {
+      if (value is Stream) {
+        Stream stream = value;
+        StreamSubscription sub;
+
+        r.onClose = (_) {
+          if (sub != null) {
+            sub.cancel();
+          }
+        };
+
+        sub = stream.listen((v) {
+          if (v is TableMetadata) {
+            r.meta = v.meta;
+            return;
+          } else if (v is TableColumns) {
+            r.columns = v.columns.map((x) =&gt; x.getData()).toList();
+            return;
+          }
+
+          if (v is Iterable) {
+            r.update(v.toList());
+          } else if (v is Map) {
+            var meta;
+            if (v.containsKey(&quot;__META__&quot;)) {
+              meta = v[&quot;__META__&quot;];
+            }
+            r.update([v], null, meta);
+          } else {
+            throw new Exception(&quot;Unknown Value from Stream&quot;);
+          }
+        }, onDone: () {
+          r.close();
+        }, onError: (e, stack) {
+          var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
+          try {
+            error.detail = stack.toString();
+          } catch (e) {
+          }
+          response.close(error);
+        }, cancelOnError: true);
+      } else if (value is Table) {
+        Table table = value;
+        r.columns = table.columns.map((x) =&gt; x.getData()).toList();
+        r.update(table.rows, StreamStatus.closed, table.meta);
+        r.close();
+      } else {
+        r.update(value is Iterable ? value.toList() : [value]);
+        r.close();
+      }
+    }).catchError((e, stack) {
+      var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
+      try {
+        error.detail = stack.toString();
+      } catch (e) {}
+      response.close(error);
+    });
+    r.write(response);
+    return response;
+  } else {
+    response.close();
+  }
+
+  return response;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

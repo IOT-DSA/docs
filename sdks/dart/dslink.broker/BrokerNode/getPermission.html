@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNode/getPermission.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -141,10 +142,26 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+int getPermission(Iterator&lt;String&gt; paths, Responder responder, int permission) {
+  permission = super.getPermission(paths, responder, permission);
+  if (permission == Permission.CONFIG) {
+    return Permission.CONFIG;
+  }
+  if (paths.moveNext()) {
+    String name = paths.current;
+    if (children[name] is BrokerNodePermission) {
+      return (children[name] as BrokerNodePermission).getPermission(paths, responder, permission);
+    }
+  }
+  return permission;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

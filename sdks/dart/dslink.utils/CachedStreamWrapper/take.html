@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/take.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Provides at most the first [n] values of this stream.</p>
+          <p>Provides at most the first [n] values of this stream.</p>
 <p>Forwards the first [n] data events of this stream, and all error
 events, to the returned stream, and ends with a done event.</p>
 <p>If this stream produces fewer than [count] values before it's done,
@@ -136,6 +136,11 @@ cannot be reused after a call to this method.</p>
 For a broadcast stream, the events are only counted from the time
 the returned stream is listened to.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; take(int count) =&gt; _stream.take(count);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

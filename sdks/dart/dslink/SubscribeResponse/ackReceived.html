@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/SubscribeResponse/ackReceived.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -76,7 +77,7 @@
         <li><a href="dslink/SubscribeResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink/SubscribeResponse/add.html">add</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
-        <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
+        <li><a href="dslink/SubscribeResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink/SubscribeResponse/remove.html">remove</a></li>
         <li><a href="dslink/SubscribeResponse/startSendingData.html">startSendingData</a></li>
         <li><a href="dslink/SubscribeResponse/subscriptionChanged.html">subscriptionChanged</a></li>
@@ -97,10 +98,19 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void ackReceived(int ackId) {
+  _waitingAck = false;
+  if (_sendAfterAck) {
+    _sendAfterAck = false;
+    prepareSending();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

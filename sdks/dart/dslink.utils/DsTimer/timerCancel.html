@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/DsTimer/timerCancel.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -94,10 +95,19 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">static void timerCancel(Function callback) {
+  if (_functionsMap.containsKey(callback)) {
+    // TODO what if timerCancel is called from another timer of group?
+    TimerFunctions existTf = _functionsMap[callback];
+    existTf.remove(callback);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

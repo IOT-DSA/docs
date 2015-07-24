@@ -45,6 +45,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/Node/removeChild.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -101,10 +102,26 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
 
     <section class="desc markdown">
     
-    
-        <p>Remove a child from this node.
+          <p>Remove a child from this node.
 input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Remove a child from this node.
+/// [input] can be either an instance of [Node] or a [String].
+String removeChild(dynamic input) {
+  if (input is String) {
+    children.remove(getChild(input));
+    return input;
+  } else if (input is Node) {
+    children.remove(input);
+  } else {
+    throw new Exception(&quot;Invalid Input&quot;);
+  }
+  return null;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

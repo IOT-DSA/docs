@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/RespSubscribeController/process.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -90,10 +91,37 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">List process() {
+  List rslts = [];
+  for (ValueUpdate lastValue in lastValues) {
+    if (lastValue.count &gt; 1 || lastValue.status != null) {
+      Map m = {&apos;ts&apos;: lastValue.ts, &apos;value&apos;: lastValue.value, &apos;sid&apos;: sid};
+      if (lastValue.count == 0) {} else if (lastValue.count &gt; 1) {
+        m[&apos;count&apos;] = lastValue.count;
+        if (lastValue.sum.isFinite) {
+          m[&apos;sum&apos;] = lastValue.sum;
+        }
+        if (lastValue.max.isFinite) {
+          m[&apos;max&apos;] = lastValue.max;
+        }
+        if (lastValue.min.isFinite) {
+          m[&apos;min&apos;] = lastValue.min;
+        }
+      }
+      rslts.add(m);
+    } else {
+      rslts.add([sid, lastValue.value, lastValue.ts]);
+    }
+  }
+  lastValues.clear();
+  return rslts;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

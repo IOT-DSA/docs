@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/ClearConnsAction/invoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -120,9 +121,19 @@
 
     <section class="desc markdown">
     
+          <p>Called by the link internals to invoke this node.</p>
     
-        <p>Called by the link internals to invoke this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+InvokeResponse invoke(Map params, Responder responder,
+    InvokeResponse response, LocalNode parentNode,
+    [int maxPermission = Permission.CONFIG]) {
+  provider.clearConns();
+  return response..close();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

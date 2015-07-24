@@ -47,6 +47,7 @@ headers specifies additional headers to set.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.io/HttpHelper/createRequest.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -93,12 +94,26 @@ headers specifies additional headers to set.
 
     <section class="desc markdown">
     
-    
-        <p>Creates an HttpClientRequest with the given parameters.
+          <p>Creates an HttpClientRequest with the given parameters.
 method is the HTTP method.
 url is the URL to make the request to.
 headers specifies additional headers to set.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Creates an [HttpClientRequest] with the given parameters.
+/// [method] is the HTTP method.
+/// [url] is the URL to make the request to.
+/// [headers] specifies additional headers to set.
+static Future&lt;HttpClientRequest&gt; createRequest(String method, String url, {Map&lt;String, String&gt; headers}) async {
+  var request = await client.openUrl(method, Uri.parse(url));
+  if (headers != null) {
+    headers.forEach(request.headers.set);
+  }
+  return request;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

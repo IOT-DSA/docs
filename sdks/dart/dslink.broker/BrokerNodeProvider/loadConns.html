@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodeProvider/loadConns.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -73,6 +74,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -116,10 +118,30 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void loadConns() {
+  // loadConns from file
+  File connsFile = new File(&quot;conns.json&quot;);
+  try {
+    String data = connsFile.readAsStringSync();
+    Map m = DsJson.decode(data);
+    m.forEach((String name, Map m) {
+      String path = &apos;/conns/$name&apos;;
+      RemoteLinkRootNode node = getOrCreateNode(path, false);
+      node.load(m);
+      if (node.configs[r&apos;$$dsId&apos;] is String) {
+        _id2connPath[node.configs[r&apos;$$dsId&apos;]] = path;
+        _connPath2id[path] = node.configs[r&apos;$$dsId&apos;];
+      }
+    });
+  } catch (err) {
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

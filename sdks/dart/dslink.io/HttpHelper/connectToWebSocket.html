@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.io/HttpHelper/connectToWebSocket.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -90,9 +91,103 @@
 
     <section class="desc markdown">
     
+          <p>Custom WebSocket Connection logic.</p>
     
-        <p>Custom WebSocket Connection logic.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Custom WebSocket Connection logic.
+static Future&lt;WebSocket&gt; connectToWebSocket(
+    String url, {Iterable&lt;String&gt; protocols, Map&lt;String, dynamic&gt; headers, HttpClient httpClient}) async {
+  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false)) {
+    return await WebSocket.connect(url, protocols: protocols, headers: headers);
+  }
+
+  Uri uri = Uri.parse(url);
+  if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
+    throw new WebSocketException(&quot;Unsupported URL scheme &apos;${uri.scheme}&apos;&quot;);
+  }
+
+  Random random = new Random();
+  // Generate 16 random bytes.
+  Uint8List nonceData = new Uint8List(16);
+  for (int i = 0; i &lt; 16; i++) {
+    nonceData[i] = random.nextInt(256);
+  }
+  String nonce = CryptoUtils.bytesToBase64(nonceData);
+
+  uri = new Uri(
+      scheme: uri.scheme == &quot;wss&quot; ? &quot;https&quot; : &quot;http&quot;,
+      userInfo: uri.userInfo,
+      host: uri.host,
+      port: uri.port,
+      path: uri.path,
+      query: uri.query,
+    fragment: uri.fragment
+  );
+
+  HttpClient _client = httpClient == null ? (new HttpClient()
+      ..badCertificateCallback = (a, b, c) =&gt; true) : httpClient;
+
+  return _client.openUrl(&quot;GET&quot;, uri).then((HttpClientRequest request) {
+    if (uri.userInfo != null &amp;&amp; !uri.userInfo.isEmpty) {
+      // If the URL contains user information use that for basic
+      // authorization.
+      String auth = CryptoUtils.bytesToBase64(UTF8.encode(uri.userInfo));
+      request.headers.set(HttpHeaders.AUTHORIZATION, &quot;Basic $auth&quot;);
+    }
+    if (headers != null) {
+      headers.forEach((field, value) =&gt; request.headers.add(field, value));
+    }
+    // Setup the initial handshake.
+    request.headers
+      ..set(HttpHeaders.CONNECTION, &quot;Upgrade&quot;)
+      ..set(HttpHeaders.UPGRADE, &quot;websocket&quot;)
+      ..set(&quot;Sec-WebSocket-Key&quot;, nonce)
+      ..set(&quot;Cache-Control&quot;, &quot;no-cache&quot;)
+      ..set(&quot;Sec-WebSocket-Version&quot;, &quot;13&quot;);
+    if (protocols != null) {
+      request.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocols.toList());
+    }
+    return request.close();
+  })
+  .then((response) {
+    void error(String message) {
+      // Flush data.
+      response.detachSocket().then((socket) {
+        socket.destroy();
+      });
+      throw new WebSocketException(message);
+    }
+    if (response.statusCode != HttpStatus.SWITCHING_PROTOCOLS ||
+      response.headers[HttpHeaders.CONNECTION] == null ||
+      !response.headers[HttpHeaders.CONNECTION].any(
+            (value) =&gt; value.toLowerCase() == &quot;upgrade&quot;) ||
+      response.headers.value(HttpHeaders.UPGRADE).toLowerCase() != &quot;websocket&quot;) {
+      error(&quot;Connection to &apos;$uri&apos; was not upgraded to websocket&quot;);
+    }
+    String accept = response.headers.value(&quot;Sec-WebSocket-Accept&quot;);
+    if (accept == null) {
+      error(&quot;Response did not contain a &apos;Sec-WebSocket-Accept&apos; header&quot;);
+    }
+    SHA1 sha1 = new SHA1();
+    sha1.add(&quot;$nonce$_webSocketGUID&quot;.codeUnits);
+    List&lt;int&gt; expectedAccept = sha1.close();
+    List&lt;int&gt; receivedAccept = CryptoUtils.base64StringToBytes(accept);
+    if (expectedAccept.length != receivedAccept.length) {
+      error(&quot;Reasponse header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
+    }
+    for (int i = 0; i &lt; expectedAccept.length; i++) {
+      if (expectedAccept[i] != receivedAccept[i]) {
+        error(&quot;Bad response &apos;Sec-WebSocket-Accept&apos; header&quot;);
+      }
+    }
+    var protocol = response.headers.value(&apos;Sec-WebSocket-Protocol&apos;);
+    return response.detachSocket()
+      .then((socket) =&gt; new WebSocket.fromUpgradedSocket(socket, protocol: protocol, serverSide: false));
+  });
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

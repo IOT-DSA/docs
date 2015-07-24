@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkRootNode/createListController.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -146,9 +147,15 @@
 
     <section class="desc markdown">
     
+          <p>need a factory function for children class to override</p>
     
-        <p>need a factory function for children class to override</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">ListController createListController(Requester requester) {
+  return new RemoteLinkRootListController(this, requester);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

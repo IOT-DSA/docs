@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SimpleNodeProvider/removeNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -109,9 +110,32 @@
 
     <section class="desc markdown">
     
+          <p>Removes the node specified at [path].</p>
     
-        <p>Removes the node specified at [path].</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void removeNode(String path) {
+  if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return;
+  SimpleNode node = getNode(path);
+
+  if (node == null) {
+    return;
+  }
+
+  node.onRemoving();
+  node.removed = true;
+  Path p = new Path(path);
+  SimpleNode pnode = getNode(p.parentPath);
+
+  if (pnode != null) {
+    pnode.children.remove(p.name);
+    pnode.onChildRemoved(p.name, node);
+    pnode.updateList(p.name);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

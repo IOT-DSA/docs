@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.common/Node/forEachConfig.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -100,10 +101,22 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void forEachConfig(void callback(String name, Object value)) {
+  configs.forEach(callback);
+  if (profile != null) {
+    profile.configs.forEach((String str, Object val) {
+      if (!configs.containsKey(str)) {
+        callback(str, val);
+      }
+    });
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

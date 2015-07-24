@@ -46,6 +46,7 @@ meta is the action result metadata.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/AsyncTableResult/update.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -96,11 +97,29 @@ meta is the action result metadata.
 
     <section class="desc markdown">
     
-    
-        <p>Updates table rows to rows.
+          <p>Updates table rows to rows.
 stat is the stream status.
 meta is the action result metadata.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Updates table rows to [rows].
+/// [stat] is the stream status.
+/// [meta] is the action result metadata.
+void update(List rows, [String stat, Map meta]) {
+  if (this.rows == null) {
+    this.rows = rows;
+  } else {
+    this.rows.addAll(rows);
+  }
+  this.meta = meta;
+  if (stat != null) {
+    status = stat;
+  }
+  write();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

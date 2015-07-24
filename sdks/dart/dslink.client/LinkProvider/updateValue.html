@@ -46,6 +46,7 @@ If you did not specify a custom node provider, the created provider is mutable.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.client/LinkProvider/updateValue.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -129,11 +130,23 @@ If you did not specify a custom node provider, the created provider is mutable.
 
     <section class="desc markdown">
     
-    
-        <p>Updates the value of the node at the given path to value.
+          <p>Updates the value of the node at the given path to value.
 In order for this method to work, the node provider must be mutable.
 If you did not specify a custom node provider, the created provider is mutable.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Updates the value of the node at the given [path] to [value].
+/// In order for this method to work, the node provider must be mutable.
+/// If you did not specify a custom node provider, the created provider is mutable.
+void updateValue(String path, dynamic value) {
+  if (provider is! MutableNodeProvider) {
+    throw new Exception(&quot;Unable to Modify Node Provider: It is not mutable.&quot;);
+  }
+  (provider as MutableNodeProvider).updateValue(path, value);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

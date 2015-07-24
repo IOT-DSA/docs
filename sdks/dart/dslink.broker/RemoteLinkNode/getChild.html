@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkNode/getChild.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -135,9 +136,15 @@
 
     <section class="desc markdown">
     
+          <p>Get a Child Node</p>
     
-        <p>Get a Child Node</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Node getChild(String name) {
+  return _linkManager.getOrCreateNode(&apos;$path/$name&apos;, false);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

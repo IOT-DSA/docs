@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/Node/addChild.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -100,9 +101,16 @@
 
     <section class="desc markdown">
     
+          <p>Adds a child to this node.</p>
     
-        <p>Adds a child to this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Adds a child to this node.
+void addChild(String name, Node node) {
+  children[name] = node;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/UpstreamNode/getConfigMap.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -115,10 +116,38 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Map getConfigMap() {
+  List&lt;UpstreamBrokerNode&gt; ubns = provider.nodes.keys.where((x) {
+    try {
+      if (x.startsWith(&quot;/sys/upstream/&quot;) &amp;&amp;
+      x != &quot;/sys/upstream/add_connection&quot;) {
+        return x.codeUnits.where((l) =&gt; l == &quot;/&quot;.codeUnitAt(0)).length == 3;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      return false;
+    }
+  }).map((x) =&gt; provider.getOrCreateNode(x, false))
+    .where((x) =&gt; x != null)
+    .where((x) =&gt; x is UpstreamBrokerNode)
+    .where((UpstreamBrokerNode x) =&gt; !x.toBeRemoved)
+    .toList();
+
+  var map = {};
+
+  ubns.forEach((x) {
+    map[x.name] = {&quot;name&quot;: x.ourName, &quot;url&quot;: x.url, &quot;enabled&quot;: x.enabled};
+  });
+
+  return map;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

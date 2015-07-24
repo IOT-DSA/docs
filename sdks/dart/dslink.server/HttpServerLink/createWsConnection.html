@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.server/HttpServerLink/createWsConnection.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -107,10 +108,15 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">ServerWebSocket createWsConnection(WebSocket websocket) {
+  return new ServerWebSocket(websocket, enableTimeout: enableTimeout);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

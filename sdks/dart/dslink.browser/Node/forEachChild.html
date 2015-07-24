@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/Node/forEachChild.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -100,9 +101,23 @@
 
     <section class="desc markdown">
     
+          <p>Iterates over all the children of this node and passes them to the specified callback.</p>
     
-        <p>Iterates over all the children of this node and passes them to the specified callback.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Iterates over all the children of this node and passes them to the specified [callback].
+void forEachChild(void callback(String name, Node node)) {
+  children.forEach(callback);
+  if (profile != null) {
+    profile.children.forEach((String str, Node n) {
+      if (!children.containsKey(str)) {
+        callback(str, n);
+      }
+    });
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

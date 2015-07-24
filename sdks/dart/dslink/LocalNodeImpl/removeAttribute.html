@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/LocalNodeImpl/removeAttribute.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -130,9 +131,20 @@
 
     <section class="desc markdown">
     
+          <p>Called by the link internals to remove an attribute from this node.</p>
     
-        <p>Called by the link internals to remove an attribute from this node.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Response removeAttribute(
+    String name, Responder responder, Response response) {
+  if (attributes.containsKey(name)) {
+    attributes.remove(name);
+    updateList(name);
+  }
+  return response..close();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

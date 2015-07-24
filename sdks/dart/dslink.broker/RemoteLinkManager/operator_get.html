@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkManager/operator_get.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -103,9 +104,16 @@
 
     <section class="desc markdown">
     
+          <p>get an existing node or create a dummy node for requester to listen on</p>
     
-        <p>get an existing node or create a dummy node for requester to listen on</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// get an existing node or create a dummy node for requester to listen on
+LocalNode operator [](String path) {
+  return getNode(path);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

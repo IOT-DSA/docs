@@ -43,6 +43,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/generateToken.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -52,8 +53,6 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
-
     <ol id="sidebar">
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
       <li><a href="dslink.utils/alphabet.html">alphabet</a></li>
@@ -110,10 +109,25 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">String generateToken({int length: 50}) {
+  var r = new Random(_random.nextInt(5000));
+  var buffer = new StringBuffer();
+  for (int i = 1; i &lt;= length; i++) {
+    if (r.nextBool()) {
+      String letter = alphabet[r.nextInt(alphabet.length)];
+      buffer.write(r.nextBool() ? letter.toLowerCase() : letter);
+    } else {
+      buffer.write(numbers[r.nextInt(numbers.length)]);
+    }
+  }
+  return buffer.toString();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

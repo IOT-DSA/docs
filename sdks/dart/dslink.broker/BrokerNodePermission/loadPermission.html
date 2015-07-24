@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodePermission/loadPermission.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -90,10 +91,55 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void loadPermission(List l) {
+  if (l != null &amp;&amp; l.length &gt; 0) {
+    defaultPermission = Permission.NEVER;
+    if (permissionList == null) {
+      permissionList = new List&lt;PermissionPair&gt;();
+    } else {
+      permissionList.clear;
+    }
+    if (idPermissions == null) {
+      idPermissions = new Map&lt;String, int&gt;();
+    } else {
+      idPermissions.clear;
+    }
+    for (var pair in l) {
+      if (pair is List &amp;&amp; pair.length == 2 &amp;&amp; pair[0] is String &amp;&amp; pair[1] is String) {
+        String key = pair[0];
+        String p = pair[1];
+        int pint = Permission.parse(p);
+        if (pint == Permission.NEVER) { // invalid permission
+          continue;
+        }
+        if (key == &apos;default&apos;) {
+          defaultPermission = pint;
+        } else if (key.length &lt; 43 || key.contains(&apos;:&apos;)) {
+          // group permission
+          permissionList.add(new PermissionPair(key, pint));
+        } else {
+          // id
+          idPermissions[key] = pint;
+        }
+      }
+    }
+    if (permissionList.isEmpty) {
+      permissionList = null;
+    }
+    if (idPermissions.isEmpty) {
+      idPermissions = null;
+    }
+  } else {
+    permissionList = null;
+    idPermissions = null;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

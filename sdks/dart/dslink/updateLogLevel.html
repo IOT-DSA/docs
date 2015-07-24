@@ -43,6 +43,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/updateLogLevel.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -52,8 +53,6 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
-
     <ol id="sidebar">
       <li class="section-title"><a href="dslink/dslink-library.html#constants">Constants</a></li>
       <li><a href="dslink/unspecified.html">unspecified</a></li>
@@ -175,9 +174,31 @@
 
     <section class="desc markdown">
     
+          <p>Updates the log level to the level specified name.</p>
     
-        <p>Updates the log level to the level specified name.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Updates the log level to the level specified [name].
+void updateLogLevel(String name) {
+  name = name.trim().toUpperCase();
+
+  if (name == &quot;debug&quot;) {
+    name = &quot;ALL&quot;;
+  }
+
+  Map&lt;String, Level&gt; levels = {};
+  for (var l in Level.LEVELS) {
+    levels[l.name] = l;
+  }
+
+  var l = levels[name];
+
+  if (l != null) {
+    logger.level = l;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

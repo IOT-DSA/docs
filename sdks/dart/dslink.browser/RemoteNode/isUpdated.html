@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/RemoteNode/isUpdated.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -102,9 +103,22 @@
 
     <section class="desc markdown">
     
+          <p>node data is not ready until all profile and mixins are updated</p>
     
-        <p>node data is not ready until all profile and mixins are updated</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// node data is not ready until all profile and mixins are updated
+bool isUpdated() {
+  if (!isSelfUpdated()) {
+    return false;
+  }
+  if (profile is RemoteNode &amp;&amp; !(profile as RemoteNode).isSelfUpdated()) {
+    return false;
+  }
+  return true;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

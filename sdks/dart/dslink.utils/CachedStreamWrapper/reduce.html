@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/reduce.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,9 +122,13 @@
 
     <section class="desc markdown">
     
+          <p>Reduces a sequence of values by repeatedly applying [combine].</p>
     
-        <p>Reduces a sequence of values by repeatedly applying [combine].</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;T&gt; reduce(T combine(T previous, T element)) =&gt; _stream.reduce(combine);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

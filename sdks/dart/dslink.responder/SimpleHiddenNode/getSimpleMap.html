@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/SimpleHiddenNode/getSimpleMap.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -124,9 +125,32 @@
 
     <section class="desc markdown">
     
+          <p>Gets a map for the data that will be listed in the parent node's children property.</p>
     
-        <p>Gets a map for the data that will be listed in the parent node's children property.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Map getSimpleMap() {
+  Map rslt = {r&apos;$hidden&apos;:true};
+  if (configs.containsKey(r&apos;$is&apos;)) {
+    rslt[r&apos;$is&apos;] = configs[r&apos;$is&apos;];
+  }
+  if (configs.containsKey(r&apos;$type&apos;)) {
+    rslt[r&apos;$type&apos;] = configs[r&apos;$type&apos;];
+  }
+  if (configs.containsKey(r&apos;$name&apos;)) {
+    rslt[r&apos;$name&apos;] = configs[r&apos;$name&apos;];
+  }
+  if (configs.containsKey(r&apos;$invokable&apos;)) {
+    rslt[r&apos;$invokable&apos;] = configs[r&apos;$invokable&apos;];
+  }
+  if (configs.containsKey(r&apos;$writable&apos;)) {
+    rslt[r&apos;$writable&apos;] = configs[r&apos;$writable&apos;];
+  }
+  // TODO add permission of current requester
+  return rslt;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

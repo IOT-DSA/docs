@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteLinkNode/updateValue.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -135,9 +136,26 @@
 
     <section class="desc markdown">
     
+          <p>Updates this node's value to the specified [value].</p>
     
-        <p>Updates this node's value to the specified [value].</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void updateValue(Object update, {bool force: false}) {
+  if (update is ValueUpdate) {
+    _lastValueUpdate = update;
+    callbacks.forEach((callback, cacheLevel) {
+      callback(_lastValueUpdate);
+    });
+  } else if (_lastValueUpdate == null || _lastValueUpdate.value != update || force) {
+    _lastValueUpdate = new ValueUpdate(update);
+    callbacks.forEach((callback, cacheLevel) {
+      callback(_lastValueUpdate);
+    });
+  }
+  _valueReady = true;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

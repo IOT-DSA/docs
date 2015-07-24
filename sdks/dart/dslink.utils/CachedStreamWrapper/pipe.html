@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/pipe.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,12 +122,16 @@
 
     <section class="desc markdown">
     
-    
-        <p>Binds this stream as the input of the provided [StreamConsumer].</p>
+          <p>Binds this stream as the input of the provided [StreamConsumer].</p>
 <p>The <code>streamConsumer</code> is closed when the stream has been added to it.</p>
 <p>Returns a future which completes when the stream has been consumed
 and the consumer has been closed.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future pipe(StreamConsumer&lt;T&gt; streamConsumer) =&gt; _stream.pipe(streamConsumer);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.requester/ReqSubscribeListener/asFuture.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -95,8 +96,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Returns a future that handles the [onDone] and [onError] callbacks.</p>
+          <p>Returns a future that handles the [onDone] and [onError] callbacks.</p>
 <p>This method <em>overwrites</em> the existing [onDone] and [onError] callbacks
 with new ones that complete the returned future.</p>
 <p>In case of an error the subscription will automatically cancel (even
@@ -104,6 +104,13 @@ when it was listening with <code>cancelOnError</code> set to <code>false</code>)
 <p>In case of a <code>done</code> event the future completes with the given
 [futureValue].</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future asFuture([futureValue]) {
+  return null;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

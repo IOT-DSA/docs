@@ -45,6 +45,7 @@ You can call <a href="dslink/LinkProvider/connect.html">connect</a> again once y
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.client/LinkProvider/close.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -124,10 +125,24 @@ You can call <a href="dslink/LinkProvider/connect.html">connect</a> again once y
 
     <section class="desc markdown">
     
-    
-        <p>Closes the link by disconnecting from the broker.
+          <p>Closes the link by disconnecting from the broker.
 You can call <a href="dslink/LinkProvider/connect.html">connect</a> again once you have closed a link.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Closes the link by disconnecting from the broker.
+/// You can call [connect] again once you have closed a link.
+void close() {
+  _connectedCompleter = null;
+  if (link != null) {
+    link.close();
+    link = null;
+    _initialized = false;
+    _reconnecting = true;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

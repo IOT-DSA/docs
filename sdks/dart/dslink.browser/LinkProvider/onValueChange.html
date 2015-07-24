@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/LinkProvider/onValueChange.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -112,10 +113,32 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;ValueUpdate&gt; onValueChange(String path, {int cacheLevel: 1}) {
+  RespSubscribeListener listener;
+  StreamController&lt;ValueUpdate&gt; controller;
+  int subs = 0;
+  controller = new StreamController&lt;ValueUpdate&gt;.broadcast(onListen: () {
+    subs++;
+    if (listener == null) {
+      listener = this[path].subscribe((ValueUpdate update) {
+        controller.add(update);
+      }, cacheLevel);
+    }
+  }, onCancel: () {
+    subs--;
+    if (subs == 0) {
+      listener.cancel();
+      listener = null;
+    }
+  });
+  return controller.stream;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

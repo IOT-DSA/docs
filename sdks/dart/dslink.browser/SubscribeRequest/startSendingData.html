@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SubscribeRequest/startSendingData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -97,10 +98,48 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void startSendingData() {
+  _pendingSend = false;
+  if (requester.connection == null) {
+    return;
+  }
+  List toAdd = [];
+
+  HashSet&lt;String&gt; processingPaths = _changedPaths;
+  _changedPaths = new HashSet&lt;String&gt;();
+  for (String path in processingPaths) {
+    if (subsriptions.containsKey(path)) {
+      ReqSubscribeController sub = subsriptions[path];
+      Map m = {&apos;path&apos;: path, &apos;sid&apos;: sub.sid};
+      if (sub.maxCache &gt; 1) {
+        m[&apos;cache&apos;] = sub.maxCache;
+      }
+      toAdd.add(m);
+    }
+  }
+  if (!toAdd.isEmpty) {
+    requester._sendRequest({&apos;method&apos;: &apos;subscribe&apos;, &apos;paths&apos;: toAdd}, null);
+  }
+  if (!toRemove.isEmpty) {
+    List removeSids = [];
+    toRemove.forEach((int sid, ReqSubscribeController sub) {
+      if (sub.callbacks.isEmpty) {
+        removeSids.add(sid);
+        subsriptions.remove(sub.node.remotePath);
+        subsriptionids.remove(sub.sid);
+        sub._destroy();
+      }
+    });
+    requester._sendRequest({&apos;method&apos;: &apos;unsubscribe&apos;, &apos;sids&apos;: removeSids}, null);
+    toRemove.clear();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

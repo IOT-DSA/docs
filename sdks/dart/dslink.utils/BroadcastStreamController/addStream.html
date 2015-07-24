@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/BroadcastStreamController/addStream.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -95,8 +96,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Receives events from [source] and puts them into this controller's stream.</p>
+          <p>Receives events from [source] and puts them into this controller's stream.</p>
 <p>Returns a future which completes when the source stream is done.</p>
 <p>Events must not be added directly to this controller using [add],
 [addError], [close] or [addStream], until the returned future
@@ -109,6 +109,13 @@ forwarded to the controller's stream, and the <code>addStream</code> ends
 after this. If [cancelOnError] is false, all errors are forwarded
 and only a done event will end the <code>addStream</code>.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future addStream(Stream&lt;T&gt; source, {bool cancelOnError: true}) {
+  return _controller.addStream(source, cancelOnError: cancelOnError);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

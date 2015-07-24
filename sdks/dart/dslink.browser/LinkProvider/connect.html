@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/LinkProvider/connect.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -108,10 +109,33 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future connect() {
+  Future run() {
+    link = new BrowserECDHLink(brokerUrl, prefix, privateKey,
+        nodeProvider: provider,
+        isRequester: isRequester,
+        isResponder: isResponder);
+
+    link.connect();
+    return link.onConnected;
+  }
+
+  if (link != null) {
+    throw new StateError(&quot;Link is already connected!&quot;);
+  }
+
+  if (!_initCalled) {
+    return init().then((_) =&gt; run());
+  } else {
+    return run();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

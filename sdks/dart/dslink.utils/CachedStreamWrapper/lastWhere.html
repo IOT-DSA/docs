@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/lastWhere.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,12 +122,17 @@
 
     <section class="desc markdown">
     
-    
-        <p>Finds the last element in this stream matching [test].</p>
+          <p>Finds the last element in this stream matching [test].</p>
 <p>As [firstWhere], except that the last matching element is found.
 That means that the result cannot be provided before this stream
 is done.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future lastWhere(bool test(T element), {Object defaultValue()}) =&gt;
+    _stream.lastWhere(test, defaultValue: defaultValue);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

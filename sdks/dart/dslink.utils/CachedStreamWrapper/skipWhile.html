@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/skipWhile.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Skip data events from this stream while they are matched by [test].</p>
+          <p>Skip data events from this stream while they are matched by [test].</p>
 <p>Error and done events are provided by the returned stream unmodified.</p>
 <p>Starting with the first data event where [test] returns false for the
 event data, the returned stream will have the same events as this stream.</p>
@@ -130,6 +130,11 @@ event data, the returned stream will have the same events as this stream.</p>
 For a broadcast stream, the events are only tested from the time
 the returned stream is listened to.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; skipWhile(bool test(T element)) =&gt; _stream.skipWhile(test);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.nodes/CallbackNode/onRemoving.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -160,9 +161,18 @@
 
     <section class="desc markdown">
     
+          <p>Callback used to notify a node that it is about to be removed.</p>
     
-        <p>Callback used to notify a node that it is about to be removed.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void onRemoving() {
+  if (onRemovingCallback != null) {
+    onRemovingCallback();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

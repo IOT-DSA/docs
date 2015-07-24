@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/InvokeResponse/startSendingData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -96,10 +97,34 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+void startSendingData() {
+  _pendingSending = false;
+  if (_err != null) {
+    responder._closeResponse(rid, response: this, error: _err);
+    if (_sentStreamStatus == StreamStatus.closed) {
+      _close();
+    }
+    return;
+  }
+
+  if (_columns != null) {
+    _columns = TableColumn.serializeColumns(_columns);
+  }
+  responder.updateResponse(this, _updates,
+      streamStatus: _sendingStreamStatus, columns: _columns, meta:_meta);
+  _columns = null;
+  _updates = null;
+  if (_sentStreamStatus == StreamStatus.closed) {
+    _close();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

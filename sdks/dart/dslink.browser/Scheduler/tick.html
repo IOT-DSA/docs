@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/Scheduler/tick.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -93,10 +94,19 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">static Future tick(int times, Interval interval, action()) async {
+  for (var i = 1; i &lt;= times; i++) {
+    await new Future.delayed(
+        new Duration(milliseconds: interval.inMilliseconds));
+    await action();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

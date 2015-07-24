@@ -531,3 +531,9 @@ ol#sidebar li:first-child {
   .row-offcanvas-left.active{left:50%;}
   .sidebar-offcanvas{position:absolute;top:0;width:50%;}
 }
+
+/* source code method bodies */
+
+.source-code pre {
+  margin: 16px 0 16px 0;
+}

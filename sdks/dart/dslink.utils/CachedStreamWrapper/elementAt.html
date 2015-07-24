@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/elementAt.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Returns the value of the [index]th data event of this stream.</p>
+          <p>Returns the value of the [index]th data event of this stream.</p>
 <p>Stops listening to the stream after the [index]th data event has been
 received.</p>
 <p>Internally the method cancels its subscription after these elements. This
@@ -133,6 +133,11 @@ with this error.</p>
 <p>If a done event occurs before the value is found, the future completes
 with a [RangeError].</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;T&gt; elementAt(int index) =&gt; _stream.elementAt(index);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

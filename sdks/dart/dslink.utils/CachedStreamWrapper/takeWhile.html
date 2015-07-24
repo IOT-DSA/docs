@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/takeWhile.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Forwards data events while [test] is successful.</p>
+          <p>Forwards data events while [test] is successful.</p>
 <p>The returned stream provides the same events as this stream as long
 as [test] returns <code class="prettyprint">true</code> for the event data. The stream is done
 when either this stream is done, or when this stream first provides
@@ -135,6 +135,11 @@ cannot be reused after a call to this method.</p>
 For a broadcast stream, the events are only tested from the time
 the returned stream is listened to.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; takeWhile(bool test(T element)) =&gt; _stream.takeWhile(test);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

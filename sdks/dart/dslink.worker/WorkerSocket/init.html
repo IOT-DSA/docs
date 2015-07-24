@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.worker/WorkerSocket/init.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -168,10 +169,20 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;WorkerSocket&gt; init({Map&lt;String, Producer&gt; methods}) {
+  if (methods != null) {
+    for (var key in methods.keys) {
+      addMethod(key, methods[key]);
+    }
+  }
+  return waitFor().then((_) =&gt; this);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

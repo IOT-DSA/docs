@@ -45,6 +45,7 @@ If it does not exist, create a new node and return it.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -74,6 +75,7 @@ If it does not exist, create a new node and return it.
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -121,11 +123,115 @@ If it does not exist, create a new node and return it.
 
     <section class="desc markdown">
     
-    
-        <p>Gets a node at the given [path] if it exists.
+          <p>Gets a node at the given [path] if it exists.
 If it does not exist, create a new node and return it.</p>
 <p>When [addToTree] is false, the node will not be inserted into the node provider.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
+  if (addToTree == true) {
+    throw &apos;not supported&apos;;
+  }
+
+  LocalNode node = nodes[path];
+
+  if (node != null) {
+    return node;
+  }
+  if (path.startsWith(&apos;/users/&apos;)) {
+    List paths = path.split(&apos;/&apos;);
+    String username = path.split(&apos;/&apos;)[2];
+    if (paths.length == 3) {
+      node = new UserRootNode(path, username, this);
+    } else {
+      int pos = path.indexOf(&apos;/#&apos;);
+      if (pos &lt; 0) {
+        node = new UserNode(path, this, username);
+      } else {
+        String connPath;
+        int pos2 = path.indexOf(&apos;/&apos;, pos + 1);
+        if (pos2 &lt; 0) {
+          connPath = path;
+        } else {
+          connPath = path.substring(0, pos2);
+        }
+        RemoteLinkManager conn = conns[connPath];
+        if (conn == null) {
+          // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+          conn = new RemoteLinkManager(this, connPath, this);
+          conns[connPath] = conn;
+          nodes[connPath] = conn.rootNode;
+          conn.rootNode.parentNode = getOrCreateNode(path.substring(0, pos), false);
+        }
+        node = conn.getOrCreateNode(path, false);
+      }
+    }
+  } else if (path.startsWith(&apos;/conns/&apos;)) {
+    String connName = path.split(&apos;/&apos;)[2];
+    String connPath = &apos;/conns/$connName&apos;;
+    RemoteLinkManager conn = conns[connPath];
+    if (conn == null) {
+      // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+      conn = new RemoteLinkManager(this, connPath, this);
+      conns[connPath] = conn;
+      nodes[connPath] = conn.rootNode;
+      connsNode.children[connName] = conn.rootNode;
+      conn.rootNode.parentNode = connsNode;
+      conn.inTree = true;
+      connsNode.updateList(connName);
+    }
+    node = conn.getOrCreateNode(path, false);
+  } else if (path.startsWith(&apos;/upstream/&apos;)) {
+    String upstreamName = path.split(&apos;/&apos;)[2];
+    String connPath = &apos;/upstream/${upstreamName}&apos;;
+    RemoteLinkManager conn = conns[connPath];
+    if (conn == null) {
+      conn = new RemoteLinkManager(this, connPath, this);
+      conns[connPath] = conn;
+      nodes[connPath] = conn.rootNode;
+      upstreamDataNode.children[upstreamName] = conn.rootNode;
+      conn.rootNode.parentNode = upstreamDataNode;
+      conn.inTree = true;
+      upstreamDataNode.updateList(upstreamName);
+    }
+    node = conn.getOrCreateNode(path, false);
+  } else if (path.startsWith(&apos;/quarantine/&apos;)) {
+    List paths = path.split(&apos;/&apos;);
+    String user = paths[2];
+    if (paths.length &gt; 3) {
+      String connName = paths[3];
+      String connPath = &apos;/quarantine/$user/$connName&apos;;
+      RemoteLinkManager conn = conns[connPath];
+      if (conn == null) {
+        // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+        conn = new RemoteLinkManager(this, connPath, this);
+        conns[connPath] = conn;
+        nodes[connPath] = conn.rootNode;
+        BrokerNode quarantineUser = getOrCreateNode(&apos;/quarantine/$user&apos;, false);
+        quarantineUser.children[connName] = conn.rootNode;
+        conn.rootNode.parentNode = quarantineUser;
+        conn.inTree = true;
+        quarantineUser.updateList(connName);
+      }
+      node = conn.getOrCreateNode(path, false);
+    } else {
+      node = new BrokerNode(path, this);
+    }
+  } else if (path.startsWith(&apos;/defs/&apos;)) {
+    //if (!_defsLoaded) {
+    node = new DefinitionNode(path, this);
+    //}
+  } else {
+    node = new BrokerNode(path, this);
+  }
+  if (node != null) {
+    nodes[path] = node;
+  }
+  return node;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

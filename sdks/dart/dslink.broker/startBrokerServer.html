@@ -43,6 +43,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/startBrokerServer.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -52,8 +53,6 @@
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
-
     <ol id="sidebar">
 
 
@@ -90,9 +89,10 @@
       <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
+      <li><a href="dslink.broker/UpstreamServerLink-class.html">UpstreamServerLink</a></li>
       <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
-      <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
+      <li><a href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
 
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -110,10 +110,24 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;DsHttpServer&gt; startBrokerServer(int port, {bool persist: true}) async {
+  var broker = new BrokerNodeProvider();
+  broker.shouldSaveFiles = persist;
+  var server = new DsHttpServer.start(
+      &quot;0.0.0.0&quot;,
+      httpPort: port,
+      linkManager: broker,
+      nodeProvider: broker
+  );
+  await server.onServerReady;
+  return server;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

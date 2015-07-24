@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/ListResponse/ackReceived.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -76,7 +77,7 @@
         <li><a href="dslink.browser/ListResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
-        <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
+        <li><a href="dslink.browser/ListResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.browser/ListResponse/startSendingData.html">startSendingData</a></li>
       </ol>
 
@@ -95,10 +96,19 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void ackReceived(int ackId) {
+  _waitingAck = false;
+  if (_sendAfterAck) {
+    _sendAfterAck = false;
+    prepareSending();
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

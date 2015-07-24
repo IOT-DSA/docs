@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/BinaryInCache/receiveData.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -87,10 +88,61 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void receiveData(List&lt;int&gt; inputList) {
+  Uint8List input;
+  if (inputList is Uint8List) {
+    input = inputList;
+  } else {
+    input = new Uint8List.fromList(inputList);
+  }
+  // TODO error handling
+  ByteData bytedata = new ByteData.view(
+      input.buffer, input.offsetInBytes, input.lengthInBytes);
+  int headerSize = bytedata.getUint32(0);
+  int count = headerSize ~/ 9;
+  for (int i = 0; i &lt; headerSize; i += 9) {
+    int start = bytedata.getUint32(i);
+    int end;
+    if (i &lt; headerSize - 9) {
+      end = bytedata.getUint32(i + 9);
+    } else {
+      end = input.length;
+    }
+    ByteData bytes =
+        input.buffer.asByteData(start + input.offsetInBytes, end - start);
+    String id = bytedata.getUint32(i + 4).toString();
+    bool finished = bytedata.getUint8(i + 8) == 0;
+    BinaryData data = caches[id];
+    if (data == null) {
+      // create new binary data
+      data = new BinaryData(null);
+      if (finished) {
+        data.bytes = bytes;
+      } else {
+        data.mergingList = [bytes];
+      }
+      caches[id] = data;
+    } else {
+      // merge partial data
+      if (data.mergingList != null) {
+        data.mergingList.add(bytes);
+      } else {
+        // this shouldn&apos;t happen!
+        data.mergingList = [bytes];
+      }
+      if (finished) {
+        data.bytes = ByteDataUtil.mergeBytes(data.mergingList);
+        data.mergingList = null;
+      }
+    }
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

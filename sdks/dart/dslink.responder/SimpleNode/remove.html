@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/SimpleNode/remove.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -149,9 +150,16 @@
 
     <section class="desc markdown">
     
+          <p>Remove this node from it's parent.</p>
     
-        <p>Remove this node from it's parent.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Remove this node from it&apos;s parent.
+void remove() {
+  provider.removeNode(path);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

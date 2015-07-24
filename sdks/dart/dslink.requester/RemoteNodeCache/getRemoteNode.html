@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.requester/RemoteNodeCache/getRemoteNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -86,10 +87,22 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">RemoteNode getRemoteNode(String path) {
+  if (!_nodes.containsKey(path)) {
+    if (path.startsWith(&apos;defs&apos;)) {
+      _nodes[path] = new RemoteDefNode(path);
+    } else {
+      _nodes[path] = new RemoteNode(path);
+    }
+  }
+  return _nodes[path];
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

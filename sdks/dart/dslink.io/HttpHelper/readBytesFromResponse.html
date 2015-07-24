@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -90,9 +91,19 @@
 
     <section class="desc markdown">
     
+          <p>Reads the entire response as a list of bytes.</p>
     
-        <p>Reads the entire response as a list of bytes.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Reads the entire [response] as a list of bytes.
+static Future&lt;List&lt;int&gt;&gt; readBytesFromResponse(HttpClientResponse response) async {
+  return await response.fold([], (a, b) {
+    a.addAll(b);
+    return a;
+  });
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

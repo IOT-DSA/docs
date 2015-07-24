@@ -51,6 +51,7 @@ You can return the following types from this method:
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SimpleNode/onInvoke.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -160,8 +161,7 @@ You can return the following types from this method:
 
     <section class="desc markdown">
     
-    
-        <p>This is called when this node is invoked.
+          <p>This is called when this node is invoked.
 You can return the following types from this method:
 - Iterable
 - Map
@@ -175,6 +175,27 @@ You can return the following types from this method:
 - Map
 - <a href="dslink/Table-class.html">Table</a></p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// This is called when this node is invoked.
+/// You can return the following types from this method:
+/// - [Iterable]
+/// - [Map]
+/// - [Table]
+/// - [Stream]
+/// - [SimpleTableResult]
+/// - [AsyncTableResult]
+///
+/// You can also return a future (like if the method is async) of the following types:
+/// - [Stream]
+/// - [Iterable]
+/// - [Map]
+/// - [Table]
+dynamic onInvoke(Map params) {
+  return null;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

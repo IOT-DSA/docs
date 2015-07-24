@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/SimpleNodeProvider/addNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -109,9 +110,47 @@
 
     <section class="desc markdown">
     
+          <p>Adds a node at the given [path] that is initialized with the given data in [m].</p>
     
-        <p>Adds a node at the given [path] that is initialized with the given data in [m].</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+SimpleNode addNode(String path, Map m) {
+  if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
+
+  Path p = new Path(path);
+  SimpleNode pnode = getNode(p.parentPath);
+
+  SimpleNode node;
+
+  if (pnode != null) {
+    node = pnode.onLoadChild(p.name, m, this);
+  }
+
+  if (node == null) {
+    String profile = m[r&apos;$is&apos;];
+    if (_profileFactories.containsKey(profile)) {
+      node = _profileFactories[profile](path);
+    } else {
+      node = getOrCreateNode(path);
+    }
+  }
+
+  nodes[path] = node;
+  node.load(m);
+
+  node.onCreated();
+
+  if (pnode != null) {
+    pnode.children[p.name] = node;
+    pnode.onChildAdded(p.name, node);
+    pnode.updateList(p.name);
+  }
+
+  return node;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

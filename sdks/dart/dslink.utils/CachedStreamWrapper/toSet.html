@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/toSet.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -117,14 +118,18 @@
 
     <section class="desc markdown">
     
-    
-        <p>Collects the data of this stream in a [Set].</p>
+          <p>Collects the data of this stream in a [Set].</p>
 <p>The returned set is the same type as returned by <code>new Set&lt;T&gt;()</code>.
 If another type of set is needed, either use [forEach] to add each
 element to the set, or use
 <code>toList().then((list) =&gt; new SomeOtherSet.from(list))</code>
 to create the set.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;Set&lt;T&gt;&gt; toSet() =&gt; _stream.toSet();</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

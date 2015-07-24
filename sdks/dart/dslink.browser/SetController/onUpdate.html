@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/SetController/onUpdate.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -92,10 +93,16 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void onUpdate(String status, List updates, List columns, Map meta, DSError error) {
+  // TODO implement error
+  completer.complete(new RequesterUpdate(status));
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

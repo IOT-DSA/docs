@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/LocalDataStorage/remove.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -94,9 +95,14 @@
 
     <section class="desc markdown">
     
+          <p>Remove the specified key.</p>
     
-        <p>Remove the specified key.</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">@override
+Future&lt;String&gt; remove(String key) async =&gt; window.localStorage.remove(key);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

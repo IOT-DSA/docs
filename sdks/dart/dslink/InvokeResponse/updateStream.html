@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink/InvokeResponse/updateStream.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -95,10 +96,31 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void updateStream(List updates,
+    {List columns, String streamStatus: StreamStatus.open, Map meta}) {
+  if (columns != null) {
+    _columns = columns;
+  }
+  _meta = meta;
+  if (_updates == null) {
+    _updates = updates;
+  } else {
+    _updates.addAll(updates);
+  }
+  if (_sendingStreamStatus == StreamStatus.initialize) {
+    // in case stream can&apos;t return all restult all at once, count the length of initilize
+    _pendingInitializeLength += updates.length;
+  }
+
+  _sendingStreamStatus = streamStatus;
+  prepareSending();
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

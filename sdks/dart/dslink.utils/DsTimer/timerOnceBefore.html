@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/DsTimer/timerOnceBefore.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -94,9 +95,32 @@
 
     <section class="desc markdown">
     
+          <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
     
-        <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// do nothng if the callback is already in the list and will get called after 0 ~ N ms
+static void timerOnceBefore(Function callback, int ms) {
+  int desiredTime50 =
+      (((new DateTime.now()).millisecondsSinceEpoch + ms) / 50).ceil();
+  if (_functionsMap.containsKey(callback)) {
+    TimerFunctions existTf = _functionsMap[callback];
+    if (existTf.ts50 &lt;= desiredTime50) {
+      return;
+    } else {
+      existTf.remove(callback);
+    }
+  }
+  if (desiredTime50 &lt;= _lastTimeRun) {
+    callLater(callback);
+    return;
+  }
+  TimerFunctions tf = _getTimerFunctions(desiredTime50);
+  tf.add(callback);
+  _functionsMap[callback] = tf;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

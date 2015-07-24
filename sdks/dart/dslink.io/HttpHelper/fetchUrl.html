@@ -45,6 +45,7 @@ If headers is specified, the headers will be added onto the request.
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.io/HttpHelper/fetchUrl.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -91,10 +92,20 @@ If headers is specified, the headers will be added onto the request.
 
     <section class="desc markdown">
     
-    
-        <p>Fetches the specified url from HTTP.
+          <p>Fetches the specified url from HTTP.
 If headers is specified, the headers will be added onto the request.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Fetches the specified [url] from HTTP.
+/// If [headers] is specified, the headers will be added onto the request.
+static Future&lt;String&gt; fetchUrl(String url, {Map&lt;String, String&gt; headers}) async {
+  var request = await createRequest(&quot;GET&quot;, url, headers: headers);
+  var response = await request.close();
+  return UTF8.decode(await readBytesFromResponse(response));
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

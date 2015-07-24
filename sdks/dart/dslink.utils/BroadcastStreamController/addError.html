@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/BroadcastStreamController/addError.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -95,12 +96,18 @@
 
     <section class="desc markdown">
     
-    
-        <p>Send or enqueue an error event.</p>
+          <p>Send or enqueue an error event.</p>
 <p>If [error] is <code>null</code>, it is replaced by a [NullThrownError].</p>
 <p>Also allows an objection stack trace object, on top of what [EventSink]
 allows.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void addError(Object error, [StackTrace stackTrace]) {
+  _controller.addError(error, stackTrace);
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

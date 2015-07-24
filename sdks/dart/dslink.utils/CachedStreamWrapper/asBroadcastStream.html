@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -121,8 +122,7 @@
 
     <section class="desc markdown">
     
-    
-        <p>Returns a multi-subscription stream that produces the same events as this.</p>
+          <p>Returns a multi-subscription stream that produces the same events as this.</p>
 <p>The returned stream will subscribe to this stream when its first
 subscriber is added, and will stay subscribed until this stream ends,
 or a callback cancels the subscription.</p>
@@ -138,6 +138,15 @@ a new listener, the [onListen] function is called again.</p>
 while having no subscribers to prevent losing events, or canceling the
 subscription when there are no listeners.</p>
     
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; asBroadcastStream(
+    {void onListen(StreamSubscription&lt;T&gt; subscription),
+    void onCancel(StreamSubscription&lt;T&gt; subscription)}) {
+  return this;
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

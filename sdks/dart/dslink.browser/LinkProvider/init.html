@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.browser/LinkProvider/init.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -108,10 +109,32 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Future init() async {
+  _initCalled = true;
+
+  privateKey = await getPrivateKey(storage: dataStore);
+
+  if (provider == null) {
+    provider = new SimpleNodeProvider(null, profiles);
+  }
+
+  if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
+    if (!(await dataStore.has(&quot;dsa_nodes&quot;))) {
+      (provider as SerializableNodeProvider).init(defaultNodes);
+    } else {
+      (provider as SerializableNodeProvider)
+          .init(DsJson.decode(await dataStore.get(&quot;dsa_nodes&quot;)));
+    }
+  } else {
+    (provider as SerializableNodeProvider).init(defaultNodes);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

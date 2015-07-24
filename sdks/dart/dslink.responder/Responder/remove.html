@@ -44,6 +44,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.responder/Responder/remove.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -104,10 +105,49 @@
 
     <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
+          <p class="no-docs">Not documented.</p>
     
-        
-    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void remove(Map m) {
+  Path path = Path.getValidPath(m[&apos;path&apos;]);
+  if (path == null || path.isAbsolute) {
+    _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);
+    return;
+  }
+  int rid = m[&apos;rid&apos;];
+  if (path.isNode) {
+    _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_METHOD);
+  } else if (path.isConfig) {
+    LocalNode node;
+
+    node = nodeProvider.getOrCreateNode(path.parentPath, false);
+
+    int permission = nodeProvider.permissions.getPermission(node.path, this);
+    if (permission &lt; Permission.CONFIG) {
+      _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+    } else {
+      node.removeConfig(
+          path.name, this, addResponse(new Response(this, rid)));
+    }
+  } else if (path.isAttribute) {
+    LocalNode node;
+
+    node = nodeProvider.getOrCreateNode(path.parentPath, false);
+    int permission = nodeProvider.permissions.getPermission(node.path, this);
+    if (permission &lt; Permission.WRITE) {
+      _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+    } else {
+      node.removeAttribute(
+          path.name, this, addResponse(new Response(this, rid)));
+    }
+  } else {
+    // shouldn&apos;t be possible to reach here
+    throw &apos;unexpected case&apos;;
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->
