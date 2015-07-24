@@ -74,7 +74,6 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
-        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -132,9 +131,6 @@
   if (_id2connPath.containsKey(fullId)) {
     return _id2connPath[fullId];
     // TODO is it possible same link get added twice?
-  } else if (fullId.contains(&quot;@&quot;)) {
-    var name = fullId.substring(0, fullId.indexOf(&quot;@&quot;));
-    return &apos;/upstream/$name&apos;;
   } else if (fullId.length &lt; 43) {
     // user link
     String connPath = &apos;/conns/$fullId&apos;;

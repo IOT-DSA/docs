@@ -95,6 +95,10 @@
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
             <span class="name ">getSendingData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>,<br><span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -105,8 +109,8 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">ProcessorResult getSendingData() {
-  ProcessorResult rslt = super.getSendingData();
+      <pre><code class="prettyprint lang-dart">ProcessorResult getSendingData(int currentTime, int waitingAckId) {
+  ProcessorResult rslt = super.getSendingData(currentTime, waitingAckId);
   lastSentId = nextRid - 1;
   return rslt;
 }</code></pre>

@@ -106,14 +106,19 @@
     if (ackGroup.ackId == ackId) {
       findAckGroup = ackGroup;
       break;
+    } else if (ackGroup.ackId &lt; ackId) {
+      findAckGroup = ackGroup;
     }
   }
-  while (findAckGroup != null) {
-    ConnectionAckGroup ackGroup = pendingAcks.removeFirst();
-    ackGroup.ackAll(ackId);
-    if (ackGroup == findAckGroup) {
-      break;
-    }
+  if (findAckGroup != null) {
+    int ts = (new DateTime.now()).millisecondsSinceEpoch;
+    do {
+      ConnectionAckGroup ackGroup = pendingAcks.removeFirst();
+      ackGroup.ackAll(ackId, ts);
+      if (ackGroup == findAckGroup) {
+        break;
+      }
+    } while (findAckGroup != null);
   }
 }</code></pre>
     </section>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ackWaiting method - SubscribeResponse class - dslink.browser library - Dart API</title>
+    <title>WAITCOUNT constant - ConnectionProcessor class - dslink.common library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the ackWaiting method from the SubscribeResponse class, for the Dart programming language.">
+    <meta name="description" content="API docs for the WAITCOUNT constant from the ConnectionProcessor class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -28,59 +28,47 @@
             <button id="sidenav-toggle" type="button"> </button>
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
-                <li class="self-crumb">ackWaiting</li>
+                <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+                <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+                <li class="self-crumb">WAITCOUNT</li>
             </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> ackWaiting
+                <div class="kind">constant</div> WAITCOUNT
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.browser/SubscribeResponse/ackWaiting.html#source">Source</a></li>
         </ul>
     </div>
 </header>
 
 <div class="container body">
-
 <div class="row row-offcanvas row-offcanvas-left">
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
 
-    <h5><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></h5>
+    <h5><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></h5>
 
       <ol id="sidebar">
+        <li class="section-title"><a href="dslink.common/ConnectionProcessor-class.html#constants">Constants</a></li>
+        <li><a href="dslink.common/ConnectionProcessor/WAITCOUNT.html">WAITCOUNT</a></li>
     
     
     
-        <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/changed.html">changed</a></li>
-        <li><a href="dslink.responder/Response/responder.html">responder</a></li>
-        <li><a href="dslink.responder/Response/rid.html">rid</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/subsriptionids.html">subsriptionids</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/subsriptions.html">subsriptions</a></li>
     
-        <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/SubscribeResponse.html">SubscribeResponse</a></li>
+        <li class="section-title"><a href="dslink.common/ConnectionProcessor-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.common/ConnectionProcessor/ConnectionProcessor.html">ConnectionProcessor</a></li>
     
     
-        <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/ackWaiting.html">ackWaiting</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/add.html">add</a></li>
-        <li><a href="dslink.responder/Response/close.html">close</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/prepareSending.html">prepareSending</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/remove.html">remove</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/startSendingData.html">startSendingData</a></li>
-        <li><a href="dslink.browser/SubscribeResponse/subscriptionChanged.html">subscriptionChanged</a></li>
+        <li class="section-title"><a href="dslink.common/ConnectionProcessor-class.html#methods">Methods</a></li>
+        <li><a href="dslink.common/ConnectionProcessor/ackReceived.html">ackReceived</a></li>
+        <li><a href="dslink.common/ConnectionProcessor/startSendingData.html">startSendingData</a></li>
       </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -88,13 +76,10 @@
   <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">ackWaiting</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>
-            </div>
-            )    </section>
+              <span class="returntype">int</span>
+              <span class="name ">WAITCOUNT</span>              =
+              <span class="constant-value">4</span>
+    </section>
 
     <section class="desc markdown">
     
@@ -102,16 +87,10 @@
     
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void ackWaiting(int ackId) {
-  _waitingAck = true;
-}</code></pre>
-    </section>
-
   </div> <!-- /.col-xs-12.col-sm-9 -->
 
 </div> <!-- /.row-offcanvas -->
+
 </div> <!-- container -->
 
 <footer>

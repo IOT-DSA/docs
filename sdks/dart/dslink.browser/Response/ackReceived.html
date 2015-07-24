@@ -71,7 +71,6 @@
     
         <li class="section-title"><a href="dslink.browser/Response-class.html#methods">Methods</a></li>
         <li><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/Response/close.html">close</a></li>
         <li><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.browser/Response/startSendingData.html">startSendingData</a></li>
@@ -86,7 +85,7 @@
             <span class="name ">ackReceived</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>
+                <span class="parameter" id="ackReceived-param-receiveAckId"><span class="type-annotation">int</span> <span class="parameter-name">receiveAckId</span></span>,<br><span class="parameter" id="ackReceived-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>,<br><span class="parameter" id="ackReceived-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>
             </div>
             )    </section>
 
@@ -98,7 +97,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void ackReceived(int ackId) {
+      <pre><code class="prettyprint lang-dart">void ackReceived(int receiveAckId, int startTime, int currentTime) {
   // TODO: implement ackReceived
 }</code></pre>
     </section>

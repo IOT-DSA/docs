@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>responder property - UpstreamServerLink class - dslink.broker library - Dart API</title>
+    <title>load method - VirtualNodePermissioin class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the responder property from the UpstreamServerLink class, for the Dart programming language.">
+    <meta name="description" content="API docs for the load method from the VirtualNodePermissioin class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -29,21 +29,22 @@
             <ol class="breadcrumbs gt-separated">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li><a href="dslink.broker/UpstreamServerLink-class.html">UpstreamServerLink</a></li>
-                <li class="self-crumb">responder</li>
+                <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
+                <li class="self-crumb">load</li>
             </ol>
         </div>
     </nav>
     <div class="container">
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">property</div> responder
+                <div class="kind">method</div> load
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/VirtualNodePermissioin/load.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -54,29 +55,28 @@
 
   <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
 
-    <h5><a href="dslink.broker/UpstreamServerLink-class.html">UpstreamServerLink</a></h5>
+    <h5><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></h5>
 
       <ol id="sidebar">
     
     
     
-        <li class="section-title"><a href="dslink.broker/UpstreamServerLink-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/dsId.html">dsId</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/link.html">link</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/nonce.html">nonce</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/onRequesterReady.html">onRequesterReady</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/publicKey.html">publicKey</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/requester.html">requester</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/responder.html">responder</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/rname.html">rname</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/session.html">session</a></li>
+        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.broker/VirtualNodePermissioin/children.html">children</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/defaultPermission.html">defaultPermission</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/idPermissions.html">idPermissions</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/permissionList.html">permissionList</a></li>
     
-        <li class="section-title"><a href="dslink.broker/UpstreamServerLink-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/UpstreamServerLink.html">UpstreamServerLink</a></li>
+        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.broker/VirtualNodePermissioin/VirtualNodePermissioin.html">VirtualNodePermissioin</a></li>
     
     
-        <li class="section-title"><a href="dslink.broker/UpstreamServerLink-class.html#methods">Methods</a></li>
-        <li><a href="dslink.broker/UpstreamServerLink/close.html">close</a></li>
+        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#methods">Methods</a></li>
+        <li><a href="dslink.broker/VirtualNodePermissioin/getPermission.html">getPermission</a></li>
+        <li><a href="dslink.broker/VirtualNodePermissioin/load.html">load</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
+        <li><a href="dslink.broker/VirtualNodePermissioin/serialize.html">serialize</a></li>
+        <li><a href="dslink.broker/BrokerNodePermission/serializePermission.html">serializePermission</a></li>
       </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -84,18 +84,33 @@
   <div class="col-xs-12 col-sm-9">
 
     <section class="multi-line-signature">
-        <span class="returntype"><a href="dslink/Responder-class.html">Responder</a></span>
-        <span class="name ">responder</span>
-        <div class="readable-writable">
-            read-only
-        </div>
+            <span class="returntype">void</span>
+            <span class="name ">load</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
     </section>
 
-      <section class="desc markdown">
-      
-            <p class="no-docs">Not documented.</p>
-      
-      </section>
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void load(Map m) {
+  m.forEach((String name, Object value) {
+    if (value is Map) {
+      children[name] = new VirtualNodePermissioin() ..load(value);
+    }
+  });
+  if (m[&apos;?permissions&apos;] is List) {
+    loadPermission(m[&apos;?permissions&apos;]);
+  }
+}</code></pre>
+    </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->
 

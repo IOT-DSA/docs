@@ -58,6 +58,8 @@
     <h5><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></h5>
 
       <ol id="sidebar">
+        <li class="section-title"><a href="dslink/ConnectionProcessor-class.html#constants">Constants</a></li>
+        <li><a href="dslink/ConnectionProcessor/WAITCOUNT.html">WAITCOUNT</a></li>
     
     
     
@@ -68,7 +70,6 @@
     
         <li class="section-title"><a href="dslink/ConnectionProcessor-class.html#methods">Methods</a></li>
         <li><a href="dslink/ConnectionProcessor/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink/ConnectionProcessor/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink/ConnectionProcessor/startSendingData.html">startSendingData</a></li>
       </ol>
 
@@ -79,6 +80,10 @@
     <section class="multi-line-signature">
             <span class="returntype">void</span>
             <span class="name ">startSendingData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>,<br><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -89,7 +94,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void startSendingData();</code></pre>
+      <pre><code class="prettyprint lang-dart">void startSendingData(int waitingAckId, int currentTime);</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

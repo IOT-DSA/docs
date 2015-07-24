@@ -72,7 +72,6 @@
     
         <li class="section-title"><a href="dslink.browser/ListResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink.browser/ListResponse/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/ListResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
         <li><a href="dslink.browser/ListResponse/prepareSending.html">prepareSending</a></li>
@@ -181,16 +180,7 @@
           <h2>Methods</h2>
           <dl class="callables">
               <dt id="ackReceived" class="callable">
-                  <a href="dslink.browser/ListResponse/ackReceived.html"><span class="name ">ackReceived</span></a><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
-              <dt id="ackWaiting" class="callable">
-                  <a href="dslink.browser/ListResponse/ackWaiting.html"><span class="name ">ackWaiting</span></a><span class="signature">(<wbr><span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                  <a href="dslink.browser/ListResponse/ackReceived.html"><span class="name ">ackReceived</span></a><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-receiveAckId"><span class="type-annotation">int</span> <span class="parameter-name">receiveAckId</span></span>, <span class="parameter" id="ackReceived-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>, <span class="parameter" id="ackReceived-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -229,7 +219,7 @@
                   
               </dd>
               <dt id="startSendingData" class="callable">
-                  <a href="dslink.browser/ListResponse/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr>)
+                  <a href="dslink.browser/ListResponse/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>

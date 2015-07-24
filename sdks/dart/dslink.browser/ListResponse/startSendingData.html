@@ -74,7 +74,6 @@
     
         <li class="section-title"><a href="dslink.browser/ListResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink.browser/ListResponse/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/ListResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
         <li><a href="dslink.browser/ListResponse/prepareSending.html">prepareSending</a></li>
@@ -93,6 +92,10 @@
             </div>
             <span class="returntype">void</span>
             <span class="name ">startSendingData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>,<br><span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -104,8 +107,12 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">@override
-void startSendingData() {
+void startSendingData(int currentTime, int waitingAckId) {
   _pendingSending = false;
+
+  _waitingAckCount++;
+  _lastWatingAckId = waitingAckId;
+
   Object updateIs;
   Object updateBase;
   List updateConfigs = [];

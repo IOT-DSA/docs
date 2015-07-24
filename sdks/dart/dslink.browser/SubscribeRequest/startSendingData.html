@@ -78,7 +78,6 @@
     
         <li class="section-title"><a href="dslink.browser/SubscribeRequest-class.html#methods">Methods</a></li>
         <li><a href="dslink.browser/SubscribeRequest/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.browser/SubscribeRequest/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/SubscribeRequest/addSubscription.html">addSubscription</a></li>
         <li><a href="dslink.requester/Request/close.html">close</a></li>
         <li><a href="dslink.browser/SubscribeRequest/prepareSending.html">prepareSending</a></li>
@@ -94,6 +93,10 @@
     <section class="multi-line-signature">
             <span class="returntype">void</span>
             <span class="name ">startSendingData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>,<br><span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -104,8 +107,12 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void startSendingData() {
-  _pendingSend = false;
+      <pre><code class="prettyprint lang-dart">void startSendingData(int currentTime, int waitingAckId) {
+  _pendingSending = false;
+
+  _waitingAckCount++;
+  _lastWatingAckId = waitingAckId;
+
   if (requester.connection == null) {
     return;
   }

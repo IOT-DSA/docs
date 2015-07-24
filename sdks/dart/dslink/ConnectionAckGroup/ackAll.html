@@ -63,7 +63,9 @@
     
         <li class="section-title"><a href="dslink/ConnectionAckGroup-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink/ConnectionAckGroup/ackId.html">ackId</a></li>
+        <li><a href="dslink/ConnectionAckGroup/expectedAckTime.html">expectedAckTime</a></li>
         <li><a href="dslink/ConnectionAckGroup/processors.html">processors</a></li>
+        <li><a href="dslink/ConnectionAckGroup/startTime.html">startTime</a></li>
     
         <li class="section-title"><a href="dslink/ConnectionAckGroup-class.html#constructors">Constructors</a></li>
         <li><a href="dslink/ConnectionAckGroup/ConnectionAckGroup.html">ConnectionAckGroup</a></li>
@@ -82,7 +84,7 @@
             <span class="name ">ackAll</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="ackAll-param-ackid"><span class="type-annotation">int</span> <span class="parameter-name">ackid</span></span>
+                <span class="parameter" id="ackAll-param-ackid"><span class="type-annotation">int</span> <span class="parameter-name">ackid</span></span>,<br><span class="parameter" id="ackAll-param-time"><span class="type-annotation">int</span> <span class="parameter-name">time</span></span>
             </div>
             )    </section>
 
@@ -94,9 +96,9 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void ackAll(int ackid){
+      <pre><code class="prettyprint lang-dart">void ackAll(int ackid, int time){
   for (ConnectionProcessor processor in processors) {
-    processor.ackReceived(ackId);
+    processor.ackReceived(ackId, startTime, time);
   }
 }</code></pre>
     </section>

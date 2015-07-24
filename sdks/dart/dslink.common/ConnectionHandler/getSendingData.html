@@ -84,6 +84,10 @@
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
             <span class="name ">getSendingData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>,<br><span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -95,12 +99,12 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">/// gather all the changes from
-ProcessorResult getSendingData() {
+ProcessorResult getSendingData(int currentTime, int waitingAckId) {
   _pendingSend = false;
   List&lt;ConnectionProcessor&gt; processors = _processors;
   _processors = [];
   for (ConnectionProcessor proc in processors) {
-    proc.startSendingData();
+    proc.startSendingData(currentTime, waitingAckId);
   }
   List&lt;Map&gt; rslt = _toSendList;
   _toSendList = [];

@@ -90,7 +90,7 @@
             <span class="name ">ackReceived</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>
+                <span class="parameter" id="ackReceived-param-receiveAckId"><span class="type-annotation">int</span> <span class="parameter-name">receiveAckId</span></span>,<br><span class="parameter" id="ackReceived-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>,<br><span class="parameter" id="ackReceived-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>
             </div>
             )    </section>
 
@@ -102,9 +102,9 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void ackReceived(int ackId) {
+      <pre><code class="prettyprint lang-dart">void ackReceived(int receiveAckId, int startTime, int currentTime) {
   if (onAck != null &amp;&amp; !_closed) {
-    onAck(this, _waitingAckId, ackId);
+    onAck(this, receiveAckId, startTime, currentTime);
   }
 }</code></pre>
     </section>

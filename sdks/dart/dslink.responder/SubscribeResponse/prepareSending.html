@@ -74,7 +74,6 @@
     
         <li class="section-title"><a href="dslink.responder/SubscribeResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink.responder/SubscribeResponse/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.responder/SubscribeResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.responder/SubscribeResponse/add.html">add</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
         <li><a href="dslink.responder/SubscribeResponse/prepareSending.html">prepareSending</a></li>
@@ -101,10 +100,16 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void prepareSending() {
-  if (_waitingAck) {
-    _sendAfterAck = true;
-  } else {
-    super.prepareSending();
+  if (_sendingAfterAck) {
+    return;
+  }
+  if (_waitingAckCount &gt; ConnectionProcessor.WAITCOUNT) {
+    _sendingAfterAck = true;
+    return;
+  }
+  if (!_pendingSending) {
+    _pendingSending = true;
+    responder.addProcessor(this);
   }
 }</code></pre>
     </section>
