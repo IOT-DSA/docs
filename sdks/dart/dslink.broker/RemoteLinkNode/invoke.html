@@ -147,13 +147,13 @@ InvokeResponse invoke(
     Map params, Responder responder, InvokeResponse response, LocalNode parentNode, [int maxPermission = Permission.CONFIG]) {
   // TODO, when invoke closed without any data, also need to updateStream to close
   StreamSubscription sub = _linkManager.requester
-      .invoke(remotePath, params)
-      .listen((RequesterInvokeUpdate update) {
+  .invoke(remotePath, params)
+  .listen((RequesterInvokeUpdate update) {
     if (update.error != null) {
       response.close(update.error);
     } else {
       response.updateStream(update.updates,
-          streamStatus: update.streamStatus, columns: update.rawColumns, meta:update.meta);
+      streamStatus: update.streamStatus, columns: update.rawColumns, meta:update.meta);
     }
   }, onDone: () {
     response.close();

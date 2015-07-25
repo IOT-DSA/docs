@@ -75,6 +75,7 @@ If it does not exist, create a new node and return it.
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -181,6 +182,20 @@ If it does not exist, create a new node and return it.</p>
       conn.rootNode.parentNode = connsNode;
       conn.inTree = true;
       connsNode.updateList(connName);
+    }
+    node = conn.getOrCreateNode(path, false);
+  } else if (path.startsWith(&apos;/upstream/&apos;)) {
+    String upstreamName = path.split(&apos;/&apos;)[2];
+    String connPath = &apos;/upstream/${upstreamName}&apos;;
+    RemoteLinkManager conn = conns[connPath];
+    if (conn == null) {
+      conn = new RemoteLinkManager(this, connPath, this);
+      conns[connPath] = conn;
+      nodes[connPath] = conn.rootNode;
+      upstreamDataNode.children[upstreamName] = conn.rootNode;
+      conn.rootNode.parentNode = upstreamDataNode;
+      conn.inTree = true;
+      upstreamDataNode.updateList(upstreamName);
     }
     node = conn.getOrCreateNode(path, false);
   } else if (path.startsWith(&apos;/quarantine/&apos;)) {

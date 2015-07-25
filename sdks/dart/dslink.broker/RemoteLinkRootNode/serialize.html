@@ -161,7 +161,7 @@
   attributes.forEach((String name, Object val) {
     rslt[name] = val;
   });
-  pchildren.forEach((String name, VirtualNodePermissioin val) {
+  pchildren.forEach((String name, VirtualNodePermission val) {
     rslt[name] = val.serialize();
   });
   List permissionData = this.serializePermission();

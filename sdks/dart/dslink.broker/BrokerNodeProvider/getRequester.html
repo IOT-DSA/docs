@@ -74,6 +74,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -129,7 +130,7 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">Requester getRequester(String dsId) {
   String connPath = makeConnPath(dsId);
-  if (conns.containsKey(makeConnPath)) {
+  if (conns.containsKey(connPath)) {
     return conns[connPath].requester;
   }
   /// create the RemoteLinkManager
