@@ -65,7 +65,7 @@
     
         <li class="section-title"><a href="dslink/HttpClientLink-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink/HttpClientLink/dsId.html">dsId</a></li>
-        <li><a href="dslink/HttpClientLink/enableHttp.html">enableHttp</a></li>
+        <li><a href="dslink/HttpClientLink/enableAck.html">enableAck</a></li>
         <li><a href="dslink/HttpClientLink/home.html">home</a></li>
         <li><a href="dslink/HttpClientLink/nonce.html">nonce</a></li>
         <li><a href="dslink/HttpClientLink/onConnected.html">onConnected</a></li>
@@ -116,7 +116,7 @@
   try {
     var socket = await HttpHelper.connectToWebSocket(&apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
     _wsConnection = new WebSocketConnection(socket,
-        clientLink: this, enableTimeout: true);
+        clientLink: this, enableTimeout: true, enableAck:enableAck);
 
     logger.info(&quot;Connected&quot;);
     if (!_onConnectedCompleter.isCompleted) {

@@ -65,6 +65,7 @@
     
         <li class="section-title"><a href="dslink.browser_client/BrowserECDHLink-class.html#instance-properties">Properties</a></li>
         <li><a href="dslink.browser_client/BrowserECDHLink/dsId.html">dsId</a></li>
+        <li><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></li>
         <li><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></li>
         <li><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></li>
         <li><a href="dslink.browser_client/BrowserECDHLink/onRequesterReady.html">onRequesterReady</a></li>
@@ -112,7 +113,7 @@
 //    }
   var socket =
       new WebSocket(&apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
-  _wsConnection = new WebSocketConnection(socket, this, onConnect: () {
+  _wsConnection = new WebSocketConnection(socket, this, enableAck:enableAck, onConnect: () {
     if (!_onConnectedCompleter.isCompleted) {
       _onConnectedCompleter.complete();
     }
