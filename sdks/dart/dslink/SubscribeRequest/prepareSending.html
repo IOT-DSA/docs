@@ -107,13 +107,13 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void prepareSending() {
-  if (_sendingAfterAck) {
-    return;
-  }
-  if (_waitingAckCount &gt; ConnectionProcessor.WAITCOUNT) {
-    _sendingAfterAck = true;
-    return;
-  }
+//    if (_sendingAfterAck) {
+//      return;
+//    }
+//    if (_waitingAckCount &gt; ConnectionProcessor.WAITCOUNT) {
+//      _sendingAfterAck = true;
+//      return;
+//    }
   if (!_pendingSending) {
     _pendingSending = true;
     requester.addProcessor(this);
