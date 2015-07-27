@@ -25,15 +25,21 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-toggle" type="button"> </button>
-            <ol class="breadcrumbs gt-separated">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
                 <li class="self-crumb">logger</li>
             </ol>
+            <div class="self-name">logger</div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+            <li class="self-crumb">logger</li>
+        </ol>
         <div class="title-description">
             <h1 class="title">
                 <div class="kind">property</div> logger
@@ -49,22 +55,20 @@
 
 <div class="container body">
 
-<div class="row row-offcanvas row-offcanvas-left">
-
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
-    <ol id="sidebar">
+  <div class="col-xs-6 col-sm-3 sidebar-offcanvas-left">
+    <ol class="sidebar">
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
       <li><a href="dslink.utils/alphabet.html">alphabet</a></li>
       <li><a href="dslink.utils/DSA_VERSION.html">DSA_VERSION</a></li>
       <li><a href="dslink.utils/numbers.html">numbers</a></li>
       <li><a href="dslink.utils/specials.html">specials</a></li>
-
-
+    
+    
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
       <li><a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a></li>
       <li><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></li>
       <li><a href="dslink.utils/logger.html">logger</a></li>
-
+    
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
       <li><a href="dslink.utils/buildActionIO.html">buildActionIO</a></li>
       <li><a href="dslink.utils/buildEnumType.html">buildEnumType</a></li>
@@ -73,8 +77,8 @@
       <li><a href="dslink.utils/generateToken.html">generateToken</a></li>
       <li><a href="dslink.utils/parseEnumType.html">parseEnumType</a></li>
       <li><a href="dslink.utils/updateLogLevel.html">updateLogLevel</a></li>
-
-
+    
+    
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#classes">Classes</a></li>
       <li><a href="dslink.utils/Base64-class.html">Base64</a></li>
       <li><a href="dslink.utils/BetterIterator-class.html">BetterIterator</a></li>
@@ -91,11 +95,11 @@
       <li><a href="dslink.utils/Interval-class.html">Interval</a></li>
       <li><a href="dslink.utils/Scheduler-class.html">Scheduler</a></li>
       <li><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></li>
-
+    
     </ol>
-  </div><!--/.sidebar-offcanvas-->
+  </div><!--/.sidebar-offcanvas-left-->
 
-  <div class="col-xs-12 col-sm-9">
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
         <span class="returntype">Logger</span>
@@ -111,9 +115,8 @@
       
       </section>
 
-  </div> <!-- /.col-xs-12.col-sm-9 -->
+  </div> <!-- /.main-content -->
 
-</div> <!-- /.row-offcanvas -->
 </div> <!-- container -->
 
 <footer>
@@ -142,28 +145,69 @@
 <script>
 // Adds a shadow for the top nav when the masthead is scrolled off the top.
 function initScroller() {
-  window.addEventListener('scroll', function(e){
-    var header = document.querySelector("header");
+  var header = document.querySelector("header");
+  var title = document.querySelector(".title-description");
+  var selfName = document.querySelector('nav .self-name');
+
+  window.addEventListener('scroll', function(e) {
+    var position = window.pageYOffset || document.documentElement.scrollTop;
 
     if (header) {
-      var position = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (position >= 136) {
+      if (position >= 110) { // TODO: where did this num come from?
         header.classList.add("header-fixed");
       } else if (header.classList.contains("header-fixed")) {
         header.classList.remove("header-fixed");
+      }
+    }
+
+    if (selfName) {
+      if (position >= 80) { // TODO: is this too brittle ?
+        selfName.classList.add('visible-xs-inline');
+      } else {
+        selfName.classList.remove('visible-xs-inline');
       }
     }
   });
 }
 
 function initSideNav() {
-  var button = document.getElementById('sidenav-toggle');
-  if (button) {
-    button.addEventListener('click', function(e) {
-      var elems = document.querySelectorAll('.row-offcanvas');
-      for (var i = 0; i < elems.length; i++) {
-        elems[i].classList.toggle('active');
+  var leftNavToggle = document.getElementById('sidenav-left-toggle');
+  if (leftNavToggle) {
+    leftNavToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var leftNav = document.querySelector('.sidebar-offcanvas-left');
+      if (leftNav) {
+        leftNav.classList.toggle('active');
+      }
+    });
+  }
+
+  document.addEventListener('click', function(e) {
+    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
+    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
+    console.log('a drawer is open');
+    var clickOutsideOfDrawer = true;
+    var t = e.target;
+    while (t !== document) {
+      if (t === rightDrawer || t === leftDrawer) {
+        clickOutsideOfDrawer = false;
+        break;
+      }
+      t = t.parentNode;
+    }
+    if (clickOutsideOfDrawer) {
+      if (rightDrawer) rightDrawer.classList.remove('active');
+      if (leftDrawer) leftDrawer.classList.remove('active');
+    }
+  });
+
+  var rightNavToggle = document.getElementById('sidenav-right-toggle');
+  if (rightNavToggle) {
+    rightNavToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var rightNav = document.querySelector('.sidebar-offcanvas-right');
+      if (rightNav) {
+        rightNav.classList.toggle('active');
       }
     });
   }
