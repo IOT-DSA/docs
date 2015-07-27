@@ -160,7 +160,7 @@
     } else if (name.startsWith(&apos;@&apos;)) {
       attributes[name] = value;
     } else if (value is Map) {
-      pchildren[name] = new VirtualNodePermission() ..load(value);
+      pchildren[name] = new VirtualNodePermissioin() ..load(value);
     }
   });
   if (m[&apos;?permissions&apos;] is List) {

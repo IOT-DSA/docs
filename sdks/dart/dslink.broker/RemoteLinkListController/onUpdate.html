@@ -97,81 +97,78 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
-  bool reseted = false;
-  // TODO implement error handling
-  if (updates != null) {
-    for (Object update in updates) {
-      String name;
-      Object value;
-      bool removed = false;
-      if (update is Map) {
-        if (update[&apos;name&apos;] is String) {
-          name = update[&apos;name&apos;];
-        } else {
-          continue;
-          // invalid response
-        }
-        if (update[&apos;change&apos;] == &apos;remove&apos;) {
-          removed = true;
-        } else {
-          value = update[&apos;value&apos;];
-        }
-      } else if (update is List) {
-        if (update.length &gt; 0 &amp;&amp; update[0] is String) {
-          name = update[0];
-          if (update.length &gt; 1) {
-            value = update[1];
+    bool reseted = false;
+    // TODO implement error handling
+    if (updates != null) {
+      for (Object update in updates) {
+        String name;
+        Object value;
+        bool removed = false;
+        if (update is Map) {
+          if (update[&apos;name&apos;] is String) {
+            name = update[&apos;name&apos;];
+          } else {
+            continue; // invalid response
+          }
+          if (update[&apos;change&apos;] == &apos;remove&apos;) {
+            removed = true;
+          } else {
+            value = update[&apos;value&apos;];
+          }
+        } else if (update is List) {
+          if (update.length &gt; 0 &amp;&amp; update[0] is String) {
+            name = update[0];
+            if (update.length &gt; 1) {
+              value = update[1];
+            }
+          } else {
+            continue; // invalid response
           }
         } else {
-          continue;
-          // invalid response
+          continue; // invalid response
         }
-      } else {
-        continue;
-        // invalid response
-      }
-      if (name.startsWith(r&apos;$&apos;)) {
-        if (!reseted &amp;&amp; (name == r&apos;$is&apos; || name == r&apos;$base&apos; || (name == r&apos;$disconnectedTs&apos; &amp;&amp; value is String))) {
-          reseted = true;
-          node.resetNodeCache();
-        }
+        if (name.startsWith(r&apos;$&apos;)) {
+          if (!reseted &amp;&amp; (name == r&apos;$is&apos; || name == r&apos;$base&apos; || (name == r&apos;$disconnectedTs&apos; &amp;&amp; value is String))) {
+            reseted = true;
+            node.resetNodeCache();
+          }
 
-        if (name == r&apos;$base&apos; &amp;&amp; value is String) {
-          value = (node as RemoteLinkNode)._linkManager.path + value;
-        }
-        if (name == r&apos;$is&apos; &amp;&amp; !node.configs.containsKey(r&apos;$base&apos;)) {
-          node.configs[r&apos;$base&apos;] = (node as RemoteLinkNode)._linkManager.path;
-          changes.add(r&apos;$base&apos;);
-        }
-        changes.add(name);
-        if (removed) {
-          node.configs.remove(name);
+          if (name == r&apos;$base&apos; &amp;&amp; value is String) {
+            value = (node as RemoteLinkNode)._linkManager.path + value;
+          }
+          if (name == r&apos;$is&apos; &amp;&amp; !node.configs.containsKey(r&apos;$base&apos;)) {
+            node.configs[r&apos;$base&apos;] = (node as RemoteLinkNode)._linkManager.path;
+            changes.add(r&apos;$base&apos;);
+          }
+          changes.add(name);
+          if (removed) {
+            node.configs.remove(name);
+          } else {
+            node.configs[name] = value;
+          }
+        } else if (name.startsWith(&apos;@&apos;)) {
+          changes.add(name);
+          if (removed) {
+            node.attributes.remove(name);
+          } else {
+            node.attributes[name] = value;
+          }
         } else {
-          node.configs[name] = value;
-        }
-      } else if (name.startsWith(&apos;@&apos;)) {
-        changes.add(name);
-        if (removed) {
-          node.attributes.remove(name);
-        } else {
-          node.attributes[name] = value;
-        }
-      } else {
-        changes.add(name);
-        if (removed) {
-          node.children.remove(name);
-        } else if (value is Map) {
-          node.children[name] =
-          requester.nodeCache.updateRemoteChildNode(node, name, value);
+          changes.add(name);
+          if (removed) {
+            node.children.remove(name);
+          } else if (value is Map) {
+            node.children[name] =
+                requester.nodeCache.updateRemoteChildNode(node, name, value);
+          }
         }
       }
+      if (request.streamStatus != StreamStatus.initialize) {
+        node.listed = true;
+      }
+      onProfileUpdated();
     }
-    if (request.streamStatus != StreamStatus.initialize) {
-      node.listed = true;
-    }
-    onProfileUpdated();
-  }
-}</code></pre>
+  }</code></pre>
     </section>
 
   </div> <!-- /.col-xs-12.col-sm-9 -->

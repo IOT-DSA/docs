@@ -74,7 +74,6 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
-        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -131,11 +130,7 @@
       <pre><code class="prettyprint lang-dart">void addLink(ServerLink link) {
   String str = link.dsId;
   if (link.session != null) {
-    if (link.session.startsWith(&quot;upstream@&quot;)) {
-      str = &quot;${link.session.substring(9)}@${str}&quot;;
-    } else {
-      str = &apos;$str ${link.session}&apos;;
-    }
+    str = &apos;$str ${link.session}&apos;;
   }
 
   String connPath;
@@ -144,7 +139,7 @@
     // TODO is it possible same link get added twice?
   } else {
     _links[str] = link;
-    if (link.session == null || link.session.startsWith(&quot;upstream@&quot;)) {
+    if (link.session == null) {
       // don&apos;t create node for requester node with session
       connPath = makeConnPath(str);
       getOrCreateNode(connPath, false).configs[r&apos;$$dsId&apos;] = link.dsId;
