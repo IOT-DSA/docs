@@ -103,8 +103,10 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addToSendList(Map m) {
   _toSendList.add(m);
-  if (!_pendingSend &amp;&amp; _conn != null) {
-    _conn.sendWhenReady(this);
+  if (!_pendingSend) {
+    if (_conn != null) {
+      _conn.sendWhenReady(this);
+    }
     _pendingSend = true;
   }
 }</code></pre>

@@ -110,8 +110,10 @@ inside processor, send() data that only need to appear once per data frame</p>
 /// inside processor, send() data that only need to appear once per data frame
 void addProcessor(ConnectionProcessor processor) {
   _processors.add(processor);
-  if (!_pendingSend &amp;&amp; _conn != null) {
-    _conn.sendWhenReady(this);
+  if (!_pendingSend) {
+    if (_conn != null) {
+      _conn.sendWhenReady(this);
+    }
     _pendingSend = true;
   }
 }</code></pre>

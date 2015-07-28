@@ -78,7 +78,9 @@
         <li class="section-title"><a href="dslink.responder/SubscribeResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink.responder/SubscribeResponse/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink.responder/SubscribeResponse/add.html">add</a></li>
+        <li><a href="dslink.responder/SubscribeResponse/addTraceCallback.html">addTraceCallback</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
+        <li><a href="dslink.responder/Response/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink.responder/SubscribeResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.responder/SubscribeResponse/remove.html">remove</a></li>
         <li><a href="dslink.responder/SubscribeResponse/startSendingData.html">startSendingData</a></li>
@@ -112,6 +114,12 @@
     subsriptionids[sid].destroy();
     subsriptionids.remove(sid);
     subsriptions.remove(controller.node.path);
+    if (responder._traceCallbacks != null){
+      ResponseTrace update = new ResponseTrace(controller.node.path,&apos;subscribe&apos;,0,&apos;-&apos;);
+      for (ResponseTraceCallback callback in responder._traceCallbacks) {
+        callback(update);
+      }
+    }
   }
 }</code></pre>
     </section>

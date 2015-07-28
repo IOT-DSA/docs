@@ -68,6 +68,7 @@
       <li><a href="dslink/OnInvokeAcked.html">OnInvokeAcked</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
+      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -142,6 +143,7 @@
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
+      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -297,6 +299,15 @@
                   </div>
                   close the request from responder side and also notify the requester
               </dd>
+              <dt id="getTraceData" class="callable">
+                  <a href="dslink/ListResponse/getTraceData.html"><span class="name ">getTraceData</span></a><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  for the broker trace action
+              </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink/ListResponse/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -340,6 +351,7 @@
         <li><a href="dslink/ListResponse/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink/ListResponse/changed.html">changed</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
+        <li><a href="dslink/ListResponse/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink/ListResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink/ListResponse/startSendingData.html">startSendingData</a></li>
       </ol>

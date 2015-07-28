@@ -131,6 +131,7 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">ServerLink getLink(String dsId, {String sessionId:&apos;&apos;}) {
+  if (sessionId == null) sessionId = &apos;&apos;;
   String str = dsId;
   if (sessionId != null &amp;&amp; sessionId != &apos;&apos;) {
     str = &apos;$dsId sessionId&apos;;

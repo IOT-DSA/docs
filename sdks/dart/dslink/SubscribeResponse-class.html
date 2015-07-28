@@ -68,6 +68,7 @@
       <li><a href="dslink/OnInvokeAcked.html">OnInvokeAcked</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
+      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -142,6 +143,7 @@
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
+      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -285,6 +287,15 @@
               <dd>
                   
               </dd>
+              <dt id="addTraceCallback" class="callable">
+                  <a href="dslink/SubscribeResponse/addTraceCallback.html"><span class="name ">addTraceCallback</span></a><span class="signature">(<wbr><span class="parameter" id="addTraceCallback-param-_traceCallback"><span class="type-annotation">dynamic</span> <span class="parameter-name">_traceCallback</span>(<span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)</span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="close" class="callable">
                   <a href="dslink.responder/Response/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
                       &#8594;
@@ -296,6 +307,18 @@
                     <span class="is-inherited">inherited</span>
                   </div>
                   close the request from responder side and also notify the requester
+              </dd>
+              <dt id="getTraceData" class="callable">
+                  <a href="dslink.responder/Response/getTraceData.html"><span class="name ">getTraceData</span></a><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  for the broker trace action
               </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink/SubscribeResponse/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
@@ -357,7 +380,9 @@
         <li class="section-title"><a href="dslink/SubscribeResponse-class.html#methods">Methods</a></li>
         <li><a href="dslink/SubscribeResponse/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink/SubscribeResponse/add.html">add</a></li>
+        <li><a href="dslink/SubscribeResponse/addTraceCallback.html">addTraceCallback</a></li>
         <li><a href="dslink.responder/Response/close.html">close</a></li>
+        <li><a href="dslink.responder/Response/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink/SubscribeResponse/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink/SubscribeResponse/remove.html">remove</a></li>
         <li><a href="dslink/SubscribeResponse/startSendingData.html">startSendingData</a></li>

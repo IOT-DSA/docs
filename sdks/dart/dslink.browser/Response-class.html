@@ -67,6 +67,7 @@
       <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.browser/OnInvokeAcked.html">OnInvokeAcked</a></li>
       <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
       <li><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -136,6 +137,7 @@
       <li><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
       <li><a href="dslink.browser/Response-class.html">Response</a></li>
+      <li><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.browser/Scheduler-class.html">Scheduler</a></li>
@@ -250,6 +252,15 @@
               <dd>
                   close the request from responder side and also notify the requester
               </dd>
+              <dt id="getTraceData" class="callable">
+                  <a href="dslink.browser/Response/getTraceData.html"><span class="name ">getTraceData</span></a><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  for the broker trace action
+              </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink.browser/Response/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -289,6 +300,7 @@
         <li class="section-title"><a href="dslink.browser/Response-class.html#methods">Methods</a></li>
         <li><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink.browser/Response/close.html">close</a></li>
+        <li><a href="dslink.browser/Response/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.browser/Response/startSendingData.html">startSendingData</a></li>
       </ol>

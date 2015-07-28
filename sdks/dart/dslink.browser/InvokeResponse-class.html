@@ -67,6 +67,7 @@
       <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.browser/OnInvokeAcked.html">OnInvokeAcked</a></li>
       <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
       <li><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -136,6 +137,7 @@
       <li><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
       <li><a href="dslink.browser/Response-class.html">Response</a></li>
+      <li><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.browser/Scheduler-class.html">Scheduler</a></li>
@@ -192,6 +194,16 @@
         <h2>Properties</h2>
 
         <dl class="properties">
+            <dt id="name" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/InvokeResponse/name.html"><span class="name ">name</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+    </div>
+    
+            </dd>
             <dt id="node" class="property">
                 <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
                 <a href="dslink.browser/InvokeResponse/node.html"><span class="name ">node</span></a>
@@ -222,6 +234,16 @@
     </div>
     
             </dd>
+            <dt id="parentNode" class="property">
+                <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
+                <a href="dslink.browser/InvokeResponse/parentNode.html"><span class="name ">parentNode</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only
+    </div>
+    
+            </dd>
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
                 <a href="dslink.responder/Response/responder.html"><span class="name ">responder</span></a>
@@ -242,6 +264,16 @@
     </div>
     
             </dd>
+            <dt id="type" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.browser/InvokeResponse/type.html"><span class="name ">type</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    optiions: stream, append, refresh
+            </dd>
         </dl>
     </section>
 
@@ -250,7 +282,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="InvokeResponse" class="callable">
-                <span class="name"><a href="dslink.browser/InvokeResponse/InvokeResponse.html">InvokeResponse</a></span><span class="signature">(<span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>)</span>
+                <span class="name"><a href="dslink.browser/InvokeResponse/InvokeResponse.html">InvokeResponse</a></span><span class="signature">(<span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)</span>
             </dt>
             <dd>
                 
@@ -288,6 +320,15 @@
               </dt>
               <dd>
                   close the request from responder side and also notify the requester
+              </dd>
+              <dt id="getTraceData" class="callable">
+                  <a href="dslink.browser/InvokeResponse/getTraceData.html"><span class="name ">getTraceData</span></a><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
+                      &#8594;
+                      <span class="returntype"><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  for the broker trace action
               </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink.responder/Response/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
@@ -330,11 +371,14 @@
     
     
         <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/InvokeResponse/name.html">name</a></li>
         <li><a href="dslink.browser/InvokeResponse/node.html">node</a></li>
         <li><a href="dslink.browser/InvokeResponse/onAck.html">onAck</a></li>
         <li><a href="dslink.browser/InvokeResponse/onClose.html">onClose</a></li>
+        <li><a href="dslink.browser/InvokeResponse/parentNode.html">parentNode</a></li>
         <li><a href="dslink.responder/Response/responder.html">responder</a></li>
         <li><a href="dslink.responder/Response/rid.html">rid</a></li>
+        <li><a href="dslink.browser/InvokeResponse/type.html">type</a></li>
     
         <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -344,6 +388,7 @@
         <li><a href="dslink.browser/InvokeResponse/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink.browser/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/InvokeResponse/close.html">close</a></li>
+        <li><a href="dslink.browser/InvokeResponse/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.browser/InvokeResponse/startSendingData.html">startSendingData</a></li>
         <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>

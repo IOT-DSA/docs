@@ -65,11 +65,14 @@
     
     
         <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/InvokeResponse/name.html">name</a></li>
         <li><a href="dslink.browser/InvokeResponse/node.html">node</a></li>
         <li><a href="dslink.browser/InvokeResponse/onAck.html">onAck</a></li>
         <li><a href="dslink.browser/InvokeResponse/onClose.html">onClose</a></li>
+        <li><a href="dslink.browser/InvokeResponse/parentNode.html">parentNode</a></li>
         <li><a href="dslink.responder/Response/responder.html">responder</a></li>
         <li><a href="dslink.responder/Response/rid.html">rid</a></li>
+        <li><a href="dslink.browser/InvokeResponse/type.html">type</a></li>
     
         <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#constructors">Constructors</a></li>
         <li><a href="dslink.browser/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -79,6 +82,7 @@
         <li><a href="dslink.browser/InvokeResponse/ackReceived.html">ackReceived</a></li>
         <li><a href="dslink.browser/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
         <li><a href="dslink.browser/InvokeResponse/close.html">close</a></li>
+        <li><a href="dslink.browser/InvokeResponse/getTraceData.html">getTraceData</a></li>
         <li><a href="dslink.responder/Response/prepareSending.html">prepareSending</a></li>
         <li><a href="dslink.browser/InvokeResponse/startSendingData.html">startSendingData</a></li>
         <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>
@@ -111,6 +115,7 @@
     _columns = columns;
   }
   _meta = meta;
+  // TODO better way of merge response on different type of action result
   if (_updates == null) {
     _updates = updates;
   } else {

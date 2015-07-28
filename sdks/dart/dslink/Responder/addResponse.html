@@ -78,6 +78,7 @@
         <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
         <li><a href="dslink/Responder/addResponse.html">addResponse</a></li>
         <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+        <li><a href="dslink/Responder/addTraceCallback.html">addTraceCallback</a></li>
         <li><a href="dslink/Responder/close.html">close</a></li>
         <li><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
         <li><a href="dslink/Responder/invoke.html">invoke</a></li>
@@ -86,8 +87,10 @@
         <li><a href="dslink/Responder/onDisconnected.html">onDisconnected</a></li>
         <li><a href="dslink/Responder/onReconnected.html">onReconnected</a></li>
         <li><a href="dslink/Responder/remove.html">remove</a></li>
+        <li><a href="dslink/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
         <li><a href="dslink/Responder/set.html">set</a></li>
         <li><a href="dslink/Responder/subscribe.html">subscribe</a></li>
+        <li><a href="dslink/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
         <li><a href="dslink/Responder/unsubscribe.html">unsubscribe</a></li>
         <li><a href="dslink/Responder/updateGroups.html">updateGroups</a></li>
         <li><a href="dslink/Responder/updateResponse.html">updateResponse</a></li>
@@ -117,6 +120,19 @@
       <pre><code class="prettyprint lang-dart">Response addResponse(Response response) {
   if (response._sentStreamStatus != StreamStatus.closed) {
     _responses[response.rid] = response;
+    if (_traceCallbacks != null) {
+      ResponseTrace update = response.getTraceData();
+      for (ResponseTraceCallback callback in _traceCallbacks) {
+        callback(update);
+      }
+    }
+  } else {
+    if (_traceCallbacks != null) {
+      ResponseTrace update = response.getTraceData(&apos;&apos;); // no logged change is needed
+      for (ResponseTraceCallback callback in _traceCallbacks) {
+        callback(update);
+      }
+    }
   }
   return response;
 }</code></pre>
