@@ -157,6 +157,9 @@
   }
 
   link.stop();
+  BrokerNodeProvider p = provider;
+
+  p.removeLink(link.link, &apos;@upstream@$name&apos;);
   ien.updateValue(false);
   enabled = false;
 }</code></pre>

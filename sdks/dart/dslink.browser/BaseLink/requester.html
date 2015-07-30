@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>serialize method - VirtualNodePermissioin class - dslink.broker library - Dart API</title>
+    <title>requester property - BaseLink class - dslink.browser library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the serialize method from the VirtualNodePermissioin class, for the Dart programming language.">
+    <meta name="description" content="API docs for the requester property from the BaseLink class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -28,30 +28,29 @@
             <button id="sidenav-left-toggle" type="button">&nbsp;</button>
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
-                <li class="self-crumb">serialize</li>
+                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
+                <li class="self-crumb">requester</li>
             </ol>
-            <div class="self-name">serialize</div>
+            <div class="self-name">requester</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-            <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
-            <li class="self-crumb">serialize</li>
+            <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+            <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
+            <li class="self-crumb">requester</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> serialize
+                <div class="kind">property</div> requester
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.broker/VirtualNodePermissioin/serialize.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -64,22 +63,16 @@
     
     
     
-        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.broker/VirtualNodePermissioin/children.html">children</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/defaultPermission.html">defaultPermission</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/idPermissions.html">idPermissions</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/permissionList.html">permissionList</a></li>
+        <li class="section-title"><a href="dslink.browser/BaseLink-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink.browser/BaseLink/nonce.html">nonce</a></li>
+        <li><a href="dslink.browser/BaseLink/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink.browser/BaseLink/requester.html">requester</a></li>
+        <li><a href="dslink.browser/BaseLink/responder.html">responder</a></li>
     
-        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.broker/VirtualNodePermissioin/VirtualNodePermissioin.html">VirtualNodePermissioin</a></li>
+        <li class="section-title"><a href="dslink.browser/BaseLink-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink.browser/BaseLink/BaseLink.html">BaseLink</a></li>
     
     
-        <li class="section-title"><a href="dslink.broker/VirtualNodePermissioin-class.html#methods">Methods</a></li>
-        <li><a href="dslink.broker/VirtualNodePermissioin/getPermission.html">getPermission</a></li>
-        <li><a href="dslink.broker/VirtualNodePermissioin/load.html">load</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
-        <li><a href="dslink.broker/VirtualNodePermissioin/serialize.html">serialize</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/serializePermission.html">serializePermission</a></li>
       </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -87,30 +80,18 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">Map</span>
-            <span class="name ">serialize</span>(
-            )    </section>
-
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
+        <span class="returntype"><a href="dslink/Requester-class.html">Requester</a></span>
+        <span class="name ">requester</span>
+        <div class="readable-writable">
+            read-only
+        </div>
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">Map serialize() {
-  Map rslt = {};
-  children.forEach((String name, VirtualNodePermissioin val) {
-    rslt[name] = val.serialize();
-  });
-  List permissionData = this.serializePermission();
-  if (permissionData != null) {
-    rslt[&apos;?permissions&apos;] = permissionData;
-  }
-  return rslt;
-}</code></pre>
-    </section>
+      <section class="desc markdown">
+      
+            <p class="no-docs">Not documented.</p>
+      
+      </section>
 
   </div> <!-- /.main-content -->
 

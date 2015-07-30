@@ -117,9 +117,10 @@
 //      initHttp();
 //    }
   try {
-    var socket = await HttpHelper.connectToWebSocket(&apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
+    var socket = await HttpHelper.connectToWebSocket(
+        &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
     _wsConnection = new WebSocketConnection(socket,
-        clientLink: this, enableTimeout: true, enableAck:enableAck);
+        clientLink: this, enableTimeout: true, enableAck: enableAck);
 
     logger.info(&quot;Connected&quot;);
     if (!_onConnectedCompleter.isCompleted) {

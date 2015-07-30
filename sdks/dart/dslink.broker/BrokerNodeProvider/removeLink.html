@@ -77,6 +77,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -88,6 +89,7 @@
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#methods">Methods</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/addLink.html">addLink</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/addUpStreamLink.html">addUpStreamLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/clearConns.html">clearConns</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/createResponder.html">createResponder</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/getConnById.html">getConnById</a></li>
@@ -102,6 +104,7 @@
         <li><a href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/makeConnPath.html">makeConnPath</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/prepareUpstreamLink.html">prepareUpstreamLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/registerInvokableProfile.html">registerInvokableProfile</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/removeLink.html">removeLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/saveConns.html">saveConns</a></li>
@@ -118,7 +121,7 @@
             <span class="name ">removeLink</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>
+                <span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/BaseLink-class.html">BaseLink</a></span> <span class="parameter-name">link</span></span>,<br><span class="parameter" id="removeLink-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>
             </div>
             )    </section>
 
@@ -130,9 +133,9 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void removeLink(ServerLink link) {
-  if (_links[link.dsId] == link) {
-    _links.remove(link.dsId);
+      <pre><code class="prettyprint lang-dart">void removeLink(BaseLink link, String id) {
+  if (_links[id] == link) {
+    _links.remove(id);
   }
 }</code></pre>
     </section>

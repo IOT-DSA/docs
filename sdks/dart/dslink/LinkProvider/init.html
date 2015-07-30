@@ -84,6 +84,8 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
         <li><a href="dslink/LinkProvider/link.html">link</a></li>
         <li><a href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
         <li><a href="dslink/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
+        <li><a href="dslink/LinkProvider/overrideRequester.html">overrideRequester</a></li>
+        <li><a href="dslink/LinkProvider/overrideResponder.html">overrideResponder</a></li>
         <li><a href="dslink/LinkProvider/prefix.html">prefix</a></li>
         <li><a href="dslink/LinkProvider/privateKey.html">privateKey</a></li>
         <li><a href="dslink/LinkProvider/profiles.html">profiles</a></li>
@@ -207,6 +209,8 @@ void init() {
         isRequester: isRequester,
         isResponder: isResponder,
         nodeProvider: provider,
+        overrideRequester:overrideRequester,
+        overrideResponder:overrideResponder,
         home: home);
     _ready = true;
 

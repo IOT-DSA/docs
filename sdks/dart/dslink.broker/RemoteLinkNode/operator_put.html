@@ -148,9 +148,9 @@
       <pre><code class="prettyprint lang-dart">operator []=(String name, Object value) {
   if (name.startsWith(r&quot;$&quot;)) {
     configs[name] = value;
-  } else if (name.startsWith(r&quot;@&quot;)){
+  } else if (name.startsWith(r&quot;@&quot;)) {
     attributes[name] = value;
-  } else if (value is Node){
+  } else if (value is Node) {
     addChild(name, value);
   }
 }</code></pre>

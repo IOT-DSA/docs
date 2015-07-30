@@ -101,7 +101,7 @@
       <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
       <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
-      <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
+      <li><a href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
     
     </ol>
   </div>
@@ -265,6 +265,16 @@ but instance is still there
     </div>
     
             </dd>
+            <dt id="upstreamDataNode" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html"><span class="name ">upstreamDataNode</span></a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
             <dt id="usersNode" class="property">
                 <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
                 <a href="dslink.broker/BrokerNodeProvider/usersNode.html"><span class="name ">usersNode</span></a>
@@ -326,6 +336,15 @@ but instance is still there
           <dl class="callables">
               <dt id="addLink" class="callable">
                   <a href="dslink.broker/BrokerNodeProvider/addLink.html"><span class="name ">addLink</span></a><span class="signature">(<wbr><span class="parameter" id="addLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="addUpStreamLink" class="callable">
+                  <a href="dslink.broker/BrokerNodeProvider/addUpStreamLink.html"><span class="name ">addUpStreamLink</span></a><span class="signature">(<wbr><span class="parameter" id="addUpStreamLink-param-link"><span class="type-annotation"><a href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">link</span></span>, <span class="parameter" id="addUpStreamLink-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -460,6 +479,15 @@ If it does not exist, create a new node and return it.
               <dd>
                   
               </dd>
+              <dt id="prepareUpstreamLink" class="callable">
+                  <a href="dslink.broker/BrokerNodeProvider/prepareUpstreamLink.html"><span class="name ">prepareUpstreamLink</span></a><span class="signature">(<wbr><span class="parameter" id="prepareUpstreamLink-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
               <dt id="registerInvokableProfile" class="callable">
                   <a href="dslink.broker/BrokerNodeProvider/registerInvokableProfile.html"><span class="name ">registerInvokableProfile</span></a><span class="signature">(<wbr><span class="parameter" id="registerInvokableProfile-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
@@ -470,7 +498,7 @@ If it does not exist, create a new node and return it.
                   
               </dd>
               <dt id="removeLink" class="callable">
-                  <a href="dslink.broker/BrokerNodeProvider/removeLink.html"><span class="name ">removeLink</span></a><span class="signature">(<wbr><span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
+                  <a href="dslink.broker/BrokerNodeProvider/removeLink.html"><span class="name ">removeLink</span></a><span class="signature">(<wbr><span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/BaseLink-class.html">BaseLink</a></span> <span class="parameter-name">link</span></span>, <span class="parameter" id="removeLink-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -528,6 +556,7 @@ If it does not exist, create a new node and return it.
         <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#constructors">Constructors</a></li>
@@ -539,6 +568,7 @@ If it does not exist, create a new node and return it.
     
         <li class="section-title"><a href="dslink.broker/BrokerNodeProvider-class.html#methods">Methods</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/addLink.html">addLink</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/addUpStreamLink.html">addUpStreamLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/clearConns.html">clearConns</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/createResponder.html">createResponder</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/getConnById.html">getConnById</a></li>
@@ -553,6 +583,7 @@ If it does not exist, create a new node and return it.
         <li><a href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/makeConnPath.html">makeConnPath</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/prepareUpstreamLink.html">prepareUpstreamLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/registerInvokableProfile.html">registerInvokableProfile</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/removeLink.html">removeLink</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/saveConns.html">saveConns</a></li>
