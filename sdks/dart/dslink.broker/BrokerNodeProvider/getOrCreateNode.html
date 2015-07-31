@@ -70,6 +70,9 @@ If it does not exist, create a new node and return it.
         <li><a href="dslink.broker/BrokerNodeProvider/conns.html">conns</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/connsNode.html">connsNode</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/defsNode.html">defsNode</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/downstreamName.html">downstreamName</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/downstreamNameS.html">downstreamNameS</a></li>
+        <li><a href="dslink.broker/BrokerNodeProvider/downstreamNameSS.html">downstreamNameSS</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/enabledPermission.html">enabledPermission</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/enabledQuarantine.html">enabledQuarantine</a></li>
         <li><a href="dslink.broker/BrokerNodeProvider/nodes.html">nodes</a></li>
@@ -165,7 +168,7 @@ If it does not exist, create a new node and return it.</p>
         }
         RemoteLinkManager conn = conns[connPath];
         if (conn == null) {
-          // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+          // TODO conn = new RemoteLinkManager(&apos;$downstreamNameSS$connName&apos;, connRootNodeData);
           conn = new RemoteLinkManager(this, connPath, this);
           conns[connPath] = conn;
           nodes[connPath] = conn.rootNode;
@@ -174,12 +177,12 @@ If it does not exist, create a new node and return it.</p>
         node = conn.getOrCreateNode(path, false);
       }
     }
-  } else if (path.startsWith(&apos;/conns/&apos;)) {
+  } else if (path.startsWith(downstreamNameSS)) {
     String connName = path.split(&apos;/&apos;)[2];
-    String connPath = &apos;/conns/$connName&apos;;
+    String connPath = &apos;$downstreamNameSS$connName&apos;;
     RemoteLinkManager conn = conns[connPath];
     if (conn == null) {
-      // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+      // TODO conn = new RemoteLinkManager(&apos;$downstreamNameSS$connName&apos;, connRootNodeData);
       conn = new RemoteLinkManager(this, connPath, this);
       conns[connPath] = conn;
       nodes[connPath] = conn.rootNode;
@@ -211,7 +214,7 @@ If it does not exist, create a new node and return it.</p>
       String connPath = &apos;/quarantine/$user/$connName&apos;;
       RemoteLinkManager conn = conns[connPath];
       if (conn == null) {
-        // TODO conn = new RemoteLinkManager(&apos;/conns/$connName&apos;, connRootNodeData);
+        // TODO conn = new RemoteLinkManager(&apos;$downstreamNameSS$connName&apos;, connRootNodeData);
         conn = new RemoteLinkManager(this, connPath, this);
         conns[connPath] = conn;
         nodes[connPath] = conn.rootNode;
