@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>onUpdate method - InvokeController class - dslink.requester library - Dart API</title>
+    <title>mode property - InvokeController class - dslink library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the onUpdate method from the InvokeController class, for the Dart programming language.">
+    <meta name="description" content="API docs for the mode property from the InvokeController class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -28,30 +28,29 @@
             <button id="sidenav-left-toggle" type="button">&nbsp;</button>
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-                <li><a href="dslink.requester/InvokeController-class.html">InvokeController</a></li>
-                <li class="self-crumb">onUpdate</li>
+                <li><a href="dslink/dslink-library.html">dslink</a></li>
+                <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
+                <li class="self-crumb">mode</li>
             </ol>
-            <div class="self-name">onUpdate</div>
+            <div class="self-name">mode</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-            <li><a href="dslink.requester/InvokeController-class.html">InvokeController</a></li>
-            <li class="self-crumb">onUpdate</li>
+            <li><a href="dslink/dslink-library.html">dslink</a></li>
+            <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
+            <li class="self-crumb">mode</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> onUpdate
+                <div class="kind">property</div> mode
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.requester/InvokeController/onUpdate.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -63,22 +62,22 @@
       <ol class="sidebar">
     
     
-        <li class="section-title"><a href="dslink.requester/InvokeController-class.html#static-methods">Static methods</a></li>
-        <li><a href="dslink.requester/InvokeController/getNodeColumns.html">getNodeColumns</a></li>
+        <li class="section-title"><a href="dslink/InvokeController-class.html#static-methods">Static methods</a></li>
+        <li><a href="dslink/InvokeController/getNodeColumns.html">getNodeColumns</a></li>
     
-        <li class="section-title"><a href="dslink.requester/InvokeController-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.requester/InvokeController/mode.html">mode</a></li>
-        <li><a href="dslink.requester/InvokeController/node.html">node</a></li>
-        <li><a href="dslink.requester/InvokeController/requester.html">requester</a></li>
+        <li class="section-title"><a href="dslink/InvokeController-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/InvokeController/mode.html">mode</a></li>
+        <li><a href="dslink/InvokeController/node.html">node</a></li>
+        <li><a href="dslink/InvokeController/requester.html">requester</a></li>
     
-        <li class="section-title"><a href="dslink.requester/InvokeController-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.requester/InvokeController/InvokeController.html">InvokeController</a></li>
+        <li class="section-title"><a href="dslink/InvokeController-class.html#constructors">Constructors</a></li>
+        <li><a href="dslink/InvokeController/InvokeController.html">InvokeController</a></li>
     
     
-        <li class="section-title"><a href="dslink.requester/InvokeController-class.html#methods">Methods</a></li>
-        <li><a href="dslink.requester/InvokeController/onDisconnect.html">onDisconnect</a></li>
-        <li><a href="dslink.requester/InvokeController/onReconnect.html">onReconnect</a></li>
-        <li><a href="dslink.requester/InvokeController/onUpdate.html">onUpdate</a></li>
+        <li class="section-title"><a href="dslink/InvokeController-class.html#methods">Methods</a></li>
+        <li><a href="dslink/InvokeController/onDisconnect.html">onDisconnect</a></li>
+        <li><a href="dslink/InvokeController/onReconnect.html">onReconnect</a></li>
+        <li><a href="dslink/InvokeController/onUpdate.html">onUpdate</a></li>
       </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -86,54 +85,18 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">onUpdate</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="onUpdate-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>,<br><span class="parameter" id="onUpdate-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>,<br><span class="parameter" id="onUpdate-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>,<br><span class="parameter" id="onUpdate-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>,<br><span class="parameter" id="onUpdate-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>
-            </div>
-            )    </section>
-
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
+        <span class="returntype">String</span>
+        <span class="name ">mode</span>
+        <div class="readable-writable">
+            read / write
+        </div>
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
-  if (meta != null &amp;&amp; meta[&apos;mode&apos;] is String) {
-    mode = meta[&apos;mode&apos;];
-  }
-  // TODO implement error
-  if (columns != null) {
-    if (_cachedColumns == null || mode == &apos;refresh&apos;) {
-      _cachedColumns = TableColumn.parseColumns(columns);
-    } else {
-      _cachedColumns.addAll(TableColumn.parseColumns(columns));
-    }
-  } else if (_cachedColumns == null) {
-    _cachedColumns = getNodeColumns(node);
-  }
-
-//    if (_cachedColumns == null) {
-//      _cachedColumns = [];
-//    }
-  if (error != null) {
-    streamStatus = StreamStatus.closed;
-    _controller.add(
-        new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
-  } else if (updates != null) {
-    _controller.add(new RequesterInvokeUpdate(
-        updates, columns, _cachedColumns, streamStatus, meta:meta));
-  }
-
-  if (streamStatus == StreamStatus.closed) {
-    _controller.close();
-  }
-}</code></pre>
-    </section>
+      <section class="desc markdown">
+      
+            <p class="no-docs">Not documented.</p>
+      
+      </section>
 
   </div> <!-- /.main-content -->
 

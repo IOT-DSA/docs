@@ -67,6 +67,7 @@
         <li><a href="dslink/InvokeController/getNodeColumns.html">getNodeColumns</a></li>
     
         <li class="section-title"><a href="dslink/InvokeController-class.html#instance-properties">Properties</a></li>
+        <li><a href="dslink/InvokeController/mode.html">mode</a></li>
         <li><a href="dslink/InvokeController/node.html">node</a></li>
         <li><a href="dslink/InvokeController/requester.html">requester</a></li>
     
@@ -102,9 +103,18 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
+  if (meta != null &amp;&amp; meta[&apos;mode&apos;] is String) {
+    mode = meta[&apos;mode&apos;];
+  }
   // TODO implement error
   if (columns != null) {
-    _cachedColumns = TableColumn.parseColumns(columns);
+    if (_cachedColumns == null || mode == &apos;refresh&apos;) {
+      _cachedColumns = TableColumn.parseColumns(columns);
+    } else {
+      _cachedColumns.addAll(TableColumn.parseColumns(columns));
+    }
+  } else if (_cachedColumns == null) {
+    _cachedColumns = getNodeColumns(node);
   }
 
 //    if (_cachedColumns == null) {
