@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -57,8 +59,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+
+    <ol>
       <li class="section-title"><a href="dslink/dslink-library.html#constants">Constants</a></li>
       <li><a href="dslink/unspecified.html">unspecified</a></li>
     
@@ -210,7 +215,7 @@
               <dt id="getLink" class="callable">
                   <a href="dslink/ServerLinkManager/getLink.html"><span class="name ">getLink</span></a><span class="signature">(<wbr><span class="parameter" id="getLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
                       &#8594;
-                      <span class="returntype"><a href="dslink.common/ServerLink-class.html">ServerLink</a></span>
+                      <span class="returntype"><a href="dslink/ServerLink-class.html">ServerLink</a></span>
                   </span>
               </dt>
               <dd>
@@ -219,7 +224,7 @@
               <dt id="getRequester" class="callable">
                   <a href="dslink/ServerLinkManager/getRequester.html"><span class="name ">getRequester</span></a><span class="signature">(<wbr><span class="parameter" id="getRequester-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.requester/Requester-class.html">Requester</a></span>
+                      <span class="returntype"><a href="dslink/Requester-class.html">Requester</a></span>
                   </span>
               </dt>
               <dd>
@@ -228,7 +233,7 @@
               <dt id="getResponder" class="callable">
                   <a href="dslink/ServerLinkManager/getResponder.html"><span class="name ">getResponder</span></a><span class="signature">(<wbr><span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                      <span class="returntype"><a href="dslink/Responder-class.html">Responder</a></span>
                   </span>
               </dt>
               <dd>
@@ -248,23 +253,29 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>ServerLinkManager</h5>
+    <ol>
     
     
     
     
-        <li class="section-title"><a href="dslink/ServerLinkManager-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink/ServerLinkManager/ServerLinkManager.html">ServerLinkManager</a></li>
+      <li class="section-title"><a href="dslink/ServerLinkManager-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/ServerLinkManager/ServerLinkManager.html">ServerLinkManager</a></li>
     
     
-        <li class="section-title"><a href="dslink/ServerLinkManager-class.html#methods">Methods</a></li>
-        <li><a href="dslink/ServerLinkManager/addLink.html">addLink</a></li>
-        <li><a href="dslink/ServerLinkManager/getLink.html">getLink</a></li>
-        <li><a href="dslink/ServerLinkManager/getRequester.html">getRequester</a></li>
-        <li><a href="dslink/ServerLinkManager/getResponder.html">getResponder</a></li>
-        <li><a href="dslink/ServerLinkManager/removeLink.html">removeLink</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink/ServerLinkManager-class.html#methods">Methods</a></li>
+      <li><a href="dslink/ServerLinkManager/addLink.html">addLink</a>
+</li>
+      <li><a href="dslink/ServerLinkManager/getLink.html">getLink</a>
+</li>
+      <li><a href="dslink/ServerLinkManager/getRequester.html">getRequester</a>
+</li>
+      <li><a href="dslink/ServerLinkManager/getResponder.html">getResponder</a>
+</li>
+      <li><a href="dslink/ServerLinkManager/removeLink.html">removeLink</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -292,92 +303,7 @@
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

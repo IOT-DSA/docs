@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -58,8 +60,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></h5>
+
+    <ol>
     
     
     
@@ -105,7 +110,7 @@
         <dt>Extends</dt>
         <dd><ul class="gt-separated dark class-relationships">
             <li>Object</li>
-            <li><a href="dslink.requester/Request-class.html">Request</a></li>
+            <li><a href="dslink.browser/Request-class.html">Request</a></li>
             <li>SubscribeRequest</li>
         </ul></dd>
 
@@ -129,7 +134,7 @@
         <dl class="properties">
             <dt id="data" class="property">
                 <span class="top-level-variable-type">Map</span>
-                <a href="dslink.requester/Request/data.html"><span class="name ">data</span></a>
+                <span class="name ">data</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -139,7 +144,7 @@
             </dd>
             <dt id="isClosed" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.requester/Request/isClosed.html"><span class="name ">isClosed</span></a>
+                <span class="name ">isClosed</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -149,7 +154,7 @@
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink.requester/Request/requester.html"><span class="name ">requester</span></a>
+                <span class="name ">requester</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -159,7 +164,7 @@
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
-                <a href="dslink.requester/Request/rid.html"><span class="name ">rid</span></a>
+                <span class="name ">rid</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -169,7 +174,7 @@
             </dd>
             <dt id="streamStatus" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.requester/Request/streamStatus.html"><span class="name ">streamStatus</span></a>
+                <span class="name ">streamStatus</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -179,7 +184,7 @@
             </dd>
             <dt id="subsriptionids" class="property">
                 <span class="top-level-variable-type">Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/subsriptionids.html"><span class="name ">subsriptionids</span></a>
+                <a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -189,7 +194,7 @@
             </dd>
             <dt id="subsriptions" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/subsriptions.html"><span class="name ">subsriptions</span></a>
+                <a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -199,7 +204,7 @@
             </dd>
             <dt id="toRemove" class="property">
                 <span class="top-level-variable-type">Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/toRemove.html"><span class="name ">toRemove</span></a>
+                <a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -209,7 +214,7 @@
             </dd>
             <dt id="updater" class="property">
                 <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
-                <a href="dslink.requester/Request/updater.html"><span class="name ">updater</span></a>
+                <span class="name ">updater</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -256,7 +261,7 @@
                   
               </dd>
               <dt id="close" class="callable">
-                  <a href="dslink.requester/Request/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
+                  <span class="name ">close</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -308,35 +313,52 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>SubscribeRequest</h5>
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.requester/Request/data.html">data</a></li>
-        <li><a href="dslink.requester/Request/isClosed.html">isClosed</a></li>
-        <li><a href="dslink.requester/Request/requester.html">requester</a></li>
-        <li><a href="dslink.requester/Request/rid.html">rid</a></li>
-        <li><a href="dslink.requester/Request/streamStatus.html">streamStatus</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a></li>
-        <li><a href="dslink.requester/Request/updater.html">updater</a></li>
+      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#instance-properties">Properties</a></li>
+      <li>data
+</li>
+      <li>isClosed
+</li>
+      <li>requester
+</li>
+      <li>rid
+</li>
+      <li>streamStatus
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a>
+</li>
+      <li>updater
+</li>
     
-        <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
+      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.requester/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
     
     
-        <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#methods">Methods</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/addSubscription.html">addSubscription</a></li>
-        <li><a href="dslink.requester/Request/close.html">close</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/prepareSending.html">prepareSending</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/resend.html">resend</a></li>
-        <li><a href="dslink.requester/SubscribeRequest/startSendingData.html">startSendingData</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#methods">Methods</a></li>
+      <li><a href="dslink.requester/SubscribeRequest/ackReceived.html">ackReceived</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/addSubscription.html">addSubscription</a>
+</li>
+      <li>close
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/prepareSending.html">prepareSending</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/removeSubscription.html">removeSubscription</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/resend.html">resend</a>
+</li>
+      <li><a href="dslink.requester/SubscribeRequest/startSendingData.html">startSendingData</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -364,92 +386,7 @@
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

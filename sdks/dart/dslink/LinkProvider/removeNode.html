@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -47,7 +49,7 @@
                 <div class="kind">method</div> removeNode
             </h1>
             <!-- p class="subtitle">
-                Removes the method at the specified path.
+                Removes the method at the specified <code class="prettyprint lang-dart">path</code>.
 In order for this method to work, the node provider must be mutable.
 If you did not specify a custom node provider, the created provider is mutable.
             </p -->
@@ -60,65 +62,112 @@ If you did not specify a custom node provider, the created provider is mutable.
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+    <h5><a href="dslink/LinkProvider-class.html">LinkProvider</a></h5>
 
-      <ol class="sidebar">
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink/LinkProvider-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink/LinkProvider/args.html">args</a></li>
-        <li><a href="dslink/LinkProvider/brokerUrl.html">brokerUrl</a></li>
-        <li><a href="dslink/LinkProvider/command.html">command</a></li>
-        <li><a href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a></li>
-        <li><a href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a></li>
-        <li><a href="dslink/LinkProvider/didInitializationFail.html">didInitializationFail</a></li>
-        <li><a href="dslink/LinkProvider/dslinkJson.html">dslinkJson</a></li>
-        <li><a href="dslink/LinkProvider/enableHttp.html">enableHttp</a></li>
-        <li><a href="dslink/LinkProvider/encodePrettyJson.html">encodePrettyJson</a></li>
-        <li><a href="dslink/LinkProvider/exitOnFailure.html">exitOnFailure</a></li>
-        <li><a href="dslink/LinkProvider/home.html">home</a></li>
-        <li><a href="dslink/LinkProvider/isInitialized.html">isInitialized</a></li>
-        <li><a href="dslink/LinkProvider/isRequester.html">isRequester</a></li>
-        <li><a href="dslink/LinkProvider/isResponder.html">isResponder</a></li>
-        <li><a href="dslink/LinkProvider/link.html">link</a></li>
-        <li><a href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
-        <li><a href="dslink/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
-        <li><a href="dslink/LinkProvider/overrideRequester.html">overrideRequester</a></li>
-        <li><a href="dslink/LinkProvider/overrideResponder.html">overrideResponder</a></li>
-        <li><a href="dslink/LinkProvider/prefix.html">prefix</a></li>
-        <li><a href="dslink/LinkProvider/privateKey.html">privateKey</a></li>
-        <li><a href="dslink/LinkProvider/profiles.html">profiles</a></li>
-        <li><a href="dslink/LinkProvider/provider.html">provider</a></li>
-        <li><a href="dslink/LinkProvider/requester.html">requester</a></li>
-        <li><a href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
-        <li><a href="dslink/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li class="section-title"><a href="dslink/LinkProvider-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink/LinkProvider/args.html">args</a>
+</li>
+      <li><a href="dslink/LinkProvider/brokerUrl.html">brokerUrl</a>
+</li>
+      <li><a href="dslink/LinkProvider/command.html">command</a>
+</li>
+      <li><a href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a>
+</li>
+      <li><a href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a>
+</li>
+      <li><a href="dslink/LinkProvider/didInitializationFail.html">didInitializationFail</a>
+</li>
+      <li><a href="dslink/LinkProvider/dslinkJson.html">dslinkJson</a>
+</li>
+      <li><a href="dslink/LinkProvider/enableHttp.html">enableHttp</a>
+</li>
+      <li><a href="dslink/LinkProvider/encodePrettyJson.html">encodePrettyJson</a>
+</li>
+      <li><a href="dslink/LinkProvider/exitOnFailure.html">exitOnFailure</a>
+</li>
+      <li><a href="dslink/LinkProvider/home.html">home</a>
+</li>
+      <li><a href="dslink/LinkProvider/isInitialized.html">isInitialized</a>
+</li>
+      <li><a href="dslink/LinkProvider/isRequester.html">isRequester</a>
+</li>
+      <li><a href="dslink/LinkProvider/isResponder.html">isResponder</a>
+</li>
+      <li><a href="dslink/LinkProvider/link.html">link</a>
+</li>
+      <li><a href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a>
+</li>
+      <li><a href="dslink/LinkProvider/onRequesterReady.html">onRequesterReady</a>
+</li>
+      <li><a href="dslink/LinkProvider/overrideRequester.html">overrideRequester</a>
+</li>
+      <li><a href="dslink/LinkProvider/overrideResponder.html">overrideResponder</a>
+</li>
+      <li><a href="dslink/LinkProvider/prefix.html">prefix</a>
+</li>
+      <li><a href="dslink/LinkProvider/privateKey.html">privateKey</a>
+</li>
+      <li><a href="dslink/LinkProvider/profiles.html">profiles</a>
+</li>
+      <li><a href="dslink/LinkProvider/provider.html">provider</a>
+</li>
+      <li><a href="dslink/LinkProvider/requester.html">requester</a>
+</li>
+      <li><a href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a>
+</li>
+      <li><a href="dslink/LinkProvider/strictOptions.html">strictOptions</a>
+</li>
     
-        <li class="section-title"><a href="dslink/LinkProvider-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink/LinkProvider/LinkProvider.html">LinkProvider</a></li>
+      <li class="section-title"><a href="dslink/LinkProvider-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/LinkProvider/LinkProvider.html">LinkProvider</a></li>
     
-        <li class="section-title"><a href="dslink/LinkProvider-class.html#operators">Operators</a></li>
-        <li><a href="dslink/LinkProvider/operator_get.html">operator []</a></li>
-        <li><a href="dslink/LinkProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="section-title"><a href="dslink/LinkProvider-class.html#operators">Operators</a></li>
+      <li><a href="dslink/LinkProvider/operator_get.html">operator []</a>
+</li>
+      <li><a href="dslink/LinkProvider/operator_bitwise_negate.html">operator ~</a>
+</li>
     
-        <li class="section-title"><a href="dslink/LinkProvider-class.html#methods">Methods</a></li>
-        <li><a href="dslink/LinkProvider/addNode.html">addNode</a></li>
-        <li><a href="dslink/LinkProvider/chooseBroker.html">chooseBroker</a></li>
-        <li><a href="dslink/LinkProvider/close.html">close</a></li>
-        <li><a href="dslink/LinkProvider/configure.html">configure</a></li>
-        <li><a href="dslink/LinkProvider/connect.html">connect</a></li>
-        <li><a href="dslink/LinkProvider/getConfig.html">getConfig</a></li>
-        <li><a href="dslink/LinkProvider/getNode.html">getNode</a></li>
-        <li><a href="dslink/LinkProvider/init.html">init</a></li>
-        <li><a href="dslink/LinkProvider/onValueChange.html">onValueChange</a></li>
-        <li><a href="dslink/LinkProvider/removeNode.html">removeNode</a></li>
-        <li><a href="dslink/LinkProvider/save.html">save</a></li>
-        <li><a href="dslink/LinkProvider/saveAsync.html">saveAsync</a></li>
-        <li><a href="dslink/LinkProvider/stop.html">stop</a></li>
-        <li><a href="dslink/LinkProvider/syncValue.html">syncValue</a></li>
-        <li><a href="dslink/LinkProvider/updateValue.html">updateValue</a></li>
-        <li><a href="dslink/LinkProvider/val.html">val</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink/LinkProvider-class.html#methods">Methods</a></li>
+      <li><a href="dslink/LinkProvider/addNode.html">addNode</a>
+</li>
+      <li><a href="dslink/LinkProvider/chooseBroker.html">chooseBroker</a>
+</li>
+      <li><a href="dslink/LinkProvider/close.html">close</a>
+</li>
+      <li><a href="dslink/LinkProvider/configure.html">configure</a>
+</li>
+      <li><a href="dslink/LinkProvider/connect.html">connect</a>
+</li>
+      <li><a href="dslink/LinkProvider/getConfig.html">getConfig</a>
+</li>
+      <li><a href="dslink/LinkProvider/getNode.html">getNode</a>
+</li>
+      <li><a href="dslink/LinkProvider/init.html">init</a>
+</li>
+      <li><a href="dslink/LinkProvider/onValueChange.html">onValueChange</a>
+</li>
+      <li><a href="dslink/LinkProvider/removeNode.html">removeNode</a>
+</li>
+      <li><a href="dslink/LinkProvider/save.html">save</a>
+</li>
+      <li><a href="dslink/LinkProvider/saveAsync.html">saveAsync</a>
+</li>
+      <li><a href="dslink/LinkProvider/stop.html">stop</a>
+</li>
+      <li><a href="dslink/LinkProvider/syncValue.html">syncValue</a>
+</li>
+      <li><a href="dslink/LinkProvider/updateValue.html">updateValue</a>
+</li>
+      <li><a href="dslink/LinkProvider/val.html">val</a>
+</li>
+    </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
@@ -135,7 +184,7 @@ If you did not specify a custom node provider, the created provider is mutable.
 
     <section class="desc markdown">
     
-          <p>Removes the method at the specified path.
+          <p>Removes the method at the specified <code class="prettyprint lang-dart">path</code>.
 In order for this method to work, the node provider must be mutable.
 If you did not specify a custom node provider, the created provider is mutable.</p>
     
@@ -181,92 +230,7 @@ void removeNode(String path) {
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

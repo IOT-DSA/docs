@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -59,8 +61,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.server/dslink.server-library.html">dslink.server</a></h5>
+
+    <ol>
     
     
     
@@ -102,7 +107,7 @@
         <dl class="properties">
             <dt id="instance" class="property">
                 <span class="top-level-variable-type"><a href="dslink/DSRandom-class.html">DSRandom</a></span>
-                <a href="dslink.server/DSRandom/instance.html"><span class="name ">instance</span></a>
+                <a href="dslink.server/DSRandom/instance.html">instance</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -120,7 +125,7 @@
         <dl class="properties">
             <dt id="needsEntropy" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.server/DSRandom/needsEntropy.html"><span class="name ">needsEntropy</span></a>
+                <a href="dslink.server/DSRandom/needsEntropy.html">needsEntropy</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -180,25 +185,30 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>DSRandom</h5>
+    <ol>
     
-        <li class="section-title"><a href="dslink.server/DSRandom-class.html#static-properties">Static properties</a></li>
-        <li><a href="dslink.server/DSRandom/instance.html">instance</a></li>
-    
-    
-        <li class="section-title"><a href="dslink.server/DSRandom-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.server/DSRandom/needsEntropy.html">needsEntropy</a></li>
-    
-        <li class="section-title"><a href="dslink.server/DSRandom-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.server/DSRandom/DSRandom.html">DSRandom</a></li>
+      <li class="section-title"><a href="dslink.server/DSRandom-class.html#static-properties">Static properties</a></li>
+      <li><a href="dslink.server/DSRandom/instance.html">instance</a></li>
     
     
-        <li class="section-title"><a href="dslink.server/DSRandom-class.html#methods">Methods</a></li>
-        <li><a href="dslink.server/DSRandom/addEntropy.html">addEntropy</a></li>
-        <li><a href="dslink.server/DSRandom/nextUint16.html">nextUint16</a></li>
-        <li><a href="dslink.server/DSRandom/nextUint8.html">nextUint8</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.server/DSRandom-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.server/DSRandom/needsEntropy.html">needsEntropy</a>
+</li>
+    
+      <li class="section-title"><a href="dslink.server/DSRandom-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.server/DSRandom/DSRandom.html">DSRandom</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.server/DSRandom-class.html#methods">Methods</a></li>
+      <li><a href="dslink.server/DSRandom/addEntropy.html">addEntropy</a>
+</li>
+      <li><a href="dslink.server/DSRandom/nextUint16.html">nextUint16</a>
+</li>
+      <li><a href="dslink.server/DSRandom/nextUint8.html">nextUint8</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -226,92 +236,7 @@
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

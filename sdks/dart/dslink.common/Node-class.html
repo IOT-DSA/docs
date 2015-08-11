@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -46,7 +48,7 @@
             </h1>
             <!-- p class="subtitle">
                 Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the [dslink.responder.SimpleNode] class.
+If you are writing a link, please look at the <code class="prettyprint lang-dart">dslink.responder.SimpleNode</code> class.
             </p -->
         </div>
         <ul class="subnav">
@@ -60,8 +62,11 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.common/dslink.common-library.html">dslink.common</a></h5>
+
+    <ol>
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#constants">Constants</a></li>
       <li><a href="dslink.common/unspecified.html">unspecified</a></li>
     
@@ -105,23 +110,10 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
     <section class="desc markdown">
     
           <p>Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the [dslink.responder.SimpleNode] class.</p>
+If you are writing a link, please look at the <code class="prettyprint lang-dart">dslink.responder.SimpleNode</code> class.</p>
     
     </section>
 
-    <section>
-        <dl class="dl-horizontal">
-
-
-
-
-        <dt>Implemented by</dt>
-        <dd><ul class="comma-separated class-relationships">
-            <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
-            <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
-        </ul></dd>
-        </dl>
-    </section>
 
 
 
@@ -146,7 +138,7 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
         <dl class="properties">
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink.common/Node/attributes.html"><span class="name ">attributes</span></a>
+                <a href="dslink.common/Node/attributes.html">attributes</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -156,7 +148,7 @@ If you are writing a link, please look at the [dslink.responder.SimpleNode] clas
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
-                <a href="dslink.common/Node/children.html"><span class="name ">children</span></a>
+                <a href="dslink.common/Node/children.html">children</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -167,7 +159,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="configs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink.common/Node/configs.html"><span class="name ">configs</span></a>
+                <a href="dslink.common/Node/configs.html">configs</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -177,7 +169,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="profile" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
-                <a href="dslink.common/Node/profile.html"><span class="name ">profile</span></a>
+                <a href="dslink.common/Node/profile.html">profile</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -230,7 +222,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Iterates over all the children of this node and passes them to the specified callback.
+                  Iterates over all the children of this node and passes them to the specified <code class="prettyprint lang-dart">callback</code>.
               </dd>
               <dt id="forEachConfig" class="callable">
                   <a href="dslink.common/Node/forEachConfig.html"><span class="name ">forEachConfig</span></a><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
@@ -249,8 +241,8 @@ Map of Child Name to Child Node
               </dt>
               <dd>
                   Get a property of this node.
-If name starts with '$', this will fetch a config.
-If name starts with a '@', this will fetch an attribute.
+If <code class="prettyprint lang-dart">name</code> starts with '$', this will fetch a config.
+If <code class="prettyprint lang-dart">name</code> starts with a '@', this will fetch an attribute.
 Otherwise this will fetch a child.
               </dd>
               <dt id="getAttribute" class="callable">
@@ -297,42 +289,57 @@ Otherwise this will fetch a child.
               </dt>
               <dd>
                   Remove a child from this node.
-input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.
+<code class="prettyprint lang-dart">input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code class="prettyprint lang-dart">String</code>.
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>Node</h5>
+    <ol>
     
     
-        <li class="section-title"><a href="dslink.common/Node-class.html#static-methods">Static methods</a></li>
-        <li><a href="dslink.common/Node/getDisplayName.html">getDisplayName</a></li>
+      <li class="section-title"><a href="dslink.common/Node-class.html#static-methods">Static methods</a></li>
+      <li><a href="dslink.common/Node/getDisplayName.html">getDisplayName</a></li>
     
-        <li class="section-title"><a href="dslink.common/Node-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
-        <li><a href="dslink.common/Node/children.html">children</a></li>
-        <li><a href="dslink.common/Node/configs.html">configs</a></li>
-        <li><a href="dslink.common/Node/profile.html">profile</a></li>
+      <li class="section-title"><a href="dslink.common/Node-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.common/Node/attributes.html">attributes</a>
+</li>
+      <li><a href="dslink.common/Node/children.html">children</a>
+</li>
+      <li><a href="dslink.common/Node/configs.html">configs</a>
+</li>
+      <li><a href="dslink.common/Node/profile.html">profile</a>
+</li>
     
-        <li class="section-title"><a href="dslink.common/Node-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.common/Node/Node.html">Node</a></li>
+      <li class="section-title"><a href="dslink.common/Node-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.common/Node/Node.html">Node</a></li>
     
     
-        <li class="section-title"><a href="dslink.common/Node-class.html#methods">Methods</a></li>
-        <li><a href="dslink.common/Node/addChild.html">addChild</a></li>
-        <li><a href="dslink.common/Node/forEachAttribute.html">forEachAttribute</a></li>
-        <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
-        <li><a href="dslink.common/Node/forEachConfig.html">forEachConfig</a></li>
-        <li><a href="dslink.common/Node/get.html">get</a></li>
-        <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
-        <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
-        <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
-        <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
-        <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.common/Node-class.html#methods">Methods</a></li>
+      <li><a href="dslink.common/Node/addChild.html">addChild</a>
+</li>
+      <li><a href="dslink.common/Node/forEachAttribute.html">forEachAttribute</a>
+</li>
+      <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a>
+</li>
+      <li><a href="dslink.common/Node/forEachConfig.html">forEachConfig</a>
+</li>
+      <li><a href="dslink.common/Node/get.html">get</a>
+</li>
+      <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a>
+</li>
+      <li><a href="dslink.common/Node/getChild.html">getChild</a>
+</li>
+      <li><a href="dslink.common/Node/getConfig.html">getConfig</a>
+</li>
+      <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a>
+</li>
+      <li><a href="dslink.common/Node/removeChild.html">removeChild</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -360,92 +367,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

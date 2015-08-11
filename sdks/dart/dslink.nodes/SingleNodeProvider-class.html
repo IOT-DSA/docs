@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -59,8 +61,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></h5>
+
+    <ol>
     
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.nodes/ActionFunction.html">ActionFunction</a></li>
@@ -96,7 +101,7 @@
         <dt>Extends</dt>
         <dd><ul class="gt-separated dark class-relationships">
             <li>Object</li>
-            <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+            <li><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></li>
             <li>SingleNodeProvider</li>
         </ul></dd>
 
@@ -114,7 +119,7 @@
         <dl class="properties">
             <dt id="node" class="property">
                 <span class="top-level-variable-type"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
-                <a href="dslink.nodes/SingleNodeProvider/node.html"><span class="name ">node</span></a>
+                <a href="dslink.nodes/SingleNodeProvider/node.html">node</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -124,7 +129,7 @@
             </dd>
             <dt id="permissions" class="property">
                 <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
-                <a href="dslink.nodes/SingleNodeProvider/permissions.html"><span class="name ">permissions</span></a>
+                <a href="dslink.nodes/SingleNodeProvider/permissions.html">permissions</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -152,7 +157,7 @@
           <h2>Operators</h2>
           <dl class="callables">
               <dt id="operator []" class="callable">
-                  <a href="dslink.responder/NodeProvider/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                  <span class="name ">operator []</span><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
@@ -164,7 +169,7 @@
                   Gets an existing node, or creates a dummy node for a requester to listen on.
               </dd>
               <dt id="operator ~" class="callable">
-                  <a href="dslink.responder/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
+                  <span class="name ">operator ~</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
                   </span>
@@ -184,7 +189,7 @@
               <dt id="createResponder" class="callable">
                   <a href="dslink.nodes/SingleNodeProvider/createResponder.html"><span class="name ">createResponder</span></a><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/Responder-class.html">Responder</a></span>
+                      <span class="returntype"><a href="dslink.nodes/Responder-class.html">Responder</a></span>
                   </span>
               </dt>
               <dd>
@@ -193,7 +198,7 @@
               <dt id="getNode" class="callable">
                   <a href="dslink.nodes/SingleNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                      <span class="returntype"><a href="dslink.nodes/LocalNode-class.html">LocalNode</a></span>
                   </span>
               </dt>
               <dd>
@@ -202,11 +207,11 @@
               <dt id="getOrCreateNode" class="callable">
                   <a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
                       &#8594;
-                      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
+                      <span class="returntype"><a href="dslink.nodes/LocalNode-class.html">LocalNode</a></span>
                   </span>
               </dt>
               <dd>
-                  Gets a node at the given [path] if it exists.
+                  Gets a node at the given <code class="prettyprint lang-dart">path</code> if it exists.
 If it does not exist, create a new node and return it.
               </dd>
           </dl>
@@ -214,27 +219,35 @@ If it does not exist, create a new node and return it.
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>SingleNodeProvider</h5>
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/node.html">node</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/permissions.html">permissions</a></li>
+      <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.nodes/SingleNodeProvider/node.html">node</a>
+</li>
+      <li><a href="dslink.nodes/SingleNodeProvider/permissions.html">permissions</a>
+</li>
     
-        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/SingleNodeProvider.html">SingleNodeProvider</a></li>
+      <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.nodes/SingleNodeProvider/SingleNodeProvider.html">SingleNodeProvider</a></li>
     
-        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#operators">Operators</a></li>
-        <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
-        <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#operators">Operators</a></li>
+      <li>operator []
+</li>
+      <li>operator ~
+</li>
     
-        <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#methods">Methods</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a></li>
-        <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.nodes/SingleNodeProvider-class.html#methods">Methods</a></li>
+      <li><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a>
+</li>
+      <li><a href="dslink.nodes/SingleNodeProvider/getNode.html">getNode</a>
+</li>
+      <li><a href="dslink.nodes/SingleNodeProvider/getOrCreateNode.html">getOrCreateNode</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -262,92 +275,7 @@ If it does not exist, create a new node and return it.
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -47,7 +49,7 @@
                 <div class="kind">method</div> addStream
             </h1>
             <!-- p class="subtitle">
-                Receives events from [source] and puts them into this controller's stream.
+                Receives events from <code class="prettyprint lang-dart">source</code> and puts them into this controller's stream.
             </p -->
         </div>
         <ul class="subnav">
@@ -58,31 +60,45 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
+    <h5><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></h5>
 
-      <ol class="sidebar">
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/done.html">done</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/hasListener.html">hasListener</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/isClosed.html">isClosed</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/isPaused.html">isPaused</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/sink.html">sink</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/stream.html">stream</a></li>
+      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/done.html">done</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/hasListener.html">hasListener</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/isClosed.html">isClosed</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/isPaused.html">isPaused</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/sink.html">sink</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/stream.html">stream</a>
+</li>
     
-        <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/BroadcastStreamController.html">BroadcastStreamController</a></li>
+      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/BroadcastStreamController.html">BroadcastStreamController</a></li>
     
     
-        <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#methods">Methods</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/add.html">add</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/addError.html">addError</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/addStream.html">addStream</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/close.html">close</a></li>
-        <li><a href="dslink.utils/BroadcastStreamController/delayedCheckCancel.html">delayedCheckCancel</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#methods">Methods</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/add.html">add</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/addError.html">addError</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/addStream.html">addStream</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/close.html">close</a>
+</li>
+      <li><a href="dslink.utils/BroadcastStreamController/delayedCheckCancel.html">delayedCheckCancel</a>
+</li>
+    </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
@@ -99,17 +115,17 @@
 
     <section class="desc markdown">
     
-          <p>Receives events from [source] and puts them into this controller's stream.</p>
+          <p>Receives events from <code class="prettyprint lang-dart">source</code> and puts them into this controller's stream.</p>
 <p>Returns a future which completes when the source stream is done.</p>
-<p>Events must not be added directly to this controller using [add],
-[addError], [close] or [addStream], until the returned future
+<p>Events must not be added directly to this controller using <code class="prettyprint lang-dart">add</code>,
+<code class="prettyprint lang-dart">addError</code>, <code class="prettyprint lang-dart">close</code> or <code class="prettyprint lang-dart">addStream</code>, until the returned future
 is complete.</p>
 <p>Data and error events are forwarded to this controller's stream. A done
 event on the source will end the <code class="prettyprint lang-dart">addStream</code> operation and complete the
 returned future.</p>
-<p>If [cancelOnError] is true, only the first error on [source] is
+<p>If <code class="prettyprint lang-dart">cancelOnError</code> is true, only the first error on <code class="prettyprint lang-dart">source</code> is
 forwarded to the controller's stream, and the <code class="prettyprint lang-dart">addStream</code> ends
-after this. If [cancelOnError] is false, all errors are forwarded
+after this. If <code class="prettyprint lang-dart">cancelOnError</code> is false, all errors are forwarded
 and only a done event will end the <code class="prettyprint lang-dart">addStream</code>.</p>
     
     </section>
@@ -148,92 +164,7 @@ and only a done event will end the <code class="prettyprint lang-dart">addStream
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

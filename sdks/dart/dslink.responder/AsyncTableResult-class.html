@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -59,8 +61,11 @@ This can be used to return asynchronous tables from actions.
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
+
+    <ol>
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
@@ -119,7 +124,7 @@ This can be used to return asynchronous tables from actions.</p>
         <dl class="properties">
             <dt id="columns" class="property">
                 <span class="top-level-variable-type">List</span>
-                <a href="dslink.responder/AsyncTableResult/columns.html"><span class="name ">columns</span></a>
+                <a href="dslink.responder/AsyncTableResult/columns.html">columns</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -129,7 +134,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="meta" class="property">
                 <span class="top-level-variable-type">Map</span>
-                <a href="dslink.responder/AsyncTableResult/meta.html"><span class="name ">meta</span></a>
+                <a href="dslink.responder/AsyncTableResult/meta.html">meta</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -139,7 +144,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="onAck" class="property">
                 <span class="top-level-variable-type"><a href="dslink/OnInvokeAcked.html">OnInvokeAcked</a></span>
-                <a href="dslink.responder/AsyncTableResult/onAck.html"><span class="name ">onAck</span></a>
+                <a href="dslink.responder/AsyncTableResult/onAck.html">onAck</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -149,7 +154,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="onClose" class="property">
                 <span class="top-level-variable-type"><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span>
-                <a href="dslink.responder/AsyncTableResult/onClose.html"><span class="name ">onClose</span></a>
+                <a href="dslink.responder/AsyncTableResult/onClose.html">onClose</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -159,7 +164,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="response" class="property">
                 <span class="top-level-variable-type"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
-                <a href="dslink.responder/AsyncTableResult/response.html"><span class="name ">response</span></a>
+                <a href="dslink.responder/AsyncTableResult/response.html">response</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -169,7 +174,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="rows" class="property">
                 <span class="top-level-variable-type">List</span>
-                <a href="dslink.responder/AsyncTableResult/rows.html"><span class="name ">rows</span></a>
+                <a href="dslink.responder/AsyncTableResult/rows.html">rows</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -179,7 +184,7 @@ This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="status" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.responder/AsyncTableResult/status.html"><span class="name ">status</span></a>
+                <a href="dslink.responder/AsyncTableResult/status.html">status</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -223,9 +228,9 @@ This can be used to return asynchronous tables from actions.</p>
                   </span>
               </dt>
               <dd>
-                  Updates table rows to rows.
-stat is the stream status.
-meta is the action result metadata.
+                  Updates table rows to <code class="prettyprint lang-dart">rows</code>.
+<code class="prettyprint lang-dart">stat</code> is the stream status.
+<code class="prettyprint lang-dart">meta</code> is the action result metadata.
               </dd>
               <dt id="write" class="callable">
                   <a href="dslink.responder/AsyncTableResult/write.html"><span class="name ">write</span></a><span class="signature">(<wbr>[<span class="parameter" id="write-param-resp"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">resp</span></span>])
@@ -234,36 +239,47 @@ meta is the action result metadata.
                   </span>
               </dt>
               <dd>
-                  Write this result to the result given by resp.
+                  Write this result to the result given by <code class="prettyprint lang-dart">resp</code>.
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>AsyncTableResult</h5>
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/columns.html">columns</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/meta.html">meta</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/onAck.html">onAck</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/onClose.html">onClose</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/response.html">response</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/rows.html">rows</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/status.html">status</a></li>
+      <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.responder/AsyncTableResult/columns.html">columns</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/meta.html">meta</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/onAck.html">onAck</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/onClose.html">onClose</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/response.html">response</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/rows.html">rows</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/status.html">status</a>
+</li>
     
-        <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/AsyncTableResult.html">AsyncTableResult</a></li>
+      <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.responder/AsyncTableResult/AsyncTableResult.html">AsyncTableResult</a></li>
     
     
-        <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#methods">Methods</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/close.html">close</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/update.html">update</a></li>
-        <li><a href="dslink.responder/AsyncTableResult/write.html">write</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#methods">Methods</a></li>
+      <li><a href="dslink.responder/AsyncTableResult/close.html">close</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/update.html">update</a>
+</li>
+      <li><a href="dslink.responder/AsyncTableResult/write.html">write</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -291,92 +307,7 @@ meta is the action result metadata.
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

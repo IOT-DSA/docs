@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -58,8 +60,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
+
+    <ol>
     
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
@@ -119,9 +124,9 @@
         <dt>Extends</dt>
         <dd><ul class="gt-separated dark class-relationships">
             <li>Object</li>
-            <li><a href="dslink.common/Node-class.html">Node</a></li>
-            <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
-            <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+            <li><a href="dslink.browser/Node-class.html">Node</a></li>
+            <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
+            <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
             <li><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></li>
             <li>BrokerVersionNode</li>
         </ul></dd>
@@ -138,7 +143,7 @@
         <dl class="properties">
             <dt id="instance" class="property">
                 <span class="top-level-variable-type"><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></span>
-                <a href="dslink.broker/BrokerVersionNode/instance.html"><span class="name ">instance</span></a>
+                <a href="dslink.broker/BrokerVersionNode/instance.html">instance</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -156,7 +161,7 @@
         <dl class="properties">
             <dt id="attributes" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink.common/Node/attributes.html"><span class="name ">attributes</span></a>
+                <span class="name ">attributes</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -166,7 +171,7 @@
             </dd>
             <dt id="callbacks" class="property">
                 <span class="top-level-variable-type">Map&lt;Function,int&gt;</span>
-                <a href="dslink.responder/LocalNode/callbacks.html"><span class="name ">callbacks</span></a>
+                <span class="name ">callbacks</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -176,7 +181,7 @@
             </dd>
             <dt id="children" class="property">
                 <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
-                <a href="dslink.common/Node/children.html"><span class="name ">children</span></a>
+                <span class="name ">children</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -187,7 +192,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="configs" class="property">
                 <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink.common/Node/configs.html"><span class="name ">configs</span></a>
+                <span class="name ">configs</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -197,7 +202,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="defaultPermission" class="property">
                 <span class="top-level-variable-type">int</span>
-                <a href="dslink.broker/BrokerNodePermission/defaultPermission.html"><span class="name ">defaultPermission</span></a>
+                <span class="name ">defaultPermission</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -207,7 +212,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="disconnected" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.responder/LocalNode/disconnected.html"><span class="name ">disconnected</span></a>
+                <span class="name ">disconnected</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -217,7 +222,7 @@ Map of Child Name to Child Node
             </dd>
             <dt id="exists" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.responder/LocalNode/exists.html"><span class="name ">exists</span></a>
+                <span class="name ">exists</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -229,7 +234,7 @@ Other things like set remove, and invoke can only be applied to an existing node
             </dd>
             <dt id="hasSubscriber" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.responder/LocalNode/hasSubscriber.html"><span class="name ">hasSubscriber</span></a>
+                <span class="name ">hasSubscriber</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -241,7 +246,7 @@ only want to do something if the node is subscribed to.
             </dd>
             <dt id="idPermissions" class="property">
                 <span class="top-level-variable-type">Map&lt;String,int&gt;</span>
-                <a href="dslink.broker/BrokerNodePermission/idPermissions.html"><span class="name ">idPermissions</span></a>
+                <span class="name ">idPermissions</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -251,7 +256,7 @@ only want to do something if the node is subscribed to.
             </dd>
             <dt id="lastValueUpdate" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
-                <a href="dslink.responder/LocalNode/lastValueUpdate.html"><span class="name ">lastValueUpdate</span></a>
+                <span class="name ">lastValueUpdate</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -261,18 +266,18 @@ only want to do something if the node is subscribed to.
             </dd>
             <dt id="listChangeController" class="property">
                 <span class="top-level-variable-type"><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a>&lt;String&gt;</span>
-                <a href="dslink.responder/LocalNode/listChangeController.html"><span class="name ">listChangeController</span></a>
+                <span class="name ">listChangeController</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only, <span class="is-inherited">inherited</span>
     </div>
     Changes to nodes will be added to this controller's stream.
-See [updateList].
+See <code class="prettyprint lang-dart">updateList</code>.
             </dd>
             <dt id="listReady" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.responder/LocalNode/listReady.html"><span class="name ">listReady</span></a>
+                <span class="name ">listReady</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -282,18 +287,18 @@ See [updateList].
             </dd>
             <dt id="listStream" class="property">
                 <span class="top-level-variable-type">Stream&lt;String&gt;</span>
-                <a href="dslink.responder/LocalNode/listStream.html"><span class="name ">listStream</span></a>
+                <span class="name ">listStream</span>
             </dt>
             <dd>
                 <div class="readable-writable">
         read-only, <span class="is-inherited">inherited</span>
     </div>
     List Stream.
-See [listChangeController].
+See <code class="prettyprint lang-dart">listChangeController</code>.
             </dd>
             <dt id="loaded" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.responder/LocalNodeImpl/loaded.html"><span class="name ">loaded</span></a>
+                <span class="name ">loaded</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -303,7 +308,7 @@ See [listChangeController].
             </dd>
             <dt id="path" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.responder/LocalNode/path.html"><span class="name ">path</span></a>
+                <span class="name ">path</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -313,7 +318,7 @@ See [listChangeController].
             </dd>
             <dt id="permissionList" class="property">
                 <span class="top-level-variable-type">List&lt;<a href="dslink.broker/PermissionPair-class.html">PermissionPair</a>&gt;</span>
-                <a href="dslink.broker/BrokerNodePermission/permissionList.html"><span class="name ">permissionList</span></a>
+                <span class="name ">permissionList</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -323,7 +328,7 @@ See [listChangeController].
             </dd>
             <dt id="profile" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
-                <a href="dslink.common/Node/profile.html"><span class="name ">profile</span></a>
+                <span class="name ">profile</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -333,7 +338,7 @@ See [listChangeController].
             </dd>
             <dt id="provider" class="property">
                 <span class="top-level-variable-type"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
-                <a href="dslink.broker/BrokerNode/provider.html"><span class="name ">provider</span></a>
+                <span class="name ">provider</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -343,7 +348,7 @@ See [listChangeController].
             </dd>
             <dt id="value" class="property">
                 <span class="top-level-variable-type">dynamic</span>
-                <a href="dslink.responder/LocalNode/value.html"><span class="name ">value</span></a>
+                <span class="name ">value</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -353,7 +358,7 @@ See [listChangeController].
             </dd>
             <dt id="valueReady" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.responder/LocalNode/valueReady.html"><span class="name ">valueReady</span></a>
+                <span class="name ">valueReady</span>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -381,7 +386,7 @@ See [listChangeController].
           <h2>Operators</h2>
           <dl class="callables">
               <dt id="operator []" class="callable">
-                  <a href="dslink.responder/LocalNode/operator_get.html"><span class="name ">operator []</span></a><span class="signature">(<wbr><span class="parameter" id="[]-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">operator []</span><span class="signature">(<wbr><span class="parameter" id="[]-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">dynamic</span>
                   </span>
@@ -393,7 +398,7 @@ See [listChangeController].
                   Shortcut to <a href="dslink/Node/get.html">get</a>.
               </dd>
               <dt id="operator []=" class="callable">
-                  <a href="dslink.responder/LocalNode/operator_put.html"><span class="name ">operator []=</span></a><span class="signature">(<wbr><span class="parameter" id="[]=-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="[]=-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+                  <span class="name ">operator []=</span><span class="signature">(<wbr><span class="parameter" id="[]=-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="[]=-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
                       &#8594;
                       <span class="returntype">dynamic</span>
                   </span>
@@ -411,7 +416,7 @@ See [listChangeController].
           <h2>Methods</h2>
           <dl class="callables">
               <dt id="addChild" class="callable">
-                  <a href="dslink.common/Node/addChild.html"><span class="name ">addChild</span></a><span class="signature">(<wbr><span class="parameter" id="addChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addChild-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
+                  <span class="name ">addChild</span><span class="signature">(<wbr><span class="parameter" id="addChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addChild-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -423,7 +428,7 @@ See [listChangeController].
                   Adds a child to this node.
               </dd>
               <dt id="forEachAttribute" class="callable">
-                  <a href="dslink.common/Node/forEachAttribute.html"><span class="name ">forEachAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+                  <span class="name ">forEachAttribute</span><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -435,7 +440,7 @@ See [listChangeController].
                   
               </dd>
               <dt id="forEachChild" class="callable">
-                  <a href="dslink.common/Node/forEachChild.html"><span class="name ">forEachChild</span></a><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
+                  <span class="name ">forEachChild</span><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -444,10 +449,10 @@ See [listChangeController].
                   <div>
                     <span class="is-inherited">inherited</span>
                   </div>
-                  Iterates over all the children of this node and passes them to the specified callback.
+                  Iterates over all the children of this node and passes them to the specified <code class="prettyprint lang-dart">callback</code>.
               </dd>
               <dt id="forEachConfig" class="callable">
-                  <a href="dslink.common/Node/forEachConfig.html"><span class="name ">forEachConfig</span></a><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+                  <span class="name ">forEachConfig</span><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -459,7 +464,7 @@ See [listChangeController].
                   
               </dd>
               <dt id="get" class="callable">
-                  <a href="dslink.common/Node/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">get</span><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
@@ -469,12 +474,12 @@ See [listChangeController].
                     <span class="is-inherited">inherited</span>
                   </div>
                   Get a property of this node.
-If name starts with '$', this will fetch a config.
-If name starts with a '@', this will fetch an attribute.
+If <code class="prettyprint lang-dart">name</code> starts with '$', this will fetch a config.
+If <code class="prettyprint lang-dart">name</code> starts with a '@', this will fetch an attribute.
 Otherwise this will fetch a child.
               </dd>
               <dt id="getAttribute" class="callable">
-                  <a href="dslink.common/Node/getAttribute.html"><span class="name ">getAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">getAttribute</span><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
@@ -486,7 +491,7 @@ Otherwise this will fetch a child.
                   Get an Attribute
               </dd>
               <dt id="getChild" class="callable">
-                  <a href="dslink.common/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">getChild</span><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.common/Node-class.html">Node</a></span>
                   </span>
@@ -498,7 +503,7 @@ Otherwise this will fetch a child.
                   Get a Child Node
               </dd>
               <dt id="getConfig" class="callable">
-                  <a href="dslink.common/Node/getConfig.html"><span class="name ">getConfig</span></a><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">getConfig</span><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">Object</span>
                   </span>
@@ -510,7 +515,7 @@ Otherwise this will fetch a child.
                   Get a Config
               </dd>
               <dt id="getInvokePermission" class="callable">
-                  <a href="dslink.responder/LocalNode/getInvokePermission.html"><span class="name ">getInvokePermission</span></a><span class="signature">(<wbr>)
+                  <span class="name ">getInvokePermission</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">int</span>
                   </span>
@@ -522,7 +527,7 @@ Otherwise this will fetch a child.
                   Gets the invoke permission for this node.
               </dd>
               <dt id="getPermission" class="callable">
-                  <a href="dslink.broker/BrokerNode/getPermission.html"><span class="name ">getPermission</span></a><span class="signature">(<wbr><span class="parameter" id="getPermission-param-paths"><span class="type-annotation">Iterator&lt;String&gt;</span> <span class="parameter-name">paths</span></span>, <span class="parameter" id="getPermission-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="getPermission-param-permission"><span class="type-annotation">int</span> <span class="parameter-name">permission</span></span>)
+                  <span class="name ">getPermission</span><span class="signature">(<wbr><span class="parameter" id="getPermission-param-paths"><span class="type-annotation">Iterator&lt;String&gt;</span> <span class="parameter-name">paths</span></span>, <span class="parameter" id="getPermission-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="getPermission-param-permission"><span class="type-annotation">int</span> <span class="parameter-name">permission</span></span>)
                       &#8594;
                       <span class="returntype">int</span>
                   </span>
@@ -534,7 +539,7 @@ Otherwise this will fetch a child.
                   
               </dd>
               <dt id="getSetPermission" class="callable">
-                  <a href="dslink.responder/LocalNode/getSetPermission.html"><span class="name ">getSetPermission</span></a><span class="signature">(<wbr>)
+                  <span class="name ">getSetPermission</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">int</span>
                   </span>
@@ -546,7 +551,7 @@ Otherwise this will fetch a child.
                   Gets the set permission for this node.
               </dd>
               <dt id="getSimpleMap" class="callable">
-                  <a href="dslink.common/Node/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
+                  <span class="name ">getSimpleMap</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
@@ -558,7 +563,7 @@ Otherwise this will fetch a child.
                   Gets a map for the data that will be listed in the parent node's children property.
               </dd>
               <dt id="invoke" class="callable">
-                  <a href="dslink.responder/LocalNode/invoke.html"><span class="name ">invoke</span></a><span class="signature">(<wbr><span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="invoke-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="invoke-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="invoke-param-parentNode"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">parentNode</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+                  <span class="name ">invoke</span><span class="signature">(<wbr><span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="invoke-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="invoke-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="invoke-param-parentNode"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">parentNode</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
                   </span>
@@ -570,7 +575,7 @@ Otherwise this will fetch a child.
                   Called by the link internals to invoke this node.
               </dd>
               <dt id="load" class="callable">
-                  <a href="dslink.broker/BrokerNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name ">load</span><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -582,7 +587,7 @@ Otherwise this will fetch a child.
                   
               </dd>
               <dt id="loadPermission" class="callable">
-                  <a href="dslink.broker/BrokerNodePermission/loadPermission.html"><span class="name ">loadPermission</span></a><span class="signature">(<wbr><span class="parameter" id="loadPermission-param-l"><span class="type-annotation">List</span> <span class="parameter-name">l</span></span>)
+                  <span class="name ">loadPermission</span><span class="signature">(<wbr><span class="parameter" id="loadPermission-param-l"><span class="type-annotation">List</span> <span class="parameter-name">l</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -594,7 +599,7 @@ Otherwise this will fetch a child.
                   
               </dd>
               <dt id="onAllListCancel" class="callable">
-                  <a href="dslink.responder/LocalNode/onAllListCancel.html"><span class="name ">onAllListCancel</span></a><span class="signature">(<wbr>)
+                  <span class="name ">onAllListCancel</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -606,7 +611,7 @@ Otherwise this will fetch a child.
                   Callback for when all lists are canceled.
               </dd>
               <dt id="onStartListListen" class="callable">
-                  <a href="dslink.responder/LocalNode/onStartListListen.html"><span class="name ">onStartListListen</span></a><span class="signature">(<wbr>)
+                  <span class="name ">onStartListListen</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -618,7 +623,7 @@ Otherwise this will fetch a child.
                   Callback for when listing this node has started.
               </dd>
               <dt id="removeAttribute" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/removeAttribute.html"><span class="name ">removeAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                  <span class="name ">removeAttribute</span><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -630,7 +635,7 @@ Otherwise this will fetch a child.
                   Called by the link internals to remove an attribute from this node.
               </dd>
               <dt id="removeChild" class="callable">
-                  <a href="dslink.common/Node/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
+                  <span class="name ">removeChild</span><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
                       &#8594;
                       <span class="returntype">String</span>
                   </span>
@@ -640,10 +645,10 @@ Otherwise this will fetch a child.
                     <span class="is-inherited">inherited</span>
                   </div>
                   Remove a child from this node.
-input can be either an instance of <a href="dslink/Node-class.html">Node</a> or a String.
+<code class="prettyprint lang-dart">input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code class="prettyprint lang-dart">String</code>.
               </dd>
               <dt id="removeConfig" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/removeConfig.html"><span class="name ">removeConfig</span></a><span class="signature">(<wbr><span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                  <span class="name ">removeConfig</span><span class="signature">(<wbr><span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -655,7 +660,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   Called by the link internals to remove a config from this node.
               </dd>
               <dt id="serialize" class="callable">
-                  <a href="dslink.broker/BrokerNode/serialize.html"><span class="name ">serialize</span></a><span class="signature">(<wbr><span class="parameter" id="serialize-param-withChildren"><span class="type-annotation">bool</span> <span class="parameter-name">withChildren</span></span>)
+                  <span class="name ">serialize</span><span class="signature">(<wbr><span class="parameter" id="serialize-param-withChildren"><span class="type-annotation">bool</span> <span class="parameter-name">withChildren</span></span>)
                       &#8594;
                       <span class="returntype">Map</span>
                   </span>
@@ -667,7 +672,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   
               </dd>
               <dt id="serializePermission" class="callable">
-                  <a href="dslink.broker/BrokerNodePermission/serializePermission.html"><span class="name ">serializePermission</span></a><span class="signature">(<wbr>)
+                  <span class="name ">serializePermission</span><span class="signature">(<wbr>)
                       &#8594;
                       <span class="returntype">List</span>
                   </span>
@@ -679,7 +684,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   
               </dd>
               <dt id="setAttribute" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/setAttribute.html"><span class="name ">setAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                  <span class="name ">setAttribute</span><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -691,7 +696,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   Called by the link internals to set an attribute on this node.
               </dd>
               <dt id="setConfig" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
+                  <span class="name ">setConfig</span><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -703,7 +708,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   Called by the link internals to set a config on this node.
               </dd>
               <dt id="setValue" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/setValue.html"><span class="name ">setValue</span></a><span class="signature">(<wbr><span class="parameter" id="setValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setValue-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setValue-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, [<span class="parameter" id="setValue-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+                  <span class="name ">setValue</span><span class="signature">(<wbr><span class="parameter" id="setValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setValue-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setValue-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, [<span class="parameter" id="setValue-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/Response-class.html">Response</a></span>
                   </span>
@@ -715,7 +720,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   Called by the link internals to set a value of a node.
               </dd>
               <dt id="subscribe" class="callable">
-                  <a href="dslink.responder/LocalNode/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-cachelevel"><span class="type-annotation">int</span> <span class="parameter-name">cachelevel</span> = <span class="default-value">1</span></span>])
+                  <span class="name ">subscribe</span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-cachelevel"><span class="type-annotation">int</span> <span class="parameter-name">cachelevel</span> = <span class="default-value">1</span></span>])
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
                   </span>
@@ -724,10 +729,10 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   <div>
                     <span class="is-inherited">inherited</span>
                   </div>
-                  Subscribes the given callback to this node.
+                  Subscribes the given <code class="prettyprint lang-dart">callback</code> to this node.
               </dd>
               <dt id="unsubscribe" class="callable">
-                  <a href="dslink.responder/LocalNode/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
+                  <span class="name ">unsubscribe</span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -736,10 +741,10 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   <div>
                     <span class="is-inherited">inherited</span>
                   </div>
-                  Unsubscribe the given callback from this node.
+                  Unsubscribe the given <code class="prettyprint lang-dart">callback</code> from this node.
               </dd>
               <dt id="updateList" class="callable">
-                  <a href="dslink.responder/LocalNodeImpl/updateList.html"><span class="name ">updateList</span></a><span class="signature">(<wbr><span class="parameter" id="updateList-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                  <span class="name ">updateList</span><span class="signature">(<wbr><span class="parameter" id="updateList-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -751,7 +756,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
                   
               </dd>
               <dt id="updateValue" class="callable">
-                  <a href="dslink.responder/LocalNode/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-update"><span class="type-annotation">Object</span> <span class="parameter-name">update</span></span>, {<span class="parameter" id="updateValue-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span>: <span class="default-value">false</span></span>})
+                  <span class="name ">updateValue</span><span class="signature">(<wbr><span class="parameter" id="updateValue-param-update"><span class="type-annotation">Object</span> <span class="parameter-name">update</span></span>, {<span class="parameter" id="updateValue-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span>: <span class="default-value">false</span></span>})
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
@@ -767,52 +772,84 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>BrokerVersionNode</h5>
+    <ol>
     
-        <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#static-properties">Static properties</a></li>
-        <li><a href="dslink.broker/BrokerVersionNode/instance.html">instance</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#static-properties">Static properties</a></li>
+      <li><a href="dslink.broker/BrokerVersionNode/instance.html">instance</a></li>
     
     
     
-        <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.broker/BrokerVersionNode/BrokerVersionNode.html">BrokerVersionNode</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/BrokerVersionNode/BrokerVersionNode.html">BrokerVersionNode</a></li>
     
-        <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#operators">Operators</a></li>
-        <li><a href="dslink.responder/LocalNode/operator_get.html">operator []</a></li>
-        <li><a href="dslink.responder/LocalNode/operator_put.html">operator []=</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#operators">Operators</a></li>
+      <li>operator []
+</li>
+      <li>operator []=
+</li>
     
-        <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#methods">Methods</a></li>
-        <li><a href="dslink.common/Node/addChild.html">addChild</a></li>
-        <li><a href="dslink.common/Node/forEachAttribute.html">forEachAttribute</a></li>
-        <li><a href="dslink.common/Node/forEachChild.html">forEachChild</a></li>
-        <li><a href="dslink.common/Node/forEachConfig.html">forEachConfig</a></li>
-        <li><a href="dslink.common/Node/get.html">get</a></li>
-        <li><a href="dslink.common/Node/getAttribute.html">getAttribute</a></li>
-        <li><a href="dslink.common/Node/getChild.html">getChild</a></li>
-        <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
-        <li><a href="dslink.responder/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
-        <li><a href="dslink.broker/BrokerNode/getPermission.html">getPermission</a></li>
-        <li><a href="dslink.responder/LocalNode/getSetPermission.html">getSetPermission</a></li>
-        <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
-        <li><a href="dslink.responder/LocalNode/invoke.html">invoke</a></li>
-        <li><a href="dslink.broker/BrokerNode/load.html">load</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
-        <li><a href="dslink.responder/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
-        <li><a href="dslink.responder/LocalNode/onStartListListen.html">onStartListListen</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
-        <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/removeConfig.html">removeConfig</a></li>
-        <li><a href="dslink.broker/BrokerNode/serialize.html">serialize</a></li>
-        <li><a href="dslink.broker/BrokerNodePermission/serializePermission.html">serializePermission</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/setAttribute.html">setAttribute</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/setConfig.html">setConfig</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/setValue.html">setValue</a></li>
-        <li><a href="dslink.responder/LocalNode/subscribe.html">subscribe</a></li>
-        <li><a href="dslink.responder/LocalNode/unsubscribe.html">unsubscribe</a></li>
-        <li><a href="dslink.responder/LocalNodeImpl/updateList.html">updateList</a></li>
-        <li><a href="dslink.responder/LocalNode/updateValue.html">updateValue</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.broker/BrokerVersionNode-class.html#methods">Methods</a></li>
+      <li>addChild
+</li>
+      <li>forEachAttribute
+</li>
+      <li>forEachChild
+</li>
+      <li>forEachConfig
+</li>
+      <li>get
+</li>
+      <li>getAttribute
+</li>
+      <li>getChild
+</li>
+      <li>getConfig
+</li>
+      <li>getInvokePermission
+</li>
+      <li>getPermission
+</li>
+      <li>getSetPermission
+</li>
+      <li>getSimpleMap
+</li>
+      <li>invoke
+</li>
+      <li>load
+</li>
+      <li>loadPermission
+</li>
+      <li>onAllListCancel
+</li>
+      <li>onStartListListen
+</li>
+      <li>removeAttribute
+</li>
+      <li>removeChild
+</li>
+      <li>removeConfig
+</li>
+      <li>serialize
+</li>
+      <li>serializePermission
+</li>
+      <li>setAttribute
+</li>
+      <li>setConfig
+</li>
+      <li>setValue
+</li>
+      <li>subscribe
+</li>
+      <li>unsubscribe
+</li>
+      <li>updateList
+</li>
+      <li>updateValue
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -840,92 +877,7 @@ input can be either an instance of <a href="dslink/Node-class.html">Node</a> or 
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

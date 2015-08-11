@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -58,8 +60,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+
+    <ol>
       <li class="section-title"><a href="dslink/dslink-library.html#constants">Constants</a></li>
       <li><a href="dslink/unspecified.html">unspecified</a></li>
     
@@ -187,7 +192,7 @@
         <dl class="properties">
             <dt id="data" class="property">
                 <span class="top-level-variable-type">Map</span>
-                <a href="dslink/Request/data.html"><span class="name ">data</span></a>
+                <a href="dslink/Request/data.html">data</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -197,7 +202,7 @@
             </dd>
             <dt id="isClosed" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink/Request/isClosed.html"><span class="name ">isClosed</span></a>
+                <a href="dslink/Request/isClosed.html">isClosed</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -207,7 +212,7 @@
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink/Request/requester.html"><span class="name ">requester</span></a>
+                <a href="dslink/Request/requester.html">requester</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -217,7 +222,7 @@
             </dd>
             <dt id="rid" class="property">
                 <span class="top-level-variable-type">int</span>
-                <a href="dslink/Request/rid.html"><span class="name ">rid</span></a>
+                <a href="dslink/Request/rid.html">rid</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -227,7 +232,7 @@
             </dd>
             <dt id="streamStatus" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink/Request/streamStatus.html"><span class="name ">streamStatus</span></a>
+                <a href="dslink/Request/streamStatus.html">streamStatus</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -237,7 +242,7 @@
             </dd>
             <dt id="updater" class="property">
                 <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
-                <a href="dslink/Request/updater.html"><span class="name ">updater</span></a>
+                <a href="dslink/Request/updater.html">updater</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -288,27 +293,36 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>Request</h5>
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink/Request-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink/Request/data.html">data</a></li>
-        <li><a href="dslink/Request/isClosed.html">isClosed</a></li>
-        <li><a href="dslink/Request/requester.html">requester</a></li>
-        <li><a href="dslink/Request/rid.html">rid</a></li>
-        <li><a href="dslink/Request/streamStatus.html">streamStatus</a></li>
-        <li><a href="dslink/Request/updater.html">updater</a></li>
+      <li class="section-title"><a href="dslink/Request-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink/Request/data.html">data</a>
+</li>
+      <li><a href="dslink/Request/isClosed.html">isClosed</a>
+</li>
+      <li><a href="dslink/Request/requester.html">requester</a>
+</li>
+      <li><a href="dslink/Request/rid.html">rid</a>
+</li>
+      <li><a href="dslink/Request/streamStatus.html">streamStatus</a>
+</li>
+      <li><a href="dslink/Request/updater.html">updater</a>
+</li>
     
-        <li class="section-title"><a href="dslink/Request-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink/Request/Request.html">Request</a></li>
+      <li class="section-title"><a href="dslink/Request-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/Request/Request.html">Request</a></li>
     
     
-        <li class="section-title"><a href="dslink/Request-class.html#methods">Methods</a></li>
-        <li><a href="dslink/Request/close.html">close</a></li>
-        <li><a href="dslink/Request/resend.html">resend</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink/Request-class.html#methods">Methods</a></li>
+      <li><a href="dslink/Request/close.html">close</a>
+</li>
+      <li><a href="dslink/Request/resend.html">resend</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -336,92 +350,7 @@
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

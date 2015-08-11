@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -59,8 +61,11 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar-offcanvas-left">
-    <ol class="sidebar">
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></h5>
+
+    <ol>
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#constants">Constants</a></li>
       <li><a href="dslink.browser/unspecified.html">unspecified</a></li>
     
@@ -215,7 +220,7 @@
         <dl class="properties">
             <dt id="enableAck" class="property">
                 <span class="top-level-variable-type">bool</span>
-                <a href="dslink.browser/BrowserUserLink/enableAck.html"><span class="name ">enableAck</span></a>
+                <a href="dslink.browser/BrowserUserLink/enableAck.html">enableAck</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -225,7 +230,7 @@
             </dd>
             <dt id="httpUpdateUri" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/BrowserUserLink/httpUpdateUri.html"><span class="name ">httpUpdateUri</span></a>
+                <a href="dslink.browser/BrowserUserLink/httpUpdateUri.html">httpUpdateUri</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -235,7 +240,7 @@
             </dd>
             <dt id="nonce" class="property">
                 <span class="top-level-variable-type"><a href="dslink/ECDH-class.html">ECDH</a></span>
-                <a href="dslink.browser/BrowserUserLink/nonce.html"><span class="name ">nonce</span></a>
+                <a href="dslink.browser/BrowserUserLink/nonce.html">nonce</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -245,7 +250,7 @@
             </dd>
             <dt id="onRequesterReady" class="property">
                 <span class="top-level-variable-type">Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
-                <a href="dslink.browser/BrowserUserLink/onRequesterReady.html"><span class="name ">onRequesterReady</span></a>
+                <a href="dslink.browser/BrowserUserLink/onRequesterReady.html">onRequesterReady</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -255,7 +260,7 @@
             </dd>
             <dt id="privateKey" class="property">
                 <span class="top-level-variable-type"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span>
-                <a href="dslink.browser/BrowserUserLink/privateKey.html"><span class="name ">privateKey</span></a>
+                <a href="dslink.browser/BrowserUserLink/privateKey.html">privateKey</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -265,7 +270,7 @@
             </dd>
             <dt id="requester" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink.browser/BrowserUserLink/requester.html"><span class="name ">requester</span></a>
+                <a href="dslink.browser/BrowserUserLink/requester.html">requester</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -275,7 +280,7 @@
             </dd>
             <dt id="responder" class="property">
                 <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
-                <a href="dslink.browser/BrowserUserLink/responder.html"><span class="name ">responder</span></a>
+                <a href="dslink.browser/BrowserUserLink/responder.html">responder</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -285,7 +290,7 @@
             </dd>
             <dt id="session" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/BrowserUserLink/session.html"><span class="name ">session</span></a>
+                <a href="dslink.browser/BrowserUserLink/session.html">session</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -295,7 +300,7 @@
             </dd>
             <dt id="wsUpdateUri" class="property">
                 <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/BrowserUserLink/wsUpdateUri.html"><span class="name ">wsUpdateUri</span></a>
+                <a href="dslink.browser/BrowserUserLink/wsUpdateUri.html">wsUpdateUri</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -356,33 +361,46 @@ saltId: 0 salt, 1:saltS, 2:saltL
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar-offcanvas-right">
-      <ol class="sidebar">
-        <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#constants">Constants</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/saltNameMap.html">saltNameMap</a></li>
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>BrowserUserLink</h5>
+    <ol>
+      <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#constants">Constants</a></li>
+      <li><a href="dslink.browser/BrowserUserLink/saltNameMap.html">saltNameMap</a></li>
     
     
     
-        <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/enableAck.html">enableAck</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/httpUpdateUri.html">httpUpdateUri</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/nonce.html">nonce</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/onRequesterReady.html">onRequesterReady</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/privateKey.html">privateKey</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/requester.html">requester</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/responder.html">responder</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/session.html">session</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/wsUpdateUri.html">wsUpdateUri</a></li>
+      <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.browser/BrowserUserLink/enableAck.html">enableAck</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/httpUpdateUri.html">httpUpdateUri</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/nonce.html">nonce</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/onRequesterReady.html">onRequesterReady</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/privateKey.html">privateKey</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/requester.html">requester</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/responder.html">responder</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/session.html">session</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/wsUpdateUri.html">wsUpdateUri</a>
+</li>
     
-        <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/BrowserUserLink.html">BrowserUserLink</a></li>
+      <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.browser/BrowserUserLink/BrowserUserLink.html">BrowserUserLink</a></li>
     
     
-        <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#methods">Methods</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/connect.html">connect</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/initWebsocket.html">initWebsocket</a></li>
-        <li><a href="dslink.browser/BrowserUserLink/updateSalt.html">updateSalt</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink.browser/BrowserUserLink-class.html#methods">Methods</a></li>
+      <li><a href="dslink.browser/BrowserUserLink/connect.html">connect</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/initWebsocket.html">initWebsocket</a>
+</li>
+      <li><a href="dslink.browser/BrowserUserLink/updateSalt.html">updateSalt</a>
+</li>
+    </ol>
   </div><!--/.sidebar-offcanvas-->
 
 </div> <!-- container -->
@@ -410,92 +428,7 @@ saltId: 0 salt, 1:saltS, 2:saltL
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>

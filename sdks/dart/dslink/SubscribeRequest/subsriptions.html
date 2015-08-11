@@ -22,6 +22,8 @@
 
 <body>
 
+<div id="overlay-under-drawer"></div>
+
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
@@ -57,36 +59,55 @@
 
 <div class="container body">
 
-  <div class="col-xs-6 col-sm-3 sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+    <h5><a href="dslink/SubscribeRequest-class.html">SubscribeRequest</a></h5>
 
-      <ol class="sidebar">
+    <ol>
     
     
     
-        <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-properties">Properties</a></li>
-        <li><a href="dslink.requester/Request/data.html">data</a></li>
-        <li><a href="dslink.requester/Request/isClosed.html">isClosed</a></li>
-        <li><a href="dslink.requester/Request/requester.html">requester</a></li>
-        <li><a href="dslink.requester/Request/rid.html">rid</a></li>
-        <li><a href="dslink.requester/Request/streamStatus.html">streamStatus</a></li>
-        <li><a href="dslink/SubscribeRequest/subsriptionids.html">subsriptionids</a></li>
-        <li><a href="dslink/SubscribeRequest/subsriptions.html">subsriptions</a></li>
-        <li><a href="dslink/SubscribeRequest/toRemove.html">toRemove</a></li>
-        <li><a href="dslink.requester/Request/updater.html">updater</a></li>
+      <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-properties">Properties</a></li>
+      <li>data
+</li>
+      <li>isClosed
+</li>
+      <li>requester
+</li>
+      <li>rid
+</li>
+      <li>streamStatus
+</li>
+      <li><a href="dslink/SubscribeRequest/subsriptionids.html">subsriptionids</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/subsriptions.html">subsriptions</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/toRemove.html">toRemove</a>
+</li>
+      <li>updater
+</li>
     
-        <li class="section-title"><a href="dslink/SubscribeRequest-class.html#constructors">Constructors</a></li>
-        <li><a href="dslink/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
+      <li class="section-title"><a href="dslink/SubscribeRequest-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
     
     
-        <li class="section-title"><a href="dslink/SubscribeRequest-class.html#methods">Methods</a></li>
-        <li><a href="dslink/SubscribeRequest/ackReceived.html">ackReceived</a></li>
-        <li><a href="dslink/SubscribeRequest/addSubscription.html">addSubscription</a></li>
-        <li><a href="dslink.requester/Request/close.html">close</a></li>
-        <li><a href="dslink/SubscribeRequest/prepareSending.html">prepareSending</a></li>
-        <li><a href="dslink/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
-        <li><a href="dslink/SubscribeRequest/resend.html">resend</a></li>
-        <li><a href="dslink/SubscribeRequest/startSendingData.html">startSendingData</a></li>
-      </ol>
+      <li class="section-title"><a href="dslink/SubscribeRequest-class.html#methods">Methods</a></li>
+      <li><a href="dslink/SubscribeRequest/ackReceived.html">ackReceived</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/addSubscription.html">addSubscription</a>
+</li>
+      <li>close
+</li>
+      <li><a href="dslink/SubscribeRequest/prepareSending.html">prepareSending</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/removeSubscription.html">removeSubscription</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/resend.html">resend</a>
+</li>
+      <li><a href="dslink/SubscribeRequest/startSendingData.html">startSendingData</a>
+</li>
+    </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
@@ -133,92 +154,7 @@
 </footer>
 
 <script src="static-assets/prettify.js"></script>
-<script>
-// Adds a shadow for the top nav when the masthead is scrolled off the top.
-function initScroller() {
-  var header = document.querySelector("header");
-  var title = document.querySelector(".title-description");
-  var selfName = document.querySelector('nav .self-name');
-
-  window.addEventListener('scroll', function(e) {
-    var position = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (header) {
-      if (position >= 110) { // TODO: where did this num come from?
-        header.classList.add("header-fixed");
-      } else if (header.classList.contains("header-fixed")) {
-        header.classList.remove("header-fixed");
-      }
-    }
-
-    if (selfName) {
-      if (position >= 80) { // TODO: is this too brittle ?
-        selfName.classList.add('visible-xs-inline');
-      } else {
-        selfName.classList.remove('visible-xs-inline');
-      }
-    }
-  });
-}
-
-function initSideNav() {
-  var leftNavToggle = document.getElementById('sidenav-left-toggle');
-  if (leftNavToggle) {
-    leftNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var leftNav = document.querySelector('.sidebar-offcanvas-left');
-      if (leftNav) {
-        leftNav.classList.toggle('active');
-      }
-    });
-  }
-
-  document.addEventListener('click', function(e) {
-    var rightDrawer = document.querySelector('.sidebar-offcanvas-right');
-    var leftDrawer = document.querySelector('.sidebar-offcanvas-left');
-    console.log('a drawer is open');
-    var clickOutsideOfDrawer = true;
-    var t = e.target;
-    while (t !== document) {
-      if (t === rightDrawer || t === leftDrawer) {
-        clickOutsideOfDrawer = false;
-        break;
-      }
-      t = t.parentNode;
-    }
-    if (clickOutsideOfDrawer) {
-      if (rightDrawer) rightDrawer.classList.remove('active');
-      if (leftDrawer) leftDrawer.classList.remove('active');
-    }
-  });
-
-  var rightNavToggle = document.getElementById('sidenav-right-toggle');
-  if (rightNavToggle) {
-    rightNavToggle.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var rightNav = document.querySelector('.sidebar-offcanvas-right');
-      if (rightNav) {
-        rightNav.classList.toggle('active');
-      }
-    });
-  }
-}
-
-// Make sure the anchors scroll past the fixed page header (#648).
-function shiftWindow() {
-  scrollBy(0, -68);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  prettyPrint();
-  initScroller();
-  initSideNav();
-
-  // Make sure the anchors scroll past the fixed page header (#648).
-  if (location.hash) shiftWindow();
-  window.addEventListener("hashchange", shiftWindow);
-});
-</script>
+<script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 </body>
