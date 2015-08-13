@@ -115,7 +115,7 @@
             <span class="name ">add</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="add-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="add-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>,<br><span class="parameter" id="add-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>,<br><span class="parameter" id="add-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>
+                <span class="parameter" id="add-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="add-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>,<br><span class="parameter" id="add-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>,<br><span class="parameter" id="add-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>
             </div>
             )    </section>
 
@@ -127,7 +127,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void add(String path, LocalNode node, int sid, int cacheLevel) {
+      <pre><code class="prettyprint lang-dart">void add(String path, LocalNode node, int sid, int qos) {
   if (subsriptions[path] != null) {
     RespSubscribeController controller = subsriptions[path];
     if (controller.sid != sid) {
@@ -135,12 +135,12 @@
       controller.sid == sid;
       subsriptionids[sid] = controller;
     }
-    controller.cacheLevel = cacheLevel;
+    controller.qosLevel = qos;
   } else {
     int permission = responder.nodeProvider.permissions
         .getPermission(node.path, responder);
     RespSubscribeController controller = new RespSubscribeController(
-        this, node, sid, permission &gt;= Permission.READ, cacheLevel);
+        this, node, sid, permission &gt;= Permission.READ, qos);
     subsriptions[path] = controller;
     subsriptionids[sid] = controller;
     if (responder._traceCallbacks != null){

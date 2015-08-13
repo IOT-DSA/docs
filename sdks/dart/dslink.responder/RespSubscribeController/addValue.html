@@ -70,13 +70,19 @@
     
     
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-properties">Properties</a></li>
-      <li><a href="dslink.responder/RespSubscribeController/cacheLevel.html">cacheLevel</a>
+      <li><a href="dslink.responder/RespSubscribeController/caching.html">caching</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/lastValue.html">lastValue</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/node.html">node</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/permitted.html">permitted</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/persist.html">persist</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/qosLevel.html">qosLevel</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/response.html">response</a>
 </li>
@@ -91,8 +97,6 @@
       <li><a href="dslink.responder/RespSubscribeController/addValue.html">addValue</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/destroy.html">destroy</a>
-</li>
-      <li><a href="dslink.responder/RespSubscribeController/mergeValues.html">mergeValues</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/process.html">process</a>
 </li>
@@ -120,9 +124,16 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
-  lastValues.add(val);
-  if (lastValues.length &gt; _cachedLevel) {
-    mergeValues();
+
+  if (_caching) {
+    lastValue = val;
+    lastValues.add(val);
+  } else {
+    if (lastValue != null) {
+      lastValue =  new ValueUpdate.merge(lastValue, val);
+    } else {
+      lastValue = val;
+    }
   }
   // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
   // the first response can happen ASAP, but

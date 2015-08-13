@@ -72,7 +72,7 @@
       <li class="section-title"><a href="dslink.browser/ReqSubscribeController-class.html#instance-properties">Properties</a></li>
       <li><a href="dslink.browser/ReqSubscribeController/callbacks.html">callbacks</a>
 </li>
-      <li><a href="dslink.browser/ReqSubscribeController/maxCache.html">maxCache</a>
+      <li><a href="dslink.browser/ReqSubscribeController/currentQos.html">currentQos</a>
 </li>
       <li><a href="dslink.browser/ReqSubscribeController/node.html">node</a>
 </li>
@@ -92,7 +92,7 @@
 </li>
       <li><a href="dslink.browser/ReqSubscribeController/unlisten.html">unlisten</a>
 </li>
-      <li><a href="dslink.browser/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a>
+      <li><a href="dslink.browser/ReqSubscribeController/updateQos.html">updateQos</a>
 </li>
     </ol>
 
@@ -105,7 +105,7 @@
             <span class="name ">listen</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br><span class="parameter" id="listen-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>
+                <span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br><span class="parameter" id="listen-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>
             </div>
             )    </section>
 
@@ -117,26 +117,32 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate), int cacheLevel) {
-  if (cacheLevel &lt; 1) cacheLevel = 1;
-  if (cacheLevel &gt; 1000000) cacheLevel = 1000000;
-  if (cacheLevel &gt; maxCache) {
-    maxCache = cacheLevel;
-    requester._subsciption.addSubscription(this, maxCache);
+      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate), int qos) {
+  if (qos &lt; 0 || qos &gt; 3) {
+    qos = 0;
   }
+  bool qosChanged = false;
 
   if (callbacks.containsKey(callback)) {
-    if (callbacks[callback] == maxCache &amp;&amp; cacheLevel &lt; maxCache) {
-      callbacks[callback] = cacheLevel;
-      updateCacheLevel();
+    if (callbacks[callback] != 0) {
+      callbacks[callback] = qos;
+      qosChanged = updateQos();
     } else {
-      callbacks[callback] = cacheLevel;
+      callbacks[callback] = qos;
     }
   } else {
-    callbacks[callback] = cacheLevel;
+    callbacks[callback] = qos;
+    int neededQos = qos;
+    if (currentQos &gt; -1) {
+      neededQos |= currentQos;
+    }
+    qosChanged = neededQos &gt; currentQos;
     if (_lastUpdate != null) {
       callback(_lastUpdate);
     }
+  }
+  if (qosChanged) {
+    requester._subsciption.addSubscription(this, currentQos);
   }
 }</code></pre>
     </section>

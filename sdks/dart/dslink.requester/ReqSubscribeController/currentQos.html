@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>updateCacheLevel method - ReqSubscribeController class - dslink.requester library - Dart API</title>
+    <title>currentQos property - ReqSubscribeController class - dslink.requester library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the updateCacheLevel method from the ReqSubscribeController class, for the Dart programming language.">
+    <meta name="description" content="API docs for the currentQos property from the ReqSubscribeController class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -32,9 +32,9 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
                 <li><a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a></li>
-                <li class="self-crumb">updateCacheLevel</li>
+                <li class="self-crumb">currentQos</li>
             </ol>
-            <div class="self-name">updateCacheLevel</div>
+            <div class="self-name">currentQos</div>
         </div>
     </nav>
     <div class="container masthead">
@@ -42,18 +42,17 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
             <li><a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a></li>
-            <li class="self-crumb">updateCacheLevel</li>
+            <li class="self-crumb">currentQos</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> updateCacheLevel
+                <div class="kind">property</div> currentQos
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.requester/ReqSubscribeController/updateCacheLevel.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -72,7 +71,7 @@
       <li class="section-title"><a href="dslink.requester/ReqSubscribeController-class.html#instance-properties">Properties</a></li>
       <li><a href="dslink.requester/ReqSubscribeController/callbacks.html">callbacks</a>
 </li>
-      <li><a href="dslink.requester/ReqSubscribeController/maxCache.html">maxCache</a>
+      <li><a href="dslink.requester/ReqSubscribeController/currentQos.html">currentQos</a>
 </li>
       <li><a href="dslink.requester/ReqSubscribeController/node.html">node</a>
 </li>
@@ -92,7 +91,7 @@
 </li>
       <li><a href="dslink.requester/ReqSubscribeController/unlisten.html">unlisten</a>
 </li>
-      <li><a href="dslink.requester/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a>
+      <li><a href="dslink.requester/ReqSubscribeController/updateQos.html">updateQos</a>
 </li>
     </ol>
 
@@ -101,31 +100,18 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">updateCacheLevel</span>(
-            )    </section>
-
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
+        <span class="returntype">int</span>
+        <span class="name ">currentQos</span>
+        <div class="readable-writable">
+            read / write
+        </div>
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void updateCacheLevel() {
-  int maxCacheLevel = 1;
-  callbacks.forEach((callback, level) {
-    if (level &gt; maxCacheLevel) {
-      maxCacheLevel = level;
-    }
-  });
-  if (maxCacheLevel != maxCache) {
-    maxCache = maxCacheLevel;
-    requester._subsciption.addSubscription(this, maxCache);
-  }
-}</code></pre>
-    </section>
+      <section class="desc markdown">
+      
+            <p class="no-docs">Not documented.</p>
+      
+      </section>
 
   </div> <!-- /.main-content -->
 

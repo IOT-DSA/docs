@@ -70,13 +70,19 @@
     
     
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-properties">Properties</a></li>
-      <li><a href="dslink.responder/RespSubscribeController/cacheLevel.html">cacheLevel</a>
+      <li><a href="dslink.responder/RespSubscribeController/caching.html">caching</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/lastValue.html">lastValue</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/node.html">node</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/permitted.html">permitted</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/persist.html">persist</a>
+</li>
+      <li><a href="dslink.responder/RespSubscribeController/qosLevel.html">qosLevel</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/response.html">response</a>
 </li>
@@ -91,8 +97,6 @@
       <li><a href="dslink.responder/RespSubscribeController/addValue.html">addValue</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/destroy.html">destroy</a>
-</li>
-      <li><a href="dslink.responder/RespSubscribeController/mergeValues.html">mergeValues</a>
 </li>
       <li><a href="dslink.responder/RespSubscribeController/process.html">process</a>
 </li>
@@ -117,7 +121,11 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">List process() {
   List rslts = [];
-  for (ValueUpdate lastValue in lastValues) {
+  if (_caching) {
+    for (ValueUpdate lastValue in lastValues) {
+      rslts.add([sid, lastValue.value, lastValue.ts]);
+    }
+  } else {
     if (lastValue.count &gt; 1 || lastValue.status != null) {
       Map m = {&apos;ts&apos;: lastValue.ts, &apos;value&apos;: lastValue.value, &apos;sid&apos;: sid};
       if (lastValue.count == 0) {} else if (lastValue.count &gt; 1) {

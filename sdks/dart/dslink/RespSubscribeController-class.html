@@ -190,9 +190,19 @@
         <h2>Properties</h2>
 
         <dl class="properties">
-            <dt id="cacheLevel" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href="dslink/RespSubscribeController/cacheLevel.html">cacheLevel</a>
+            <dt id="caching" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink/RespSubscribeController/caching.html">caching</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        write-only
+    </div>
+    
+            </dd>
+            <dt id="lastValue" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
+                <a href="dslink/RespSubscribeController/lastValue.html">lastValue</a>
             </dt>
             <dd>
                 <div class="readable-writable">
@@ -230,6 +240,26 @@
     </div>
     
             </dd>
+            <dt id="persist" class="property">
+                <span class="top-level-variable-type">bool</span>
+                <a href="dslink/RespSubscribeController/persist.html">persist</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        write-only
+    </div>
+    
+            </dd>
+            <dt id="qosLevel" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink/RespSubscribeController/qosLevel.html">qosLevel</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        write-only
+    </div>
+    
+            </dd>
             <dt id="response" class="property">
                 <span class="top-level-variable-type"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span>
                 <a href="dslink/RespSubscribeController/response.html">response</a>
@@ -258,7 +288,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="RespSubscribeController" class="callable">
-                <span class="name"><a href="dslink/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></span><span class="signature">(<span class="parameter" id="-param-response"><span class="type-annotation"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>, <span class="parameter" id="-param-_permitted"><span class="type-annotation">bool</span> <span class="parameter-name">_permitted</span></span>, <span class="parameter" id="-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>)</span>
+                <span class="name"><a href="dslink/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></span><span class="signature">(<span class="parameter" id="-param-response"><span class="type-annotation"><a href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>, <span class="parameter" id="-param-_permitted"><span class="type-annotation">bool</span> <span class="parameter-name">_permitted</span></span>, <span class="parameter" id="-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)</span>
             </dt>
             <dd>
                 
@@ -288,15 +318,6 @@
               <dd>
                   
               </dd>
-              <dt id="mergeValues" class="callable">
-                  <a href="dslink/RespSubscribeController/mergeValues.html"><span class="name ">mergeValues</span></a><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="process" class="callable">
                   <a href="dslink/RespSubscribeController/process.html"><span class="name ">process</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -318,13 +339,19 @@
     
     
       <li class="section-title"><a href="dslink/RespSubscribeController-class.html#instance-properties">Properties</a></li>
-      <li><a href="dslink/RespSubscribeController/cacheLevel.html">cacheLevel</a>
+      <li><a href="dslink/RespSubscribeController/caching.html">caching</a>
+</li>
+      <li><a href="dslink/RespSubscribeController/lastValue.html">lastValue</a>
 </li>
       <li><a href="dslink/RespSubscribeController/lastValues.html">lastValues</a>
 </li>
       <li><a href="dslink/RespSubscribeController/node.html">node</a>
 </li>
       <li><a href="dslink/RespSubscribeController/permitted.html">permitted</a>
+</li>
+      <li><a href="dslink/RespSubscribeController/persist.html">persist</a>
+</li>
+      <li><a href="dslink/RespSubscribeController/qosLevel.html">qosLevel</a>
 </li>
       <li><a href="dslink/RespSubscribeController/response.html">response</a>
 </li>
@@ -339,8 +366,6 @@
       <li><a href="dslink/RespSubscribeController/addValue.html">addValue</a>
 </li>
       <li><a href="dslink/RespSubscribeController/destroy.html">destroy</a>
-</li>
-      <li><a href="dslink/RespSubscribeController/mergeValues.html">mergeValues</a>
 </li>
       <li><a href="dslink/RespSubscribeController/process.html">process</a>
 </li>

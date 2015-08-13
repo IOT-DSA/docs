@@ -150,7 +150,7 @@
     int rid = m[&apos;rid&apos;];
     for (Object p in m[&apos;paths&apos;]) {
       String pathstr;
-      int cacheLevel = 1;
+      int qos = 0;
       int sid = -1;
       if (p is Map) {
         if (p[&apos;path&apos;] is String) {
@@ -163,15 +163,15 @@
         } else {
           continue;
         }
-        if (p[&apos;cache&apos;] is int) {
-          cacheLevel = p[&apos;cache&apos;];
+        if (p[&apos;qos&apos;] is int) {
+          qos = p[&apos;qos&apos;];
         }
       }
       Path path = Path.getValidNodePath(pathstr);
 
       if (path != null &amp;&amp; path.isAbsolute) {
         LocalNode node = nodeProvider.getOrCreateNode(path.path, false);
-        _subscription.add(path.path, node, sid, cacheLevel);
+        _subscription.add(path.path, node, sid, qos);
       }
     }
     _closeResponse(m[&apos;rid&apos;]);
