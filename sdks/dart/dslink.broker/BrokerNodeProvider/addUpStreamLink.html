@@ -184,18 +184,31 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addUpStreamLink(ClientLink link, String name) {
   String upStreamId = &apos;@upstream@$name&apos;;
-
+  RemoteLinkManager conn;
   // TODO update children list of /$downstreamNameS node
   if (_links.containsKey(upStreamId)) {
     // TODO is it possible same link get added twice?
+    return;
   } else {
     _links[upStreamId] = link;
 
     String connPath = &apos;/upstream/$name&apos;;
     _connPath2id[connPath] = upStreamId;
     _id2connPath[upStreamId] = connPath;
-    getOrCreateNode(connPath, false);
+    RemoteLinkNode node = getOrCreateNode(connPath, true);
+    conn = node._linkManager;
     logger.info(&apos;new node added at $connPath&apos;);
+  }
+
+
+  if (!conn.inTree) {
+    List paths = conn.path.split(&apos;/&apos;);
+    String connName = paths.removeLast();
+    BrokerNode parentNode = getOrCreateNode(paths.join(&apos;/&apos;), false);
+    parentNode.children[connName] = conn.rootNode;
+    conn.rootNode.parentNode = parentNode;
+    conn.inTree = true;
+    parentNode.updateList(connName);
   }
 }</code></pre>
     </section>
