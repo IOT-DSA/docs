@@ -423,15 +423,6 @@ but instance is still there
               <dd>
                   
               </dd>
-              <dt id="getLink" class="callable">
-                  <a href="dslink.broker/BrokerNodeProvider/getLink.html"><span class="name ">getLink</span></a><span class="signature">(<wbr><span class="parameter" id="getLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
-                      &#8594;
-                      <span class="returntype"><a href="dslink.broker/ServerLink-class.html">ServerLink</a></span>
-                  </span>
-              </dt>
-              <dd>
-                  
-              </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink.broker/BrokerNodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       &#8594;
@@ -440,6 +431,15 @@ but instance is still there
               </dt>
               <dd>
                   Gets an existing node.
+              </dd>
+              <dt id="getOrCreateLink" class="callable">
+                  <a href="dslink.broker/BrokerNodeProvider/getOrCreateLink.html"><span class="name ">getOrCreateLink</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getOrCreateLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
+                      &#8594;
+                      <span class="returntype"><a href="dslink.broker/ServerLink-class.html">ServerLink</a></span>
+                  </span>
+              </dt>
+              <dd>
+                  
               </dd>
               <dt id="getOrCreateNode" class="callable">
                   <a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
@@ -637,9 +637,9 @@ If it does not exist, create a new node and return it.
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getConnPath.html">getConnPath</a>
 </li>
-      <li><a href="dslink.broker/BrokerNodeProvider/getLink.html">getLink</a>
-</li>
       <li><a href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a>
+</li>
+      <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateLink.html">getOrCreateLink</a>
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">getOrCreateNode</a>
 </li>

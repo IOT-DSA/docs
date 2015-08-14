@@ -127,9 +127,9 @@
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getConnPath.html">getConnPath</a>
 </li>
-      <li><a href="dslink.broker/BrokerNodeProvider/getLink.html">getLink</a>
-</li>
       <li><a href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a>
+</li>
+      <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateLink.html">getOrCreateLink</a>
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">getOrCreateNode</a>
 </li>
@@ -186,7 +186,7 @@
     Map m = DsJson.decode(data);
     m.forEach((String name, Map m) {
       String path = &apos;$downstreamNameSS$name&apos;;
-      RemoteLinkRootNode node = getOrCreateNode(path, false);
+      RemoteLinkRootNode node = getOrCreateNode(path, true);
       node.load(m);
       if (node.configs[r&apos;$$dsId&apos;] is String) {
         _id2connPath[node.configs[r&apos;$$dsId&apos;]] = path;
