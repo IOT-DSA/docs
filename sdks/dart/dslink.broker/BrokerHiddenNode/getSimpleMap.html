@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>load method - RootNode class - dslink.broker library - Dart API</title>
+    <title>getSimpleMap method - BrokerHiddenNode class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the load method from the RootNode class, for the Dart programming language.">
+    <meta name="description" content="API docs for the getSimpleMap method from the BrokerHiddenNode class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -31,29 +31,29 @@
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
-                <li class="self-crumb">load</li>
+                <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+                <li class="self-crumb">getSimpleMap</li>
             </ol>
-            <div class="self-name">load</div>
+            <div class="self-name">getSimpleMap</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-            <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
-            <li class="self-crumb">load</li>
+            <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+            <li class="self-crumb">getSimpleMap</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> load
+                <div class="kind">method</div> getSimpleMap
             </h1>
             <!-- p class="subtitle">
-                
+                Gets a map for the data that will be listed in the parent node's children property.
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.broker/RootNode/load.html#source">Source</a></li>
+            <li><a href="dslink.broker/BrokerHiddenNode/getSimpleMap.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -63,23 +63,23 @@
   <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
-    <h5><a href="dslink.broker/RootNode-class.html">RootNode</a></h5>
+    <h5><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></h5>
 
     <ol>
     
     
     
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.broker/RootNode/RootNode.html">RootNode</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/BrokerHiddenNode/BrokerHiddenNode.html">BrokerHiddenNode</a></li>
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#operators">Operators</a></li>
       <li>operator []
 </li>
       <li>operator []=
 </li>
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#methods">Methods</a></li>
       <li>addChild
 </li>
       <li>forEachAttribute
@@ -102,11 +102,11 @@
 </li>
       <li>getSetPermission
 </li>
-      <li>getSimpleMap
+      <li><a href="dslink.broker/BrokerHiddenNode/getSimpleMap.html">getSimpleMap</a>
 </li>
       <li>invoke
 </li>
-      <li><a href="dslink.broker/RootNode/load.html">load</a>
+      <li>load
 </li>
       <li>loadPermission
 </li>
@@ -145,45 +145,37 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">load</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>
-            </div>
+            <span class="returntype">Map</span>
+            <span class="name ">getSimpleMap</span>(
             )    </section>
 
     <section class="desc markdown">
     
-          <p class="no-docs">Not documented.</p>
+          <p>Gets a map for the data that will be listed in the parent node's children property.</p>
     
     </section>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void load(Map m) {
-  if (_loaded) {
-    throw &apos;root node can not be initialized twice&apos;;
+      <pre><code class="prettyprint lang-dart">Map getSimpleMap() {
+  Map rslt = {r&apos;$hidden&apos;:true};
+  if (configs.containsKey(r&apos;$is&apos;)) {
+    rslt[r&apos;$is&apos;] = configs[r&apos;$is&apos;];
   }
-
-  m.forEach((String key, value) {
-    if (key.startsWith(r&apos;$&apos;)) {
-      configs[key] = value;
-    } else if (key.startsWith(&apos;@&apos;)) {
-      attributes[key] = value;
-    } else if (value is Map) {
-      BrokerNode node;
-      if (value == &apos;defs&apos;) {
-        node = new BrokerHiddenNode(&apos;/$key&apos;, provider);
-      } else {
-        node = new BrokerNode(&apos;/$key&apos;, provider);
-      }
-
-      node.load(value);
-      provider.nodes[node.path] = node;
-      children[key] = node;
-    }
-  });
+  if (configs.containsKey(r&apos;$type&apos;)) {
+    rslt[r&apos;$type&apos;] = configs[r&apos;$type&apos;];
+  }
+  if (configs.containsKey(r&apos;$name&apos;)) {
+    rslt[r&apos;$name&apos;] = configs[r&apos;$name&apos;];
+  }
+  if (configs.containsKey(r&apos;$invokable&apos;)) {
+    rslt[r&apos;$invokable&apos;] = configs[r&apos;$invokable&apos;];
+  }
+  if (configs.containsKey(r&apos;$writable&apos;)) {
+    rslt[r&apos;$writable&apos;] = configs[r&apos;$writable&apos;];
+  }
+  // TODO add permission of current requester
+  return rslt;
 }</code></pre>
     </section>
 

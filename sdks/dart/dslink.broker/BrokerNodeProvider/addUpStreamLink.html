@@ -195,8 +195,13 @@
     String connPath = &apos;/upstream/$name&apos;;
     _connPath2id[connPath] = upStreamId;
     _id2connPath[upStreamId] = connPath;
-    RemoteLinkNode node = getOrCreateNode(connPath, true);
+    RemoteLinkNode node = getOrCreateNode(connPath, false);
+    upstreamDataNode.children[name] = node;
+    upstreamDataNode.updateList(name);
+
     conn = node._linkManager;
+    conn.inTree = true;
+
     logger.info(&apos;new node added at $connPath&apos;);
   }
 

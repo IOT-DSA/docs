@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>load method - RootNode class - dslink.broker library - Dart API</title>
+    <title></title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the load method from the RootNode class, for the Dart programming language.">
+    <meta name="description" content="">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -31,29 +31,28 @@
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
-                <li class="self-crumb">load</li>
+                <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+                <li class="self-crumb">BrokerHiddenNode</li>
             </ol>
-            <div class="self-name">load</div>
+            <div class="self-name">BrokerHiddenNode</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-            <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
-            <li class="self-crumb">load</li>
+            <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+            <li class="self-crumb">BrokerHiddenNode</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> load
+                <div class="kind">constructor</div> BrokerHiddenNode
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.broker/RootNode/load.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -61,25 +60,26 @@
 <div class="container body">
 
   <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
-    <h5><a href="dslink.broker/RootNode-class.html">RootNode</a></h5>
+    <h5><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></h5>
 
     <ol>
     
     
     
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.broker/RootNode/RootNode.html">RootNode</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/BrokerHiddenNode/BrokerHiddenNode.html">BrokerHiddenNode</a></li>
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#operators">Operators</a></li>
       <li>operator []
 </li>
       <li>operator []=
 </li>
     
-      <li class="section-title"><a href="dslink.broker/RootNode-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="dslink.broker/BrokerHiddenNode-class.html#methods">Methods</a></li>
       <li>addChild
 </li>
       <li>forEachAttribute
@@ -102,11 +102,11 @@
 </li>
       <li>getSetPermission
 </li>
-      <li>getSimpleMap
+      <li><a href="dslink.broker/BrokerHiddenNode/getSimpleMap.html">getSimpleMap</a>
 </li>
       <li>invoke
 </li>
-      <li><a href="dslink.broker/RootNode/load.html">load</a>
+      <li>load
 </li>
       <li>loadPermission
 </li>
@@ -140,18 +140,19 @@
 </li>
     </ol>
 
-  </div><!--/.sidebar-offcanvas-->
+  </div><!--/.sidebar-offcanvas-left-->
 
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">load</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>
-            </div>
-            )    </section>
+        
+                <span class="name ">BrokerHiddenNode</span>(
+        <br>
+        <div class="parameters">
+            <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>
+        </div>
+        )
+    </section>
 
     <section class="desc markdown">
     
@@ -159,33 +160,6 @@
     
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void load(Map m) {
-  if (_loaded) {
-    throw &apos;root node can not be initialized twice&apos;;
-  }
-
-  m.forEach((String key, value) {
-    if (key.startsWith(r&apos;$&apos;)) {
-      configs[key] = value;
-    } else if (key.startsWith(&apos;@&apos;)) {
-      attributes[key] = value;
-    } else if (value is Map) {
-      BrokerNode node;
-      if (value == &apos;defs&apos;) {
-        node = new BrokerHiddenNode(&apos;/$key&apos;, provider);
-      } else {
-        node = new BrokerNode(&apos;/$key&apos;, provider);
-      }
-
-      node.load(value);
-      provider.nodes[node.path] = node;
-      children[key] = node;
-    }
-  });
-}</code></pre>
-    </section>
 
   </div> <!-- /.main-content -->
 

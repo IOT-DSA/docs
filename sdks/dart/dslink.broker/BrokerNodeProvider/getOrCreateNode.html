@@ -186,6 +186,9 @@ If it does not exist, create a new node and return it.</p>
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
+  if (addToTree) {
+    print(&apos;getOrCreateNode, addToTree = true, not supported&apos;);
+  }
   LocalNode node = nodes[path];
   if (node != null) {
     return node;
@@ -228,11 +231,11 @@ If it does not exist, create a new node and return it.</p>
       conns[connPath] = conn;
       nodes[connPath] = conn.rootNode;
       conn.rootNode.parentNode = connsNode;
-      if (addToTree) {
-        connsNode.children[connName] = conn.rootNode;
-        conn.inTree = true;
-        connsNode.updateList(connName);
-      }
+//        if (addToTree) {
+//          connsNode.children[connName] = conn.rootNode;
+//          conn.inTree = true;
+//          connsNode.updateList(connName);
+//        }
     }
     node = conn.getOrCreateNode(path, false);
   } else if (path.startsWith(&apos;/upstream/&apos;)) {
@@ -245,11 +248,11 @@ If it does not exist, create a new node and return it.</p>
       nodes[connPath] = conn.rootNode;
 
       conn.rootNode.parentNode = upstreamDataNode;
-      if (addToTree) {
-        upstreamDataNode.children[upstreamName] = conn.rootNode;
-        conn.inTree = true;
-        upstreamDataNode.updateList(upstreamName);
-      }
+//        if (addToTree) {
+//          upstreamDataNode.children[upstreamName] = conn.rootNode;
+//          conn.inTree = true;
+//          upstreamDataNode.updateList(upstreamName);
+//        }
     }
     node = conn.getOrCreateNode(path, false);
   } else if (path.startsWith(&apos;/quarantine/&apos;)) {
@@ -266,11 +269,11 @@ If it does not exist, create a new node and return it.</p>
         nodes[connPath] = conn.rootNode;
         BrokerNode quarantineUser = getOrCreateNode(&apos;/quarantine/$user&apos;, false);
         conn.rootNode.parentNode = quarantineUser;
-        if (addToTree) {
-          quarantineUser.children[connName] = conn.rootNode;
-          conn.inTree = true;
-          quarantineUser.updateList(connName);
-        }
+//          if (addToTree) {
+//            quarantineUser.children[connName] = conn.rootNode;
+//            conn.inTree = true;
+//            quarantineUser.updateList(connName);
+//          }
 
       }
       node = conn.getOrCreateNode(path, false);

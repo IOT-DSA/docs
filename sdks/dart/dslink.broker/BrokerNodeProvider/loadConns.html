@@ -187,6 +187,11 @@
     m.forEach((String name, Map m) {
       String path = &apos;$downstreamNameSS$name&apos;;
       RemoteLinkRootNode node = getOrCreateNode(path, true);
+      connsNode.children[name] = node;
+      RemoteLinkManager conn = node._linkManager;
+      conn.inTree = true;
+      connsNode.updateList(name);
+
       node.load(m);
       if (node.configs[r&apos;$$dsId&apos;] is String) {
         _id2connPath[node.configs[r&apos;$$dsId&apos;]] = path;
