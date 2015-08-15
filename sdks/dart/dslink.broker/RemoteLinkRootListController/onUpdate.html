@@ -146,6 +146,13 @@
             (name == r&apos;$is&apos; ||
                 name == r&apos;$base&apos; ||
                 (name == r&apos;$disconnectedTs&apos; &amp;&amp; value is String))) {
+          if (name == r&apos;$is&apos;) {
+            if (value == &apos;dsa/broker&apos;) {
+              node.configs[r&apos;$is&apos;] = &apos;dsa/broker&apos;;
+            } else {
+              node.configs[r&apos;$is&apos;] = &apos;dsa/link&apos;;
+            }
+          }
           reseted = true;
           node.resetNodeCache();
         }
