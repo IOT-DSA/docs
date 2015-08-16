@@ -123,7 +123,7 @@
             <span class="name ">subscribe</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="subscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>]
+                <span class="parameter" id="subscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>]
             </div>
             )    </section>
 
@@ -135,7 +135,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">ReqSubscribeListener subscribe(String path, callback(ValueUpdate),
+      <pre><code class="prettyprint lang-dart">ReqSubscribeListener subscribe(String path, callback(ValueUpdate update),
     [int qos = 0]) {
   RemoteNode node = nodeCache.getRemoteNode(path);
   node._subscribe(this, callback, qos);
