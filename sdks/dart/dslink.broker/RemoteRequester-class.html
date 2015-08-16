@@ -249,6 +249,30 @@ inside processor, send() data that only need to appear once per data frame
                   </div>
                   close the request from requester side and notify responder
               </dd>
+              <dt id="getNodeValue" class="callable">
+                  <span class="name ">getNodeValue</span><span class="signature">(<wbr><span class="parameter" id="getNodeValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="getRemoteNode" class="callable">
+                  <span class="name ">getRemoteNode</span><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+                      &#8594;
+                      <span class="returntype">Future&lt;<a href="dslink.requester/RemoteNode-class.html">RemoteNode</a>&gt;</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
               <dt id="getSendingData" class="callable">
                   <span class="name ">getSendingData</span><span class="signature">(<wbr><span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
                       &#8594;
@@ -385,6 +409,10 @@ inside processor, send() data that only need to appear once per data frame
       <li>addToSendList
 </li>
       <li>closeRequest
+</li>
+      <li>getNodeValue
+</li>
+      <li>getRemoteNode
 </li>
       <li>getSendingData
 </li>
