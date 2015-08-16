@@ -108,11 +108,12 @@
       <pre><code class="prettyprint lang-dart">/// Custom WebSocket Connection logic.
 static Future&lt;WebSocket&gt; connectToWebSocket(
     String url, {Iterable&lt;String&gt; protocols, Map&lt;String, dynamic&gt; headers, HttpClient httpClient}) async {
-  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false)) {
+  Uri uri = Uri.parse(url);
+
+  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false) || uri.scheme == &quot;http&quot; || uri.scheme == &quot;ws&quot;) {
     return await WebSocket.connect(url, protocols: protocols, headers: headers);
   }
 
-  Uri uri = Uri.parse(url);
   if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
     throw new WebSocketException(&quot;Unsupported URL scheme &apos;${uri.scheme}&apos;&quot;);
   }
