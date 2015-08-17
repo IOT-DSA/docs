@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>getOrCreateLink method - DsSimpleLinkManager class - dslink.server library - Dart API</title>
+    <title>responderPath property - IRemoteRequester class - dslink.server library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the getOrCreateLink method from the DsSimpleLinkManager class, for the Dart programming language.">
+    <meta name="description" content="API docs for the responderPath property from the IRemoteRequester class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -31,29 +31,28 @@
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
-                <li><a href="dslink.server/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></li>
-                <li class="self-crumb">getOrCreateLink</li>
+                <li><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></li>
+                <li class="self-crumb">responderPath</li>
             </ol>
-            <div class="self-name">getOrCreateLink</div>
+            <div class="self-name">responderPath</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
-            <li><a href="dslink.server/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></li>
-            <li class="self-crumb">getOrCreateLink</li>
+            <li><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></li>
+            <li class="self-crumb">responderPath</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> getOrCreateLink
+                <div class="kind">property</div> responderPath
             </h1>
             <!-- p class="subtitle">
-                
+                user when the requester is proxied to another responder
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.server/DsSimpleLinkManager/getOrCreateLink.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -63,28 +62,20 @@
   <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.server/dslink.server-library.html">dslink.server</a></h5>
-    <h5><a href="dslink.server/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></h5>
+    <h5><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></h5>
 
     <ol>
     
     
     
+      <li class="section-title"><a href="dslink.server/IRemoteRequester-class.html#instance-properties">Properties</a></li>
+      <li><a href="dslink.server/IRemoteRequester/responderPath.html">responderPath</a>
+</li>
     
-      <li class="section-title"><a href="dslink.server/DsSimpleLinkManager-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.server/DsSimpleLinkManager/DsSimpleLinkManager.html">DsSimpleLinkManager</a></li>
+      <li class="section-title"><a href="dslink.server/IRemoteRequester-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.server/IRemoteRequester/IRemoteRequester.html">IRemoteRequester</a></li>
     
     
-      <li class="section-title"><a href="dslink.server/DsSimpleLinkManager-class.html#methods">Methods</a></li>
-      <li><a href="dslink.server/DsSimpleLinkManager/addLink.html">addLink</a>
-</li>
-      <li><a href="dslink.server/DsSimpleLinkManager/getOrCreateLink.html">getOrCreateLink</a>
-</li>
-      <li><a href="dslink.server/DsSimpleLinkManager/getRequester.html">getRequester</a>
-</li>
-      <li><a href="dslink.server/DsSimpleLinkManager/getResponder.html">getResponder</a>
-</li>
-      <li><a href="dslink.server/DsSimpleLinkManager/removeLink.html">removeLink</a>
-</li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -92,26 +83,18 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype"><a href="dslink.server/ServerLink-class.html">ServerLink</a></span>
-            <span class="name ">getOrCreateLink</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="getOrCreateLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>,<br>{<span class="parameter" id="getOrCreateLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>}
-            </div>
-            )    </section>
-
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
+        <span class="returntype">String</span>
+        <span class="name ">responderPath</span>
+        <div class="readable-writable">
+            read-only
+        </div>
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">ServerLink getOrCreateLink(String dsId, {String sessionId: &apos;&apos;}) {
-  return _links[dsId];
-}</code></pre>
-    </section>
+      <section class="desc markdown">
+      
+            <p>user when the requester is proxied to another responder</p>
+      
+      </section>
 
   </div> <!-- /.main-content -->
 

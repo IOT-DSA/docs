@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>getOrCreateLink method - BrokerNodeProvider class - dslink.broker library - Dart API</title>
+    <title>getLinkAndConnectNode method - BrokerNodeProvider class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the getOrCreateLink method from the BrokerNodeProvider class, for the Dart programming language.">
+    <meta name="description" content="API docs for the getLinkAndConnectNode method from the BrokerNodeProvider class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -32,9 +32,9 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
                 <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
-                <li class="self-crumb">getOrCreateLink</li>
+                <li class="self-crumb">getLinkAndConnectNode</li>
             </ol>
-            <div class="self-name">getOrCreateLink</div>
+            <div class="self-name">getLinkAndConnectNode</div>
         </div>
     </nav>
     <div class="container masthead">
@@ -42,18 +42,18 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
             <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
-            <li class="self-crumb">getOrCreateLink</li>
+            <li class="self-crumb">getLinkAndConnectNode</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> getOrCreateLink
+                <div class="kind">method</div> getLinkAndConnectNode
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateLink.html#source">Source</a></li>
+            <li><a href="dslink.broker/BrokerNodeProvider/getLinkAndConnectNode.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -127,9 +127,9 @@
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getConnPath.html">getConnPath</a>
 </li>
-      <li><a href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a>
+      <li><a href="dslink.broker/BrokerNodeProvider/getLinkAndConnectNode.html">getLinkAndConnectNode</a>
 </li>
-      <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateLink.html">getOrCreateLink</a>
+      <li><a href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a>
 </li>
       <li><a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">getOrCreateNode</a>
 </li>
@@ -167,10 +167,10 @@
 
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.broker/ServerLink-class.html">ServerLink</a></span>
-            <span class="name ">getOrCreateLink</span>(
+            <span class="name ">getLinkAndConnectNode</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="getOrCreateLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>,<br>{<span class="parameter" id="getOrCreateLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>}
+                <span class="parameter" id="getLinkAndConnectNode-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>,<br>{<span class="parameter" id="getLinkAndConnectNode-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>}
             </div>
             )    </section>
 
@@ -182,7 +182,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">ServerLink getOrCreateLink(String dsId, {String sessionId:&apos;&apos;}) {
+      <pre><code class="prettyprint lang-dart">ServerLink getLinkAndConnectNode(String dsId, {String sessionId:&apos;&apos;}) {
   if (sessionId == null) sessionId = &apos;&apos;;
   String str = dsId;
   if (sessionId != null &amp;&amp; sessionId != &apos;&apos;) {

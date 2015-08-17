@@ -86,6 +86,8 @@
 </li>
       <li><a href="dslink/HttpClientLink/privateKey.html">privateKey</a>
 </li>
+      <li><a href="dslink/HttpClientLink/remotePath.html">remotePath</a>
+</li>
       <li><a href="dslink/HttpClientLink/requester.html">requester</a>
 </li>
       <li><a href="dslink/HttpClientLink/responder.html">responder</a>
@@ -174,6 +176,7 @@
     // server start to support version since 1.0.4
     // and this is the version ack is added
     enableAck = serverConfig.containsKey(&apos;version&apos;);
+    remotePath = serverConfig[&apos;path&apos;];
 
     if (serverConfig[&apos;wsUri&apos;] is String) {
       _wsUpdateUri = &apos;${connUri.resolve(serverConfig[&apos;wsUri&apos;])}?dsId=$dsId&apos;

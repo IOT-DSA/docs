@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>onConnected property - HttpClientLink class - dslink.client library - Dart API</title>
+    <title>responderPath property - RemoteRequester class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the onConnected property from the HttpClientLink class, for the Dart programming language.">
+    <meta name="description" content="API docs for the responderPath property from the RemoteRequester class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -30,23 +30,23 @@
             <button id="sidenav-left-toggle" type="button">&nbsp;</button>
             <ol class="breadcrumbs gt-separated hidden-xs">
                 <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
-                <li><a href="dslink.client/HttpClientLink-class.html">HttpClientLink</a></li>
-                <li class="self-crumb">onConnected</li>
+                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
+                <li class="self-crumb">responderPath</li>
             </ol>
-            <div class="self-name">onConnected</div>
+            <div class="self-name">responderPath</div>
         </div>
     </nav>
     <div class="container masthead">
         <ol class="breadcrumbs gt-separated visible-xs">
             <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
-            <li><a href="dslink.client/HttpClientLink-class.html">HttpClientLink</a></li>
-            <li class="self-crumb">onConnected</li>
+            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+            <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
+            <li class="self-crumb">responderPath</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">property</div> onConnected
+                <div class="kind">property</div> responderPath
             </h1>
             <!-- p class="subtitle">
                 
@@ -61,51 +61,63 @@
 
   <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
-    <h5><a href="dslink.client/dslink.client-library.html">dslink.client</a></h5>
-    <h5><a href="dslink.client/HttpClientLink-class.html">HttpClientLink</a></h5>
+    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
+    <h5><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></h5>
 
     <ol>
-      <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constants">Constants</a></li>
-      <li><a href="dslink.client/HttpClientLink/saltNameMap.html">saltNameMap</a></li>
     
     
     
-      <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#instance-properties">Properties</a></li>
-      <li><a href="dslink.client/HttpClientLink/dsId.html">dsId</a>
+      <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#instance-properties">Properties</a></li>
+      <li>connection
 </li>
-      <li><a href="dslink.client/HttpClientLink/enableAck.html">enableAck</a>
+      <li>lastSentId
 </li>
-      <li><a href="dslink.client/HttpClientLink/home.html">home</a>
+      <li>nextRid
 </li>
-      <li><a href="dslink.client/HttpClientLink/nonce.html">nonce</a>
+      <li>nextSid
 </li>
-      <li><a href="dslink.client/HttpClientLink/onConnected.html">onConnected</a>
+      <li>nodeCache
 </li>
-      <li><a href="dslink.client/HttpClientLink/onRequesterReady.html">onRequesterReady</a>
-</li>
-      <li><a href="dslink.client/HttpClientLink/privateKey.html">privateKey</a>
-</li>
-      <li><a href="dslink.client/HttpClientLink/remotePath.html">remotePath</a>
-</li>
-      <li><a href="dslink.client/HttpClientLink/requester.html">requester</a>
-</li>
-      <li><a href="dslink.client/HttpClientLink/responder.html">responder</a>
-</li>
-      <li><a href="dslink.client/HttpClientLink/salts.html">salts</a>
+      <li><a href="dslink.broker/RemoteRequester/responderPath.html">responderPath</a>
 </li>
     
-      <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
+      <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/RemoteRequester/RemoteRequester.html">RemoteRequester</a></li>
     
     
-      <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#methods">Methods</a></li>
-      <li><a href="dslink.client/HttpClientLink/close.html">close</a>
+      <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#methods">Methods</a></li>
+      <li>addProcessor
 </li>
-      <li><a href="dslink.client/HttpClientLink/connect.html">connect</a>
+      <li>addToSendList
 </li>
-      <li><a href="dslink.client/HttpClientLink/initWebsocket.html">initWebsocket</a>
+      <li>closeRequest
 </li>
-      <li><a href="dslink.client/HttpClientLink/updateSalt.html">updateSalt</a>
+      <li>getNodeValue
+</li>
+      <li>getRemoteNode
+</li>
+      <li>getSendingData
+</li>
+      <li>invoke
+</li>
+      <li>isNodeCached
+</li>
+      <li>list
+</li>
+      <li>onData
+</li>
+      <li><a href="dslink.broker/RemoteRequester/onDisconnected.html">onDisconnected</a>
+</li>
+      <li><a href="dslink.broker/RemoteRequester/onReconnected.html">onReconnected</a>
+</li>
+      <li>remove
+</li>
+      <li>set
+</li>
+      <li>subscribe
+</li>
+      <li>unsubscribe
 </li>
     </ol>
 
@@ -114,10 +126,10 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-        <span class="returntype">Future</span>
-        <span class="name ">onConnected</span>
+        <span class="returntype">String</span>
+        <span class="name ">responderPath</span>
         <div class="readable-writable">
-            read-only
+            read / write
         </div>
     </section>
 

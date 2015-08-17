@@ -51,6 +51,7 @@
             </p -->
         </div>
         <ul class="subnav">
+            <li><a href="dslink.broker/RemoteRequester-class.html#instance-properties">Properties</a></li>
             <li><a href="dslink.broker/RemoteRequester-class.html#constructors">Constructors</a></li>
             <li><a href="dslink.broker/RemoteRequester-class.html#instance-methods">Methods</a></li>
         </ul>
@@ -129,6 +130,12 @@
             <li>RemoteRequester</li>
         </ul></dd>
 
+        <dt>Implements</dt>
+            <dd>
+                <ul class="comma-separated class-relationships">
+                    <li><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></li>
+                </ul>
+            </dd>
 
 
         </dl>
@@ -191,6 +198,16 @@
     </div>
     caching of nodes
             </dd>
+            <dt id="responderPath" class="property">
+                <span class="top-level-variable-type">String</span>
+                <a href="dslink.broker/RemoteRequester/responderPath.html">responderPath</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
         </dl>
     </section>
 
@@ -199,7 +216,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="RemoteRequester" class="callable">
-                <span class="name"><a href="dslink.broker/RemoteRequester/RemoteRequester.html">RemoteRequester</a></span><span class="signature">(<span class="parameter" id="-param-cache"><span class="type-annotation"><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></span> <span class="parameter-name">cache</span></span>)</span>
+                <span class="name"><a href="dslink.broker/RemoteRequester/RemoteRequester.html">RemoteRequester</a></span><span class="signature">(<span class="parameter" id="-param-cache"><span class="type-annotation"><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></span> <span class="parameter-name">cache</span></span>, <span class="parameter" id="-param-responderPath"><span class="type-annotation">String</span> <span class="parameter-name">responderPath</span></span>)</span>
             </dt>
             <dd>
                 
@@ -410,6 +427,19 @@ inside processor, send() data that only need to appear once per data frame
     
     
     
+      <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#instance-properties">Properties</a></li>
+      <li>connection
+</li>
+      <li>lastSentId
+</li>
+      <li>nextRid
+</li>
+      <li>nextSid
+</li>
+      <li>nodeCache
+</li>
+      <li><a href="dslink.broker/RemoteRequester/responderPath.html">responderPath</a>
+</li>
     
       <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.broker/RemoteRequester/RemoteRequester.html">RemoteRequester</a></li>
