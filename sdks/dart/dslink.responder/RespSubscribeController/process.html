@@ -125,6 +125,7 @@
     for (ValueUpdate lastValue in lastValues) {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
+    lastValues.clear();
   } else {
     if (lastValue.count &gt; 1 || lastValue.status != null) {
       Map m = {&apos;ts&apos;: lastValue.ts, &apos;value&apos;: lastValue.value, &apos;sid&apos;: sid};
@@ -144,8 +145,8 @@
     } else {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
+    lastValue = null;
   }
-  lastValues.clear();
   return rslts;
 }</code></pre>
     </section>
