@@ -137,6 +137,7 @@
       neededQos |= currentQos;
     }
     qosChanged = neededQos &gt; currentQos;
+    currentQos = neededQos;
     if (_lastUpdate != null) {
       callback(_lastUpdate);
     }
