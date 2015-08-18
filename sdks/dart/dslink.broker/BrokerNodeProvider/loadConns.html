@@ -186,7 +186,7 @@
     Map m = DsJson.decode(data);
     m.forEach((String name, Map m) {
       String path = &apos;$downstreamNameSS$name&apos;;
-      RemoteLinkRootNode node = getOrCreateNode(path, true);
+      RemoteLinkRootNode node = getOrCreateNode(path, false);
       connsNode.children[name] = node;
       RemoteLinkManager conn = node._linkManager;
       conn.inTree = true;
