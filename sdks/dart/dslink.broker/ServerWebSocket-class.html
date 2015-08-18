@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ServerWebSocket class - dslink.broker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the ServerWebSocket class from the dslink.broker library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                <li class="self-crumb">ServerWebSocket</li>
+            </ol>
+            <div class="self-name">ServerWebSocket</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+            <li class="self-crumb">ServerWebSocket</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> ServerWebSocket
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.broker/ServerWebSocket-class.html#constructors">Constructors</a></li>
+            <li><a href="dslink.broker/ServerWebSocket-class.html#instance-methods">Methods</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
+
+    <ol>
+    
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+      <li><a href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
+      <li><a href="dslink.broker/addChildNode.html">addChildNode</a></li>
+      <li><a href="dslink.broker/addLink.html">addLink</a></li>
+      <li><a href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+      <li><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
+      <li><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
+      <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+      <li><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></li>
+      <li><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></li>
+      <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
+      <li><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></li>
+      <li><a href="dslink.broker/BrokerTraceConnectionNode-class.html">BrokerTraceConnectionNode</a></li>
+      <li><a href="dslink.broker/BrokerTraceNode-class.html">BrokerTraceNode</a></li>
+      <li><a href="dslink.broker/BrokerTraceRequesterNode-class.html">BrokerTraceRequesterNode</a></li>
+      <li><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></li>
+      <li><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></li>
+      <li><a href="dslink.broker/CreateUpstreamBrokerNode-class.html">CreateUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/DeleteUpstreamConnectionNode-class.html">DeleteUpstreamConnectionNode</a></li>
+      <li><a href="dslink.broker/DisableUpstreamBrokerNode-class.html">DisableUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/DsHttpServer-class.html">DsHttpServer</a></li>
+      <li><a href="dslink.broker/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></li>
+      <li><a href="dslink.broker/EnableUpstreamBrokerNode-class.html">EnableUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/HttpServerLink-class.html">HttpServerLink</a></li>
+      <li><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
+      <li><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
+      <li><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></li>
+      <li><a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a></li>
+      <li><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></li>
+      <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
+      <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
+      <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
+      <li><a href="dslink.broker/ServerWebSocket-class.html">ServerWebSocket</a></li>
+      <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
+      <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
+      <li><a href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
+      <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
+      <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
+      <li><a href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+    <section>
+        <dl class="dl-horizontal">
+
+        <dt>Extends</dt>
+        <dd><ul class="gt-separated dark class-relationships">
+            <li>Object</li>
+            <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
+            <li>WebSocketConnection</li>
+            <li>ServerWebSocket</li>
+        </ul></dd>
+
+
+
+        </dl>
+    </section>
+
+
+
+
+    <section class="summary" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="binaryInCache" class="property">
+                <span class="top-level-variable-type"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span>
+                <span class="name ">binaryInCache</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="binaryOutCache" class="property">
+                <span class="top-level-variable-type"><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span>
+                <span class="name ">binaryOutCache</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="clientLink" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ClientLink-class.html">ClientLink</a></span>
+                <span class="name ">clientLink</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="dataIn" class="property">
+                <span class="top-level-variable-type">int</span>
+                <span class="name ">dataIn</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="dataOut" class="property">
+                <span class="top-level-variable-type">int</span>
+                <span class="name ">dataOut</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="messageIn" class="property">
+                <span class="top-level-variable-type">int</span>
+                <span class="name ">messageIn</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="messageOut" class="property">
+                <span class="top-level-variable-type">int</span>
+                <span class="name ">messageOut</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="msgId" class="property">
+                <span class="top-level-variable-type">int</span>
+                <span class="name ">msgId</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    when msgId = -1, ack is disabled
+            </dd>
+            <dt id="onDisconnected" class="property">
+                <span class="top-level-variable-type">Future&lt;bool&gt;</span>
+                <span class="name ">onDisconnected</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="onRequesterReady" class="property">
+                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <span class="name ">onRequesterReady</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="onRequestReadyCompleter" class="property">
+                <span class="top-level-variable-type">Completer&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+                <span class="name ">onRequestReadyCompleter</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="pendingAcks" class="property">
+                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
+                <span class="name ">pendingAcks</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="pingTimer" class="property">
+                <span class="top-level-variable-type">Timer</span>
+                <span class="name ">pingTimer</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="requesterChannel" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <span class="name ">requesterChannel</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="responderChannel" class="property">
+                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
+                <span class="name ">responderChannel</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+            <dt id="socket" class="property">
+                <span class="top-level-variable-type">WebSocket</span>
+                <span class="name ">socket</span>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read-only, <span class="is-inherited">inherited</span>
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="ServerWebSocket" class="callable">
+                <span class="name"><a href="dslink.broker/ServerWebSocket/ServerWebSocket.html">ServerWebSocket</a></span><span class="signature">(<span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>, {<span class="parameter" id="-param-enableTimeout"><span class="type-annotation">bool</span> <span class="parameter-name">enableTimeout</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>})</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+      <section class="summary" id="instance-methods">
+          <h2>Methods</h2>
+          <dl class="callables">
+              <dt id="ack" class="callable">
+                  <span class="name ">ack</span><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="addConnCommand" class="callable">
+                  <span class="name ">addConnCommand</span><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  add server command, will be called only when used as server connection
+              </dd>
+              <dt id="addData" class="callable">
+                  <span class="name ">addData</span><span class="signature">(<wbr><span class="parameter" id="addData-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="close" class="callable">
+                  <span class="name ">close</span><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  close the connection
+              </dd>
+              <dt id="onData" class="callable">
+                  <span class="name ">onData</span><span class="signature">(<wbr><span class="parameter" id="onData-param-data"><span class="parameter-name">data</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  
+              </dd>
+              <dt id="onPingTimer" class="callable">
+                  <a href="dslink.broker/ServerWebSocket/onPingTimer.html"><span class="name ">onPingTimer</span></a><span class="signature">(<wbr><span class="parameter" id="onPingTimer-param-t"><span class="type-annotation">Timer</span> <span class="parameter-name">t</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  
+              </dd>
+              <dt id="requireSend" class="callable">
+                  <span class="name ">requireSend</span><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div>
+                    <span class="is-inherited">inherited</span>
+                  </div>
+                  notify the connection channel need to send data
+              </dd>
+          </dl>
+      </section>
+
+    </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>ServerWebSocket</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="dslink.broker/ServerWebSocket-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/ServerWebSocket/ServerWebSocket.html">ServerWebSocket</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.broker/ServerWebSocket-class.html#methods">Methods</a></li>
+      <li>ack
+</li>
+      <li>addConnCommand
+</li>
+      <li>addData
+</li>
+      <li>close
+</li>
+      <li>onData
+</li>
+      <li><a href="dslink.broker/ServerWebSocket/onPingTimer.html">onPingTimer</a>
+</li>
+      <li>requireSend
+</li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  dslink 1.0.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>

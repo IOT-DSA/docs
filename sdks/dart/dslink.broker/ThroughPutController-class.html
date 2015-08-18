@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ThroughPutController class - dslink.broker library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the ThroughPutController class from the dslink.broker library, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+            <ol class="breadcrumbs gt-separated hidden-xs">
+                <li><a href="index.html">dslink</a></li>
+                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                <li class="self-crumb">ThroughPutController</li>
+            </ol>
+            <div class="self-name">ThroughPutController</div>
+        </div>
+    </nav>
+    <div class="container masthead">
+        <ol class="breadcrumbs gt-separated visible-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+            <li class="self-crumb">ThroughPutController</li>
+        </ol>
+        <div class="title-description">
+            <h1 class="title">
+                <div class="kind">class</div> ThroughPutController
+            </h1>
+            <!-- p class="subtitle">
+                
+            </p -->
+        </div>
+        <ul class="subnav">
+            <li><a href="dslink.broker/ThroughPutController-class.html#static-properties">Static Properties</a></li>
+            <li><a href="dslink.broker/ThroughPutController-class.html#static-methods">Static Methods</a></li>
+            <li><a href="dslink.broker/ThroughPutController-class.html#constructors">Constructors</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="container body">
+
+  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
+
+    <ol>
+    
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+      <li><a href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
+      <li><a href="dslink.broker/addChildNode.html">addChildNode</a></li>
+      <li><a href="dslink.broker/addLink.html">addLink</a></li>
+      <li><a href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+      <li><a href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
+      <li><a href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
+      <li><a href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
+      <li><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></li>
+      <li><a href="dslink.broker/BrokerNodePermission-class.html">BrokerNodePermission</a></li>
+      <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
+      <li><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></li>
+      <li><a href="dslink.broker/BrokerTraceConnectionNode-class.html">BrokerTraceConnectionNode</a></li>
+      <li><a href="dslink.broker/BrokerTraceNode-class.html">BrokerTraceNode</a></li>
+      <li><a href="dslink.broker/BrokerTraceRequesterNode-class.html">BrokerTraceRequesterNode</a></li>
+      <li><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></li>
+      <li><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></li>
+      <li><a href="dslink.broker/CreateUpstreamBrokerNode-class.html">CreateUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/DeleteUpstreamConnectionNode-class.html">DeleteUpstreamConnectionNode</a></li>
+      <li><a href="dslink.broker/DisableUpstreamBrokerNode-class.html">DisableUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/DsHttpServer-class.html">DsHttpServer</a></li>
+      <li><a href="dslink.broker/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></li>
+      <li><a href="dslink.broker/EnableUpstreamBrokerNode-class.html">EnableUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/HttpServerLink-class.html">HttpServerLink</a></li>
+      <li><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
+      <li><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
+      <li><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></li>
+      <li><a href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a></li>
+      <li><a href="dslink.broker/RemoteLinkRootListController-class.html">RemoteLinkRootListController</a></li>
+      <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
+      <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
+      <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
+      <li><a href="dslink.broker/ServerWebSocket-class.html">ServerWebSocket</a></li>
+      <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
+      <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
+      <li><a href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
+      <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
+      <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
+      <li><a href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+
+    <section class="desc markdown">
+    
+          <p class="no-docs">Not documented.</p>
+    
+    </section>
+
+
+
+    <section class="summary" id="static-properties">
+        <h2>Static Properties</h2>
+
+        <dl class="properties">
+            <dt id="dataInPerSecond" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <a href="dslink.broker/ThroughPutController/dataInPerSecond.html">dataInPerSecond</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="dataOutPerSecond" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <a href="dslink.broker/ThroughPutController/dataOutPerSecond.html">dataOutPerSecond</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastDataIn" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.broker/ThroughPutController/lastDataIn.html">lastDataIn</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastDataOut" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.broker/ThroughPutController/lastDataOut.html">lastDataOut</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastMessageIn" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.broker/ThroughPutController/lastMessageIn.html">lastMessageIn</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastMessageOut" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.broker/ThroughPutController/lastMessageOut.html">lastMessageOut</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="lastTs" class="property">
+                <span class="top-level-variable-type">int</span>
+                <a href="dslink.broker/ThroughPutController/lastTs.html">lastTs</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="messagesInPerSecond" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <a href="dslink.broker/ThroughPutController/messagesInPerSecond.html">messagesInPerSecond</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+            <dt id="messagesOutPerSecond" class="property">
+                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a>
+            </dt>
+            <dd>
+                <div class="readable-writable">
+        read / write
+    </div>
+    
+            </dd>
+        </dl>
+    </section>
+
+    <section class="summary" id="static-methods">
+        <h2>Static Methods</h2>
+        <dl class="callables">
+            <dt id="addThroughput" class="callable">
+                <a href="dslink.broker/ThroughPutController/addThroughput.html"><span class="name ">addThroughput</span></a><span class="signature">(<wbr><span class="parameter" id="addThroughput-param-msgIn"><span class="type-annotation">int</span> <span class="parameter-name">msgIn</span></span>, <span class="parameter" id="addThroughput-param-msgOut"><span class="type-annotation">int</span> <span class="parameter-name">msgOut</span></span>, <span class="parameter" id="addThroughput-param-dataIn"><span class="type-annotation">int</span> <span class="parameter-name">dataIn</span></span>, <span class="parameter" id="addThroughput-param-dataOut"><span class="type-annotation">int</span> <span class="parameter-name">dataOut</span></span>)
+                    &#8594;
+                    <span class="returntype">dynamic</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="changeValue" class="callable">
+                <a href="dslink.broker/ThroughPutController/changeValue.html"><span class="name ">changeValue</span></a><span class="signature">(<wbr>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+            <dt id="initNodes" class="callable">
+                <a href="dslink.broker/ThroughPutController/initNodes.html"><span class="name ">initNodes</span></a><span class="signature">(<wbr><span class="parameter" id="initNodes-param-provider"><span class="type-annotation"><a href="dslink/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+    </section>
+
+
+    <section class="summary" id="constructors">
+        <h2>Constructors</h2>
+
+        <dl class="constructor-summary-list">
+            <dt id="ThroughPutController" class="callable">
+                <span class="name"><a href="dslink.broker/ThroughPutController/ThroughPutController.html">ThroughPutController</a></span><span class="signature">()</span>
+            </dt>
+            <dd>
+                
+            </dd>
+        </dl>
+      </section>
+
+
+
+    </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+    <h5>ThroughPutController</h5>
+    <ol>
+    
+      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-properties">Static properties</a></li>
+      <li><a href="dslink.broker/ThroughPutController/dataInPerSecond.html">dataInPerSecond</a></li>
+      <li><a href="dslink.broker/ThroughPutController/dataOutPerSecond.html">dataOutPerSecond</a></li>
+      <li><a href="dslink.broker/ThroughPutController/lastDataIn.html">lastDataIn</a></li>
+      <li><a href="dslink.broker/ThroughPutController/lastDataOut.html">lastDataOut</a></li>
+      <li><a href="dslink.broker/ThroughPutController/lastMessageIn.html">lastMessageIn</a></li>
+      <li><a href="dslink.broker/ThroughPutController/lastMessageOut.html">lastMessageOut</a></li>
+      <li><a href="dslink.broker/ThroughPutController/lastTs.html">lastTs</a></li>
+      <li><a href="dslink.broker/ThroughPutController/messagesInPerSecond.html">messagesInPerSecond</a></li>
+      <li><a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a></li>
+    
+      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-methods">Static methods</a></li>
+      <li><a href="dslink.broker/ThroughPutController/addThroughput.html">addThroughput</a></li>
+      <li><a href="dslink.broker/ThroughPutController/changeValue.html">changeValue</a></li>
+      <li><a href="dslink.broker/ThroughPutController/initNodes.html">initNodes</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/ThroughPutController/ThroughPutController.html">ThroughPutController</a></li>
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  dslink 1.0.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+</body>
+
+</html>
