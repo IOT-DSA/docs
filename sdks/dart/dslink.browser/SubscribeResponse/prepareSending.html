@@ -127,7 +127,7 @@
   if (_sendingAfterAck) {
     return;
   }
-  if (_waitingAckCount &gt; ConnectionProcessor.WAITCOUNT) {
+  if (_waitingAckCount &gt; ConnectionProcessor.ACK_WAIT_COUNT) {
     _sendingAfterAck = true;
     return;
   }

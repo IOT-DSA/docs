@@ -121,7 +121,7 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">List process() {
   List rslts = [];
-  if (_caching) {
+  if (_caching &amp;&amp; _isCacheValid) {
     for (ValueUpdate lastValue in lastValues) {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
@@ -146,6 +146,7 @@
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
     lastValue = null;
+    _isCacheValid = true;
   }
   return rslts;
 }</code></pre>

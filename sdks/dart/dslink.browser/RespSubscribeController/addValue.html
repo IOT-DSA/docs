@@ -125,9 +125,19 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
 
-  if (_caching) {
-    lastValue = val;
+  if (_caching &amp;&amp; _isCacheValid) {
     lastValues.add(val);
+    if (lastValues.length &gt; response.responder.maxCacheLength) {
+      // cache is no longer valid, fallback to rollup mode
+      _isCacheValid = false;
+      lastValue = new ValueUpdate(null,ts:&apos;&apos;);
+      for (ValueUpdate update in lastValues) {
+        lastValue.mergeAdd(update);
+      }
+      lastValues.clear();
+    } else {
+      lastValue = val;
+    }
   } else {
     if (lastValue != null) {
       lastValue =  new ValueUpdate.merge(lastValue, val);
