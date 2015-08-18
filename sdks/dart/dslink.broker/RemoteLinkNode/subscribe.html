@@ -188,7 +188,7 @@
             <span class="name ">subscribe</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-cachelevel"><span class="type-annotation">int</span> <span class="parameter-name">cachelevel</span> = <span class="default-value">1</span></span>]
+                <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>]
             </div>
             )    </section>
 
@@ -200,13 +200,13 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">RespSubscribeListener subscribe(callback(ValueUpdate), [int cachelevel = 1]) {
-  callbacks[callback] = cachelevel;
+      <pre><code class="prettyprint lang-dart">RespSubscribeListener subscribe(callback(ValueUpdate), [int qos = 0]) {
+  callbacks[callback] = qos;
   var rslt = new RespSubscribeListener(this, callback);
   if (valueReady) {
     callback(_lastValueUpdate);
   }
-  _linkManager.requester.subscribe(remotePath, updateValue, cachelevel);
+  _linkManager.requester.subscribe(remotePath, updateValue, qos);
   return rslt;
 }</code></pre>
     </section>

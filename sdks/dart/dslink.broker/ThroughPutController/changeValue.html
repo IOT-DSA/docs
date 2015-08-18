@@ -77,6 +77,7 @@
       <li><a href="dslink.broker/ThroughPutController/lastTs.html">lastTs</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesInPerSecond.html">messagesInPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a></li>
+      <li><a href="dslink.broker/ThroughPutController/throughputNeeded.html">throughputNeeded</a></li>
     
       <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-methods">Static methods</a></li>
       <li><a href="dslink.broker/ThroughPutController/addThroughput.html">addThroughput</a></li>
@@ -108,15 +109,16 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">static void changeValue() {
+  _timer = null;
   int ts = (new DateTime.now()).millisecondsSinceEpoch;
   num del = ts - lastTs;
-  if (del &gt; 5000) del = 5000;
+  if (del &gt; 6000) del = 5000;
   else if (del &lt; 1) del = 1;
   del /= 1000.0;
-  messagesInPerSecond.updateValue(lastMessageIn/del, force:true);
-  dataInPerSecond.updateValue(lastDataIn/del, force:true);
-  messagesOutPerSecond.updateValue(lastMessageOut/del, force:true);
-  dataOutPerSecond.updateValue(lastDataOut/del, force:true);
+  messagesInPerSecond.updateValue(lastMessageIn / del, force: true);
+  dataInPerSecond.updateValue(lastDataIn / del, force: true);
+  messagesOutPerSecond.updateValue(lastMessageOut / del, force: true);
+  dataOutPerSecond.updateValue(lastDataOut / del, force: true);
 
   lastMessageIn = 0;
   lastDataIn = 0;

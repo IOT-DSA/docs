@@ -77,6 +77,7 @@
       <li><a href="dslink.broker/ThroughPutController/lastTs.html">lastTs</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesInPerSecond.html">messagesInPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a></li>
+      <li><a href="dslink.broker/ThroughPutController/throughputNeeded.html">throughputNeeded</a></li>
     
       <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-methods">Static methods</a></li>
       <li><a href="dslink.broker/ThroughPutController/addThroughput.html">addThroughput</a></li>
@@ -111,14 +112,17 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">static void initNodes(NodeProvider provider){
-  messagesOutPerSecond = new BrokerNode(&quot;/sys/messagesOutPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
-  messagesInPerSecond = new BrokerNode(&quot;/sys/messagesInPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
+      <pre><code class="prettyprint lang-dart">static void initNodes(NodeProvider provider) {
+  messagesOutPerSecond = new ThroughPutNode(
+      &quot;/sys/messagesOutPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
+  messagesInPerSecond = new ThroughPutNode(
+      &quot;/sys/messagesInPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
 
-  dataOutPerSecond = new BrokerNode(&quot;/sys/dataOutPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
-  dataInPerSecond = new BrokerNode(&quot;/sys/dataInPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
+  dataOutPerSecond = new ThroughPutNode(&quot;/sys/dataOutPerSecond&quot;, provider)
+    ..configs[r&quot;$type&quot;] = &quot;number&quot;;
+  dataInPerSecond = new ThroughPutNode(&quot;/sys/dataInPerSecond&quot;, provider)
+    ..configs[r&quot;$type&quot;] = &quot;number&quot;;
   changeValue();
-  WebSocketConnection.throughputEnabled = true;
 }</code></pre>
     </section>
 

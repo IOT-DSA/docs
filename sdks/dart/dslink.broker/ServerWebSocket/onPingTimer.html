@@ -113,8 +113,10 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void onPingTimer(Timer t) {
-  if (WebSocketConnection.throughputEnabled &amp;&amp; (dataIn != 0 || dataOut != 0)) {
-    ThroughPutController.addThroughput(messageIn, messageOut, dataIn, dataOut);
+  if (WebSocketConnection.throughputEnabled &amp;&amp;
+      (dataIn != 0 || dataOut != 0)) {
+    ThroughPutController.addThroughput(
+        messageIn, messageOut, dataIn, dataOut);
     messageIn = 0;
     messageOut = 0;
     dataIn = 0;

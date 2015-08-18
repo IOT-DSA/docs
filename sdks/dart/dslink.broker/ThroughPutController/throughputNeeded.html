@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>addThroughput method - ThroughPutController class - dslink.broker library - Dart API</title>
+    <title>throughputNeeded property - ThroughPutController class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the addThroughput method from the ThroughPutController class, for the Dart programming language.">
+    <meta name="description" content="API docs for the throughputNeeded property from the ThroughPutController class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -32,9 +32,9 @@
                 <li><a href="index.html">dslink</a></li>
                 <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
                 <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
-                <li class="self-crumb">addThroughput</li>
+                <li class="self-crumb">throughputNeeded</li>
             </ol>
-            <div class="self-name">addThroughput</div>
+            <div class="self-name">throughputNeeded</div>
         </div>
     </nav>
     <div class="container masthead">
@@ -42,18 +42,17 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
             <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
-            <li class="self-crumb">addThroughput</li>
+            <li class="self-crumb">throughputNeeded</li>
         </ol>
         <div class="title-description">
             <h1 class="title">
-                <div class="kind">method</div> addThroughput
+                <div class="kind">property</div> throughputNeeded
             </h1>
             <!-- p class="subtitle">
                 
             </p -->
         </div>
         <ul class="subnav">
-            <li><a href="dslink.broker/ThroughPutController/addThroughput.html#source">Source</a></li>
         </ul>
     </div>
 </header>
@@ -96,32 +95,18 @@
   <div class="col-xs-12 col-sm-9 col-md-6 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">dynamic</span>
-            <span class="name ">addThroughput</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="addThroughput-param-msgIn"><span class="type-annotation">int</span> <span class="parameter-name">msgIn</span></span>,<br><span class="parameter" id="addThroughput-param-msgOut"><span class="type-annotation">int</span> <span class="parameter-name">msgOut</span></span>,<br><span class="parameter" id="addThroughput-param-dataIn"><span class="type-annotation">int</span> <span class="parameter-name">dataIn</span></span>,<br><span class="parameter" id="addThroughput-param-dataOut"><span class="type-annotation">int</span> <span class="parameter-name">dataOut</span></span>
-            </div>
-            )    </section>
-
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
+        <span class="returntype">bool</span>
+        <span class="name ">throughputNeeded</span>
+        <div class="readable-writable">
+            write-only
+        </div>
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">static addThroughput(int msgIn, int msgOut, int dataIn, int dataOut) {
-  lastMessageIn += msgIn;
-  lastDataIn += dataIn;
-  lastMessageOut += msgOut;
-  lastDataOut += dataOut;
-  if (_timer == null) {
-    _timer = new Timer(new Duration(seconds:5), changeValue);
-  }
-}</code></pre>
-    </section>
+      <section class="desc markdown">
+      
+            <p class="no-docs">Not documented.</p>
+      
+      </section>
 
   </div> <!-- /.main-content -->
 
