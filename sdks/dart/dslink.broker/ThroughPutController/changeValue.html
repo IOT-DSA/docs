@@ -81,17 +81,11 @@
       <li class="section-title"><a href="#static-properties">Static properties</a></li>
       <li><a href="dslink.broker/ThroughPutController/dataInPerSecond.html">dataInPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/dataOutPerSecond.html">dataOutPerSecond</a></li>
-      <li><a href="dslink.broker/ThroughPutController/lastDataIn.html">lastDataIn</a></li>
-      <li><a href="dslink.broker/ThroughPutController/lastDataOut.html">lastDataOut</a></li>
-      <li><a href="dslink.broker/ThroughPutController/lastMessageIn.html">lastMessageIn</a></li>
-      <li><a href="dslink.broker/ThroughPutController/lastMessageOut.html">lastMessageOut</a></li>
-      <li><a href="dslink.broker/ThroughPutController/lastTs.html">lastTs</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesInPerSecond.html">messagesInPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/throughputNeeded.html">throughputNeeded</a></li>
     
       <li class="section-title"><a href="#static-methods">Static methods</a></li>
-      <li><a href="dslink.broker/ThroughPutController/addThroughput.html">addThroughput</a></li>
       <li><a href="dslink.broker/ThroughPutController/changeValue.html">changeValue</a></li>
       <li><a href="dslink.broker/ThroughPutController/initNodes.html">initNodes</a></li>
     
@@ -109,6 +103,10 @@
     <section class="multi-line-signature">
             <span class="returntype">void</span>
             <span class="name ">changeValue</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="changeValue-param-t"><span class="type-annotation">Timer</span> <span class="parameter-name">t</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -119,23 +117,16 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">static void changeValue() {
-  _timer = null;
-  int ts = (new DateTime.now()).millisecondsSinceEpoch;
-  num del = ts - lastTs;
-  if (del &gt; 6000) del = 5000;
-  else if (del &lt; 1) del = 1;
-  del /= 1000.0;
-  messagesInPerSecond.updateValue(lastMessageIn / del, force: true);
-  dataInPerSecond.updateValue(lastDataIn / del, force: true);
-  messagesOutPerSecond.updateValue(lastMessageOut / del, force: true);
-  dataOutPerSecond.updateValue(lastDataOut / del, force: true);
+      <pre><code class="prettyprint lang-dart">static void changeValue(Timer t) {
+  messagesInPerSecond.updateValue(WebSocketConnection.messageIn , force: true);
+  dataInPerSecond.updateValue(WebSocketConnection.dataIn , force: true);
+  messagesOutPerSecond.updateValue(WebSocketConnection.messageOut , force: true);
+  dataOutPerSecond.updateValue(WebSocketConnection.dataOut , force: true);
 
-  lastMessageIn = 0;
-  lastDataIn = 0;
-  lastMessageOut = 0;
-  lastDataOut = 0;
-  lastTs = ts;
+  WebSocketConnection.messageIn = 0;
+  WebSocketConnection.dataIn = 0;
+  WebSocketConnection.messageOut = 0;
+  WebSocketConnection.dataOut = 0;
 }</code></pre>
     </section>
 
