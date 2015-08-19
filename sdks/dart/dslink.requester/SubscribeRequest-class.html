@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-                <li class="self-crumb">SubscribeRequest</li>
-            </ol>
-            <div class="self-name">SubscribeRequest</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
+                  <li class="self-crumb">SubscribeRequest</li>
+              </ol>
+              <div class="self-name">SubscribeRequest</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-            <li class="self-crumb">SubscribeRequest</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> SubscribeRequest
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.requester/SubscribeRequest-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.requester/SubscribeRequest-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.requester/SubscribeRequest-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
+              <li class="self-crumb">SubscribeRequest</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> SubscribeRequest
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.requester/SubscribeRequest-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.requester/SubscribeRequest-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.requester/SubscribeRequest-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></h5>
 
@@ -96,7 +107,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -108,7 +119,7 @@
         <dl class="dl-horizontal">
 
         <dt>Extends</dt>
-        <dd><ul class="gt-separated dark class-relationships">
+        <dd><ul class="gt-separated dark clazz-relationships">
             <li>Object</li>
             <li><a href="dslink.browser/Request-class.html">Request</a></li>
             <li>SubscribeRequest</li>
@@ -116,7 +127,7 @@
 
         <dt>Implements</dt>
             <dd>
-                <ul class="comma-separated class-relationships">
+                <ul class="comma-separated clazz-relationships">
                     <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
                 </ul>
             </dd>
@@ -133,94 +144,94 @@
 
         <dl class="properties">
             <dt id="data" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <span class="name ">data</span>
+            <span class="name ">data</span>    
+                <span class="signature">&#8594; Map</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="isClosed" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <span class="name ">isClosed</span>
+            <span class="name ">isClosed</span>    
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="requester" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <span class="name ">requester</span>
+            <span class="name ">requester</span>    
+                <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="rid" class="property">
-                <span class="top-level-variable-type">int</span>
-                <span class="name ">rid</span>
+            <span class="name ">rid</span>    
+                <span class="signature">&#8594; int</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="streamStatus" class="property">
-                <span class="top-level-variable-type">String</span>
-                <span class="name ">streamStatus</span>
+            <span class="name ">streamStatus</span>    
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="subsriptionids" class="property">
-                <span class="top-level-variable-type">Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a>
+                <span class="name"><a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a></span>
+                <span class="signature">&#8594; Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="subsriptions" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a>
+                <span class="name"><a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a></span>
+                <span class="signature">&#8594; Map&lt;String,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="toRemove" class="property">
-                <span class="top-level-variable-type">Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
-                <a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a>
+                <span class="name"><a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a></span>
+                <span class="signature">&#8594; Map&lt;int,<a href="dslink.requester/ReqSubscribeController-class.html">ReqSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    
+    <p></p>
             </dd>
             <dt id="updater" class="property">
-                <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
-                <span class="name ">updater</span>
+            <span class="name ">updater</span>    
+                <span class="signature">&#8594; <a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    raw request callback
+    <p>raw request callback</p>
             </dd>
         </dl>
     </section>
@@ -233,7 +244,7 @@
                 <span class="name"><a href="dslink.requester/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></span><span class="signature">(<span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -249,7 +260,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="addSubscription" class="callable">
                   <a href="dslink.requester/SubscribeRequest/addSubscription.html"><span class="name ">addSubscription</span></a><span class="signature">(<wbr><span class="parameter" id="addSubscription-param-controller"><span class="type-annotation"><a href="dslink/ReqSubscribeController-class.html">ReqSubscribeController</a></span> <span class="parameter-name">controller</span></span>, <span class="parameter" id="addSubscription-param-level"><span class="type-annotation">int</span> <span class="parameter-name">level</span></span>)
@@ -258,7 +269,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="close" class="callable">
                   <span class="name ">close</span><span class="signature">(<wbr>)
@@ -267,10 +278,8 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  close the request from the client side
+                  <div class="features">inherited</div>
+                  <p>close the request from the client side</p>
               </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink.requester/SubscribeRequest/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
@@ -279,7 +288,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="removeSubscription" class="callable">
                   <a href="dslink.requester/SubscribeRequest/removeSubscription.html"><span class="name ">removeSubscription</span></a><span class="signature">(<wbr><span class="parameter" id="removeSubscription-param-controller"><span class="type-annotation"><a href="dslink/ReqSubscribeController-class.html">ReqSubscribeController</a></span> <span class="parameter-name">controller</span></span>)
@@ -288,7 +297,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="resend" class="callable">
                   <a href="dslink.requester/SubscribeRequest/resend.html"><span class="name ">resend</span></a><span class="signature">(<wbr>)
@@ -297,7 +306,7 @@
                   </span>
               </dt>
               <dd>
-                  resend the data if previous sending failed
+                  <p>resend the data if previous sending failed</p>
               </dd>
               <dt id="startSendingData" class="callable">
                   <a href="dslink.requester/SubscribeRequest/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
@@ -306,20 +315,20 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>SubscribeRequest</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li>data
 </li>
       <li>isClosed
@@ -339,11 +348,11 @@
       <li>updater
 </li>
     
-      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.requester/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
     
     
-      <li class="section-title"><a href="dslink.requester/SubscribeRequest-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.requester/SubscribeRequest/ackReceived.html">ackReceived</a>
 </li>
       <li><a href="dslink.requester/SubscribeRequest/addSubscription.html">addSubscription</a>
@@ -361,6 +370,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -385,10 +395,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

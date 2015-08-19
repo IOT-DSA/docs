@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li class="self-crumb">SubscribeResponse</li>
-            </ol>
-            <div class="self-name">SubscribeResponse</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                  <li class="self-crumb">SubscribeResponse</li>
+              </ol>
+              <div class="self-name">SubscribeResponse</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-            <li class="self-crumb">SubscribeResponse</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> SubscribeResponse
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.browser/SubscribeResponse-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.browser/SubscribeResponse-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.browser/SubscribeResponse-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+              <li class="self-crumb">SubscribeResponse</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> SubscribeResponse
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.browser/SubscribeResponse-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.browser/SubscribeResponse-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.browser/SubscribeResponse-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></h5>
 
@@ -169,7 +180,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -181,7 +192,7 @@
         <dl class="dl-horizontal">
 
         <dt>Extends</dt>
-        <dd><ul class="gt-separated dark class-relationships">
+        <dd><ul class="gt-separated dark clazz-relationships">
             <li>Object</li>
             <li><a href="dslink.browser/Response-class.html">Response</a></li>
             <li>SubscribeResponse</li>
@@ -200,54 +211,54 @@
 
         <dl class="properties">
             <dt id="changed" class="property">
-                <span class="top-level-variable-type">LinkedHashSet&lt;<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
-                <a href="dslink.browser/SubscribeResponse/changed.html">changed</a>
+                <span class="name"><a href="dslink.browser/SubscribeResponse/changed.html">changed</a></span>
+                <span class="signature">&#8594; LinkedHashSet&lt;<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="responder" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
-                <span class="name ">responder</span>
+            <span class="name ">responder</span>    
+                <span class="signature">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="rid" class="property">
-                <span class="top-level-variable-type">int</span>
-                <span class="name ">rid</span>
+            <span class="name ">rid</span>    
+                <span class="signature">&#8594; int</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="subsriptionids" class="property">
-                <span class="top-level-variable-type">Map&lt;int,<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
-                <a href="dslink.browser/SubscribeResponse/subsriptionids.html">subsriptionids</a>
+                <span class="name"><a href="dslink.browser/SubscribeResponse/subsriptionids.html">subsriptionids</a></span>
+                <span class="signature">&#8594; Map&lt;int,<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="subsriptions" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
-                <a href="dslink.browser/SubscribeResponse/subsriptions.html">subsriptions</a>
+                <span class="name"><a href="dslink.browser/SubscribeResponse/subsriptions.html">subsriptions</a></span>
+                <span class="signature">&#8594; Map&lt;String,<a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
         </dl>
     </section>
@@ -260,7 +271,7 @@
                 <span class="name"><a href="dslink.browser/SubscribeResponse/SubscribeResponse.html">SubscribeResponse</a></span><span class="signature">(<span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -276,7 +287,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="add" class="callable">
                   <a href="dslink.browser/SubscribeResponse/add.html"><span class="name ">add</span></a><span class="signature">(<wbr><span class="parameter" id="add-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="add-param-node"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="add-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>, <span class="parameter" id="add-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
@@ -285,7 +296,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="addTraceCallback" class="callable">
                   <a href="dslink.browser/SubscribeResponse/addTraceCallback.html"><span class="name ">addTraceCallback</span></a><span class="signature">(<wbr><span class="parameter" id="addTraceCallback-param-_traceCallback"><span class="type-annotation">dynamic</span> <span class="parameter-name">_traceCallback</span>(<span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)</span>)
@@ -294,7 +305,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="close" class="callable">
                   <span class="name ">close</span><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
@@ -303,10 +314,8 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  close the request from responder side and also notify the requester
+                  <div class="features">inherited</div>
+                  <p>close the request from responder side and also notify the requester</p>
               </dd>
               <dt id="getTraceData" class="callable">
                   <span class="name ">getTraceData</span><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
@@ -315,10 +324,8 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  for the broker trace action
+                  <div class="features">inherited</div>
+                  <p>for the broker trace action</p>
               </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink.browser/SubscribeResponse/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
@@ -327,7 +334,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="remove" class="callable">
                   <a href="dslink.browser/SubscribeResponse/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr><span class="parameter" id="remove-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>)
@@ -336,7 +343,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="startSendingData" class="callable">
                   <a href="dslink.browser/SubscribeResponse/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
@@ -345,7 +352,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="subscriptionChanged" class="callable">
                   <a href="dslink.browser/SubscribeResponse/subscriptionChanged.html"><span class="name ">subscriptionChanged</span></a><span class="signature">(<wbr><span class="parameter" id="subscriptionChanged-param-controller"><span class="type-annotation"><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></span> <span class="parameter-name">controller</span></span>)
@@ -354,20 +361,20 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>SubscribeResponse</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.browser/SubscribeResponse/changed.html">changed</a>
 </li>
       <li>responder
@@ -379,11 +386,11 @@
       <li><a href="dslink.browser/SubscribeResponse/subsriptions.html">subsriptions</a>
 </li>
     
-      <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.browser/SubscribeResponse/SubscribeResponse.html">SubscribeResponse</a></li>
     
     
-      <li class="section-title"><a href="dslink.browser/SubscribeResponse-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.browser/SubscribeResponse/ackReceived.html">ackReceived</a>
 </li>
       <li><a href="dslink.browser/SubscribeResponse/add.html">add</a>
@@ -405,6 +412,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -429,10 +437,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

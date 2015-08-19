@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-                <li class="self-crumb">ConfigSetting</li>
-            </ol>
-            <div class="self-name">ConfigSetting</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+                  <li class="self-crumb">ConfigSetting</li>
+              </ol>
+              <div class="self-name">ConfigSetting</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
-            <li class="self-crumb">ConfigSetting</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> ConfigSetting
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.browser/ConfigSetting-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.browser/ConfigSetting-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.browser/ConfigSetting-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+              <li class="self-crumb">ConfigSetting</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> ConfigSetting
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.browser/ConfigSetting-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.browser/ConfigSetting-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.browser/ConfigSetting-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></h5>
 
@@ -169,7 +180,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -186,34 +197,34 @@
 
         <dl class="properties">
             <dt id="defaultValue" class="property">
-                <span class="top-level-variable-type">Object</span>
-                <a href="dslink.browser/ConfigSetting/defaultValue.html">defaultValue</a>
+                <span class="name"><a href="dslink.browser/ConfigSetting/defaultValue.html">defaultValue</a></span>
+                <span class="signature">&#8594; Object</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    need permission to read
+    <p>need permission to read</p>
             </dd>
             <dt id="name" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/ConfigSetting/name.html">name</a>
+                <span class="name"><a href="dslink.browser/ConfigSetting/name.html">name</a></span>
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="type" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.browser/ConfigSetting/type.html">type</a>
+                <span class="name"><a href="dslink.browser/ConfigSetting/type.html">type</a></span>
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
         </dl>
     </section>
@@ -226,13 +237,13 @@
                 <span class="name"><a href="dslink.browser/ConfigSetting/ConfigSetting.html">ConfigSetting</a></span><span class="signature">(<span class="parameter" id="-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span></span>, {<span class="parameter" id="-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span></span>})</span>
             </dt>
             <dd>
-                whether broker need to maintain the change of config value when ds link is offline
+                <p>whether broker need to maintain the change of config value when ds link is offline</p>
             </dd>
             <dt id="ConfigSetting.fromMap" class="callable">
                 <span class="name"><a href="dslink.browser/ConfigSetting/ConfigSetting.fromMap.html">ConfigSetting.fromMap</a></span><span class="signature">(<span class="parameter" id="fromMap-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="fromMap-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -248,7 +259,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="setConfig" class="callable">
                   <a href="dslink.browser/ConfigSetting/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-node"><span class="type-annotation"><a href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>)
@@ -257,20 +268,20 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>ConfigSetting</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.browser/ConfigSetting-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.browser/ConfigSetting/defaultValue.html">defaultValue</a>
 </li>
       <li><a href="dslink.browser/ConfigSetting/name.html">name</a>
@@ -278,12 +289,12 @@
       <li><a href="dslink.browser/ConfigSetting/type.html">type</a>
 </li>
     
-      <li class="section-title"><a href="dslink.browser/ConfigSetting-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.browser/ConfigSetting/ConfigSetting.html">ConfigSetting</a></li>
       <li><a href="dslink.browser/ConfigSetting/ConfigSetting.fromMap.html">fromMap</a></li>
     
     
-      <li class="section-title"><a href="dslink.browser/ConfigSetting-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.browser/ConfigSetting/removeConfig.html">removeConfig</a>
 </li>
       <li><a href="dslink.browser/ConfigSetting/setConfig.html">setConfig</a>
@@ -291,6 +302,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -315,10 +327,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

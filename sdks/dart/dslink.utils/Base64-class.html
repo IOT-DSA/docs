@@ -27,43 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li class="self-crumb">Base64</li>
-            </ol>
-            <div class="self-name">Base64</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li class="self-crumb">Base64</li>
+              </ol>
+              <div class="self-name">Base64</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li class="self-crumb">Base64</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Base64
-            </h1>
-            <!-- p class="subtitle">
-                difference from crypto lib CryptoUtils.bytesToBase64:
-1) default to url filename safe base64
-2) allow byte array to have negative int -128 ~ -1
-3) custom line size and custom padding space
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/Base64-class.html#constants">Constants</a></li>
-            <li><a href="dslink.utils/Base64-class.html#static-methods">Static Methods</a></li>
-            <li><a href="dslink.utils/Base64-class.html#constructors">Constructors</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li class="self-crumb">Base64</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Base64
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/Base64-class.html#constants">Constants</a></li>
+              <li><a href="dslink.utils/Base64-class.html#static-methods">Static Methods</a></li>
+              <li><a href="dslink.utils/Base64-class.html#constructors">Constructors</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
 
@@ -111,7 +119,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -130,74 +138,56 @@
             <dt id="CR" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/CR.html">CR</a></span>
-                =
-                <span class="constant-value">13</span>
+                <span class="signature">= 13</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="LF" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/LF.html">LF</a></span>
-                =
-                <span class="constant-value">10</span>
+                <span class="signature">= 10</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="PAD" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/PAD.html">PAD</a></span>
-                =
-                <span class="constant-value">61</span>
+                <span class="signature">= 61</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="PLUS" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/PLUS.html">PLUS</a></span>
-                =
-                <span class="constant-value">43</span>
+                <span class="signature">= 43</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="SLASH" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/SLASH.html">SLASH</a></span>
-                =
-                <span class="constant-value">47</span>
+                <span class="signature">= 47</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="SP" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.utils/Base64/SP.html">SP</a></span>
-                =
-                <span class="constant-value">32</span>
+                <span class="signature">= 32</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -213,7 +203,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="decodeString" class="callable">
                 <a href="dslink.utils/Base64/decodeString.html"><span class="name ">decodeString</span></a><span class="signature">(<wbr><span class="parameter" id="decodeString-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
@@ -222,7 +212,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="encode" class="callable">
                 <a href="dslink.utils/Base64/encode.html"><span class="name ">encode</span></a><span class="signature">(<wbr><span class="parameter" id="encode-param-bytes"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">bytes</span></span>, [<span class="parameter" id="encode-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span></span>, <span class="parameter" id="encode-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span>])
@@ -231,7 +221,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="encodeString" class="callable">
                 <a href="dslink.utils/Base64/encodeString.html"><span class="name ">encodeString</span></a><span class="signature">(<wbr><span class="parameter" id="encodeString-param-content"><span class="type-annotation">String</span> <span class="parameter-name">content</span></span>, [<span class="parameter" id="encodeString-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span></span>, <span class="parameter" id="encodeString-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span>])
@@ -240,7 +230,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -254,7 +244,7 @@
                 <span class="name"><a href="dslink.utils/Base64/Base64.html">Base64</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -263,10 +253,10 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Base64</h5>
     <ol>
-      <li class="section-title"><a href="dslink.utils/Base64-class.html#constants">Constants</a></li>
+      <li class="section-title"><a href="#constants">Constants</a></li>
       <li><a href="dslink.utils/Base64/CR.html">CR</a></li>
       <li><a href="dslink.utils/Base64/LF.html">LF</a></li>
       <li><a href="dslink.utils/Base64/PAD.html">PAD</a></li>
@@ -275,20 +265,21 @@
       <li><a href="dslink.utils/Base64/SP.html">SP</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/Base64-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink.utils/Base64/decode.html">decode</a></li>
       <li><a href="dslink.utils/Base64/decodeString.html">decodeString</a></li>
       <li><a href="dslink.utils/Base64/encode.html">encode</a></li>
       <li><a href="dslink.utils/Base64/encodeString.html">encodeString</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/Base64-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/Base64/Base64.html">Base64</a></li>
     
     
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -313,10 +304,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

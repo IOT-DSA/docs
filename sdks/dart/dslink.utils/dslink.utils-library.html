@@ -27,39 +27,50 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li class="self-crumb">dslink.utils</li>
-            </ol>
-            <div class="self-name">dslink.utils</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li class="self-crumb">dslink.utils</li>
+              </ol>
+              <div class="self-name">dslink.utils</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li class="self-crumb">dslink.utils</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">library</div> dslink.utils
-            </h1>
-            <!-- p class="subtitle">
-                Common Utilities for DSA Components
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html#classes">Classes</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li class="self-crumb">dslink.utils</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> dslink.utils
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html#classes">Classes</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
 
     <ol>
@@ -82,7 +93,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -97,50 +108,38 @@
             <dt id="alphabet" class="constant">
                 <span class="top-level-variable-type">List&lt;String&gt;</span>
                 <span class="name "><a href="dslink.utils/alphabet.html">alphabet</a></span>
-                =
-                <span class="constant-value">const ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]</span>
+                <span class="signature">= const ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="DSA_VERSION" class="constant">
                 <span class="top-level-variable-type">String</span>
                 <span class="name "><a href="dslink.utils/DSA_VERSION.html">DSA_VERSION</a></span>
-                =
-                <span class="constant-value">'1.1.0'</span>
+                <span class="signature">= '1.1.0'</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                The DSA Version
+                <div class="features">const</div>
+                <p>The DSA Version</p>
             </dd>
             <dt id="numbers" class="constant">
                 <span class="top-level-variable-type">List&lt;int&gt;</span>
                 <span class="name "><a href="dslink.utils/numbers.html">numbers</a></span>
-                =
-                <span class="constant-value">const [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+                <span class="signature">= const [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="specials" class="constant">
                 <span class="top-level-variable-type">List&lt;String&gt;</span>
                 <span class="name "><a href="dslink.utils/specials.html">specials</a></span>
-                =
-                <span class="constant-value">const ["@", "=", "_", "+", "-", "!", "."]</span>
+                <span class="signature">= const ["@", "=", "_", "+", "-", "!", "."]</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -151,34 +150,34 @@
 
         <dl class="properties">
             <dt id="DEBUG_MODE" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a>
+                <span class="name"><a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    Gets if we are in checked mode.
+    <p>Gets if we are in checked mode.</p>
             </dd>
             <dt id="fixedBlankData" class="property">
-                <span class="top-level-variable-type">List&lt;int&gt;</span>
-                <a href="dslink.utils/fixedBlankData.html">fixedBlankData</a>
+                <span class="name"><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></span>
+                <span class="signature">&#8594; List&lt;int&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="logger" class="property">
-                <span class="top-level-variable-type">Logger</span>
-                <a href="dslink.utils/logger.html">logger</a>
+                <span class="name"><a href="dslink.utils/logger.html">logger</a></span>
+                <span class="signature">&#8594; Logger</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    Fetches the logger instance.
+    <p>Fetches the logger instance.</p>
             </dd>
         </dl>
     </section>
@@ -194,7 +193,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="buildEnumType" class="callable">
                 <a href="dslink.utils/buildEnumType.html"><span class="name ">buildEnumType</span></a><span class="signature">(<wbr><span class="parameter" id="buildEnumType-param-values"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">values</span></span>)
@@ -203,7 +202,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="foldList" class="callable">
                 <a href="dslink.utils/foldList.html"><span class="name ">foldList</span></a><span class="signature">(<wbr><span class="parameter" id="foldList-param-a"><span class="type-annotation">List</span> <span class="parameter-name">a</span></span>, <span class="parameter" id="foldList-param-b"><span class="type-annotation">List</span> <span class="parameter-name">b</span></span>)
@@ -212,7 +211,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="generateBasicId" class="callable">
                 <a href="dslink.utils/generateBasicId.html"><span class="name ">generateBasicId</span></a><span class="signature">(<wbr>{<span class="parameter" id="generateBasicId-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span>: <span class="default-value">30</span></span>})
@@ -221,7 +220,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="generateToken" class="callable">
                 <a href="dslink.utils/generateToken.html"><span class="name ">generateToken</span></a><span class="signature">(<wbr>{<span class="parameter" id="generateToken-param-length"><span class="type-annotation">int</span> <span class="parameter-name">length</span>: <span class="default-value">50</span></span>})
@@ -230,7 +229,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="parseEnumType" class="callable">
                 <a href="dslink.utils/parseEnumType.html"><span class="name ">parseEnumType</span></a><span class="signature">(<wbr><span class="parameter" id="parseEnumType-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span></span>)
@@ -239,7 +238,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="updateLogLevel" class="callable">
                 <a href="dslink.utils/updateLogLevel.html"><span class="name ">updateLogLevel</span></a><span class="signature">(<wbr><span class="parameter" id="updateLogLevel-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -248,7 +247,7 @@
                 </span>
             </dt>
             <dd>
-                Updates the log level to the level specified <code class="prettyprint lang-dart">name</code>.
+                <p>Updates the log level to the level specified <code>name</code>.</p>
             </dd>
         </dl>
     </section>
@@ -262,100 +261,100 @@
                 <span class="name "><a href="dslink.utils/Base64-class.html">Base64</a></span>
             </dt>
             <dd>
-                difference from crypto lib CryptoUtils.bytesToBase64:
+                <p>difference from crypto lib CryptoUtils.bytesToBase64:
 1) default to url filename safe base64
 2) allow byte array to have negative int -128 ~ -1
-3) custom line size and custom padding space
+3) custom line size and custom padding space</p>
             </dd>
             <dt id="BetterIterator">
                 <span class="name "><a href="dslink.utils/BetterIterator-class.html">BetterIterator</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="BinaryData">
                 <span class="name "><a href="dslink.utils/BinaryData-class.html">BinaryData</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="BinaryInCache">
                 <span class="name "><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="BinaryOutCache">
                 <span class="name "><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="BroadcastStreamController">
                 <span class="name "><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ByteDataUtil">
                 <span class="name "><a href="dslink.utils/ByteDataUtil-class.html">ByteDataUtil</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="CachedStreamWrapper">
                 <span class="name "><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DsJson">
                 <span class="name "><a href="dslink.utils/DsJson-class.html">DsJson</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DsJsonCodecImpl">
                 <span class="name "><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DSLinkJSON">
                 <span class="name "><a href="dslink.utils/DSLinkJSON-class.html">DSLinkJSON</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DsTimer">
                 <span class="name "><a href="dslink.utils/DsTimer-class.html">DsTimer</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Interval">
                 <span class="name "><a href="dslink.utils/Interval-class.html">Interval</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Scheduler">
                 <span class="name "><a href="dslink.utils/Scheduler-class.html">Scheduler</a></span>
             </dt>
             <dd>
-                Schedule Tasks
+                <p>Schedule Tasks</p>
             </dd>
             <dt id="TimerFunctions">
                 <span class="name "><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="UriComponentDecoder">
                 <span class="name "><a href="dslink.utils/UriComponentDecoder-class.html">UriComponentDecoder</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -363,7 +362,7 @@
 
   </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>dslink.utils</h5>
     <ol>
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
@@ -410,6 +409,7 @@
   </div><!--/sidebar-offcanvas-right-->
 
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -434,10 +434,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

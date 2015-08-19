@@ -27,41 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/SimpleNode-class.html">SimpleNode</a></li>
-                <li class="self-crumb">createChild</li>
-            </ol>
-            <div class="self-name">createChild</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li><a href="dslink/SimpleNode-class.html">SimpleNode</a></li>
+                  <li class="self-crumb">createChild</li>
+              </ol>
+              <div class="self-name">createChild</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li><a href="dslink/SimpleNode-class.html">SimpleNode</a></li>
-            <li class="self-crumb">createChild</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> createChild
-            </h1>
-            <!-- p class="subtitle">
-                Creates a child with the given <code class="prettyprint lang-dart">name</code>.
-If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded with that map.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/SimpleNode/createChild.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li><a href="dslink/SimpleNode-class.html">SimpleNode</a></li>
+              <li class="self-crumb">createChild</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> createChild
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/SimpleNode/createChild.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
     <h5><a href="dslink/SimpleNode-class.html">SimpleNode</a></h5>
@@ -70,7 +80,7 @@ If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded
     
     
     
-      <li class="section-title"><a href="dslink/SimpleNode-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li>attributes
 </li>
       <li>callbacks
@@ -120,16 +130,16 @@ If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded
       <li><a href="dslink/SimpleNode/writable.html">writable</a>
 </li>
     
-      <li class="section-title"><a href="dslink/SimpleNode-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/SimpleNode/SimpleNode.html">SimpleNode</a></li>
     
-      <li class="section-title"><a href="dslink/SimpleNode-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="#operators">Operators</a></li>
       <li><a href="dslink/SimpleNode/operator_get.html">operator []</a>
 </li>
       <li><a href="dslink/SimpleNode/operator_put.html">operator []=</a>
 </li>
     
-      <li class="section-title"><a href="dslink/SimpleNode-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/SimpleNode/addChild.html">addChild</a>
 </li>
       <li><a href="dslink/SimpleNode/attach.html">attach</a>
@@ -218,7 +228,7 @@ If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
@@ -231,8 +241,8 @@ If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded
 
     <section class="desc markdown">
     
-          <p>Creates a child with the given <code class="prettyprint lang-dart">name</code>.
-If <code class="prettyprint lang-dart">m</code> is specified, the node is loaded with that map.</p>
+          <p>Creates a child with the given <code>name</code>.
+If <code>m</code> is specified, the node is loaded with that map.</p>
     
     </section>
 
@@ -248,6 +258,7 @@ SimpleNode createChild(String name, [Map m]) {
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -272,10 +283,14 @@ SimpleNode createChild(String name, [Map m]) {
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

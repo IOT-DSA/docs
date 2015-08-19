@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-                <li class="self-crumb">handleError</li>
-            </ol>
-            <div class="self-name">handleError</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+                  <li class="self-crumb">handleError</li>
+              </ol>
+              <div class="self-name">handleError</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-            <li class="self-crumb">handleError</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> handleError
-            </h1>
-            <!-- p class="subtitle">
-                Creates a wrapper Stream that intercepts some errors from this stream.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/CachedStreamWrapper/handleError.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+              <li class="self-crumb">handleError</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> handleError
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/CachedStreamWrapper/handleError.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
     <h5><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></h5>
@@ -69,7 +80,7 @@
     
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/first.html">first</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/isBroadcast.html">isBroadcast</a>
@@ -85,11 +96,11 @@
       <li><a href="dslink.utils/CachedStreamWrapper/single.html">single</a>
 </li>
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/any.html">any</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html">asBroadcastStream</a>
@@ -154,7 +165,7 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype">Stream&lt;T&gt;</span>
@@ -168,24 +179,24 @@
     <section class="desc markdown">
     
           <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
-<p>If this stream sends an error that matches <code class="prettyprint lang-dart">test</code>, then it is intercepted
-by the <code class="prettyprint lang-dart">handle</code> function.</p>
-<p>The <code class="prettyprint lang-dart">onError</code> callback must be of type <code class="prettyprint lang-dart">void onError(error)</code> or
-<code class="prettyprint lang-dart">void onError(error, StackTrace stackTrace)</code>. Depending on the function
-type the the stream either invokes <code class="prettyprint lang-dart">onError</code> with or without a stack
-trace. The stack trace argument might be <code class="prettyprint lang-dart">null</code> if the stream itself
+<p>If this stream sends an error that matches <code>test</code>, then it is intercepted
+by the <code>handle</code> function.</p>
+<p>The <code>onError</code> callback must be of type <code>void onError(error)</code> or
+<code>void onError(error, StackTrace stackTrace)</code>. Depending on the function
+type the the stream either invokes <code>onError</code> with or without a stack
+trace. The stack trace argument might be <code>null</code> if the stream itself
 received an error without stack trace.</p>
-<p>An asynchronous error <code class="prettyprint lang-dart">e</code> is matched by a test function if <code class="prettyprint lang-dart">test(e)</code>
-returns true. If <code class="prettyprint lang-dart">test</code> is omitted, every error is considered matching.</p>
-<p>If the error is intercepted, the <code class="prettyprint lang-dart">handle</code> function can decide what to do
+<p>An asynchronous error <code>e</code> is matched by a test function if <code>test(e)</code>
+returns true. If <code>test</code> is omitted, every error is considered matching.</p>
+<p>If the error is intercepted, the <code>handle</code> function can decide what to do
 with it. It can throw if it wants to raise a new (or the same) error,
 or simply return to make the stream forget the error.</p>
 <p>If you need to transform an error into a data event, use the more generic
-<code class="prettyprint lang-dart">Stream.transform</code> to handle the event by writing a data event to
+<code>Stream.transform</code> to handle the event by writing a data event to
 the output sink.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
-will individually perform the <code class="prettyprint lang-dart">test</code> and handle the error.</p>
+will individually perform the <code>test</code> and handle the error.</p>
     
     </section>
 
@@ -197,6 +208,7 @@ will individually perform the <code class="prettyprint lang-dart">test</code> an
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -221,10 +233,14 @@ will individually perform the <code class="prettyprint lang-dart">test</code> an
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

@@ -27,46 +27,57 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
-                <li class="self-crumb">dataInPerSecond</li>
-            </ol>
-            <div class="self-name">dataInPerSecond</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                  <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
+                  <li class="self-crumb">dataInPerSecond</li>
+              </ol>
+              <div class="self-name">dataInPerSecond</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-            <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
-            <li class="self-crumb">dataInPerSecond</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">property</div> dataInPerSecond
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+              <li><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
+              <li class="self-crumb">dataInPerSecond</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">property</div> dataInPerSecond
+              </h1>
+          </div>
+          <ul class="subnav">
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
     <h5><a href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></h5>
 
     <ol>
     
-      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-properties">Static properties</a></li>
+      <li class="section-title"><a href="#static-properties">Static properties</a></li>
       <li><a href="dslink.broker/ThroughPutController/dataInPerSecond.html">dataInPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/dataOutPerSecond.html">dataOutPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/lastDataIn.html">lastDataIn</a></li>
@@ -78,13 +89,13 @@
       <li><a href="dslink.broker/ThroughPutController/messagesOutPerSecond.html">messagesOutPerSecond</a></li>
       <li><a href="dslink.broker/ThroughPutController/throughputNeeded.html">throughputNeeded</a></li>
     
-      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink.broker/ThroughPutController/addThroughput.html">addThroughput</a></li>
       <li><a href="dslink.broker/ThroughPutController/changeValue.html">changeValue</a></li>
       <li><a href="dslink.broker/ThroughPutController/initNodes.html">initNodes</a></li>
     
     
-      <li class="section-title"><a href="dslink.broker/ThroughPutController-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.broker/ThroughPutController/ThroughPutController.html">ThroughPutController</a></li>
     
     
@@ -92,12 +103,12 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
         <span class="returntype"><a href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></span>
         <span class="name ">dataInPerSecond</span>
-        <div class="readable-writable">
+        <div class="features">
             read / write
         </div>
     </section>
@@ -110,6 +121,7 @@
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -134,10 +146,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

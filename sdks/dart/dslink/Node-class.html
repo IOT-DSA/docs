@@ -27,42 +27,52 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">Node</li>
-            </ol>
-            <div class="self-name">Node</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">Node</li>
+              </ol>
+              <div class="self-name">Node</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">Node</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Node
-            </h1>
-            <!-- p class="subtitle">
-                Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the <code class="prettyprint lang-dart">dslink.responder.SimpleNode</code> class.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/Node-class.html#static-methods">Static Methods</a></li>
-            <li><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink/Node-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink/Node-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">Node</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Node
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/Node-class.html#static-methods">Static Methods</a></li>
+              <li><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink/Node-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/Node-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -176,12 +186,12 @@ If you are writing a link, please look at the <code class="prettyprint lang-dart
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
           <p>Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the <code class="prettyprint lang-dart">dslink.responder.SimpleNode</code> class.</p>
+If you are writing a link, please look at the <code>dslink.responder.SimpleNode</code> class.</p>
     
     </section>
 
@@ -198,7 +208,7 @@ If you are writing a link, please look at the <code class="prettyprint lang-dart
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -208,45 +218,45 @@ If you are writing a link, please look at the <code class="prettyprint lang-dart
 
         <dl class="properties">
             <dt id="attributes" class="property">
-                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink/Node/attributes.html">attributes</a>
+                <span class="name"><a href="dslink/Node/attributes.html">attributes</a></span>
+                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    Node Attributes
+    <p>Node Attributes</p>
             </dd>
             <dt id="children" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
-                <a href="dslink/Node/children.html">children</a>
+                <span class="name"><a href="dslink/Node/children.html">children</a></span>
+                <span class="signature">&#8594; Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    Node Children
-Map of Child Name to Child Node
+    <p>Node Children
+Map of Child Name to Child Node</p>
             </dd>
             <dt id="configs" class="property">
-                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <a href="dslink/Node/configs.html">configs</a>
+                <span class="name"><a href="dslink/Node/configs.html">configs</a></span>
+                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    Node Configs
+    <p>Node Configs</p>
             </dd>
             <dt id="profile" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
-                <a href="dslink/Node/profile.html">profile</a>
+                <span class="name"><a href="dslink/Node/profile.html">profile</a></span>
+                <span class="signature">&#8594; <a href="dslink/Node-class.html">Node</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    This node's profile.
+    <p>This node's profile.</p>
             </dd>
         </dl>
     </section>
@@ -259,7 +269,7 @@ Map of Child Name to Child Node
                 <span class="name"><a href="dslink/Node/Node.html">Node</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -275,7 +285,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Adds a child to this node.
+                  <p>Adds a child to this node.</p>
               </dd>
               <dt id="forEachAttribute" class="callable">
                   <a href="dslink/Node/forEachAttribute.html"><span class="name ">forEachAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
@@ -284,7 +294,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="forEachChild" class="callable">
                   <a href="dslink/Node/forEachChild.html"><span class="name ">forEachChild</span></a><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
@@ -293,7 +303,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Iterates over all the children of this node and passes them to the specified <code class="prettyprint lang-dart">callback</code>.
+                  <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
               </dd>
               <dt id="forEachConfig" class="callable">
                   <a href="dslink/Node/forEachConfig.html"><span class="name ">forEachConfig</span></a><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
@@ -302,7 +312,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="get" class="callable">
                   <a href="dslink/Node/get.html"><span class="name ">get</span></a><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -311,10 +321,10 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Get a property of this node.
-If <code class="prettyprint lang-dart">name</code> starts with '$', this will fetch a config.
-If <code class="prettyprint lang-dart">name</code> starts with a '@', this will fetch an attribute.
-Otherwise this will fetch a child.
+                  <p>Get a property of this node.
+If <code>name</code> starts with '$', this will fetch a config.
+If <code>name</code> starts with a '@', this will fetch an attribute.
+Otherwise this will fetch a child.</p>
               </dd>
               <dt id="getAttribute" class="callable">
                   <a href="dslink/Node/getAttribute.html"><span class="name ">getAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -323,7 +333,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Get an Attribute
+                  <p>Get an Attribute</p>
               </dd>
               <dt id="getChild" class="callable">
                   <a href="dslink/Node/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -332,7 +342,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Get a Child Node
+                  <p>Get a Child Node</p>
               </dd>
               <dt id="getConfig" class="callable">
                   <a href="dslink/Node/getConfig.html"><span class="name ">getConfig</span></a><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -341,7 +351,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Get a Config
+                  <p>Get a Config</p>
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <a href="dslink/Node/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
@@ -350,7 +360,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Gets a map for the data that will be listed in the parent node's children property.
+                  <p>Gets a map for the data that will be listed in the parent node's children property.</p>
               </dd>
               <dt id="removeChild" class="callable">
                   <a href="dslink/Node/removeChild.html"><span class="name ">removeChild</span></a><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
@@ -359,23 +369,23 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Remove a child from this node.
-<code class="prettyprint lang-dart">input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code class="prettyprint lang-dart">String</code>.
+                  <p>Remove a child from this node.
+<code>input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Node</h5>
     <ol>
     
     
-      <li class="section-title"><a href="dslink/Node-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink/Node/getDisplayName.html">getDisplayName</a></li>
     
-      <li class="section-title"><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/Node/attributes.html">attributes</a>
 </li>
       <li><a href="dslink/Node/children.html">children</a>
@@ -385,11 +395,11 @@ Otherwise this will fetch a child.
       <li><a href="dslink/Node/profile.html">profile</a>
 </li>
     
-      <li class="section-title"><a href="dslink/Node-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/Node/Node.html">Node</a></li>
     
     
-      <li class="section-title"><a href="dslink/Node-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/Node/addChild.html">addChild</a>
 </li>
       <li><a href="dslink/Node/forEachAttribute.html">forEachAttribute</a>
@@ -413,6 +423,7 @@ Otherwise this will fetch a child.
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -437,10 +448,14 @@ Otherwise this will fetch a child.
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

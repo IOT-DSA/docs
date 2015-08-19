@@ -27,37 +27,48 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li class="self-crumb">dslink.browser_client</li>
-            </ol>
-            <div class="self-name">dslink.browser_client</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li class="self-crumb">dslink.browser_client</li>
+              </ol>
+              <div class="self-name">dslink.browser_client</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li class="self-crumb">dslink.browser_client</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">library</div> dslink.browser_client
-            </h1>
-            <!-- p class="subtitle">
-                Base API for DSA in the Browser
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.browser_client/dslink.browser_client-library.html#functions">Functions</a></li>
-            <li><a href="dslink.browser_client/dslink.browser_client-library.html#classes">Classes</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li class="self-crumb">dslink.browser_client</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> dslink.browser_client
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.browser_client/dslink.browser_client-library.html#functions">Functions</a></li>
+              <li><a href="dslink.browser_client/dslink.browser_client-library.html#classes">Classes</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
 
     <ol>
@@ -80,7 +91,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -102,8 +113,8 @@
                 </span>
             </dt>
             <dd>
-                Get a Private Key using the specified storage strategy.
-If <code class="prettyprint lang-dart">storage</code> is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.
+                <p>Get a Private Key using the specified storage strategy.
+If <code>storage</code> is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.</p>
             </dd>
         </dl>
     </section>
@@ -117,31 +128,31 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
                 <span class="name "><a href="dslink.browser_client/BrowserECDHLink-class.html">BrowserECDHLink</a></span>
             </dt>
             <dd>
-                a client link for both http and ws
+                <p>a client link for both http and ws</p>
             </dd>
             <dt id="BrowserUserLink">
                 <span class="name "><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></span>
             </dt>
             <dd>
-                a client link for both http and ws
+                <p>a client link for both http and ws</p>
             </dd>
             <dt id="DataStorage">
                 <span class="name "><a href="dslink.browser_client/DataStorage-class.html">DataStorage</a></span>
             </dt>
             <dd>
-                A Storage System for DSA Data
+                <p>A Storage System for DSA Data</p>
             </dd>
             <dt id="LocalDataStorage">
                 <span class="name "><a href="dslink.browser_client/LocalDataStorage-class.html">LocalDataStorage</a></span>
             </dt>
             <dd>
-                Storage for DSA in Local Storage
+                <p>Storage for DSA in Local Storage</p>
             </dd>
             <dt id="WebSocketConnection">
                 <span class="name "><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -149,7 +160,7 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
 
   </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>dslink.browser_client</h5>
     <ol>
     
@@ -170,6 +181,7 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
   </div><!--/sidebar-offcanvas-right-->
 
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -194,10 +206,14 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

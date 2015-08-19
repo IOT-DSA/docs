@@ -27,39 +27,50 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-                <li class="self-crumb">RequestUpdater</li>
-            </ol>
-            <div class="self-name">RequestUpdater</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
+                  <li class="self-crumb">RequestUpdater</li>
+              </ol>
+              <div class="self-name">RequestUpdater</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
-            <li class="self-crumb">RequestUpdater</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> RequestUpdater
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.requester/RequestUpdater-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.requester/RequestUpdater-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
+              <li class="self-crumb">RequestUpdater</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> RequestUpdater
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.requester/RequestUpdater-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.requester/RequestUpdater-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></h5>
 
@@ -95,7 +106,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -110,12 +121,17 @@
 
 
         <dt>Implemented by</dt>
-        <dd><ul class="comma-separated class-relationships">
+        <dd><ul class="comma-separated clazz-relationships">
             <li><a href="dslink.browser/InvokeController-class.html">InvokeController</a></li>
+            <li><a href="dslink.requester/InvokeController-class.html">InvokeController</a></li>
             <li><a href="dslink.browser/ListController-class.html">ListController</a></li>
+            <li><a href="dslink.requester/ListController-class.html">ListController</a></li>
             <li><a href="dslink.browser/RemoveController-class.html">RemoveController</a></li>
+            <li><a href="dslink.requester/RemoveController-class.html">RemoveController</a></li>
             <li><a href="dslink.browser/SetController-class.html">SetController</a></li>
+            <li><a href="dslink.requester/SetController-class.html">SetController</a></li>
             <li><a href="dslink.browser/SubscribeController-class.html">SubscribeController</a></li>
+            <li><a href="dslink.requester/SubscribeController-class.html">SubscribeController</a></li>
         </ul></dd>
         </dl>
     </section>
@@ -132,7 +148,7 @@
                 <span class="name"><a href="dslink.requester/RequestUpdater/RequestUpdater.html">RequestUpdater</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -148,7 +164,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="onReconnect" class="callable">
                   <a href="dslink.requester/RequestUpdater/onReconnect.html"><span class="name ">onReconnect</span></a><span class="signature">(<wbr>)
@@ -157,7 +173,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="onUpdate" class="callable">
                   <a href="dslink.requester/RequestUpdater/onUpdate.html"><span class="name ">onUpdate</span></a><span class="signature">(<wbr><span class="parameter" id="onUpdate-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span></span>, <span class="parameter" id="onUpdate-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, <span class="parameter" id="onUpdate-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="onUpdate-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>, <span class="parameter" id="onUpdate-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>)
@@ -166,25 +182,25 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>RequestUpdater</h5>
     <ol>
     
     
     
     
-      <li class="section-title"><a href="dslink.requester/RequestUpdater-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.requester/RequestUpdater/RequestUpdater.html">RequestUpdater</a></li>
     
     
-      <li class="section-title"><a href="dslink.requester/RequestUpdater-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.requester/RequestUpdater/onDisconnect.html">onDisconnect</a>
 </li>
       <li><a href="dslink.requester/RequestUpdater/onReconnect.html">onReconnect</a>
@@ -194,6 +210,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -218,10 +235,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

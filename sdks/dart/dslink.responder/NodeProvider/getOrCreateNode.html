@@ -27,41 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
-                <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
-                <li class="self-crumb">getOrCreateNode</li>
-            </ol>
-            <div class="self-name">getOrCreateNode</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+                  <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+                  <li class="self-crumb">getOrCreateNode</li>
+              </ol>
+              <div class="self-name">getOrCreateNode</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
-            <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
-            <li class="self-crumb">getOrCreateNode</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> getOrCreateNode
-            </h1>
-            <!-- p class="subtitle">
-                Gets a node at the given <code class="prettyprint lang-dart">path</code> if it exists.
-If it does not exist, create a new node and return it.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.responder/NodeProvider/getOrCreateNode.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+              <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+              <li class="self-crumb">getOrCreateNode</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> getOrCreateNode
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.responder/NodeProvider/getOrCreateNode.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
     <h5><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></h5>
@@ -70,20 +80,20 @@ If it does not exist, create a new node and return it.
     
     
     
-      <li class="section-title"><a href="dslink.responder/NodeProvider-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.responder/NodeProvider/permissions.html">permissions</a>
 </li>
     
-      <li class="section-title"><a href="dslink.responder/NodeProvider-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.responder/NodeProvider/NodeProvider.html">NodeProvider</a></li>
     
-      <li class="section-title"><a href="dslink.responder/NodeProvider-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="#operators">Operators</a></li>
       <li><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a>
 </li>
       <li><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a>
 </li>
     
-      <li class="section-title"><a href="dslink.responder/NodeProvider-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.responder/NodeProvider/createResponder.html">createResponder</a>
 </li>
       <li><a href="dslink.responder/NodeProvider/getNode.html">getNode</a>
@@ -94,7 +104,7 @@ If it does not exist, create a new node and return it.
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
@@ -107,9 +117,9 @@ If it does not exist, create a new node and return it.
 
     <section class="desc markdown">
     
-          <p>Gets a node at the given <code class="prettyprint lang-dart">path</code> if it exists.
+          <p>Gets a node at the given <code>path</code> if it exists.
 If it does not exist, create a new node and return it.</p>
-<p>When <code class="prettyprint lang-dart">addToTree</code> is false, the node will not be inserted into the node provider.</p>
+<p>When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
     
     </section>
 
@@ -124,6 +134,7 @@ LocalNode getOrCreateNode(String path, [bool addToTree = true]);</code></pre>
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -148,10 +159,14 @@ LocalNode getOrCreateNode(String path, [bool addToTree = true]);</code></pre>
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

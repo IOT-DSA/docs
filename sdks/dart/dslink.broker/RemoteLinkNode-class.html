@@ -27,41 +27,52 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                <li class="self-crumb">RemoteLinkNode</li>
-            </ol>
-            <div class="self-name">RemoteLinkNode</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+                  <li class="self-crumb">RemoteLinkNode</li>
+              </ol>
+              <div class="self-name">RemoteLinkNode</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-            <li class="self-crumb">RemoteLinkNode</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> RemoteLinkNode
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.broker/RemoteLinkNode-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.broker/RemoteLinkNode-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.broker/RemoteLinkNode-class.html#operators">Operators</a></li>
-            <li><a href="dslink.broker/RemoteLinkNode-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+              <li class="self-crumb">RemoteLinkNode</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> RemoteLinkNode
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.broker/RemoteLinkNode-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.broker/RemoteLinkNode-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.broker/RemoteLinkNode-class.html#operators">Operators</a></li>
+              <li><a href="dslink.broker/RemoteLinkNode-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></h5>
 
@@ -118,7 +129,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -130,7 +141,7 @@
         <dl class="dl-horizontal">
 
         <dt>Extends</dt>
-        <dd><ul class="gt-separated dark class-relationships">
+        <dd><ul class="gt-separated dark clazz-relationships">
             <li>Object</li>
             <li><a href="dslink.browser/Node-class.html">Node</a></li>
             <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
@@ -139,14 +150,14 @@
 
         <dt>Implements</dt>
             <dd>
-                <ul class="comma-separated class-relationships">
+                <ul class="comma-separated clazz-relationships">
                     <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
                 </ul>
             </dd>
 
 
         <dt>Implemented by</dt>
-        <dd><ul class="comma-separated class-relationships">
+        <dd><ul class="comma-separated clazz-relationships">
             <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
         </ul></dd>
         </dl>
@@ -160,205 +171,205 @@
 
         <dl class="properties">
             <dt id="attributes" class="property">
-                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <span class="name ">attributes</span>
+            <span class="name ">attributes</span>    
+                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    Node Attributes
+    <p>Node Attributes</p>
             </dd>
             <dt id="callbacks" class="property">
-                <span class="top-level-variable-type">Map&lt;Function,int&gt;</span>
-                <a href="dslink.broker/RemoteLinkNode/callbacks.html">callbacks</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/callbacks.html">callbacks</a></span>
+                <span class="signature">&#8594; Map&lt;Function,int&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    
+    <p></p>
             </dd>
             <dt id="callbacks" class="property">
-                <span class="top-level-variable-type">Map&lt;Function,int&gt;</span>
-                <span class="name ">callbacks</span>
+            <span class="name ">callbacks</span>    
+                <span class="signature">&#8594; Map&lt;Function,int&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    Subscription Callbacks
+    <p>Subscription Callbacks</p>
             </dd>
             <dt id="children" class="property">
-                <span class="top-level-variable-type">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
-                <span class="name ">children</span>
+            <span class="name ">children</span>    
+                <span class="signature">&#8594; Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    Node Children
-Map of Child Name to Child Node
+    <p>Node Children
+Map of Child Name to Child Node</p>
             </dd>
             <dt id="configs" class="property">
-                <span class="top-level-variable-type">Map&lt;String,Object&gt;</span>
-                <span class="name ">configs</span>
+            <span class="name ">configs</span>    
+                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    Node Configs
+    <p>Node Configs</p>
             </dd>
             <dt id="disconnected" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.broker/RemoteLinkNode/disconnected.html">disconnected</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/disconnected.html">disconnected</a></span>
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="exists" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.broker/RemoteLinkNode/exists.html">exists</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/exists.html">exists</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="hasSubscriber" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.broker/RemoteLinkNode/hasSubscriber.html">hasSubscriber</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/hasSubscriber.html">hasSubscriber</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="lastValueUpdate" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
-                <a href="dslink.broker/RemoteLinkNode/lastValueUpdate.html">lastValueUpdate</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/lastValueUpdate.html">lastValueUpdate</a></span>
+                <span class="signature">&#8594; <a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="listChangeController" class="property">
-                <span class="top-level-variable-type"><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a>&lt;String&gt;</span>
-                <a href="dslink.broker/RemoteLinkNode/listChangeController.html">listChangeController</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/listChangeController.html">listChangeController</a></span>
+                <span class="signature">&#8594; <a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a>&lt;String&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="listed" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <span class="name ">listed</span>
+            <span class="name ">listed</span>    
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="listReady" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.broker/RemoteLinkNode/listReady.html">listReady</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/listReady.html">listReady</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    whether broker is already listing, can send data directly for new list request
+    <p>whether broker is already listing, can send data directly for new list request</p>
             </dd>
             <dt id="listStream" class="property">
-                <span class="top-level-variable-type">Stream&lt;String&gt;</span>
-                <a href="dslink.broker/RemoteLinkNode/listStream.html">listStream</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/listStream.html">listStream</a></span>
+                <span class="signature">&#8594; Stream&lt;String&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="name" class="property">
-                <span class="top-level-variable-type">String</span>
-                <span class="name ">name</span>
+            <span class="name ">name</span>    
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="path" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink.broker/RemoteLinkNode/path.html">path</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/path.html">path</a></span>
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="profile" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Node-class.html">Node</a></span>
-                <span class="name ">profile</span>
+            <span class="name ">profile</span>    
+                <span class="signature">&#8594; <a href="dslink/Node-class.html">Node</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read / write, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read / write, inherited
     </div>
-    This node's profile.
+    <p>This node's profile.</p>
             </dd>
             <dt id="provider" class="property">
-                <span class="top-level-variable-type"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
-                <a href="dslink.broker/RemoteLinkNode/provider.html">provider</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/provider.html">provider</a></span>
+                <span class="signature">&#8594; <a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="remotePath" class="property">
-                <span class="top-level-variable-type">String</span>
-                <span class="name ">remotePath</span>
+            <span class="name ">remotePath</span>    
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    
+    <p></p>
             </dd>
             <dt id="value" class="property">
-                <span class="top-level-variable-type">dynamic</span>
-                <a href="dslink.broker/RemoteLinkNode/value.html">value</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/value.html">value</a></span>
+                <span class="signature">&#8594; dynamic</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    Gets the current value of this node.
+    <p>Gets the current value of this node.</p>
             </dd>
             <dt id="valueReady" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink.broker/RemoteLinkNode/valueReady.html">valueReady</a>
+                <span class="name"><a href="dslink.broker/RemoteLinkNode/valueReady.html">valueReady</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    whether broker is already subscribing, can send value directly for new subscribe request
+    <p>whether broker is already subscribing, can send value directly for new subscribe request</p>
             </dd>
         </dl>
     </section>
@@ -371,7 +382,7 @@ Map of Child Name to Child Node
                 <span class="name"><a href="dslink.broker/RemoteLinkNode/RemoteLinkNode.html">RemoteLinkNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-remotePath"><span class="type-annotation">String</span> <span class="parameter-name">remotePath</span></span>, <span class="parameter" id="-param-_linkManager"><span class="type-annotation"><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></span> <span class="parameter-name">_linkManager</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -386,7 +397,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Shortcut to <code class="prettyprint lang-dart">get</code>.
+                  <p>Shortcut to <code>get</code>.</p>
               </dd>
               <dt id="operator []=" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/operator_put.html"><span class="name ">operator []=</span></a><span class="signature">(<wbr><span class="parameter" id="[]=-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="[]=-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
@@ -395,7 +406,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  Set a config, attribute, or child on this node.
+                  <p>Set a config, attribute, or child on this node.</p>
               </dd>
           </dl>
       </section>
@@ -410,10 +421,8 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Adds a child to this node.
+                  <div class="features">inherited</div>
+                  <p>Adds a child to this node.</p>
               </dd>
               <dt id="createListController" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/createListController.html"><span class="name ">createListController</span></a><span class="signature">(<wbr><span class="parameter" id="createListController-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)
@@ -422,7 +431,7 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  need a factory function for children class to override
+                  <p>need a factory function for children class to override</p>
               </dd>
               <dt id="forEachAttribute" class="callable">
                   <span class="name ">forEachAttribute</span><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
@@ -431,10 +440,8 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  
+                  <div class="features">inherited</div>
+                  <p></p>
               </dd>
               <dt id="forEachChild" class="callable">
                   <span class="name ">forEachChild</span><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
@@ -443,10 +450,8 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Iterates over all the children of this node and passes them to the specified <code class="prettyprint lang-dart">callback</code>.
+                  <div class="features">inherited</div>
+                  <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
               </dd>
               <dt id="forEachConfig" class="callable">
                   <span class="name ">forEachConfig</span><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
@@ -455,10 +460,8 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  
+                  <div class="features">inherited</div>
+                  <p></p>
               </dd>
               <dt id="get" class="callable">
                   <span class="name ">get</span><span class="signature">(<wbr><span class="parameter" id="get-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -467,13 +470,11 @@ Map of Child Name to Child Node
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Get a property of this node.
-If <code class="prettyprint lang-dart">name</code> starts with '$', this will fetch a config.
-If <code class="prettyprint lang-dart">name</code> starts with a '@', this will fetch an attribute.
-Otherwise this will fetch a child.
+                  <div class="features">inherited</div>
+                  <p>Get a property of this node.
+If <code>name</code> starts with '$', this will fetch a config.
+If <code>name</code> starts with a '@', this will fetch an attribute.
+Otherwise this will fetch a child.</p>
               </dd>
               <dt id="getAttribute" class="callable">
                   <span class="name ">getAttribute</span><span class="signature">(<wbr><span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -482,10 +483,8 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Get an Attribute
+                  <div class="features">inherited</div>
+                  <p>Get an Attribute</p>
               </dd>
               <dt id="getChild" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/getChild.html"><span class="name ">getChild</span></a><span class="signature">(<wbr><span class="parameter" id="getChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -494,7 +493,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Get a Child Node
+                  <p>Get a Child Node</p>
               </dd>
               <dt id="getConfig" class="callable">
                   <span class="name ">getConfig</span><span class="signature">(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -503,10 +502,8 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Get a Config
+                  <div class="features">inherited</div>
+                  <p>Get a Config</p>
               </dd>
               <dt id="getInvokePermission" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/getInvokePermission.html"><span class="name ">getInvokePermission</span></a><span class="signature">(<wbr>)
@@ -515,7 +512,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  for invoke permission as responder
+                  <p>for invoke permission as responder</p>
               </dd>
               <dt id="getSetPermission" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/getSetPermission.html"><span class="name ">getSetPermission</span></a><span class="signature">(<wbr>)
@@ -524,7 +521,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  for invoke permission as responder
+                  <p>for invoke permission as responder</p>
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/getSimpleMap.html"><span class="name ">getSimpleMap</span></a><span class="signature">(<wbr>)
@@ -533,7 +530,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  get simple map should return all configs returned by remoteNode
+                  <p>get simple map should return all configs returned by remoteNode</p>
               </dd>
               <dt id="invoke" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/invoke.html"><span class="name ">invoke</span></a><span class="signature">(<wbr><span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="invoke-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="invoke-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="invoke-param-parentNode"><span class="type-annotation"><a href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
@@ -542,7 +539,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  requester invoke function
+                  <p>requester invoke function</p>
               </dd>
               <dt id="isSelfUpdated" class="callable">
                   <span class="name ">isSelfUpdated</span><span class="signature">(<wbr>)
@@ -551,10 +548,8 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  whether the node's own data is updated
+                  <div class="features">inherited</div>
+                  <p>whether the node's own data is updated</p>
               </dd>
               <dt id="isUpdated" class="callable">
                   <span class="name ">isUpdated</span><span class="signature">(<wbr>)
@@ -563,10 +558,8 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  node data is not ready until all profile and mixins are updated
+                  <div class="features">inherited</div>
+                  <p>node data is not ready until all profile and mixins are updated</p>
               </dd>
               <dt id="onAllListCancel" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/onAllListCancel.html"><span class="name ">onAllListCancel</span></a><span class="signature">(<wbr>)
@@ -575,7 +568,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Callback for when all lists are canceled.
+                  <p>Callback for when all lists are canceled.</p>
               </dd>
               <dt id="onStartListListen" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/onStartListListen.html"><span class="name ">onStartListListen</span></a><span class="signature">(<wbr>)
@@ -584,7 +577,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Callback for when listing this node has started.
+                  <p>Callback for when listing this node has started.</p>
               </dd>
               <dt id="removeAttribute" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/removeAttribute.html"><span class="name ">removeAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -593,7 +586,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Called by the link internals to remove an attribute from this node.
+                  <p>Called by the link internals to remove an attribute from this node.</p>
               </dd>
               <dt id="removeChild" class="callable">
                   <span class="name ">removeChild</span><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
@@ -602,11 +595,9 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Remove a child from this node.
-<code class="prettyprint lang-dart">input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code class="prettyprint lang-dart">String</code>.
+                  <div class="features">inherited</div>
+                  <p>Remove a child from this node.
+<code>input</code> can be either an instance of <a href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
               </dd>
               <dt id="removeConfig" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/removeConfig.html"><span class="name ">removeConfig</span></a><span class="signature">(<wbr><span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -615,7 +606,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Called by the link internals to remove a config from this node.
+                  <p>Called by the link internals to remove a config from this node.</p>
               </dd>
               <dt id="resetNodeCache" class="callable">
                   <span class="name ">resetNodeCache</span><span class="signature">(<wbr>)
@@ -624,10 +615,8 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  clear all configs attributes and children
+                  <div class="features">inherited</div>
+                  <p>clear all configs attributes and children</p>
               </dd>
               <dt id="setAttribute" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/setAttribute.html"><span class="name ">setAttribute</span></a><span class="signature">(<wbr><span class="parameter" id="setAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setAttribute-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setAttribute-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setAttribute-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -636,7 +625,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Called by the link internals to set an attribute on this node.
+                  <p>Called by the link internals to set an attribute on this node.</p>
               </dd>
               <dt id="setConfig" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/setConfig.html"><span class="name ">setConfig</span></a><span class="signature">(<wbr><span class="parameter" id="setConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="setConfig-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setConfig-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -645,7 +634,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Called by the link internals to set a config on this node.
+                  <p>Called by the link internals to set a config on this node.</p>
               </dd>
               <dt id="setValue" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/setValue.html"><span class="name ">setValue</span></a><span class="signature">(<wbr><span class="parameter" id="setValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, <span class="parameter" id="setValue-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="setValue-param-response"><span class="type-annotation"><a href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, [<span class="parameter" id="setValue-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
@@ -654,7 +643,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Called by the link internals to set a value of a node.
+                  <p>Called by the link internals to set a value of a node.</p>
               </dd>
               <dt id="subscribe" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
@@ -663,7 +652,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Subscribes the given <code class="prettyprint lang-dart">callback</code> to this node.
+                  <p>Subscribes the given <code>callback</code> to this node.</p>
               </dd>
               <dt id="unsubscribe" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>)
@@ -672,7 +661,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Unsubscribe the given <code class="prettyprint lang-dart">callback</code> from this node.
+                  <p>Unsubscribe the given <code>callback</code> from this node.</p>
               </dd>
               <dt id="updateRemoteChildData" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/updateRemoteChildData.html"><span class="name ">updateRemoteChildData</span></a><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildData-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="updateRemoteChildData-param-cache"><span class="type-annotation"><a href="dslink/RemoteNodeCache-class.html">RemoteNodeCache</a></span> <span class="parameter-name">cache</span></span>)
@@ -681,7 +670,7 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  used by list api to update simple data for children
+                  <p>used by list api to update simple data for children</p>
               </dd>
               <dt id="updateValue" class="callable">
                   <a href="dslink.broker/RemoteLinkNode/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-update"><span class="type-annotation">Object</span> <span class="parameter-name">update</span></span>, {<span class="parameter" id="updateValue-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span>: <span class="default-value">false</span></span>})
@@ -690,20 +679,20 @@ Otherwise this will fetch a child.
                   </span>
               </dt>
               <dd>
-                  Updates this node's value to the specified <code class="prettyprint lang-dart">value</code>.
+                  <p>Updates this node's value to the specified <code>value</code>.</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>RemoteLinkNode</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.broker/RemoteLinkNode-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li>attributes
 </li>
       <li><a href="dslink.broker/RemoteLinkNode/callbacks.html">callbacks</a>
@@ -745,16 +734,16 @@ Otherwise this will fetch a child.
       <li><a href="dslink.broker/RemoteLinkNode/valueReady.html">valueReady</a>
 </li>
     
-      <li class="section-title"><a href="dslink.broker/RemoteLinkNode-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.broker/RemoteLinkNode/RemoteLinkNode.html">RemoteLinkNode</a></li>
     
-      <li class="section-title"><a href="dslink.broker/RemoteLinkNode-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="#operators">Operators</a></li>
       <li><a href="dslink.broker/RemoteLinkNode/operator_get.html">operator []</a>
 </li>
       <li><a href="dslink.broker/RemoteLinkNode/operator_put.html">operator []=</a>
 </li>
     
-      <li class="section-title"><a href="dslink.broker/RemoteLinkNode-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li>addChild
 </li>
       <li><a href="dslink.broker/RemoteLinkNode/createListController.html">createListController</a>
@@ -814,6 +803,7 @@ Otherwise this will fetch a child.
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -838,10 +828,14 @@ Otherwise this will fetch a child.
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

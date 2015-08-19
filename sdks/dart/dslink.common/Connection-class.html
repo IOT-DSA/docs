@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-                <li class="self-crumb">Connection</li>
-            </ol>
-            <div class="self-name">Connection</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+                  <li class="self-crumb">Connection</li>
+              </ol>
+              <div class="self-name">Connection</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-            <li class="self-crumb">Connection</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Connection
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.common/Connection-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.common/Connection-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.common/Connection-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+              <li class="self-crumb">Connection</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Connection
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.common/Connection-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.common/Connection-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.common/Connection-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.common/dslink.common-library.html">dslink.common</a></h5>
 
@@ -103,7 +114,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -120,54 +131,54 @@
 
         <dl class="properties">
             <dt id="onDisconnected" class="property">
-                <span class="top-level-variable-type">Future&lt;bool&gt;</span>
-                <a href="dslink.common/Connection/onDisconnected.html">onDisconnected</a>
+                <span class="name"><a href="dslink.common/Connection/onDisconnected.html">onDisconnected</a></span>
+                <span class="signature">&#8594; Future&lt;bool&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    return true if it's authentication error
+    <p>return true if it's authentication error</p>
             </dd>
             <dt id="onRequesterReady" class="property">
-                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink.common/Connection/onRequesterReady.html">onRequesterReady</a>
+                <span class="name"><a href="dslink.common/Connection/onRequesterReady.html">onRequesterReady</a></span>
+                <span class="signature">&#8594; Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    trigger when requester channel is Ready
+    <p>trigger when requester channel is Ready</p>
             </dd>
             <dt id="pendingAcks" class="property">
-                <span class="top-level-variable-type">ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
-                <a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a>
+                <span class="name"><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></span>
+                <span class="signature">&#8594; ListQueue&lt;<a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    
+    <p></p>
             </dd>
             <dt id="requesterChannel" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
-                <a href="dslink.common/Connection/requesterChannel.html">requesterChannel</a>
+                <span class="name"><a href="dslink.common/Connection/requesterChannel.html">requesterChannel</a></span>
+                <span class="signature">&#8594; <a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="responderChannel" class="property">
-                <span class="top-level-variable-type"><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
-                <a href="dslink.common/Connection/responderChannel.html">responderChannel</a>
+                <span class="name"><a href="dslink.common/Connection/responderChannel.html">responderChannel</a></span>
+                <span class="signature">&#8594; <a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
         </dl>
     </section>
@@ -180,7 +191,7 @@
                 <span class="name"><a href="dslink.common/Connection/Connection.html">Connection</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -196,7 +207,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="addConnCommand" class="callable">
                   <a href="dslink.common/Connection/addConnCommand.html"><span class="name ">addConnCommand</span></a><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
@@ -205,7 +216,7 @@
                   </span>
               </dt>
               <dd>
-                  send a connection command
+                  <p>send a connection command</p>
               </dd>
               <dt id="close" class="callable">
                   <a href="dslink.common/Connection/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
@@ -214,7 +225,7 @@
                   </span>
               </dt>
               <dd>
-                  close the connection
+                  <p>close the connection</p>
               </dd>
               <dt id="requireSend" class="callable">
                   <a href="dslink.common/Connection/requireSend.html"><span class="name ">requireSend</span></a><span class="signature">(<wbr>)
@@ -223,20 +234,20 @@
                   </span>
               </dt>
               <dd>
-                  notify the connection channel need to send data
+                  <p>notify the connection channel need to send data</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Connection</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.common/Connection-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.common/Connection/onDisconnected.html">onDisconnected</a>
 </li>
       <li><a href="dslink.common/Connection/onRequesterReady.html">onRequesterReady</a>
@@ -248,11 +259,11 @@
       <li><a href="dslink.common/Connection/responderChannel.html">responderChannel</a>
 </li>
     
-      <li class="section-title"><a href="dslink.common/Connection-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.common/Connection/Connection.html">Connection</a></li>
     
     
-      <li class="section-title"><a href="dslink.common/Connection-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.common/Connection/ack.html">ack</a>
 </li>
       <li><a href="dslink.common/Connection/addConnCommand.html">addConnCommand</a>
@@ -264,6 +275,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -288,10 +300,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

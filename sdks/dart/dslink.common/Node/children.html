@@ -27,40 +27,50 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-                <li><a href="dslink.common/Node-class.html">Node</a></li>
-                <li class="self-crumb">children</li>
-            </ol>
-            <div class="self-name">children</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+                  <li><a href="dslink.common/Node-class.html">Node</a></li>
+                  <li class="self-crumb">children</li>
+              </ol>
+              <div class="self-name">children</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-            <li><a href="dslink.common/Node-class.html">Node</a></li>
-            <li class="self-crumb">children</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">property</div> children
-            </h1>
-            <!-- p class="subtitle">
-                Node Children
-Map of Child Name to Child Node
-            </p -->
-        </div>
-        <ul class="subnav">
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+              <li><a href="dslink.common/Node-class.html">Node</a></li>
+              <li class="self-crumb">children</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">property</div> children
+              </h1>
+          </div>
+          <ul class="subnav">
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.common/dslink.common-library.html">dslink.common</a></h5>
     <h5><a href="dslink.common/Node-class.html">Node</a></h5>
@@ -68,10 +78,10 @@ Map of Child Name to Child Node
     <ol>
     
     
-      <li class="section-title"><a href="dslink.common/Node-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink.common/Node/getDisplayName.html">getDisplayName</a></li>
     
-      <li class="section-title"><a href="dslink.common/Node-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.common/Node/attributes.html">attributes</a>
 </li>
       <li><a href="dslink.common/Node/children.html">children</a>
@@ -81,11 +91,11 @@ Map of Child Name to Child Node
       <li><a href="dslink.common/Node/profile.html">profile</a>
 </li>
     
-      <li class="section-title"><a href="dslink.common/Node-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.common/Node/Node.html">Node</a></li>
     
     
-      <li class="section-title"><a href="dslink.common/Node-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.common/Node/addChild.html">addChild</a>
 </li>
       <li><a href="dslink.common/Node/forEachAttribute.html">forEachAttribute</a>
@@ -110,12 +120,12 @@ Map of Child Name to Child Node
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
         <span class="returntype">Map&lt;String,<a href="dslink.common/Node-class.html">Node</a>&gt;</span>
         <span class="name ">children</span>
-        <div class="readable-writable">
+        <div class="features">
             read / write
         </div>
     </section>
@@ -124,13 +134,12 @@ Map of Child Name to Child Node
       
             <p>Node Children
 Map of Child Name to Child Node</p>
-<p>Node Children
-Map of Child Name to Child Node</p>
       
       </section>
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -155,10 +164,14 @@ Map of Child Name to Child Node</p>
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

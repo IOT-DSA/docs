@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-                <li class="self-crumb">Permission</li>
-            </ol>
-            <div class="self-name">Permission</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+                  <li class="self-crumb">Permission</li>
+              </ol>
+              <div class="self-name">Permission</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
-            <li class="self-crumb">Permission</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Permission
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.common/Permission-class.html#constants">Constants</a></li>
-            <li><a href="dslink.common/Permission-class.html#static-methods">Static Methods</a></li>
-            <li><a href="dslink.common/Permission-class.html#constructors">Constructors</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+              <li class="self-crumb">Permission</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Permission
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.common/Permission-class.html#constants">Constants</a></li>
+              <li><a href="dslink.common/Permission-class.html#static-methods">Static Methods</a></li>
+              <li><a href="dslink.common/Permission-class.html#constructors">Constructors</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.common/dslink.common-library.html">dslink.common</a></h5>
 
@@ -103,7 +114,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -119,98 +130,74 @@
             <dt id="CONFIG" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/CONFIG.html">CONFIG</a></span>
-                =
-                <span class="constant-value">4</span>
+                <span class="signature">= 4</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                config the node
+                <div class="features">const</div>
+                <p>config the node</p>
             </dd>
             <dt id="LIST" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/LIST.html">LIST</a></span>
-                =
-                <span class="constant-value">1</span>
+                <span class="signature">= 1</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                list node
+                <div class="features">const</div>
+                <p>list node</p>
             </dd>
             <dt id="nameParser" class="constant">
                 <span class="top-level-variable-type">Map&lt;String,int&gt;</span>
                 <span class="name "><a href="dslink.common/Permission/nameParser.html">nameParser</a></span>
-                =
-                <span class="constant-value">const {'none' : NONE, 'list' : LIST, 'read' : READ, 'write' : WRITE, 'config' : CONFIG, 'never' : NEVER}</span>
+                <span class="signature">= const {'none' : NONE, 'list' : LIST, 'read' : READ, 'write' : WRITE, 'config' : CONFIG, 'never' : NEVER}</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="names" class="constant">
                 <span class="top-level-variable-type">List&lt;String&gt;</span>
                 <span class="name "><a href="dslink.common/Permission/names.html">names</a></span>
-                =
-                <span class="constant-value">const ['none', 'list', 'read', 'write', 'config', 'never']</span>
+                <span class="signature">= const ['none', 'list', 'read', 'write', 'config', 'never']</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                
+                <div class="features">const</div>
+                <p></p>
             </dd>
             <dt id="NEVER" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/NEVER.html">NEVER</a></span>
-                =
-                <span class="constant-value">5</span>
+                <span class="signature">= 5</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                something that can never happen
+                <div class="features">const</div>
+                <p>something that can never happen</p>
             </dd>
             <dt id="NONE" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/NONE.html">NONE</a></span>
-                =
-                <span class="constant-value">0</span>
+                <span class="signature">= 0</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                now allowed to do anything
+                <div class="features">const</div>
+                <p>now allowed to do anything</p>
             </dd>
             <dt id="READ" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/READ.html">READ</a></span>
-                =
-                <span class="constant-value">2</span>
+                <span class="signature">= 2</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                read node
+                <div class="features">const</div>
+                <p>read node</p>
             </dd>
             <dt id="WRITE" class="constant">
                 <span class="top-level-variable-type">int</span>
                 <span class="name "><a href="dslink.common/Permission/WRITE.html">WRITE</a></span>
-                =
-                <span class="constant-value">3</span>
+                <span class="signature">= 3</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                write attribute and value
+                <div class="features">const</div>
+                <p>write attribute and value</p>
             </dd>
         </dl>
     </section>
@@ -226,7 +213,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -240,7 +227,7 @@
                 <span class="name"><a href="dslink.common/Permission/Permission.html">Permission</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -249,10 +236,10 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Permission</h5>
     <ol>
-      <li class="section-title"><a href="dslink.common/Permission-class.html#constants">Constants</a></li>
+      <li class="section-title"><a href="#constants">Constants</a></li>
       <li><a href="dslink.common/Permission/CONFIG.html">CONFIG</a></li>
       <li><a href="dslink.common/Permission/LIST.html">LIST</a></li>
       <li><a href="dslink.common/Permission/nameParser.html">nameParser</a></li>
@@ -263,17 +250,18 @@
       <li><a href="dslink.common/Permission/WRITE.html">WRITE</a></li>
     
     
-      <li class="section-title"><a href="dslink.common/Permission-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink.common/Permission/parse.html">parse</a></li>
     
     
-      <li class="section-title"><a href="dslink.common/Permission-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.common/Permission/Permission.html">Permission</a></li>
     
     
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -298,10 +286,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

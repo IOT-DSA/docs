@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-                <li class="self-crumb">firstWhere</li>
-            </ol>
-            <div class="self-name">firstWhere</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+                  <li class="self-crumb">firstWhere</li>
+              </ol>
+              <div class="self-name">firstWhere</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-            <li class="self-crumb">firstWhere</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> firstWhere
-            </h1>
-            <!-- p class="subtitle">
-                Finds the first element of this stream matching <code class="prettyprint lang-dart">test</code>.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/CachedStreamWrapper/firstWhere.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+              <li class="self-crumb">firstWhere</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> firstWhere
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/CachedStreamWrapper/firstWhere.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
     <h5><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></h5>
@@ -69,7 +80,7 @@
     
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/first.html">first</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/isBroadcast.html">isBroadcast</a>
@@ -85,11 +96,11 @@
       <li><a href="dslink.utils/CachedStreamWrapper/single.html">single</a>
 </li>
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/any.html">any</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html">asBroadcastStream</a>
@@ -154,7 +165,7 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype">Future</span>
@@ -167,11 +178,11 @@
 
     <section class="desc markdown">
     
-          <p>Finds the first element of this stream matching <code class="prettyprint lang-dart">test</code>.</p>
+          <p>Finds the first element of this stream matching <code>test</code>.</p>
 <p>Returns a future that is filled with the first element of this stream
-that <code class="prettyprint lang-dart">test</code> returns true for.</p>
+that <code>test</code> returns true for.</p>
 <p>If no such element is found before this stream is done, and a
-<code class="prettyprint lang-dart">defaultValue</code> function is provided, the result of calling <code class="prettyprint lang-dart">defaultValue</code>
+<code>defaultValue</code> function is provided, the result of calling <code>defaultValue</code>
 becomes the value of the future.</p>
 <p>Stops listening to the stream after the first matching element has been
 received.</p>
@@ -179,7 +190,7 @@ received.</p>
 matches the predicate. This means that single-subscription (non-broadcast)
 streams are closed and cannot be reused after a call to this method.</p>
 <p>If an error occurs, or if this stream ends without finding a match and
-with no <code class="prettyprint lang-dart">defaultValue</code> function provided, the future will receive an
+with no <code>defaultValue</code> function provided, the future will receive an
 error.</p>
     
     </section>
@@ -192,6 +203,7 @@ error.</p>
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -216,10 +228,14 @@ error.</p>
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

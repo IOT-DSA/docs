@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">ConnectionChannel</li>
-            </ol>
-            <div class="self-name">ConnectionChannel</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">ConnectionChannel</li>
+              </ol>
+              <div class="self-name">ConnectionChannel</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">ConnectionChannel</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> ConnectionChannel
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/ConnectionChannel-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink/ConnectionChannel-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink/ConnectionChannel-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">ConnectionChannel</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> ConnectionChannel
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/ConnectionChannel-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink/ConnectionChannel-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/ConnectionChannel-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -174,7 +185,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -191,54 +202,54 @@
 
         <dl class="properties">
             <dt id="connected" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink/ConnectionChannel/connected.html">connected</a>
+                <span class="name"><a href="dslink/ConnectionChannel/connected.html">connected</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="isReady" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink/ConnectionChannel/isReady.html">isReady</a>
+                <span class="name"><a href="dslink/ConnectionChannel/isReady.html">isReady</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    whether the connection is ready to send and receive data
+    <p>whether the connection is ready to send and receive data</p>
             </dd>
             <dt id="onConnected" class="property">
-                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink/ConnectionChannel/onConnected.html">onConnected</a>
+                <span class="name"><a href="dslink/ConnectionChannel/onConnected.html">onConnected</a></span>
+                <span class="signature">&#8594; Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="onDisconnected" class="property">
-                <span class="top-level-variable-type">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
-                <a href="dslink/ConnectionChannel/onDisconnected.html">onDisconnected</a>
+                <span class="name"><a href="dslink/ConnectionChannel/onDisconnected.html">onDisconnected</a></span>
+                <span class="signature">&#8594; Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="onReceive" class="property">
-                <span class="top-level-variable-type">Stream&lt;List&gt;</span>
-                <a href="dslink/ConnectionChannel/onReceive.html">onReceive</a>
+                <span class="name"><a href="dslink/ConnectionChannel/onReceive.html">onReceive</a></span>
+                <span class="signature">&#8594; Stream&lt;List&gt;</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    receive data from method stream
+    <p>receive data from method stream</p>
             </dd>
         </dl>
     </section>
@@ -251,7 +262,7 @@
                 <span class="name"><a href="dslink/ConnectionChannel/ConnectionChannel.html">ConnectionChannel</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -267,22 +278,22 @@
                   </span>
               </dt>
               <dd>
-                  raw connection need to handle error and resending of data, so it can only send one map at a time
+                  <p>raw connection need to handle error and resending of data, so it can only send one map at a time
 a new getData function will always overwrite the previous one;
-requester and responder should handle the merging of methods
+requester and responder should handle the merging of methods</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>ConnectionChannel</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink/ConnectionChannel-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/ConnectionChannel/connected.html">connected</a>
 </li>
       <li><a href="dslink/ConnectionChannel/isReady.html">isReady</a>
@@ -294,16 +305,17 @@ requester and responder should handle the merging of methods
       <li><a href="dslink/ConnectionChannel/onReceive.html">onReceive</a>
 </li>
     
-      <li class="section-title"><a href="dslink/ConnectionChannel-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/ConnectionChannel/ConnectionChannel.html">ConnectionChannel</a></li>
     
     
-      <li class="section-title"><a href="dslink/ConnectionChannel-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/ConnectionChannel/sendWhenReady.html">sendWhenReady</a>
 </li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -328,10 +340,14 @@ requester and responder should handle the merging of methods
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

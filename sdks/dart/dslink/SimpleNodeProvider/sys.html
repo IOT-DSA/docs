@@ -27,50 +27,61 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
-                <li class="self-crumb">sys</li>
-            </ol>
-            <div class="self-name">sys</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+                  <li class="self-crumb">sys</li>
+              </ol>
+              <div class="self-name">sys</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
-            <li class="self-crumb">sys</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">property</div> sys
-            </h1>
-            <!-- p class="subtitle">
-                sys node
-            </p -->
-        </div>
-        <ul class="subnav">
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+              <li class="self-crumb">sys</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">property</div> sys
+              </h1>
+          </div>
+          <ul class="subnav">
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
     <h5><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></h5>
 
     <ol>
     
-      <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#static-properties">Static properties</a></li>
+      <li class="section-title"><a href="#static-properties">Static properties</a></li>
       <li><a href="dslink/SimpleNodeProvider/instance.html">instance</a></li>
     
     
-      <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/SimpleNodeProvider/defs.html">defs</a>
 </li>
       <li><a href="dslink/SimpleNodeProvider/nodes.html">nodes</a>
@@ -82,16 +93,16 @@
       <li><a href="dslink/SimpleNodeProvider/sys.html">sys</a>
 </li>
     
-      <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></li>
     
-      <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="#operators">Operators</a></li>
       <li>operator []
 </li>
       <li>operator ~
 </li>
     
-      <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/SimpleNodeProvider/addNode.html">addNode</a>
 </li>
       <li><a href="dslink/SimpleNodeProvider/createNode.html">createNode</a>
@@ -116,12 +127,12 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
         <span class="returntype"><a href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
         <span class="name ">sys</span>
-        <div class="readable-writable">
+        <div class="features">
             read / write
         </div>
     </section>
@@ -129,12 +140,12 @@
       <section class="desc markdown">
       
             <p>sys node</p>
-<p>sys node</p>
       
       </section>
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -159,10 +170,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

@@ -27,39 +27,50 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">StreamStatus</li>
-            </ol>
-            <div class="self-name">StreamStatus</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">StreamStatus</li>
+              </ol>
+              <div class="self-name">StreamStatus</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">StreamStatus</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> StreamStatus
-            </h1>
-            <!-- p class="subtitle">
-                DSA Stream Status
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/StreamStatus-class.html#constants">Constants</a></li>
-            <li><a href="dslink/StreamStatus-class.html#constructors">Constructors</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">StreamStatus</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> StreamStatus
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/StreamStatus-class.html#constants">Constants</a></li>
+              <li><a href="dslink/StreamStatus-class.html#constructors">Constructors</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -173,7 +184,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -189,38 +200,29 @@
             <dt id="closed" class="constant">
                 <span class="top-level-variable-type">String</span>
                 <span class="name "><a href="dslink/StreamStatus/closed.html">closed</a></span>
-                =
-                <span class="constant-value">'closed'</span>
+                <span class="signature">= 'closed'</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                Stream is closed.
+                <div class="features">const</div>
+                <p>Stream is closed.</p>
             </dd>
             <dt id="initialize" class="constant">
                 <span class="top-level-variable-type">String</span>
                 <span class="name "><a href="dslink/StreamStatus/initialize.html">initialize</a></span>
-                =
-                <span class="constant-value">'initialize'</span>
+                <span class="signature">= 'initialize'</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                Stream should be initialized.
+                <div class="features">const</div>
+                <p>Stream should be initialized.</p>
             </dd>
             <dt id="open" class="constant">
                 <span class="top-level-variable-type">String</span>
                 <span class="name "><a href="dslink/StreamStatus/open.html">open</a></span>
-                =
-                <span class="constant-value">'open'</span>
+                <span class="signature">= 'open'</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                Stream is open.
+                <div class="features">const</div>
+                <p>Stream is open.</p>
             </dd>
         </dl>
     </section>
@@ -236,7 +238,7 @@
                 <span class="name"><a href="dslink/StreamStatus/StreamStatus.html">StreamStatus</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -245,10 +247,10 @@
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>StreamStatus</h5>
     <ol>
-      <li class="section-title"><a href="dslink/StreamStatus-class.html#constants">Constants</a></li>
+      <li class="section-title"><a href="#constants">Constants</a></li>
       <li><a href="dslink/StreamStatus/closed.html">closed</a></li>
       <li><a href="dslink/StreamStatus/initialize.html">initialize</a></li>
       <li><a href="dslink/StreamStatus/open.html">open</a></li>
@@ -256,13 +258,14 @@
     
     
     
-      <li class="section-title"><a href="dslink/StreamStatus-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/StreamStatus/StreamStatus.html">StreamStatus</a></li>
     
     
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -287,10 +290,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

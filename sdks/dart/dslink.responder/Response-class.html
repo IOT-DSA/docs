@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
-                <li class="self-crumb">Response</li>
-            </ol>
-            <div class="self-name">Response</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+                  <li class="self-crumb">Response</li>
+              </ol>
+              <div class="self-name">Response</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
-            <li class="self-crumb">Response</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Response
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.responder/Response-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.responder/Response-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.responder/Response-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+              <li class="self-crumb">Response</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Response
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.responder/Response-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.responder/Response-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.responder/Response-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
 
@@ -104,7 +115,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -118,7 +129,7 @@
 
         <dt>Implements</dt>
             <dd>
-                <ul class="comma-separated class-relationships">
+                <ul class="comma-separated clazz-relationships">
                     <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
                 </ul>
             </dd>
@@ -135,24 +146,24 @@
 
         <dl class="properties">
             <dt id="responder" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Responder-class.html">Responder</a></span>
-                <a href="dslink.responder/Response/responder.html">responder</a>
+                <span class="name"><a href="dslink.responder/Response/responder.html">responder</a></span>
+                <span class="signature">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="rid" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href="dslink.responder/Response/rid.html">rid</a>
+                <span class="name"><a href="dslink.responder/Response/rid.html">rid</a></span>
+                <span class="signature">&#8594; int</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
         </dl>
     </section>
@@ -165,7 +176,7 @@
                 <span class="name"><a href="dslink.responder/Response/Response.html">Response</a></span><span class="signature">(<span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -181,7 +192,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="close" class="callable">
                   <a href="dslink.responder/Response/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
@@ -190,7 +201,7 @@
                   </span>
               </dt>
               <dd>
-                  close the request from responder side and also notify the requester
+                  <p>close the request from responder side and also notify the requester</p>
               </dd>
               <dt id="getTraceData" class="callable">
                   <a href="dslink.responder/Response/getTraceData.html"><span class="name ">getTraceData</span></a><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
@@ -199,7 +210,7 @@
                   </span>
               </dt>
               <dd>
-                  for the broker trace action
+                  <p>for the broker trace action</p>
               </dd>
               <dt id="prepareSending" class="callable">
                   <a href="dslink.responder/Response/prepareSending.html"><span class="name ">prepareSending</span></a><span class="signature">(<wbr>)
@@ -208,7 +219,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="startSendingData" class="callable">
                   <a href="dslink.responder/Response/startSendingData.html"><span class="name ">startSendingData</span></a><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
@@ -217,30 +228,30 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Response</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.responder/Response-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.responder/Response/responder.html">responder</a>
 </li>
       <li><a href="dslink.responder/Response/rid.html">rid</a>
 </li>
     
-      <li class="section-title"><a href="dslink.responder/Response-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.responder/Response/Response.html">Response</a></li>
     
     
-      <li class="section-title"><a href="dslink.responder/Response-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.responder/Response/ackReceived.html">ackReceived</a>
 </li>
       <li><a href="dslink.responder/Response/close.html">close</a>
@@ -254,6 +265,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -278,10 +290,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

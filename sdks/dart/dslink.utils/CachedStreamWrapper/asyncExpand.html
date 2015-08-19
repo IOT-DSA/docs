@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-                <li class="self-crumb">asyncExpand</li>
-            </ol>
-            <div class="self-name">asyncExpand</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+                  <li class="self-crumb">asyncExpand</li>
+              </ol>
+              <div class="self-name">asyncExpand</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-            <li class="self-crumb">asyncExpand</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> asyncExpand
-            </h1>
-            <!-- p class="subtitle">
-                Creates a new stream with the events of a stream per original event.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/CachedStreamWrapper/asyncExpand.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+              <li class="self-crumb">asyncExpand</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> asyncExpand
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/CachedStreamWrapper/asyncExpand.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
     <h5><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></h5>
@@ -69,7 +80,7 @@
     
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/first.html">first</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/isBroadcast.html">isBroadcast</a>
@@ -85,11 +96,11 @@
       <li><a href="dslink.utils/CachedStreamWrapper/single.html">single</a>
 </li>
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper/any.html">any</a>
 </li>
       <li><a href="dslink.utils/CachedStreamWrapper/asBroadcastStream.html">asBroadcastStream</a>
@@ -154,7 +165,7 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype">Stream</span>
@@ -168,11 +179,11 @@
     <section class="desc markdown">
     
           <p>Creates a new stream with the events of a stream per original event.</p>
-<p>This acts like <code class="prettyprint lang-dart">expand</code>, except that <code class="prettyprint lang-dart">convert</code> returns a <code class="prettyprint lang-dart">Stream</code>
-instead of an <code class="prettyprint lang-dart">Iterable</code>.
+<p>This acts like <code>expand</code>, except that <code>convert</code> returns a <code>Stream</code>
+instead of an <code>Iterable</code>.
 The events of the returned stream becomes the events of the returned
 stream, in the order they are produced.</p>
-<p>If <code class="prettyprint lang-dart">convert</code> returns <code class="prettyprint lang-dart">null</code>, no value is put on the output stream,
+<p>If <code>convert</code> returns <code>null</code>, no value is put on the output stream,
 just as if it returned an empty stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.</p>
     
@@ -185,6 +196,7 @@ just as if it returned an empty stream.</p>
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -209,10 +221,14 @@ just as if it returned an empty stream.</p>
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

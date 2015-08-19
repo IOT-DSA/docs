@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">Request</li>
-            </ol>
-            <div class="self-name">Request</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">Request</li>
+              </ol>
+              <div class="self-name">Request</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">Request</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> Request
-            </h1>
-            <!-- p class="subtitle">
-                request class handles raw response from responder
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/Request-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink/Request-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink/Request-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">Request</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> Request
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/Request-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink/Request-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/Request-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -174,7 +185,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -191,64 +202,64 @@
 
         <dl class="properties">
             <dt id="data" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <a href="dslink/Request/data.html">data</a>
+                <span class="name"><a href="dslink/Request/data.html">data</a></span>
+                <span class="signature">&#8594; Map</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="isClosed" class="property">
-                <span class="top-level-variable-type">bool</span>
-                <a href="dslink/Request/isClosed.html">isClosed</a>
+                <span class="name"><a href="dslink/Request/isClosed.html">isClosed</a></span>
+                <span class="signature">&#8594; bool</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="requester" class="property">
-                <span class="top-level-variable-type"><a href="dslink/Requester-class.html">Requester</a></span>
-                <a href="dslink/Request/requester.html">requester</a>
+                <span class="name"><a href="dslink/Request/requester.html">requester</a></span>
+                <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="rid" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href="dslink/Request/rid.html">rid</a>
+                <span class="name"><a href="dslink/Request/rid.html">rid</a></span>
+                <span class="signature">&#8594; int</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    
+    <p></p>
             </dd>
             <dt id="streamStatus" class="property">
-                <span class="top-level-variable-type">String</span>
-                <a href="dslink/Request/streamStatus.html">streamStatus</a>
+                <span class="name"><a href="dslink/Request/streamStatus.html">streamStatus</a></span>
+                <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    
+    <p></p>
             </dd>
             <dt id="updater" class="property">
-                <span class="top-level-variable-type"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
-                <a href="dslink/Request/updater.html">updater</a>
+                <span class="name"><a href="dslink/Request/updater.html">updater</a></span>
+                <span class="signature">&#8594; <a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    raw request callback
+    <p>raw request callback</p>
             </dd>
         </dl>
     </section>
@@ -261,7 +272,7 @@
                 <span class="name"><a href="dslink/Request/Request.html">Request</a></span><span class="signature">(<span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-updater"><span class="type-annotation"><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>, <span class="parameter" id="-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -277,7 +288,7 @@
                   </span>
               </dt>
               <dd>
-                  close the request from the client side
+                  <p>close the request from the client side</p>
               </dd>
               <dt id="resend" class="callable">
                   <a href="dslink/Request/resend.html"><span class="name ">resend</span></a><span class="signature">(<wbr>)
@@ -286,20 +297,20 @@
                   </span>
               </dt>
               <dd>
-                  resend the data if previous sending failed
+                  <p>resend the data if previous sending failed</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>Request</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink/Request-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/Request/data.html">data</a>
 </li>
       <li><a href="dslink/Request/isClosed.html">isClosed</a>
@@ -313,11 +324,11 @@
       <li><a href="dslink/Request/updater.html">updater</a>
 </li>
     
-      <li class="section-title"><a href="dslink/Request-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/Request/Request.html">Request</a></li>
     
     
-      <li class="section-title"><a href="dslink/Request-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/Request/close.html">close</a>
 </li>
       <li><a href="dslink/Request/resend.html">resend</a>
@@ -325,6 +336,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -349,10 +361,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

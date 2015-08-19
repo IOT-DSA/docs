@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
-                <li class="self-crumb">close</li>
-            </ol>
-            <div class="self-name">close</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
+                  <li class="self-crumb">close</li>
+              </ol>
+              <div class="self-name">close</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
-            <li class="self-crumb">close</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> close
-            </h1>
-            <!-- p class="subtitle">
-                As <code class="prettyprint lang-dart">EventSink.close</code>, but returns a future.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/BroadcastStreamController/close.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
+              <li class="self-crumb">close</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> close
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/BroadcastStreamController/close.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
     <h5><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></h5>
@@ -69,7 +80,7 @@
     
     
     
-      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/done.html">done</a>
 </li>
       <li><a href="dslink.utils/BroadcastStreamController/hasListener.html">hasListener</a>
@@ -78,16 +89,24 @@
 </li>
       <li><a href="dslink.utils/BroadcastStreamController/isPaused.html">isPaused</a>
 </li>
+      <li>onCancel
+</li>
+      <li>onListen
+</li>
+      <li>onPause
+</li>
+      <li>onResume
+</li>
       <li><a href="dslink.utils/BroadcastStreamController/sink.html">sink</a>
 </li>
       <li><a href="dslink.utils/BroadcastStreamController/stream.html">stream</a>
 </li>
     
-      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/BroadcastStreamController.html">BroadcastStreamController</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BroadcastStreamController-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/add.html">add</a>
 </li>
       <li><a href="dslink.utils/BroadcastStreamController/addError.html">addError</a>
@@ -102,7 +121,7 @@
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype">Future</span>
@@ -111,8 +130,19 @@
 
     <section class="desc markdown">
     
-          <p>As <code class="prettyprint lang-dart">EventSink.close</code>, but returns a future.</p>
-<p>Returns the same future as <code class="prettyprint lang-dart">done</code>.</p>
+          <p>Tells the stream sink that no futher streams will be added.</p>
+<p>This allows the stream sink to complete any remaining work and release
+resources that are no longer needed</p>
+<p>Returns a future which is completed when the stream sink has shut down.
+If cleaning up can fail, the error may be reported in the returned future,
+otherwise it completes with <code>null</code>.</p>
+<p>Returns the same future as <code>done</code>.</p>
+<p>The stream sink may close before the <code>close</code> method is called, either due
+to an error or because it is itself provding events to someone who has
+stopped listening. In that case, the <code>done</code> future is completed first,
+and the <code>close</code> method will return the <code>done</code> future when called.</p>
+<p>Unifies <code>StreamConsumer.close</code> and <code>EventSink.close</code> which both mark their
+object as not expecting any further events.</p>
     
     </section>
 
@@ -125,6 +155,7 @@
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -149,10 +180,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

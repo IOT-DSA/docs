@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                <li class="self-crumb">TimerFunctions</li>
-            </ol>
-            <div class="self-name">TimerFunctions</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+                  <li class="self-crumb">TimerFunctions</li>
+              </ol>
+              <div class="self-name">TimerFunctions</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-            <li class="self-crumb">TimerFunctions</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> TimerFunctions
-            </h1>
-            <!-- p class="subtitle">
-                
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.utils/TimerFunctions-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink.utils/TimerFunctions-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink.utils/TimerFunctions-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+              <li class="self-crumb">TimerFunctions</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> TimerFunctions
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.utils/TimerFunctions-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink.utils/TimerFunctions-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.utils/TimerFunctions-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
 
@@ -108,7 +119,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -120,7 +131,7 @@
         <dl class="dl-horizontal">
 
         <dt>Extends</dt>
-        <dd><ul class="gt-separated dark class-relationships">
+        <dd><ul class="gt-separated dark clazz-relationships">
             <li>Object</li>
             <li>LinkedListEntry</li>
             <li>TimerFunctions</li>
@@ -139,44 +150,44 @@
 
         <dl class="properties">
             <dt id="list" class="property">
-                <span class="top-level-variable-type">LinkedList</span>
-                <span class="name ">list</span>
+            <span class="name ">list</span>    
+                <span class="signature">&#8594; LinkedList</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    Get the linked list containing this element.
+    <p>Get the linked list containing this element.</p>
             </dd>
             <dt id="next" class="property">
-                <span class="top-level-variable-type">dynamic</span>
-                <span class="name ">next</span>
+            <span class="name ">next</span>    
+                <span class="signature">&#8594; dynamic</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    Return the succeessor of this element in its linked list.
+    <p>Return the succeessor of this element in its linked list.</p>
             </dd>
             <dt id="previous" class="property">
-                <span class="top-level-variable-type">dynamic</span>
-                <span class="name ">previous</span>
+            <span class="name ">previous</span>    
+                <span class="signature">&#8594; dynamic</span>
             </dt>
             <dd>
-                <div class="readable-writable">
-        read-only, <span class="is-inherited">inherited</span>
+                <div class="features">
+        read-only, inherited
     </div>
-    Return the predecessor of this element in its linked list.
+    <p>Return the predecessor of this element in its linked list.</p>
             </dd>
             <dt id="ts50" class="property">
-                <span class="top-level-variable-type">int</span>
-                <a href="dslink.utils/TimerFunctions/ts50.html">ts50</a>
+                <span class="name"><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a></span>
+                <span class="signature">&#8594; int</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    for better performance, use a low accuricy timer, ts50 is the floor of ts/50
+    <p>for better performance, use a low accuricy timer, ts50 is the floor of ts/50</p>
             </dd>
         </dl>
     </section>
@@ -189,7 +200,7 @@
                 <span class="name"><a href="dslink.utils/TimerFunctions/TimerFunctions.html">TimerFunctions</a></span><span class="signature">(<span class="parameter" id="-param-ts50"><span class="type-annotation">int</span> <span class="parameter-name">ts50</span></span>)</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -205,7 +216,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="insertAfter" class="callable">
                   <span class="name ">insertAfter</span><span class="signature">(<wbr><span class="parameter" id="insertAfter-param-entry"><span class="parameter-name">entry</span></span>)
@@ -214,10 +225,8 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Insert an element after this element in this element's linked list.
+                  <div class="features">inherited</div>
+                  <p>Insert an element after this element in this element's linked list.</p>
               </dd>
               <dt id="insertBefore" class="callable">
                   <span class="name ">insertBefore</span><span class="signature">(<wbr><span class="parameter" id="insertBefore-param-entry"><span class="parameter-name">entry</span></span>)
@@ -226,10 +235,8 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Insert an element before this element in this element's linked list.
+                  <div class="features">inherited</div>
+                  <p>Insert an element before this element in this element's linked list.</p>
               </dd>
               <dt id="remove" class="callable">
                   <a href="dslink.utils/TimerFunctions/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr><span class="parameter" id="remove-param-foo"><span class="type-annotation">Function</span> <span class="parameter-name">foo</span></span>)
@@ -238,7 +245,7 @@
                   </span>
               </dt>
               <dd>
-                  
+                  <p></p>
               </dd>
               <dt id="unlink" class="callable">
                   <span class="name ">unlink</span><span class="signature">(<wbr>)
@@ -247,23 +254,21 @@
                   </span>
               </dt>
               <dd>
-                  <div>
-                    <span class="is-inherited">inherited</span>
-                  </div>
-                  Unlink the element from its linked list.
+                  <div class="features">inherited</div>
+                  <p>Unlink the element from its linked list.</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>TimerFunctions</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.utils/TimerFunctions-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li>list
 </li>
       <li>next
@@ -273,11 +278,11 @@
       <li><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a>
 </li>
     
-      <li class="section-title"><a href="dslink.utils/TimerFunctions-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink.utils/TimerFunctions/TimerFunctions.html">TimerFunctions</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/TimerFunctions-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink.utils/TimerFunctions/add.html">add</a>
 </li>
       <li>insertAfter
@@ -291,6 +296,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -315,10 +321,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

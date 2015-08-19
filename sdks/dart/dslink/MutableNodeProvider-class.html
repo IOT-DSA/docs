@@ -27,39 +27,50 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">MutableNodeProvider</li>
-            </ol>
-            <div class="self-name">MutableNodeProvider</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">MutableNodeProvider</li>
+              </ol>
+              <div class="self-name">MutableNodeProvider</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">MutableNodeProvider</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> MutableNodeProvider
-            </h1>
-            <!-- p class="subtitle">
-                Interface for node providers that are mutable.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/MutableNodeProvider-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink/MutableNodeProvider-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">MutableNodeProvider</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> MutableNodeProvider
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/MutableNodeProvider-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/MutableNodeProvider-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -173,7 +184,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -194,7 +205,7 @@
                 <span class="name"><a href="dslink/MutableNodeProvider/MutableNodeProvider.html">MutableNodeProvider</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -210,7 +221,7 @@
                   </span>
               </dt>
               <dd>
-                  Adds a node at the given <code class="prettyprint lang-dart">path</code> that is initialized with the given data in <code class="prettyprint lang-dart">m</code>.
+                  <p>Adds a node at the given <code>path</code> that is initialized with the given data in <code>m</code>.</p>
               </dd>
               <dt id="removeNode" class="callable">
                   <a href="dslink/MutableNodeProvider/removeNode.html"><span class="name ">removeNode</span></a><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -219,7 +230,7 @@
                   </span>
               </dt>
               <dd>
-                  Removes the node specified at <code class="prettyprint lang-dart">path</code>.
+                  <p>Removes the node specified at <code>path</code>.</p>
               </dd>
               <dt id="updateValue" class="callable">
                   <a href="dslink/MutableNodeProvider/updateValue.html"><span class="name ">updateValue</span></a><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
@@ -228,25 +239,25 @@
                   </span>
               </dt>
               <dd>
-                  Updates the value of the node at <code class="prettyprint lang-dart">path</code> to the given <code class="prettyprint lang-dart">value</code>.
+                  <p>Updates the value of the node at <code>path</code> to the given <code>value</code>.</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>MutableNodeProvider</h5>
     <ol>
     
     
     
     
-      <li class="section-title"><a href="dslink/MutableNodeProvider-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/MutableNodeProvider/MutableNodeProvider.html">MutableNodeProvider</a></li>
     
     
-      <li class="section-title"><a href="dslink/MutableNodeProvider-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/MutableNodeProvider/addNode.html">addNode</a>
 </li>
       <li><a href="dslink/MutableNodeProvider/removeNode.html">removeNode</a>
@@ -256,6 +267,7 @@
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -280,10 +292,14 @@
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

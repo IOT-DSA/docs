@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li><a href="dslink/TableColumn-class.html">TableColumn</a></li>
-                <li class="self-crumb">parseColumns</li>
-            </ol>
-            <div class="self-name">parseColumns</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li><a href="dslink/TableColumn-class.html">TableColumn</a></li>
+                  <li class="self-crumb">parseColumns</li>
+              </ol>
+              <div class="self-name">parseColumns</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li><a href="dslink/TableColumn-class.html">TableColumn</a></li>
-            <li class="self-crumb">parseColumns</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">method</div> parseColumns
-            </h1>
-            <!-- p class="subtitle">
-                parse List of Map into TableColumn
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/TableColumn/parseColumns.html#source">Source</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li><a href="dslink/TableColumn-class.html">TableColumn</a></li>
+              <li class="self-crumb">parseColumns</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> parseColumns
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/TableColumn/parseColumns.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
     <h5><a href="dslink/TableColumn-class.html">TableColumn</a></h5>
@@ -68,11 +79,11 @@
     <ol>
     
     
-      <li class="section-title"><a href="dslink/TableColumn-class.html#static-methods">Static methods</a></li>
+      <li class="section-title"><a href="#static-methods">Static methods</a></li>
       <li><a href="dslink/TableColumn/parseColumns.html">parseColumns</a></li>
       <li><a href="dslink/TableColumn/serializeColumns.html">serializeColumns</a></li>
     
-      <li class="section-title"><a href="dslink/TableColumn-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/TableColumn/defaultValue.html">defaultValue</a>
 </li>
       <li><a href="dslink/TableColumn/name.html">name</a>
@@ -80,18 +91,18 @@
       <li><a href="dslink/TableColumn/type.html">type</a>
 </li>
     
-      <li class="section-title"><a href="dslink/TableColumn-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/TableColumn/TableColumn.html">TableColumn</a></li>
     
     
-      <li class="section-title"><a href="dslink/TableColumn-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/TableColumn/getData.html">getData</a>
 </li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
             <span class="returntype">List&lt;<a href="dslink.common/TableColumn-class.html">TableColumn</a>&gt;</span>
@@ -133,6 +144,7 @@ static List&lt;TableColumn&gt; parseColumns(List list) {
 
   </div> <!-- /.main-content -->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -157,10 +169,14 @@ static List&lt;TableColumn&gt; parseColumns(List list) {
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

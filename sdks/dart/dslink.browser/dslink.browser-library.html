@@ -27,40 +27,51 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li class="self-crumb">dslink.browser</li>
-            </ol>
-            <div class="self-name">dslink.browser</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li class="self-crumb">dslink.browser</li>
+              </ol>
+              <div class="self-name">dslink.browser</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li class="self-crumb">dslink.browser</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">library</div> dslink.browser
-            </h1>
-            <!-- p class="subtitle">
-                Main DSLink API for Browsers
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink.browser/dslink.browser-library.html#constants">Constants</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html#functions">Functions</a></li>
-            <li><a href="dslink.browser/dslink.browser-library.html#classes">Classes</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li class="self-crumb">dslink.browser</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">library</div> dslink.browser
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.browser/dslink.browser-library.html#constants">Constants</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html#functions">Functions</a></li>
+              <li><a href="dslink.browser/dslink.browser-library.html#classes">Classes</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
 
     <ol>
@@ -83,7 +94,7 @@
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -98,14 +109,11 @@
             <dt id="unspecified" class="constant">
                 <span class="top-level-variable-type"><a href="dslink/Unspecified-class.html">Unspecified</a></span>
                 <span class="name "><a href="dslink.browser/unspecified.html">unspecified</a></span>
-                =
-                <span class="constant-value">const <a href="dslink/Unspecified-class.html">Unspecified</a>()</span>
+                <span class="signature">= const <a href="dslink/Unspecified-class.html">Unspecified</a>()</span>
             </dt>
             <dd>
-                <div class="is-const">
-                    const
-                </div>
-                Marks something as being unspecified.
+                <div class="features">const</div>
+                <p>Marks something as being unspecified.</p>
             </dd>
         </dl>
     </section>
@@ -121,7 +129,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="OnInvokeAcked" class="callable">
                 <a href="dslink.browser/OnInvokeAcked.html"><span class="name ">OnInvokeAcked</span></a><span class="signature">(<wbr><span class="parameter" id="OnInvokeAcked-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="OnInvokeAcked-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>, <span class="parameter" id="OnInvokeAcked-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>, <span class="parameter" id="OnInvokeAcked-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>)
@@ -130,7 +138,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="OnInvokeClosed" class="callable">
                 <a href="dslink.browser/OnInvokeClosed.html"><span class="name ">OnInvokeClosed</span></a><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
@@ -139,7 +147,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ResponseTraceCallback" class="callable">
                 <a href="dslink.browser/ResponseTraceCallback.html"><span class="name ">ResponseTraceCallback</span></a><span class="signature">(<wbr><span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)
@@ -148,7 +156,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -158,14 +166,14 @@
 
         <dl class="properties">
             <dt id="defaultProfileMap" class="property">
-                <span class="top-level-variable-type">Map</span>
-                <a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a>
+                <span class="name"><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></span>
+                <span class="signature">&#8594; Map</span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read / write
     </div>
-    
+    <p></p>
             </dd>
         </dl>
     </section>
@@ -181,7 +189,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="buildEnumType" class="callable">
                 <a href="dslink.browser/buildEnumType.html"><span class="name ">buildEnumType</span></a><span class="signature">(<wbr><span class="parameter" id="buildEnumType-param-values"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">values</span></span>)
@@ -190,7 +198,7 @@
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="getPrivateKey" class="callable">
                 <a href="dslink.browser/getPrivateKey.html"><span class="name ">getPrivateKey</span></a><span class="signature">(<wbr>{<span class="parameter" id="getPrivateKey-param-storage"><span class="type-annotation"><a href="dslink.browser/DataStorage-class.html">DataStorage</a></span> <span class="parameter-name">storage</span></span>})
@@ -199,8 +207,8 @@
                 </span>
             </dt>
             <dd>
-                Get a Private Key using the specified storage strategy.
-If <code class="prettyprint lang-dart">storage</code> is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.
+                <p>Get a Private Key using the specified storage strategy.
+If <code>storage</code> is not specified, it uses the <a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a> class.</p>
             </dd>
             <dt id="parseEnumType" class="callable">
                 <a href="dslink.browser/parseEnumType.html"><span class="name ">parseEnumType</span></a><span class="signature">(<wbr><span class="parameter" id="parseEnumType-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span></span>)
@@ -209,7 +217,7 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
                 </span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="updateLogLevel" class="callable">
                 <a href="dslink.browser/updateLogLevel.html"><span class="name ">updateLogLevel</span></a><span class="signature">(<wbr><span class="parameter" id="updateLogLevel-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -218,7 +226,7 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
                 </span>
             </dt>
             <dd>
-                Updates the log level to the level specified <code class="prettyprint lang-dart">name</code>.
+                <p>Updates the log level to the level specified <code>name</code>.</p>
             </dd>
         </dl>
     </section>
@@ -232,484 +240,484 @@ If <code class="prettyprint lang-dart">storage</code> is not specified, it uses 
                 <span class="name "><a href="dslink.browser/AsyncTableResult-class.html">AsyncTableResult</a></span>
             </dt>
             <dd>
-                An Asynchronous Table Result
-This can be used to return asynchronous tables from actions.
+                <p>An Asynchronous Table Result
+This can be used to return asynchronous tables from actions.</p>
             </dd>
             <dt id="BaseLink">
                 <span class="name "><a href="dslink.browser/BaseLink-class.html">BaseLink</a></span>
             </dt>
             <dd>
-                Base Class for Links
+                <p>Base Class for Links</p>
             </dd>
             <dt id="BrowserECDHLink">
                 <span class="name "><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></span>
             </dt>
             <dd>
-                a client link for both http and ws
+                <p>a client link for both http and ws</p>
             </dd>
             <dt id="BrowserUserLink">
                 <span class="name "><a href="dslink.browser/BrowserUserLink-class.html">BrowserUserLink</a></span>
             </dt>
             <dd>
-                a client link for both http and ws
+                <p>a client link for both http and ws</p>
             </dd>
             <dt id="BrowserUtils">
                 <span class="name "><a href="dslink.browser/BrowserUtils-class.html">BrowserUtils</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ByteDataUtil">
                 <span class="name "><a href="dslink.browser/ByteDataUtil-class.html">ByteDataUtil</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ClientLink">
                 <span class="name "><a href="dslink.browser/ClientLink-class.html">ClientLink</a></span>
             </dt>
             <dd>
-                Base Class for Client Link implementations.
+                <p>Base Class for Client Link implementations.</p>
             </dd>
             <dt id="Configs">
                 <span class="name "><a href="dslink.browser/Configs-class.html">Configs</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ConfigSetting">
                 <span class="name "><a href="dslink.browser/ConfigSetting-class.html">ConfigSetting</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Connection">
                 <span class="name "><a href="dslink.browser/Connection-class.html">Connection</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ConnectionAckGroup">
                 <span class="name "><a href="dslink.browser/ConnectionAckGroup-class.html">ConnectionAckGroup</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ConnectionChannel">
                 <span class="name "><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ConnectionHandler">
                 <span class="name "><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ConnectionProcessor">
                 <span class="name "><a href="dslink.browser/ConnectionProcessor-class.html">ConnectionProcessor</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DataStorage">
                 <span class="name "><a href="dslink.browser/DataStorage-class.html">DataStorage</a></span>
             </dt>
             <dd>
-                A Storage System for DSA Data
+                <p>A Storage System for DSA Data</p>
             </dd>
             <dt id="DefaultDefNodes">
                 <span class="name "><a href="dslink.browser/DefaultDefNodes-class.html">DefaultDefNodes</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DefinitionNode">
                 <span class="name "><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></span>
             </dt>
             <dd>
-                definition nodes are serializable node that won't change
-the only change will be a global upgrade
+                <p>definition nodes are serializable node that won't change
+the only change will be a global upgrade</p>
             </dd>
             <dt id="DSError">
                 <span class="name "><a href="dslink.browser/DSError-class.html">DSError</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DSLinkJSON">
                 <span class="name "><a href="dslink.browser/DSLinkJSON-class.html">DSLinkJSON</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="DummyPermissionManager">
                 <span class="name "><a href="dslink.browser/DummyPermissionManager-class.html">DummyPermissionManager</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ErrorPhase">
                 <span class="name "><a href="dslink.browser/ErrorPhase-class.html">ErrorPhase</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Interval">
                 <span class="name "><a href="dslink.browser/Interval-class.html">Interval</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="InvokeController">
                 <span class="name "><a href="dslink.browser/InvokeController-class.html">InvokeController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="InvokeResponse">
                 <span class="name "><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="IPermissionManager">
                 <span class="name "><a href="dslink.browser/IPermissionManager-class.html">IPermissionManager</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="LinkProvider">
                 <span class="name "><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></span>
             </dt>
             <dd>
-                DSLink Provider for the Browser
+                <p>DSLink Provider for the Browser</p>
             </dd>
             <dt id="ListController">
                 <span class="name "><a href="dslink.browser/ListController-class.html">ListController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ListDefListener">
                 <span class="name "><a href="dslink.browser/ListDefListener-class.html">ListDefListener</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ListResponse">
                 <span class="name "><a href="dslink.browser/ListResponse-class.html">ListResponse</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="LocalDataStorage">
                 <span class="name "><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></span>
             </dt>
             <dd>
-                Storage for DSA in Local Storage
+                <p>Storage for DSA in Local Storage</p>
             </dd>
             <dt id="LocalNode">
                 <span class="name "><a href="dslink.browser/LocalNode-class.html">LocalNode</a></span>
             </dt>
             <dd>
-                Base Class for responder-side nodes.
+                <p>Base Class for responder-side nodes.</p>
             </dd>
             <dt id="LocalNodeImpl">
                 <span class="name "><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="MutableNodeProvider">
                 <span class="name "><a href="dslink.browser/MutableNodeProvider-class.html">MutableNodeProvider</a></span>
             </dt>
             <dd>
-                Interface for node providers that are mutable.
+                <p>Interface for node providers that are mutable.</p>
             </dd>
             <dt id="Node">
                 <span class="name "><a href="dslink.browser/Node-class.html">Node</a></span>
             </dt>
             <dd>
-                Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the <code class="prettyprint lang-dart">dslink.responder.SimpleNode</code> class.
+                <p>Base Class for any and all nodes in the SDK.
+If you are writing a link, please look at the <code>dslink.responder.SimpleNode</code> class.</p>
             </dd>
             <dt id="NodeProvider">
                 <span class="name "><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span>
             </dt>
             <dd>
-                Provides Nodes for a responder.
-A single node provider can be reused by multiple responder.
+                <p>Provides Nodes for a responder.
+A single node provider can be reused by multiple responder.</p>
             </dd>
             <dt id="NodeProviderImpl">
                 <span class="name "><a href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="PassiveChannel">
                 <span class="name "><a href="dslink.browser/PassiveChannel-class.html">PassiveChannel</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Path">
                 <span class="name "><a href="dslink.browser/Path-class.html">Path</a></span>
             </dt>
             <dd>
-                Utility class for node and config/attribute paths.
+                <p>Utility class for node and config/attribute paths.</p>
             </dd>
             <dt id="Permission">
                 <span class="name "><a href="dslink.browser/Permission-class.html">Permission</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="PermissionList">
                 <span class="name "><a href="dslink.browser/PermissionList-class.html">PermissionList</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="PrivateKey">
                 <span class="name "><a href="dslink.browser/PrivateKey-class.html">PrivateKey</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ProcessorResult">
                 <span class="name "><a href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></span>
             </dt>
             <dd>
-                generate message right before sending to get the latest update
-return messages and the processors that need ack callback
+                <p>generate message right before sending to get the latest update
+return messages and the processors that need ack callback</p>
             </dd>
             <dt id="RemoteDefNode">
                 <span class="name "><a href="dslink.browser/RemoteDefNode-class.html">RemoteDefNode</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RemoteNode">
                 <span class="name "><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RemoteNodeCache">
                 <span class="name "><a href="dslink.browser/RemoteNodeCache-class.html">RemoteNodeCache</a></span>
             </dt>
             <dd>
-                manage cached nodes for requester
-TODO: cleanup nodes that are no longer in use
+                <p>manage cached nodes for requester
+TODO: cleanup nodes that are no longer in use</p>
             </dd>
             <dt id="RemoveController">
                 <span class="name "><a href="dslink.browser/RemoveController-class.html">RemoveController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ReqSubscribeController">
                 <span class="name "><a href="dslink.browser/ReqSubscribeController-class.html">ReqSubscribeController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ReqSubscribeListener">
                 <span class="name "><a href="dslink.browser/ReqSubscribeListener-class.html">ReqSubscribeListener</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Request">
                 <span class="name "><a href="dslink.browser/Request-class.html">Request</a></span>
             </dt>
             <dd>
-                request class handles raw response from responder
+                <p>request class handles raw response from responder</p>
             </dd>
             <dt id="Requester">
                 <span class="name "><a href="dslink.browser/Requester-class.html">Requester</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RequesterInvokeUpdate">
                 <span class="name "><a href="dslink.browser/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RequesterListUpdate">
                 <span class="name "><a href="dslink.browser/RequesterListUpdate-class.html">RequesterListUpdate</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RequesterUpdate">
                 <span class="name "><a href="dslink.browser/RequesterUpdate-class.html">RequesterUpdate</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RequestUpdater">
                 <span class="name "><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Responder">
                 <span class="name "><a href="dslink.browser/Responder-class.html">Responder</a></span>
             </dt>
             <dd>
-                a responder for one connection
+                <p>a responder for one connection</p>
             </dd>
             <dt id="Response">
                 <span class="name "><a href="dslink.browser/Response-class.html">Response</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="ResponseTrace">
                 <span class="name "><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RespSubscribeController">
                 <span class="name "><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="RespSubscribeListener">
                 <span class="name "><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Scheduler">
                 <span class="name "><a href="dslink.browser/Scheduler-class.html">Scheduler</a></span>
             </dt>
             <dd>
-                Schedule Tasks
+                <p>Schedule Tasks</p>
             </dd>
             <dt id="SerializableNodeProvider">
                 <span class="name "><a href="dslink.browser/SerializableNodeProvider-class.html">SerializableNodeProvider</a></span>
             </dt>
             <dd>
-                Interface for node providers that are serializable.
+                <p>Interface for node providers that are serializable.</p>
             </dd>
             <dt id="ServerLink">
                 <span class="name "><a href="dslink.browser/ServerLink-class.html">ServerLink</a></span>
             </dt>
             <dd>
-                Base Class for Server Link implementations.
+                <p>Base Class for Server Link implementations.</p>
             </dd>
             <dt id="ServerLinkManager">
                 <span class="name "><a href="dslink.browser/ServerLinkManager-class.html">ServerLinkManager</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="SetController">
                 <span class="name "><a href="dslink.browser/SetController-class.html">SetController</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="SimpleHiddenNode">
                 <span class="name "><a href="dslink.browser/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="SimpleNode">
                 <span class="name "><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span>
             </dt>
             <dd>
-                A Simple Node Implementation
-A flexible node implementation that should fit most use cases.
+                <p>A Simple Node Implementation
+A flexible node implementation that should fit most use cases.</p>
             </dd>
             <dt id="SimpleNodeProvider">
                 <span class="name "><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="SimpleTableResult">
                 <span class="name "><a href="dslink.browser/SimpleTableResult-class.html">SimpleTableResult</a></span>
             </dt>
             <dd>
-                A simple table result.
-This is used to return simple tables from an action.
+                <p>A simple table result.
+This is used to return simple tables from an action.</p>
             </dd>
             <dt id="StreamStatus">
                 <span class="name "><a href="dslink.browser/StreamStatus-class.html">StreamStatus</a></span>
             </dt>
             <dd>
-                DSA Stream Status
+                <p>DSA Stream Status</p>
             </dd>
             <dt id="SubscribeController">
                 <span class="name "><a href="dslink.browser/SubscribeController-class.html">SubscribeController</a></span>
             </dt>
             <dd>
-                only a place holder for reconnect and disconnect
-real logic is in SubscribeRequest itself
+                <p>only a place holder for reconnect and disconnect
+real logic is in SubscribeRequest itself</p>
             </dd>
             <dt id="SubscribeRequest">
                 <span class="name "><a href="dslink.browser/SubscribeRequest-class.html">SubscribeRequest</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="SubscribeResponse">
                 <span class="name "><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Table">
                 <span class="name "><a href="dslink.browser/Table-class.html">Table</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="TableColumn">
                 <span class="name "><a href="dslink.browser/TableColumn-class.html">TableColumn</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="TableColumns">
                 <span class="name "><a href="dslink.browser/TableColumns-class.html">TableColumns</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="TableMetadata">
                 <span class="name "><a href="dslink.browser/TableMetadata-class.html">TableMetadata</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="Unspecified">
                 <span class="name "><a href="dslink.browser/Unspecified-class.html">Unspecified</a></span>
             </dt>
             <dd>
-                Unspecified means that something has never been set.
+                <p>Unspecified means that something has never been set.</p>
             </dd>
             <dt id="ValueUpdate">
                 <span class="name "><a href="dslink.browser/ValueUpdate-class.html">ValueUpdate</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
             <dt id="WebSocketConnection">
                 <span class="name "><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
     </section>
@@ -717,7 +725,7 @@ real logic is in SubscribeRequest itself
 
   </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>dslink.browser</h5>
     <ol>
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#constants">Constants</a></li>
@@ -825,6 +833,7 @@ real logic is in SubscribeRequest itself
   </div><!--/sidebar-offcanvas-right-->
 
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -849,10 +858,14 @@ real logic is in SubscribeRequest itself
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>

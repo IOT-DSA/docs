@@ -27,42 +27,52 @@
 <header class="container-fluid" id="title">
     <nav class="navbar navbar-fixed-top">
         <div class="container">
-            <button id="sidenav-left-toggle" type="button">&nbsp;</button>
-            <ol class="breadcrumbs gt-separated hidden-xs">
-                <li><a href="index.html">dslink</a></li>
-                <li><a href="dslink/dslink-library.html">dslink</a></li>
-                <li class="self-crumb">NodeProvider</li>
-            </ol>
-            <div class="self-name">NodeProvider</div>
-        </div>
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li class="self-crumb">NodeProvider</li>
+              </ol>
+              <div class="self-name">NodeProvider</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
     </nav>
+
     <div class="container masthead">
-        <ol class="breadcrumbs gt-separated visible-xs">
-            <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink/dslink-library.html">dslink</a></li>
-            <li class="self-crumb">NodeProvider</li>
-        </ol>
-        <div class="title-description">
-            <h1 class="title">
-                <div class="kind">class</div> NodeProvider
-            </h1>
-            <!-- p class="subtitle">
-                Provides Nodes for a responder.
-A single node provider can be reused by multiple responder.
-            </p -->
-        </div>
-        <ul class="subnav">
-            <li><a href="dslink/NodeProvider-class.html#instance-properties">Properties</a></li>
-            <li><a href="dslink/NodeProvider-class.html#constructors">Constructors</a></li>
-            <li><a href="dslink/NodeProvider-class.html#operators">Operators</a></li>
-            <li><a href="dslink/NodeProvider-class.html#instance-methods">Methods</a></li>
-        </ul>
-    </div>
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li class="self-crumb">NodeProvider</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">class</div> NodeProvider
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/NodeProvider-class.html#instance-properties">Properties</a></li>
+              <li><a href="dslink/NodeProvider-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/NodeProvider-class.html#operators">Operators</a></li>
+              <li><a href="dslink/NodeProvider-class.html#instance-methods">Methods</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
 </header>
 
 <div class="container body">
+  <div class="row">
 
-  <div class="col-xs-6 col-sm-3 col-md-3 sidebar sidebar-offcanvas-left">
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink/dslink-library.html">dslink</a></h5>
 
@@ -176,7 +186,7 @@ A single node provider can be reused by multiple responder.
     </ol>
   </div>
 
-  <div class="col-xs-12 col-sm-9 col-md-6 main-content">
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="desc markdown">
     
@@ -194,14 +204,14 @@ A single node provider can be reused by multiple responder.</p>
 
         <dl class="properties">
             <dt id="permissions" class="property">
-                <span class="top-level-variable-type"><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
-                <a href="dslink/NodeProvider/permissions.html">permissions</a>
+                <span class="name"><a href="dslink/NodeProvider/permissions.html">permissions</a></span>
+                <span class="signature">&#8594; <a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
             </dt>
             <dd>
-                <div class="readable-writable">
+                <div class="features">
         read-only
     </div>
-    Get Permissions.
+    <p>Get Permissions.</p>
             </dd>
         </dl>
     </section>
@@ -214,7 +224,7 @@ A single node provider can be reused by multiple responder.</p>
                 <span class="name"><a href="dslink/NodeProvider/NodeProvider.html">NodeProvider</a></span><span class="signature">()</span>
             </dt>
             <dd>
-                
+                <p></p>
             </dd>
         </dl>
       </section>
@@ -229,7 +239,7 @@ A single node provider can be reused by multiple responder.</p>
                   </span>
               </dt>
               <dd>
-                  Gets an existing node, or creates a dummy node for a requester to listen on.
+                  <p>Gets an existing node, or creates a dummy node for a requester to listen on.</p>
               </dd>
               <dt id="operator ~" class="callable">
                   <a href="dslink/NodeProvider/operator_bitwise_negate.html"><span class="name ">operator ~</span></a><span class="signature">(<wbr>)
@@ -238,7 +248,7 @@ A single node provider can be reused by multiple responder.</p>
                   </span>
               </dt>
               <dd>
-                  Get the root node.
+                  <p>Get the root node.</p>
               </dd>
           </dl>
       </section>
@@ -253,7 +263,7 @@ A single node provider can be reused by multiple responder.</p>
                   </span>
               </dt>
               <dd>
-                  Create a Responder
+                  <p>Create a Responder</p>
               </dd>
               <dt id="getNode" class="callable">
                   <a href="dslink/NodeProvider/getNode.html"><span class="name ">getNode</span></a><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -262,7 +272,7 @@ A single node provider can be reused by multiple responder.</p>
                   </span>
               </dt>
               <dd>
-                  Gets an existing node.
+                  <p>Gets an existing node.</p>
               </dd>
               <dt id="getOrCreateNode" class="callable">
                   <a href="dslink/NodeProvider/getOrCreateNode.html"><span class="name ">getOrCreateNode</span></a><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
@@ -271,34 +281,34 @@ A single node provider can be reused by multiple responder.</p>
                   </span>
               </dt>
               <dd>
-                  Gets a node at the given <code class="prettyprint lang-dart">path</code> if it exists.
-If it does not exist, create a new node and return it.
+                  <p>Gets a node at the given <code>path</code> if it exists.
+If it does not exist, create a new node and return it.</p>
               </dd>
           </dl>
       </section>
 
     </div> <!-- /.main-content -->
 
-  <div class="col-xs-6 col-sm-6 col-md-3 sidebar sidebar-offcanvas-right">
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>NodeProvider</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink/NodeProvider-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="#instance-properties">Properties</a></li>
       <li><a href="dslink/NodeProvider/permissions.html">permissions</a>
 </li>
     
-      <li class="section-title"><a href="dslink/NodeProvider-class.html#constructors">Constructors</a></li>
+      <li class="section-title"><a href="#constructors">Constructors</a></li>
       <li><a href="dslink/NodeProvider/NodeProvider.html">NodeProvider</a></li>
     
-      <li class="section-title"><a href="dslink/NodeProvider-class.html#operators">Operators</a></li>
+      <li class="section-title"><a href="#operators">Operators</a></li>
       <li><a href="dslink/NodeProvider/operator_get.html">operator []</a>
 </li>
       <li><a href="dslink/NodeProvider/operator_bitwise_negate.html">operator ~</a>
 </li>
     
-      <li class="section-title"><a href="dslink/NodeProvider-class.html#methods">Methods</a></li>
+      <li class="section-title"><a href="#methods">Methods</a></li>
       <li><a href="dslink/NodeProvider/createResponder.html">createResponder</a>
 </li>
       <li><a href="dslink/NodeProvider/getNode.html">getNode</a>
@@ -308,6 +318,7 @@ If it does not exist, create a new node and return it.
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
+  </div> <!-- row -->
 </div> <!-- container -->
 
 <footer>
@@ -332,10 +343,14 @@ If it does not exist, create a new node and return it.
     </div>
 </footer>
 
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.5.0+3 -->
 </body>
 
 </html>
