@@ -138,7 +138,7 @@
     }
   }
   if (nameOrPath.contains(&apos;%&apos;)){
-    nameOrPath = Uri.decodeComponent(nameOrPath);
+    nameOrPath = UriComponentDecoder.decode(nameOrPath);
   }
   return nameOrPath;
 }</code></pre>
