@@ -125,9 +125,10 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">String generateToken({int length: 50}) {
-  var r = new Random(_random.nextInt(5000));
+  var r0 = new Random();
   var buffer = new StringBuffer();
   for (int i = 1; i &lt;= length; i++) {
+    var r = new Random(r0.nextInt(0x70000000) + (new DateTime.now()).millisecondsSinceEpoch);
     if (r.nextBool()) {
       String letter = alphabet[r.nextInt(alphabet.length)];
       buffer.write(r.nextBool() ? letter.toLowerCase() : letter);

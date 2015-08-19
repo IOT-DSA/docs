@@ -125,9 +125,10 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">String generateBasicId({int length: 30}) {
-  var r = new Random(_random.nextInt(5000));
+  var r0 = new Random();
   var buffer = new StringBuffer();
   for (int i = 1; i &lt;= length; i++) {
+    var r = new Random(r0.nextInt(0x70000000) + (new DateTime.now()).millisecondsSinceEpoch);
     var n = r.nextInt(50);
     if (n &gt;= 0 &amp;&amp; n &lt;= 32) {
       String letter = alphabet[r.nextInt(alphabet.length)];
