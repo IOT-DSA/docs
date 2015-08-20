@@ -190,19 +190,14 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void initSys() {
-  setNode(&quot;/sys/version&quot;, new BrokerVersionNode(&quot;/sys/version&quot;, this, DSA_VERSION));
-  setNode(&quot;/sys/startTime&quot;, new StartTimeNode(&quot;/sys/startTime&quot;, this));
-  setNode(&quot;/sys/clearConns&quot;, new ClearConnsAction(&quot;/sys/clearConns&quot;, this));
+  new BrokerVersionNode(&quot;/sys/version&quot;, this, DSA_VERSION);
+  new StartTimeNode(&quot;/sys/startTime&quot;, this);
+  new ClearConnsAction(&quot;/sys/clearConns&quot;, this);
 
   ThroughPutController.initNodes(this);
 
-  setNode(&quot;/sys/messagesOutPerSecond&quot;, ThroughPutController.messagesOutPerSecond);
-  setNode(&quot;/sys/dataOutPerSecond&quot;, ThroughPutController.dataOutPerSecond);
-  setNode(&quot;/sys/messagesInPerSecond&quot;, ThroughPutController.messagesInPerSecond);
-  setNode(&quot;/sys/dataInPerSecond&quot;, ThroughPutController.dataInPerSecond);
-
   upstream = new UpstreamNode(&quot;/sys/upstream&quot;, this);
-  setNode(&quot;/sys/upstream&quot;, upstream);
+
 
   BrokerTraceNode.init(this);
 }</code></pre>

@@ -163,7 +163,7 @@ Responder getResponder(NodeProvider nodeProvider, String dsId, [String sessionId
   if (responders.containsKey(sessionId)) {
     return responders[sessionId];
   } else {
-    var responder = nodeProvider.createResponder(dsId);
+    var responder = nodeProvider.createResponder(dsId, sessionId);
     responder.reqId = dsId;
     //TODO set permission group from user node
     responder.updateGroups([]);

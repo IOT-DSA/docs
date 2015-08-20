@@ -135,7 +135,7 @@
             <span class="name ">createResponder</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>
+                <span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>,<br><span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>
             </div>
             )    </section>
 
@@ -148,7 +148,7 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">/// Creates a responder with the given [dsId].
-Responder createResponder(String dsId) {
+Responder createResponder(String dsId, String sessionId) {
   return new Responder(this, dsId);
 }</code></pre>
     </section>

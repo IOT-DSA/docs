@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UserNode class - dslink.broker library - Dart API</title>
+    <title>BrokerStaticNode class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the UserNode class from the dslink.broker library, for the Dart programming language.">
+    <meta name="description" content="API docs for the BrokerStaticNode class from the dslink.broker library, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -33,9 +33,9 @@
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                  <li class="self-crumb">UserNode</li>
+                  <li class="self-crumb">BrokerStaticNode</li>
               </ol>
-              <div class="self-name">UserNode</div>
+              <div class="self-name">BrokerStaticNode</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
               </form>
@@ -50,18 +50,16 @@
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-              <li class="self-crumb">UserNode</li>
+              <li class="self-crumb">BrokerStaticNode</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">class</div> UserNode
+                  <div class="kind">class</div> BrokerStaticNode
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.broker/UserNode-class.html#instance-properties">Properties</a></li>
-              <li><a href="dslink.broker/UserNode-class.html#constructors">Constructors</a></li>
-              <li><a href="dslink.broker/UserNode-class.html#operators">Operators</a></li>
-              <li><a href="dslink.broker/UserNode-class.html#instance-methods">Methods</a></li>
+              <li><a href="dslink.broker/BrokerStaticNode-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.broker/BrokerStaticNode-class.html#operators">Operators</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -133,7 +131,7 @@
 
     <section class="desc markdown">
     
-          <p class="no-docs">Not documented.</p>
+          <p>nodes that automatic add itself to broker tree and always stay there</p>
     
     </section>
 
@@ -147,14 +145,18 @@
             <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
             <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
             <li><a href="dslink.broker/BrokerNode-class.html">BrokerNode</a></li>
-            <li>UserNode</li>
+            <li>BrokerStaticNode</li>
         </ul></dd>
 
 
 
         <dt>Implemented by</dt>
         <dd><ul class="comma-separated clazz-relationships">
-            <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
+            <li><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></li>
+            <li><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></li>
+            <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
+            <li><a href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
+            <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
         </ul></dd>
         </dl>
     </section>
@@ -353,16 +355,6 @@ See <code>listChangeController</code>.</p>
     </div>
     <p></p>
             </dd>
-            <dt id="username" class="property">
-                <span class="name"><a href="dslink.broker/UserNode/username.html">username</a></span>
-                <span class="signature">&#8594; String</span>
-            </dt>
-            <dd>
-                <div class="features">
-        read-only
-    </div>
-    <p></p>
-            </dd>
             <dt id="value" class="property">
             <span class="name ">value</span>    
                 <span class="signature">&#8594; dynamic</span>
@@ -390,8 +382,8 @@ See <code>listChangeController</code>.</p>
         <h2>Constructors</h2>
 
         <dl class="constructor-summary-list">
-            <dt id="UserNode" class="callable">
-                <span class="name"><a href="dslink.broker/UserNode/UserNode.html">UserNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-username"><span class="type-annotation">String</span> <span class="parameter-name">username</span></span>)</span>
+            <dt id="BrokerStaticNode" class="callable">
+                <span class="name"><a href="dslink.broker/BrokerStaticNode/BrokerStaticNode.html">BrokerStaticNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>
             </dt>
             <dd>
                 <p></p>
@@ -562,13 +554,14 @@ Otherwise this will fetch a child.</p>
                   <p>Called by the link internals to invoke this node.</p>
               </dd>
               <dt id="load" class="callable">
-                  <a href="dslink.broker/UserNode/load.html"><span class="name ">load</span></a><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name ">load</span><span class="signature">(<wbr><span class="parameter" id="load-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  <p>Load this node from the provided map as <code>m</code>.</p>
+                  <div class="features">inherited</div>
+                  <p></p>
               </dd>
               <dt id="loadPermission" class="callable">
                   <span class="name ">loadPermission</span><span class="signature">(<wbr><span class="parameter" id="loadPermission-param-l"><span class="type-annotation">List</span> <span class="parameter-name">l</span></span>)
@@ -727,57 +720,14 @@ Otherwise this will fetch a child.</p>
     </div> <!-- /.main-content -->
 
   <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
-    <h5>UserNode</h5>
+    <h5>BrokerStaticNode</h5>
     <ol>
     
     
     
-      <li class="section-title"><a href="#instance-properties">Properties</a></li>
-      <li>attributes
-</li>
-      <li>callbacks
-</li>
-      <li>children
-</li>
-      <li>configs
-</li>
-      <li>defaultPermission
-</li>
-      <li>disconnected
-</li>
-      <li>exists
-</li>
-      <li>hasSubscriber
-</li>
-      <li>idPermissions
-</li>
-      <li>lastValueUpdate
-</li>
-      <li>listChangeController
-</li>
-      <li>listReady
-</li>
-      <li>listStream
-</li>
-      <li>loaded
-</li>
-      <li>path
-</li>
-      <li>permissionList
-</li>
-      <li>profile
-</li>
-      <li>provider
-</li>
-      <li><a href="dslink.broker/UserNode/username.html">username</a>
-</li>
-      <li>value
-</li>
-      <li>valueReady
-</li>
     
       <li class="section-title"><a href="#constructors">Constructors</a></li>
-      <li><a href="dslink.broker/UserNode/UserNode.html">UserNode</a></li>
+      <li><a href="dslink.broker/BrokerStaticNode/BrokerStaticNode.html">BrokerStaticNode</a></li>
     
       <li class="section-title"><a href="#operators">Operators</a></li>
       <li>operator []
@@ -812,7 +762,7 @@ Otherwise this will fetch a child.</p>
 </li>
       <li>invoke
 </li>
-      <li><a href="dslink.broker/UserNode/load.html">load</a>
+      <li>load
 </li>
       <li>loadPermission
 </li>
