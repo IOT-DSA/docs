@@ -208,6 +208,7 @@ A flexible node implementation that should fit most use cases.</p>
         <dd><ul class="comma-separated clazz-relationships">
             <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
             <li><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></li>
+            <li><a href="dslink.nodes/LazyValueNode-class.html">LazyValueNode</a></li>
             <li><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></li>
             <li><a href="dslink.browser/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
             <li><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
@@ -811,6 +812,15 @@ Return true to reject the value, and false to accept it.</p>
               <dd>
                   <p></p>
               </dd>
+              <dt id="onUnsubscribe" class="callable">
+                  <a href="dslink.browser/SimpleNode/onUnsubscribe.html"><span class="name ">onUnsubscribe</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
               <dt id="remove" class="callable">
                   <a href="dslink.browser/SimpleNode/remove.html"><span class="name ">remove</span></a><span class="signature">(<wbr>)
                       &#8594;
@@ -899,7 +909,7 @@ The name of the removed node is returned.</p>
                   <p>Called by the link internals to set a value of a node.</p>
               </dd>
               <dt id="subscribe" class="callable">
-                  <a href="dslink.browser/SimpleNode/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
+                  <a href="dslink.browser/SimpleNode/subscribe.html"><span class="name ">subscribe</span></a><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
                       &#8594;
                       <span class="returntype"><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
                   </span>
@@ -908,13 +918,12 @@ The name of the removed node is returned.</p>
                   <p>Subscribes the given <code>callback</code> to this node.</p>
               </dd>
               <dt id="unsubscribe" class="callable">
-                  <span class="name ">unsubscribe</span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
+                  <a href="dslink.browser/SimpleNode/unsubscribe.html"><span class="name ">unsubscribe</span></a><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
                       &#8594;
                       <span class="returntype">void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p>Unsubscribe the given <code>callback</code> from this node.</p>
               </dd>
               <dt id="updateList" class="callable">
@@ -1066,6 +1075,8 @@ The name of the removed node is returned.</p>
 </li>
       <li><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a>
 </li>
+      <li><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a>
+</li>
       <li><a href="dslink.browser/SimpleNode/remove.html">remove</a>
 </li>
       <li>removeAttribute
@@ -1086,7 +1097,7 @@ The name of the removed node is returned.</p>
 </li>
       <li><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a>
 </li>
-      <li>unsubscribe
+      <li><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a>
 </li>
       <li>updateList
 </li>

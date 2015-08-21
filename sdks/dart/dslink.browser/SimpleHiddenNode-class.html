@@ -819,6 +819,16 @@ Return true to reject the value, and false to accept it.</p>
                   <div class="features">inherited</div>
                   <p></p>
               </dd>
+              <dt id="onUnsubscribe" class="callable">
+                  <span class="name ">onUnsubscribe</span><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div class="features">inherited</div>
+                  <p></p>
+              </dd>
               <dt id="remove" class="callable">
                   <span class="name ">remove</span><span class="signature">(<wbr>)
                       &#8594;
@@ -913,7 +923,7 @@ The name of the removed node is returned.</p>
                   <p>Called by the link internals to set a value of a node.</p>
               </dd>
               <dt id="subscribe" class="callable">
-                  <span class="name ">subscribe</span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
+                  <span class="name ">subscribe</span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
                       &#8594;
                       <span class="returntype"><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
                   </span>
@@ -1031,6 +1041,8 @@ The name of the removed node is returned.</p>
       <li>onStartListListen
 </li>
       <li>onSubscribe
+</li>
+      <li>onUnsubscribe
 </li>
       <li>remove
 </li>

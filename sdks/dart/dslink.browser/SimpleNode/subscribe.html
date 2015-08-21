@@ -198,6 +198,8 @@
 </li>
       <li><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a>
 </li>
+      <li><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a>
+</li>
       <li><a href="dslink.browser/SimpleNode/remove.html">remove</a>
 </li>
       <li>removeAttribute
@@ -218,7 +220,7 @@
 </li>
       <li><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a>
 </li>
-      <li>unsubscribe
+      <li><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a>
 </li>
       <li>updateList
 </li>
@@ -240,7 +242,7 @@
             <span class="name ">subscribe</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>]
+                <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>,<br>[<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>]
             </div>
             )    </section>
 
@@ -253,7 +255,7 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">@override
-RespSubscribeListener subscribe(callback(ValueUpdate), [int qos = 0]) {
+RespSubscribeListener subscribe(callback(ValueUpdate update), [int qos = 0]) {
   onSubscribe();
   return super.subscribe(callback, qos);
 }</code></pre>
