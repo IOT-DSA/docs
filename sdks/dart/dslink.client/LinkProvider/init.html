@@ -254,7 +254,6 @@ void init() {
         loadedNodesData = DsJson.decode(nodesStr);
       } catch (err) {}
     }
-
     if (loadedNodesData != null) {
       (provider as SerializableNodeProvider).init(loadedNodesData);
     } else if (defaultNodes != null) {
