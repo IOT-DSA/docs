@@ -123,14 +123,15 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">Object decodeJsonFrame(String str, BinaryInCache cache) {
-  dynamic _reviver(key, value) {
-    if (value is String &amp;&amp; value.startsWith(&apos;\u001Bbytes,&apos;)) {
-      return cache.fetchData(value.substring(7));
-    }
-    return value;
+  _currentBinaryInCache = cache;
+
+  if (_unsafeDecoder == null) {
+    _unsafeDecoder = new JsonDecoder(_reviver);
   }
-  JsonDecoder decoder = new JsonDecoder(_reviver);
-  return decoder.convert(str);
+
+  var result = _unsafeDecoder.convert(str);
+  _currentBinaryInCache = null;
+  return result;
 }</code></pre>
     </section>
 

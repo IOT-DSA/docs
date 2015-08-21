@@ -124,21 +124,26 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">String encodeJsonFrame(Object val, BinaryOutCache cache,
     {bool pretty: false}) {
-  dynamic _encoder(value) {
-    if (value is ByteData) {
-      int id = cache.addBinaryData(value);
-      return &apos;\u001Bbytes,$id&apos;;
-    }
-    return null;
-  }
-  JsonEncoder encoder;
+
+  _currentBinaryOutCache = cache;
+
+  JsonEncoder c;
 
   if (pretty) {
-    encoder = new JsonEncoder.withIndent(&apos;  &apos;, _encoder);
+    if (_unsafePrettyEncoder == null) {
+      _unsafePrettyEncoder = new JsonEncoder.withIndent(&apos;  &apos;, _encoder);
+    }
+    c = _unsafePrettyEncoder;
   } else {
-    encoder = new JsonEncoder(_encoder);
+    if (_unsafeEncoder == null) {
+      _unsafeEncoder = new JsonEncoder(_encoder);
+    }
+    c = _unsafeEncoder;
   }
-  return encoder.convert(val);
+
+  var result = c.convert(val);
+  _currentBinaryOutCache = null;
+  return result;
 }</code></pre>
     </section>
 
