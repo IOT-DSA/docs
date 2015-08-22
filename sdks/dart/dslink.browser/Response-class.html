@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">Response</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -191,24 +191,21 @@
     <section>
         <dl class="dl-horizontal">
 
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
-                </ul>
-            </dd>
 
+          <dt>Implemented by</dt>
+          <dd><ul class="comma-separated clazz-relationships">
+              <li><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></li>
+              <li><a href="dslink.browser/ListResponse-class.html">ListResponse</a></li>
+              <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
+          </ul></dd>
 
-        <dt>Implemented by</dt>
-        <dd><ul class="comma-separated clazz-relationships">
-            <li><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></li>
-            <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
-            <li><a href="dslink.browser/ListResponse-class.html">ListResponse</a></li>
-            <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
-            <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
-            <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
-        </ul></dd>
         </dl>
     </section>
 
@@ -371,7 +368,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

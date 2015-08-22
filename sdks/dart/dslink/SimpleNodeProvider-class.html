@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">SimpleNodeProvider</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -197,22 +197,22 @@
 
     <section>
         <dl class="dl-horizontal">
+          <dt>Inheritance</dt>
+          <dd><ul class="gt-separated dark clazz-relationships">
+              <li>Object</li>
+              <li><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></li>
+              <li><a href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
+              <li>SimpleNodeProvider</li>
+          </ul></dd>
 
-        <dt>Extends</dt>
-        <dd><ul class="gt-separated dark clazz-relationships">
-            <li>Object</li>
-            <li><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></li>
-            <li><a href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
-            <li>SimpleNodeProvider</li>
-        </ul></dd>
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
+                      <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
-                    <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -384,7 +384,8 @@ If a node already exists at this path, an exception is thrown.</p>
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.</p>
+If it does not exist, create a new node and return it.<a href="dslink/SimpleNodeProvider/getOrCreateNode.html">&hellip;</a>
+</p>
               </dd>
               <dt id="init" class="callable">
                   <a href="dslink/SimpleNodeProvider/init.html"><span class="name ">init</span></a><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])
@@ -521,7 +522,7 @@ If it does not exist, create a new node and return it.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">LinkProvider</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -518,7 +518,8 @@ This includes:
               <dd>
                   <p>Initializes the Link.
 There is no guarantee that the link will be ready when this method returns.
-If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not called prior to calling this method, it is called.</p>
+If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not called prior to calling this method, it is called.<a href="dslink.client/LinkProvider/init.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onValueChange" class="callable">
                   <a href="dslink.client/LinkProvider/onValueChange.html"><span class="name ">onValueChange</span></a><span class="signature">(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>})
@@ -742,7 +743,7 @@ node at the given path to the specified value, and return that value.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

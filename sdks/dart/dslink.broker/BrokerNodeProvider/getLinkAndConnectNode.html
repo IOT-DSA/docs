@@ -38,7 +38,7 @@
               </ol>
               <div class="self-name">getLinkAndConnectNode</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -193,7 +193,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">ServerLink getLinkAndConnectNode(String dsId, {String sessionId:&apos;&apos;}) {
+      <pre><code class="prettyprint lang-dart">ServerLink getLinkAndConnectNode(String dsId, {String sessionId: &apos;&apos;}) {
   if (sessionId == null) sessionId = &apos;&apos;;
   String str = dsId;
   if (sessionId != null &amp;&amp; sessionId != &apos;&apos;) {
@@ -252,7 +252,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

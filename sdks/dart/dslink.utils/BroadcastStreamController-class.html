@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">BroadcastStreamController</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -130,13 +130,13 @@
     <section>
         <dl class="dl-horizontal">
 
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li>StreamController&lt;T&gt;</li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li>StreamController&lt;T&gt;</li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -325,7 +325,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Send or enqueue an error event.</p>
+                  <p>Send or enqueue an error event.<a href="dslink.utils/BroadcastStreamController/addError.html">&hellip;</a>
+</p>
               </dd>
               <dt id="addStream" class="callable">
                   <a href="dslink.utils/BroadcastStreamController/addStream.html"><span class="name ">addStream</span></a><span class="signature">(<wbr><span class="parameter" id="addStream-param-source"><span class="type-annotation">Stream&lt;T&gt;</span> <span class="parameter-name">source</span></span>, {<span class="parameter" id="addStream-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span>: <span class="default-value">true</span></span>})
@@ -334,7 +335,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Receives events from <code>source</code> and puts them into this controller's stream.</p>
+                  <p>Receives events from <code>source</code> and puts them into this controller's stream.<a href="dslink.utils/BroadcastStreamController/addStream.html">&hellip;</a>
+</p>
               </dd>
               <dt id="close" class="callable">
                   <a href="dslink.utils/BroadcastStreamController/close.html"><span class="name ">close</span></a><span class="signature">(<wbr>)
@@ -343,7 +345,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Tells the stream sink that no futher streams will be added.</p>
+                  <p>Tells the stream sink that no futher streams will be added.<a href="dslink.utils/BroadcastStreamController/close.html">&hellip;</a>
+</p>
               </dd>
               <dt id="delayedCheckCancel" class="callable">
                   <a href="dslink.utils/BroadcastStreamController/delayedCheckCancel.html"><span class="name ">delayedCheckCancel</span></a><span class="signature">(<wbr>)
@@ -445,7 +448,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

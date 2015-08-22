@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">CallbackNode</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -109,16 +109,16 @@
 
     <section>
         <dl class="dl-horizontal">
+          <dt>Inheritance</dt>
+          <dd><ul class="gt-separated dark clazz-relationships">
+              <li>Object</li>
+              <li><a href="dslink.browser/Node-class.html">Node</a></li>
+              <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
+              <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+              <li><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></li>
+              <li>CallbackNode</li>
+          </ul></dd>
 
-        <dt>Extends</dt>
-        <dd><ul class="gt-separated dark clazz-relationships">
-            <li>Object</li>
-            <li><a href="dslink.browser/Node-class.html">Node</a></li>
-            <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
-            <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
-            <li><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></li>
-            <li>CallbackNode</li>
-        </ul></dd>
 
 
 
@@ -719,7 +719,8 @@ You can return the following types from this method:
 - <code>Table</code>
 - <code>Stream</code>
 - <code>SimpleTableResult</code>
-- <code>AsyncTableResult</code></p>
+- <code>AsyncTableResult</code><a href="dslink.nodes/CallbackNode/onInvoke.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onLoadChild" class="callable">
                   <a href="dslink.nodes/CallbackNode/onLoadChild.html"><span class="name ">onLoadChild</span></a><span class="signature">(<wbr><span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
@@ -1140,7 +1141,7 @@ The name of the removed node is returned.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

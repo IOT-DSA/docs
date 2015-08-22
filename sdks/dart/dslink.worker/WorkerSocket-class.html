@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">WorkerSocket</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -111,20 +111,20 @@
 
     <section>
         <dl class="dl-horizontal">
+          <dt>Inheritance</dt>
+          <dd><ul class="gt-separated dark clazz-relationships">
+              <li>Object</li>
+              <li>Stream</li>
+              <li>WorkerSocket</li>
+          </ul></dd>
 
-        <dt>Extends</dt>
-        <dd><ul class="gt-separated dark clazz-relationships">
-            <li>Object</li>
-            <li>Stream</li>
-            <li>WorkerSocket</li>
-        </ul></dd>
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li>StreamSink</li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li>StreamSink</li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -307,7 +307,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Consumes the elements of <code>stream</code>.</p>
+                  <p>Consumes the elements of <code>stream</code>.<a href="dslink.worker/WorkerSocket/addStream.html">&hellip;</a>
+</p>
               </dd>
               <dt id="any" class="callable">
                   <span class="name ">any</span><span class="signature">(<wbr><span class="parameter" id="any-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
@@ -366,7 +367,8 @@ mapped to a new event.</p>
                   </span>
               </dt>
               <dd>
-                  <p>Tells the stream sink that no futher streams will be added.</p>
+                  <p>Tells the stream sink that no futher streams will be added.<a href="dslink.worker/WorkerSocket/close.html">&hellip;</a>
+</p>
               </dd>
               <dt id="contains" class="callable">
                   <span class="name ">contains</span><span class="signature">(<wbr><span class="parameter" id="contains-param-needle"><span class="type-annotation">Object</span> <span class="parameter-name">needle</span></span>)
@@ -533,7 +535,8 @@ into zero or more events.</p>
                   </span>
               </dt>
               <dd>
-                  <p>Adds a subscription to this stream.</p>
+                  <p>Adds a subscription to this stream.<a href="dslink.worker/WorkerSocket/listen.html">&hellip;</a>
+</p>
               </dd>
               <dt id="map" class="callable">
                   <span class="name ">map</span><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
@@ -866,7 +869,7 @@ to a new value using the <code>convert</code> function.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

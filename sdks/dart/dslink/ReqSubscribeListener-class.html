@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">ReqSubscribeListener</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -196,13 +196,13 @@
     <section>
         <dl class="dl-horizontal">
 
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li>StreamSubscription</li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li>StreamSubscription</li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -282,7 +282,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Returns a future that handles the <code>onDone</code> and <code>onError</code> callbacks.</p>
+                  <p>Returns a future that handles the <code>onDone</code> and <code>onError</code> callbacks.<a href="dslink/ReqSubscribeListener/asFuture.html">&hellip;</a>
+</p>
               </dd>
               <dt id="cancel" class="callable">
                   <a href="dslink/ReqSubscribeListener/cancel.html"><span class="name ">cancel</span></a><span class="signature">(<wbr>)
@@ -291,7 +292,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Cancels this subscription. It will no longer receive events.</p>
+                  <p>Cancels this subscription. It will no longer receive events.<a href="dslink/ReqSubscribeListener/cancel.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onData" class="callable">
                   <a href="dslink/ReqSubscribeListener/onData.html"><span class="name ">onData</span></a><span class="signature">(<wbr><span class="parameter" id="onData-param-handleData"><span class="type-annotation">void</span> <span class="parameter-name">handleData</span>(<span class="parameter" id="handleData-param-data"><span class="parameter-name">data</span></span>)</span>)
@@ -300,7 +302,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Set or override the data event handler of this subscription.</p>
+                  <p>Set or override the data event handler of this subscription.<a href="dslink/ReqSubscribeListener/onData.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onDone" class="callable">
                   <a href="dslink/ReqSubscribeListener/onDone.html"><span class="name ">onDone</span></a><span class="signature">(<wbr><span class="parameter" id="onDone-param-handleDone"><span class="type-annotation">void</span> <span class="parameter-name">handleDone</span>()</span>)
@@ -309,7 +312,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Set or override the done event handler of this subscription.</p>
+                  <p>Set or override the done event handler of this subscription.<a href="dslink/ReqSubscribeListener/onDone.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onError" class="callable">
                   <a href="dslink/ReqSubscribeListener/onError.html"><span class="name ">onError</span></a><span class="signature">(<wbr><span class="parameter" id="onError-param-handleError"><span class="type-annotation">Function</span> <span class="parameter-name">handleError</span></span>)
@@ -318,7 +322,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Set or override the error event handler of this subscription.</p>
+                  <p>Set or override the error event handler of this subscription.<a href="dslink/ReqSubscribeListener/onError.html">&hellip;</a>
+</p>
               </dd>
               <dt id="pause" class="callable">
                   <a href="dslink/ReqSubscribeListener/pause.html"><span class="name ">pause</span></a><span class="signature">(<wbr>[<span class="parameter" id="pause-param-resumeSignal"><span class="type-annotation">Future</span> <span class="parameter-name">resumeSignal</span></span>])
@@ -327,7 +332,8 @@
                   </span>
               </dt>
               <dd>
-                  <p>Request that the stream pauses events until further notice.</p>
+                  <p>Request that the stream pauses events until further notice.<a href="dslink/ReqSubscribeListener/pause.html">&hellip;</a>
+</p>
               </dd>
               <dt id="resume" class="callable">
                   <a href="dslink/ReqSubscribeListener/resume.html"><span class="name ">resume</span></a><span class="signature">(<wbr>)
@@ -413,7 +419,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">RemoteLinkManager</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -140,14 +140,14 @@
     <section>
         <dl class="dl-horizontal">
 
+          <dt>Implements</dt>
+              <dd>
+                  <ul class="comma-separated clazz-relationships">
+                      <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+                      <li><a href="dslink.requester/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
+                  </ul>
+              </dd>
 
-        <dt>Implements</dt>
-            <dd>
-                <ul class="comma-separated clazz-relationships">
-                    <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
-                    <li><a href="dslink.requester/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
-                </ul>
-            </dd>
 
 
         </dl>
@@ -346,7 +346,8 @@
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.</p>
+If it does not exist, create a new node and return it.<a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html">&hellip;</a>
+</p>
               </dd>
               <dt id="getRemoteNode" class="callable">
                   <a href="dslink.broker/RemoteLinkManager/getRemoteNode.html"><span class="name ">getRemoteNode</span></a><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>)
@@ -481,7 +482,7 @@ in this case they need multiple responders on broker side.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>

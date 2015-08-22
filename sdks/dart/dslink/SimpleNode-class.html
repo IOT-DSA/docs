@@ -37,7 +37,7 @@
               </ol>
               <div class="self-name">SimpleNode</div>
               <form class="search navbar-right" role="search">
-                <input type="text" id="search-box" disabled class="form-control typeahead" placeholder="Search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
             </div> <!-- /col -->
           </div> <!-- /row -->
@@ -197,15 +197,15 @@ A flexible node implementation that should fit most use cases.</p>
 
     <section>
         <dl class="dl-horizontal">
+          <dt>Inheritance</dt>
+          <dd><ul class="gt-separated dark clazz-relationships">
+              <li>Object</li>
+              <li><a href="dslink.browser/Node-class.html">Node</a></li>
+              <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
+              <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+              <li>SimpleNode</li>
+          </ul></dd>
 
-        <dt>Extends</dt>
-        <dd><ul class="gt-separated dark clazz-relationships">
-            <li>Object</li>
-            <li><a href="dslink.browser/Node-class.html">Node</a></li>
-            <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
-            <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
-            <li>SimpleNode</li>
-        </ul></dd>
 
 
 
@@ -279,7 +279,8 @@ Map of Child Name to Child Node</p>
         read / write
     </div>
     <p>Gets the current display name of this node.
-This is the $name config. If it does not exist, then null is returned.</p>
+This is the $name config. If it does not exist, then null is returned.<a href="dslink/SimpleNode/displayName.html">&hellip;</a>
+</p>
             </dd>
             <dt id="exists" class="property">
             <span class="name ">exists</span>    
@@ -439,7 +440,8 @@ If false, this node can't be serialized into a JSON file.</p>
         read / write
     </div>
     <p>Gets the current value type of this node.
-This is the $type config. If it does not exist, then null is returned.</p>
+This is the $type config. If it does not exist, then null is returned.<a href="dslink/SimpleNode/type.html">&hellip;</a>
+</p>
             </dd>
             <dt id="value" class="property">
             <span class="name ">value</span>    
@@ -470,7 +472,8 @@ This is the $type config. If it does not exist, then null is returned.</p>
         read / write
     </div>
     <p>Gets the current value of the $writable config.
-If it does not exist, then null is returned.</p>
+If it does not exist, then null is returned.<a href="dslink/SimpleNode/writable.html">&hellip;</a>
+</p>
             </dd>
         </dl>
     </section>
@@ -737,7 +740,8 @@ You can return the following types from this method:
 - <a href="dslink/Table-class.html">Table</a>
 - <code>Stream</code>
 - <a href="dslink/SimpleTableResult-class.html">SimpleTableResult</a>
-- <a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></p>
+- <a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a><a href="dslink/SimpleNode/onInvoke.html">&hellip;</a>
+</p>
               </dd>
               <dt id="onLoadChild" class="callable">
                   <a href="dslink/SimpleNode/onLoadChild.html"><span class="name ">onLoadChild</span></a><span class="signature">(<wbr><span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
@@ -1133,7 +1137,7 @@ The name of the removed node is returned.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.5.0+3 -->
+<!-- Made with <3 by dartdoc version 0.6.0 -->
 </body>
 
 </html>
