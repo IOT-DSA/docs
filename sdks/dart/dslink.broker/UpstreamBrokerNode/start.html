@@ -252,7 +252,7 @@
 
   ien.updateValue(true);
   enabled = true;
-  link.onRequesterReady.then((Requester requester){
+  link.onRequesterReady.then((Requester requester) {
     if (link.link.remotePath != null) {
       linkManager.rootNode.configs[r&apos;$remotePath&apos;] = link.link.remotePath;
       linkManager.rootNode.updateList(r&apos;$remotePath&apos;);
