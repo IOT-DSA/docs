@@ -127,6 +127,16 @@
 
   _currentBinaryOutCache = cache;
 
+  if (_encoder == null) {
+    _encoder = (value) {
+      if (value is ByteData) {
+        int id = _currentBinaryOutCache.addBinaryData(value);
+        return &apos;\u001Bbytes,$id&apos;;
+      }
+      return null;
+    };
+  }
+
   JsonEncoder c;
 
   if (pretty) {
@@ -181,7 +191,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.0+1 -->
+<!-- Made with <3 by dartdoc version 0.6.1 -->
 </body>
 
 </html>

@@ -125,6 +125,15 @@
       <pre><code class="prettyprint lang-dart">Object decodeJsonFrame(String str, BinaryInCache cache) {
   _currentBinaryInCache = cache;
 
+  if (_reviver == null) {
+    _reviver = (key, value) {
+      if (value is String &amp;&amp; value.startsWith(&apos;\u001Bbytes,&apos;)) {
+        return _currentBinaryInCache.fetchData(value.substring(7));
+      }
+      return value;
+    };
+  }
+
   if (_unsafeDecoder == null) {
     _unsafeDecoder = new JsonDecoder(_reviver);
   }
@@ -169,7 +178,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.0+1 -->
+<!-- Made with <3 by dartdoc version 0.6.1 -->
 </body>
 
 </html>
