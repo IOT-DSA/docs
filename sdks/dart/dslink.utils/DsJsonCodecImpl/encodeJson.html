@@ -123,15 +123,15 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">String encodeJson(Object val, {bool pretty: false}) {
+  JsonEncoder e = encoder;
   if (pretty) {
     if (_prettyEncoder == null) {
       _prettyEncoder =
           encoder = new JsonEncoder.withIndent(&quot;  &quot;, _safeEncoder);
-    } else {
-      encoder = _prettyEncoder;
     }
+    e = _prettyEncoder;
   }
-  return encoder.convert(val);
+  return e.convert(val);
 }</code></pre>
     </section>
 
