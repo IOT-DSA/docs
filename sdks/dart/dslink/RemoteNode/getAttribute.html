@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>getAttribute method - RemoteNode class - dslink library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the getAttribute method from the RemoteNode class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
+                  <li class="self-crumb">getAttribute</li>
+              </ol>
+              <div class="self-name">getAttribute</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
+              <li class="self-crumb">getAttribute</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> getAttribute
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink/RemoteNode/getAttribute.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+    <h5><a href="dslink/RemoteNode-class.html">RemoteNode</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink/RemoteNode-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="dslink/RemoteNode/attributes.html">attributes</a></li>
+      <li><a class="" href="dslink/RemoteNode/children.html">children</a></li>
+      <li><a class="" href="dslink/RemoteNode/configs.html">configs</a></li>
+      <li><a class="" href="dslink/RemoteNode/listed.html">listed</a></li>
+      <li><a class="" href="dslink/RemoteNode/name.html">name</a></li>
+      <li><a class="" href="dslink/RemoteNode/profile.html">profile</a></li>
+      <li><a class="" href="dslink/RemoteNode/remotePath.html">remotePath</a></li>
+    
+      <li class="section-title"><a href="dslink/RemoteNode-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/RemoteNode/RemoteNode.html">RemoteNode</a></li>
+    
+    
+      <li class="section-title"><a href="dslink/RemoteNode-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink/RemoteNode/addChild.html">addChild</a></li>
+      <li><a class="" href="dslink/RemoteNode/createListController.html">createListController</a></li>
+      <li><a class="" href="dslink/RemoteNode/forEachAttribute.html">forEachAttribute</a></li>
+      <li><a class="" href="dslink/RemoteNode/forEachChild.html">forEachChild</a></li>
+      <li><a class="" href="dslink/RemoteNode/forEachConfig.html">forEachConfig</a></li>
+      <li><a class="" href="dslink/RemoteNode/get.html">get</a></li>
+      <li><a class="" href="dslink/RemoteNode/getAttribute.html">getAttribute</a></li>
+      <li><a class="" href="dslink/RemoteNode/getChild.html">getChild</a></li>
+      <li><a class="" href="dslink/RemoteNode/getConfig.html">getConfig</a></li>
+      <li><a class="" href="dslink/RemoteNode/getSimpleMap.html">getSimpleMap</a></li>
+      <li><a class="" href="dslink/RemoteNode/isSelfUpdated.html">isSelfUpdated</a></li>
+      <li><a class="" href="dslink/RemoteNode/isUpdated.html">isUpdated</a></li>
+      <li><a class="" href="dslink/RemoteNode/removeChild.html">removeChild</a></li>
+      <li><a class="" href="dslink/RemoteNode/resetNodeCache.html">resetNodeCache</a></li>
+      <li><a class="" href="dslink/RemoteNode/updateRemoteChildData.html">updateRemoteChildData</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype">Object</span>
+            <span class="name ">getAttribute</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="getAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Get an Attribute</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">/// Get an Attribute
+Object getAttribute(String name) {
+  if (attributes.containsKey(name)) {
+    return attributes[name];
+  }
+
+  if (profile != null &amp;&amp; profile.attributes.containsKey(name)) {
+    return profile.attributes[name];
+  }
+  return null;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  dslink 1.0.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.6.2 -->
+</body>
+
+</html>

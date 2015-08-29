@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>removeAttribute method - CallbackNode class - dslink.nodes library - Dart API</title>
+    <!-- required because all the links are pseudo-absolute -->
+    <base href="../..">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static-assets/prettify.css">
+    <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static-assets/styles.css">
+
+    <meta name="description" content="API docs for the removeAttribute method from the CallbackNode class, for the Dart programming language.">
+    <link rel="icon" href="static-assets/favicon.png">
+
+    <!-- Do not remove placeholder -->
+    <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 contents">
+              <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+              <ol class="breadcrumbs gt-separated hidden-xs">
+                  <li><a href="index.html">dslink</a></li>
+                  <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+                  <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
+                  <li class="self-crumb">removeAttribute</li>
+              </ol>
+              <div class="self-name">removeAttribute</div>
+              <form class="search navbar-right" role="search">
+                <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+              </form>
+            </div> <!-- /col -->
+          </div> <!-- /row -->
+        </div> <!-- /container -->
+    </nav>
+
+    <div class="container masthead">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <ol class="breadcrumbs gt-separated visible-xs">
+              <li><a href="index.html">dslink</a></li>
+              <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+              <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
+              <li class="self-crumb">removeAttribute</li>
+          </ol>
+          <div class="title-description">
+              <h1 class="title">
+                  <div class="kind">method</div> removeAttribute
+              </h1>
+          </div>
+          <ul class="subnav">
+              <li><a href="dslink.nodes/CallbackNode/removeAttribute.html#source">Source</a></li>
+          </ul>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></h5>
+    <h5><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink.nodes/CallbackNode-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/attributes.html">attributes</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/callbacks.html">callbacks</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/children.html">children</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/configs.html">configs</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/disconnected.html">disconnected</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/displayName.html">displayName</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/exists.html">exists</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/hasSubscriber.html">hasSubscriber</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/lastValueUpdate.html">lastValueUpdate</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/listChangeController.html">listChangeController</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/listReady.html">listReady</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/listStream.html">listStream</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/loaded.html">loaded</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/name.html">name</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onActionInvoke.html">onActionInvoke</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onChildAddedCallback.html">onChildAddedCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onChildRemovedCallback.html">onChildRemovedCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onCreatedCallback.html">onCreatedCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onLoadChildCallback.html">onLoadChildCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onRemovingCallback.html">onRemovingCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/parent.html">parent</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/path.html">path</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/profile.html">profile</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/provider.html">provider</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/removed.html">removed</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/serializable.html">serializable</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/type.html">type</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/value.html">value</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/valueReady.html">valueReady</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/writable.html">writable</a></li>
+    
+      <li class="section-title"><a href="dslink.nodes/CallbackNode-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.nodes/CallbackNode/CallbackNode.html">CallbackNode</a></li>
+    
+      <li class="section-title"><a href="dslink.nodes/CallbackNode-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/operator_get.html">operator []</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/operator_put.html">operator []=</a></li>
+    
+      <li class="section-title"><a href="dslink.nodes/CallbackNode-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/addChild.html">addChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/attach.html">attach</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/createChild.html">createChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/forEachAttribute.html">forEachAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/forEachChild.html">forEachChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/forEachConfig.html">forEachConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/get.html">get</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getAttribute.html">getAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getChild.html">getChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getConfig.html">getConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getInvokePermission.html">getInvokePermission</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getSetPermission.html">getSetPermission</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/getSimpleMap.html">getSimpleMap</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/hasAttribute.html">hasAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/hasConfig.html">hasConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/invoke.html">invoke</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/load.html">load</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onAllListCancel.html">onAllListCancel</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onChildAdded.html">onChildAdded</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onChildRemoved.html">onChildRemoved</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onCreated.html">onCreated</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onInvoke.html">onInvoke</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onLoadChild.html">onLoadChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onRemoving.html">onRemoving</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSetAttribute.html">onSetAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSetConfig.html">onSetConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSetValue.html">onSetValue</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onStartListListen.html">onStartListListen</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSubscribe.html">onSubscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onUnsubscribe.html">onUnsubscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/remove.html">remove</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/removeAttribute.html">removeAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/removeChild.html">removeChild</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/removeConfig.html">removeConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/save.html">save</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/serialize.html">serialize</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/setAttribute.html">setAttribute</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/setConfig.html">setConfig</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/setValue.html">setValue</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/subscribe.html">subscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/unsubscribe.html">unsubscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/updateList.html">updateList</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/updateValue.html">updateValue</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+            <span class="returntype"><a class="" href="dslink.nodes/Response-class.html">Response</a></span>
+            <span class="name ">removeAttribute</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="removeAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="removeAttribute-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="removeAttribute-param-response"><span class="type-annotation"><a class="" href="dslink/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>
+            </div>
+            )    </section>
+
+    <section class="desc markdown">
+    
+          <p>Called by the link internals to remove an attribute from this node.</p>
+    
+    </section>
+
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">Response removeAttribute(
+    String name, Responder responder, Response response) {
+  if (attributes.containsKey(name)) {
+    attributes.remove(name);
+    updateList(name);
+  }
+  return response..close();
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  </div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+    <div class="container-fluid">
+        <div class="container">
+            <p class="text-center">
+                <span class="no-break">
+                  dslink 1.0.0 api docs
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="https://www.dartlang.org">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                  </a>
+                </span>
+                &bull;
+                <span class="copyright no-break">
+                  <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+                </span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+<!-- Made with <3 by dartdoc version 0.6.2 -->
+</body>
+
+</html>
