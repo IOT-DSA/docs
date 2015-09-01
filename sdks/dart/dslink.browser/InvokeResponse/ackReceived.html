@@ -83,12 +83,11 @@
       <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/name.html">name</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/node.html">node</a></li>
-      <li><a class="" href="dslink.browser/InvokeResponse/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/onClose.html">onClose</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/parentNode.html">parentNode</a></li>
+      <li><a class="" href="dslink.browser/InvokeResponse/pendingData.html">pendingData</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/responder.html">responder</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/rid.html">rid</a></li>
-      <li><a class="" href="dslink.browser/InvokeResponse/type.html">type</a></li>
     
       <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -96,7 +95,6 @@
     
       <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/ackReceived.html">ackReceived</a></li>
-      <li><a class="" href="dslink.browser/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/close.html">close</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li><a class="" href="dslink.browser/InvokeResponse/prepareSending.html">prepareSending</a></li>
@@ -126,9 +124,7 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void ackReceived(int receiveAckId, int startTime, int currentTime) {
-  if (onAck != null &amp;&amp; !_closed) {
-    onAck(this, receiveAckId, startTime, currentTime);
-  }
+  // TODO: implement ackReceived
 }</code></pre>
     </section>
 

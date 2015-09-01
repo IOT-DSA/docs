@@ -79,7 +79,6 @@
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
       <li><a class="" href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
-      <li><a class="" href="dslink.responder/OnInvokeAcked.html">OnInvokeAcked</a></li>
       <li><a class="" href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
       <li><a class="" href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
     
@@ -165,16 +164,6 @@
     </div>
     <p></p>
             </dd>
-            <dt id="onAck" class="property">
-                <span class="name"><a class="" href="dslink.responder/InvokeResponse/onAck.html">onAck</a></span>
-                <span class="signature">&#8594; <a class="" href="dslink/OnInvokeAcked.html">OnInvokeAcked</a></span>
-            </dt>
-            <dd>
-                <div class="features">
-        read / write
-    </div>
-    <p></p>
-            </dd>
             <dt id="onClose" class="property">
                 <span class="name"><a class="" href="dslink.responder/InvokeResponse/onClose.html">onClose</a></span>
                 <span class="signature">&#8594; <a class="" href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span>
@@ -192,6 +181,16 @@
             <dd>
                 <div class="features">
         read-only
+    </div>
+    <p></p>
+            </dd>
+            <dt id="pendingData" class="property">
+                <span class="name"><a class="" href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></span>
+                <span class="signature">&#8594; List&lt;_InvokeResponseUpdate&gt;</span>
+            </dt>
+            <dd>
+                <div class="features">
+        read / write
     </div>
     <p></p>
             </dd>
@@ -214,16 +213,6 @@
         read-only, inherited
     </div>
     <p></p>
-            </dd>
-            <dt id="type" class="property">
-                <span class="name"><a class="" href="dslink.responder/InvokeResponse/type.html">type</a></span>
-                <span class="signature">&#8594; String</span>
-            </dt>
-            <dd>
-                <div class="features">
-        read / write
-    </div>
-    <p>optiions: stream, append, refresh</p>
             </dd>
         </dl>
     </section>
@@ -252,15 +241,7 @@
                   </span>
               </dt>
               <dd>
-                  <p></p>
-              </dd>
-              <dt id="ackWaiting" class="callable">
-                  <a href="dslink.responder/InvokeResponse/ackWaiting.html"><span class="name ">ackWaiting</span></a><span class="signature">(<wbr><span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
-                  </span>
-              </dt>
-              <dd>
+                  <div class="features">inherited</div>
                   <p></p>
               </dd>
               <dt id="close" class="callable">
@@ -323,12 +304,11 @@
       <li class="section-title"><a href="dslink.responder/InvokeResponse-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/name.html">name</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/node.html">node</a></li>
-      <li><a class="" href="dslink.responder/InvokeResponse/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/onClose.html">onClose</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/parentNode.html">parentNode</a></li>
+      <li><a class="" href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/responder.html">responder</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/rid.html">rid</a></li>
-      <li><a class="" href="dslink.responder/InvokeResponse/type.html">type</a></li>
     
       <li class="section-title"><a href="dslink.responder/InvokeResponse-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.responder/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -336,7 +316,6 @@
     
       <li class="section-title"><a href="dslink.responder/InvokeResponse-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/ackReceived.html">ackReceived</a></li>
-      <li><a class="" href="dslink.responder/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/close.html">close</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse/prepareSending.html">prepareSending</a></li>

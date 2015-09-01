@@ -83,12 +83,11 @@
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink/InvokeResponse/name.html">name</a></li>
       <li><a class="" href="dslink/InvokeResponse/node.html">node</a></li>
-      <li><a class="" href="dslink/InvokeResponse/onAck.html">onAck</a></li>
       <li><a class="" href="dslink/InvokeResponse/onClose.html">onClose</a></li>
       <li><a class="" href="dslink/InvokeResponse/parentNode.html">parentNode</a></li>
+      <li><a class="" href="dslink/InvokeResponse/pendingData.html">pendingData</a></li>
       <li><a class="" href="dslink/InvokeResponse/responder.html">responder</a></li>
       <li><a class="" href="dslink/InvokeResponse/rid.html">rid</a></li>
-      <li><a class="" href="dslink/InvokeResponse/type.html">type</a></li>
     
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -96,7 +95,6 @@
     
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/InvokeResponse/ackReceived.html">ackReceived</a></li>
-      <li><a class="" href="dslink/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
       <li><a class="" href="dslink/InvokeResponse/close.html">close</a></li>
       <li><a class="" href="dslink/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li><a class="" href="dslink/InvokeResponse/prepareSending.html">prepareSending</a></li>
@@ -141,16 +139,19 @@ void startSendingData(int currentTime, int waitingAckId) {
     return;
   }
 
-  if (_columns != null) {
-    _columns = TableColumn.serializeColumns(_columns);
+  for (_InvokeResponseUpdate update in pendingData) {
+    List outColumns;
+    if (update.columns != null) {
+      outColumns = TableColumn.serializeColumns(update.columns);
+    }
+    responder.updateResponse(this, update.updates,
+        streamStatus: update.status, columns: outColumns, meta:update.meta);
+    if (_sentStreamStatus == StreamStatus.closed) {
+      _close();
+      break;
+    }
   }
-  responder.updateResponse(this, _updates,
-      streamStatus: _sendingStreamStatus, columns: _columns, meta:_meta);
-  _columns = null;
-  _updates = null;
-  if (_sentStreamStatus == StreamStatus.closed) {
-    _close();
-  }
+  pendingData.clear();
 }</code></pre>
     </section>
 

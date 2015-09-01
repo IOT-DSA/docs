@@ -83,12 +83,11 @@
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink/InvokeResponse/name.html">name</a></li>
       <li><a class="" href="dslink/InvokeResponse/node.html">node</a></li>
-      <li><a class="" href="dslink/InvokeResponse/onAck.html">onAck</a></li>
       <li><a class="" href="dslink/InvokeResponse/onClose.html">onClose</a></li>
       <li><a class="" href="dslink/InvokeResponse/parentNode.html">parentNode</a></li>
+      <li><a class="" href="dslink/InvokeResponse/pendingData.html">pendingData</a></li>
       <li><a class="" href="dslink/InvokeResponse/responder.html">responder</a></li>
       <li><a class="" href="dslink/InvokeResponse/rid.html">rid</a></li>
-      <li><a class="" href="dslink/InvokeResponse/type.html">type</a></li>
     
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/InvokeResponse/InvokeResponse.html">InvokeResponse</a></li>
@@ -96,7 +95,6 @@
     
       <li class="section-title"><a href="dslink/InvokeResponse-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/InvokeResponse/ackReceived.html">ackReceived</a></li>
-      <li><a class="" href="dslink/InvokeResponse/ackWaiting.html">ackWaiting</a></li>
       <li><a class="" href="dslink/InvokeResponse/close.html">close</a></li>
       <li><a class="" href="dslink/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li><a class="" href="dslink/InvokeResponse/prepareSending.html">prepareSending</a></li>
@@ -127,22 +125,10 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void updateStream(List updates,
     {List columns, String streamStatus: StreamStatus.open, Map meta}) {
-  if (columns != null) {
-    _columns = columns;
+  if (meta != null &amp;&amp; meta[&apos;mode&apos;] == &apos;refresh&apos;) {
+    pendingData.clear();
   }
-  _meta = meta;
-  // TODO better way of merge response on different type of action result
-  if (_updates == null) {
-    _updates = updates;
-  } else {
-    _updates.addAll(updates);
-  }
-  if (_sendingStreamStatus == StreamStatus.initialize) {
-    // in case stream can&apos;t return all restult all at once, count the length of initilize
-    _pendingInitializeLength += updates.length;
-  }
-
-  _sendingStreamStatus = streamStatus;
+  pendingData.add(new _InvokeResponseUpdate(streamStatus, updates, columns, meta));
   prepareSending();
 }</code></pre>
     </section>
