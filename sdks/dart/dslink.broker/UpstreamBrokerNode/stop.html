@@ -82,6 +82,7 @@
     
       <li class="section-title"><a href="dslink.broker/UpstreamBrokerNode-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/attributes.html">attributes</a></li>
+      <li><a class="" href="dslink.broker/UpstreamBrokerNode/bnn.html">bnn</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/callbacks.html">callbacks</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/children.html">children</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/configs.html">configs</a></li>
@@ -106,6 +107,7 @@
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/profile.html">profile</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/provider.html">provider</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/toBeRemoved.html">toBeRemoved</a></li>
+      <li><a class="" href="dslink.broker/UpstreamBrokerNode/un.html">un</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/url.html">url</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/value.html">value</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/valueReady.html">valueReady</a></li>
@@ -173,10 +175,10 @@
     return;
   }
 
-  BrokerNodeProvider p = provider;
-  p.removeLink(link.link, &apos;@upstream@$name&apos;);
   link.stop();
+  BrokerNodeProvider p = provider;
 
+  p.removeLink(link.link, &apos;@upstream@$name&apos;, force: true);
   ien.updateValue(false);
   enabled = false;
 }</code></pre>

@@ -124,9 +124,9 @@
       &quot;/sys/messagesInPerSecond&quot;, provider)..configs[r&quot;$type&quot;] = &quot;number&quot;;
 
   dataOutPerSecond = new ThroughPutNode(&quot;/sys/dataOutPerSecond&quot;, provider)
-    ..configs[r&quot;$type&quot;] = &quot;number&quot;;
+    ..configs[r&quot;$type&quot;] = &quot;number&quot;..configs[r&quot;@unit&quot;] = &quot;bytes&quot;;
   dataInPerSecond = new ThroughPutNode(&quot;/sys/dataInPerSecond&quot;, provider)
-    ..configs[r&quot;$type&quot;] = &quot;number&quot;;
+    ..configs[r&quot;$type&quot;] = &quot;number&quot;..configs[r&quot;@unit&quot;] = &quot;bytes&quot;;
 }</code></pre>
     </section>
 

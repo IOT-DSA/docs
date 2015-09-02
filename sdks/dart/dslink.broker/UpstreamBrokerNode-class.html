@@ -106,7 +106,6 @@
       <li><a class="" href="dslink.broker/DeleteUpstreamConnectionNode-class.html">DeleteUpstreamConnectionNode</a></li>
       <li><a class="" href="dslink.broker/DsHttpServer-class.html">DsHttpServer</a></li>
       <li><a class="" href="dslink.broker/DsSimpleLinkManager-class.html">DsSimpleLinkManager</a></li>
-      <li><a class="" href="dslink.broker/EnabledUpstreamBrokerNode-class.html">EnabledUpstreamBrokerNode</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink-class.html">HttpServerLink</a></li>
       <li><a class="" href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
@@ -120,7 +119,10 @@
       <li><a class="" href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
       <li><a class="" href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
+      <li><a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></li>
+      <li><a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
+      <li><a class="" href="dslink.broker/UpstreamUrlNode-class.html">UpstreamUrlNode</a></li>
       <li><a class="" href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a class="" href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
       <li><a class="" href="dslink.broker/VirtualNodePermission-class.html">VirtualNodePermission</a></li>
@@ -170,6 +172,16 @@
         read / write, inherited
     </div>
     <p>Node Attributes</p>
+            </dd>
+            <dt id="bnn" class="property">
+                <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/bnn.html">bnn</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+            </dt>
+            <dd>
+                <div class="features">
+        read / write
+    </div>
+    <p></p>
             </dd>
             <dt id="callbacks" class="property">
                 <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/callbacks.html">callbacks</a></span>
@@ -268,7 +280,7 @@ only want to do something if the node is subscribed to.</p>
             </dd>
             <dt id="ien" class="property">
                 <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/ien.html">ien</a></span>
-                <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></span>
             </dt>
             <dd>
                 <div class="features">
@@ -344,13 +356,13 @@ See <code>listChangeController</code>.</p>
             </dt>
             <dd>
                 <div class="features">
-        read-only
+        read / write
     </div>
     <p></p>
             </dd>
             <dt id="nn" class="property">
                 <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/nn.html">nn</a></span>
-                <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></span>
             </dt>
             <dd>
                 <div class="features">
@@ -418,13 +430,23 @@ See <code>listChangeController</code>.</p>
     </div>
     <p></p>
             </dd>
+            <dt id="un" class="property">
+                <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/un.html">un</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/UpstreamUrlNode-class.html">UpstreamUrlNode</a></span>
+            </dt>
+            <dd>
+                <div class="features">
+        read / write
+    </div>
+    <p></p>
+            </dd>
             <dt id="url" class="property">
                 <span class="name"><a class="" href="dslink.broker/UpstreamBrokerNode/url.html">url</a></span>
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
                 <div class="features">
-        read-only
+        read / write
     </div>
     <p></p>
             </dd>
@@ -818,6 +840,7 @@ Otherwise this will fetch a child.</p>
     
       <li class="section-title"><a href="dslink.broker/UpstreamBrokerNode-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/attributes.html">attributes</a></li>
+      <li><a class="" href="dslink.broker/UpstreamBrokerNode/bnn.html">bnn</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/callbacks.html">callbacks</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/children.html">children</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/configs.html">configs</a></li>
@@ -842,6 +865,7 @@ Otherwise this will fetch a child.</p>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/profile.html">profile</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/provider.html">provider</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/toBeRemoved.html">toBeRemoved</a></li>
+      <li><a class="" href="dslink.broker/UpstreamBrokerNode/un.html">un</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/url.html">url</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/value.html">value</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode/valueReady.html">valueReady</a></li>

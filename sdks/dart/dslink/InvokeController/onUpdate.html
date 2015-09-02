@@ -140,7 +140,7 @@
     streamStatus = StreamStatus.closed;
     _controller.add(
         new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
-  } else if (updates != null) {
+  } else if (updates != null || meta != null) {
     _controller.add(new RequesterInvokeUpdate(
         updates, columns, _cachedColumns, streamStatus, meta:meta));
   }

@@ -86,6 +86,7 @@
       <li><a class="" href="dslink.broker/BrokerNodeProvider/conns.html">conns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/connsNode.html">connsNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/defsNode.html">defsNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/done.html">done</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamName.html">downstreamName</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameS.html">downstreamNameS</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameSS.html">downstreamNameSS</a></li>
@@ -143,7 +144,7 @@
             <span class="name ">removeLink</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a class="" href="dslink/BaseLink-class.html">BaseLink</a></span> <span class="parameter-name">link</span></span>,<br><span class="parameter" id="removeLink-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>
+                <span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a class="" href="dslink/BaseLink-class.html">BaseLink</a></span> <span class="parameter-name">link</span></span>,<br><span class="parameter" id="removeLink-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>,<br>{<span class="parameter" id="removeLink-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span>: <span class="default-value">false</span></span>}
             </div>
             )    </section>
 
@@ -155,8 +156,8 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void removeLink(BaseLink link, String id) {
-  if (_links[id] == link) {
+      <pre><code class="prettyprint lang-dart">void removeLink(BaseLink link, String id, {bool force: false}) {
+  if (_links[id] == link || force) {
     _links.remove(id);
   }
 }</code></pre>
