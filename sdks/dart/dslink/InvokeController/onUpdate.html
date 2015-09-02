@@ -133,14 +133,11 @@
     _cachedColumns = getNodeColumns(node);
   }
 
-//    if (_cachedColumns == null) {
-//      _cachedColumns = [];
-//    }
   if (error != null) {
     streamStatus = StreamStatus.closed;
     _controller.add(
         new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
-  } else if (updates != null || meta != null) {
+  } else if (updates != null || meta != null || streamStatus == StreamStatus.closed) {
     _controller.add(new RequesterInvokeUpdate(
         updates, columns, _cachedColumns, streamStatus, meta:meta));
   }
