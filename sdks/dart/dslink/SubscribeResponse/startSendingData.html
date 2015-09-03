@@ -140,7 +140,7 @@ void startSendingData(int currentTime, int waitingAckId) {
 
   List updates = [];
   for (RespSubscribeController controller in changed) {
-    updates.addAll(controller.process());
+    updates.addAll(controller.process(waitingAckId));
   }
   responder.updateResponse(this, updates);
   changed.clear();

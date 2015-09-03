@@ -93,6 +93,8 @@
       <li><a class="" href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
       <li><a class="" href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a class="" href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a class="" href="dslink.responder/ISubscriptionStorage-class.html">ISubscriptionStorage</a></li>
+      <li><a class="" href="dslink.responder/ISubscriptionStorageManager-class.html">ISubscriptionStorageManager</a></li>
       <li><a class="" href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
       <li><a class="" href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
       <li><a class="" href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
@@ -152,7 +154,7 @@
             </dd>
             <dt id="lastValues" class="property">
                 <span class="name"><a class="" href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a></span>
-                <span class="signature">&#8594; ListQueue&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+                <span class="signature">&#8594; List&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
             </dt>
             <dd>
                 <div class="features">
@@ -220,6 +222,16 @@
     </div>
     <p></p>
             </dd>
+            <dt id="waitingValues" class="property">
+                <span class="name"><a class="" href="dslink.responder/RespSubscribeController/waitingValues.html">waitingValues</a></span>
+                <span class="signature">&#8594; ListQueue&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+            </dt>
+            <dd>
+                <div class="features">
+        read / write
+    </div>
+    <p></p>
+            </dd>
         </dl>
     </section>
 
@@ -258,8 +270,17 @@
               <dd>
                   <p></p>
               </dd>
+              <dt id="onAck" class="callable">
+                  <a href="dslink.responder/RespSubscribeController/onAck.html"><span class="name ">onAck</span></a><span class="signature">(<wbr><span class="parameter" id="onAck-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
               <dt id="process" class="callable">
-                  <a href="dslink.responder/RespSubscribeController/process.html"><span class="name ">process</span></a><span class="signature">(<wbr>)
+                  <a href="dslink.responder/RespSubscribeController/process.html"><span class="name ">process</span></a><span class="signature">(<wbr><span class="parameter" id="process-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
                       &#8594;
                       <span class="returntype">List</span>
                   </span>
@@ -288,6 +309,7 @@
       <li><a class="" href="dslink.responder/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/response.html">response</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/sid.html">sid</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.responder/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></li>
@@ -296,6 +318,7 @@
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/process.html">process</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

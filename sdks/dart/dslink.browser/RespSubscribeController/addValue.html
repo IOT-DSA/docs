@@ -90,6 +90,7 @@
       <li><a class="" href="dslink.browser/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/response.html">response</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/sid.html">sid</a></li>
+      <li><a class="" href="dslink.browser/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.browser/RespSubscribeController-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></li>
@@ -98,6 +99,7 @@
       <li class="section-title"><a href="dslink.browser/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/destroy.html">destroy</a></li>
+      <li><a class="" href="dslink.browser/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/process.html">process</a></li>
     </ol>
 
@@ -123,7 +125,6 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
-
   if (_caching &amp;&amp; _isCacheValid) {
     lastValues.add(val);
     if (lastValues.length &gt; response.responder.maxCacheLength) {

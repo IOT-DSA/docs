@@ -130,7 +130,13 @@
   } else {
     _waitingAckCount --;
   }
-
+  if (responder.storage != null) {
+    subsriptions.forEach((String path, RespSubscribeController controller){
+      if (controller._storage != null) {
+        controller.onAck(receiveAckId);
+      }
+    });
+  }
   if (_sendingAfterAck) {
     _sendingAfterAck = false;
     prepareSending();
