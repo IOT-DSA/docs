@@ -127,8 +127,9 @@
       <li><a class="" href="dslink/InvokeController-class.html">InvokeController</a></li>
       <li><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a class="" href="dslink/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a class="" href="dslink/ISubscriptionStorage-class.html">ISubscriptionStorage</a></li>
+      <li><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
       <li><a class="" href="dslink/ISubscriptionStorageManager-class.html">ISubscriptionStorageManager</a></li>
+      <li><a class="" href="dslink/ISubscriptionValueStorage-class.html">ISubscriptionValueStorage</a></li>
       <li><a class="" href="dslink/LinkProvider-class.html">LinkProvider</a></li>
       <li><a class="" href="dslink/ListController-class.html">ListController</a></li>
       <li><a class="" href="dslink/ListDefListener-class.html">ListDefListener</a></li>
@@ -268,7 +269,7 @@
             </dd>
             <dt id="storage" class="property">
                 <span class="name"><a class="" href="dslink/Responder/storage.html">storage</a></span>
-                <span class="signature">&#8594; <a class="" href="dslink/ISubscriptionStorageManager-class.html">ISubscriptionStorageManager</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
             </dt>
             <dd>
                 <div class="features">
@@ -334,6 +335,16 @@ inside processor, send() data that only need to appear once per data frame</p>
                   </span>
               </dt>
               <dd>
+                  <p></p>
+              </dd>
+              <dt id="clearProcessors" class="callable">
+                  <a href="dslink/Responder/clearProcessors.html"><span class="name ">clearProcessors</span></a><span class="signature">(<wbr>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <div class="features">inherited</div>
                   <p></p>
               </dd>
               <dt id="close" class="callable">
@@ -472,6 +483,15 @@ inside processor, send() data that only need to appear once per data frame</p>
               <dd>
                   <p></p>
               </dd>
+              <dt id="updateStorage" class="callable">
+                  <a href="dslink/Responder/updateStorage.html"><span class="name ">updateStorage</span></a><span class="signature">(<wbr><span class="parameter" id="updateStorage-param-s"><span class="type-annotation"><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>)
+                      &#8594;
+                      <span class="returntype">void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
           </dl>
       </section>
 
@@ -500,6 +520,7 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a class="" href="dslink/Responder/addResponse.html">addResponse</a></li>
       <li><a class="" href="dslink/Responder/addToSendList.html">addToSendList</a></li>
       <li><a class="" href="dslink/Responder/addTraceCallback.html">addTraceCallback</a></li>
+      <li><a class="" href="dslink/Responder/clearProcessors.html">clearProcessors</a></li>
       <li><a class="" href="dslink/Responder/close.html">close</a></li>
       <li><a class="" href="dslink/Responder/getSendingData.html">getSendingData</a></li>
       <li><a class="" href="dslink/Responder/invoke.html">invoke</a></li>
@@ -515,6 +536,7 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a class="" href="dslink/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a class="" href="dslink/Responder/updateGroups.html">updateGroups</a></li>
       <li><a class="" href="dslink/Responder/updateResponse.html">updateResponse</a></li>
+      <li><a class="" href="dslink/Responder/updateStorage.html">updateStorage</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 

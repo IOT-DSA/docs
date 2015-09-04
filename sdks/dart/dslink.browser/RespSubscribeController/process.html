@@ -90,7 +90,6 @@
       <li><a class="" href="dslink.browser/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/response.html">response</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/sid.html">sid</a></li>
-      <li><a class="" href="dslink.browser/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.browser/RespSubscribeController-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></li>
@@ -99,7 +98,6 @@
       <li class="section-title"><a href="dslink.browser/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/destroy.html">destroy</a></li>
-      <li><a class="" href="dslink.browser/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.browser/RespSubscribeController/process.html">process</a></li>
     </ol>
 
@@ -133,34 +131,19 @@
     if (_storage != null) {
       for (ValueUpdate update in lastValues) {
         update.waitingAck = waitingAckId;
-        _storage.addValue(update);
       }
-      waitingValues.addAll(lastValues);
     }
     lastValues.clear();
   } else {
     if (lastValue.count &gt; 1 || lastValue.status != null) {
-      Map m = {&apos;ts&apos;: lastValue.ts, &apos;value&apos;: lastValue.value, &apos;sid&apos;: sid};
-      if (lastValue.count == 0) {} else if (lastValue.count &gt; 1) {
-        m[&apos;count&apos;] = lastValue.count;
-        if (lastValue.sum.isFinite) {
-          m[&apos;sum&apos;] = lastValue.sum;
-        }
-        if (lastValue.max.isFinite) {
-          m[&apos;max&apos;] = lastValue.max;
-        }
-        if (lastValue.min.isFinite) {
-          m[&apos;min&apos;] = lastValue.min;
-        }
-      }
+      Map m = lastValue.toMap();
+      m[&apos;sid&apos;] = sid;
       rslts.add(m);
     } else {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
     if (_storage != null) {
       lastValue.waitingAck = waitingAckId;
-      _storage.addValue(lastValue);
-      waitingValues.add(lastValue);
     }
     lastValue = null;
     _isCacheValid = true;
