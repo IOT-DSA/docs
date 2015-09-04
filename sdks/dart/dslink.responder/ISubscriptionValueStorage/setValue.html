@@ -82,7 +82,6 @@
     
       <li class="section-title"><a href="dslink.responder/ISubscriptionValueStorage-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/qos.html">qos</a></li>
-      <li><a class="" href="dslink.responder/ISubscriptionValueStorage/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.responder/ISubscriptionValueStorage-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.responder/ISubscriptionValueStorage/ISubscriptionValueStorage.html">ISubscriptionValueStorage</a></li>
@@ -91,8 +90,6 @@
       <li class="section-title"><a href="dslink.responder/ISubscriptionValueStorage-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/clear.html">clear</a></li>
-      <li><a class="" href="dslink.responder/ISubscriptionValueStorage/destroy.html">destroy</a></li>
-      <li><a class="" href="dslink.responder/ISubscriptionValueStorage/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/removeValue.html">removeValue</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/setValue.html">setValue</a></li>
       <li><a class="" href="dslink.responder/ISubscriptionValueStorage/valueRemoved.html">valueRemoved</a></li>
@@ -121,8 +118,6 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void setValue(ValueUpdate value) {
   value.serialized = DsJson.encode(value.toMap());
-  waitingValues.clear();
-  waitingValues.add(value);
 }</code></pre>
     </section>
 

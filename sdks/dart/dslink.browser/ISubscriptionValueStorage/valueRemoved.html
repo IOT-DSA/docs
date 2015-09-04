@@ -82,7 +82,6 @@
     
       <li class="section-title"><a href="dslink.browser/ISubscriptionValueStorage-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/qos.html">qos</a></li>
-      <li><a class="" href="dslink.browser/ISubscriptionValueStorage/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.browser/ISubscriptionValueStorage-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/ISubscriptionValueStorage/ISubscriptionValueStorage.html">ISubscriptionValueStorage</a></li>
@@ -91,8 +90,6 @@
       <li class="section-title"><a href="dslink.browser/ISubscriptionValueStorage-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/clear.html">clear</a></li>
-      <li><a class="" href="dslink.browser/ISubscriptionValueStorage/destroy.html">destroy</a></li>
-      <li><a class="" href="dslink.browser/ISubscriptionValueStorage/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/removeValue.html">removeValue</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/setValue.html">setValue</a></li>
       <li><a class="" href="dslink.browser/ISubscriptionValueStorage/valueRemoved.html">valueRemoved</a></li>
@@ -105,6 +102,10 @@
     <section class="multi-line-signature">
             <span class="returntype">void</span>
             <span class="name ">valueRemoved</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="valueRemoved-param-updates"><span class="type-annotation">Iterable&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">updates</span></span>
+            </div>
             )    </section>
 
     <section class="desc markdown">
@@ -116,7 +117,7 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">/// api to optimize file remove;
-void valueRemoved(){}</code></pre>
+void valueRemoved(Iterable&lt;ValueUpdate&gt; updates){}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

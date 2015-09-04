@@ -90,6 +90,7 @@
       <li><a class="" href="dslink.responder/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/response.html">response</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/sid.html">sid</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.responder/RespSubscribeController/RespSubscribeController.html">RespSubscribeController</a></li>
@@ -98,6 +99,7 @@
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/process.html">process</a></li>
     </ol>
 
@@ -134,11 +136,19 @@
         lastValue.mergeAdd(update);
       }
       lastValues.clear();
-      _storage.setValue(lastValue);
+      if (_qosLevel &gt; 0) {
+        waitingValues..clear()..add(lastValue);
+        if (_storage != null) {
+            _storage.setValue(lastValue);
+        }
+      }
     } else {
       lastValue = val;
-      if (_storage != null) {
-         _storage.addValue(lastValue);
+      if (_qosLevel &gt; 0) {
+        waitingValues.add(lastValue);
+        if (_storage != null) {
+            _storage.addValue(lastValue);
+        }
       }
     }
   } else {
@@ -147,8 +157,11 @@
     } else {
       lastValue = val;
     }
-    if (_storage != null) {
-      _storage.setValue(lastValue);
+    if (_qosLevel &gt; 0) {
+       waitingValues..clear()..add(lastValue);
+       if (_storage != null) {
+           _storage.setValue(lastValue);
+       }
     }
   }
   // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
