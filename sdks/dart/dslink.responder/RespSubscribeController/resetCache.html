@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RespSubscribeController constructor - RespSubscribeController class - dslink.responder library - Dart API</title>
+    <title>resetCache method - RespSubscribeController class - dslink.responder library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the RespSubscribeController constructor from the Class RespSubscribeController class from the dslink.responder library, for the Dart programming language.">
+    <meta name="description" content="API docs for the resetCache method from the RespSubscribeController class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
                   <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
-                  <li class="self-crumb">RespSubscribeController</li>
+                  <li class="self-crumb">resetCache</li>
               </ol>
-              <div class="self-name">RespSubscribeController</div>
+              <div class="self-name">resetCache</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,14 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
               <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
-              <li class="self-crumb">RespSubscribeController</li>
+              <li class="self-crumb">resetCache</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">constructor</div> RespSubscribeController
+                  <div class="kind">method</div> resetCache
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.responder/RespSubscribeController/resetCache.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -71,7 +72,6 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
     <h5><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></h5>
@@ -104,19 +104,18 @@
       <li><a class="" href="dslink.responder/RespSubscribeController/resetCache.html">resetCache</a></li>
     </ol>
 
-  </div><!--/.sidebar-offcanvas-left-->
+  </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-        
-                <span class="name ">RespSubscribeController</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-response"><span class="type-annotation"><a class="" href="dslink/SubscribeResponse-class.html">SubscribeResponse</a></span> <span class="parameter-name">response</span></span>,<br><span class="parameter" id="-param-node"><span class="type-annotation"><a class="" href="dslink/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>,<br><span class="parameter" id="-param-sid"><span class="type-annotation">int</span> <span class="parameter-name">sid</span></span>,<br><span class="parameter" id="-param-_permitted"><span class="type-annotation">bool</span> <span class="parameter-name">_permitted</span></span>,<br><span class="parameter" id="-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>
-        </div>
-        )
-    </section>
+            <span class="returntype">void</span>
+            <span class="name ">resetCache</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="resetCache-param-values"><span class="type-annotation">List&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">values</span></span>
+            </div>
+            )    </section>
 
     <section class="desc markdown">
     
@@ -124,6 +123,25 @@
     
     </section>
 
+    <section class="summary source-code" id="source">
+      <h2>Source</h2>
+      <pre><code class="prettyprint lang-dart">void resetCache(List&lt;ValueUpdate&gt; values) {
+  if (this._caching) {
+    lastValues = values;
+    if (waitingValues != null) {
+      waitingValues.clear();
+      waitingValues.addAll(values);
+    }
+  } else {
+    lastValues.clear();
+    if (waitingValues != null) {
+      waitingValues.clear();
+      waitingValues.add(values.last);
+    }
+  }
+  lastValue = values.last;
+}</code></pre>
+    </section>
 
   </div> <!-- /.main-content -->
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>addValue method - RespSubscribeController class - dslink.browser library - Dart API</title>
+    <title>resetCache method - RespSubscribeController class - dslink.browser library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the addValue method from the RespSubscribeController class, for the Dart programming language.">
+    <meta name="description" content="API docs for the resetCache method from the RespSubscribeController class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
                   <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
-                  <li class="self-crumb">addValue</li>
+                  <li class="self-crumb">resetCache</li>
               </ol>
-              <div class="self-name">addValue</div>
+              <div class="self-name">resetCache</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
               <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
-              <li class="self-crumb">addValue</li>
+              <li class="self-crumb">resetCache</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> addValue
+                  <div class="kind">method</div> resetCache
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.browser/RespSubscribeController/addValue.html#source">Source</a></li>
+              <li><a href="dslink.browser/RespSubscribeController/resetCache.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -110,10 +110,10 @@
 
     <section class="multi-line-signature">
             <span class="returntype">void</span>
-            <span class="name ">addValue</span>(
+            <span class="name ">resetCache</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="addValue-param-val"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">val</span></span>
+                <span class="parameter" id="resetCache-param-values"><span class="type-annotation">List&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">values</span></span>
             </div>
             )    </section>
 
@@ -125,51 +125,21 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
-  if (_caching &amp;&amp; _isCacheValid) {
-    print(&apos;addValue ${lastValues.length}&apos;);
-    lastValues.add(val);
-    if (lastValues.length &gt; response.responder.maxCacheLength) {
-      // cache is no longer valid, fallback to rollup mode
-      _isCacheValid = false;
-      lastValue = new ValueUpdate(null,ts:&apos;&apos;);
-      for (ValueUpdate update in lastValues) {
-        lastValue.mergeAdd(update);
-      }
-      lastValues.clear();
-      if (_qosLevel &gt; 0) {
-        waitingValues..clear()..add(lastValue);
-        if (_storage != null) {
-            _storage.setValue(lastValue);
-        }
-      }
-    } else {
-      lastValue = val;
-      if (_qosLevel &gt; 0) {
-        waitingValues.add(lastValue);
-        if (_storage != null) {
-            _storage.addValue(lastValue);
-        }
-      }
+      <pre><code class="prettyprint lang-dart">void resetCache(List&lt;ValueUpdate&gt; values) {
+  if (this._caching) {
+    lastValues = values;
+    if (waitingValues != null) {
+      waitingValues.clear();
+      waitingValues.addAll(values);
     }
   } else {
-    if (lastValue != null) {
-      lastValue =  new ValueUpdate.merge(lastValue, val);
-    } else {
-      lastValue = val;
-    }
-    if (_qosLevel &gt; 0) {
-       waitingValues..clear()..add(lastValue);
-       if (_storage != null) {
-           _storage.setValue(lastValue);
-       }
+    lastValues.clear();
+    if (waitingValues != null) {
+      waitingValues.clear();
+      waitingValues.add(values.last);
     }
   }
-  // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
-  // the first response can happen ASAP, but
-  if (_permitted &amp;&amp; sid &gt; -1) {
-    response.subscriptionChanged(this);
-  }
+  lastValue = values.last;
 }</code></pre>
     </section>
 

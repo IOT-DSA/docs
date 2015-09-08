@@ -108,7 +108,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">void</span>
+            <span class="returntype"><a class="" href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></span>
             <span class="name ">add</span>(
             <br>
             <div class="parameters">
@@ -124,9 +124,10 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void add(String path, LocalNode node, int sid, int qos) {
+      <pre><code class="prettyprint lang-dart">RespSubscribeController add(String path, LocalNode node, int sid, int qos) {
+  RespSubscribeController controller;
   if (subsriptions[path] != null) {
-    RespSubscribeController controller = subsriptions[path];
+    controller = subsriptions[path];
     if (controller.sid != sid) {
       if (controller.sid &gt;= 0) {
         subsriptionids.remove(controller.sid);
@@ -142,7 +143,7 @@
   } else {
     int permission = responder.nodeProvider.permissions
         .getPermission(node.path, responder);
-    RespSubscribeController controller = new RespSubscribeController(
+    controller = new RespSubscribeController(
         this, node, sid, permission &gt;= Permission.READ, qos);
     subsriptions[path] = controller;
     if (sid &gt;= 0) {
@@ -156,6 +157,7 @@
     }
     print(&apos;new sub $path&apos;);
   }
+  return controller;
 }</code></pre>
     </section>
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>updateStorage method - Responder class - dslink.responder library - Dart API</title>
+    <title>initStorage method - Responder class - dslink.responder library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the updateStorage method from the Responder class, for the Dart programming language.">
+    <meta name="description" content="API docs for the initStorage method from the Responder class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
                   <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
-                  <li class="self-crumb">updateStorage</li>
+                  <li class="self-crumb">initStorage</li>
               </ol>
-              <div class="self-name">updateStorage</div>
+              <div class="self-name">initStorage</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
               <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
-              <li class="self-crumb">updateStorage</li>
+              <li class="self-crumb">initStorage</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> updateStorage
+                  <div class="kind">method</div> initStorage
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.responder/Responder/updateStorage.html#source">Source</a></li>
+              <li><a href="dslink.responder/Responder/initStorage.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -100,6 +100,7 @@
       <li><a class="" href="dslink.responder/Responder/clearProcessors.html">clearProcessors</a></li>
       <li><a class="" href="dslink.responder/Responder/close.html">close</a></li>
       <li><a class="" href="dslink.responder/Responder/getSendingData.html">getSendingData</a></li>
+      <li><a class="" href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
       <li><a class="" href="dslink.responder/Responder/invoke.html">invoke</a></li>
       <li><a class="" href="dslink.responder/Responder/list.html">list</a></li>
       <li><a class="" href="dslink.responder/Responder/onData.html">onData</a></li>
@@ -113,7 +114,6 @@
       <li><a class="" href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a class="" href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
       <li><a class="" href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
-      <li><a class="" href="dslink.responder/Responder/updateStorage.html">updateStorage</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -122,10 +122,10 @@
 
     <section class="multi-line-signature">
             <span class="returntype">void</span>
-            <span class="name ">updateStorage</span>(
+            <span class="name ">initStorage</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="updateStorage-param-s"><span class="type-annotation"><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>
+                <span class="parameter" id="initStorage-param-s"><span class="type-annotation"><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>
             </div>
             )    </section>
 
@@ -137,7 +137,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void updateStorage(ISubscriptionResponderStorage s) {
+      <pre><code class="prettyprint lang-dart">void initStorage(ISubscriptionResponderStorage s) {
   if (storage != null) {
     storage.destroy();
   }
@@ -145,8 +145,12 @@
   if (storage != null) {
     Map&lt;String, ISubscriptionValueStorage&gt; vlaues = storage.load();
     vlaues.forEach((String path, ISubscriptionValueStorage valueStore){
-      LocalNode node = nodeProvider.getOrCreateNode(path);
-      _subscription.add(path, node, -1, valueStore.qos);
+      var values = valueStore.loadAll();
+      if (!values.isEmpty) {
+        LocalNode node = nodeProvider.getOrCreateNode(path);
+        RespSubscribeController controller = _subscription.add(path, node, -1, valueStore.qos);
+        controller.resetCache(values);
+      }
     });
   }
 }</code></pre>

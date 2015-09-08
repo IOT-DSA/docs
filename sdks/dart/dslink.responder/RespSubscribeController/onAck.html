@@ -101,6 +101,7 @@
       <li><a class="" href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/process.html">process</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/resetCache.html">resetCache</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -125,18 +126,25 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void onAck(int ackId) {
+  if (waitingValues.isEmpty) {
+    return;
+  }
+  bool valueRemoved = false;
+  if (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck != ackId) {
+    print(&apos;invalidAck ${waitingValues.first.value} ${waitingValues.first.waitingAck}&apos;);
+  }
   while (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck == ackId) {
     // TODO is there any need to add protection in case ackId is out of sync?
     // because one stuck data will cause the queue to overflow
     ValueUpdate removed = waitingValues.removeFirst();
     if (_storage != null) {
       _storage.removeValue(removed);
+      valueRemoved = true;
     }
   }
-  if (_storage != null) {
+  if (valueRemoved &amp;&amp; _storage != null) {
     _storage.valueRemoved(waitingValues);
   }
-
 }</code></pre>
     </section>
 

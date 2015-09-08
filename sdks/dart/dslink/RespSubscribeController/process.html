@@ -101,6 +101,7 @@
       <li><a class="" href="dslink/RespSubscribeController/destroy.html">destroy</a></li>
       <li><a class="" href="dslink/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink/RespSubscribeController/process.html">process</a></li>
+      <li><a class="" href="dslink/RespSubscribeController/resetCache.html">resetCache</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -130,9 +131,10 @@
     for (ValueUpdate lastValue in lastValues) {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
-    if (_storage != null) {
+    if (_qosLevel &gt; 0) {
       for (ValueUpdate update in lastValues) {
         update.waitingAck = waitingAckId;
+        print(&apos;waiting ${update.value} ${update.waitingAck}&apos;);
       }
     }
     lastValues.clear();
@@ -144,7 +146,7 @@
     } else {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
-    if (_storage != null) {
+    if (_qosLevel &gt; 0) {
       lastValue.waitingAck = waitingAckId;
     }
     lastValue = null;

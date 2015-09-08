@@ -101,6 +101,7 @@
       <li><a class="" href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a class="" href="dslink.responder/RespSubscribeController/process.html">process</a></li>
+      <li><a class="" href="dslink.responder/RespSubscribeController/resetCache.html">resetCache</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -166,7 +167,7 @@
   }
   // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
   // the first response can happen ASAP, but
-  if (_permitted) {
+  if (_permitted &amp;&amp; sid &gt; -1) {
     response.subscriptionChanged(this);
   }
 }</code></pre>
