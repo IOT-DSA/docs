@@ -127,10 +127,13 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void resetCache(List&lt;ValueUpdate&gt; values) {
   if (this._caching) {
-    lastValues = values;
+    if (lastValues.length &gt; 0 &amp;&amp; lastValues.first.equals(values.last)) {
+      lastValues.removeAt(0);
+    }
+    lastValues = values..addAll(lastValues);
     if (waitingValues != null) {
       waitingValues.clear();
-      waitingValues.addAll(values);
+      waitingValues.addAll(lastValues);
     }
   } else {
     lastValues.clear();
@@ -177,7 +180,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.2 -->
+<!-- Made with <3 by dartdoc version 0.6.3 -->
 </body>
 
 </html>
