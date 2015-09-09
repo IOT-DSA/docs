@@ -125,7 +125,7 @@
             <span class="name ">initStorage</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="initStorage-param-s"><span class="type-annotation"><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>
+                <span class="parameter" id="initStorage-param-s"><span class="type-annotation"><a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>,<br><span class="parameter" id="initStorage-param-nodes"><span class="type-annotation">List&lt;<a class="" href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a>&gt;</span> <span class="parameter-name">nodes</span></span>
             </div>
             )    </section>
 
@@ -137,21 +137,20 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void initStorage(ISubscriptionResponderStorage s) {
+      <pre><code class="prettyprint lang-dart">void initStorage(ISubscriptionResponderStorage s, List&lt;ISubscriptionNodeStorage&gt; nodes) {
   if (storage != null) {
     storage.destroy();
   }
   storage = s;
-  if (storage != null) {
-    Map&lt;String, ISubscriptionValueStorage&gt; vlaues = storage.load();
-    vlaues.forEach((String path, ISubscriptionValueStorage valueStore){
-      var values = valueStore.loadAll();
-      if (!values.isEmpty) {
-        LocalNode node = nodeProvider.getOrCreateNode(path);
-        RespSubscribeController controller = _subscription.add(path, node, -1, valueStore.qos);
-        controller.resetCache(values);
-      }
-    });
+  if (storage != null &amp;&amp; nodes != null) {
+    for (ISubscriptionNodeStorage node in nodes) {
+      var values = node.getLoadedValues();
+       if (!values.isEmpty) {
+         LocalNode localnode = nodeProvider.getOrCreateNode(node.path);
+         RespSubscribeController controller = _subscription.add(node.path, localnode, -1, node.qos);
+         controller.resetCache(values);
+       }
+    }
   }
 }</code></pre>
     </section>
