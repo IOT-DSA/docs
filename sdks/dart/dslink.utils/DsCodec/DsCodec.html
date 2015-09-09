@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>export method - BinaryOutCache class - dslink.utils library - Dart API</title>
+    <title>DsCodec constructor - DsCodec class - dslink.utils library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the export method from the BinaryOutCache class, for the Dart programming language.">
+    <meta name="description" content="API docs for the DsCodec constructor from the Class DsCodec class from the dslink.utils library, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -33,10 +33,10 @@
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                  <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
-                  <li class="self-crumb">export</li>
+                  <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
+                  <li class="self-crumb">DsCodec</li>
               </ol>
-              <div class="self-name">export</div>
+              <div class="self-name">DsCodec</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -51,16 +51,15 @@
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-              <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
-              <li class="self-crumb">export</li>
+              <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
+              <li class="self-crumb">DsCodec</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> export
+                  <div class="kind">constructor</div> DsCodec
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.utils/BinaryOutCache/export.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -72,36 +71,39 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
-    <h5><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></h5>
+    <h5><a href="dslink.utils/DsCodec-class.html">DsCodec</a></h5>
 
     <ol>
     
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-properties">Static properties</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/defaultCodec.html">defaultCodec</a></li>
+    
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-methods">Static methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/getCodec.html">getCodec</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/register.html">register</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/caches.html">caches</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/hasData.html">hasData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/id.html">id</a></li>
-    
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/BinaryOutCache/BinaryOutCache.html">BinaryOutCache</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/DsCodec/DsCodec.html">DsCodec</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/addBinaryData.html">addBinaryData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/export.html">export</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></li>
     </ol>
 
-  </div><!--/.sidebar-offcanvas-->
+  </div><!--/.sidebar-offcanvas-left-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">Uint8List</span>
-            <span class="name ">export</span>(
-            )    </section>
+        
+                <span class="name ">DsCodec</span>()
+    </section>
 
     <section class="desc markdown">
     
@@ -109,39 +111,6 @@
     
     </section>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">Uint8List export() {
-  //TODO send partial data;
-  int count = 0;
-  int totalLength = 0;
-  caches.forEach((int id, BinaryData data) {
-    ++count;
-    totalLength += data.bytes.lengthInBytes;
-  });
-  int headpos = 0;
-  int datapos = count * 9;
-  Uint8List output = new Uint8List(totalLength + datapos);
-  ByteData bytedata = new ByteData.view(output.buffer);
-  List idToRemove = [];
-  caches.forEach((int id, BinaryData data) {
-    bytedata.setUint32(headpos, datapos);
-    bytedata.setUint32(headpos + 4, id);
-//      if (partial) {
-//        bytedata.setUint8(headpos + 8, 1);
-//      } else {
-    idToRemove.add(id);
-//      }
-    output.setAll(headpos + 9, ByteDataUtil.toUint8List(data.bytes));
-    headpos += 9;
-    datapos += data.bytes.lengthInBytes;
-  });
-  for (int id in idToRemove) {
-    caches.remove(id);
-  }
-  return output;
-}</code></pre>
-    </section>
 
   </div> <!-- /.main-content -->
 

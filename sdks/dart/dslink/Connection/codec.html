@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BinaryOutCache constructor - BinaryOutCache class - dslink.utils library - Dart API</title>
+    <title>codec property - Connection class - dslink library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the BinaryOutCache constructor from the Class BinaryOutCache class from the dslink.utils library, for the Dart programming language.">
+    <meta name="description" content="API docs for the codec property from the Connection class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -32,11 +32,11 @@
               <button id="sidenav-left-toggle" type="button">&nbsp;</button>
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
-                  <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                  <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
-                  <li class="self-crumb">BinaryOutCache</li>
+                  <li><a href="dslink/dslink-library.html">dslink</a></li>
+                  <li><a href="dslink/Connection-class.html">Connection</a></li>
+                  <li class="self-crumb">codec</li>
               </ol>
-              <div class="self-name">BinaryOutCache</div>
+              <div class="self-name">codec</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -50,13 +50,13 @@
         <div class="col-sm-12 contents">
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
-              <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-              <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
-              <li class="self-crumb">BinaryOutCache</li>
+              <li><a href="dslink/dslink-library.html">dslink</a></li>
+              <li><a href="dslink/Connection-class.html">Connection</a></li>
+              <li class="self-crumb">codec</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">constructor</div> BinaryOutCache
+                  <div class="kind">property</div> codec
               </h1>
           </div>
           <ul class="subnav">
@@ -71,44 +71,63 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-
     <h5><a href="index.html">dslink</a></h5>
-    <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
-    <h5><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></h5>
+    <h5><a href="dslink/dslink-library.html">dslink</a></h5>
+    <h5><a href="dslink/Connection-class.html">Connection</a></h5>
 
     <ol>
     
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/caches.html">caches</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/hasData.html">hasData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/id.html">id</a></li>
+      <li class="section-title"><a href="dslink/Connection-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="dslink/Connection/codec.html">codec</a></li>
+      <li><a class="" href="dslink/Connection/onDisconnected.html">onDisconnected</a></li>
+      <li><a class="" href="dslink/Connection/onRequesterReady.html">onRequesterReady</a></li>
+      <li><a class="" href="dslink/Connection/pendingAcks.html">pendingAcks</a></li>
+      <li><a class="" href="dslink/Connection/requesterChannel.html">requesterChannel</a></li>
+      <li><a class="" href="dslink/Connection/responderChannel.html">responderChannel</a></li>
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/BinaryOutCache/BinaryOutCache.html">BinaryOutCache</a></li>
+      <li class="section-title"><a href="dslink/Connection-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/Connection/Connection.html">Connection</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/addBinaryData.html">addBinaryData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/export.html">export</a></li>
+      <li class="section-title"><a href="dslink/Connection-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink/Connection/ack.html">ack</a></li>
+      <li><a class="" href="dslink/Connection/addConnCommand.html">addConnCommand</a></li>
+      <li><a class="" href="dslink/Connection/close.html">close</a></li>
+      <li><a class="" href="dslink/Connection/requireSend.html">requireSend</a></li>
     </ol>
 
-  </div><!--/.sidebar-offcanvas-left-->
+  </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">BinaryOutCache</span>()
-    </section>
+      <section id="getter">
+      
+      <section class="multi-line-signature">
+        <span class="returntype"><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span>
+        <span class="name ">codec</span></section>
+      
+      <section class="desc markdown">
 
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
-    </section>
+      <p class="no-docs">Not documented.</p>
 
+</section>
+</section>
+
+      <section id="setter">
+      
+      <section class="multi-line-signature">
+        <span class="returntype">void</span>
+          <span class="name ">codec=</span><span class="signature">(<wbr><span class="parameter" id="codec=-param-_codec"><span class="type-annotation"><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span> <span class="parameter-name">_codec</span></span>)
+      </section>
+      
+      <section class="desc markdown">
+
+      <p class="no-docs">Not documented.</p>
+
+</section>
+</section>
 
   </div> <!-- /.main-content -->
 

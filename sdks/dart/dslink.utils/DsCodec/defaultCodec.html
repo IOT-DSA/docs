@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>encodeJsonFrame method - DsJsonCodecImpl class - dslink.utils library - Dart API</title>
+    <title>defaultCodec property - DsCodec class - dslink.utils library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the encodeJsonFrame method from the DsJsonCodecImpl class, for the Dart programming language.">
+    <meta name="description" content="API docs for the defaultCodec property from the DsCodec class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -33,10 +33,10 @@
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                  <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
-                  <li class="self-crumb">encodeJsonFrame</li>
+                  <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
+                  <li class="self-crumb">defaultCodec</li>
               </ol>
-              <div class="self-name">encodeJsonFrame</div>
+              <div class="self-name">defaultCodec</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -51,16 +51,15 @@
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-              <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
-              <li class="self-crumb">encodeJsonFrame</li>
+              <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
+              <li class="self-crumb">defaultCodec</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> encodeJsonFrame
+                  <div class="kind">property</div> defaultCodec
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.utils/DsJsonCodecImpl/encodeJsonFrame.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -74,82 +73,45 @@
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
-    <h5><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></h5>
+    <h5><a href="dslink.utils/DsCodec-class.html">DsCodec</a></h5>
 
     <ol>
     
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-properties">Static properties</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/defaultCodec.html">defaultCodec</a></li>
+    
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-methods">Static methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/getCodec.html">getCodec</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/register.html">register</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/decoder.html">decoder</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/encoder.html">encoder</a></li>
-    
-      <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/DsJsonCodecImpl/DsJsonCodecImpl.html">DsJsonCodecImpl</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/DsCodec/DsCodec.html">DsCodec</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/decodeJson.html">decodeJson</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html">decodeJsonFrame</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/encodeJson.html">encodeJson</a></li>
-      <li><a class="" href="dslink.utils/DsJsonCodecImpl/encodeJsonFrame.html">encodeJsonFrame</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">String</span>
-            <span class="name ">encodeJsonFrame</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="encodeJsonFrame-param-val"><span class="type-annotation">Object</span> <span class="parameter-name">val</span></span>,<br><span class="parameter" id="encodeJsonFrame-param-cache"><span class="type-annotation"><a class="" href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span> <span class="parameter-name">cache</span></span>,<br>{<span class="parameter" id="encodeJsonFrame-param-pretty"><span class="type-annotation">bool</span> <span class="parameter-name">pretty</span>: <span class="default-value">false</span></span>}
-            </div>
-            )    </section>
+      <section id="getter">
+      
+      <section class="multi-line-signature">
+        <span class="returntype"><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span>
+        <span class="name ">defaultCodec</span></section>
+      
+      <section class="desc markdown">
 
-    <section class="desc markdown">
-    
-          <p class="no-docs">Not documented.</p>
-    
-    </section>
+      <p class="no-docs">Not documented.</p>
 
-    <section class="summary source-code" id="source">
-      <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">String encodeJsonFrame(Object val, BinaryOutCache cache,
-    {bool pretty: false}) {
+</section>
+</section>
 
-  _currentBinaryOutCache = cache;
-
-  if (_encoder == null) {
-    _encoder = (value) {
-      if (value is ByteData) {
-        int id = _currentBinaryOutCache.addBinaryData(value);
-        return &apos;\u001Bbytes,$id&apos;;
-      }
-      return null;
-    };
-  }
-
-  JsonEncoder c;
-
-  if (pretty) {
-    if (_unsafePrettyEncoder == null) {
-      _unsafePrettyEncoder = new JsonEncoder.withIndent(&apos;  &apos;, _encoder);
-    }
-    c = _unsafePrettyEncoder;
-  } else {
-    if (_unsafeEncoder == null) {
-      _unsafeEncoder = new JsonEncoder(_encoder);
-    }
-    c = _unsafeEncoder;
-  }
-
-  var result = c.convert(val);
-  _currentBinaryOutCache = null;
-  return result;
-}</code></pre>
-    </section>
 
   </div> <!-- /.main-content -->
 

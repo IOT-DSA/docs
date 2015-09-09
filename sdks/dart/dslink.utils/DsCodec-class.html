@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BinaryOutCache class - dslink.utils library - Dart API</title>
+    <title>DsCodec class - dslink.utils library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the BinaryOutCache class from the dslink.utils library, for the Dart programming language.">
+    <meta name="description" content="API docs for the DsCodec class from the dslink.utils library, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -33,9 +33,9 @@
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-                  <li class="self-crumb">BinaryOutCache</li>
+                  <li class="self-crumb">DsCodec</li>
               </ol>
-              <div class="self-name">BinaryOutCache</div>
+              <div class="self-name">DsCodec</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -50,17 +50,18 @@
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
-              <li class="self-crumb">BinaryOutCache</li>
+              <li class="self-crumb">DsCodec</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">class</div> BinaryOutCache
+                  <div class="kind">class</div> DsCodec
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.utils/BinaryOutCache-class.html#instance-properties">Properties</a></li>
-              <li><a href="dslink.utils/BinaryOutCache-class.html#constructors">Constructors</a></li>
-              <li><a href="dslink.utils/BinaryOutCache-class.html#instance-methods">Methods</a></li>
+              <li><a href="dslink.utils/DsCodec-class.html#static-properties">Static Properties</a></li>
+              <li><a href="dslink.utils/DsCodec-class.html#static-methods">Static Methods</a></li>
+              <li><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -102,11 +103,10 @@
       <li><a class="" href="dslink.utils/Base64-class.html">Base64</a></li>
       <li><a class="" href="dslink.utils/BetterIterator-class.html">BetterIterator</a></li>
       <li><a class="" href="dslink.utils/BinaryData-class.html">BinaryData</a></li>
-      <li><a class="" href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
       <li><a class="" href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
       <li><a class="" href="dslink.utils/ByteDataUtil-class.html">ByteDataUtil</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+      <li><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
       <li><a class="" href="dslink.utils/DsJson-class.html">DsJson</a></li>
       <li><a class="" href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON-class.html">DSLinkJSON</a></li>
@@ -123,31 +123,34 @@
 
     <section class="desc markdown">
     
-          <p class="no-docs">Not documented.</p>
+          <p>/      if (partial) {
+/        bytedata.setUint8(headpos + 8, 1);
+/      } else {
+/      }</p>
     
     </section>
 
+    <section>
+        <dl class="dl-horizontal">
 
 
 
+          <dt>Implemented by</dt>
+          <dd><ul class="comma-separated clazz-relationships">
+              <li><a class="" href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
+          </ul></dd>
 
-    <section class="summary offset-anchor" id="instance-properties">
-        <h2>Properties</h2>
+        </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="static-properties">
+        <h2>Static Properties</h2>
 
         <dl class="properties">
-            <dt id="caches" class="property">
-                <span class="name"><a class="" href="dslink.utils/BinaryOutCache/caches.html">caches</a></span>
-                <span class="signature">&#8594; Map&lt;int,<a class="" href="dslink.utils/BinaryData-class.html">BinaryData</a>&gt;</span>
-            </dt>
-            <dd>
-                <div class="features">
-        read / write
-    </div>
-    <p></p>
-            </dd>
-            <dt id="hasData" class="property">
-                <span class="name"><a class="" href="dslink.utils/BinaryOutCache/hasData.html">hasData</a></span>
-                <span class="signature">&#8594; bool</span>
+            <dt id="defaultCodec" class="property">
+                <span class="name"><a class="" href="dslink.utils/DsCodec/defaultCodec.html">defaultCodec</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span>
             </dt>
             <dd>
                 <div class="features">
@@ -155,25 +158,40 @@
     </div>
     <p></p>
             </dd>
-            <dt id="id" class="property">
-                <span class="name"><a class="" href="dslink.utils/BinaryOutCache/id.html">id</a></span>
-                <span class="signature">&#8594; int</span>
+        </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="static-methods">
+        <h2>Static Methods</h2>
+        <dl class="callables">
+            <dt id="getCodec" class="callable">
+                <span class="name "><a class="" href="dslink.utils/DsCodec/getCodec.html">getCodec</a></span><span class="signature">(<wbr><span class="parameter" id="getCodec-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
+                    &#8594;
+                    <span class="returntype"><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span>
+                </span>
             </dt>
             <dd>
-                <div class="features">
-        read / write
-    </div>
-    <p></p>
+                <p></p>
+            </dd>
+            <dt id="register" class="callable">
+                <span class="name "><a class="" href="dslink.utils/DsCodec/register.html">register</a></span><span class="signature">(<wbr><span class="parameter" id="register-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="register-param-codec"><span class="type-annotation"><a class="" href="dslink.utils/DsCodec-class.html">DsCodec</a></span> <span class="parameter-name">codec</span></span>)
+                    &#8594;
+                    <span class="returntype">void</span>
+                </span>
+            </dt>
+            <dd>
+                <p></p>
             </dd>
         </dl>
     </section>
+
 
     <section class="summary offset-anchor" id="constructors">
         <h2>Constructors</h2>
 
         <dl class="constructor-summary-list">
-            <dt id="BinaryOutCache" class="callable">
-                <span class="name"><a class="" href="dslink.utils/BinaryOutCache/BinaryOutCache.html">BinaryOutCache</a></span><span class="signature">()</span>
+            <dt id="DsCodec" class="callable">
+                <span class="name"><a class="" href="dslink.utils/DsCodec/DsCodec.html">DsCodec</a></span><span class="signature">()</span>
             </dt>
             <dd>
                 <p></p>
@@ -185,23 +203,32 @@
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
-              <dt id="addBinaryData" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/BinaryOutCache/addBinaryData.html">addBinaryData</a></span><span class="signature">(<wbr><span class="parameter" id="addBinaryData-param-data"><span class="type-annotation">ByteData</span> <span class="parameter-name">data</span></span>)
+              <dt id="decodeBinaryFrame" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></span><span class="signature">(<wbr><span class="parameter" id="decodeBinaryFrame-param-input"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">input</span></span>)
                       &#8594;
-                      <span class="returntype">int</span>
+                      <span class="returntype">Map</span>
                   </span>
               </dt>
               <dd>
                   <p></p>
               </dd>
-              <dt id="export" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/BinaryOutCache/export.html">export</a></span><span class="signature">(<wbr>)
+              <dt id="decodeStringFrame" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></span><span class="signature">(<wbr><span class="parameter" id="decodeStringFrame-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
                       &#8594;
-                      <span class="returntype">Uint8List</span>
+                      <span class="returntype">Map</span>
                   </span>
               </dt>
               <dd>
-                  <p></p>
+                  <p>input can be String or List&lt;int&gt;</p>
+              </dd>
+              <dt id="encodeFrame" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></span><span class="signature">(<wbr><span class="parameter" id="encodeFrame-param-val"><span class="type-annotation">Map</span> <span class="parameter-name">val</span></span>)
+                      &#8594;
+                      <span class="returntype">Object</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>output String or List&lt;int&gt;</p>
               </dd>
           </dl>
       </section>
@@ -209,23 +236,25 @@
     </div> <!-- /.main-content -->
 
   <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
-    <h5>BinaryOutCache</h5>
+    <h5>DsCodec</h5>
     <ol>
     
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-properties">Static properties</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/defaultCodec.html">defaultCodec</a></li>
+    
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#static-methods">Static methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/getCodec.html">getCodec</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/register.html">register</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/caches.html">caches</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/hasData.html">hasData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/id.html">id</a></li>
-    
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/BinaryOutCache/BinaryOutCache.html">BinaryOutCache</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/DsCodec/DsCodec.html">DsCodec</a></li>
     
     
-      <li class="section-title"><a href="dslink.utils/BinaryOutCache-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/addBinaryData.html">addBinaryData</a></li>
-      <li><a class="" href="dslink.utils/BinaryOutCache/export.html">export</a></li>
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
