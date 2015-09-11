@@ -127,7 +127,6 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
   if (_caching &amp;&amp; _isCacheValid) {
-    print(&apos;addValue ${lastValues.length}&apos;);
     lastValues.add(val);
     if (lastValues.length &gt; response.responder.maxCacheLength) {
       // cache is no longer valid, fallback to rollup mode

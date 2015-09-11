@@ -141,7 +141,6 @@
     if (sid &gt; -1 &amp;&amp; controller.lastValue != null) {
       subscriptionChanged(controller);
     }
-    print(&apos;sub $path&apos;);
   } else {
     int permission = responder.nodeProvider.permissions
         .getPermission(node.path, responder);
@@ -157,7 +156,6 @@
         callback(update);
       }
     }
-    print(&apos;new sub $path&apos;);
   }
   return controller;
 }</code></pre>
