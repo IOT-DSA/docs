@@ -108,6 +108,7 @@
       <li><a class="" href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/init.html">init</a></li>
+      <li><a class="" href="dslink.browser/LinkProvider/initAsync.html">initAsync</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
@@ -134,25 +135,16 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">Future init() async {
+      <pre><code class="prettyprint lang-dart">Future init() {
   _initCalled = true;
 
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
   }
-
-  privateKey = await getPrivateKey(storage: dataStore);
-
-  if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
-    if (!(await dataStore.has(&quot;dsa_nodes&quot;))) {
-      (provider as SerializableNodeProvider).init(defaultNodes);
-    } else {
-      (provider as SerializableNodeProvider)
-          .init(DsJson.decode(await dataStore.get(&quot;dsa_nodes&quot;)));
-    }
-  } else {
-    (provider as SerializableNodeProvider).init(defaultNodes);
-  }
+  // move the waiting part of init into a later frame
+  // we need to make sure provider is created at the first frame
+  // not affected by any async code
+  return initAsync();
 }</code></pre>
     </section>
 
