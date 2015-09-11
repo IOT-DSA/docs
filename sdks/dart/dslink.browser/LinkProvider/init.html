@@ -108,7 +108,7 @@
       <li><a class="" href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/init.html">init</a></li>
-      <li><a class="" href="dslink.browser/LinkProvider/initAsync.html">initAsync</a></li>
+      <li><a class="" href="dslink.browser/LinkProvider/initPrivateKey.html">initPrivateKey</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
@@ -141,10 +141,22 @@
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
   }
+
+  if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
+    if (!(dataStore.has(&quot;dsa_nodes&quot;))) {
+      (provider as SerializableNodeProvider).init(defaultNodes);
+    } else {
+      (provider as SerializableNodeProvider)
+          .init(DsJson.decode(dataStore.get(&quot;dsa_nodes&quot;)));
+    }
+  } else {
+    (provider as SerializableNodeProvider).init(defaultNodes);
+  }
+
   // move the waiting part of init into a later frame
   // we need to make sure provider is created at the first frame
   // not affected by any async code
-  return initAsync();
+  return initPrivateKey();
 }</code></pre>
     </section>
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>initAsync method - LinkProvider class - dslink.browser library - Dart API</title>
+    <title>initPrivateKey method - LinkProvider class - dslink.browser library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the initAsync method from the LinkProvider class, for the Dart programming language.">
+    <meta name="description" content="API docs for the initPrivateKey method from the LinkProvider class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
                   <li><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></li>
-                  <li class="self-crumb">initAsync</li>
+                  <li class="self-crumb">initPrivateKey</li>
               </ol>
-              <div class="self-name">initAsync</div>
+              <div class="self-name">initPrivateKey</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
               <li><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></li>
-              <li class="self-crumb">initAsync</li>
+              <li class="self-crumb">initPrivateKey</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> initAsync
+                  <div class="kind">method</div> initPrivateKey
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.browser/LinkProvider/initAsync.html#source">Source</a></li>
+              <li><a href="dslink.browser/LinkProvider/initPrivateKey.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -108,7 +108,7 @@
       <li><a class="" href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/init.html">init</a></li>
-      <li><a class="" href="dslink.browser/LinkProvider/initAsync.html">initAsync</a></li>
+      <li><a class="" href="dslink.browser/LinkProvider/initPrivateKey.html">initPrivateKey</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
@@ -124,7 +124,7 @@
 
     <section class="multi-line-signature">
             <span class="returntype">Future</span>
-            <span class="name ">initAsync</span>(
+            <span class="name ">initPrivateKey</span>(
             )    </section>
 
     <section class="desc markdown">
@@ -135,19 +135,9 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">Future initAsync() async {
+      <pre><code class="prettyprint lang-dart">Future initPrivateKey() async {
   privateKey = await getPrivateKey(storage: dataStore);
 
-  if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
-    if (!(await dataStore.has(&quot;dsa_nodes&quot;))) {
-      (provider as SerializableNodeProvider).init(defaultNodes);
-    } else {
-      (provider as SerializableNodeProvider)
-          .init(DsJson.decode(await dataStore.get(&quot;dsa_nodes&quot;)));
-    }
-  } else {
-    (provider as SerializableNodeProvider).init(defaultNodes);
-  }
 }</code></pre>
     </section>
 

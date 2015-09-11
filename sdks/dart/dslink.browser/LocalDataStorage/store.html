@@ -104,7 +104,7 @@
                     <li class="metadata-annotation">@override</li>
                 </ol>
             </div>
-            <span class="returntype">Future</span>
+            <span class="returntype">void</span>
             <span class="name ">store</span>(
             <br>
             <div class="parameters">
@@ -121,8 +121,9 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">@override
-Future store(String key, String value) async =&gt;
-    window.localStorage[key] = value;</code></pre>
+void store(String key, String value) {
+    window.localStorage[key] = value;
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
