@@ -86,7 +86,6 @@
       <li><a class="" href="dslink.broker/BrokerNodeProvider/conns.html">conns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/connsNode.html">connsNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/defsNode.html">defsNode</a></li>
-      <li><a class="" href="dslink.broker/BrokerNodeProvider/done.html">done</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamName.html">downstreamName</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameS.html">downstreamNameS</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameSS.html">downstreamNameSS</a></li>
@@ -99,6 +98,7 @@
       <li><a class="" href="dslink.broker/BrokerNodeProvider/quarantineNode.html">quarantineNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/storage.html">storage</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
@@ -123,6 +123,7 @@
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getRequester.html">getRequester</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getResponder.html">getResponder</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/initSys.html">initSys</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/loadAll.html">loadAll</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadConns.html">loadConns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></li>
@@ -157,6 +158,11 @@
     <section class="summary source-code" id="source">
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">String makeConnPath(String fullId) {
+  if (_id2connPath.containsKey(fullId)) {
+    return _id2connPath[fullId];
+    // TODO is it possible same link get added twice?
+  }
+
   if (fullId.startsWith(&apos;@upstream@&apos;)) {
     String connName = fullId.substring(10);
     String connPath = &apos;/upstream/$connName&apos;;
@@ -164,10 +170,7 @@
     _id2connPath[fullId] = connPath;
     return connPath;
   }
-  if (_id2connPath.containsKey(fullId)) {
-    return _id2connPath[fullId];
-    // TODO is it possible same link get added twice?
-  } else if (fullId.length &lt; 43) {
+  if (fullId.length &lt; 43) {
     // user link
     String connPath = &apos;$downstreamNameSS$fullId&apos;;
     int count = 0;

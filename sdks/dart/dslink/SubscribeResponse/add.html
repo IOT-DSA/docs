@@ -136,9 +136,11 @@
       if (sid &gt;= 0) {
         subsriptionids[sid] = controller;
       }
-
     }
     controller.qosLevel = qos;
+    if (sid &gt; -1 &amp;&amp; controller.lastValue != null) {
+      subscriptionChanged(controller);
+    }
     print(&apos;sub $path&apos;);
   } else {
     int permission = responder.nodeProvider.permissions
