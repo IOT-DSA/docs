@@ -137,11 +137,11 @@
       <pre><code class="prettyprint lang-dart">Future init() async {
   _initCalled = true;
 
-  privateKey = await getPrivateKey(storage: dataStore);
-
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
   }
+
+  privateKey = await getPrivateKey(storage: dataStore);
 
   if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
     if (!(await dataStore.has(&quot;dsa_nodes&quot;))) {
