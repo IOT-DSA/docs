@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>removeConfig method - RemoteLinkRootNode class - dslink.broker library - Dart API</title>
+    <title>getSimpleMap method - RemoteLinkRootNode class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the removeConfig method from the RemoteLinkRootNode class, for the Dart programming language.">
+    <meta name="description" content="API docs for the getSimpleMap method from the RemoteLinkRootNode class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
                   <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
-                  <li class="self-crumb">removeConfig</li>
+                  <li class="self-crumb">getSimpleMap</li>
               </ol>
-              <div class="self-name">removeConfig</div>
+              <div class="self-name">getSimpleMap</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
               <li><a href="dslink.broker/RemoteLinkRootNode-class.html">RemoteLinkRootNode</a></li>
-              <li class="self-crumb">removeConfig</li>
+              <li class="self-crumb">getSimpleMap</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> removeConfig
+                  <div class="kind">method</div> getSimpleMap
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.broker/RemoteLinkRootNode/removeConfig.html#source">Source</a></li>
+              <li><a href="dslink.broker/RemoteLinkRootNode/getSimpleMap.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -156,26 +156,31 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype"><a class="" href="dslink.broker/Response-class.html">Response</a></span>
-            <span class="name ">removeConfig</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a class="" href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>
+            <div>
+                <ol class="annotation-list">
+                    <li>override</li>
+                </ol>
             </div>
+            <span class="returntype">Map</span>
+            <span class="name ">getSimpleMap</span>(
             )
     </section>
 
     <section class="desc markdown">
     
-          <p>Called by the link internals to remove a config from this node.</p>
+          <p>get simple map should return all configs returned by remoteNode</p>
     
     </section>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">Response removeConfig(String name, Responder responder, Response response) {
-  var config = Configs.getConfig(name, profile);
-  return response..close(config.removeConfig(this, responder));
+      <pre><code class="prettyprint lang-dart">@override
+Map getSimpleMap() {
+  Map m = super.getSimpleMap();
+  if (configs.containsKey(r&apos;$shared&apos;)){
+    m[r&apos;$shared&apos;] = configs[r&apos;$shared&apos;];
+  }
+  return m;
 }</code></pre>
     </section>
 

@@ -169,6 +169,8 @@
           }
           reseted = true;
           node.resetNodeCache();
+        } else if (name == r&apos;$shared&apos;) {
+          node.configs[r&apos;$shared&apos;] = value;
         }
         // ignore other changes
       } else if (name.startsWith(&apos;@&apos;)) {
