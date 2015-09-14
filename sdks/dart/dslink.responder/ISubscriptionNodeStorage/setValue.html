@@ -107,9 +107,10 @@
             <span class="name ">setValue</span>(
             <br>
             <div class="parameters">
-                <span class="parameter" id="setValue-param-value"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">value</span></span>
+                <span class="parameter" id="setValue-param-removes"><span class="type-annotation">Iterable&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">removes</span></span>,<br><span class="parameter" id="setValue-param-newValue"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">newValue</span></span>
             </div>
-            )    </section>
+            )
+    </section>
 
     <section class="desc markdown">
     
@@ -119,9 +120,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void setValue(ValueUpdate value) {
-  value.serialized = DsJson.encode(value.toMap());
-}</code></pre>
+      <pre><code class="prettyprint lang-dart">void setValue(Iterable&lt;ValueUpdate&gt; removes, ValueUpdate newValue);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

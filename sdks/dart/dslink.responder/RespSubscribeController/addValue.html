@@ -115,7 +115,8 @@
             <div class="parameters">
                 <span class="parameter" id="addValue-param-val"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">val</span></span>
             </div>
-            )    </section>
+            )
+    </section>
 
     <section class="desc markdown">
     
@@ -137,10 +138,10 @@
       }
       lastValues.clear();
       if (_qosLevel &gt; 0) {
-        waitingValues..clear()..add(lastValue);
         if (_storage != null) {
-            _storage.setValue(lastValue);
+            _storage.setValue(waitingValues, lastValue);
         }
+        waitingValues..clear()..add(lastValue);
       }
     } else {
       lastValue = val;
@@ -158,10 +159,10 @@
       lastValue = val;
     }
     if (_qosLevel &gt; 0) {
-       waitingValues..clear()..add(lastValue);
        if (_storage != null) {
-           _storage.setValue(lastValue);
+           _storage.setValue(waitingValues, lastValue);
        }
+       waitingValues..clear()..add(lastValue);
     }
   }
   // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
