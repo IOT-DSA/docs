@@ -86,6 +86,7 @@
       <li><a class="" href="dslink/HttpClientLink/dsId.html">dsId</a></li>
       <li><a class="" href="dslink/HttpClientLink/enableAck.html">enableAck</a></li>
       <li><a class="" href="dslink/HttpClientLink/home.html">home</a></li>
+      <li><a class="" href="dslink/HttpClientLink/linkData.html">linkData</a></li>
       <li><a class="" href="dslink/HttpClientLink/nonce.html">nonce</a></li>
       <li><a class="" href="dslink/HttpClientLink/onConnected.html">onConnected</a></li>
       <li><a class="" href="dslink/HttpClientLink/onRequesterReady.html">onRequesterReady</a></li>
@@ -151,6 +152,10 @@
       &apos;isResponder&apos;: responder != null,
       &apos;version&apos;: DSA_VERSION
     };
+    if (linkData != null) {
+      requestJson[&apos;linkData&apos;] = linkData;
+    }
+
 
     logger.fine(&quot;DS ID: ${dsId}&quot;);
 

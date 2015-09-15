@@ -118,8 +118,8 @@ Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
     storage = LocalDataStorage.INSTANCE;
   }
 
-  if (await storage.has(&quot;dsa_key&quot;)) {
-    return new PrivateKey.loadFromString(await storage.get(&quot;dsa_key&quot;));
+  if (storage.has(&quot;dsa_key&quot;)) {
+    return new PrivateKey.loadFromString(storage.get(&quot;dsa_key&quot;));
   }
 
   var key = await PrivateKey.generate();

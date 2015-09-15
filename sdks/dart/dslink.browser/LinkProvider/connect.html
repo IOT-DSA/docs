@@ -108,7 +108,7 @@
       <li><a class="" href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/init.html">init</a></li>
-      <li><a class="" href="dslink.browser/LinkProvider/initPrivateKey.html">initPrivateKey</a></li>
+      <li><a class="" href="dslink.browser/LinkProvider/initLinkWithPrivateKey.html">initLinkWithPrivateKey</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/resetSavedNodes.html">resetSavedNodes</a></li>
@@ -138,17 +138,8 @@
       <h2>Source</h2>
       <pre><code class="prettyprint lang-dart">Future connect() {
   Future run() {
-    link = new BrowserECDHLink(brokerUrl, prefix, privateKey,
-        nodeProvider: provider,
-        isRequester: isRequester,
-        isResponder: isResponder);
-
     link.connect();
     return link.onConnected;
-  }
-
-  if (link != null) {
-    throw new StateError(&quot;Link is already connected!&quot;);
   }
 
   if (!_initCalled) {
