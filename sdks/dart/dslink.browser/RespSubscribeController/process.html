@@ -135,7 +135,6 @@
     if (_qosLevel &gt; 0) {
       for (ValueUpdate update in lastValues) {
         update.waitingAck = waitingAckId;
-        print(&apos;waiting ${update.value} ${update.waitingAck}&apos;);
       }
     }
     lastValues.clear();
