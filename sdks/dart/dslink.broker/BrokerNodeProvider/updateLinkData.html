@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>loadUserNodes method - BrokerNodeProvider class - dslink.broker library - Dart API</title>
+    <title>updateLinkData method - BrokerNodeProvider class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the loadUserNodes method from the BrokerNodeProvider class, for the Dart programming language.">
+    <meta name="description" content="API docs for the updateLinkData method from the BrokerNodeProvider class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
                   <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
-                  <li class="self-crumb">loadUserNodes</li>
+                  <li class="self-crumb">updateLinkData</li>
               </ol>
-              <div class="self-name">loadUserNodes</div>
+              <div class="self-name">updateLinkData</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
               <li><a href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></li>
-              <li class="self-crumb">loadUserNodes</li>
+              <li class="self-crumb">updateLinkData</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> loadUserNodes
+                  <div class="kind">method</div> updateLinkData
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.broker/BrokerNodeProvider/loadUserNodes.html#source">Source</a></li>
+              <li><a href="dslink.broker/BrokerNodeProvider/updateLinkData.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -142,8 +142,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-            <span class="returntype">Future</span>
-            <span class="name ">loadUserNodes</span>(
+            <span class="returntype">void</span>
+            <span class="name ">updateLinkData</span>(
+            <br>
+            <div class="parameters">
+                <span class="parameter" id="updateLinkData-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>,<br><span class="parameter" id="updateLinkData-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>
+            </div>
             )
     </section>
 
@@ -155,26 +159,12 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">loadUserNodes() async {
-  File connsFile = new File(&quot;usernodes.json&quot;);
-  try {
-    String data = await connsFile.readAsString();
-    Map m = DsJson.decode(data);
-    m.forEach((String name, Map m) {
-      String path = &apos;/users/$name&apos;;
-      UserRootNode node = getOrCreateNode(path, false);
-      if (enabledPermission) {
-        node.loadPermission([[name, &apos;config&apos;], [&apos;default&apos;, &apos;none&apos;]]);
-      }
-      node.load(m);
-      usersNode.children[name] = node;
-      if (enabledQuarantine) {
-        String path = &apos;/quarantine/$name&apos;;
-        BrokerNode node = getOrCreateNode(path, false);
-        quarantineNode.children[name] = node;
-      }
-    });
-  } catch (err) {}
+      <pre><code class="prettyprint lang-dart">void updateLinkData(String dsId, Map m) {
+  if (_id2connPath.containsKey(dsId)){
+    var node = getOrCreateNode(_id2connPath[dsId]);
+    node.configs[r&apos;$linkData&apos;] = m;
+    //node.updateList(r&apos;$linkData&apos;);
+  }
 }</code></pre>
     </section>
 
