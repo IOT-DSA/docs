@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LinkProvider constructor - LinkProvider class - dslink.client library - Dart API</title>
+    <title>remotePath property - LinkProvider class - dslink.client library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the LinkProvider constructor from the Class LinkProvider class from the dslink.client library, for the Dart programming language.">
+    <meta name="description" content="API docs for the remotePath property from the LinkProvider class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
                   <li><a href="dslink.client/LinkProvider-class.html">LinkProvider</a></li>
-                  <li class="self-crumb">LinkProvider</li>
+                  <li class="self-crumb">remotePath</li>
               </ol>
-              <div class="self-name">LinkProvider</div>
+              <div class="self-name">remotePath</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,11 +52,11 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
               <li><a href="dslink.client/LinkProvider-class.html">LinkProvider</a></li>
-              <li class="self-crumb">LinkProvider</li>
+              <li class="self-crumb">remotePath</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">constructor</div> LinkProvider
+                  <div class="kind">property</div> remotePath
               </h1>
           </div>
           <ul class="subnav">
@@ -71,7 +71,6 @@
   <div class="row">
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
-
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.client/dslink.client-library.html">dslink.client</a></h5>
     <h5><a href="dslink.client/LinkProvider-class.html">LinkProvider</a></h5>
@@ -136,41 +135,22 @@
       <li><a class="" href="dslink.client/LinkProvider/val.html">val</a></li>
     </ol>
 
-  </div><!--/.sidebar-offcanvas-left-->
+  </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">LinkProvider</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span></span>,<br><span class="parameter" id="-param-prefix"><span class="type-annotation">String</span> <span class="parameter-name">prefix</span></span>,<br>{<span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-command"><span class="type-annotation">String</span> <span class="parameter-name">command</span>: <span class="default-value">'link'</span></span>,<br><span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-defaultNodes"><span class="type-annotation">Map</span> <span class="parameter-name">defaultNodes</span></span>,<br><span class="parameter" id="-param-nodes"><span class="type-annotation">Map</span> <span class="parameter-name">nodes</span></span>,<br><span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>,<br><span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>,<br><span class="parameter" id="-param-enableHttp"><span class="type-annotation">bool</span> <span class="parameter-name">enableHttp</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-encodePrettyJson"><span class="type-annotation">bool</span> <span class="parameter-name">encodePrettyJson</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-autoInitialize"><span class="type-annotation">bool</span> <span class="parameter-name">autoInitialize</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-strictOptions"><span class="type-annotation">bool</span> <span class="parameter-name">strictOptions</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-exitOnFailure"><span class="type-annotation">bool</span> <span class="parameter-name">exitOnFailure</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-loadNodesJson"><span class="type-annotation">bool</span> <span class="parameter-name">loadNodesJson</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-defaultLogLevel"><span class="type-annotation">String</span> <span class="parameter-name">defaultLogLevel</span>: <span class="default-value">"INFO"</span></span>,<br><span class="parameter" id="-param-savePrivateKey"><span class="type-annotation">bool</span> <span class="parameter-name">savePrivateKey</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span>: <span class="default-value">null</span></span>,<br><span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>,<br><span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>,<br><span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>,<br><span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>}
-        </div>
-        )
-    </section>
+      <section id="getter">
+      
+      <section class="multi-line-signature">
+        <span class="returntype">String</span>
+        <span class="name ">remotePath</span></section>
+      
+      <section class="desc markdown">
 
-    <section class="desc markdown">
-    
-          <p>Create a Link Provider.
-<a class="" href="dslink/LinkProvider/args.html">args</a> are the command-line arguments to pass in.
-<a class="" href="dslink/LinkProvider/prefix.html">prefix</a> is the link name.
-<a class="" href="dslink/LinkProvider/isRequester.html">isRequester</a> specifies if you are a requester or not.
-<a class="" href="dslink/LinkProvider/isResponder.html">isResponder</a> specifies if you a responder or not.
-<a class="" href="dslink/LinkProvider/command.html">command</a> is the command name for this link.
-Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> and <code>nodes</code> specify the default nodes to initialize if a nodes.json is not present.
-<a class="" href="dslink/LinkProvider/profiles.html">profiles</a> specify the profiles for this link.
-<a class="" href="dslink/LinkProvider/provider.html">provider</a> is a node provider. If it is not specified, one will be created for you.
-<a class="" href="dslink/LinkProvider/enableHttp.html">enableHttp</a> toggles whether to enable HTTP fallbacks.
-<a class="" href="dslink/LinkProvider/encodePrettyJson.html">encodePrettyJson</a> specifies whether to encode pretty JSON files when writing the nodes.json
-<code>autoInitialize</code> specifies whether to initialize the link inside the constructor.
-<a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a> toggles allowing trailing options in the argument parser.
-<a class="" href="dslink/LinkProvider/exitOnFailure.html">exitOnFailure</a> toggles exiting when the link fails.
-<a class="" href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a> specifies whether to load the nodes.json file or not.
-<a class="" href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a> specifies the default log level.
-<code>nodeProvider</code> is the same as <a class="" href="dslink/LinkProvider/provider.html">provider</a>. It is provided for backwards compatibility.</p>
-    
-    </section>
+      <p>Remote Path of Responder</p>
+
+</section>
+</section>
 
 
   </div> <!-- /.main-content -->
