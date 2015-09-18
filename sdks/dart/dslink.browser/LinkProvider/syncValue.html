@@ -93,7 +93,6 @@
       <li><a class="" href="dslink.browser/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/profiles.html">profiles</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/provider.html">provider</a></li>
-      <li><a class="" href="dslink.browser/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/requester.html">requester</a></li>
     
       <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#constructors">Constructors</a></li>
@@ -135,13 +134,16 @@
 
     <section class="desc markdown">
     
-          <p class="no-docs">Not documented.</p>
+          <p>Remote Path of Responder</p>
     
     </section>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">void syncValue(String path) {
+      <pre><code class="prettyprint lang-dart">/// Remote Path of Responder
+//String get remotePath =&gt; link.remotePath;
+
+void syncValue(String path) {
   var n = this[path];
   n.updateValue(n.lastValueUpdate.value, force: true);
 }</code></pre>
