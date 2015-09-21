@@ -10,6 +10,6 @@ Responder->Broker: response:{"rid":237, "updates":[[14, "ok"]]}
 Broker->Requester: response:{"rid":1234, "updates":[[14, "ok"]]}
 
 note right of Requester: close the invoke stream
-Requester->Broker: request:{"rid":1234, "method":"close", "rid":1234}
-Broker->Responder: request:{"rid":238, "method":"close", "rid":237}
+Requester->Broker: request:{"rid":1234, "method":"close"}
+Broker->Responder: request:{"rid":237, "method":"close"}
 

@@ -1,0 +1,15 @@
+
+title List Sequence
+Requester->Broker: request:{"rid":1234, "method":"list", "path":"/downstream/link1/node1"}
+Broker->Responder: request:{"rid":237, "method":"list", "path":"/node1"}
+Responder->Broker: response:{"rid":237, \n"updates":[["$is", "node"], ["@customAttribute", 1],\n["child1", {"$is":"node","$type":"string"}], \n["child2",{"$is":"node", "$invokable":"read"}]]}
+Broker->Requester: response:{"rid":1234, \n"updates":[["$is", "node"], ["@customAttribute", 1],\n["child1", {"$is":"node","$type":"string"}], \n["child2",{"$is":"node", "$invokable":"read"}]]}
+
+note left of Responder: on attribute or children update
+Responder->Broker: response:{"rid":237, \n"updates":[["@customAttribute", 2],\n["child3", {"$is":"node"}]]}
+Broker->Requester: response:{"rid":1234, \n"updates":[["@customAttribute", 2],\n["child3", {"$is":"node"}]]}
+
+
+note right of Requester: close the list stream
+Requester->Broker: request:{"rid":1234, "method":"close"}
+Broker->Responder: request:{"rid":237, "method":"close"}
