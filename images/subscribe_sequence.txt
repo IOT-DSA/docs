@@ -1,0 +1,20 @@
+title Subscripion Sequence
+note right of Requester: start subscription
+Requester->Broker: request:{rid:1234, method:"subscribe", \npaths:[{path:"/downstream/link1/value1", sid:23}]}
+Broker->Responder: request:{rid:237, method:"subscribe", \npaths:[{path:"/value1", sid:17}]}
+Responder->Broker: response:{rid:237, stream:"closed"}
+Broker->Requester: response:{rid:1234, stream:closed}
+
+note left of Responder: send current value
+Responder->Broker: response:{rid:0, \nupdates:[[17, "current Value", "2014-11-27T09:11.000-08:00"]]}
+Broker->Requester: response:{rid:0, \nupdates:[[23, "current Value", "2014-11-27T09:11.000-08:00"]]}
+
+note left of Responder: on value change
+Responder->Broker: response:{rid:0, \nupdates:[[17, "new Value", "2014-11-27T09:18.000-08:00"]]}
+Broker->Requester: response:{rid:0, \nupdates:[[23, "new Value", "2014-11-27T09:18.000-08:00"]]}
+
+note right of Requester: stop subscription
+Requester->Broker: request:{rid:1235, method:"ubsubscribe", sids:[23]}
+Broker->Responder: request:{rid:238, method:"ubsubscribe", sids:[17]}
+Responder->Broker: response:{rid:238, stream:"closed"}
+Broker->Requester: response:{rid:1235, stream:closed}
