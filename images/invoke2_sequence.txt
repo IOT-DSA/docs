@@ -1,0 +1,7 @@
+
+title Invoke Sequence
+note right of Requester: when invoke response is not stream
+Requester->Broker: request:{"rid":1235, "method":"invoke", "path":"/downstream/link1/action2", \n"params":{"param1":12, "param2":"abc"}}
+Broker->Responder: request:{"rid":238, "method":"invoke", "path":"/action2", \n"params":{"param1":12, "param2":"abc"}}
+Responder->Broker: response:{"rid":238, \n"columns":[{"name":"value", "type":"string"}, {"name":"status", "type":"string"}], \n"updates":[[12, "ok"], [13, "ok"]], "stream":"closed"}
+Broker->Requester: response:{"rid":1235, \n"columns":[{"name":"value", "type":"string"}, {"name":"status", "type":"string"}], \n"updates":[[12, "ok"], [13, "ok"]], "stream":"closed"}
