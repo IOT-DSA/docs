@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.broker/BrokerNodeProvider/BrokerNodeProvider.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -141,15 +142,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">BrokerNodeProvider</span>(
-        <br>
-        <div class="parameters">
-            {<span class="parameter" id="-param-enabledQuarantine"><span class="type-annotation">bool</span> <span class="parameter-name">enabledQuarantine</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-acceptAllConns"><span class="type-annotation">bool</span> <span class="parameter-name">acceptAllConns</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-defaultPermission"><span class="type-annotation">List</span> <span class="parameter-name">defaultPermission</span></span>,<br><span class="parameter" id="-param-downstreamName"><span class="type-annotation">String</span> <span class="parameter-name">downstreamName</span>: <span class="default-value">'conns'</span></span>,<br><span class="parameter" id="-param-storage"><span class="type-annotation"><a class="" href="dslink/ISubscriptionStorageManager-class.html">ISubscriptionStorageManager</a></span> <span class="parameter-name">storage</span></span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -157,6 +149,46 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">BrokerNodeProvider({this.enabledQuarantine: false, this.acceptAllConns: true,
+List defaultPermission, this.downstreamName: &apos;conns&apos;, this.storage}) {
+  permissions = new BrokerPermissions();
+  // initialize root nodes
+  RootNode root = new RootNode(&apos;/&apos;, this);
+
+  nodes[&apos;/&apos;] = root;
+  if (enabledQuarantine) {
+    rootStructure[&apos;quarantine&apos;] = {};
+  }
+  if (downstreamName == null ||
+    downstreamName == &apos;&apos; ||
+    rootStructure.containsKey(downstreamName) ||
+    downstreamName.contains(Path.invalidNameChar)) {
+    throw &apos;invalid downstreamName&apos;;
+  }
+  downstreamNameS = &apos;/$downstreamName&apos;;
+  downstreamNameSS = &apos;$downstreamNameS/&apos;;
+  rootStructure[downstreamName] = {};
+
+  root.load(rootStructure);
+  connsNode = nodes[downstreamNameS];
+  connsNode.configs[r&quot;$downstream&quot;] = true;
+  root.configs[r&quot;$downstream&quot;] = downstreamNameS;
+  usersNode = nodes[&apos;/users&apos;];
+  defsNode = nodes[&apos;/defs&apos;];
+  quarantineNode = nodes[&apos;/quarantine&apos;];
+  upstreamDataNode = nodes[&apos;/upstream&apos;];
+
+  enabledPermission = defaultPermission != null;
+  if (enabledPermission) {
+    root.loadPermission(
+      defaultPermission); //[&apos;dgSuper&apos;,&apos;config&apos;,&apos;default&apos;,&apos;write&apos;]
+    defsNode.loadPermission([&apos;default&apos;, &apos;read&apos;]);
+    permissions.root = root;
+  }
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -168,10 +200,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -192,7 +224,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -163,16 +163,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">dynamic</span>
-            <span class="name ">onInvoke</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="onInvoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>This is called when this node is invoked.
@@ -194,21 +184,7 @@ You can return the following types from this method:
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// This is called when this node is invoked.
-/// You can return the following types from this method:
-/// - [Iterable]
-/// - [Map]
-/// - [Table]
-/// - [Stream]
-/// - [SimpleTableResult]
-/// - [AsyncTableResult]
-///
-/// You can also return a future (like if the method is async) of the following types:
-/// - [Stream]
-/// - [Iterable]
-/// - [Map]
-/// - [Table]
-dynamic onInvoke(Map params) {
+      <pre><code class="prettyprint lang-dart">dynamic onInvoke(Map params) {
   return null;
 }</code></pre>
     </section>
@@ -223,10 +199,10 @@ dynamic onInvoke(Map params) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -247,7 +223,7 @@ dynamic onInvoke(Map params) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

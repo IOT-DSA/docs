@@ -102,16 +102,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">write</span>(
-            <br>
-            <div class="parameters">
-                [<span class="parameter" id="write-param-resp"><span class="type-annotation"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">resp</span></span>]
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Write this result to the result given by <code>resp</code>.</p>
@@ -121,8 +111,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Write this result to the result given by [resp].
-void write([InvokeResponse resp]) {
+      <pre><code class="prettyprint lang-dart">void write([InvokeResponse resp]) {
   if (resp != null) {
     if (response == null) {
       response = resp;
@@ -149,10 +138,10 @@ void write([InvokeResponse resp]) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -173,7 +162,7 @@ void write([InvokeResponse resp]) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

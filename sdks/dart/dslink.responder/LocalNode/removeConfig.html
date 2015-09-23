@@ -135,16 +135,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype"><a class="" href="dslink.responder/Response-class.html">Response</a></span>
-            <span class="name ">removeConfig</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="removeConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="removeConfig-param-response"><span class="type-annotation"><a class="" href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Called by the link internals to remove a config from this node.</p>
@@ -154,8 +144,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Called by the link internals to remove a config from this node.
-Response removeConfig(String name, Responder responder, Response response) {
+      <pre><code class="prettyprint lang-dart">Response removeConfig(String name, Responder responder, Response response) {
   if (response != null) {
     return response..close();
   } else {
@@ -178,10 +167,10 @@ Response removeConfig(String name, Responder responder, Response response) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -202,7 +191,7 @@ Response removeConfig(String name, Responder responder, Response response) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

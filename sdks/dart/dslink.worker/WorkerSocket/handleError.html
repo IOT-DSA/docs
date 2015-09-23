@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Stream</span>
-            <span class="name ">handleError</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>,<br>{<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>}
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
@@ -186,34 +176,7 @@ will individually perform the <code>test</code> and handle the error.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Creates a wrapper Stream that intercepts some errors from this stream.
- *
- * If this stream sends an error that matches [test], then it is intercepted
- * by the [handle] function.
- *
- * The [onError] callback must be of type `void onError(error)` or
- * `void onError(error, StackTrace stackTrace)`. Depending on the function
- * type the the stream either invokes [onError] with or without a stack
- * trace. The stack trace argument might be `null` if the stream itself
- * received an error without stack trace.
- *
- * An asynchronous error [:e:] is matched by a test function if [:test(e):]
- * returns true. If [test] is omitted, every error is considered matching.
- *
- * If the error is intercepted, the [handle] function can decide what to do
- * with it. It can throw if it wants to raise a new (or the same) error,
- * or simply return to make the stream forget the error.
- *
- * If you need to transform an error into a data event, use the more generic
- * [Stream.transform] to handle the event by writing a data event to
- * the output sink.
- *
- * The returned stream is a broadcast stream if this stream is.
- * If a broadcast stream is listened to more than once, each subscription
- * will individually perform the `test` and handle the error.
- */
-Stream&lt;T&gt; handleError(Function onError, { bool test(error) }) {
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; handleError(Function onError, { bool test(error) }) {
   return new _HandleErrorStream&lt;T&gt;(this, onError, test);
 }</code></pre>
     </section>
@@ -228,10 +191,10 @@ Stream&lt;T&gt; handleError(Function onError, { bool test(error) }) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -252,7 +215,7 @@ Stream&lt;T&gt; handleError(Function onError, { bool test(error) }) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.broker/UpstreamBrokerNode/UpstreamBrokerNode.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -157,15 +158,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">UpstreamBrokerNode</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>,<br><span class="parameter" id="-param-ourName"><span class="type-annotation">String</span> <span class="parameter-name">ourName</span></span>,<br><span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -173,6 +165,47 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">UpstreamBrokerNode(String path, this.name, this.url, this.ourName,
+                   BrokerNodeProvider provider)
+: super(path, provider) {
+  ien = new UpstreamEnabledNode(&quot;/sys/upstream/${name}/enabled&quot;, provider);
+  ien.configs[r&quot;$type&quot;] = &quot;bool&quot;;
+  ien.configs[r&quot;$writable&quot;] = &quot;write&quot;;
+  ien.updateValue(enabled);
+
+  un = new UpstreamUrlNode(&quot;/sys/upstream/${name}/url&quot;, provider);
+  un.configs[r&quot;$type&quot;] = &quot;string&quot;;
+  un.configs[r&quot;$writable&quot;] = &quot;write&quot;;
+  un.updateValue(url);
+
+  nn = new UpstreamNameNode(&quot;/sys/upstream/${name}/name&quot;, provider);
+  nn.configs[r&quot;$type&quot;] = &quot;string&quot;;
+  nn.configs[r&quot;$writable&quot;] = &quot;write&quot;;
+  nn.updateValue(name);
+
+  bnn = new BrokerNode(&quot;/sys/upstream/${name}/brokerName&quot;, provider);
+  bnn.configs[r&quot;$type&quot;] = &quot;string&quot;;
+  bnn.updateValue(ourName);
+
+  new Future(() {
+    var drn = new DeleteUpstreamConnectionNode(
+        &quot;/sys/upstream/${name}/delete&quot;, name, provider);
+    provider.setNode(&quot;/sys/upstream/${name}/delete&quot;, drn);
+    provider.setNode(ien.path, ien);
+    provider.setNode(un.path, un);
+    provider.setNode(nn.path, nn);
+    provider.setNode(bnn.path, bnn);
+
+    addChild(&quot;delete&quot;, drn);
+    addChild(&quot;enabled&quot;, ien);
+    addChild(&quot;url&quot;, un);
+    addChild(&quot;name&quot;, nn);
+    addChild(&quot;brokerName&quot;, bnn);
+  });
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -184,10 +217,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -208,7 +241,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

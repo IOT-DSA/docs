@@ -163,16 +163,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype"><a class="" href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span>
-            <span class="name ">onLoadChild</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>,<br><span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Callback to override how a child of this node is loaded.
@@ -183,9 +173,7 @@ If this method returns null, the default strategy is used.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Callback to override how a child of this node is loaded.
-/// If this method returns null, the default strategy is used.
-SimpleNode onLoadChild(String name, Map data, SimpleNodeProvider provider) {
+      <pre><code class="prettyprint lang-dart">SimpleNode onLoadChild(String name, Map data, SimpleNodeProvider provider) {
   return null;
 }</code></pre>
     </section>
@@ -200,10 +188,10 @@ SimpleNode onLoadChild(String name, Map data, SimpleNodeProvider provider) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -224,7 +212,7 @@ SimpleNode onLoadChild(String name, Map data, SimpleNodeProvider provider) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

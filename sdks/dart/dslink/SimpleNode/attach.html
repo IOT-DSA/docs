@@ -163,16 +163,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">attach</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="attach-param-input"><span class="parameter-name">input</span></span>,<br>{<span class="parameter" id="attach-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>}
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Add this node to the given node.
@@ -184,10 +174,7 @@ If <code>input</code> is a <a class="" href="dslink/SimpleNode-class.html">Simpl
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Add this node to the given node.
-/// If [input] is a String, it is interpreted as a node path and resolved to a node.
-/// If [input] is a [SimpleNode], it will be attached to that.
-void attach(input, {String name}) {
+      <pre><code class="prettyprint lang-dart">void attach(input, {String name}) {
   if (name == null) {
     name = this.name;
   }
@@ -212,10 +199,10 @@ void attach(input, {String name}) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -236,7 +223,7 @@ void attach(input, {String name}) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink/DSError/DSError.fromMap.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -110,15 +111,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">DSError.fromMap</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="fromMap-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -126,6 +118,26 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">DSError.fromMap(Map m) {
+  if (m[&apos;type&apos;] is String) {
+    type = m[&apos;type&apos;];
+  }
+  if (m[&apos;msg&apos;] is String) {
+    msg = m[&apos;msg&apos;];
+  }
+  if (m[&apos;path&apos;] is String) {
+    path = m[&apos;path&apos;];
+  }
+  if (m[&apos;phase&apos;] is String) {
+    phase = m[&apos;phase&apos;];
+  }
+  if (m[&apos;detail&apos;] is String) {
+    detail = m[&apos;detail&apos;];
+  }
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -137,10 +149,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -161,7 +173,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

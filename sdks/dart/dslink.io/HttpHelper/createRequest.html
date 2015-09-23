@@ -99,16 +99,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Future&lt;HttpClientRequest&gt;</span>
-            <span class="name ">createRequest</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="createRequest-param-method"><span class="type-annotation">String</span> <span class="parameter-name">method</span></span>,<br><span class="parameter" id="createRequest-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>,<br>{<span class="parameter" id="createRequest-param-headers"><span class="type-annotation">Map&lt;String,String&gt;</span> <span class="parameter-name">headers</span></span>}
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Creates an <code>HttpClientRequest</code> with the given parameters.
@@ -121,11 +111,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Creates an [HttpClientRequest] with the given parameters.
-/// [method] is the HTTP method.
-/// [url] is the URL to make the request to.
-/// [headers] specifies additional headers to set.
-static Future&lt;HttpClientRequest&gt; createRequest(String method, String url, {Map&lt;String, String&gt; headers}) async {
+      <pre><code class="prettyprint lang-dart">static Future&lt;HttpClientRequest&gt; createRequest(String method, String url, {Map&lt;String, String&gt; headers}) async {
   var request = await client.openUrl(method, Uri.parse(url));
   if (headers != null) {
     headers.forEach(request.headers.set);
@@ -144,10 +130,10 @@ static Future&lt;HttpClientRequest&gt; createRequest(String method, String url, 
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -168,7 +154,7 @@ static Future&lt;HttpClientRequest&gt; createRequest(String method, String url, 
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

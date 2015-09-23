@@ -163,16 +163,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">bool</span>
-            <span class="name ">hasConfig</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="hasConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Checks if this node has the specified config.</p>
@@ -182,8 +172,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Checks if this node has the specified config.
-bool hasConfig(String name) =&gt; configs.containsKey(name.startsWith(r&quot;$&quot;) ? name : &apos;\$&apos; + name);</code></pre>
+      <pre><code class="prettyprint lang-dart">bool hasConfig(String name) =&gt; configs.containsKey(name.startsWith(r&quot;$&quot;) ? name : &apos;\$&apos; + name);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -196,10 +185,10 @@ bool hasConfig(String name) =&gt; configs.containsKey(name.startsWith(r&quot;$&q
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -220,7 +209,7 @@ bool hasConfig(String name) =&gt; configs.containsKey(name.startsWith(r&quot;$&q
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

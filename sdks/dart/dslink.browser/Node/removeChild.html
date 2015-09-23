@@ -109,16 +109,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">String</span>
-            <span class="name ">removeChild</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Remove a child from this node.
@@ -129,9 +119,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Remove a child from this node.
-/// [input] can be either an instance of [Node] or a [String].
-String removeChild(dynamic input) {
+      <pre><code class="prettyprint lang-dart">String removeChild(dynamic input) {
   if (input is String) {
     children.remove(getChild(input));
     return input;
@@ -154,10 +142,10 @@ String removeChild(dynamic input) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -178,7 +166,7 @@ String removeChild(dynamic input) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -102,16 +102,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">insertAfter</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="insertAfter-param-entry"><span class="parameter-name">entry</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Insert an element after this element in this element's linked list.</p>
@@ -123,13 +113,7 @@ The <code>entry</code> must not be in a linked list.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Insert an element after this element in this element&apos;s linked list.
- *
- * This entry must be in a linked list when this method is called.
- * The [entry] must not be in a linked list.
- */
-void insertAfter(E entry) {
+      <pre><code class="prettyprint lang-dart">void insertAfter(E entry) {
   _list._insertAfter(this, entry);
 }</code></pre>
     </section>
@@ -144,10 +128,10 @@ void insertAfter(E entry) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -168,7 +152,7 @@ void insertAfter(E entry) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

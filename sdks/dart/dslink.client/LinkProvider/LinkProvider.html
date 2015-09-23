@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.client/LinkProvider/LinkProvider.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -140,15 +141,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">LinkProvider</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span></span>,<br><span class="parameter" id="-param-prefix"><span class="type-annotation">String</span> <span class="parameter-name">prefix</span></span>,<br>{<span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-command"><span class="type-annotation">String</span> <span class="parameter-name">command</span>: <span class="default-value">'link'</span></span>,<br><span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-defaultNodes"><span class="type-annotation">Map</span> <span class="parameter-name">defaultNodes</span></span>,<br><span class="parameter" id="-param-nodes"><span class="type-annotation">Map</span> <span class="parameter-name">nodes</span></span>,<br><span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>,<br><span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>,<br><span class="parameter" id="-param-enableHttp"><span class="type-annotation">bool</span> <span class="parameter-name">enableHttp</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-encodePrettyJson"><span class="type-annotation">bool</span> <span class="parameter-name">encodePrettyJson</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-autoInitialize"><span class="type-annotation">bool</span> <span class="parameter-name">autoInitialize</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-strictOptions"><span class="type-annotation">bool</span> <span class="parameter-name">strictOptions</span>: <span class="default-value">false</span></span>,<br><span class="parameter" id="-param-exitOnFailure"><span class="type-annotation">bool</span> <span class="parameter-name">exitOnFailure</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-loadNodesJson"><span class="type-annotation">bool</span> <span class="parameter-name">loadNodesJson</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-defaultLogLevel"><span class="type-annotation">String</span> <span class="parameter-name">defaultLogLevel</span>: <span class="default-value">"INFO"</span></span>,<br><span class="parameter" id="-param-savePrivateKey"><span class="type-annotation">bool</span> <span class="parameter-name">savePrivateKey</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span>: <span class="default-value">null</span></span>,<br><span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>,<br><span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>,<br><span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>,<br><span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -173,6 +165,45 @@ Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> a
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">LinkProvider(this.args, this.prefix,
+    {this.isRequester: false,
+    this.command: &apos;link&apos;,
+    this.isResponder: true,
+    this.defaultNodes,
+    Map nodes,
+    this.profiles,
+    this.provider,
+    this.enableHttp: true,
+    this.encodePrettyJson: false,
+    bool autoInitialize: true,
+    this.strictOptions: false,
+    this.exitOnFailure: true,
+    this.loadNodesJson: true,
+    this.defaultLogLevel: &quot;INFO&quot;,
+    this.savePrivateKey: true,
+    this.home: null,
+    this.overrideRequester,
+    this.overrideResponder,
+    NodeProvider nodeProvider, // For Backwards Compatibility
+    this.linkData
+    }) {
+  exitOnFailure = !(const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false));
+
+  if (nodeProvider != null) {
+    provider = nodeProvider;
+  }
+
+  if (nodes != null) {
+    defaultNodes = nodes;
+  }
+
+  if (autoInitialize) {
+    init();
+  }
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -184,10 +215,10 @@ Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> a
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -208,7 +239,7 @@ Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> a
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

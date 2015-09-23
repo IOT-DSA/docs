@@ -163,16 +163,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">addChild</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="addChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>,<br><span class="parameter" id="addChild-param-node"><span class="type-annotation"><a class="" href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Adds the given <code>node</code> as a child of this node with the given <code>name</code>.</p>
@@ -182,8 +172,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Adds the given [node] as a child of this node with the given [name].
-void addChild(String name, Node node) {
+      <pre><code class="prettyprint lang-dart">void addChild(String name, Node node) {
   super.addChild(name, node);
   updateList(name);
 }</code></pre>
@@ -199,10 +188,10 @@ void addChild(String name, Node node) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -223,7 +212,7 @@ void addChild(String name, Node node) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Stream</span>
-            <span class="name ">timeout</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>,<br>{<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>}
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Creates a new stream with the same events as this stream.</p>
@@ -182,29 +172,7 @@ and the subscriptions' timers can be paused individually.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Creates a new stream with the same events as this stream.
- *
- * Whenever more than [timeLimit] passes between two events from this stream,
- * the [onTimeout] function is called.
- *
- * The countdown doesn&apos;t start until the returned stream is listened to.
- * The countdown is reset every time an event is forwarded from this stream,
- * or when the stream is paused and resumed.
- *
- * The [onTimeout] function is called with one argument: an
- * [EventSink] that allows putting events into the returned stream.
- * This `EventSink` is only valid during the call to `onTimeout`.
- *
- * If `onTimeout` is omitted, a timeout will just put a [TimeoutException]
- * into the error channel of the returned stream.
- *
- * The returned stream is a broadcast stream if this stream is.
- * If a broadcast stream is listened to more than once, each subscription
- * will have its individually timer that starts counting on listen,
- * and the subscriptions&apos; timers can be paused individually.
- */
-Stream timeout(Duration timeLimit, {void onTimeout(EventSink sink)}) {
+      <pre><code class="prettyprint lang-dart">Stream timeout(Duration timeLimit, {void onTimeout(EventSink sink)}) {
   StreamController controller;
   // The following variables are set on listen.
   StreamSubscription&lt;T&gt; subscription;
@@ -288,10 +256,10 @@ Stream timeout(Duration timeLimit, {void onTimeout(EventSink sink)}) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -312,7 +280,7 @@ Stream timeout(Duration timeLimit, {void onTimeout(EventSink sink)}) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

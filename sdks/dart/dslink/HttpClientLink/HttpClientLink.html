@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink/HttpClientLink/HttpClientLink.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -111,15 +112,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">HttpClientLink</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>,<br><span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>,<br><span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>,<br>{<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>,<br><span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>,<br><span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>,<br><span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>,<br><span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>,<br><span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -127,6 +119,32 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
+    {NodeProvider nodeProvider, bool isRequester: true,
+    bool isResponder: true, Requester overrideRequester,
+    Responder overrideResponder, this.home, this.linkData
+    //this.enableHttp: false
+    })
+    : privateKey = privateKey,
+      dsId = &apos;$dsIdPrefix${privateKey.publicKey.qHash64}&apos; {
+  if (isRequester) {
+    if (overrideRequester != null) {
+      requester = overrideRequester;
+    } else {
+      requester = new Requester();
+    }
+  }
+  if (isResponder) {
+    if (overrideResponder != null) {
+      responder = overrideResponder;
+    } else if (nodeProvider != null) {
+      responder = new Responder(nodeProvider);
+    }
+  }
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -138,10 +156,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -162,7 +180,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

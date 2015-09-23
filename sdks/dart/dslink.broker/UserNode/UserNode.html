@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.broker/UserNode/UserNode.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -146,15 +147,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">UserNode</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br><span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>,<br><span class="parameter" id="-param-username"><span class="type-annotation">String</span> <span class="parameter-name">username</span></span>
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -162,6 +154,13 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">UserNode(String path, BrokerNodeProvider provider, this.username) : super(path, provider) {
+  configs[r&apos;$is&apos;] = &apos;broker/userNode&apos;;
+  profile = provider.getOrCreateNode(&apos;/defs/profile/broker/userNode&apos;, false);
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -173,10 +172,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -197,7 +196,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

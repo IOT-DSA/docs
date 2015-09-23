@@ -135,16 +135,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
-            <span class="name ">invoke</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>,<br><span class="parameter" id="invoke-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>,<br><span class="parameter" id="invoke-param-response"><span class="type-annotation"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>,<br><span class="parameter" id="invoke-param-parentNode"><span class="type-annotation"><a class="" href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">parentNode</span></span>,<br>[<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>]
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Called by the link internals to invoke this node.</p>
@@ -154,8 +144,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Called by the link internals to invoke this node.
-InvokeResponse invoke(
+      <pre><code class="prettyprint lang-dart">InvokeResponse invoke(
     Map params, Responder responder, InvokeResponse response, Node parentNode,
     [int maxPermission = Permission.CONFIG]) {
   return response..close();
@@ -172,10 +161,10 @@ InvokeResponse invoke(
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -196,7 +185,7 @@ InvokeResponse invoke(
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

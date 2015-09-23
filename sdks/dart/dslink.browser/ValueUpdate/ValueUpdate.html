@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.browser/ValueUpdate/ValueUpdate.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -111,15 +112,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">ValueUpdate</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>,<br>{<span class="parameter" id="-param-ts"><span class="type-annotation">String</span> <span class="parameter-name">ts</span></span>,<br><span class="parameter" id="-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>,<br><span class="parameter" id="-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span></span>,<br><span class="parameter" id="-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>: <span class="default-value">1</span></span>,<br><span class="parameter" id="-param-sum"><span class="type-annotation">num</span> <span class="parameter-name">sum</span>: <span class="default-value">double.NAN</span></span>,<br><span class="parameter" id="-param-min"><span class="type-annotation">num</span> <span class="parameter-name">min</span>: <span class="default-value">double.NAN</span></span>,<br><span class="parameter" id="-param-max"><span class="type-annotation">num</span> <span class="parameter-name">max</span>: <span class="default-value">double.NAN</span></span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -127,6 +119,47 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">ValueUpdate(this.value,
+    {this.ts,
+    Map meta,
+    this.status,
+    this.count: 1,
+    this.sum: double.NAN,
+    this.min: double.NAN,
+    this.max: double.NAN}) {
+  if (ts == null) {
+    ts = getTs();
+  }
+
+  if (meta != null) {
+    if (meta[&apos;count&apos;] is int) {
+      count = meta[&apos;count&apos;];
+    } else if (value == null) {
+      count = 0;
+    }
+    if (meta[&apos;status&apos;] is String) {
+      status = meta[&apos;status&apos;];
+    }
+    if (meta[&apos;sum&apos;] is num) {
+      sum = meta[&apos;sum&apos;];
+    }
+    if (meta[&apos;max&apos;] is num) {
+      max = meta[&apos;max&apos;];
+    }
+    if (meta[&apos;min&apos;] is num) {
+      min = meta[&apos;min&apos;];
+    }
+  }
+
+  if (value is num &amp;&amp; count == 1) {
+    if (sum != sum) sum = value;
+    if (max != max) max = value;
+    if (min != min) min = value;
+  }
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -138,10 +171,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -162,7 +195,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

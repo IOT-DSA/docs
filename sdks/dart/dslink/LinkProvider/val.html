@@ -140,16 +140,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">dynamic</span>
-            <span class="name ">val</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="val-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br>[<span class="parameter" id="val-param-value"><span class="parameter-name">value</span> = <span class="default-value">unspecified</span></span>]
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>If only <code>path</code> is specified, this method fetches the value of the node at the given path.
@@ -161,10 +151,7 @@ node at the given path to the specified value, and return that value.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// If only [path] is specified, this method fetches the value of the node at the given path.
-/// If [value] is also specified, it will set the value of the
-/// node at the given path to the specified value, and return that value.
-dynamic val(String path, [value = unspecified]) {
+      <pre><code class="prettyprint lang-dart">dynamic val(String path, [value = unspecified]) {
   if (value is Unspecified) {
     return this[path].lastValueUpdate.value;
   } else {
@@ -184,10 +171,10 @@ dynamic val(String path, [value = unspecified]) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -208,7 +195,7 @@ dynamic val(String path, [value = unspecified]) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

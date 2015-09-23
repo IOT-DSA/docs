@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Stream</span>
-            <span class="name ">asBroadcastStream</span>(
-            <br>
-            <div class="parameters">
-                {<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>,<br><span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>}
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Returns a multi-subscription stream that produces the same events as this.</p>
@@ -182,28 +172,7 @@ subscription when there are no listeners.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Returns a multi-subscription stream that produces the same events as this.
- *
- * The returned stream will subscribe to this stream when its first
- * subscriber is added, and will stay subscribed until this stream ends,
- * or a callback cancels the subscription.
- *
- * If [onListen] is provided, it is called with a subscription-like object
- * that represents the underlying subscription to this stream. It is
- * possible to pause, resume or cancel the subscription during the call
- * to [onListen]. It is not possible to change the event handlers, including
- * using [StreamSubscription.asFuture].
- *
- * If [onCancel] is provided, it is called in a similar way to [onListen]
- * when the returned stream stops having listener. If it later gets
- * a new listener, the [onListen] function is called again.
- *
- * Use the callbacks, for example, for pausing the underlying subscription
- * while having no subscribers to prevent losing events, or canceling the
- * subscription when there are no listeners.
- */
-Stream&lt;T&gt; asBroadcastStream({
+      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; asBroadcastStream({
     void onListen(StreamSubscription&lt;T&gt; subscription),
     void onCancel(StreamSubscription&lt;T&gt; subscription) }) {
   return new _AsBroadcastStream&lt;T&gt;(this, onListen, onCancel);
@@ -220,10 +189,10 @@ Stream&lt;T&gt; asBroadcastStream({
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -244,7 +213,7 @@ Stream&lt;T&gt; asBroadcastStream({
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

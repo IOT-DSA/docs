@@ -140,12 +140,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">close</span>(
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Closes the link by disconnecting from the broker.
@@ -156,9 +150,7 @@ You can call <a class="" href="dslink/LinkProvider/connect.html">connect</a> aga
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Closes the link by disconnecting from the broker.
-/// You can call [connect] again once you have closed a link.
-void close() {
+      <pre><code class="prettyprint lang-dart">void close() {
   _connectedCompleter = null;
   if (link != null) {
     link.close();
@@ -179,10 +171,10 @@ void close() {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -203,7 +195,7 @@ void close() {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

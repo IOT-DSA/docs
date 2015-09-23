@@ -103,16 +103,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">timerOnceBetween</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>,<br><span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>,<br><span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>do nothing if the callback is already in the list and will get called after M to N ms</p>
@@ -122,8 +112,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// do nothing if the callback is already in the list and will get called after M to N ms
-static void timerOnceBetween(Function callback, int after, int before) {
+      <pre><code class="prettyprint lang-dart">static void timerOnceBetween(Function callback, int after, int before) {
   int desiredTime50_0 =
       (((new DateTime.now()).millisecondsSinceEpoch + after) / 50).ceil();
   int desiredTime50_1 =
@@ -156,10 +145,10 @@ static void timerOnceBetween(Function callback, int after, int before) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -180,7 +169,7 @@ static void timerOnceBetween(Function callback, int after, int before) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

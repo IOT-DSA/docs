@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.browser_client/WebSocketConnection/WebSocketConnection.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -109,15 +110,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">WebSocketConnection</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>,<br><span class="parameter" id="-param-clientLink"><span class="type-annotation"><a class="" href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">clientLink</span></span>,<br>{<span class="parameter" id="-param-onConnect"><span class="type-annotation">Function</span> <span class="parameter-name">onConnect</span></span>,<br><span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -126,6 +118,24 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect, bool enableAck:false}) {
+  if (!enableAck) {
+    msgId = -1;
+  }
+  socket.binaryType = &apos;arraybuffer&apos;;
+  _responderChannel = new PassiveChannel(this);
+  _requesterChannel = new PassiveChannel(this);
+  socket.onMessage.listen(_onData, onDone: _onDone);
+  socket.onClose.listen(_onDone);
+  socket.onOpen.listen(_onOpen);
+  // TODO, when it&apos;s used in client link, wait for the server to send {allowed} before complete this
+  _onRequestReadyCompleter.complete(new Future.value(_requesterChannel));
+
+  pingTimer = new Timer.periodic(new Duration(seconds: 20), onPingTimer);
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -137,10 +147,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -161,7 +171,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

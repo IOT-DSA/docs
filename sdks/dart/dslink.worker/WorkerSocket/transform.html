@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Stream</span>
-            <span class="name ">transform</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer</span> <span class="parameter-name">streamTransformer</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Chains this stream as the input of the provided <code>StreamTransformer</code>.</p>
@@ -171,15 +161,7 @@ broadcast stream or not.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Chains this stream as the input of the provided [StreamTransformer].
- *
- * Returns the result of [:streamTransformer.bind:] itself.
- *
- * The `streamTransformer` can decide whether it wants to return a
- * broadcast stream or not.
- */
-Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
+      <pre><code class="prettyprint lang-dart">Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
   return streamTransformer.bind(this);
 }</code></pre>
     </section>
@@ -194,10 +176,10 @@ Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -218,7 +200,7 @@ Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

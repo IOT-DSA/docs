@@ -171,71 +171,71 @@
                 <span class="signature">&#8594; <a class="" href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
-    <p></p>
-            </dd>
+</dd>
             <dt id="lastSentId" class="property">
                 <span class="name"><a class="" href="dslink.browser/Requester/lastSentId.html">lastSentId</a></span>
                 <span class="signature">&#8594; int</span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
-    <p></p>
-            </dd>
+</dd>
             <dt id="nextRid" class="property">
                 <span class="name"><a class="" href="dslink.browser/Requester/nextRid.html">nextRid</a></span>
                 <span class="signature">&#8594; int</span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
-    <p></p>
-            </dd>
+</dd>
             <dt id="nextSid" class="property">
                 <span class="name"><a class="" href="dslink.browser/Requester/nextSid.html">nextSid</a></span>
                 <span class="signature">&#8594; int</span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
-    <p></p>
-            </dd>
+</dd>
             <dt id="nodeCache" class="property">
                 <span class="name"><a class="" href="dslink.browser/Requester/nodeCache.html">nodeCache</a></span>
                 <span class="signature">&#8594; <a class="" href="dslink/RemoteNodeCache-class.html">RemoteNodeCache</a></span>
             </dt>
             <dd>
+                <p>caching of nodes</p>
                 <div class="features">
         read-only, inherited
     </div>
-    <p>caching of nodes</p>
-            </dd>
+</dd>
             <dt id="onError" class="property">
                 <span class="name"><a class="" href="dslink.browser/Requester/onError.html">onError</a></span>
-                <span class="signature">&#8594; Stream&lt;<a class="" href="dslink.common/DSError-class.html">DSError</a>&gt;</span>
+                <span class="signature">&#8594; Stream&lt;<a class="" href="dslink/DSError-class.html">DSError</a>&gt;</span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read-only, inherited
     </div>
-    <p></p>
-            </dd>
+</dd>
             <dt id="responderPath" class="property">
                 <span class="name"><a class="" href="dslink.broker/RemoteRequester/responderPath.html">responderPath</a></span>
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
+                <p></p>
                 <div class="features">
         read / write
     </div>
-    <p></p>
-            </dd>
+</dd>
         </dl>
     </section>
 
@@ -258,120 +258,108 @@
           <dl class="callables">
               <dt id="addProcessor" class="callable">
                   <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></span><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a class="" href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p>a processor function that's called just before the data is sent
 same processor won't be added to the list twice
 inside processor, send() data that only need to appear once per data frame</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="addToSendList" class="callable">
                   <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></span><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="clearProcessors" class="callable">
                   <span class="name "><a class="" href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></span><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="closeRequest" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/closeRequest.html">closeRequest</a></span><span class="signature">(<wbr><span class="parameter" id="closeRequest-param-request"><span class="type-annotation"><a class="" href="dslink.browser/Request-class.html">Request</a></span> <span class="parameter-name">request</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p>close the request from requester side and notify responder</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="getNodeValue" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/getNodeValue.html">getNodeValue</a></span><span class="signature">(<wbr><span class="parameter" id="getNodeValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype">Future&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Future&lt;<a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="getRemoteNode" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/getRemoteNode.html">getRemoteNode</a></span><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype">Future&lt;<a class="" href="dslink.requester/RemoteNode-class.html">RemoteNode</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Future&lt;<a class="" href="dslink/RemoteNode-class.html">RemoteNode</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="getSendingData" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/getSendingData.html">getSendingData</a></span><span class="signature">(<wbr><span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
-                      &#8594;
-                      <span class="returntype"><a class="" href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></span>
+                      <span class="returntype parameter">&#8594; <a class="" href="dslink/ProcessorResult-class.html">ProcessorResult</a></span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p>gather all the changes from</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="invoke" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
-                      &#8594;
-                      <span class="returntype">Stream&lt;<a class="" href="dslink.requester/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Stream&lt;<a class="" href="dslink/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="isNodeCached" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/isNodeCached.html">isNodeCached</a></span><span class="signature">(<wbr><span class="parameter" id="isNodeCached-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype">bool</span>
+                      <span class="returntype parameter">&#8594; bool</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="list" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/list.html">list</a></span><span class="signature">(<wbr><span class="parameter" id="list-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype">Stream&lt;<a class="" href="dslink.requester/RequesterListUpdate-class.html">RequesterListUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Stream&lt;<a class="" href="dslink/RequesterListUpdate-class.html">RequesterListUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="onData" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/onData.html">onData</a></span><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="onDisconnected" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteRequester/onDisconnected.html">onDisconnected</a></span><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
@@ -379,8 +367,7 @@ inside processor, send() data that only need to appear once per data frame</p>
               </dd>
               <dt id="onReconnected" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteRequester/onReconnected.html">onReconnected</a></span><span class="signature">(<wbr>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
@@ -388,63 +375,57 @@ inside processor, send() data that only need to appear once per data frame</p>
               </dd>
               <dt id="onValueChange" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/onValueChange.html">onValueChange</a></span><span class="signature">(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="onValueChange-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
-                      &#8594;
-                      <span class="returntype">Stream&lt;<a class="" href="dslink.common/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Stream&lt;<a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="remove" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/remove.html">remove</a></span><span class="signature">(<wbr><span class="parameter" id="remove-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-                      &#8594;
-                      <span class="returntype">Future&lt;<a class="" href="dslink.requester/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Future&lt;<a class="" href="dslink/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="sendRequest" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/sendRequest.html">sendRequest</a></span><span class="signature">(<wbr><span class="parameter" id="sendRequest-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="sendRequest-param-updater"><span class="type-annotation"><a class="" href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>)
-                      &#8594;
-                      <span class="returntype"><a class="" href="dslink.browser/Request-class.html">Request</a></span>
+                      <span class="returntype parameter">&#8594; <a class="" href="dslink/Request-class.html">Request</a></span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="set" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/set.html">set</a></span><span class="signature">(<wbr><span class="parameter" id="set-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="set-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, [<span class="parameter" id="set-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
-                      &#8594;
-                      <span class="returntype">Future&lt;<a class="" href="dslink.requester/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
+                      <span class="returntype parameter">&#8594; Future&lt;<a class="" href="dslink/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="subscribe" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/subscribe.html">subscribe</a></span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
-                      &#8594;
-                      <span class="returntype"><a class="" href="dslink.browser/ReqSubscribeListener-class.html">ReqSubscribeListener</a></span>
+                      <span class="returntype parameter">&#8594; <a class="" href="dslink/ReqSubscribeListener-class.html">ReqSubscribeListener</a></span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="unsubscribe" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Requester/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
-                      &#8594;
-                      <span class="returntype">void</span>
+                      <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
-                  <div class="features">inherited</div>
                   <p></p>
+                  <div class="features">inherited</div>
               </dd>
           </dl>
       </section>
@@ -501,10 +482,10 @@ inside processor, send() data that only need to appear once per data frame</p>
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -525,7 +506,7 @@ inside processor, send() data that only need to appear once per data frame</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

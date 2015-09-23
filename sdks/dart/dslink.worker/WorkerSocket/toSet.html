@@ -149,12 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Future&lt;Set&gt;</span>
-            <span class="name ">toSet</span>(
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Collects the data of this stream in a <code>Set</code>.</p>
@@ -169,16 +163,7 @@ to create the set.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Collects the data of this stream in a [Set].
- *
- * The returned set is the same type as returned by `new Set&lt;T&gt;()`.
- * If another type of set is needed, either use [forEach] to add each
- * element to the set, or use
- * `toList().then((list) =&gt; new SomeOtherSet.from(list))`
- * to create the set.
- */
-Future&lt;Set&lt;T&gt;&gt; toSet() {
+      <pre><code class="prettyprint lang-dart">Future&lt;Set&lt;T&gt;&gt; toSet() {
   Set&lt;T&gt; result = new Set&lt;T&gt;();
   _Future&lt;Set&lt;T&gt;&gt; future = new _Future&lt;Set&lt;T&gt;&gt;();
   this.listen(
@@ -204,10 +189,10 @@ Future&lt;Set&lt;T&gt;&gt; toSet() {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -228,7 +213,7 @@ Future&lt;Set&lt;T&gt;&gt; toSet() {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

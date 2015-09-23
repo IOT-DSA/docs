@@ -101,16 +101,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">addProcessor</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a class="" href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>a processor function that's called just before the data is sent
@@ -122,10 +112,7 @@ inside processor, send() data that only need to appear once per data frame</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// a processor function that&apos;s called just before the data is sent
-/// same processor won&apos;t be added to the list twice
-/// inside processor, send() data that only need to appear once per data frame
-void addProcessor(ConnectionProcessor processor) {
+      <pre><code class="prettyprint lang-dart">void addProcessor(ConnectionProcessor processor) {
   _processors.add(processor);
   if (!_pendingSend) {
     if (_conn != null) {
@@ -146,10 +133,10 @@ void addProcessor(ConnectionProcessor processor) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -170,7 +157,7 @@ void addProcessor(ConnectionProcessor processor) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

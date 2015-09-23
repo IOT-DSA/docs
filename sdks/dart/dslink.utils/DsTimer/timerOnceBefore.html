@@ -103,16 +103,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">timerOnceBefore</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>,<br><span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
@@ -122,8 +112,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// do nothng if the callback is already in the list and will get called after 0 ~ N ms
-static void timerOnceBefore(Function callback, int ms) {
+      <pre><code class="prettyprint lang-dart">static void timerOnceBefore(Function callback, int ms) {
   int desiredTime50 =
       (((new DateTime.now()).millisecondsSinceEpoch + ms) / 50).ceil();
   if (_functionsMap.containsKey(callback)) {
@@ -154,10 +143,10 @@ static void timerOnceBefore(Function callback, int ms) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -178,7 +167,7 @@ static void timerOnceBefore(Function callback, int ms) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

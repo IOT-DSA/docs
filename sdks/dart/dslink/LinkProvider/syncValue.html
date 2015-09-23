@@ -140,16 +140,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">syncValue</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="syncValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Gets the value for <code>path</code> and forcibly updates the value to the same exact value.</p>
@@ -159,8 +149,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Gets the value for [path] and forcibly updates the value to the same exact value.
-void syncValue(String path) {
+      <pre><code class="prettyprint lang-dart">void syncValue(String path) {
   var n = this[path];
   n.updateValue(n.lastValueUpdate.value, force: true);
 }</code></pre>
@@ -176,10 +165,10 @@ void syncValue(String path) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -200,7 +189,7 @@ void syncValue(String path) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

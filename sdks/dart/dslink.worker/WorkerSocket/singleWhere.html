@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Future</span>
-            <span class="name ">singleWhere</span>(
-            <br>
-            <div class="parameters">
-                <span class="parameter" id="singleWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Finds the single element in this stream matching <code>test</code>.</p>
@@ -170,13 +160,7 @@ matching element occurs in the stream.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Finds the single element in this stream matching [test].
- *
- * Like [lastMatch], except that it is an error if more than one
- * matching element occurs in the stream.
- */
-Future&lt;T&gt; singleWhere(bool test(T element)) {
+      <pre><code class="prettyprint lang-dart">Future&lt;T&gt; singleWhere(bool test(T element)) {
   _Future&lt;T&gt; future = new _Future&lt;T&gt;();
   T result = null;
   bool foundResult = false;
@@ -229,10 +213,10 @@ Future&lt;T&gt; singleWhere(bool test(T element)) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -253,7 +237,7 @@ Future&lt;T&gt; singleWhere(bool test(T element)) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

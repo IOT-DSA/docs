@@ -149,16 +149,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Future&lt;String&gt;</span>
-            <span class="name ">join</span>(
-            <br>
-            <div class="parameters">
-                [<span class="parameter" id="join-param-separator"><span class="type-annotation">String</span> <span class="parameter-name">separator</span> = <span class="default-value">""</span></span>]
-            </div>
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Collects string of data events' string representations.</p>
@@ -173,17 +163,7 @@ the "done" event arrives.</p>
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/**
- * Collects string of data events&apos; string representations.
- *
- * If [separator] is provided, it is inserted between any two
- * elements.
- *
- * Any error in the stream causes the future to complete with that
- * error. Otherwise it completes with the collected string when
- * the &quot;done&quot; event arrives.
- */
-Future&lt;String&gt; join([String separator = &quot;&quot;]) {
+      <pre><code class="prettyprint lang-dart">Future&lt;String&gt; join([String separator = &quot;&quot;]) {
   _Future&lt;String&gt; result = new _Future&lt;String&gt;();
   StringBuffer buffer = new StringBuffer();
   StreamSubscription subscription;
@@ -221,10 +201,10 @@ Future&lt;String&gt; join([String separator = &quot;&quot;]) {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -245,7 +225,7 @@ Future&lt;String&gt; join([String separator = &quot;&quot;]) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.browser/DSLinkJSON/DSLinkJSON.from.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -104,15 +105,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">DSLinkJSON.from</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="from-param-map"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">map</span></span>
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -120,6 +112,21 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">factory DSLinkJSON.from(Map&lt;String, dynamic&gt; map) {
+  var j = new DSLinkJSON();
+  j._json = map;
+  j.name = map[&quot;name&quot;];
+  j.version = map[&quot;version&quot;];
+  j.description = map[&quot;description&quot;];
+  j.main = map[&quot;main&quot;];
+  j.engines = map[&quot;engines&quot;];
+  j.configs = map[&quot;configs&quot;];
+  j.getDependencies = map[&quot;getDependencies&quot;];
+  return j;
+}</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -131,10 +138,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -155,7 +162,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

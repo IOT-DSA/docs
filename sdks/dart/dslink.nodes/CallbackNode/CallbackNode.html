@@ -60,6 +60,7 @@
               </h1>
           </div>
           <ul class="subnav">
+              <li><a href="dslink.nodes/CallbackNode/CallbackNode.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -169,15 +170,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-        
-                <span class="name ">CallbackNode</span>(
-        <br>
-        <div class="parameters">
-            <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>,<br>{<span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>,<br><span class="parameter" id="-param-onActionInvoke"><span class="type-annotation">dynamic</span> <span class="parameter-name">onActionInvoke</span>(<span class="parameter" id="ActionFunction-param-params"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">params</span></span>)</span>,<br><span class="parameter" id="-param-onChildAdded"><span class="type-annotation">void</span> <span class="parameter-name">onChildAdded</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a class="" href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>,<br><span class="parameter" id="-param-onChildRemoved"><span class="type-annotation">void</span> <span class="parameter-name">onChildRemoved</span>(<span class="parameter" id="ChildChangedCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="ChildChangedCallback-param-node"><span class="type-annotation"><a class="" href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>,<br><span class="parameter" id="-param-onCreated"><span class="type-annotation">void</span> <span class="parameter-name">onCreated</span>()</span>,<br><span class="parameter" id="-param-onRemoving"><span class="type-annotation">void</span> <span class="parameter-name">onRemoving</span>()</span>,<br><span class="parameter" id="-param-onLoadChild"><span class="type-annotation"><a class="" href="dslink.nodes/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">onLoadChild</span>(<span class="parameter" id="LoadChildCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="LoadChildCallback-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="LoadChildCallback-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>}
-        </div>
-        )
-    </section>
 
     <section class="desc markdown">
     
@@ -185,6 +177,23 @@
     
     </section>
 
+      <section class="summary source-code" id="source">
+        <h2>Source</h2>
+        <pre><code class="prettyprint lang-dart">CallbackNode(String path,
+    {SimpleNodeProvider provider,
+      this.onActionInvoke,
+    ChildChangedCallback onChildAdded,
+    ChildChangedCallback onChildRemoved,
+    SimpleCallback onCreated,
+    SimpleCallback onRemoving,
+    LoadChildCallback onLoadChild})
+    : super(path, provider),
+      onChildAddedCallback = onChildAdded,
+      onChildRemovedCallback = onChildRemoved,
+      onCreatedCallback = onCreated,
+      onRemovingCallback = onRemoving,
+      onLoadChildCallback = onLoadChild;</code></pre>
+      </section>
 
   </div> <!-- /.main-content -->
 
@@ -196,10 +205,10 @@
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -220,7 +229,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

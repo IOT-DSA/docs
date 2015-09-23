@@ -141,12 +141,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">Future</span>
-            <span class="name ">loadDef</span>(
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>load a fixed profile map</p>
@@ -156,8 +150,7 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// load a fixed profile map
-loadDef() async {
+      <pre><code class="prettyprint lang-dart">loadDef() async {
   DefinitionNode profileNode = getOrCreateNode(&apos;/defs/profile&apos;, false);
   defsNode.children[&apos;profile&apos;] = profileNode;
   defaultProfileMap.forEach((String name, Map m) {
@@ -190,10 +183,10 @@ loadDef() async {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -214,7 +207,7 @@ loadDef() async {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>

@@ -140,12 +140,6 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
-    <section class="multi-line-signature">
-            <span class="returntype">void</span>
-            <span class="name ">init</span>(
-            )
-    </section>
-
     <section class="desc markdown">
     
           <p>Initializes the Link.
@@ -163,17 +157,7 @@ If the <a class="" href="dslink/LinkProvider/configure.html">configure</a> metho
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">/// Initializes the Link.
-/// There is no guarantee that the link will be ready when this method returns.
-/// If the [configure] method is not called prior to calling this method, it is called.
-///
-/// This method handles the following:
-/// - calling [configure] if it has not been called.
-/// - creating a [provider] if it has not been created.
-/// - loading the nodes.json file.
-/// - creating the actual link.
-/// - discovering brokers if that was enabled.
-void init() {
+      <pre><code class="prettyprint lang-dart">void init() {
   if (!_configured) {
     if (!configure()) {
       return;
@@ -266,10 +250,10 @@ void init() {
         <div class="container">
             <p class="text-center">
                 <span class="no-break">
-                  dslink 1.0.0 api docs
+                  dslink 1.0.0
                 </span>
                 &bull;
-                <span class="copyright no-break">
+                <span class="no-break">
                   <a href="https://www.dartlang.org">
                     <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
                   </a>
@@ -290,7 +274,7 @@ void init() {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.4 -->
+<!-- Made with <3 by dartdoc version 0.6.6 -->
 </body>
 
 </html>
