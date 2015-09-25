@@ -165,11 +165,21 @@
     Map m = DsJson.decode(data);
     m.forEach((String name, Map m) {
       String path = &apos;/data/$name&apos;;
-      BrokerDataNode node = getOrCreateNode(path, false);
-      connsNode.children[name] = node;
+      BrokerDataNode node = getOrCreateNode(path, true);
       node.load(m);
     });
   } catch (err) {}
+  if (storage != null) {
+     BrokerDataNode.storage = storage.getOrCreateValueStorageBucket(&apos;data&apos;);
+     Map values = await BrokerDataNode.storage.load();
+     values.forEach((key, val){
+       if (nodes[key] is BrokerDataNode) {
+         nodes[key].updateValue(val);
+       } else {
+         BrokerDataNode.storage.removeValue(key);
+       }
+     });
+  }
 }</code></pre>
     </section>
 
