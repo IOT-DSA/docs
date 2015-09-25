@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>addChildNode function - dslink.broker library - Dart API</title>
+    <title>addDataNode function - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the addChildNode function from the dslink.broker library, for the Dart programming language.">
+    <meta name="description" content="API docs for the addDataNode function from the dslink.broker library, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -33,9 +33,9 @@
               <ol class="breadcrumbs gt-separated hidden-xs">
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-                  <li class="self-crumb">addChildNode</li>
+                  <li class="self-crumb">addDataNode</li>
               </ol>
-              <div class="self-name">addChildNode</div>
+              <div class="self-name">addDataNode</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -50,15 +50,15 @@
           <ol class="breadcrumbs gt-separated visible-xs">
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
-              <li class="self-crumb">addChildNode</li>
+              <li class="self-crumb">addDataNode</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">function</div> addChildNode
+                  <div class="kind">function</div> addDataNode
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.broker/addChildNode.html#source">Source</a></li>
+              <li><a href="dslink.broker/addDataNode.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -76,15 +76,19 @@
     
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+      <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
-      <li><a class="" href="dslink.broker/addChildNode.html">addChildNode</a></li>
-      <li><a class="" href="dslink.broker/addLink.html">addLink</a></li>
+      <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
+      <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataNode-class.html">BrokerDataNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataRoot-class.html">BrokerDataRoot</a></li>
       <li><a class="" href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a class="" href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a class="" href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
@@ -136,25 +140,33 @@
 
     <section class="summary source-code" id="source">
       <h2>Source</h2>
-      <pre><code class="prettyprint lang-dart">InvokeResponse addChildNode(Map params, Responder responder,
+      <pre><code class="prettyprint lang-dart">InvokeResponse addDataNode(Map params, Responder responder,
     InvokeResponse response, LocalNode parentNode) {
   Object name = params[&apos;Name&apos;];
-  if (parentNode is UserNode &amp;&amp;
+  Object type = params[&apos;Type&apos;];
+  Object editor = params[&apos;Editor&apos;];
+  if (parentNode is BrokerDataNode &amp;&amp;
+      parentNode.parent != null &amp;&amp; // make sure parent node itself is in tree
       name is String &amp;&amp;
       name != &apos;&apos; &amp;&amp;
       !name.contains(Path.invalidNameChar) &amp;&amp;
       !name.startsWith(r&apos;$&apos;) &amp;&amp;
-      !name.startsWith(r&apos;!&apos;) &amp;&amp;
-      !name.startsWith(r&apos;#&apos;)) {
+      !name.startsWith(r&apos;!&apos;)) {
     if (parentNode.children.containsKey(name)) {
       return response
         ..close(new DSError(&apos;invalidParameter&apos;, msg: &apos;node already exist&apos;));
     }
-    UserNode node = responder.nodeProvider.getOrCreateNode(&apos;${parentNode.path}/$name&apos;, false);
+    BrokerDataNode node = responder.nodeProvider.getOrCreateNode(&apos;${parentNode.path}/$name&apos;, false);
+    if (type is String &amp;&amp; const[&apos;string&apos;,&apos;number&apos;,&apos;bool&apos;,&apos;array&apos;,&apos;map&apos;,&apos;binary&apos;,&apos;dynamic&apos;].contains(type)) {
+      node.configs[r&apos;$type&apos;] = type;
+      if (editor is String) {
+        node.configs[r&apos;$editor&apos;] = editor;
+      }
+    }
     parentNode.children[name] = node;
+    node.parent = parentNode;
     parentNode.updateList(name);
-    DsTimer.timerOnceBefore((responder.nodeProvider as BrokerNodeProvider).saveUsrNodes, 1000);
-
+    DsTimer.timerOnceBefore((responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
   }
   return response..close(DSError.INVALID_PARAMETER);
 }</code></pre>

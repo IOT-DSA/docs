@@ -80,15 +80,19 @@
     
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
+      <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
-      <li><a class="" href="dslink.broker/addChildNode.html">addChildNode</a></li>
-      <li><a class="" href="dslink.broker/addLink.html">addLink</a></li>
+      <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
+      <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#classes">Classes</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataNode-class.html">BrokerDataNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataRoot-class.html">BrokerDataRoot</a></li>
       <li><a class="" href="dslink.broker/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a class="" href="dslink.broker/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a class="" href="dslink.broker/BrokerHiddenNode-class.html">BrokerHiddenNode</a></li>
@@ -207,6 +211,16 @@
         read / write
     </div>
 </dd>
+            <dt id="dataNode" class="property">
+                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/dataNode.html">dataNode</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+            </dt>
+            <dd>
+                <p></p>
+                <div class="features">
+        read / write
+    </div>
+</dd>
             <dt id="defsNode" class="property">
                 <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/defsNode.html">defsNode</a></span>
                 <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
@@ -243,6 +257,16 @@
             </dt>
             <dd>
                 <p>name with 2 slash</p>
+                <div class="features">
+        read / write
+    </div>
+</dd>
+            <dt id="enabledDataNodes" class="property">
+                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/enabledDataNodes.html">enabledDataNodes</a></span>
+                <span class="signature">&#8594; bool</span>
+            </dt>
+            <dd>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -319,6 +343,16 @@ but instance is still there</p>
         read / write
     </div>
 </dd>
+            <dt id="root" class="property">
+                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/root.html">root</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/RootNode-class.html">RootNode</a></span>
+            </dt>
+            <dd>
+                <p></p>
+                <div class="features">
+        read / write
+    </div>
+</dd>
             <dt id="rootStructure" class="property">
                 <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></span>
                 <span class="signature">&#8594; Map</span>
@@ -341,7 +375,7 @@ but instance is still there</p>
 </dd>
             <dt id="storage" class="property">
                 <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/storage.html">storage</a></span>
-                <span class="signature">&#8594; dynamic</span>
+                <span class="signature">&#8594; <a class="" href="dslink/IStorageManager-class.html">IStorageManager</a></span>
             </dt>
             <dd>
                 <p></p>
@@ -387,7 +421,7 @@ but instance is still there</p>
 
         <dl class="constructor-summary-list">
             <dt id="BrokerNodeProvider" class="callable">
-                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/BrokerNodeProvider.html">BrokerNodeProvider</a></span><span class="signature">({<span class="parameter" id="-param-enabledQuarantine"><span class="type-annotation">bool</span> <span class="parameter-name">enabledQuarantine</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-acceptAllConns"><span class="type-annotation">bool</span> <span class="parameter-name">acceptAllConns</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-defaultPermission"><span class="type-annotation">List</span> <span class="parameter-name">defaultPermission</span></span>, <span class="parameter" id="-param-downstreamName"><span class="type-annotation">String</span> <span class="parameter-name">downstreamName</span>: <span class="default-value">'conns'</span></span>, <span class="parameter" id="-param-storage"><span class="parameter-name">storage</span></span>})</span>
+                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/BrokerNodeProvider.html">BrokerNodeProvider</a></span><span class="signature">({<span class="parameter" id="-param-enabledQuarantine"><span class="type-annotation">bool</span> <span class="parameter-name">enabledQuarantine</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-acceptAllConns"><span class="type-annotation">bool</span> <span class="parameter-name">acceptAllConns</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-defaultPermission"><span class="type-annotation">List</span> <span class="parameter-name">defaultPermission</span></span>, <span class="parameter" id="-param-downstreamName"><span class="type-annotation">String</span> <span class="parameter-name">downstreamName</span>: <span class="default-value">'conns'</span></span>, <span class="parameter" id="-param-storage"><span class="type-annotation"><a class="" href="dslink/IStorageManager-class.html">IStorageManager</a></span> <span class="parameter-name">storage</span></span>, <span class="parameter" id="-param-enabledDataNodes"><span class="type-annotation">bool</span> <span class="parameter-name">enabledDataNodes</span>: <span class="default-value">true</span></span>})</span>
             </dt>
             <dd>
                 <p></p>
@@ -536,6 +570,14 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
               <dd>
                   <p></p>
               </dd>
+              <dt id="loadDataNodes" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/loadDataNodes.html">loadDataNodes</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; Future</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
               <dt id="loadDef" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; Future</span>
@@ -592,6 +634,14 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
               <dd>
                   <p></p>
               </dd>
+              <dt id="saveDataNodes" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/saveDataNodes.html">saveDataNodes</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; Future&lt;Map&gt;</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
               <dt id="saveUsrNodes" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/saveUsrNodes.html">saveUsrNodes</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; Future&lt;Map&gt;</span>
@@ -632,10 +682,12 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
       <li><a class="" href="dslink.broker/BrokerNodeProvider/connPath2id.html">connPath2id</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/conns.html">conns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/connsNode.html">connsNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/dataNode.html">dataNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/defsNode.html">defsNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamName.html">downstreamName</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameS.html">downstreamNameS</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/downstreamNameSS.html">downstreamNameSS</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/enabledDataNodes.html">enabledDataNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/enabledPermission.html">enabledPermission</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/enabledQuarantine.html">enabledQuarantine</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/id2connPath.html">id2connPath</a></li>
@@ -643,6 +695,7 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
       <li><a class="" href="dslink.broker/BrokerNodeProvider/nodes.html">nodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/permissions.html">permissions</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/quarantineNode.html">quarantineNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/root.html">root</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/storage.html">storage</a></li>
@@ -672,6 +725,7 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
       <li><a class="" href="dslink.broker/BrokerNodeProvider/initSys.html">initSys</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadAll.html">loadAll</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadConns.html">loadConns</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/loadDataNodes.html">loadDataNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/makeConnPath.html">makeConnPath</a></li>
@@ -679,6 +733,7 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Bro
       <li><a class="" href="dslink.broker/BrokerNodeProvider/registerInvokableProfile.html">registerInvokableProfile</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/removeLink.html">removeLink</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/saveConns.html">saveConns</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/saveDataNodes.html">saveDataNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/saveUsrNodes.html">saveUsrNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/setNode.html">setNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/updateLinkData.html">updateLinkData</a></li>
