@@ -84,7 +84,7 @@
       <li class="section-title"><a href="dslink.browser_client/WebSocketConnection-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser_client/WebSocketConnection/clientLink.html">clientLink</a></li>
       <li><a class="" href="dslink.browser/Connection/codec.html">codec</a></li>
-      <li><a class="" href="dslink.browser_client/WebSocketConnection/msgId.html">msgId</a></li>
+      <li><a class="" href="dslink.browser_client/WebSocketConnection/nextMsgId.html">nextMsgId</a></li>
       <li><a class="" href="dslink.browser_client/WebSocketConnection/onConnect.html">onConnect</a></li>
       <li><a class="" href="dslink.browser_client/WebSocketConnection/onDisconnected.html">onDisconnected</a></li>
       <li><a class="" href="dslink.browser_client/WebSocketConnection/onRequesterReady.html">onRequesterReady</a></li>
@@ -122,7 +122,7 @@
         <h2>Source</h2>
         <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect, bool enableAck:false}) {
   if (!enableAck) {
-    msgId = -1;
+    nextMsgId = -1;
   }
   socket.binaryType = &apos;arraybuffer&apos;;
   _responderChannel = new PassiveChannel(this);
