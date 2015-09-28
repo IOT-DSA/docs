@@ -83,6 +83,8 @@
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
+      <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
     
@@ -156,8 +158,18 @@
       return response
         ..close(new DSError(&apos;invalidParameter&apos;, msg: &apos;node already exist&apos;));
     }
-    BrokerDataNode node = responder.nodeProvider.getOrCreateNode(&apos;${parentNode.path}/$name&apos;, false);
-    if (type is String &amp;&amp; const[&apos;string&apos;,&apos;number&apos;,&apos;bool&apos;,&apos;array&apos;,&apos;map&apos;,&apos;binary&apos;,&apos;dynamic&apos;].contains(type)) {
+    BrokerDataNode node = responder.nodeProvider.getOrCreateNode(
+        &apos;${parentNode.path}/$name&apos;, false);
+    if (type is String &amp;&amp;
+        const [
+      &apos;string&apos;,
+      &apos;number&apos;,
+      &apos;bool&apos;,
+      &apos;array&apos;,
+      &apos;map&apos;,
+      &apos;binary&apos;,
+      &apos;dynamic&apos;
+    ].contains(type)) {
       node.configs[r&apos;$type&apos;] = type;
       if (editor is String) {
         node.configs[r&apos;$editor&apos;] = editor;
@@ -166,7 +178,8 @@
     parentNode.children[name] = node;
     node.parent = parentNode;
     parentNode.updateList(name);
-    DsTimer.timerOnceBefore((responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
+    DsTimer.timerOnceBefore(
+        (responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
   }
   return response..close(DSError.INVALID_PARAMETER);
 }</code></pre>

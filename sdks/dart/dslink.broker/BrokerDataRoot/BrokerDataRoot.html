@@ -125,7 +125,7 @@
       <li><a class="" href="dslink.browser/LocalNode/getSetPermission.html">getSetPermission</a></li>
       <li><a class="" href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
       <li><a class="" href="dslink.browser/LocalNode/invoke.html">invoke</a></li>
-      <li><a class="" href="dslink.broker/BrokerNode/load.html">load</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataNode/load.html">load</a></li>
       <li><a class="" href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
       <li><a class="" href="dslink.browser/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
       <li><a class="" href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
@@ -156,7 +156,8 @@
 
       <section class="summary source-code" id="source">
         <h2>Source</h2>
-        <pre><code class="prettyprint lang-dart">BrokerDataRoot(String path, BrokerNodeProvider provider) : super(path, provider) {
+        <pre><code class="prettyprint lang-dart">BrokerDataRoot(String path, BrokerNodeProvider provider)
+    : super(path, provider) {
   configs[r&apos;$is&apos;] = &apos;broker/dataRoot&apos;;
   profile = provider.getOrCreateNode(&apos;/defs/profile/broker/dataRoot&apos;, false);
   // avoid parent checking

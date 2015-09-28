@@ -126,7 +126,7 @@
       <li><a class="" href="dslink.browser/LocalNode/getSetPermission.html">getSetPermission</a></li>
       <li><a class="" href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
       <li><a class="" href="dslink.browser/LocalNode/invoke.html">invoke</a></li>
-      <li><a class="" href="dslink.broker/BrokerNode/load.html">load</a></li>
+      <li><a class="" href="dslink.broker/BrokerDataNode/load.html">load</a></li>
       <li><a class="" href="dslink.broker/BrokerNodePermission/loadPermission.html">loadPermission</a></li>
       <li><a class="" href="dslink.browser/LocalNode/onAllListCancel.html">onAllListCancel</a></li>
       <li><a class="" href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
@@ -166,7 +166,8 @@
       configs[r&apos;$type&apos;] = &apos;dynamic&apos;;
     }
   }
-  if (storage != null &amp;&amp; (lastValueUpdate == null || lastValueUpdate.value != value)) {
+  if (storage != null &amp;&amp;
+      (lastValueUpdate == null || lastValueUpdate.value != value)) {
     storage.setValue(path, value);
   }
   return super.setValue(value, responder, response, maxPermission);

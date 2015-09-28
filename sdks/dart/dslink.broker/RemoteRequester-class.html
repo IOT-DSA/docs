@@ -86,6 +86,8 @@
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
+      <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
     
@@ -180,28 +182,8 @@
         read / write, inherited
     </div>
 </dd>
-            <dt id="lastSentId" class="property">
-                <span class="name"><a class="" href="dslink.browser/Requester/lastSentId.html">lastSentId</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p></p>
-                <div class="features">
-        read / write, inherited
-    </div>
-</dd>
-            <dt id="nextRid" class="property">
-                <span class="name"><a class="" href="dslink.browser/Requester/nextRid.html">nextRid</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p></p>
-                <div class="features">
-        read / write, inherited
-    </div>
-</dd>
-            <dt id="nextSid" class="property">
-                <span class="name"><a class="" href="dslink.browser/Requester/nextSid.html">nextSid</a></span>
+            <dt id="lastRid" class="property">
+                <span class="name"><a class="" href="dslink.browser/Requester/lastRid.html">lastRid</a></span>
                 <span class="signature">&#8594; int</span>
             </dt>
             <dd>
@@ -296,6 +278,15 @@ inside processor, send() data that only need to appear once per data frame</p>
               </dt>
               <dd>
                   <p>close the request from requester side and notify responder</p>
+                  <div class="features">inherited</div>
+              </dd>
+              <dt id="getNextRid" class="callable">
+                  <span class="name "><a class="" href="dslink.browser/Requester/getNextRid.html">getNextRid</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; int</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="getNodeValue" class="callable">
@@ -444,9 +435,7 @@ inside processor, send() data that only need to appear once per data frame</p>
     
       <li class="section-title"><a href="dslink.broker/RemoteRequester-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
-      <li><a class="" href="dslink.browser/Requester/lastSentId.html">lastSentId</a></li>
-      <li><a class="" href="dslink.browser/Requester/nextRid.html">nextRid</a></li>
-      <li><a class="" href="dslink.browser/Requester/nextSid.html">nextSid</a></li>
+      <li><a class="" href="dslink.browser/Requester/lastRid.html">lastRid</a></li>
       <li><a class="" href="dslink.browser/Requester/nodeCache.html">nodeCache</a></li>
       <li><a class="" href="dslink.browser/Requester/onError.html">onError</a></li>
       <li><a class="" href="dslink.broker/RemoteRequester/responderPath.html">responderPath</a></li>
@@ -460,6 +449,7 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a class="" href="dslink.browser/Requester/closeRequest.html">closeRequest</a></li>
+      <li><a class="" href="dslink.browser/Requester/getNextRid.html">getNextRid</a></li>
       <li><a class="" href="dslink.browser/Requester/getNodeValue.html">getNodeValue</a></li>
       <li><a class="" href="dslink.browser/Requester/getRemoteNode.html">getRemoteNode</a></li>
       <li><a class="" href="dslink.browser/Requester/getSendingData.html">getSendingData</a></li>

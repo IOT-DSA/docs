@@ -113,7 +113,7 @@
       <section class="summary source-code" id="source">
         <h2>Source</h2>
         <pre><code class="prettyprint lang-dart">ReqSubscribeController(this.node, this.requester) {
-  sid = requester.nextSid++;
+  sid = requester._subsciption.getNextSid();
 }</code></pre>
       </section>
 
