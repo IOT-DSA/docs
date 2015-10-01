@@ -60,6 +60,7 @@
           <ul class="subnav">
               <li><a href="dslink/Responder-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink/Responder-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/Responder-class.html#operators">Operators</a></li>
               <li><a href="dslink/Responder-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -239,6 +240,17 @@
         read / write
     </div>
 </dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink/Responder/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink/Responder/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="maxCacheLength" class="property">
                 <span class="name"><a class="" href="dslink/Responder/maxCacheLength.html">maxCacheLength</a></span>
                 <span class="signature">&#8594; int</span>
@@ -269,6 +281,16 @@
         read / write
     </div>
 </dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink/Responder/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="storage" class="property">
                 <span class="name"><a class="" href="dslink/Responder/storage.html">storage</a></span>
                 <span class="signature">&#8594; <a class="" href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
@@ -295,6 +317,21 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink/Responder/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink/Responder/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
@@ -319,7 +356,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="addToSendList" class="callable">
-                  <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></span><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></span><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -345,7 +382,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="close" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/close.html">close</a></span><span class="signature">(<wbr><span class="parameter" id="close-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/close.html">close</a></span><span class="signature">(<wbr><span class="parameter" id="close-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -370,7 +407,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="invoke" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -378,15 +415,29 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="list" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/list.html">list</a></span><span class="signature">(<wbr><span class="parameter" id="list-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/list.html">list</a></span><span class="signature">(<wbr><span class="parameter" id="list-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
                   <p></p>
               </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink/Responder/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink/Responder/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="onData" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/onData.html">onData</a></span><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/onData.html">onData</a></span><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="parameter-name">list</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -410,7 +461,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="remove" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/remove.html">remove</a></span><span class="signature">(<wbr><span class="parameter" id="remove-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/remove.html">remove</a></span><span class="signature">(<wbr><span class="parameter" id="remove-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -426,7 +477,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="set" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/set.html">set</a></span><span class="signature">(<wbr><span class="parameter" id="set-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/set.html">set</a></span><span class="signature">(<wbr><span class="parameter" id="set-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -434,12 +485,21 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="subscribe" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/subscribe.html">subscribe</a></span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/subscribe.html">subscribe</a></span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
               <dd>
                   <p></p>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink/Responder/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="traceResponseRemoved" class="callable">
                   <span class="name "><a class="" href="dslink/Responder/traceResponseRemoved.html">traceResponseRemoved</a></span><span class="signature">(<wbr><span class="parameter" id="traceResponseRemoved-param-response"><span class="type-annotation"><a class="" href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
@@ -450,7 +510,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="unsubscribe" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink/Responder/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -466,7 +526,7 @@ inside processor, send() data that only need to appear once per data frame</p>
                   <p></p>
               </dd>
               <dt id="updateResponse" class="callable">
-                  <span class="name "><a class="" href="dslink/Responder/updateResponse.html">updateResponse</a></span><span class="signature">(<wbr><span class="parameter" id="updateResponse-param-response"><span class="type-annotation"><a class="" href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="updateResponse-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateResponse-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="updateResponse-param-columns"><span class="type-annotation">List&lt;<a class="" href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateResponse-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
+                  <span class="name "><a class="" href="dslink/Responder/updateResponse.html">updateResponse</a></span><span class="signature">(<wbr><span class="parameter" id="updateResponse-param-response"><span class="type-annotation"><a class="" href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="updateResponse-param-updates"><span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateResponse-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="updateResponse-param-columns"><span class="type-annotation">List&lt;<a class="" href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateResponse-param-meta"><span class="parameter-name">meta</span></span>})
                       <span class="returntype parameter">&#8594; void</span>
                   </span>
               </dt>
@@ -487,14 +547,18 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li class="section-title"><a href="dslink/Responder-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
       <li><a class="" href="dslink/Responder/groups.html">groups</a></li>
+      <li><a class="" href="dslink/Responder/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink/Responder/maxCacheLength.html">maxCacheLength</a></li>
       <li><a class="" href="dslink/Responder/nodeProvider.html">nodeProvider</a></li>
       <li><a class="" href="dslink/Responder/reqId.html">reqId</a></li>
+      <li><a class="" href="dslink/Responder/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/Responder/storage.html">storage</a></li>
     
       <li class="section-title"><a href="dslink/Responder-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/Responder/Responder.html">Responder</a></li>
     
+      <li class="section-title"><a href="dslink/Responder-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink/Responder/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/Responder-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
@@ -507,6 +571,7 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a class="" href="dslink/Responder/initStorage.html">initStorage</a></li>
       <li><a class="" href="dslink/Responder/invoke.html">invoke</a></li>
       <li><a class="" href="dslink/Responder/list.html">list</a></li>
+      <li><a class="" href="dslink/Responder/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink/Responder/onData.html">onData</a></li>
       <li><a class="" href="dslink/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a class="" href="dslink/Responder/onReconnected.html">onReconnected</a></li>
@@ -514,6 +579,7 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a class="" href="dslink/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a class="" href="dslink/Responder/set.html">set</a></li>
       <li><a class="" href="dslink/Responder/subscribe.html">subscribe</a></li>
+      <li><a class="" href="dslink/Responder/toString.html">toString</a></li>
       <li><a class="" href="dslink/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a class="" href="dslink/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a class="" href="dslink/Responder/updateGroups.html">updateGroups</a></li>
@@ -553,7 +619,7 @@ inside processor, send() data that only need to appear once per data frame</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

@@ -60,6 +60,7 @@
           <ul class="subnav">
               <li><a href="dslink.requester/Request-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink.requester/Request-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.requester/Request-class.html#operators">Operators</a></li>
               <li><a href="dslink.requester/Request-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -126,12 +127,23 @@
         <dl class="properties">
             <dt id="data" class="property">
                 <span class="name"><a class="" href="dslink.requester/Request/data.html">data</a></span>
-                <span class="signature">&#8594; Map</span>
+                <span class="signature">&#8594; </span>
             </dt>
             <dd>
                 <p></p>
                 <div class="features">
         read-only
+    </div>
+</dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.requester/Request/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.requester/Request/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
     </div>
 </dd>
             <dt id="isClosed" class="property">
@@ -164,6 +176,16 @@
         read-only
     </div>
 </dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.requester/Request/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="streamStatus" class="property">
                 <span class="name"><a class="" href="dslink.requester/Request/streamStatus.html">streamStatus</a></span>
                 <span class="signature">&#8594; String</span>
@@ -192,7 +214,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="Request" class="callable">
-                <span class="name"><a class="" href="dslink.requester/Request/Request.html">Request</a></span><span class="signature">(<span class="parameter" id="-param-requester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-updater"><span class="type-annotation"><a class="" href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>, <span class="parameter" id="-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>)</span>
+                <span class="name"><a class="" href="dslink.requester/Request/Request.html">Request</a></span><span class="signature">(<span class="parameter" id="-param-requester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-updater"><span class="type-annotation"><a class="" href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>, <span class="parameter" id="-param-data"><span class="parameter-name">data</span></span>)</span>
             </dt>
             <dd>
                 <p></p>
@@ -200,6 +222,21 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.requester/Request/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.requester/Request/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
@@ -212,6 +249,20 @@
               <dd>
                   <p>close the request from the client side</p>
               </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.requester/Request/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.requester/Request/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="resend" class="callable">
                   <span class="name "><a class="" href="dslink.requester/Request/resend.html">resend</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; void</span>
@@ -219,6 +270,15 @@
               </dt>
               <dd>
                   <p>resend the data if previous sending failed</p>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.requester/Request/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
           </dl>
       </section>
@@ -233,19 +293,25 @@
     
       <li class="section-title"><a href="dslink.requester/Request-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.requester/Request/data.html">data</a></li>
+      <li><a class="" href="dslink.requester/Request/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.requester/Request/isClosed.html">isClosed</a></li>
       <li><a class="" href="dslink.requester/Request/requester.html">requester</a></li>
       <li><a class="" href="dslink.requester/Request/rid.html">rid</a></li>
+      <li><a class="" href="dslink.requester/Request/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.requester/Request/streamStatus.html">streamStatus</a></li>
       <li><a class="" href="dslink.requester/Request/updater.html">updater</a></li>
     
       <li class="section-title"><a href="dslink.requester/Request-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.requester/Request/Request.html">Request</a></li>
     
+      <li class="section-title"><a href="dslink.requester/Request-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.requester/Request/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.requester/Request-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.requester/Request/close.html">close</a></li>
+      <li><a class="" href="dslink.requester/Request/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.requester/Request/resend.html">resend</a></li>
+      <li><a class="" href="dslink.requester/Request/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -281,7 +347,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

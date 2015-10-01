@@ -187,6 +187,17 @@
         read / write
     </div>
 </dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.broker/RemoteLinkManager/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="inTree" class="property">
                 <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/inTree.html">inTree</a></span>
                 <span class="signature">&#8594; bool</span>
@@ -199,7 +210,7 @@
 </dd>
             <dt id="nodes" class="property">
                 <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/nodes.html">nodes</a></span>
-                <span class="signature">&#8594; Map&lt;String,<a class="" href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a>&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink.broker/RemoteLinkNode-class.html">RemoteLinkNode</a>&gt;</span>
             </dt>
             <dd>
                 <p></p>
@@ -239,7 +250,7 @@
 </dd>
             <dt id="responders" class="property">
                 <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/responders.html">responders</a></span>
-                <span class="signature">&#8594; Map&lt;String,<a class="" href="dslink/Responder-class.html">Responder</a>&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/Responder-class.html">Responder</a>&gt;</span>
             </dt>
             <dd>
                 <p></p>
@@ -257,6 +268,16 @@
         read / write
     </div>
 </dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
         </dl>
     </section>
 
@@ -265,7 +286,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="RemoteLinkManager" class="callable">
-                <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/RemoteLinkManager.html">RemoteLinkManager</a></span><span class="signature">(<span class="parameter" id="-param-broker"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">broker</span></span>, <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-brokerProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></span> <span class="parameter-name">brokerProvider</span></span>, [<span class="parameter" id="-param-rootNodeData"><span class="type-annotation">Map</span> <span class="parameter-name">rootNodeData</span></span>])</span>
+                <span class="name"><a class="" href="dslink.broker/RemoteLinkManager/RemoteLinkManager.html">RemoteLinkManager</a></span><span class="signature">(<span class="parameter" id="-param-broker"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">broker</span></span>, <span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-brokerProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></span> <span class="parameter-name">brokerProvider</span></span>, [<span class="parameter" id="-param-rootNodeData"><span class="parameter-name">rootNodeData</span></span>])</span>
             </dt>
             <dd>
                 <p></p>
@@ -276,6 +297,16 @@
       <section class="summary offset-anchor" id="operators">
           <h2>Operators</h2>
           <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.broker/RemoteLinkManager/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="operator []" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/operator_get.html">operator []</a></span><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       <span class="returntype parameter">&#8594; <a class="" href="dslink/LocalNode-class.html">LocalNode</a></span>
@@ -373,8 +404,31 @@ in this case they need multiple responders on broker side.</p>
               <dd>
                   <p></p>
               </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.broker/RemoteLinkManager/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="updateRemoteChildNode" class="callable">
-                  <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html">updateRemoteChildNode</a></span><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a class="" href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+                  <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html">updateRemoteChildNode</a></span><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a class="" href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="parameter-name">m</span></span>)
                       <span class="returntype parameter">&#8594; <a class="" href="dslink/RemoteNode-class.html">RemoteNode</a></span>
                   </span>
               </dt>
@@ -395,6 +449,7 @@ in this case they need multiple responders on broker side.</p>
       <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/broker.html">broker</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/disconnected.html">disconnected</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkManager/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/inTree.html">inTree</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/nodes.html">nodes</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/path.html">path</a></li>
@@ -402,11 +457,13 @@ in this case they need multiple responders on broker side.</p>
       <li><a class="" href="dslink.broker/RemoteLinkManager/requester.html">requester</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/responders.html">responders</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/rootNode.html">rootNode</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkManager/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.broker/RemoteLinkManager/RemoteLinkManager.html">RemoteLinkManager</a></li>
     
       <li class="section-title"><a href="dslink.broker/RemoteLinkManager-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkManager/operator_equals.html">operator ==</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/operator_get.html">operator []</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/operator_bitwise_negate.html">operator ~</a></li>
     
@@ -420,6 +477,8 @@ in this case they need multiple responders on broker side.</p>
       <li><a class="" href="dslink.broker/RemoteLinkManager/getRemoteNode.html">getRemoteNode</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/getResponder.html">getResponder</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/isNodeCached.html">isNodeCached</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkManager/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkManager/toString.html">toString</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkManager/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -456,7 +515,7 @@ in this case they need multiple responders on broker side.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

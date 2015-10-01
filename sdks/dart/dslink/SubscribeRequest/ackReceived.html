@@ -82,10 +82,12 @@
     
       <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/Request/data.html">data</a></li>
+      <li><a class="" href="dslink/SubscribeRequest/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.browser/Request/isClosed.html">isClosed</a></li>
       <li><a class="" href="dslink/SubscribeRequest/lastSid.html">lastSid</a></li>
       <li><a class="" href="dslink.browser/Request/requester.html">requester</a></li>
       <li><a class="" href="dslink.browser/Request/rid.html">rid</a></li>
+      <li><a class="" href="dslink/SubscribeRequest/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.browser/Request/streamStatus.html">streamStatus</a></li>
       <li><a class="" href="dslink/SubscribeRequest/subsriptionids.html">subsriptionids</a></li>
       <li><a class="" href="dslink/SubscribeRequest/subsriptions.html">subsriptions</a></li>
@@ -95,16 +97,20 @@
       <li class="section-title"><a href="dslink/SubscribeRequest-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/SubscribeRequest/SubscribeRequest.html">SubscribeRequest</a></li>
     
+      <li class="section-title"><a href="dslink/SubscribeRequest-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink/SubscribeRequest/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/SubscribeRequest/ackReceived.html">ackReceived</a></li>
       <li><a class="" href="dslink/SubscribeRequest/addSubscription.html">addSubscription</a></li>
       <li><a class="" href="dslink.browser/Request/close.html">close</a></li>
       <li><a class="" href="dslink/SubscribeRequest/getNextSid.html">getNextSid</a></li>
+      <li><a class="" href="dslink/SubscribeRequest/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink/SubscribeRequest/prepareSending.html">prepareSending</a></li>
       <li><a class="" href="dslink/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
       <li><a class="" href="dslink/SubscribeRequest/resend.html">resend</a></li>
       <li><a class="" href="dslink/SubscribeRequest/startSendingData.html">startSendingData</a></li>
+      <li><a class="" href="dslink/SubscribeRequest/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -118,7 +124,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2>Source</h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/requester/request/subscribe.dart.html#line-210'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void ackReceived(int receiveAckId, int startTime, int currentTime) {
   if (receiveAckId == _lastWatingAckId) {
     _waitingAckCount = 0;
@@ -167,7 +173,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

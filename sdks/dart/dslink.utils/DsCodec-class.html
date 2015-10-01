@@ -61,6 +61,7 @@
               <li><a href="dslink.utils/DsCodec-class.html#static-properties">Static Properties</a></li>
               <li><a href="dslink.utils/DsCodec-class.html#static-methods">Static Methods</a></li>
               <li><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.utils/DsCodec-class.html#operators">Operators</a></li>
               <li><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -184,6 +185,33 @@
         </dl>
     </section>
 
+    <section class="summary offset-anchor" id="instance-properties">
+        <h2>Properties</h2>
+
+        <dl class="properties">
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.utils/DsCodec/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.utils/DsCodec/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.utils/DsCodec/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        </dl>
+    </section>
 
     <section class="summary offset-anchor" id="constructors">
         <h2>Constructors</h2>
@@ -198,13 +226,28 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.utils/DsCodec/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
               <dt id="decodeBinaryFrame" class="callable">
                   <span class="name "><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></span><span class="signature">(<wbr><span class="parameter" id="decodeBinaryFrame-param-input"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">input</span></span>)
-                      <span class="returntype parameter">&#8594; Map</span>
+                      <span class="returntype parameter">&#8594; </span>
                   </span>
               </dt>
               <dd>
@@ -212,19 +255,42 @@
               </dd>
               <dt id="decodeStringFrame" class="callable">
                   <span class="name "><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></span><span class="signature">(<wbr><span class="parameter" id="decodeStringFrame-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
-                      <span class="returntype parameter">&#8594; Map</span>
+                      <span class="returntype parameter">&#8594; </span>
                   </span>
               </dt>
               <dd>
                   <p>input can be String or List&lt;int&gt;</p>
               </dd>
               <dt id="encodeFrame" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></span><span class="signature">(<wbr><span class="parameter" id="encodeFrame-param-val"><span class="type-annotation">Map</span> <span class="parameter-name">val</span></span>)
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></span><span class="signature">(<wbr><span class="parameter" id="encodeFrame-param-val"><span class="parameter-name">val</span></span>)
                       <span class="returntype parameter">&#8594; Object</span>
                   </span>
               </dt>
               <dd>
                   <p>output String or List&lt;int&gt;</p>
+              </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.utils/DsCodec/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DsCodec/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
           </dl>
       </section>
@@ -242,15 +308,22 @@
       <li><a class="" href="dslink.utils/DsCodec/getCodec.html">getCodec</a></li>
       <li><a class="" href="dslink.utils/DsCodec/register.html">register</a></li>
     
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#instance-properties">Properties</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/hashCode.html">hashCode</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.utils/DsCodec-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.utils/DsCodec/DsCodec.html">DsCodec</a></li>
     
+      <li class="section-title"><a href="dslink.utils/DsCodec-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.utils/DsCodec-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.utils/DsCodec/decodeBinaryFrame.html">decodeBinaryFrame</a></li>
       <li><a class="" href="dslink.utils/DsCodec/decodeStringFrame.html">decodeStringFrame</a></li>
       <li><a class="" href="dslink.utils/DsCodec/encodeFrame.html">encodeFrame</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="dslink.utils/DsCodec/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -286,7 +359,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

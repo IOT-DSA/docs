@@ -60,6 +60,7 @@
           <ul class="subnav">
               <li><a href="dslink.browser/Connection-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink.browser/Connection-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.browser/Connection-class.html#operators">Operators</a></li>
               <li><a href="dslink.browser/Connection-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -221,6 +222,17 @@
         read / write
     </div>
 </dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.browser/Connection/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.browser/Connection/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="onDisconnected" class="property">
                 <span class="name"><a class="" href="dslink.browser/Connection/onDisconnected.html">onDisconnected</a></span>
                 <span class="signature">&#8594; Future&lt;bool&gt;</span>
@@ -271,6 +283,16 @@
         read-only
     </div>
 </dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.browser/Connection/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
         </dl>
     </section>
 
@@ -287,6 +309,21 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.browser/Connection/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.browser/Connection/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
@@ -315,6 +352,20 @@
               <dd>
                   <p>close the connection</p>
               </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.browser/Connection/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.browser/Connection/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="requireSend" class="callable">
                   <span class="name "><a class="" href="dslink.browser/Connection/requireSend.html">requireSend</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; void</span>
@@ -322,6 +373,15 @@
               </dt>
               <dd>
                   <p>notify the connection channel need to send data</p>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.browser/Connection/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
           </dl>
       </section>
@@ -336,21 +396,27 @@
     
       <li class="section-title"><a href="dslink.browser/Connection-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/Connection/codec.html">codec</a></li>
+      <li><a class="" href="dslink.browser/Connection/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.browser/Connection/onDisconnected.html">onDisconnected</a></li>
       <li><a class="" href="dslink.browser/Connection/onRequesterReady.html">onRequesterReady</a></li>
       <li><a class="" href="dslink.browser/Connection/pendingAcks.html">pendingAcks</a></li>
       <li><a class="" href="dslink.browser/Connection/requesterChannel.html">requesterChannel</a></li>
       <li><a class="" href="dslink.browser/Connection/responderChannel.html">responderChannel</a></li>
+      <li><a class="" href="dslink.browser/Connection/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.browser/Connection-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/Connection/Connection.html">Connection</a></li>
     
+      <li class="section-title"><a href="dslink.browser/Connection-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.browser/Connection/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/Connection-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/Connection/ack.html">ack</a></li>
       <li><a class="" href="dslink.browser/Connection/addConnCommand.html">addConnCommand</a></li>
       <li><a class="" href="dslink.browser/Connection/close.html">close</a></li>
+      <li><a class="" href="dslink.browser/Connection/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.browser/Connection/requireSend.html">requireSend</a></li>
+      <li><a class="" href="dslink.browser/Connection/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -386,7 +452,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

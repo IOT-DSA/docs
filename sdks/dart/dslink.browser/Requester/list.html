@@ -82,13 +82,17 @@
     
       <li class="section-title"><a href="dslink.browser/Requester-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
+      <li><a class="" href="dslink.browser/Requester/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.browser/Requester/lastRid.html">lastRid</a></li>
       <li><a class="" href="dslink.browser/Requester/nodeCache.html">nodeCache</a></li>
       <li><a class="" href="dslink.browser/Requester/onError.html">onError</a></li>
+      <li><a class="" href="dslink.browser/Requester/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.browser/Requester-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/Requester/Requester.html">Requester</a></li>
     
+      <li class="section-title"><a href="dslink.browser/Requester-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.browser/Requester/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/Requester-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
@@ -102,6 +106,7 @@
       <li><a class="" href="dslink.browser/Requester/invoke.html">invoke</a></li>
       <li><a class="" href="dslink.browser/Requester/isNodeCached.html">isNodeCached</a></li>
       <li><a class="" href="dslink.browser/Requester/list.html">list</a></li>
+      <li><a class="" href="dslink.browser/Requester/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.browser/Requester/onData.html">onData</a></li>
       <li><a class="" href="dslink.browser/Requester/onDisconnected.html">onDisconnected</a></li>
       <li><a class="" href="dslink.browser/Requester/onReconnected.html">onReconnected</a></li>
@@ -110,6 +115,7 @@
       <li><a class="" href="dslink.browser/Requester/sendRequest.html">sendRequest</a></li>
       <li><a class="" href="dslink.browser/Requester/set.html">set</a></li>
       <li><a class="" href="dslink.browser/Requester/subscribe.html">subscribe</a></li>
+      <li><a class="" href="dslink.browser/Requester/toString.html">toString</a></li>
       <li><a class="" href="dslink.browser/Requester/unsubscribe.html">unsubscribe</a></li>
     </ol>
 
@@ -124,7 +130,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2>Source</h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/requester/requester.dart.html#line-140'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;RequesterListUpdate&gt; list(String path) {
   RemoteNode node = nodeCache.getRemoteNode(path);
   return node._list(this);
@@ -165,7 +171,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

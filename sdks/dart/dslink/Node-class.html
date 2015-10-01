@@ -61,6 +61,7 @@
               <li><a href="dslink/Node-class.html#static-methods">Static Methods</a></li>
               <li><a href="dslink/Node-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink/Node-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink/Node-class.html#operators">Operators</a></li>
               <li><a href="dslink/Node-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -222,7 +223,7 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
         <dl class="properties">
             <dt id="attributes" class="property">
                 <span class="name"><a class="" href="dslink/Node/attributes.html">attributes</a></span>
-                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
                 <p>Node Attributes</p>
@@ -232,7 +233,7 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
 </dd>
             <dt id="children" class="property">
                 <span class="name"><a class="" href="dslink/Node/children.html">children</a></span>
-                <span class="signature">&#8594; Map&lt;String,<a class="" href="dslink/Node-class.html">Node</a>&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/Node-class.html">Node</a>&gt;</span>
             </dt>
             <dd>
                 <p>Node Children
@@ -243,12 +244,23 @@ Map of Child Name to Child Node</p>
 </dd>
             <dt id="configs" class="property">
                 <span class="name"><a class="" href="dslink/Node/configs.html">configs</a></span>
-                <span class="signature">&#8594; Map&lt;String,Object&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
                 <p>Node Configs</p>
                 <div class="features">
         read / write
+    </div>
+</dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink/Node/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink/Node/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
     </div>
 </dd>
             <dt id="profile" class="property">
@@ -259,6 +271,16 @@ Map of Child Name to Child Node</p>
                 <p>This node's profile.</p>
                 <div class="features">
         read / write
+    </div>
+</dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink/Node/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
     </div>
 </dd>
         </dl>
@@ -277,6 +299,21 @@ Map of Child Name to Child Node</p>
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink/Node/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink/Node/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
@@ -350,11 +387,25 @@ Otherwise this will fetch a child.</p>
               </dd>
               <dt id="getSimpleMap" class="callable">
                   <span class="name "><a class="" href="dslink/Node/getSimpleMap.html">getSimpleMap</a></span><span class="signature">(<wbr>)
-                      <span class="returntype parameter">&#8594; Map</span>
+                      <span class="returntype parameter">&#8594; </span>
                   </span>
               </dt>
               <dd>
                   <p>Gets a map for the data that will be listed in the parent node's children property.</p>
+              </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink/Node/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink/Node/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="removeChild" class="callable">
                   <span class="name "><a class="" href="dslink/Node/removeChild.html">removeChild</a></span><span class="signature">(<wbr><span class="parameter" id="removeChild-param-input"><span class="parameter-name">input</span></span>)
@@ -364,6 +415,15 @@ Otherwise this will fetch a child.</p>
               <dd>
                   <p>Remove a child from this node.
 <code>input</code> can be either an instance of <a class="" href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink/Node/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
           </dl>
       </section>
@@ -382,11 +442,15 @@ Otherwise this will fetch a child.</p>
       <li><a class="" href="dslink/Node/attributes.html">attributes</a></li>
       <li><a class="" href="dslink/Node/children.html">children</a></li>
       <li><a class="" href="dslink/Node/configs.html">configs</a></li>
+      <li><a class="" href="dslink/Node/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink/Node/profile.html">profile</a></li>
+      <li><a class="" href="dslink/Node/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink/Node-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/Node/Node.html">Node</a></li>
     
+      <li class="section-title"><a href="dslink/Node-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink/Node/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/Node-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/Node/addChild.html">addChild</a></li>
@@ -398,7 +462,9 @@ Otherwise this will fetch a child.</p>
       <li><a class="" href="dslink/Node/getChild.html">getChild</a></li>
       <li><a class="" href="dslink/Node/getConfig.html">getConfig</a></li>
       <li><a class="" href="dslink/Node/getSimpleMap.html">getSimpleMap</a></li>
+      <li><a class="" href="dslink/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink/Node/removeChild.html">removeChild</a></li>
+      <li><a class="" href="dslink/Node/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -434,7 +500,7 @@ Otherwise this will fetch a child.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

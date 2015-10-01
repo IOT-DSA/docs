@@ -60,6 +60,7 @@
           <ul class="subnav">
               <li><a href="dslink.broker/HttpServerLink-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink.broker/HttpServerLink-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.broker/HttpServerLink-class.html#operators">Operators</a></li>
               <li><a href="dslink.broker/HttpServerLink-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -206,6 +207,17 @@
         read-only
     </div>
 </dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.broker/HttpServerLink/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.broker/HttpServerLink/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="isRequester" class="property">
                 <span class="name"><a class="" href="dslink.broker/HttpServerLink/isRequester.html">isRequester</a></span>
                 <span class="signature">&#8594; bool</span>
@@ -258,7 +270,7 @@
 </dd>
             <dt id="pendingLinkData" class="property">
                 <span class="name"><a class="" href="dslink.broker/HttpServerLink/pendingLinkData.html">pendingLinkData</a></span>
-                <span class="signature">&#8594; Map</span>
+                <span class="signature">&#8594; </span>
             </dt>
             <dd>
                 <p></p>
@@ -294,6 +306,16 @@
                 <p></p>
                 <div class="features">
         read-only
+    </div>
+</dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.broker/HttpServerLink/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
     </div>
 </dd>
             <dt id="salts" class="property">
@@ -374,6 +396,21 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/HttpServerLink/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.broker/HttpServerLink/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
@@ -403,7 +440,7 @@
                   <p></p>
               </dd>
               <dt id="initLink" class="callable">
-                  <span class="name "><a class="" href="dslink.broker/HttpServerLink/initLink.html">initLink</a></span><span class="signature">(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
+                  <span class="name "><a class="" href="dslink.broker/HttpServerLink/initLink.html">initLink</a></span><span class="signature">(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-linkData"><span class="parameter-name">linkData</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
                       <span class="returntype parameter">&#8594; Future</span>
                   </span>
               </dt>
@@ -417,6 +454,29 @@
               </dt>
               <dd>
                   <p></p>
+              </dd>
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/HttpServerLink/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.broker/HttpServerLink/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/HttpServerLink/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="verifySalt" class="callable">
                   <span class="name "><a class="" href="dslink.broker/HttpServerLink/verifySalt.html">verifySalt</a></span><span class="signature">(<wbr><span class="parameter" id="verifySalt-param-type"><span class="type-annotation">int</span> <span class="parameter-name">type</span></span>, <span class="parameter" id="verifySalt-param-hash"><span class="type-annotation">String</span> <span class="parameter-name">hash</span></span>)
@@ -442,6 +502,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/dsId.html">dsId</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/enableAck.html">enableAck</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/enableTimeout.html">enableTimeout</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/isRequester.html">isRequester</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/isResponder.html">isResponder</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/nonce.html">nonce</a></li>
@@ -451,6 +512,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/publicKey.html">publicKey</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/requester.html">requester</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/responder.html">responder</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/session.html">session</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/tempNonce.html">tempNonce</a></li>
@@ -461,6 +523,8 @@
       <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.broker/HttpServerLink/HttpServerLink.html">HttpServerLink</a></li>
     
+      <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/close.html">close</a></li>
@@ -468,6 +532,8 @@
       <li><a class="" href="dslink.broker/HttpServerLink/handleWsUpdate.html">handleWsUpdate</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/initLink.html">initLink</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/nonceChanged.html">nonceChanged</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/toString.html">toString</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/verifySalt.html">verifySalt</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -504,7 +570,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>

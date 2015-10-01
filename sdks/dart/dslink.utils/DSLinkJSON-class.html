@@ -60,6 +60,7 @@
           <ul class="subnav">
               <li><a href="dslink.utils/DSLinkJSON-class.html#instance-properties">Properties</a></li>
               <li><a href="dslink.utils/DSLinkJSON-class.html#constructors">Constructors</a></li>
+              <li><a href="dslink.utils/DSLinkJSON-class.html#operators">Operators</a></li>
               <li><a href="dslink.utils/DSLinkJSON-class.html#instance-methods">Methods</a></li>
           </ul>
         </div> <!-- /col -->
@@ -136,7 +137,7 @@
         <dl class="properties">
             <dt id="configs" class="property">
                 <span class="name"><a class="" href="dslink.utils/DSLinkJSON/configs.html">configs</a></span>
-                <span class="signature">&#8594; Map&lt;String,Map&lt;String&gt;&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, Map&lt;String, dynamic&gt;&gt;</span>
             </dt>
             <dd>
                 <p></p>
@@ -156,7 +157,7 @@
 </dd>
             <dt id="engines" class="property">
                 <span class="name"><a class="" href="dslink.utils/DSLinkJSON/engines.html">engines</a></span>
-                <span class="signature">&#8594; Map&lt;String&gt;</span>
+                <span class="signature">&#8594; Map&lt;String, dynamic&gt;</span>
             </dt>
             <dd>
                 <p></p>
@@ -174,9 +175,20 @@
         read / write
     </div>
 </dd>
+            <dt id="hashCode" class="property">
+                <span class="name"><a class="" href="dslink.utils/DSLinkJSON/hashCode.html">hashCode</a></span>
+                <span class="signature">&#8594; int</span>
+            </dt>
+            <dd>
+                <p>Get a hash code for this object.<a href="dslink.utils/DSLinkJSON/hashCode.html">&hellip;</a>
+</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="json" class="property">
                 <span class="name"><a class="" href="dslink.utils/DSLinkJSON/json.html">json</a></span>
-                <span class="signature">&#8594; Map</span>
+                <span class="signature">&#8594; </span>
             </dt>
             <dd>
                 <p></p>
@@ -204,6 +216,16 @@
         read / write
     </div>
 </dd>
+            <dt id="runtimeType" class="property">
+                <span class="name"><a class="" href="dslink.utils/DSLinkJSON/runtimeType.html">runtimeType</a></span>
+                <span class="signature">&#8594; Type</span>
+            </dt>
+            <dd>
+                <p>A representation of the runtime type of the object.</p>
+                <div class="features">
+        read-only, inherited
+    </div>
+</dd>
             <dt id="version" class="property">
                 <span class="name"><a class="" href="dslink.utils/DSLinkJSON/version.html">version</a></span>
                 <span class="signature">&#8594; String</span>
@@ -228,7 +250,7 @@
                 <p></p>
             </dd>
             <dt id="DSLinkJSON.from" class="callable">
-                <span class="name"><a class="" href="dslink.utils/DSLinkJSON/DSLinkJSON.from.html">DSLinkJSON.from</a></span><span class="signature">(<span class="parameter" id="from-param-map"><span class="type-annotation">Map&lt;String&gt;</span> <span class="parameter-name">map</span></span>)</span>
+                <span class="name"><a class="" href="dslink.utils/DSLinkJSON/DSLinkJSON.from.html">DSLinkJSON.from</a></span><span class="signature">(<span class="parameter" id="from-param-map"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">map</span></span>)</span>
             </dt>
             <dd>
                 <p></p>
@@ -236,17 +258,55 @@
         </dl>
       </section>
 
+      <section class="summary offset-anchor" id="operators">
+          <h2>Operators</h2>
+          <dl class="callables">
+              <dt id="operator ==" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DSLinkJSON/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>The equality operator.<a href="dslink.utils/DSLinkJSON/operator_equals.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
+          </dl>
+      </section>
 
       <section class="summary offset-anchor" id="instance-methods">
           <h2>Methods</h2>
           <dl class="callables">
+              <dt id="noSuchMethod" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DSLinkJSON/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                      <span class="returntype parameter">&#8594; dynamic</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.utils/DSLinkJSON/noSuchMethod.html">&hellip;</a>
+</p>
+                  <div class="features">inherited</div>
+              </dd>
               <dt id="save" class="callable">
                   <span class="name "><a class="" href="dslink.utils/DSLinkJSON/save.html">save</a></span><span class="signature">(<wbr>)
-                      <span class="returntype parameter">&#8594; Map</span>
+                      <span class="returntype parameter">&#8594; </span>
                   </span>
               </dt>
               <dd>
                   <p></p>
+              </dd>
+              <dt id="toString" class="callable">
+                  <span class="name "><a class="" href="dslink.utils/DSLinkJSON/toString.html">toString</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>Returns a string representation of this object.</p>
+                  <div class="features">inherited</div>
               </dd>
               <dt id="verify" class="callable">
                   <span class="name "><a class="" href="dslink.utils/DSLinkJSON/verify.html">verify</a></span><span class="signature">(<wbr>)
@@ -272,18 +332,24 @@
       <li><a class="" href="dslink.utils/DSLinkJSON/description.html">description</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/engines.html">engines</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/getDependencies.html">getDependencies</a></li>
+      <li><a class="" href="dslink.utils/DSLinkJSON/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/json.html">json</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/main.html">main</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/name.html">name</a></li>
+      <li><a class="" href="dslink.utils/DSLinkJSON/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/version.html">version</a></li>
     
       <li class="section-title"><a href="dslink.utils/DSLinkJSON-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.utils/DSLinkJSON/DSLinkJSON.html">DSLinkJSON</a></li>
       <li><a href="dslink.utils/DSLinkJSON/DSLinkJSON.from.html">from</a></li>
     
+      <li class="section-title"><a href="dslink.utils/DSLinkJSON-class.html#operators">Operators</a></li>
+      <li><a class="" href="dslink.utils/DSLinkJSON/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.utils/DSLinkJSON-class.html#instance-methods">Methods</a></li>
+      <li><a class="" href="dslink.utils/DSLinkJSON/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/save.html">save</a></li>
+      <li><a class="" href="dslink.utils/DSLinkJSON/toString.html">toString</a></li>
       <li><a class="" href="dslink.utils/DSLinkJSON/verify.html">verify</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -320,7 +386,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.6.6 -->
+<!-- Made with <3 by dartdoc version 0.7.0 -->
 </body>
 
 </html>
