@@ -101,21 +101,41 @@ If <code>storage</code> is not specified, it uses the <a class="" href="dslink.b
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/browser_client.dart.html#line-54'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/browser_client.dart.html#line-55'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
+  if (_cachedPrivateKey != null) {
+    return _cachedPrivateKey;
+  }
   if (storage == null) {
     storage = LocalDataStorage.INSTANCE;
   }
 
-  if (storage.has(&quot;dsa_key&quot;)) {
-    return new PrivateKey.loadFromString(storage.get(&quot;dsa_key&quot;));
+  String keyPath = &apos;dsa_key:${window.location.pathname}&apos;;
+  String keyLockPath = &apos;dsa_key_lock:${window.location.pathname}&apos;;
+  String randomToken = &apos;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&apos;;
+
+  if (storage.has(keyPath)) {
+    storage.store(keyLockPath, randomToken);
+    await new Future.delayed(new Duration(milliseconds: 20));
+    if (storage.get(keyLockPath) == randomToken) {
+      _startStorageLock(keyLockPath, randomToken);
+      _cachedPrivateKey = new PrivateKey.loadFromString(storage.get(&quot;dsa_key&quot;));
+      return _cachedPrivateKey;
+    } else {
+      // use temp key, don&apos;t lock it;
+      keyLockPath = null;
+    }
   }
 
-  var key = await PrivateKey.generate();
+  _cachedPrivateKey = await PrivateKey.generate();
 
-  await storage.store(&quot;dsa_key&quot;, key.saveToString());
+  if (keyLockPath != null) {
+    storage.store(keyPath, _cachedPrivateKey.saveToString());
+    storage.store(keyLockPath, randomToken);
+    _startStorageLock(keyLockPath, randomToken);
+  }
 
-  return key;
+  return _cachedPrivateKey;
 }</code></pre>
     </section>
 

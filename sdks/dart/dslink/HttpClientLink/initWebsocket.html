@@ -124,7 +124,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-155'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-154'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
   if (_closed) return;
 
@@ -159,8 +159,10 @@
     });
   } catch (error) {
     logger.fine(error);
-    if (error is WebSocketException &amp;&amp;
-        error.message.contains(&apos;was not upgraded to websocket&apos;)) {
+    if (error is WebSocketException &amp;&amp; (
+          error.message.contains(&apos;not upgraded to websocket&apos;) // error from dart
+            || error.message.contains(&apos;(401)&apos;) // error from nodejs
+        )) {
       DsTimer.timerOnceAfter(connect, _connDelay * 1000);
     } else if (reconnect) {
       DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);
