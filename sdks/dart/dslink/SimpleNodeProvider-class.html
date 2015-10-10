@@ -231,8 +231,7 @@
                 <span class="signature">&#8594; <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
             </dt>
             <dd>
-                <p>Global instance.
-This is by default always the first instance of <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -250,7 +249,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
                 <span class="signature">&#8594; <a class="" href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
             </dt>
             <dd>
-                <p>defs node</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -271,7 +270,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
                 <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/LocalNode-class.html">LocalNode</a>&gt;</span>
             </dt>
             <dd>
-                <p>All the nodes in this node provider.</p>
+                <p></p>
                 <div class="features">
         read-only
     </div>
@@ -281,7 +280,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
                 <span class="signature">&#8594; <a class="" href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
             </dt>
             <dd>
-                <p>Permissions</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -291,7 +290,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
                 <span class="signature">&#8594; <a class="" href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span>
             </dt>
             <dd>
-                <p>Root node</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -311,7 +310,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
                 <span class="signature">&#8594; <a class="" href="dslink/SimpleHiddenNode-class.html">SimpleHiddenNode</a></span>
             </dt>
             <dd>
-                <p>sys node</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -328,8 +327,8 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
             </dt>
             <dd>
                 <p>Creates a <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
-If <code>m</code> and optionally <code>profiles</code> is specified,
-the provider is initialized with these values.</p>
+  /// If <code>m</code> and optionally <code>profiles</code> is specified,
+  /// the provider is initialized with these values.</p>
             </dd>
         </dl>
       </section>
@@ -386,7 +385,7 @@ the provider is initialized with these values.</p>
               </dt>
               <dd>
                   <p>Creates a node at <code>path</code>.
-If a node already exists at this path, an exception is thrown.</p>
+  /// If a node already exists at this path, an exception is thrown.</p>
               </dd>
               <dt id="createResponder" class="callable">
                   <span class="name "><a class="" href="dslink/SimpleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
@@ -411,8 +410,9 @@ If a node already exists at this path, an exception is thrown.</p>
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.<a href="dslink/SimpleNodeProvider/getOrCreateNode.html">&hellip;</a>
-</p>
+  /// If it does not exist, create a new node and return it.
+  ///
+  /// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
               </dd>
               <dt id="init" class="callable">
                   <span class="name "><a class="" href="dslink/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="parameter-name">profiles</span></span>])

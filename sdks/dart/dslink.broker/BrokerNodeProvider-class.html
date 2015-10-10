@@ -198,7 +198,7 @@
                 <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a>&gt;</span>
             </dt>
             <dd>
-                <p>connPath to connection</p>
+                <p></p>
                 <div class="features">
         read-only
     </div>
@@ -248,7 +248,7 @@
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <p>name with 1 slash</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -258,7 +258,7 @@
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <p>name with 2 slash</p>
+                <p></p>
                 <div class="features">
         read / write
     </div>
@@ -329,9 +329,7 @@
                 <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/LocalNode-class.html">LocalNode</a>&gt;</span>
             </dt>
             <dd>
-                <p>map that holds all nodes
-a node is not in parent node's children when real data/connection doesn't exist
-but instance is still there</p>
+                <p></p>
                 <div class="features">
         read-only
     </div>
@@ -560,8 +558,9 @@ but instance is still there</p>
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.<a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">&hellip;</a>
-</p>
+/// If it does not exist, create a new node and return it.
+///
+/// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
               </dd>
               <dt id="getRequester" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/getRequester.html">getRequester</a></span><span class="signature">(<wbr><span class="parameter" id="getRequester-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)

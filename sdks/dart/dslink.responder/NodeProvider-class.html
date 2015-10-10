@@ -54,7 +54,7 @@
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">class</div> NodeProvider
+                  <div class="kind">abstract class</div> NodeProvider
               </h1>
           </div>
           <ul class="subnav">
@@ -254,8 +254,9 @@ A single node provider can be reused by multiple responder.</p>
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.<a href="dslink.responder/NodeProvider/getOrCreateNode.html">&hellip;</a>
-</p>
+  /// If it does not exist, create a new node and return it.
+  ///
+  /// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
               </dd>
               <dt id="noSuchMethod" class="callable">
                   <span class="name "><a class="" href="dslink.responder/NodeProvider/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)

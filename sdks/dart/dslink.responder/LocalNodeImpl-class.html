@@ -54,7 +54,7 @@
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">class</div> LocalNodeImpl
+                  <div class="kind">abstract class</div> LocalNodeImpl
               </h1>
           </div>
           <ul class="subnav">
@@ -155,7 +155,7 @@
                 <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
-                <p>Node Attributes</p>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -165,7 +165,7 @@
                 <span class="signature">&#8594; Map&lt;Function, int&gt;</span>
             </dt>
             <dd>
-                <p>Subscription Callbacks</p>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -175,8 +175,7 @@
                 <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/Node-class.html">Node</a>&gt;</span>
             </dt>
             <dd>
-                <p>Node Children
-Map of Child Name to Child Node</p>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -186,7 +185,7 @@ Map of Child Name to Child Node</p>
                 <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
-                <p>Node Configs</p>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -207,8 +206,8 @@ Map of Child Name to Child Node</p>
             </dt>
             <dd>
                 <p>Checks if this node exists.
-list and subscribe can be called on a node that doesn't exist
-Other things like set remove, and invoke can only be applied to an existing node.</p>
+/// list and subscribe can be called on a node that doesn't exist
+/// Other things like set remove, and invoke can only be applied to an existing node.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -230,8 +229,8 @@ Other things like set remove, and invoke can only be applied to an existing node
             </dt>
             <dd>
                 <p>Checks if this node has a subscriber.
-Use this for things like polling when you
-only want to do something if the node is subscribed to.</p>
+/// Use this for things like polling when you
+/// only want to do something if the node is subscribed to.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -252,7 +251,7 @@ only want to do something if the node is subscribed to.</p>
             </dt>
             <dd>
                 <p>Changes to nodes will be added to this controller's stream.
-See <code>updateList</code>.</p>
+/// See <code>updateList</code>.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -273,7 +272,7 @@ See <code>updateList</code>.</p>
             </dt>
             <dd>
                 <p>List Stream.
-See <code>listChangeController</code>.</p>
+/// See <code>listChangeController</code>.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -293,7 +292,7 @@ See <code>listChangeController</code>.</p>
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <p>Node Path</p>
+                <p></p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -303,7 +302,7 @@ See <code>listChangeController</code>.</p>
                 <span class="signature">&#8594; <a class="" href="dslink.browser/Node-class.html">Node</a></span>
             </dt>
             <dd>
-                <p>This node's profile.</p>
+                <p></p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -444,9 +443,9 @@ See <code>listChangeController</code>.</p>
               </dt>
               <dd>
                   <p>Get a property of this node.
-If <code>name</code> starts with '$', this will fetch a config.
-If <code>name</code> starts with a '@', this will fetch an attribute.
-Otherwise this will fetch a child.</p>
+  /// If <code>name</code> starts with '$', this will fetch a config.
+  /// If <code>name</code> starts with a '@', this will fetch an attribute.
+  /// Otherwise this will fetch a child.</p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="getAttribute" class="callable">
@@ -567,7 +566,7 @@ the original invocation.<a href="dslink.responder/LocalNodeImpl/noSuchMethod.htm
               </dt>
               <dd>
                   <p>Remove a child from this node.
-<code>input</code> can be either an instance of <a class="" href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
+  /// <code>input</code> can be either an instance of <a class="" href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="removeConfig" class="callable">

@@ -376,8 +376,9 @@
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.<a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html">&hellip;</a>
-</p>
+/// If it does not exist, create a new node and return it.
+///
+/// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
               </dd>
               <dt id="getRemoteNode" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/getRemoteNode.html">getRemoteNode</a></span><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>)
@@ -394,7 +395,7 @@ If it does not exist, create a new node and return it.<a href="dslink.broker/Rem
               </dt>
               <dd>
                   <p>multiple-requester is allowed, like from different browser tabs
-in this case they need multiple responders on broker side.</p>
+  /// in this case they need multiple responders on broker side.</p>
               </dd>
               <dt id="isNodeCached" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/isNodeCached.html">isNodeCached</a></span><span class="signature">(<wbr><span class="parameter" id="isNodeCached-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
