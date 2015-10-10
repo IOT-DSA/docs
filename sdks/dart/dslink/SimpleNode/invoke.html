@@ -257,7 +257,7 @@
         }
 
         if (v is Iterable) {
-          r.update(v.toList());
+          r.update(v.toList(), StreamStatus.open);
         } else if (v is Map) {
           var meta;
           if (v.containsKey(&quot;__META__&quot;)) {

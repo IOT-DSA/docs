@@ -127,7 +127,7 @@
   }
 
   if (response != null &amp;&amp; (rows != null || meta != null || status == StreamStatus.closed)) {
-    response.updateStream(rows, columns: columns, streamStatus: status, meta:meta);
+    response.updateStream(rows, columns: columns, streamStatus: status, meta: meta);
     rows = null;
     columns = null;
   }
