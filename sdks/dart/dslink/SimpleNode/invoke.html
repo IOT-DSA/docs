@@ -263,7 +263,7 @@
           if (v.containsKey(&quot;__META__&quot;)) {
             meta = v[&quot;__META__&quot;];
           }
-          r.update([v], null, meta);
+          r.update([v], StreamStatus.open, meta);
         } else {
           throw new Exception(&quot;Unknown Value from Stream&quot;);
         }
@@ -353,7 +353,7 @@
             if (v.containsKey(&quot;__META__&quot;)) {
               meta = v[&quot;__META__&quot;];
             }
-            r.update([v], null, meta);
+            r.update([v], StreamStatus.open, meta);
           } else {
             throw new Exception(&quot;Unknown Value from Stream&quot;);
           }
