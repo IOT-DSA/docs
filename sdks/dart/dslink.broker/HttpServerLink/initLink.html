@@ -91,6 +91,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/nonce.html">nonce</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/onRequesterReadyCompleter.html">onRequesterReadyCompleter</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/path.html">path</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/pendingLinkData.html">pendingLinkData</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/publicKey.html">publicKey</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/requester.html">requester</a></li>
@@ -99,6 +100,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/session.html">session</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/tempNonce.html">tempNonce</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/token.html">token</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/valid.html">valid</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/verifiedNonce.html">verifiedNonce</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/wsconnection.html">wsconnection</a></li>
@@ -124,6 +126,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype">Future</span>
+        <span class="name ">initLink</span>(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-linkData"><span class="parameter-name">linkData</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
+    </section>
+
     <section class="desc markdown">
     
           <p class="no-docs">Not documented.</p>
@@ -131,7 +138,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/server_link.dart.html#line-74'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/server_link.dart.html#line-80'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initLink(HttpRequest request, bool clientRequester, bool clientResponder,
     String serverDsId, String serverKey,
     {String wsUri: &apos;/ws&apos;,
@@ -183,7 +190,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -202,7 +209,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

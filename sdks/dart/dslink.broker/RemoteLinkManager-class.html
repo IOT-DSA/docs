@@ -81,13 +81,16 @@
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
       <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
+      <li><a class="" href="dslink.broker/tokenNodeFunctions.html">tokenNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addTokenNode.html">addTokenNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/deleteTokenNode.html">deleteTokenNode</a></li>
       <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
@@ -124,6 +127,8 @@
       <li><a class="" href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a class="" href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
       <li><a class="" href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
+      <li><a class="" href="dslink.broker/TokenNode-class.html">TokenNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></li>
@@ -376,9 +381,8 @@
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-/// If it does not exist, create a new node and return it.
-///
-/// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
+If it does not exist, create a new node and return it.<a href="dslink.broker/RemoteLinkManager/getOrCreateNode.html">&hellip;</a>
+</p>
               </dd>
               <dt id="getRemoteNode" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/getRemoteNode.html">getRemoteNode</a></span><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-rPath"><span class="type-annotation">String</span> <span class="parameter-name">rPath</span></span>)
@@ -395,7 +399,7 @@
               </dt>
               <dd>
                   <p>multiple-requester is allowed, like from different browser tabs
-  /// in this case they need multiple responders on broker side.</p>
+in this case they need multiple responders on broker side.</p>
               </dd>
               <dt id="isNodeCached" class="callable">
                   <span class="name "><a class="" href="dslink.broker/RemoteLinkManager/isNodeCached.html">isNodeCached</a></span><span class="signature">(<wbr><span class="parameter" id="isNodeCached-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -497,7 +501,7 @@ the original invocation.<a href="dslink.broker/RemoteLinkManager/noSuchMethod.ht
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -516,7 +520,7 @@ the original invocation.<a href="dslink.broker/RemoteLinkManager/noSuchMethod.ht
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

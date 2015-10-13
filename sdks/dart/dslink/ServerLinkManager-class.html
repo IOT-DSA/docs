@@ -262,15 +262,23 @@
           <dl class="callables">
               <dt id="addLink" class="callable">
                   <span class="name "><a class="" href="dslink/ServerLinkManager/addLink.html">addLink</a></span><span class="signature">(<wbr><span class="parameter" id="addLink-param-link"><span class="type-annotation"><a class="" href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
-                      <span class="returntype parameter">&#8594; void</span>
+                      <span class="returntype parameter">&#8594; bool</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p>return true if link is added</p>
+              </dd>
+              <dt id="getLinkAndConnectNode" class="callable">
+                  <span class="name "><a class="" href="dslink/ServerLinkManager/getLinkAndConnectNode.html">getLinkAndConnectNode</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkAndConnectNode-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLinkAndConnectNode-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
+                      <span class="returntype parameter">&#8594; <a class="" href="dslink/ServerLink-class.html">ServerLink</a></span>
                   </span>
               </dt>
               <dd>
                   <p></p>
               </dd>
-              <dt id="getLinkAndConnectNode" class="callable">
-                  <span class="name "><a class="" href="dslink/ServerLinkManager/getLinkAndConnectNode.html">getLinkAndConnectNode</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkAndConnectNode-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLinkAndConnectNode-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
-                      <span class="returntype parameter">&#8594; <a class="" href="dslink/ServerLink-class.html">ServerLink</a></span>
+              <dt id="getLinkPath" class="callable">
+                  <span class="name "><a class="" href="dslink/ServerLinkManager/getLinkPath.html">getLinkPath</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkPath-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getLinkPath-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>)
+                      <span class="returntype parameter">&#8594; String</span>
                   </span>
               </dt>
               <dd>
@@ -355,6 +363,7 @@ the original invocation.<a href="dslink/ServerLinkManager/noSuchMethod.html">&he
       <li class="section-title"><a href="dslink/ServerLinkManager-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/ServerLinkManager/addLink.html">addLink</a></li>
       <li><a class="" href="dslink/ServerLinkManager/getLinkAndConnectNode.html">getLinkAndConnectNode</a></li>
+      <li><a class="" href="dslink/ServerLinkManager/getLinkPath.html">getLinkPath</a></li>
       <li><a class="" href="dslink/ServerLinkManager/getRequester.html">getRequester</a></li>
       <li><a class="" href="dslink/ServerLinkManager/getResponder.html">getResponder</a></li>
       <li><a class="" href="dslink/ServerLinkManager/noSuchMethod.html">noSuchMethod</a></li>
@@ -377,7 +386,7 @@ the original invocation.<a href="dslink/ServerLinkManager/noSuchMethod.html">&he
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -396,7 +405,7 @@ the original invocation.<a href="dslink/ServerLinkManager/noSuchMethod.html">&he
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

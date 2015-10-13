@@ -107,7 +107,6 @@
     <section class="desc markdown">
     
           <p>a client link for both http and ws</p>
-
     
     </section>
 
@@ -138,7 +137,7 @@
                 <p></p>
                 <div>
                   <span class="features">const</span>
-                  <span class="signature"><code>const {'salt' : 0, 'saltS' : 1, 'saltL' : 2}</code><span>
+                  <span class="signature"><code>const {'salt' : 0, 'saltS' : 1, 'saltL' : 2}</code></span>
                 </div>
             </dd>
         </dl>
@@ -291,6 +290,16 @@
         read-only
     </div>
 </dd>
+            <dt id="token" class="property">
+                <span class="name"><a class="" href="dslink.client/HttpClientLink/token.html">token</a></span>
+                <span class="signature">&#8594; String</span>
+            </dt>
+            <dd>
+                <p></p>
+                <div class="features">
+        read-only
+    </div>
+</dd>
         </dl>
     </section>
 
@@ -299,7 +308,7 @@
 
         <dl class="constructor-summary-list">
             <dt id="HttpClientLink" class="callable">
-                <span class="name"><a class="" href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-linkData"><span class="parameter-name">linkData</span></span>})</span>
+                <span class="name"><a class="" href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-linkData"><span class="parameter-name">linkData</span></span>})</span>
             </dt>
             <dd>
                 <p></p>
@@ -380,7 +389,7 @@ the original invocation.<a href="dslink.client/HttpClientLink/noSuchMethod.html"
               </dt>
               <dd>
                   <p>shortPolling is only valid in http mode
-/// saltId: 0 salt, 1:saltS, 2:saltL</p>
+saltId: 0 salt, 1:saltS, 2:saltL</p>
               </dd>
           </dl>
       </section>
@@ -410,6 +419,7 @@ the original invocation.<a href="dslink.client/HttpClientLink/noSuchMethod.html"
       <li><a class="" href="dslink.client/HttpClientLink/responder.html">responder</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/salts.html">salts</a></li>
+      <li><a class="" href="dslink.client/HttpClientLink/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
@@ -440,7 +450,7 @@ the original invocation.<a href="dslink.client/HttpClientLink/noSuchMethod.html"
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -459,7 +469,7 @@ the original invocation.<a href="dslink.client/HttpClientLink/noSuchMethod.html"
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

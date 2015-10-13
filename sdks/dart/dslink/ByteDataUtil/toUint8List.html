@@ -82,6 +82,7 @@
       <li class="section-title"><a href="dslink/ByteDataUtil-class.html#static-methods">Static methods</a></li>
       <li><a class="" href="dslink/ByteDataUtil/fromList.html">fromList</a></li>
       <li><a class="" href="dslink/ByteDataUtil/fromUint8List.html">fromUint8List</a></li>
+      <li><a class="" href="dslink/ByteDataUtil/list2Uint8List.html">list2Uint8List</a></li>
       <li><a class="" href="dslink/ByteDataUtil/mergeBytes.html">mergeBytes</a></li>
       <li><a class="" href="dslink/ByteDataUtil/toUint8List.html">toUint8List</a></li>
     
@@ -104,6 +105,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype">Uint8List</span>
+        <span class="name ">toUint8List</span>(<wbr><span class="parameter" id="toUint8List-param-bytes"><span class="type-annotation">ByteData</span> <span class="parameter-name">bytes</span></span>)
+    </section>
+
     <section class="desc markdown">
     
           <p class="no-docs">Not documented.</p>
@@ -111,7 +117,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/utils/list.dart.html#line-25'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/utils/list.dart.html#line-32'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static Uint8List toUint8List(ByteData bytes) {
   return bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes);
 }</code></pre>
@@ -132,7 +138,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -151,7 +157,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

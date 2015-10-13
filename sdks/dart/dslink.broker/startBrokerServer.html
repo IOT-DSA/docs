@@ -77,13 +77,16 @@
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
       <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
+      <li><a class="" href="dslink.broker/tokenNodeFunctions.html">tokenNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addTokenNode.html">addTokenNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/deleteTokenNode.html">deleteTokenNode</a></li>
       <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
@@ -120,6 +123,8 @@
       <li><a class="" href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a class="" href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
       <li><a class="" href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
+      <li><a class="" href="dslink.broker/TokenNode-class.html">TokenNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></li>
@@ -134,6 +139,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype">Future&lt;<a class="" href="dslink.broker/DsHttpServer-class.html">DsHttpServer</a>&gt;</span>
+        <span class="name ">startBrokerServer</span>(<wbr><span class="parameter" id="startBrokerServer-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>, {<span class="parameter" id="startBrokerServer-param-persist"><span class="type-annotation">bool</span> <span class="parameter-name">persist</span>: <span class="default-value">true</span></span>})
+    </section>
+
     <section class="desc markdown">
     
           <p class="no-docs">Not documented.</p>
@@ -141,7 +151,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/broker.dart.html#line-30'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/broker.dart.html#line-33'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;DsHttpServer&gt; startBrokerServer(int port, {bool persist: true}) async {
   var broker = new BrokerNodeProvider();
   broker.shouldSaveFiles = persist;
@@ -171,7 +181,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -190,7 +200,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

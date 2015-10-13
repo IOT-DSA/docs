@@ -81,13 +81,16 @@
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
       <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
+      <li><a class="" href="dslink.broker/tokenNodeFunctions.html">tokenNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addTokenNode.html">addTokenNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/deleteTokenNode.html">deleteTokenNode</a></li>
       <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
@@ -124,6 +127,8 @@
       <li><a class="" href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a class="" href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
       <li><a class="" href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
+      <li><a class="" href="dslink.broker/TokenNode-class.html">TokenNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></li>
@@ -404,6 +409,16 @@
         read / write
     </div>
 </dd>
+            <dt id="tokens" class="property">
+                <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/tokens.html">tokens</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span>
+            </dt>
+            <dd>
+                <p></p>
+                <div class="features">
+        read / write
+    </div>
+</dd>
             <dt id="upstream" class="property">
                 <span class="name"><a class="" href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></span>
                 <span class="signature">&#8594; <a class="" href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></span>
@@ -489,11 +504,11 @@
           <dl class="callables">
               <dt id="addLink" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/addLink.html">addLink</a></span><span class="signature">(<wbr><span class="parameter" id="addLink-param-link"><span class="type-annotation"><a class="" href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
-                      <span class="returntype parameter">&#8594; void</span>
+                      <span class="returntype parameter">&#8594; bool</span>
                   </span>
               </dt>
               <dd>
-                  <p></p>
+                  <p>return true if link is added</p>
               </dd>
               <dt id="addUpStreamLink" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/addUpStreamLink.html">addUpStreamLink</a></span><span class="signature">(<wbr><span class="parameter" id="addUpStreamLink-param-link"><span class="type-annotation"><a class="" href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">link</span></span>, <span class="parameter" id="addUpStreamLink-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
@@ -506,6 +521,14 @@
               <dt id="clearConns" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/clearConns.html">clearConns</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; void</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
+              <dt id="clearNode" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/clearNode.html">clearNode</a></span><span class="signature">(<wbr><span class="parameter" id="clearNode-param-node"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNode-class.html">BrokerNode</a></span> <span class="parameter-name">node</span></span>)
+                      <span class="returntype parameter">&#8594; bool</span>
                   </span>
               </dt>
               <dd>
@@ -543,6 +566,14 @@
               <dd>
                   <p></p>
               </dd>
+              <dt id="getLinkPath" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/getLinkPath.html">getLinkPath</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkPath-param-fullId"><span class="type-annotation">String</span> <span class="parameter-name">fullId</span></span>, <span class="parameter" id="getLinkPath-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>)
+                      <span class="returntype parameter">&#8594; String</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
               <dt id="getNode" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a></span><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                       <span class="returntype parameter">&#8594; <a class="" href="dslink/LocalNode-class.html">LocalNode</a></span>
@@ -558,9 +589,8 @@
               </dt>
               <dd>
                   <p>Gets a node at the given <code>path</code> if it exists.
-/// If it does not exist, create a new node and return it.
-///
-/// When <code>addToTree</code> is false, the node will not be inserted into the node provider.</p>
+If it does not exist, create a new node and return it.<a href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">&hellip;</a>
+</p>
               </dd>
               <dt id="getRequester" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/getRequester.html">getRequester</a></span><span class="signature">(<wbr><span class="parameter" id="getRequester-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
@@ -617,6 +647,14 @@
               </dt>
               <dd>
                   <p>load a fixed profile map</p>
+              </dd>
+              <dt id="loadTokensNodes" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/loadTokensNodes.html">loadTokensNodes</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; Future</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
               </dd>
               <dt id="loadUserNodes" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></span><span class="signature">(<wbr>)
@@ -682,6 +720,14 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
               </dd>
               <dt id="saveDataNodes" class="callable">
                   <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/saveDataNodes.html">saveDataNodes</a></span><span class="signature">(<wbr>)
+                      <span class="returntype parameter">&#8594; Future&lt;&gt;</span>
+                  </span>
+              </dt>
+              <dd>
+                  <p></p>
+              </dd>
+              <dt id="saveTokensNodes" class="callable">
+                  <span class="name "><a class="" href="dslink.broker/BrokerNodeProvider/saveTokensNodes.html">saveTokensNodes</a></span><span class="signature">(<wbr>)
                       <span class="returntype parameter">&#8594; Future&lt;&gt;</span>
                   </span>
               </dt>
@@ -756,6 +802,7 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
       <li><a class="" href="dslink.broker/BrokerNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/storage.html">storage</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/tokens.html">tokens</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/upstreamDataNode.html">upstreamDataNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
@@ -772,10 +819,12 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
       <li><a class="" href="dslink.broker/BrokerNodeProvider/addLink.html">addLink</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/addUpStreamLink.html">addUpStreamLink</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/clearConns.html">clearConns</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/clearNode.html">clearNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/createResponder.html">createResponder</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getConnById.html">getConnById</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getConnPath.html">getConnPath</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getLinkAndConnectNode.html">getLinkAndConnectNode</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/getLinkPath.html">getLinkPath</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/getRequester.html">getRequester</a></li>
@@ -785,6 +834,7 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadConns.html">loadConns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadDataNodes.html">loadDataNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadDef.html">loadDef</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/loadTokensNodes.html">loadTokensNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/loadUserNodes.html">loadUserNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/makeConnPath.html">makeConnPath</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
@@ -793,6 +843,7 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
       <li><a class="" href="dslink.broker/BrokerNodeProvider/removeLink.html">removeLink</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/saveConns.html">saveConns</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/saveDataNodes.html">saveDataNodes</a></li>
+      <li><a class="" href="dslink.broker/BrokerNodeProvider/saveTokensNodes.html">saveTokensNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/saveUsrNodes.html">saveUsrNodes</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/setNode.html">setNode</a></li>
       <li><a class="" href="dslink.broker/BrokerNodeProvider/toString.html">toString</a></li>
@@ -813,7 +864,7 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -832,7 +883,7 @@ the original invocation.<a href="dslink.broker/BrokerNodeProvider/noSuchMethod.h
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

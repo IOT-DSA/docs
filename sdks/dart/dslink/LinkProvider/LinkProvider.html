@@ -112,6 +112,7 @@
       <li><a class="" href="dslink/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a class="" href="dslink/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink/LinkProvider-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/LinkProvider/LinkProvider.html">LinkProvider</a></li>
@@ -146,32 +147,35 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+      <section class="multi-line-signature">
+        
+                <span class="name ">LinkProvider</span>(<wbr><span class="parameter" id="-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span></span>, <span class="parameter" id="-param-prefix"><span class="type-annotation">String</span> <span class="parameter-name">prefix</span></span>, {<span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-command"><span class="type-annotation">String</span> <span class="parameter-name">command</span>: <span class="default-value">'link'</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-defaultNodes"><span class="parameter-name">defaultNodes</span></span>, <span class="parameter" id="-param-nodes"><span class="parameter-name">nodes</span></span>, <span class="parameter" id="-param-profiles"><span class="parameter-name">profiles</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-enableHttp"><span class="type-annotation">bool</span> <span class="parameter-name">enableHttp</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-encodePrettyJson"><span class="type-annotation">bool</span> <span class="parameter-name">encodePrettyJson</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-autoInitialize"><span class="type-annotation">bool</span> <span class="parameter-name">autoInitialize</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-strictOptions"><span class="type-annotation">bool</span> <span class="parameter-name">strictOptions</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-exitOnFailure"><span class="type-annotation">bool</span> <span class="parameter-name">exitOnFailure</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-loadNodesJson"><span class="type-annotation">bool</span> <span class="parameter-name">loadNodesJson</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-defaultLogLevel"><span class="type-annotation">String</span> <span class="parameter-name">defaultLogLevel</span>: <span class="default-value">"INFO"</span></span>, <span class="parameter" id="-param-savePrivateKey"><span class="type-annotation">bool</span> <span class="parameter-name">savePrivateKey</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-linkData"><span class="parameter-name">linkData</span></span>})
+      </section>
 
     <section class="desc markdown">
     
           <p>Create a Link Provider.
-  /// <a class="" href="dslink/LinkProvider/args.html">args</a> are the command-line arguments to pass in.
-  /// <a class="" href="dslink/LinkProvider/prefix.html">prefix</a> is the link name.
-  /// <a class="" href="dslink/LinkProvider/isRequester.html">isRequester</a> specifies if you are a requester or not.
-  /// <a class="" href="dslink/LinkProvider/isResponder.html">isResponder</a> specifies if you a responder or not.
-  /// <a class="" href="dslink/LinkProvider/command.html">command</a> is the command name for this link.
-  /// Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> and <code>nodes</code> specify the default nodes to initialize if a nodes.json is not present.
-  /// <a class="" href="dslink/LinkProvider/profiles.html">profiles</a> specify the profiles for this link.
-  /// <a class="" href="dslink/LinkProvider/provider.html">provider</a> is a node provider. If it is not specified, one will be created for you.
-  /// <a class="" href="dslink/LinkProvider/enableHttp.html">enableHttp</a> toggles whether to enable HTTP fallbacks.
-  /// <a class="" href="dslink/LinkProvider/encodePrettyJson.html">encodePrettyJson</a> specifies whether to encode pretty JSON files when writing the nodes.json
-  /// <code>autoInitialize</code> specifies whether to initialize the link inside the constructor.
-  /// <a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a> toggles allowing trailing options in the argument parser.
-  /// <a class="" href="dslink/LinkProvider/exitOnFailure.html">exitOnFailure</a> toggles exiting when the link fails.
-  /// <a class="" href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a> specifies whether to load the nodes.json file or not.
-  /// <a class="" href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a> specifies the default log level.
-  /// <code>nodeProvider</code> is the same as <a class="" href="dslink/LinkProvider/provider.html">provider</a>. It is provided for backwards compatibility.</p>
-
+<a class="" href="dslink/LinkProvider/args.html">args</a> are the command-line arguments to pass in.
+<a class="" href="dslink/LinkProvider/prefix.html">prefix</a> is the link name.
+<a class="" href="dslink/LinkProvider/isRequester.html">isRequester</a> specifies if you are a requester or not.
+<a class="" href="dslink/LinkProvider/isResponder.html">isResponder</a> specifies if you a responder or not.
+<a class="" href="dslink/LinkProvider/command.html">command</a> is the command name for this link.
+Both <a class="" href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> and <code>nodes</code> specify the default nodes to initialize if a nodes.json is not present.
+<a class="" href="dslink/LinkProvider/profiles.html">profiles</a> specify the profiles for this link.
+<a class="" href="dslink/LinkProvider/provider.html">provider</a> is a node provider. If it is not specified, one will be created for you.
+<a class="" href="dslink/LinkProvider/enableHttp.html">enableHttp</a> toggles whether to enable HTTP fallbacks.
+<a class="" href="dslink/LinkProvider/encodePrettyJson.html">encodePrettyJson</a> specifies whether to encode pretty JSON files when writing the nodes.json
+<code>autoInitialize</code> specifies whether to initialize the link inside the constructor.
+<a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a> toggles allowing trailing options in the argument parser.
+<a class="" href="dslink/LinkProvider/exitOnFailure.html">exitOnFailure</a> toggles exiting when the link fails.
+<a class="" href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a> specifies whether to load the nodes.json file or not.
+<a class="" href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a> specifies the default log level.
+<code>nodeProvider</code> is the same as <a class="" href="dslink/LinkProvider/provider.html">provider</a>. It is provided for backwards compatibility.</p>
     
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-96'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-101'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">LinkProvider(this.args, this.prefix,
     {this.isRequester: false,
     this.command: &apos;link&apos;,
@@ -188,7 +192,6 @@
     this.loadNodesJson: true,
     this.defaultLogLevel: &quot;INFO&quot;,
     this.savePrivateKey: true,
-    this.home: null,
     this.overrideRequester,
     this.overrideResponder,
     NodeProvider nodeProvider, // For Backwards Compatibility
@@ -225,7 +228,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -244,7 +247,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

@@ -80,13 +80,16 @@
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#properties">Properties</a></li>
       <li><a class="" href="dslink.broker/dataNodeFunctions.html">dataNodeFunctions</a></li>
+      <li><a class="" href="dslink.broker/tokenNodeFunctions.html">tokenNodeFunctions</a></li>
       <li><a class="" href="dslink.broker/userNodeFunctions.html">userNodeFunctions</a></li>
     
       <li class="section-title"><a href="dslink.broker/dslink.broker-library.html#functions">Functions</a></li>
       <li><a class="" href="dslink.broker/addDataNode.html">addDataNode</a></li>
+      <li><a class="" href="dslink.broker/addTokenNode.html">addTokenNode</a></li>
       <li><a class="" href="dslink.broker/addUserChildNode.html">addUserChildNode</a></li>
       <li><a class="" href="dslink.broker/addUserLink.html">addUserLink</a></li>
       <li><a class="" href="dslink.broker/deleteDataNode.html">deleteDataNode</a></li>
+      <li><a class="" href="dslink.broker/deleteTokenNode.html">deleteTokenNode</a></li>
       <li><a class="" href="dslink.broker/removeDataNodeRecursive.html">removeDataNodeRecursive</a></li>
       <li><a class="" href="dslink.broker/startBrokerServer.html">startBrokerServer</a></li>
     
@@ -123,6 +126,8 @@
       <li><a class="" href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
       <li><a class="" href="dslink.broker/ThroughPutController-class.html">ThroughPutController</a></li>
       <li><a class="" href="dslink.broker/ThroughPutNode-class.html">ThroughPutNode</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
+      <li><a class="" href="dslink.broker/TokenNode-class.html">TokenNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamEnabledNode-class.html">UpstreamEnabledNode</a></li>
       <li><a class="" href="dslink.broker/UpstreamNameNode-class.html">UpstreamNameNode</a></li>
@@ -235,8 +240,8 @@
             </dt>
             <dd>
                 <p>Checks if this node exists.
-/// list and subscribe can be called on a node that doesn't exist
-/// Other things like set remove, and invoke can only be applied to an existing node.</p>
+list and subscribe can be called on a node that doesn't exist
+Other things like set remove, and invoke can only be applied to an existing node.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -258,8 +263,8 @@
             </dt>
             <dd>
                 <p>Checks if this node has a subscriber.
-/// Use this for things like polling when you
-/// only want to do something if the node is subscribed to.</p>
+Use this for things like polling when you
+only want to do something if the node is subscribed to.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -290,7 +295,7 @@
             </dt>
             <dd>
                 <p>Changes to nodes will be added to this controller's stream.
-/// See <code>updateList</code>.</p>
+See <code>updateList</code>.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -311,7 +316,7 @@
             </dt>
             <dd>
                 <p>List Stream.
-/// See <code>listChangeController</code>.</p>
+See <code>listChangeController</code>.</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -500,9 +505,9 @@
               </dt>
               <dd>
                   <p>Get a property of this node.
-  /// If <code>name</code> starts with '$', this will fetch a config.
-  /// If <code>name</code> starts with a '@', this will fetch an attribute.
-  /// Otherwise this will fetch a child.</p>
+If <code>name</code> starts with '$', this will fetch a config.
+If <code>name</code> starts with a '@', this will fetch an attribute.
+Otherwise this will fetch a child.</p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="getAttribute" class="callable">
@@ -667,7 +672,7 @@ the original invocation.<a href="dslink.broker/UpstreamNode/noSuchMethod.html">&
               </dt>
               <dd>
                   <p>Remove a child from this node.
-  /// <code>input</code> can be either an instance of <a class="" href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
+<code>input</code> can be either an instance of <a class="" href="dslink/Node-class.html">Node</a> or a <code>String</code>.</p>
                   <div class="features">inherited</div>
               </dd>
               <dt id="removeConfig" class="callable">
@@ -873,7 +878,7 @@ the original invocation.<a href="dslink.broker/UpstreamNode/noSuchMethod.html">&
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -892,7 +897,7 @@ the original invocation.<a href="dslink.broker/UpstreamNode/noSuchMethod.html">&
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

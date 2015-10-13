@@ -155,6 +155,16 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <div>
+            <ol class="annotation-list">
+                <li>override</li>
+            </ol>
+        </div>
+        <span class="returntype"></span>
+        <span class="name ">listen</span>(<wbr><span class="parameter" id="listen-param-onData"><span class="type-annotation">void</span> <span class="parameter-name">onData</span>(<span class="parameter" id="onData-param-event"><span class="parameter-name">event</span></span>)</span>, {<span class="parameter" id="listen-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, <span class="parameter" id="listen-param-onDone"><span class="type-annotation">void</span> <span class="parameter-name">onDone</span>()</span>, <span class="parameter" id="listen-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span></span>})
+    </section>
+
     <section class="desc markdown">
     
           <p>Adds a subscription to this stream.</p>
@@ -170,7 +180,6 @@ Otherwise it is called with just the error object.</p>
 <p>If this stream closes, the <code>onDone</code> handler is called.</p>
 <p>If <code>cancelOnError</code> is true, the subscription is ended when
 the first error is reported. The default is false.</p>
-
     
     </section>
 
@@ -199,7 +208,7 @@ StreamSubscription listen(void onData(event),
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -218,7 +227,7 @@ StreamSubscription listen(void onData(event),
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

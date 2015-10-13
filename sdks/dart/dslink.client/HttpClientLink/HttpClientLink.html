@@ -98,6 +98,7 @@
       <li><a class="" href="dslink.client/HttpClientLink/responder.html">responder</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/salts.html">salts</a></li>
+      <li><a class="" href="dslink.client/HttpClientLink/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
@@ -118,6 +119,10 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+      <section class="multi-line-signature">
+        
+                <span class="name ">HttpClientLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a class="" href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-linkData"><span class="parameter-name">linkData</span></span>})
+      </section>
 
     <section class="desc markdown">
     
@@ -126,11 +131,11 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-48'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-49'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
     {NodeProvider nodeProvider, bool isRequester: true,
     bool isResponder: true, Requester overrideRequester,
-    Responder overrideResponder, this.home, this.linkData
+    Responder overrideResponder, this.home, this.token, this.linkData
     //this.enableHttp: false
     })
     : privateKey = privateKey,
@@ -167,7 +172,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -186,7 +191,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

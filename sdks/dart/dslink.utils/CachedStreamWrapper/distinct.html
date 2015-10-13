@@ -136,6 +136,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype">Stream&lt;T&gt;</span>
+        <span class="name ">distinct</span>(<wbr>[<span class="parameter" id="distinct-param-equals"><span class="type-annotation">bool</span> <span class="parameter-name">equals</span>(<span class="parameter" id="equals-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="equals-param-next"><span class="type-annotation">T</span> <span class="parameter-name">next</span></span>)</span>])
+    </section>
+
     <section class="desc markdown">
     
           <p>Skips data events if they are equal to the previous data event.</p>
@@ -146,7 +151,6 @@ omitted, the '==' operator on the last provided data element is used.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually perform the <code>equals</code> test.</p>
-
     
     </section>
 
@@ -171,7 +175,7 @@ will individually perform the <code>equals</code> test.</p>
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -190,7 +194,7 @@ will individually perform the <code>equals</code> test.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

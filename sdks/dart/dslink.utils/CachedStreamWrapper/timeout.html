@@ -136,6 +136,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype"></span>
+        <span class="name ">timeout</span>(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="parameter-name">sink</span></span>)</span>})
+    </section>
+
     <section class="desc markdown">
     
           <p>Creates a new stream with the same events as this stream.</p>
@@ -153,7 +158,6 @@ into the error channel of the returned stream.</p>
 If a broadcast stream is listened to more than once, each subscription
 will have its individually timer that starts counting on listen,
 and the subscriptions' timers can be paused individually.</p>
-
     
     </section>
 
@@ -178,7 +182,7 @@ and the subscriptions' timers can be paused individually.</p>
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -197,7 +201,7 @@ and the subscriptions' timers can be paused individually.</p>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

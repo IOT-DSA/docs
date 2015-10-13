@@ -136,6 +136,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype"></span>
+        <span class="name ">pipe</span>(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer&lt;T&gt;</span> <span class="parameter-name">streamConsumer</span></span>)
+    </section>
+
     <section class="desc markdown">
     
           <p>Pipe the events of this stream into <code>streamConsumer</code>.</p>
@@ -151,7 +156,6 @@ If the adding of the stream itself fails in some way,
 then the consumer is expected to be closed, and won't be closed again.
 In that case the returned future completes with the error from calling
 <code>addStream</code>.</p>
-
     
     </section>
 
@@ -175,7 +179,7 @@ In that case the returned future completes with the error from calling
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -194,7 +198,7 @@ In that case the returned future completes with the error from calling
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

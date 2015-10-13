@@ -92,6 +92,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/nonce.html">nonce</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/onRequesterReadyCompleter.html">onRequesterReadyCompleter</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/path.html">path</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/pendingLinkData.html">pendingLinkData</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/publicKey.html">publicKey</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/requester.html">requester</a></li>
@@ -100,6 +101,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/session.html">session</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/tempNonce.html">tempNonce</a></li>
+      <li><a class="" href="dslink.broker/HttpServerLink/token.html">token</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/valid.html">valid</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/verifiedNonce.html">verifiedNonce</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/wsconnection.html">wsconnection</a></li>
@@ -125,6 +127,10 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+      <section class="multi-line-signature">
+        
+                <span class="name ">HttpServerLink</span>(<wbr><span class="parameter" id="-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>, <span class="parameter" id="-param-publicKey"><span class="type-annotation"><a class="" href="dslink/PublicKey-class.html">PublicKey</a></span> <span class="parameter-name">publicKey</span></span>, <span class="parameter" id="-param-linkManager"><span class="type-annotation"><a class="" href="dslink/ServerLinkManager-class.html">ServerLinkManager</a></span> <span class="parameter-name">linkManager</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-session"><span class="type-annotation">String</span> <span class="parameter-name">session</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-enableTimeout"><span class="type-annotation">bool</span> <span class="parameter-name">enableTimeout</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">true</span></span>})
+      </section>
 
     <section class="desc markdown">
     
@@ -133,17 +139,21 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/server_link.dart.html#line-40'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/server_link.dart.html#line-42'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">HttpServerLink(String id, this.publicKey, ServerLinkManager linkManager,
     {NodeProvider nodeProvider,
-    String sessionId:&apos;&apos;,
+    this.session, this.token,
     this.enableTimeout: false, this.enableAck: true})
-    : dsId = id,
-      session = sessionId,
-      requester = linkManager.getRequester(id),
-      responder = (nodeProvider != null)
-          ? linkManager.getResponder(id, nodeProvider, sessionId)
-          : null {
+    : dsId = id
+    {
+    path = linkManager.getLinkPath(id, token);
+    if (path != null) {
+      requester = linkManager.getRequester(id);
+      if (nodeProvider != null){
+        responder = linkManager.getResponder(id, nodeProvider, session);
+      }
+    }
+
     for (int i = 0; i &lt; 3; ++i) {
       List&lt;int&gt; bytes = new List&lt;int&gt;(12);
       for (int j = 0; j &lt; 12; ++j) {
@@ -172,7 +182,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -191,7 +201,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

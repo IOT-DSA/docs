@@ -111,6 +111,7 @@
       <li><a class="" href="dslink/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a class="" href="dslink/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink/LinkProvider-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/LinkProvider/LinkProvider.html">LinkProvider</a></li>
@@ -145,17 +146,21 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype"><a class="" href="dslink/LocalNode-class.html">LocalNode</a></span>
+        <span class="name ">addNode</span>(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="parameter-name">m</span></span>)
+    </section>
+
     <section class="desc markdown">
     
           <p>Adds a node with the given configuration in <code>m</code> at the given <code>path</code>.
-  /// In order for this method to work, the node provider must be mutable.
-  /// If you did not specify a custom node provider, the created provider is mutable.</p>
-
+In order for this method to work, the node provider must be mutable.
+If you did not specify a custom node provider, the created provider is mutable.</p>
     
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-609'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-617'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">LocalNode addNode(String path, Map m) {
   if (provider is! MutableNodeProvider) {
     throw new Exception(&quot;Unable to Modify Node Provider: It is not mutable.&quot;);
@@ -179,7 +184,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -198,7 +203,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

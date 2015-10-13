@@ -155,6 +155,16 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <div>
+            <ol class="annotation-list">
+                <li>override</li>
+            </ol>
+        </div>
+        <span class="returntype"></span>
+        <span class="name ">close</span>(<wbr>)
+    </section>
+
     <section class="desc markdown">
     
           <p>Tells the stream sink that no futher streams will be added.</p>
@@ -170,7 +180,6 @@ stopped listening. In that case, the <code>done</code> future is completed first
 and the <code>close</code> method will return the <code>done</code> future when called.</p>
 <p>Unifies <code>StreamConsumer.close</code> and <code>EventSink.close</code> which both mark their
 object as not expecting any further events.</p>
-
     
     </section>
 
@@ -206,7 +215,7 @@ Future close() {
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -225,7 +234,7 @@ Future close() {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

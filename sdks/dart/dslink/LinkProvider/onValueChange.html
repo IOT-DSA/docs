@@ -111,6 +111,7 @@
       <li><a class="" href="dslink/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a class="" href="dslink/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a class="" href="dslink/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink/LinkProvider-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/LinkProvider/LinkProvider.html">LinkProvider</a></li>
@@ -145,17 +146,21 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <span class="returntype">Stream&lt;<a class="" href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+        <span class="name ">onValueChange</span>(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>})
+    </section>
+
     <section class="desc markdown">
     
           <p>Retrieves a Broadcast Stream which subscribes to <code>path</code> with the specified <code>cacheLevel</code>.
-  /// The node is only subscribed if there is at least one stream subscription.
-  /// When the stream subscription count goes to 0, the node is unsubscribed from.</p>
-
+The node is only subscribed if there is at least one stream subscription.
+When the stream subscription count goes to 0, the node is unsubscribed from.</p>
     
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-383'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/client.dart.html#line-391'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;ValueUpdate&gt; onValueChange(String path, {int cacheLevel: 1}) {
   RespSubscribeListener listener;
   StreamController&lt;ValueUpdate&gt; controller;
@@ -193,7 +198,7 @@
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -212,7 +217,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>

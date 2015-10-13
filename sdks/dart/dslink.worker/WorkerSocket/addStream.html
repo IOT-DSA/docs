@@ -155,6 +155,16 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="multi-line-signature">
+        <div>
+            <ol class="annotation-list">
+                <li>override</li>
+            </ol>
+        </div>
+        <span class="returntype"></span>
+        <span class="name ">addStream</span>(<wbr><span class="parameter" id="addStream-param-stream"><span class="parameter-name">stream</span></span>)
+    </section>
+
     <section class="desc markdown">
     
           <p>Consumes the elements of <code>stream</code>.</p>
@@ -169,7 +179,6 @@ or it may be canceled early if the receiver don't want any further events.</p>
 <p>If the consumer stops listening because of some error preventing it
 from continuing, it may report this error in the returned future,
 otherwise it will just complete the future with <code>null</code>.</p>
-
     
     </section>
 
@@ -198,7 +207,7 @@ Future addStream(Stream stream) {
                 &bull;
                 <span class="no-break">
                   <a href="https://www.dartlang.org">
-                    <img src="static-assets/favicon.png" alt="Dart" title="Dart"width="16" height="16">
+                    <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
                   </a>
                 </span>
                 &bull;
@@ -217,7 +226,7 @@ Future addStream(Stream stream) {
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.0 -->
+<!-- Made with <3 by dartdoc version 0.7.2 -->
 </body>
 
 </html>
