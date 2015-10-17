@@ -167,7 +167,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/broker_node.dart.html#line-225'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/broker_node.dart.html#line-233'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 InvokeResponse invoke(
     Map params, Responder responder, InvokeResponse response, Node parentNode,
@@ -177,6 +177,7 @@ InvokeResponse invoke(
   var url = params[&quot;url&quot;];
   var b = provider.getOrCreateNode(&quot;/sys/upstream&quot;, false) as UpstreamNode;
   b.addUpstreamConnection(name, url, ourName);
+  provider.upstream.update();
   return response..close();
 }</code></pre>
     </section>

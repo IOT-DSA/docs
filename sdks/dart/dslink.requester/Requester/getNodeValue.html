@@ -140,9 +140,13 @@
   var c = new Completer&lt;ValueUpdate&gt;();
   ReqSubscribeListener listener;
   listener = subscribe(path, (ValueUpdate update) {
-    c.complete(update);
+    if (!c.isCompleted) {
+      c.complete(update);
+    }
+
     if (listener != null) {
       listener.cancel();
+      listener = null;
     }
   });
   return c.future;

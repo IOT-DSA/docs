@@ -135,17 +135,22 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/requester/requester.dart.html#line-121'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/requester/requester.dart.html#line-125'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;RemoteNode&gt; getRemoteNode(String path) {
   var c = new Completer&lt;RemoteNode&gt;();
   StreamSubscription sub;
   sub = list(path).listen((update) {
-    c.complete(update.node);
+    if (!c.isCompleted) {
+      c.complete(update.node);
+    }
+
     if (sub != null) {
       sub.cancel();
     }
   }, onError: (e, stack) {
-    c.completeError(e, stack);
+    if (!c.isCompleted) {
+      c.completeError(e, stack);
+    }
   }, cancelOnError: true);
   return c.future;
 }</code></pre>
