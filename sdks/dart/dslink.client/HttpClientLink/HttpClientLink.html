@@ -99,6 +99,7 @@
       <li><a class="" href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/token.html">token</a></li>
+      <li><a class="" href="dslink.client/HttpClientLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
@@ -131,7 +132,7 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-49'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-51'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
     {NodeProvider nodeProvider, bool isRequester: true,
     bool isResponder: true, Requester overrideRequester,
@@ -153,6 +154,12 @@
     } else if (nodeProvider != null) {
       responder = new Responder(nodeProvider);
     }
+  }
+  if (token != null &amp;&amp; token.length &gt; 16) {
+    // pre-generate tokenHash
+    String tokenId = token.substring(0, 16);
+    String hashStr =   CryptoProvider.sha256(UTF8.encode(&apos;$dsId$token&apos;));
+    tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
   }
 }</code></pre>
       </section>

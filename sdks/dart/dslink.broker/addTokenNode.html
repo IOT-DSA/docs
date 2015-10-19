@@ -151,11 +151,11 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/tokens.dart.html#line-140'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-174'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">InvokeResponse addTokenNode(Map params, Responder responder,
     InvokeResponse response, LocalNode parentNode) {
   if (parentNode is TokenGroupNode) {
-    String token = TokenGroupNode.makeTokeId();
+    String token = TokenGroupNode.makeToken();
     String tokenId = token.substring(0, 16);
     TokenNode node = new TokenNode(&apos;${parentNode.path}/$tokenId&apos;,
         parentNode.provider, parentNode, tokenId);

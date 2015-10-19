@@ -98,6 +98,7 @@
       <li><a class="" href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.client/HttpClientLink/token.html">token</a></li>
+      <li><a class="" href="dslink.client/HttpClientLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.client/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
@@ -130,7 +131,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-164'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-166'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
   if (_closed) return;
 
@@ -138,8 +139,11 @@
 //      initHttp();
 //    }
   try {
-    var socket = await HttpHelper.connectToWebSocket(
-        &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
+    String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;;
+    if (tokenHash != null) {
+      wsUrl = &apos;$wsUrl$tokenHash&apos;;
+    }
+    var socket = await HttpHelper.connectToWebSocket(wsUrl);
     _wsConnection = new WebSocketConnection(socket,
         clientLink: this, enableTimeout: true, enableAck: enableAck);
 

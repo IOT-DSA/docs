@@ -98,6 +98,7 @@
       <li><a class="" href="dslink/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/HttpClientLink/salts.html">salts</a></li>
       <li><a class="" href="dslink/HttpClientLink/token.html">token</a></li>
+      <li><a class="" href="dslink/HttpClientLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title"><a href="dslink/HttpClientLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink/HttpClientLink/HttpClientLink.html">HttpClientLink</a></li>
@@ -130,7 +131,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/http/client_link.dart.html#line-75'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-83'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
 
@@ -148,14 +149,8 @@
   if (home != null) {
     connUrl = &apos;$connUrl&amp;home=$home&apos;;
   }
-  if (token != null &amp;&amp; token.length &gt; 16) {
-    String tokenId = token.substring(0, 16);
-
-    Uint8List bytes = ByteDataUtil.list2Uint8List(UTF8.encode(&apos;$dsId$token&apos;));
-    SHA256Digest sha256 = new SHA256Digest();
-    Uint8List hashed = sha256.process(new Uint8List.fromList(bytes));
-    String hashStr =  Base64.encode(hashed);
-    connUrl = &apos;$connUrl&amp;token=$tokenId$hashStr&apos;;
+  if (tokenHash != null) {
+    connUrl = &apos;$connUrl$tokenHash&apos;;
   }
   Uri connUri = Uri.parse(connUrl);
   logger.info(&quot;Connecting to ${_conn}&quot;);

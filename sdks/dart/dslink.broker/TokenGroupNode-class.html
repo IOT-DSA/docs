@@ -185,6 +185,16 @@
         read / write
     </div>
 </dd>
+            <dt id="trustedToken" class="property">
+                <span class="name"><a class="" href="dslink.broker/TokenGroupNode/trustedToken.html">trustedToken</a></span>
+                <span class="signature">&#8594; <a class="" href="dslink.broker/TokenNode-class.html">TokenNode</a></span>
+            </dt>
+            <dd>
+                <p></p>
+                <div class="features">
+        read-only
+    </div>
+</dd>
         </dl>
     </section>
 
@@ -199,8 +209,16 @@
             <dd>
                 <p></p>
             </dd>
-            <dt id="makeTokeId" class="callable">
-                <span class="name "><a class="" href="dslink.broker/TokenGroupNode/makeTokeId.html">makeTokeId</a></span><span class="signature">(<wbr>)
+            <dt id="initSecretToken" class="callable">
+                <span class="name "><a class="" href="dslink.broker/TokenGroupNode/initSecretToken.html">initSecretToken</a></span><span class="signature">(<wbr><span class="parameter" id="initSecretToken-param-provider"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
+                    <span class="returntype parameter">&#8594; String</span>
+                </span>
+            </dt>
+            <dd>
+                <p></p>
+            </dd>
+            <dt id="makeToken" class="callable">
+                <span class="name "><a class="" href="dslink.broker/TokenGroupNode/makeToken.html">makeToken</a></span><span class="signature">(<wbr>)
                     <span class="returntype parameter">&#8594; String</span>
                 </span>
             </dt>
@@ -219,7 +237,7 @@
                 <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
-                <p></p>
+                <p>Node Attributes</p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -229,7 +247,7 @@
                 <span class="signature">&#8594; Map&lt;Function, int&gt;</span>
             </dt>
             <dd>
-                <p></p>
+                <p>Subscription Callbacks</p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -239,7 +257,8 @@
                 <span class="signature">&#8594; Map&lt;String, <a class="" href="dslink/Node-class.html">Node</a>&gt;</span>
             </dt>
             <dd>
-                <p></p>
+                <p>Node Children
+Map of Child Name to Child Node</p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -249,7 +268,7 @@
                 <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
             </dt>
             <dd>
-                <p></p>
+                <p>Node Configs</p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -386,7 +405,7 @@ See <code>listChangeController</code>.</p>
                 <span class="signature">&#8594; String</span>
             </dt>
             <dd>
-                <p></p>
+                <p>Node Path</p>
                 <div class="features">
         read-only, inherited
     </div>
@@ -406,7 +425,7 @@ See <code>listChangeController</code>.</p>
                 <span class="signature">&#8594; <a class="" href="dslink.browser/Node-class.html">Node</a></span>
             </dt>
             <dd>
-                <p></p>
+                <p>This node's profile.</p>
                 <div class="features">
         read / write, inherited
     </div>
@@ -802,10 +821,12 @@ the original invocation.<a href="dslink.broker/TokenGroupNode/noSuchMethod.html"
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-properties">Static properties</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/tokens.html">tokens</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/trustedToken.html">trustedToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-methods">Static methods</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/findTokenNode.html">findTokenNode</a></li>
-      <li><a class="" href="dslink.broker/TokenGroupNode/makeTokeId.html">makeTokeId</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/initSecretToken.html">initSecretToken</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/makeToken.html">makeToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/Node/attributes.html">attributes</a></li>

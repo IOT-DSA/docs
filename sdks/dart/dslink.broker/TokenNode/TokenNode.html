@@ -153,6 +153,7 @@
       <li><a class="" href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
       <li><a class="" href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li><a class="" href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
+      <li><a class="" href="dslink.broker/TokenNode/useCount.html">useCount</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-left-->
@@ -171,11 +172,15 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/tokens.dart.html#line-87'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-106'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">TokenNode(String path, BrokerNodeProvider provider, this.parent, this.id)
     : super(path, provider) {
   configs[r&apos;$is&apos;] = &apos;broker/token&apos;;
   profile = provider.getOrCreateNode(&apos;/defs/profile/broker/token&apos;, false);
+  if (path != null) {
+    // trustedTokenNode is not stored in the tree
+    provider.setNode(path, this);
+  }
 }</code></pre>
       </section>
 

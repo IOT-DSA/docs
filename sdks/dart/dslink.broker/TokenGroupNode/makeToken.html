@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>makeTokeId method - TokenGroupNode class - dslink.broker library - Dart API</title>
+    <title>makeToken method - TokenGroupNode class - dslink.broker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the makeTokeId method from the TokenGroupNode class, for the Dart programming language.">
+    <meta name="description" content="API docs for the makeToken method from the TokenGroupNode class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
                   <li><a href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
-                  <li class="self-crumb">makeTokeId</li>
+                  <li class="self-crumb">makeToken</li>
               </ol>
-              <div class="self-name">makeTokeId</div>
+              <div class="self-name">makeToken</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
               <li><a href="dslink.broker/TokenGroupNode-class.html">TokenGroupNode</a></li>
-              <li class="self-crumb">makeTokeId</li>
+              <li class="self-crumb">makeToken</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> makeTokeId
+                  <div class="kind">method</div> makeToken
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.broker/TokenGroupNode/makeTokeId.html#source">Source</a></li>
+              <li><a href="dslink.broker/TokenGroupNode/makeToken.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -80,10 +80,12 @@
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-properties">Static properties</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/tokens.html">tokens</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/trustedToken.html">trustedToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-methods">Static methods</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/findTokenNode.html">findTokenNode</a></li>
-      <li><a class="" href="dslink.broker/TokenGroupNode/makeTokeId.html">makeTokeId</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/initSecretToken.html">initSecretToken</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/makeToken.html">makeToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/Node/attributes.html">attributes</a></li>
@@ -158,7 +160,7 @@
 
     <section class="multi-line-signature">
         <span class="returntype">String</span>
-        <span class="name ">makeTokeId</span>(<wbr>)
+        <span class="name ">makeToken</span>(<wbr>)
     </section>
 
     <section class="desc markdown">
@@ -168,8 +170,8 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/tokens.dart.html#line-5'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String makeTokeId() {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-19'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">static String makeToken() {
   List&lt;int&gt; tokenCodes = new List&lt;int&gt;(48);
   int i = 0;
   while (i &lt; 48) {
@@ -184,7 +186,7 @@
   String rslt = new String.fromCharCodes(tokenCodes);
   String short = rslt.substring(0, 16);
   if (tokens.containsKey(short)) {
-    return makeTokeId();
+    return makeToken();
   }
   return rslt;
 }</code></pre>

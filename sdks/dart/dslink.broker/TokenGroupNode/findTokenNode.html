@@ -80,10 +80,12 @@
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-properties">Static properties</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/tokens.html">tokens</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/trustedToken.html">trustedToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-methods">Static methods</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/findTokenNode.html">findTokenNode</a></li>
-      <li><a class="" href="dslink.broker/TokenGroupNode/makeTokeId.html">makeTokeId</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/initSecretToken.html">initSecretToken</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/makeToken.html">makeToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#instance-properties">Properties</a></li>
       <li><a class="" href="dslink.browser/Node/attributes.html">attributes</a></li>
@@ -168,7 +170,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/tokens.dart.html#line-25'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-39'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static TokenNode findTokenNode(String token, String dsId) {
   if (token.length &lt; 16) {
     return null;
@@ -179,13 +181,18 @@
     return null;
   }
   TokenNode tokenNode = tokens[tokenId];
-  if (tokenNode.token == null) {
+  if (tokenNode.token == null || tokenNode.count == 0) {
     return null;
   }
-  Uint8List bytes = ByteDataUtil.list2Uint8List(UTF8.encode(&apos;$dsId${tokenNode.token}&apos;));
-  SHA256Digest sha256 = new SHA256Digest();
-  Uint8List hashed = sha256.process(new Uint8List.fromList(bytes));
-  String hashStr =  Base64.encode(hashed);
+  if (tokenNode.ts0 &gt;= 0 &amp;&amp; tokenNode.ts1 &gt;= 0) {
+    int ts = new DateTime.now().millisecondsSinceEpoch;
+    if (ts &lt; tokenNode.ts0 || ts &gt;= tokenNode.ts1) {
+      return null;
+    }
+  }
+
+
+  String hashStr = CryptoProvider.sha256(UTF8.encode(&apos;$dsId${tokenNode.token}&apos;));
   if (hashStr == tokenHash) {
     return tokenNode;
   }

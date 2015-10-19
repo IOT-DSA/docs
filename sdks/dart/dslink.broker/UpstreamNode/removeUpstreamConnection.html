@@ -169,14 +169,19 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/dslink/src/broker/broker_node.dart.html#line-150'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/broker_node.dart.html#line-150'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void removeUpstreamConnection(String name) {
   LocalNode node = provider.getOrCreateNode(&quot;/sys/upstream/${name}&quot;, false);
   if (node is UpstreamBrokerNode) {
     node.stop();
     node.toBeRemoved = true;
     children.remove(name);
+    var rp = &quot;/sys/upstream/${name}/&quot;;
+    provider.nodes.remove(rp.substring(0, rp.length - 1));
+    List&lt;String&gt; toRemove = provider.nodes.keys.where((x) =&gt; x.startsWith(rp)).toList();
+    toRemove.forEach(provider.nodes.remove);
     updateList(name);
+    provider.clearUpstreamNodes();
   }
 }</code></pre>
     </section>
