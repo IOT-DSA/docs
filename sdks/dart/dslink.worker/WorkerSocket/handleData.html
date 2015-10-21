@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>skipWhile method - WorkerSocket class - dslink.worker library - Dart API</title>
+    <title>handleData method - WorkerSocket class - dslink.worker library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the skipWhile method from the WorkerSocket class, for the Dart programming language.">
+    <meta name="description" content="API docs for the handleData method from the WorkerSocket class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></li>
                   <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
-                  <li class="self-crumb">skipWhile</li>
+                  <li class="self-crumb">handleData</li>
               </ol>
-              <div class="self-name">skipWhile</div>
+              <div class="self-name">handleData</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></li>
               <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
-              <li class="self-crumb">skipWhile</li>
+              <li class="self-crumb">handleData</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> skipWhile
+                  <div class="kind">method</div> handleData
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.worker/WorkerSocket/skipWhile.html#source">Source</a></li>
+              <li><a href="dslink.worker/WorkerSocket/handleData.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -158,26 +158,124 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-        <span class="returntype"></span>
-        <span class="name ">skipWhile</span>(<wbr><span class="parameter" id="skipWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+        <span class="returntype">dynamic</span>
+        <span class="name ">handleData</span>(<wbr><span class="parameter" id="handleData-param-msg"><span class="parameter-name">msg</span></span>)
     </section>
 
     <section class="desc markdown">
     
-          <p>Skip data events from this stream while they are matched by <code>test</code>.</p>
-<p>Error and done events are provided by the returned stream unmodified.</p>
-<p>Starting with the first data event where <code>test</code> returns false for the
-event data, the returned stream will have the same events as this stream.</p>
-<p>The returned stream is a broadcast stream if this stream is.
-For a broadcast stream, the events are only tested from the time
-the returned stream is listened to.</p>
+          <p class="no-docs">Not documented.</p>
     
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-880'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; skipWhile(bool test(T element)) {
-  return new _SkipWhileStream&lt;T&gt;(this, test);
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/worker.dart.html#line-249'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">handleData(msg) {
+  if (onReceivedMessageHandler != null) {
+    onReceivedMessageHandler(msg);
+  }
+
+  if (msg == null || msg is! Map) {
+    return;
+  }
+
+  String type = msg[&quot;t&quot;];
+
+  if (type == null) {
+    type = msg[&quot;type&quot;];
+  }
+
+  if (type == null) {
+    return;
+  }
+
+  if (type == &quot;send_port&quot;) {
+    _sendPort = msg[&quot;port&quot;];
+    if (!_readyCompleter.isCompleted) {
+      _readyCompleter.complete();
+    }
+  } else if (type == &quot;data&quot;) {
+    _controller.add(msg[&quot;d&quot;]);
+  } else if (type == &quot;error&quot;) {
+    _controller.addError(msg[&quot;e&quot;]);
+  } else if (type == &quot;ping&quot;) {
+    _sendPort.send({
+      &quot;t&quot;: &quot;pong&quot;,
+      &quot;i&quot;: msg[&quot;i&quot;]
+    });
+  } else if (type == &quot;pong&quot;) {
+    var id = msg[&quot;i&quot;];
+    if (_pings.containsKey(id)) {
+      _pings[id].complete();
+      _pings.remove(id);
+    }
+  } else if (type == &quot;req&quot;) {
+    _handleRequest(msg[&quot;n&quot;], msg[&quot;i&quot;], msg[&quot;a&quot;]);
+  } else if (type == &quot;res&quot;) {
+    var id = msg[&quot;i&quot;];
+    var result = msg[&quot;r&quot;];
+    var err = msg[&quot;e&quot;];
+    if (err != null) {
+      if (_responseHandlers.containsKey(id)) {
+        _responseHandlers.remove(id).completeError(
+            err,
+            new StackTrace.fromString(msg[&quot;s&quot;])
+        );
+      } else {
+        throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+      }
+    } else {
+      if (_responseHandlers.containsKey(id)) {
+        _responseHandlers.remove(id).complete(result);
+      } else {
+        throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+      }
+    }
+  } else if (type == &quot;stop&quot;) {
+    if (!_stopCompleter.isCompleted) {
+      _stopCompleter.complete();
+    }
+    _sendPort.send({&quot;t&quot;: &quot;stopped&quot;});
+  } else if (type == &quot;stopped&quot;) {
+    if (!_stopCompleter.isCompleted) {
+      _stopCompleter.complete();
+    }
+  } else if (type == &quot;session.created&quot;) {
+    var id = msg[&quot;s&quot;];
+    _remoteSessions[id] = new _WorkerSession(this, id, false);
+    _sendPort.send({&quot;t&quot;: &quot;session.ready&quot;, &quot;s&quot;: id});
+    _sessionController.add(_remoteSessions[id]);
+  } else if (type == &quot;session.ready&quot;) {
+    var id = msg[&quot;s&quot;];
+    if (_sessionReady.containsKey(id)) {
+      _sessionReady[id].complete();
+      _sessionReady.remove(id);
+    }
+  } else if (type == &quot;session.data&quot;) {
+    var id = msg[&quot;s&quot;];
+    if (_ourSessions.containsKey(id)) {
+      (_ourSessions[id] as _WorkerSession)._messages.add(msg[&quot;d&quot;]);
+    } else if (_remoteSessions.containsKey(id)) {
+      (_remoteSessions[id] as _WorkerSession)._messages.add(msg[&quot;d&quot;]);
+    }
+  } else if (type == &quot;session.done&quot;) {
+    var id = msg[&quot;s&quot;];
+    if (_ourSessions.containsKey(id)) {
+      var c = (_ourSessions[id] as _WorkerSession)._doneCompleter;
+      if (!c.isCompleted) {
+        c.complete();
+      }
+      _ourSessions.remove(id);
+    } else if (_remoteSessions.containsKey(id)) {
+      var c = (_remoteSessions[id] as _WorkerSession)._doneCompleter;
+      if (!c.isCompleted) {
+        c.complete();
+      }
+      _remoteSessions.remove(id);
+    }
+  } else {
+    throw new Exception(&quot;Unknown message: ${msg}&quot;);
+  }
 }</code></pre>
     </section>
 

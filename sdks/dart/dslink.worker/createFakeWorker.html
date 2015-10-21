@@ -118,7 +118,9 @@
   var receiver = new ReceivePort();
   var socket = new WorkerSocket.master(receiver);
   Timer.run(() {
-    function(new Worker(receiver.sendPort, metadata));
+    var w = new Worker(receiver.sendPort, metadata);
+    w._master = socket;
+    function(w);
   });
   return socket;
 }</code></pre>
