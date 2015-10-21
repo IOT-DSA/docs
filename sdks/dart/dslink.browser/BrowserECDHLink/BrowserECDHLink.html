@@ -95,6 +95,8 @@
       <li><a class="" href="dslink.browser/BrowserECDHLink/responder.html">responder</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/salts.html">salts</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/token.html">token</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title"><a href="dslink.browser/BrowserECDHLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/BrowserECDHLink/BrowserECDHLink.html">BrowserECDHLink</a></li>
@@ -117,7 +119,7 @@
 
       <section class="multi-line-signature">
         
-                <span class="name ">BrowserECDHLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>})
+                <span class="name ">BrowserECDHLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a class="" href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>})
       </section>
 
     <section class="desc markdown">
@@ -127,11 +129,12 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-40'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-42'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">BrowserECDHLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
     {NodeProvider nodeProvider,
     bool isRequester: true,
-    bool isResponder: true})
+    bool isResponder: true,
+    this.token})
     : privateKey = privateKey,
       dsId = &apos;$dsIdPrefix${privateKey.publicKey.qHash64}&apos;,
       requester = isRequester ? new Requester() : null,
@@ -140,6 +143,12 @@
           : null {
             if (!_conn.contains(&apos;://&apos;)) {
               _conn = &apos;http://$_conn&apos;;
+            }
+            if (token != null &amp;&amp; token.length &gt; 16) {
+              // pre-generate tokenHash
+              String tokenId = token.substring(0, 16);
+              String hashStr =   CryptoProvider.sha256(UTF8.encode(&apos;$dsId$token&apos;));
+              tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
             }
           }</code></pre>
       </section>

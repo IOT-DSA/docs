@@ -94,6 +94,8 @@
       <li><a class="" href="dslink.browser/BrowserECDHLink/responder.html">responder</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/salts.html">salts</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/token.html">token</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title"><a href="dslink.browser/BrowserECDHLink-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/BrowserECDHLink/BrowserECDHLink.html">BrowserECDHLink</a></li>
@@ -126,11 +128,15 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-56'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-65'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
   lockCryptoProvider();
-  Uri connUri = Uri.parse(&apos;$_conn?dsId=$dsId&apos;);
+  String connUrl = &apos;$_conn?dsId=$dsId&apos;;
+  if (tokenHash != null) {
+    connUrl = &apos;$connUrl$tokenHash&apos;;
+  }
+  Uri connUri = Uri.parse(connUrl);
   logger.info(&apos;Connecting: $connUri&apos;);
   try {
     Map requestJson = {
@@ -139,7 +145,7 @@
       &apos;isResponder&apos;: responder != null,
       &apos;version&apos;: DSA_VERSION
     };
-    HttpRequest request = await HttpRequest.request(connUri.toString(),
+    HttpRequest request = await HttpRequest.request(connUrl,
         method: &apos;POST&apos;,
         withCredentials: false,
         mimeType: &apos;application/json&apos;,
@@ -155,13 +161,21 @@
     if (serverConfig[&apos;wsUri&apos;] is String) {
       _wsUpdateUri = &apos;${connUri.resolve(serverConfig[&apos;wsUri&apos;])}?dsId=$dsId&apos;
           .replaceFirst(&apos;http&apos;, &apos;ws&apos;);
+      if (tokenHash != null) {
+        _wsUpdateUri = &apos;$_wsUpdateUri$tokenHash&apos;;
+      }
+
     }
 
     if (serverConfig[&apos;httpUri&apos;] is String) {
       // TODO implement http
       _httpUpdateUri =
           &apos;${connUri.resolve(serverConfig[&apos;httpUri&apos;])}?dsId=$dsId&apos;;
+      if (tokenHash != null) {
+        _httpUpdateUri = &apos;$_httpUpdateUri$tokenHash&apos;;
+      }
     }
+
     // server start to support version since 1.0.4
     // and this is the version ack is added
     enableAck = serverConfig.containsKey(&apos;version&apos;);

@@ -97,6 +97,7 @@
       <li><a class="" href="dslink.browser/LinkProvider/provider.html">provider</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/requester.html">requester</a></li>
       <li><a class="" href="dslink.browser/LinkProvider/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink.browser/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/LinkProvider/LinkProvider.html">LinkProvider</a></li>
@@ -130,7 +131,7 @@
 
       <section class="multi-line-signature">
         
-                <span class="name ">LinkProvider</span>(<wbr><span class="parameter" id="-param-brokerUrl"><span class="type-annotation">String</span> <span class="parameter-name">brokerUrl</span></span>, <span class="parameter" id="-param-prefix"><span class="type-annotation">String</span> <span class="parameter-name">prefix</span></span>, {<span class="parameter" id="-param-defaultNodes"><span class="parameter-name">defaultNodes</span></span>, <span class="parameter" id="-param-profiles"><span class="parameter-name">profiles</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-dataStore"><span class="type-annotation"><a class="" href="dslink.browser/DataStorage-class.html">DataStorage</a></span> <span class="parameter-name">dataStore</span></span>, <span class="parameter" id="-param-loadNodes"><span class="type-annotation">bool</span> <span class="parameter-name">loadNodes</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>})
+                <span class="name ">LinkProvider</span>(<wbr><span class="parameter" id="-param-brokerUrl"><span class="type-annotation">String</span> <span class="parameter-name">brokerUrl</span></span>, <span class="parameter" id="-param-prefix"><span class="type-annotation">String</span> <span class="parameter-name">prefix</span></span>, {<span class="parameter" id="-param-defaultNodes"><span class="parameter-name">defaultNodes</span></span>, <span class="parameter" id="-param-profiles"><span class="parameter-name">profiles</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-dataStore"><span class="type-annotation"><a class="" href="dslink.browser/DataStorage-class.html">DataStorage</a></span> <span class="parameter-name">dataStore</span></span>, <span class="parameter" id="-param-loadNodes"><span class="type-annotation">bool</span> <span class="parameter-name">loadNodes</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>})
       </section>
 
     <section class="desc markdown">
@@ -140,7 +141,7 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser.dart.html#line-47'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser.dart.html#line-48'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">LinkProvider(this.brokerUrl, this.prefix,
     {this.defaultNodes,
     this.profiles,
@@ -148,7 +149,8 @@
     this.dataStore,
     this.loadNodes: false,
     this.isRequester: true,
-    this.isResponder: true}) {
+    this.isResponder: true,
+    this.token}) {
   if (dataStore == null) {
     dataStore = LocalDataStorage.INSTANCE;
   }
