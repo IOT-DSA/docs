@@ -203,10 +203,21 @@
     } else if (type == &quot;response&quot;) {
       var id = msg[&quot;id&quot;];
       var result = msg[&quot;result&quot;];
-      if (_responseHandlers.containsKey(id)) {
-        _responseHandlers.remove(id).complete(result);
+      if (msg.containsKey(&quot;error&quot;)) {
+        if (_responseHandlers.containsKey(id)) {
+          _responseHandlers.remove(id).completeError(
+              msg[&quot;error&quot;],
+              new StackTrace.fromString(msg[&quot;stack&quot;])
+          );
+        } else {
+          throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+        }
       } else {
-        throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+        if (_responseHandlers.containsKey(id)) {
+          _responseHandlers.remove(id).complete(result);
+        } else {
+          throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+        }
       }
     } else if (type == &quot;stopped&quot;) {
       _stopCompleter.complete();
