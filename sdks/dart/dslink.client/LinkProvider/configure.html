@@ -260,6 +260,24 @@ This includes:
     });
   }
 
+  if (const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false)) {
+    var runtimeConfig = Zone.current[&quot;dslink.runtime.config&quot;];
+
+    if (runtimeConfig != null) {
+      var closeHandler = () {
+        close();
+
+        if (_logFileOut != null) {
+          try {
+            _logFileOut.close();
+          } catch (e) {}
+        }
+      };
+
+      runtimeConfig[&quot;closeHandler&quot;] = closeHandler;
+    }
+  }
+
   String helpStr =
       &quot;usage: $command [--broker URL] [--log LEVEL] [--name NAME] [--discover]&quot;;
 
@@ -416,7 +434,7 @@ This includes:
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.2 -->
+<!-- Made with <3 by dartdoc version 0.7.3 -->
 </body>
 
 </html>
