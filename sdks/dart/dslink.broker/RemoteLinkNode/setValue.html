@@ -113,6 +113,7 @@
     
       <li class="section-title"><a href="dslink.broker/RemoteLinkNode-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/Node/addChild.html">addChild</a></li>
+      <li><a class="" href="dslink.broker/RemoteLinkNode/clearValue.html">clearValue</a></li>
       <li><a class="" href="dslink.broker/RemoteLinkNode/createListController.html">createListController</a></li>
       <li><a class="" href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li><a class="" href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
@@ -160,7 +161,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/remote_node.dart.html#line-354'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/remote_node.dart.html#line-358'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Response setValue(Object value, Responder responder, Response response, [int maxPermission = Permission.CONFIG]) {
   // TODO check permission on RemoteLinkRootNode
   _linkManager.requester.set(remotePath, value, maxPermission).then((update) {

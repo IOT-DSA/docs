@@ -152,16 +152,16 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-123'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-116'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void removeDataNodeRecursive(BrokerDataNode node, String name) {
   for (String name in node.children.keys.toList()) {
     removeDataNodeRecursive(node.children[name], name);
   }
-  node.clearValue();
   BrokerDataNode parent = node.parent;
   node.parent = null;
   parent.children.remove(name);
   parent.updateList(name);
+  node.clearValue();
 }</code></pre>
     </section>
 
