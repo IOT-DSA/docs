@@ -152,7 +152,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-90'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-97'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">InvokeResponse deleteDataNode(Map params, Responder responder,
     InvokeResponse response, LocalNode parentNode) {
   Object recursive = params[&apos;Recursive&apos;];
@@ -164,6 +164,7 @@
       removeDataNodeRecursive(parentNode, parentNode.path.substring(parentNode.path.lastIndexOf(&apos;/&apos;) + 1));
     } else {
       if (parentNode.children.isEmpty) {
+        parentNode.clearValue();
         BrokerDataNode parent = parentNode.parent;
         String name = parentNode.path.substring(parentNode.path.lastIndexOf(&apos;/&apos;) + 1);
         parentNode.parent = null;
