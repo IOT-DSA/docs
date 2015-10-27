@@ -101,6 +101,7 @@
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a class="" href="dslink.responder/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/getNode.html">getNode</a></li>
@@ -135,7 +136,7 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-221'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-234'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 SimpleNode addNode(String path, Map m) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
@@ -151,8 +152,8 @@ SimpleNode addNode(String path, Map m) {
 
   if (node == null) {
     String profile = m[r&apos;$is&apos;];
-    if (_profileFactories.containsKey(profile)) {
-      node = _profileFactories[profile](path);
+    if (_profiles.containsKey(profile)) {
+      node = _profiles[profile](path);
     } else {
       node = getOrCreateNode(path);
     }

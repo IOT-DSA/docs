@@ -83,8 +83,10 @@
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
       <li><a class="" href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a class="" href="dslink.browser/NodeFactory.html">NodeFactory</a></li>
       <li><a class="" href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
       <li><a class="" href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
       <li><a class="" href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -241,7 +243,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
 
       <dl class="constructor-summary-list">
         <dt id="SimpleNodeProvider" class="callable">
-          <span class="name"><a class="" href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="parameter-name">profiles</span></span>])</span>
+          <span class="name"><a class="" href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])</span>
         </dt>
         <dd>
           <p>Creates a <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
@@ -374,6 +376,14 @@ the provider is initialized with these values.</p>
         <dd>
             <p>Adds a node at the given <code>path</code> that is initialized with the given data in <code>m</code>.</p>
         </dd>
+        <dt id="addProfile" class="callable">
+            <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/addProfile.html">addProfile</a></span><span class="signature">(<wbr><span class="parameter" id="addProfile-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addProfile-param-factory"><span class="type-annotation"><a class="" href="dslink/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">factory</span>(<span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
         <dt id="createNode" class="callable">
             <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/createNode.html">createNode</a></span><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
                 <span class="returntype parameter">&#8594; <a class="" href="dslink/SimpleNode-class.html">SimpleNode</a></span>
@@ -410,7 +420,7 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/Si
 </p>
         </dd>
         <dt id="init" class="callable">
-            <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="parameter-name">profiles</span></span>])
+            <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
                 <span class="returntype parameter">&#8594; void</span>
             </span>
         </dt>
@@ -504,6 +514,7 @@ the original invocation.<a href="dslink.browser/SimpleNodeProvider/noSuchMethod.
     
       <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/getNode.html">getNode</a></li>

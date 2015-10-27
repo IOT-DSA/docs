@@ -101,6 +101,7 @@
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a class="" href="dslink.responder/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/getNode.html">getNode</a></li>
@@ -125,7 +126,7 @@
             </ol>
         </div>
         <span class="returntype">void</span>
-        <span class="name ">init</span>(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="parameter-name">profiles</span></span>])
+        <span class="name ">init</span>(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
     </section>
 
     <section class="desc markdown">
@@ -135,11 +136,15 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-185'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-194'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-void init([Map m, Map profiles]) {
+void init([Map m, Map&lt;String, SimpleNodeFactory&gt; profiles]) {
   if (profiles != null) {
-    _registerProfiles(profiles);
+    if (profiles.isNotEmpty) {
+      _profiles.addAll(profiles);
+    } else {
+      _profiles = profiles;
+    }
   }
 
   if (m != null) {

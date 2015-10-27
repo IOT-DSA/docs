@@ -102,6 +102,7 @@
     
       <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a class="" href="dslink/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/getNode.html">getNode</a></li>
@@ -121,7 +122,7 @@
 
       <section class="multi-line-signature">
         
-                <span class="name ">SimpleNodeProvider</span>(<wbr>[<span class="parameter" id="-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="parameter-name">profiles</span></span>])
+                <span class="name ">SimpleNodeProvider</span>(<wbr>[<span class="parameter" id="-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
       </section>
 
     <section class="desc markdown">
@@ -133,8 +134,8 @@ the provider is initialized with these values.</p>
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-157'>Link to Crossdart</a></h2>
-        <pre><code class="prettyprint lang-dart">SimpleNodeProvider([Map m, Map profiles]) {
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-166'>Link to Crossdart</a></h2>
+        <pre><code class="prettyprint lang-dart">SimpleNodeProvider([Map m, Map&lt;String, SimpleNodeFactory&gt; profiles]) {
   // by default, the first SimpleNodeProvider is the static instance
   if (instance == null) {
      instance = this;
