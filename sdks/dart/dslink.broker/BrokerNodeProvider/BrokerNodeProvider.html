@@ -201,6 +201,7 @@ List defaultPermission, this.downstreamName: &apos;conns&apos;, this.storage, th
   quarantineNode = nodes[&apos;/quarantine&apos;];
   upstreamDataNode = nodes[&apos;/upstream&apos;];
   tokens = nodes[&apos;/sys/tokens&apos;];
+  new BrokerQueryNode(&quot;/sys/query&quot;, this);
 
   enabledPermission = defaultPermission != null;
 

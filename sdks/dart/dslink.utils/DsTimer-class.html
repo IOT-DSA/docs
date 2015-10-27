@@ -129,189 +129,189 @@
 
 
     <section class="summary offset-anchor" id="static-properties">
-        <h2>Static Properties</h2>
+      <h2>Static Properties</h2>
 
-        <dl class="properties">
-            <dt id="timerTimer" class="property">
-                <span class="name"><a class="" href="dslink.utils/DsTimer/timerTimer.html">timerTimer</a></span>
-                <span class="signature">&#8594; Timer</span>
-            </dt>
-            <dd>
-                <p></p>
-                <div class="features">
+      <dl class="properties">
+        <dt id="timerTimer" class="property">
+            <span class="name"><a class="" href="dslink.utils/DsTimer/timerTimer.html">timerTimer</a></span>
+            <span class="signature">&#8594; Timer</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
         read / write
     </div>
 </dd>
-            <dt id="timerTs50" class="property">
-                <span class="name"><a class="" href="dslink.utils/DsTimer/timerTs50.html">timerTs50</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p></p>
-                <div class="features">
+        <dt id="timerTs50" class="property">
+            <span class="name"><a class="" href="dslink.utils/DsTimer/timerTs50.html">timerTs50</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p></p>
+            <div class="features">
         read / write
     </div>
 </dd>
-        </dl>
+      </dl>
     </section>
 
     <section class="summary offset-anchor" id="static-methods">
-        <h2>Static Methods</h2>
-        <dl class="callables">
-            <dt id="callLater" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/callLater.html">callLater</a></span><span class="signature">(<wbr><span class="parameter" id="callLater-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-            <dt id="millisecondsSinceEpoch" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/millisecondsSinceEpoch.html">millisecondsSinceEpoch</a></span><span class="signature">(<wbr>)
-                    <span class="returntype parameter">&#8594; int</span>
-                </span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-            <dt id="runNow" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/runNow.html">runNow</a></span><span class="signature">(<wbr>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-            <dt id="timerCancel" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/timerCancel.html">timerCancel</a></span><span class="signature">(<wbr><span class="parameter" id="timerCancel-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-            <dt id="timerOnceAfter" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceAfter.html">timerOnceAfter</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceAfter-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceAfter-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p>do nothng if the callback is already in the list and will get called after N or more ms</p>
-            </dd>
-            <dt id="timerOnceBefore" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceBefore.html">timerOnceBefore</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
-            </dd>
-            <dt id="timerOnceBetween" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceBetween.html">timerOnceBetween</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>, <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
-                    <span class="returntype parameter">&#8594; void</span>
-                </span>
-            </dt>
-            <dd>
-                <p>do nothing if the callback is already in the list and will get called after M to N ms</p>
-            </dd>
-            <dt id="waitAndRun" class="callable">
-                <span class="name "><a class="" href="dslink.utils/DsTimer/waitAndRun.html">waitAndRun</a></span><span class="signature">(<wbr><span class="parameter" id="waitAndRun-param-time"><span class="type-annotation">Duration</span> <span class="parameter-name">time</span></span>, <span class="parameter" id="waitAndRun-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
-                    <span class="returntype parameter">&#8594; </span>
-                </span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-        </dl>
-    </section>
-
-    <section class="summary offset-anchor" id="instance-properties">
-        <h2>Properties</h2>
-
-        <dl class="properties">
-            <dt id="hashCode" class="property">
-                <span class="name"><a class="" href="dslink.utils/DsTimer/hashCode.html">hashCode</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p>Get a hash code for this object.<a href="dslink.utils/DsTimer/hashCode.html">&hellip;</a>
-</p>
-                <div class="features">
-        read-only, inherited
-    </div>
-</dd>
-            <dt id="runtimeType" class="property">
-                <span class="name"><a class="" href="dslink.utils/DsTimer/runtimeType.html">runtimeType</a></span>
-                <span class="signature">&#8594; Type</span>
-            </dt>
-            <dd>
-                <p>A representation of the runtime type of the object.</p>
-                <div class="features">
-        read-only, inherited
-    </div>
-</dd>
-        </dl>
+      <h2>Static Methods</h2>
+      <dl class="callables">
+        <dt id="callLater" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/callLater.html">callLater</a></span><span class="signature">(<wbr><span class="parameter" id="callLater-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="millisecondsSinceEpoch" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/millisecondsSinceEpoch.html">millisecondsSinceEpoch</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; int</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="runNow" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/runNow.html">runNow</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="timerCancel" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/timerCancel.html">timerCancel</a></span><span class="signature">(<wbr><span class="parameter" id="timerCancel-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+        <dt id="timerOnceAfter" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceAfter.html">timerOnceAfter</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceAfter-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceAfter-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p>do nothng if the callback is already in the list and will get called after N or more ms</p>
+        </dd>
+        <dt id="timerOnceBefore" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceBefore.html">timerOnceBefore</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
+        </dd>
+        <dt id="timerOnceBetween" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/timerOnceBetween.html">timerOnceBetween</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>, <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
+                <span class="returntype parameter">&#8594; void</span>
+            </span>
+        </dt>
+        <dd>
+            <p>do nothing if the callback is already in the list and will get called after M to N ms</p>
+        </dd>
+        <dt id="waitAndRun" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/waitAndRun.html">waitAndRun</a></span><span class="signature">(<wbr><span class="parameter" id="waitAndRun-param-time"><span class="type-annotation">Duration</span> <span class="parameter-name">time</span></span>, <span class="parameter" id="waitAndRun-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+                <span class="returntype parameter">&#8594; </span>
+            </span>
+        </dt>
+        <dd>
+            <p></p>
+        </dd>
+      </dl>
     </section>
 
     <section class="summary offset-anchor" id="constructors">
-        <h2>Constructors</h2>
+      <h2>Constructors</h2>
 
-        <dl class="constructor-summary-list">
-            <dt id="DsTimer" class="callable">
-                <span class="name"><a class="" href="dslink.utils/DsTimer/DsTimer.html">DsTimer</a></span><span class="signature">()</span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-        </dl>
-      </section>
+      <dl class="constructor-summary-list">
+        <dt id="DsTimer" class="callable">
+          <span class="name"><a class="" href="dslink.utils/DsTimer/DsTimer.html">DsTimer</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
 
-      <section class="summary offset-anchor" id="operators">
-          <h2>Operators</h2>
-          <dl class="callables">
-              <dt id="operator ==" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/DsTimer/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
-                      <span class="returntype parameter">&#8594; bool</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p>The equality operator.<a href="dslink.utils/DsTimer/operator_equals.html">&hellip;</a>
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property">
+            <span class="name"><a class="" href="dslink.utils/DsTimer/hashCode.html">hashCode</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Get a hash code for this object.<a href="dslink.utils/DsTimer/hashCode.html">&hellip;</a>
 </p>
-                  <div class="features">inherited</div>
-              </dd>
-          </dl>
-      </section>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="runtimeType" class="property">
+            <span class="name"><a class="" href="dslink.utils/DsTimer/runtimeType.html">runtimeType</a></span>
+            <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd>
+            <p>A representation of the runtime type of the object.</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+      </dl>
+    </section>
 
-      <section class="summary offset-anchor" id="instance-methods">
-          <h2>Methods</h2>
-          <dl class="callables">
-              <dt id="noSuchMethod" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/DsTimer/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
-                      <span class="returntype parameter">&#8594; dynamic</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+    <section class="summary offset-anchor" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                <span class="returntype parameter">&#8594; bool</span>
+            </span>
+        </dt>
+        <dd>
+            <p>The equality operator.<a href="dslink.utils/DsTimer/operator_equals.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
 on an object. The name of the method and the arguments of the
 invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
 If <code>noSuchMethod</code> returns a value, that value becomes the result of
 the original invocation.<a href="dslink.utils/DsTimer/noSuchMethod.html">&hellip;</a>
 </p>
-                  <div class="features">inherited</div>
-              </dd>
-              <dt id="toString" class="callable">
-                  <span class="name "><a class="" href="dslink.utils/DsTimer/toString.html">toString</a></span><span class="signature">(<wbr>)
-                      <span class="returntype parameter">&#8594; String</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p>Returns a string representation of this object.</p>
-                  <div class="features">inherited</div>
-              </dd>
-          </dl>
-      </section>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable">
+            <span class="name "><a class="" href="dslink.utils/DsTimer/toString.html">toString</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Returns a string representation of this object.</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
 
-    </div> <!-- /.main-content -->
+  </div> <!-- /.main-content -->
 
   <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>DsTimer</h5>

@@ -103,160 +103,160 @@
 
 
     <section class="summary offset-anchor" id="static-properties">
-        <h2>Static Properties</h2>
+      <h2>Static Properties</h2>
 
-        <dl class="properties">
-            <dt id="client" class="property">
-                <span class="name"><a class="" href="dslink.io/HttpHelper/client.html">client</a></span>
-                <span class="signature">&#8594; HttpClient</span>
-            </dt>
-            <dd>
-                <p>Main HTTP Client</p>
-                <div class="features">
+      <dl class="properties">
+        <dt id="client" class="property">
+            <span class="name"><a class="" href="dslink.io/HttpHelper/client.html">client</a></span>
+            <span class="signature">&#8594; HttpClient</span>
+        </dt>
+        <dd>
+            <p>Main HTTP Client</p>
+            <div class="features">
         read / write
     </div>
 </dd>
-        </dl>
+      </dl>
     </section>
 
     <section class="summary offset-anchor" id="static-methods">
-        <h2>Static Methods</h2>
-        <dl class="callables">
-            <dt id="connectToWebSocket" class="callable">
-                <span class="name "><a class="" href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>, <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span></span>, <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span></span>})
-                    <span class="returntype parameter">&#8594; Future&lt;WebSocket&gt;</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Custom WebSocket Connection logic.</p>
-            </dd>
-            <dt id="createRequest" class="callable">
-                <span class="name "><a class="" href="dslink.io/HttpHelper/createRequest.html">createRequest</a></span><span class="signature">(<wbr><span class="parameter" id="createRequest-param-method"><span class="type-annotation">String</span> <span class="parameter-name">method</span></span>, <span class="parameter" id="createRequest-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="createRequest-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
-                    <span class="returntype parameter">&#8594; Future&lt;HttpClientRequest&gt;</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Creates an <code>HttpClientRequest</code> with the given parameters.
+      <h2>Static Methods</h2>
+      <dl class="callables">
+        <dt id="connectToWebSocket" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>, <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span></span>, <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span></span>})
+                <span class="returntype parameter">&#8594; Future&lt;WebSocket&gt;</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Custom WebSocket Connection logic.</p>
+        </dd>
+        <dt id="createRequest" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/createRequest.html">createRequest</a></span><span class="signature">(<wbr><span class="parameter" id="createRequest-param-method"><span class="type-annotation">String</span> <span class="parameter-name">method</span></span>, <span class="parameter" id="createRequest-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="createRequest-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+                <span class="returntype parameter">&#8594; Future&lt;HttpClientRequest&gt;</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Creates an <code>HttpClientRequest</code> with the given parameters.
 <code>method</code> is the HTTP method.
 <code>url</code> is the URL to make the request to.
 <code>headers</code> specifies additional headers to set.</p>
-            </dd>
-            <dt id="fetchJSON" class="callable">
-                <span class="name "><a class="" href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></span><span class="signature">(<wbr><span class="parameter" id="fetchJSON-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchJSON-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
-                    <span class="returntype parameter">&#8594; </span>
-                </span>
-            </dt>
-            <dd>
-                <p>Fetches the specified <code>url</code> from HTTP as JSON.
+        </dd>
+        <dt id="fetchJSON" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></span><span class="signature">(<wbr><span class="parameter" id="fetchJSON-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchJSON-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+                <span class="returntype parameter">&#8594; </span>
+            </span>
+        </dt>
+        <dd>
+            <p>Fetches the specified <code>url</code> from HTTP as JSON.
 If <code>headers</code> is specified, the headers will be added onto the request.</p>
-            </dd>
-            <dt id="fetchUrl" class="callable">
-                <span class="name "><a class="" href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></span><span class="signature">(<wbr><span class="parameter" id="fetchUrl-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchUrl-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
-                    <span class="returntype parameter">&#8594; Future&lt;String&gt;</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Fetches the specified <code>url</code> from HTTP.
+        </dd>
+        <dt id="fetchUrl" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></span><span class="signature">(<wbr><span class="parameter" id="fetchUrl-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchUrl-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+                <span class="returntype parameter">&#8594; Future&lt;String&gt;</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Fetches the specified <code>url</code> from HTTP.
 If <code>headers</code> is specified, the headers will be added onto the request.</p>
-            </dd>
-            <dt id="readBytesFromResponse" class="callable">
-                <span class="name "><a class="" href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></span><span class="signature">(<wbr><span class="parameter" id="readBytesFromResponse-param-response"><span class="type-annotation">HttpClientResponse</span> <span class="parameter-name">response</span></span>)
-                    <span class="returntype parameter">&#8594; Future&lt;List&lt;int&gt;&gt;</span>
-                </span>
-            </dt>
-            <dd>
-                <p>Reads the entire <code>response</code> as a list of bytes.</p>
-            </dd>
-        </dl>
-    </section>
-
-    <section class="summary offset-anchor" id="instance-properties">
-        <h2>Properties</h2>
-
-        <dl class="properties">
-            <dt id="hashCode" class="property">
-                <span class="name"><a class="" href="dslink.io/HttpHelper/hashCode.html">hashCode</a></span>
-                <span class="signature">&#8594; int</span>
-            </dt>
-            <dd>
-                <p>Get a hash code for this object.<a href="dslink.io/HttpHelper/hashCode.html">&hellip;</a>
-</p>
-                <div class="features">
-        read-only, inherited
-    </div>
-</dd>
-            <dt id="runtimeType" class="property">
-                <span class="name"><a class="" href="dslink.io/HttpHelper/runtimeType.html">runtimeType</a></span>
-                <span class="signature">&#8594; Type</span>
-            </dt>
-            <dd>
-                <p>A representation of the runtime type of the object.</p>
-                <div class="features">
-        read-only, inherited
-    </div>
-</dd>
-        </dl>
+        </dd>
+        <dt id="readBytesFromResponse" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></span><span class="signature">(<wbr><span class="parameter" id="readBytesFromResponse-param-response"><span class="type-annotation">HttpClientResponse</span> <span class="parameter-name">response</span></span>)
+                <span class="returntype parameter">&#8594; Future&lt;List&lt;int&gt;&gt;</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Reads the entire <code>response</code> as a list of bytes.</p>
+        </dd>
+      </dl>
     </section>
 
     <section class="summary offset-anchor" id="constructors">
-        <h2>Constructors</h2>
+      <h2>Constructors</h2>
 
-        <dl class="constructor-summary-list">
-            <dt id="HttpHelper" class="callable">
-                <span class="name"><a class="" href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></span><span class="signature">()</span>
-            </dt>
-            <dd>
-                <p></p>
-            </dd>
-        </dl>
-      </section>
+      <dl class="constructor-summary-list">
+        <dt id="HttpHelper" class="callable">
+          <span class="name"><a class="" href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
 
-      <section class="summary offset-anchor" id="operators">
-          <h2>Operators</h2>
-          <dl class="callables">
-              <dt id="operator ==" class="callable">
-                  <span class="name "><a class="" href="dslink.io/HttpHelper/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
-                      <span class="returntype parameter">&#8594; bool</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p>The equality operator.<a href="dslink.io/HttpHelper/operator_equals.html">&hellip;</a>
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property">
+            <span class="name"><a class="" href="dslink.io/HttpHelper/hashCode.html">hashCode</a></span>
+            <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+            <p>Get a hash code for this object.<a href="dslink.io/HttpHelper/hashCode.html">&hellip;</a>
 </p>
-                  <div class="features">inherited</div>
-              </dd>
-          </dl>
-      </section>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+        <dt id="runtimeType" class="property">
+            <span class="name"><a class="" href="dslink.io/HttpHelper/runtimeType.html">runtimeType</a></span>
+            <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd>
+            <p>A representation of the runtime type of the object.</p>
+            <div class="features">
+        read-only, inherited
+    </div>
+</dd>
+      </dl>
+    </section>
 
-      <section class="summary offset-anchor" id="instance-methods">
-          <h2>Methods</h2>
-          <dl class="callables">
-              <dt id="noSuchMethod" class="callable">
-                  <span class="name "><a class="" href="dslink.io/HttpHelper/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
-                      <span class="returntype parameter">&#8594; dynamic</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+    <section class="summary offset-anchor" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+                <span class="returntype parameter">&#8594; bool</span>
+            </span>
+        </dt>
+        <dd>
+            <p>The equality operator.<a href="dslink.io/HttpHelper/operator_equals.html">&hellip;</a>
+</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="noSuchMethod" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+                <span class="returntype parameter">&#8594; dynamic</span>
+            </span>
+        </dt>
+        <dd>
+            <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
 on an object. The name of the method and the arguments of the
 invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
 If <code>noSuchMethod</code> returns a value, that value becomes the result of
 the original invocation.<a href="dslink.io/HttpHelper/noSuchMethod.html">&hellip;</a>
 </p>
-                  <div class="features">inherited</div>
-              </dd>
-              <dt id="toString" class="callable">
-                  <span class="name "><a class="" href="dslink.io/HttpHelper/toString.html">toString</a></span><span class="signature">(<wbr>)
-                      <span class="returntype parameter">&#8594; String</span>
-                  </span>
-              </dt>
-              <dd>
-                  <p>Returns a string representation of this object.</p>
-                  <div class="features">inherited</div>
-              </dd>
-          </dl>
-      </section>
+            <div class="features">inherited</div>
+        </dd>
+        <dt id="toString" class="callable">
+            <span class="name "><a class="" href="dslink.io/HttpHelper/toString.html">toString</a></span><span class="signature">(<wbr>)
+                <span class="returntype parameter">&#8594; String</span>
+            </span>
+        </dt>
+        <dd>
+            <p>Returns a string representation of this object.</p>
+            <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
 
-    </div> <!-- /.main-content -->
+  </div> <!-- /.main-content -->
 
   <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
     <h5>HttpHelper</h5>
