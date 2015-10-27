@@ -126,6 +126,9 @@
     String path = commands[0].substring(5);
     BrokerQueryCommand listcommand = new QueryCommandList(path, this);
     listcommand = _getOrAddCommand(listcommand);
+    if (listcommand == null) {
+      return null;
+    }
     BrokerQueryCommand subcommand = new QueryCommandSubscribe(this);
     subcommand.base = listcommand;
     subcommand = _getOrAddCommand(subcommand);
@@ -169,7 +172,7 @@
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
 
-<!-- Made with <3 by dartdoc version 0.7.3 -->
+<!-- Made with <3 by dartdoc version 0.7.4 -->
 </body>
 
 </html>
