@@ -126,8 +126,9 @@
   if (_cachedQueryId == null) {
     if (base != null) {
       _cachedQueryId = &apos;$base|$this&apos;;
+    } else {
+      _cachedQueryId = toString();
     }
-    _cachedQueryId = toString();
   }
   return _cachedQueryId;
 }</code></pre>
