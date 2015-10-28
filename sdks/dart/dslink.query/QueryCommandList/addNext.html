@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>update method - QueryCommandList class - dslink.query library - Dart API</title>
+    <title>addNext method - QueryCommandList class - dslink.query library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the update method from the QueryCommandList class, for the Dart programming language.">
+    <meta name="description" content="API docs for the addNext method from the QueryCommandList class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
                   <li><a href="dslink.query/QueryCommandList-class.html">QueryCommandList</a></li>
-                  <li class="self-crumb">update</li>
+                  <li class="self-crumb">addNext</li>
               </ol>
-              <div class="self-name">update</div>
+              <div class="self-name">addNext</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
               <li><a href="dslink.query/QueryCommandList-class.html">QueryCommandList</a></li>
-              <li class="self-crumb">update</li>
+              <li class="self-crumb">addNext</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> update
+                  <div class="kind">method</div> addNext
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.query/QueryCommandList/update.html#source">Source</a></li>
+              <li><a href="dslink.query/QueryCommandList/addNext.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -96,7 +96,7 @@
       <li><a class="" href="dslink.query/QueryCommandList/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.query/QueryCommandList-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.query/BrokerQueryCommand/addNext.html">addNext</a></li>
+      <li><a class="" href="dslink.query/QueryCommandList/addNext.html">addNext</a></li>
       <li><a class="" href="dslink.query/BrokerQueryCommand/addResponse.html">addResponse</a></li>
       <li><a class="" href="dslink.query/QueryCommandList/destroy.html">destroy</a></li>
       <li><a class="" href="dslink.query/BrokerQueryCommand/getQueryId.html">getQueryId</a></li>
@@ -104,8 +104,8 @@
       <li><a class="" href="dslink.query/QueryCommandList/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.query/BrokerQueryCommand/removeNext.html">removeNext</a></li>
       <li><a class="" href="dslink.query/QueryCommandList/toString.html">toString</a></li>
-      <li><a class="" href="dslink.query/QueryCommandList/update.html">update</a></li>
       <li><a class="" href="dslink.query/QueryCommandList/updateFromBase.html">updateFromBase</a></li>
+      <li><a class="" href="dslink.query/QueryCommandList/updateRow.html">updateRow</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -114,7 +114,7 @@
 
     <section class="multi-line-signature">
         <span class="returntype">void</span>
-        <span class="name ">update</span>(<wbr><span class="parameter" id="update-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+        <span class="name ">addNext</span>(<wbr><span class="parameter" id="addNext-param-next"><span class="type-annotation"><a class="" href="dslink.query/BrokerQueryCommand-class.html">BrokerQueryCommand</a></span> <span class="parameter-name">next</span></span>)
     </section>
 
     <section class="desc markdown">
@@ -124,13 +124,16 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/query/query_list_command.dart.html#line-181'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void update(String path){
-  _changes.add(path);
-  if (!_pending) {
-    _pending = true;
-    DsTimer.callLater(_doUpdate);
-  }
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/query/query_list_command.dart.html#line-189'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void addNext(BrokerQueryCommand next) {
+  super.addNext(next);
+  List rows = [];
+  _dict.forEach((String path, _ListingNode listing){
+    if (listing._selfMatch) {
+      rows.add([listing.node, &apos;+&apos;]);
+    }
+  });
+  next.updateFromBase(rows);
 }</code></pre>
     </section>
 

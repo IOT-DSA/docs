@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>toString method - QueryCommandList class - dslink.query library - Dart API</title>
+    <title>updateRow method - QueryCommandList class - dslink.query library - Dart API</title>
     <!-- required because all the links are pseudo-absolute -->
     <base href="../..">
 
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="static-assets/styles.css">
 
-    <meta name="description" content="API docs for the toString method from the QueryCommandList class, for the Dart programming language.">
+    <meta name="description" content="API docs for the updateRow method from the QueryCommandList class, for the Dart programming language.">
     <link rel="icon" href="static-assets/favicon.png">
 
     <!-- Do not remove placeholder -->
@@ -34,9 +34,9 @@
                   <li><a href="index.html">dslink</a></li>
                   <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
                   <li><a href="dslink.query/QueryCommandList-class.html">QueryCommandList</a></li>
-                  <li class="self-crumb">toString</li>
+                  <li class="self-crumb">updateRow</li>
               </ol>
-              <div class="self-name">toString</div>
+              <div class="self-name">updateRow</div>
               <form class="search navbar-right" role="search">
                 <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
               </form>
@@ -52,15 +52,15 @@
               <li><a href="index.html">dslink</a></li>
               <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
               <li><a href="dslink.query/QueryCommandList-class.html">QueryCommandList</a></li>
-              <li class="self-crumb">toString</li>
+              <li class="self-crumb">updateRow</li>
           </ol>
           <div class="title-description">
               <h1 class="title">
-                  <div class="kind">method</div> toString
+                  <div class="kind">method</div> updateRow
               </h1>
           </div>
           <ul class="subnav">
-              <li><a href="dslink.query/QueryCommandList/toString.html#source">Source</a></li>
+              <li><a href="dslink.query/QueryCommandList/updateRow.html#source">Source</a></li>
           </ul>
         </div> <!-- /col -->
       </div> <!-- /row -->
@@ -113,20 +113,22 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-        <span class="returntype">String</span>
-        <span class="name ">toString</span>(<wbr>)
+        <span class="returntype">void</span>
+        <span class="name ">updateRow</span>(<wbr><span class="parameter" id="updateRow-param-row"><span class="parameter-name">row</span></span>)
     </section>
 
     <section class="desc markdown">
     
-          <p>Returns a string representation of this object.</p>
+          <p class="no-docs">Not documented.</p>
     
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/query/query_list_command.dart.html#line-219'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">String toString() {
-  return &apos;list ${rawpath.join(&quot;,&quot;)}&apos;;
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/query/query_list_command.dart.html#line-184'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void updateRow(List row){
+  for (var next in nexts) {
+    next.updateFromBase([row]);
+  }
 }</code></pre>
     </section>
 
