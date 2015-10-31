@@ -126,7 +126,7 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/timer.dart.html#line-177'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static void timerCancel(Function callback) {
   if (_functionsMap.containsKey(callback)) {
-    // TODO what if timerCancel is called from another timer of group?
+    // TODO: what if timerCancel is called from another timer of group?
     TimerFunctions existTf = _functionsMap[callback];
     existTf.remove(callback);
   }
