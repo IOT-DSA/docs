@@ -191,6 +191,7 @@
     parentNode.updateList(name);
     DsTimer.timerOnceBefore(
         (responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
+    return response..close();
   }
   return response..close(DSError.INVALID_PARAMETER);
 }</code></pre>
