@@ -294,7 +294,7 @@
         </dd>
         <dt id="asyncExpand" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/asyncExpand.html">asyncExpand</a></span><span class="signature">(<wbr><span class="parameter" id="asyncExpand-param-convert"><span class="type-annotation">Stream</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -303,7 +303,7 @@
         </dd>
         <dt id="asyncMap" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/asyncMap.html">asyncMap</a></span><span class="signature">(<wbr><span class="parameter" id="asyncMap-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -331,7 +331,7 @@ mapped to a new event.<a href="dslink.utils/CachedStreamWrapper/asyncMap.html">&
         </dd>
         <dt id="drain" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/drain.html">drain</a></span><span class="signature">(<wbr>[<span class="parameter" id="drain-param-futureValue"><span class="parameter-name">futureValue</span></span>])
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -359,7 +359,7 @@ occured.<a href="dslink.utils/CachedStreamWrapper/drain.html">&hellip;</a>
         </dd>
         <dt id="expand" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/expand.html">expand</a></span><span class="signature">(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -369,7 +369,7 @@ into zero or more events.<a href="dslink.utils/CachedStreamWrapper/expand.html">
         </dd>
         <dt id="firstWhere" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/firstWhere.html">firstWhere</a></span><span class="signature">(<wbr><span class="parameter" id="firstWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="firstWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -378,7 +378,7 @@ into zero or more events.<a href="dslink.utils/CachedStreamWrapper/expand.html">
         </dd>
         <dt id="fold" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/fold.html">fold</a></span><span class="signature">(<wbr><span class="parameter" id="fold-param-initialValue"><span class="parameter-name">initialValue</span></span>, <span class="parameter" id="fold-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -386,7 +386,7 @@ into zero or more events.<a href="dslink.utils/CachedStreamWrapper/expand.html">
         </dd>
         <dt id="forEach" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/forEach.html">forEach</a></span><span class="signature">(<wbr><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="action-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -413,7 +413,7 @@ into zero or more events.<a href="dslink.utils/CachedStreamWrapper/expand.html">
         </dd>
         <dt id="lastWhere" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/lastWhere.html">lastWhere</a></span><span class="signature">(<wbr><span class="parameter" id="lastWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="lastWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -431,7 +431,7 @@ into zero or more events.<a href="dslink.utils/CachedStreamWrapper/expand.html">
         </dd>
         <dt id="map" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/map.html">map</a></span><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -455,7 +455,7 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
         </dd>
         <dt id="pipe" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/pipe.html">pipe</a></span><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer&lt;T&gt;</span> <span class="parameter-name">streamConsumer</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -516,8 +516,8 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
 </p>
         </dd>
         <dt id="timeout" class="callable">
-          <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/timeout.html">timeout</a></span><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="parameter-name">sink</span></span>)</span>})
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/timeout.html">timeout</a></span><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>})
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -552,7 +552,7 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
         </dd>
         <dt id="transform" class="callable">
           <span class="name "><a class="" href="dslink.utils/CachedStreamWrapper/transform.html">transform</a></span><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer&lt;T, dynamic&gt;</span> <span class="parameter-name">streamTransformer</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd>
@@ -579,22 +579,24 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
     
     
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.utils/CachedStreamWrapper-class.html#instance-properties">Properties</a>
+      </li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/first.html">first</a></li>
-      <li><a class="" href="dslink.utils/CachedStreamWrapper/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a class="" href="dslink.utils/CachedStreamWrapper/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/isBroadcast.html">isBroadcast</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/isEmpty.html">isEmpty</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/last.html">last</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/lastValue.html">lastValue</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/length.html">length</a></li>
-      <li><a class="" href="dslink.utils/CachedStreamWrapper/runtimeType.html">runtimeType</a></li>
+      <li class="inherited"><a class="" href="dslink.utils/CachedStreamWrapper/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/single.html">single</a></li>
     
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.utils/CachedStreamWrapper/CachedStreamWrapper.html">CachedStreamWrapper</a></li>
-    
-      <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.utils/CachedStreamWrapper/operator_equals.html">operator ==</a></li>
+      <li class="section-title inherited"><a href="dslink.utils/CachedStreamWrapper-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink.utils/CachedStreamWrapper/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.utils/CachedStreamWrapper-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/any.html">any</a></li>
@@ -615,7 +617,7 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
       <li><a class="" href="dslink.utils/CachedStreamWrapper/lastWhere.html">lastWhere</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/listen.html">listen</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/map.html">map</a></li>
-      <li><a class="" href="dslink.utils/CachedStreamWrapper/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.utils/CachedStreamWrapper/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/pipe.html">pipe</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/reduce.html">reduce</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/singleWhere.html">singleWhere</a></li>
@@ -626,7 +628,7 @@ the original invocation.<a href="dslink.utils/CachedStreamWrapper/noSuchMethod.h
       <li><a class="" href="dslink.utils/CachedStreamWrapper/timeout.html">timeout</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/toList.html">toList</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/toSet.html">toSet</a></li>
-      <li><a class="" href="dslink.utils/CachedStreamWrapper/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.utils/CachedStreamWrapper/toString.html">toString</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/transform.html">transform</a></li>
       <li><a class="" href="dslink.utils/CachedStreamWrapper/where.html">where</a></li>
     </ol>

@@ -239,7 +239,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="ValueUpdate" class="callable">
-          <span class="name"><a class="" href="dslink/ValueUpdate/ValueUpdate.html">ValueUpdate</a></span><span class="signature">(<span class="parameter" id="-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, {<span class="parameter" id="-param-ts"><span class="type-annotation">String</span> <span class="parameter-name">ts</span></span>, <span class="parameter" id="-param-meta"><span class="parameter-name">meta</span></span>, <span class="parameter" id="-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span></span>, <span class="parameter" id="-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>: <span class="default-value">1</span></span>, <span class="parameter" id="-param-sum"><span class="type-annotation">num</span> <span class="parameter-name">sum</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-min"><span class="type-annotation">num</span> <span class="parameter-name">min</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-max"><span class="type-annotation">num</span> <span class="parameter-name">max</span>: <span class="default-value">double.NAN</span></span>})</span>
+          <span class="name"><a class="" href="dslink/ValueUpdate/ValueUpdate.html">ValueUpdate</a></span><span class="signature">(<span class="parameter" id="-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, {<span class="parameter" id="-param-ts"><span class="type-annotation">String</span> <span class="parameter-name">ts</span></span>, <span class="parameter" id="-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>, <span class="parameter" id="-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span></span>, <span class="parameter" id="-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>: <span class="default-value">1</span></span>, <span class="parameter" id="-param-sum"><span class="type-annotation">num</span> <span class="parameter-name">sum</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-min"><span class="type-annotation">num</span> <span class="parameter-name">min</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-max"><span class="type-annotation">num</span> <span class="parameter-name">max</span>: <span class="default-value">double.NAN</span></span>})</span>
         </dt>
         <dd>
           <p></p>
@@ -432,7 +432,7 @@ the original invocation.<a href="dslink/ValueUpdate/noSuchMethod.html">&hellip;<
         </dd>
         <dt id="toMap" class="callable">
           <span class="name "><a class="" href="dslink/ValueUpdate/toMap.html">toMap</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Map</span>
           </span>
         </dt>
         <dd>
@@ -462,13 +462,19 @@ the original invocation.<a href="dslink/ValueUpdate/noSuchMethod.html">&hellip;<
       <li class="section-title"><a href="dslink/ValueUpdate-class.html#static-methods">Static methods</a></li>
       <li><a class="" href="dslink/ValueUpdate/getTs.html">getTs</a></li>
     
-      <li class="section-title"><a href="dslink/ValueUpdate-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="dslink/ValueUpdate-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink/ValueUpdate/ValueUpdate.html">ValueUpdate</a></li>
+      <li><a href="dslink/ValueUpdate/ValueUpdate.merge.html">merge</a></li>
+    
+      <li class="section-title">
+        <a href="dslink/ValueUpdate-class.html#instance-properties">Properties</a>
+      </li>
       <li><a class="" href="dslink/ValueUpdate/count.html">count</a></li>
-      <li><a class="" href="dslink/ValueUpdate/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a class="" href="dslink/ValueUpdate/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink/ValueUpdate/latency.html">latency</a></li>
       <li><a class="" href="dslink/ValueUpdate/max.html">max</a></li>
       <li><a class="" href="dslink/ValueUpdate/min.html">min</a></li>
-      <li><a class="" href="dslink/ValueUpdate/runtimeType.html">runtimeType</a></li>
+      <li class="inherited"><a class="" href="dslink/ValueUpdate/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/ValueUpdate/status.html">status</a></li>
       <li><a class="" href="dslink/ValueUpdate/storedData.html">storedData</a></li>
       <li><a class="" href="dslink/ValueUpdate/sum.html">sum</a></li>
@@ -476,19 +482,15 @@ the original invocation.<a href="dslink/ValueUpdate/noSuchMethod.html">&hellip;<
       <li><a class="" href="dslink/ValueUpdate/value.html">value</a></li>
       <li><a class="" href="dslink/ValueUpdate/waitingAck.html">waitingAck</a></li>
     
-      <li class="section-title"><a href="dslink/ValueUpdate-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink/ValueUpdate/ValueUpdate.html">ValueUpdate</a></li>
-      <li><a href="dslink/ValueUpdate/ValueUpdate.merge.html">merge</a></li>
-    
-      <li class="section-title"><a href="dslink/ValueUpdate-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink/ValueUpdate/operator_equals.html">operator ==</a></li>
+      <li class="section-title inherited"><a href="dslink/ValueUpdate-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink/ValueUpdate/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/ValueUpdate-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink/ValueUpdate/equals.html">equals</a></li>
       <li><a class="" href="dslink/ValueUpdate/mergeAdd.html">mergeAdd</a></li>
-      <li><a class="" href="dslink/ValueUpdate/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink/ValueUpdate/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink/ValueUpdate/toMap.html">toMap</a></li>
-      <li><a class="" href="dslink/ValueUpdate/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink/ValueUpdate/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 

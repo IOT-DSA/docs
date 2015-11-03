@@ -115,14 +115,14 @@
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>Object</li>
-          <li></li>
+          <li>Stream</li>
           <li>WorkerSocket</li>
         </ul></dd>
 
         <dt>Implements</dt>
         <dd>
           <ul class="comma-separated clazz-relationships">
-            <li></li>
+            <li>StreamSink</li>
           </ul>
         </dd>
 
@@ -159,7 +159,7 @@
       <dl class="properties">
         <dt id="done" class="property">
           <span class="name"><a class="" href="dslink.worker/WorkerSocket/done.html">done</a></span>
-          <span class="signature">&#8594; </span>
+          <span class="signature">&#8594; Future</span>
         </dt>
         <dd>
           <p></p>
@@ -169,7 +169,7 @@
 </dd>
         <dt id="first" class="property inherited">
           <span class="name"><a class="" href="dslink.worker/WorkerSocket/first.html">first</a></span>
-          <span class="signature">&#8594; </span>
+          <span class="signature">&#8594; Future</span>
         </dt>
         <dd class="inherited">
           <p>Returns the first element of the stream.<a href="dslink.worker/WorkerSocket/first.html">&hellip;</a>
@@ -232,7 +232,7 @@
 </dd>
         <dt id="last" class="property inherited">
           <span class="name"><a class="" href="dslink.worker/WorkerSocket/last.html">last</a></span>
-          <span class="signature">&#8594; </span>
+          <span class="signature">&#8594; Future</span>
         </dt>
         <dd class="inherited">
           <p>Returns the last element of the stream.<a href="dslink.worker/WorkerSocket/last.html">&hellip;</a>
@@ -293,7 +293,7 @@
 </dd>
         <dt id="single" class="property inherited">
           <span class="name"><a class="" href="dslink.worker/WorkerSocket/single.html">single</a></span>
-          <span class="signature">&#8594; </span>
+          <span class="signature">&#8594; Future</span>
         </dt>
         <dd class="inherited">
           <p>Returns the single element.<a href="dslink.worker/WorkerSocket/single.html">&hellip;</a>
@@ -349,8 +349,8 @@
           <p></p>
         </dd>
         <dt id="addStream" class="callable">
-          <span class="name "><a class="" href="dslink.worker/WorkerSocket/addStream.html">addStream</a></span><span class="signature">(<wbr><span class="parameter" id="addStream-param-stream"><span class="parameter-name">stream</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.worker/WorkerSocket/addStream.html">addStream</a></span><span class="signature">(<wbr><span class="parameter" id="addStream-param-stream"><span class="type-annotation">Stream</span> <span class="parameter-name">stream</span></span>)
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -369,7 +369,7 @@
         </dd>
         <dt id="asBroadcastStream" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/asBroadcastStream.html">asBroadcastStream</a></span><span class="signature">(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -379,7 +379,7 @@
         </dd>
         <dt id="asyncExpand" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/asyncExpand.html">asyncExpand</a></span><span class="signature">(<wbr><span class="parameter" id="asyncExpand-param-convert"><span class="type-annotation">Stream</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -389,7 +389,7 @@
         </dd>
         <dt id="asyncMap" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/asyncMap.html">asyncMap</a></span><span class="signature">(<wbr><span class="parameter" id="asyncMap-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -400,7 +400,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
         </dd>
         <dt id="callMethod" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/callMethod.html">callMethod</a></span><span class="signature">(<wbr><span class="parameter" id="callMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="callMethod-param-argument"><span class="parameter-name">argument</span></span>])
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -408,7 +408,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
         </dd>
         <dt id="close" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/close.html">close</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -435,7 +435,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
         </dd>
         <dt id="distinct" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/distinct.html">distinct</a></span><span class="signature">(<wbr>[<span class="parameter" id="distinct-param-equals"><span class="type-annotation">bool</span> <span class="parameter-name">equals</span>(<span class="parameter" id="equals-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="equals-param-next"><span class="type-annotation">T</span> <span class="parameter-name">next</span></span>)</span>])
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -445,7 +445,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
         </dd>
         <dt id="drain" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/drain.html">drain</a></span><span class="signature">(<wbr>[<span class="parameter" id="drain-param-futureValue"><span class="parameter-name">futureValue</span></span>])
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -456,7 +456,7 @@ occured.<a href="dslink.worker/WorkerSocket/drain.html">&hellip;</a>
         </dd>
         <dt id="elementAt" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/elementAt.html">elementAt</a></span><span class="signature">(<wbr><span class="parameter" id="elementAt-param-index"><span class="type-annotation">int</span> <span class="parameter-name">index</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -476,7 +476,7 @@ occured.<a href="dslink.worker/WorkerSocket/drain.html">&hellip;</a>
         </dd>
         <dt id="expand" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/expand.html">expand</a></span><span class="signature">(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -487,7 +487,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="firstWhere" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/firstWhere.html">firstWhere</a></span><span class="signature">(<wbr><span class="parameter" id="firstWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="firstWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -497,7 +497,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="fold" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/fold.html">fold</a></span><span class="signature">(<wbr><span class="parameter" id="fold-param-initialValue"><span class="parameter-name">initialValue</span></span>, <span class="parameter" id="fold-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -506,7 +506,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="forEach" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/forEach.html">forEach</a></span><span class="signature">(<wbr><span class="parameter" id="forEach-param-action"><span class="type-annotation">void</span> <span class="parameter-name">action</span>(<span class="parameter" id="action-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -516,7 +516,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="getMethod" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></span><span class="signature">(<wbr><span class="parameter" id="getMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; <a class="" href="dslink.worker/WorkerMethod.html">WorkerMethod</a></span>
           </span>
         </dt>
         <dd>
@@ -532,7 +532,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="handleError" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/handleError.html">handleError</a></span><span class="signature">(<wbr><span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, {<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -568,7 +568,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="lastWhere" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/lastWhere.html">lastWhere</a></span><span class="signature">(<wbr><span class="parameter" id="lastWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>, {<span class="parameter" id="lastWhere-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span>()</span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -578,7 +578,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="listen" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/listen.html">listen</a></span><span class="signature">(<wbr><span class="parameter" id="listen-param-onData"><span class="type-annotation">void</span> <span class="parameter-name">onData</span>(<span class="parameter" id="onData-param-event"><span class="parameter-name">event</span></span>)</span>, {<span class="parameter" id="listen-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, <span class="parameter" id="listen-param-onDone"><span class="type-annotation">void</span> <span class="parameter-name">onDone</span>()</span>, <span class="parameter" id="listen-param-cancelOnError"><span class="type-annotation">bool</span> <span class="parameter-name">cancelOnError</span></span>})
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; StreamSubscription</span>
           </span>
         </dt>
         <dd>
@@ -587,7 +587,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         </dd>
         <dt id="map" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/map.html">map</a></span><span class="signature">(<wbr><span class="parameter" id="map-param-convert"><span class="type-annotation">dynamic</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -612,15 +612,15 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="ping" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/ping.html">ping</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p></p>
         </dd>
         <dt id="pipe" class="callable inherited">
-          <span class="name "><a class="" href="dslink.worker/WorkerSocket/pipe.html">pipe</a></span><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="parameter-name">streamConsumer</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.worker/WorkerSocket/pipe.html">pipe</a></span><span class="signature">(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer</span> <span class="parameter-name">streamConsumer</span></span>)
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -630,7 +630,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="reduce" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/reduce.html">reduce</a></span><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">T</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -647,7 +647,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="singleWhere" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/singleWhere.html">singleWhere</a></span><span class="signature">(<wbr><span class="parameter" id="singleWhere-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -657,7 +657,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="skip" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/skip.html">skip</a></span><span class="signature">(<wbr><span class="parameter" id="skip-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -667,7 +667,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="skipWhile" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/skipWhile.html">skipWhile</a></span><span class="signature">(<wbr><span class="parameter" id="skipWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -677,7 +677,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="stop" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/stop.html">stop</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -685,7 +685,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="take" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/take.html">take</a></span><span class="signature">(<wbr><span class="parameter" id="take-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -695,7 +695,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="takeWhile" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/takeWhile.html">takeWhile</a></span><span class="signature">(<wbr><span class="parameter" id="takeWhile-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -704,8 +704,8 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
           <div class="features">inherited</div>
         </dd>
         <dt id="timeout" class="callable inherited">
-          <span class="name "><a class="" href="dslink.worker/WorkerSocket/timeout.html">timeout</a></span><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="parameter-name">sink</span></span>)</span>})
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.worker/WorkerSocket/timeout.html">timeout</a></span><span class="signature">(<wbr><span class="parameter" id="timeout-param-timeLimit"><span class="type-annotation">Duration</span> <span class="parameter-name">timeLimit</span></span>, {<span class="parameter" id="timeout-param-onTimeout"><span class="type-annotation">void</span> <span class="parameter-name">onTimeout</span>(<span class="parameter" id="onTimeout-param-sink"><span class="type-annotation">EventSink</span> <span class="parameter-name">sink</span></span>)</span>})
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -715,7 +715,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="toList" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/toList.html">toList</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; Future&lt;&gt;</span>
+            <span class="returntype parameter">&#8594; Future&lt;List&gt;</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -724,7 +724,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="toSet" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/toSet.html">toSet</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; Future&lt;&gt;</span>
+            <span class="returntype parameter">&#8594; Future&lt;Set&gt;</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -742,8 +742,8 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
           <div class="features">inherited</div>
         </dd>
         <dt id="transform" class="callable inherited">
-          <span class="name "><a class="" href="dslink.worker/WorkerSocket/transform.html">transform</a></span><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="parameter-name">streamTransformer</span></span>)
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.worker/WorkerSocket/transform.html">transform</a></span><span class="signature">(<wbr><span class="parameter" id="transform-param-streamTransformer"><span class="type-annotation">StreamTransformer</span> <span class="parameter-name">streamTransformer</span></span>)
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -753,7 +753,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="waitFor" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/waitFor.html">waitFor</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -761,7 +761,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
         </dd>
         <dt id="where" class="callable inherited">
           <span class="name "><a class="" href="dslink.worker/WorkerSocket/where.html">where</a></span><span class="signature">(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Stream</span>
           </span>
         </dt>
         <dd class="inherited">
@@ -780,77 +780,79 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
     
     
     
-      <li class="section-title"><a href="dslink.worker/WorkerSocket-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/done.html">done</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/first.html">first</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/hashCode.html">hashCode</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/isBroadcast.html">isBroadcast</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/isEmpty.html">isEmpty</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/isMaster.html">isMaster</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/last.html">last</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/single.html">single</a></li>
-    
       <li class="section-title"><a href="dslink.worker/WorkerSocket-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.worker/WorkerSocket/WorkerSocket.master.html">master</a></li>
       <li><a href="dslink.worker/WorkerSocket/WorkerSocket.worker.html">worker</a></li>
     
-      <li class="section-title"><a href="dslink.worker/WorkerSocket-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/operator_equals.html">operator ==</a></li>
+      <li class="section-title">
+        <a href="dslink.worker/WorkerSocket-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a class="" href="dslink.worker/WorkerSocket/done.html">done</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/first.html">first</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/isBroadcast.html">isBroadcast</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/isEmpty.html">isEmpty</a></li>
+      <li><a class="" href="dslink.worker/WorkerSocket/isMaster.html">isMaster</a></li>
+      <li><a class="" href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/last.html">last</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/length.html">length</a></li>
+      <li><a class="" href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
+      <li><a class="" href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/single.html">single</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.worker/WorkerSocket-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.worker/WorkerSocket-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/add.html">add</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/addError.html">addError</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/addMethod.html">addMethod</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/addStream.html">addStream</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/any.html">any</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/asBroadcastStream.html">asBroadcastStream</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/asyncExpand.html">asyncExpand</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/asyncMap.html">asyncMap</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/any.html">any</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/asBroadcastStream.html">asBroadcastStream</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/asyncExpand.html">asyncExpand</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/asyncMap.html">asyncMap</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/callMethod.html">callMethod</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/close.html">close</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/contains.html">contains</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/contains.html">contains</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/createSession.html">createSession</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/distinct.html">distinct</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/drain.html">drain</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/elementAt.html">elementAt</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/every.html">every</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/expand.html">expand</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/firstWhere.html">firstWhere</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/distinct.html">distinct</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/drain.html">drain</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/elementAt.html">elementAt</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/every.html">every</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/expand.html">expand</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/firstWhere.html">firstWhere</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/init.html">init</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/join.html">join</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/join.html">join</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/kill.html">kill</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/lastWhere.html">lastWhere</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/lastWhere.html">lastWhere</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/listen.html">listen</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/map.html">map</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/map.html">map</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/ping.html">ping</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/pipe.html">pipe</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/reduce.html">reduce</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/pipe.html">pipe</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/reduce.html">reduce</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/send.html">send</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/singleWhere.html">singleWhere</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/skip.html">skip</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/skipWhile.html">skipWhile</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/singleWhere.html">singleWhere</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/skip.html">skip</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/skipWhile.html">skipWhile</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/stop.html">stop</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/take.html">take</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/takeWhile.html">takeWhile</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/timeout.html">timeout</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/toList.html">toList</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/toSet.html">toSet</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/toString.html">toString</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/transform.html">transform</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/take.html">take</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/takeWhile.html">takeWhile</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/timeout.html">timeout</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/toList.html">toList</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/toSet.html">toSet</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/transform.html">transform</a></li>
       <li><a class="" href="dslink.worker/WorkerSocket/waitFor.html">waitFor</a></li>
-      <li><a class="" href="dslink.worker/WorkerSocket/where.html">where</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerSocket/where.html">where</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 

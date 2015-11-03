@@ -80,12 +80,17 @@
     
     
     
-      <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#instance-properties">Properties</a></li>
+      <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.broker/HttpServerLink/HttpServerLink.html">HttpServerLink</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.broker/HttpServerLink-class.html#instance-properties">Properties</a>
+      </li>
       <li><a class="" href="dslink.broker/HttpServerLink/connection.html">connection</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/dsId.html">dsId</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/enableAck.html">enableAck</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/enableTimeout.html">enableTimeout</a></li>
-      <li><a class="" href="dslink.broker/HttpServerLink/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a class="" href="dslink.broker/HttpServerLink/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/isDsIdValid.html">isDsIdValid</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/isRequester.html">isRequester</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/isResponder.html">isResponder</a></li>
@@ -97,7 +102,7 @@
       <li><a class="" href="dslink.broker/HttpServerLink/publicKey.html">publicKey</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/requester.html">requester</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/responder.html">responder</a></li>
-      <li><a class="" href="dslink.broker/HttpServerLink/runtimeType.html">runtimeType</a></li>
+      <li class="inherited"><a class="" href="dslink.broker/HttpServerLink/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/salts.html">salts</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/session.html">session</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/tempNonce.html">tempNonce</a></li>
@@ -106,11 +111,8 @@
       <li><a class="" href="dslink.broker/HttpServerLink/verifiedNonce.html">verifiedNonce</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/wsconnection.html">wsconnection</a></li>
     
-      <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#constructors">Constructors</a></li>
-      <li><a href="dslink.broker/HttpServerLink/HttpServerLink.html">HttpServerLink</a></li>
-    
-      <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.broker/HttpServerLink/operator_equals.html">operator ==</a></li>
+      <li class="section-title inherited"><a href="dslink.broker/HttpServerLink-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink.broker/HttpServerLink/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.broker/HttpServerLink-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/close.html">close</a></li>
@@ -118,8 +120,8 @@
       <li><a class="" href="dslink.broker/HttpServerLink/handleWsUpdate.html">handleWsUpdate</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/initLink.html">initLink</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/nonceChanged.html">nonceChanged</a></li>
-      <li><a class="" href="dslink.broker/HttpServerLink/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a class="" href="dslink.broker/HttpServerLink/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.broker/HttpServerLink/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.broker/HttpServerLink/toString.html">toString</a></li>
       <li><a class="" href="dslink.broker/HttpServerLink/verifySalt.html">verifySalt</a></li>
     </ol>
 
@@ -129,7 +131,7 @@
 
     <section class="multi-line-signature">
         <span class="returntype">Future</span>
-        <span class="name ">initLink</span>(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-linkData"><span class="parameter-name">linkData</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
+        <span class="name ">initLink</span>(<wbr><span class="parameter" id="initLink-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="initLink-param-clientRequester"><span class="type-annotation">bool</span> <span class="parameter-name">clientRequester</span></span>, <span class="parameter" id="initLink-param-clientResponder"><span class="type-annotation">bool</span> <span class="parameter-name">clientResponder</span></span>, <span class="parameter" id="initLink-param-serverDsId"><span class="type-annotation">String</span> <span class="parameter-name">serverDsId</span></span>, <span class="parameter" id="initLink-param-serverKey"><span class="type-annotation">String</span> <span class="parameter-name">serverKey</span></span>, {<span class="parameter" id="initLink-param-wsUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUri</span>: <span class="default-value">'/ws'</span></span>, <span class="parameter" id="initLink-param-httpUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUri</span>: <span class="default-value">'/http'</span></span>, <span class="parameter" id="initLink-param-updateInterval"><span class="type-annotation">int</span> <span class="parameter-name">updateInterval</span>: <span class="default-value">200</span></span>, <span class="parameter" id="initLink-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>, <span class="parameter" id="initLink-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span>: <span class="default-value">false</span></span>})
     </section>
 
     <section class="desc markdown">

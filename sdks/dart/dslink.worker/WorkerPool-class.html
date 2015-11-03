@@ -222,7 +222,7 @@
         </dd>
         <dt id="callMethod" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerPool/callMethod.html">callMethod</a></span><span class="signature">(<wbr><span class="parameter" id="callMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="callMethod-param-argument"><span class="parameter-name">argument</span></span>])
-            <span class="returntype parameter">&#8594; Future&lt;&gt;</span>
+            <span class="returntype parameter">&#8594; Future&lt;List&gt;</span>
           </span>
         </dt>
         <dd>
@@ -238,15 +238,15 @@
         </dd>
         <dt id="distribute" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerPool/distribute.html">distribute</a></span><span class="signature">(<wbr><span class="parameter" id="distribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="distribute-param-argument"><span class="parameter-name">argument</span></span>])
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p></p>
         </dd>
         <dt id="divide" class="callable">
-          <span class="name "><a class="" href="dslink.worker/WorkerPool/divide.html">divide</a></span><span class="signature">(<wbr><span class="parameter" id="divide-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="divide-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>, {<span class="parameter" id="divide-param-next"><span class="type-annotation">dynamic</span> <span class="parameter-name">next</span>()</span>, <span class="parameter" id="divide-param-collect"><span class="type-annotation">dynamic</span> <span class="parameter-name">collect</span>(<span class="parameter" id="collect-param-inputs"><span class="parameter-name">inputs</span></span>)</span>})
-            <span class="returntype parameter">&#8594; </span>
+          <span class="name "><a class="" href="dslink.worker/WorkerPool/divide.html">divide</a></span><span class="signature">(<wbr><span class="parameter" id="divide-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="divide-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>, {<span class="parameter" id="divide-param-next"><span class="type-annotation">dynamic</span> <span class="parameter-name">next</span>()</span>, <span class="parameter" id="divide-param-collect"><span class="type-annotation">dynamic</span> <span class="parameter-name">collect</span>(<span class="parameter" id="collect-param-inputs"><span class="type-annotation">List</span> <span class="parameter-name">inputs</span></span>)</span>})
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -308,7 +308,7 @@ the original invocation.<a href="dslink.worker/WorkerPool/noSuchMethod.html">&he
         </dd>
         <dt id="ping" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerPool/ping.html">ping</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -332,7 +332,7 @@ the original invocation.<a href="dslink.worker/WorkerPool/noSuchMethod.html">&he
         </dd>
         <dt id="stop" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerPool/stop.html">stop</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -349,7 +349,7 @@ the original invocation.<a href="dslink.worker/WorkerPool/noSuchMethod.html">&he
         </dd>
         <dt id="waitFor" class="callable">
           <span class="name "><a class="" href="dslink.worker/WorkerPool/waitFor.html">waitFor</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -374,18 +374,20 @@ the original invocation.<a href="dslink.worker/WorkerPool/noSuchMethod.html">&he
     
     
     
-      <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/hashCode.html">hashCode</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/onMessageReceivedHandler.html">onMessageReceivedHandler</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/runtimeType.html">runtimeType</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/sessions.html">sessions</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/sockets.html">sockets</a></li>
-    
       <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.worker/WorkerPool/WorkerPool.html">WorkerPool</a></li>
     
+      <li class="section-title">
+        <a href="dslink.worker/WorkerPool-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerPool/hashCode.html">hashCode</a></li>
+      <li><a class="" href="dslink.worker/WorkerPool/onMessageReceivedHandler.html">onMessageReceivedHandler</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerPool/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink.worker/WorkerPool/sessions.html">sessions</a></li>
+      <li><a class="" href="dslink.worker/WorkerPool/sockets.html">sockets</a></li>
+    
       <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/operator_equals.html">operator ==</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerPool/operator_equals.html">operator ==</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/operator_get.html">operator []</a></li>
     
       <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#instance-methods">Methods</a></li>
@@ -399,12 +401,12 @@ the original invocation.<a href="dslink.worker/WorkerPool/noSuchMethod.html">&he
       <li><a class="" href="dslink.worker/WorkerPool/getAvailableWorkerId.html">getAvailableWorkerId</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/init.html">init</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/listen.html">listen</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerPool/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/ping.html">ping</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/resetDistributionCache.html">resetDistributionCache</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/send.html">send</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/stop.html">stop</a></li>
-      <li><a class="" href="dslink.worker/WorkerPool/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.worker/WorkerPool/toString.html">toString</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/waitFor.html">waitFor</a></li>
       <li><a class="" href="dslink.worker/WorkerPool/workerAt.html">workerAt</a></li>
     </ol>

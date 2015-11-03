@@ -328,7 +328,7 @@ inside processor, send() data that only need to appear once per data frame</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="addToSendList" class="callable inherited">
-          <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></span><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="parameter-name">m</span></span>)
+          <span class="name "><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></span><span class="signature">(<wbr><span class="parameter" id="addToSendList-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -386,7 +386,7 @@ inside processor, send() data that only need to appear once per data frame</p>
           <p>gather all the changes from</p>
         </dd>
         <dt id="invoke" class="callable">
-          <span class="name "><a class="" href="dslink.browser/Requester/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+          <span class="name "><a class="" href="dslink.browser/Requester/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
             <span class="returntype parameter">&#8594; Stream&lt;<a class="" href="dslink/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a>&gt;</span>
           </span>
         </dt>
@@ -424,7 +424,7 @@ the original invocation.<a href="dslink.browser/Requester/noSuchMethod.html">&he
           <div class="features">inherited</div>
         </dd>
         <dt id="onData" class="callable">
-          <span class="name "><a class="" href="dslink.browser/Requester/onData.html">onData</a></span><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="parameter-name">list</span></span>)
+          <span class="name "><a class="" href="dslink.browser/Requester/onData.html">onData</a></span><span class="signature">(<wbr><span class="parameter" id="onData-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -464,7 +464,7 @@ the original invocation.<a href="dslink.browser/Requester/noSuchMethod.html">&he
           <p></p>
         </dd>
         <dt id="sendRequest" class="callable">
-          <span class="name "><a class="" href="dslink.browser/Requester/sendRequest.html">sendRequest</a></span><span class="signature">(<wbr><span class="parameter" id="sendRequest-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="sendRequest-param-updater"><span class="type-annotation"><a class="" href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>)
+          <span class="name "><a class="" href="dslink.browser/Requester/sendRequest.html">sendRequest</a></span><span class="signature">(<wbr><span class="parameter" id="sendRequest-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="sendRequest-param-updater"><span class="type-annotation"><a class="" href="dslink/RequestUpdater-class.html">RequestUpdater</a></span> <span class="parameter-name">updater</span></span>)
             <span class="returntype parameter">&#8594; <a class="" href="dslink/Request-class.html">Request</a></span>
           </span>
         </dt>
@@ -515,24 +515,26 @@ the original invocation.<a href="dslink.browser/Requester/noSuchMethod.html">&he
     
     
     
-      <li class="section-title"><a href="dslink.browser/Requester-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
-      <li><a class="" href="dslink.browser/Requester/hashCode.html">hashCode</a></li>
-      <li><a class="" href="dslink.browser/Requester/lastRid.html">lastRid</a></li>
-      <li><a class="" href="dslink.browser/Requester/nodeCache.html">nodeCache</a></li>
-      <li><a class="" href="dslink.browser/Requester/onError.html">onError</a></li>
-      <li><a class="" href="dslink.browser/Requester/runtimeType.html">runtimeType</a></li>
-    
       <li class="section-title"><a href="dslink.browser/Requester-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/Requester/Requester.html">Requester</a></li>
     
-      <li class="section-title"><a href="dslink.browser/Requester-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.browser/Requester/operator_equals.html">operator ==</a></li>
+      <li class="section-title">
+        <a href="dslink.browser/Requester-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a class="" href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/Requester/hashCode.html">hashCode</a></li>
+      <li><a class="" href="dslink.browser/Requester/lastRid.html">lastRid</a></li>
+      <li><a class="" href="dslink.browser/Requester/nodeCache.html">nodeCache</a></li>
+      <li><a class="" href="dslink.browser/Requester/onError.html">onError</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/Requester/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.browser/Requester-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/Requester/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/Requester-class.html#instance-methods">Methods</a></li>
-      <li><a class="" href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
-      <li><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a class="" href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a class="" href="dslink.browser/Requester/closeRequest.html">closeRequest</a></li>
       <li><a class="" href="dslink.browser/Requester/getNextRid.html">getNextRid</a></li>
       <li><a class="" href="dslink.browser/Requester/getNodeValue.html">getNodeValue</a></li>
@@ -541,7 +543,7 @@ the original invocation.<a href="dslink.browser/Requester/noSuchMethod.html">&he
       <li><a class="" href="dslink.browser/Requester/invoke.html">invoke</a></li>
       <li><a class="" href="dslink.browser/Requester/isNodeCached.html">isNodeCached</a></li>
       <li><a class="" href="dslink.browser/Requester/list.html">list</a></li>
-      <li><a class="" href="dslink.browser/Requester/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/Requester/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.browser/Requester/onData.html">onData</a></li>
       <li><a class="" href="dslink.browser/Requester/onDisconnected.html">onDisconnected</a></li>
       <li><a class="" href="dslink.browser/Requester/onReconnected.html">onReconnected</a></li>
@@ -550,7 +552,7 @@ the original invocation.<a href="dslink.browser/Requester/noSuchMethod.html">&he
       <li><a class="" href="dslink.browser/Requester/sendRequest.html">sendRequest</a></li>
       <li><a class="" href="dslink.browser/Requester/set.html">set</a></li>
       <li><a class="" href="dslink.browser/Requester/subscribe.html">subscribe</a></li>
-      <li><a class="" href="dslink.browser/Requester/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/Requester/toString.html">toString</a></li>
       <li><a class="" href="dslink.browser/Requester/unsubscribe.html">unsubscribe</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

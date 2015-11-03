@@ -243,7 +243,7 @@ This is by default always the first instance of <a class="" href="dslink/SimpleN
 
       <dl class="constructor-summary-list">
         <dt id="SimpleNodeProvider" class="callable">
-          <span class="name"><a class="" href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])</span>
+          <span class="name"><a class="" href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])</span>
         </dt>
         <dd>
           <p>Creates a <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
@@ -369,7 +369,7 @@ the provider is initialized with these values.</p>
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="addNode" class="callable">
-          <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></span><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="parameter-name">m</span></span>)
+          <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></span><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; <a class="" href="dslink/SimpleNode-class.html">SimpleNode</a></span>
           </span>
         </dt>
@@ -420,7 +420,7 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/Si
 </p>
         </dd>
         <dt id="init" class="callable">
-          <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
+          <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map&lt;String, <a class="" href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -451,7 +451,7 @@ the original invocation.<a href="dslink.browser/SimpleNodeProvider/noSuchMethod.
         </dd>
         <dt id="save" class="callable">
           <span class="name "><a class="" href="dslink.browser/SimpleNodeProvider/save.html">save</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; </span>
+            <span class="returntype parameter">&#8594; Map</span>
           </span>
         </dt>
         <dd>
@@ -495,22 +495,24 @@ the original invocation.<a href="dslink.browser/SimpleNodeProvider/noSuchMethod.
       <li><a class="" href="dslink.browser/SimpleNodeProvider/instance.html">instance</a></li>
     
     
-      <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#instance-properties">Properties</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/defs.html">defs</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/hashCode.html">hashCode</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/nodes.html">nodes</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/permissions.html">permissions</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/root.html">root</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/sys.html">sys</a></li>
-    
       <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></li>
     
-      <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#operators">Operators</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/operator_equals.html">operator ==</a></li>
-      <li><a class="" href="dslink.browser/NodeProvider/operator_get.html">operator []</a></li>
-      <li><a class="" href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="section-title">
+        <a href="dslink.browser/SimpleNodeProvider-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/defs.html">defs</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/SimpleNodeProvider/hashCode.html">hashCode</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/nodes.html">nodes</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/permissions.html">permissions</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/root.html">root</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink.browser/SimpleNodeProvider/sys.html">sys</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.browser/SimpleNodeProvider-class.html#operators">Operators</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/SimpleNodeProvider/operator_equals.html">operator ==</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/NodeProvider/operator_get.html">operator []</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
       <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></li>
@@ -520,11 +522,11 @@ the original invocation.<a href="dslink.browser/SimpleNodeProvider/noSuchMethod.
       <li><a class="" href="dslink.browser/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/init.html">init</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
-      <li><a class="" href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
+      <li class="inherited"><a class="" href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a class="" href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

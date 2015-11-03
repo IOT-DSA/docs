@@ -142,7 +142,7 @@
 
     <section class="multi-line-signature">
         <span class="returntype"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
-        <span class="name ">addDataNode</span>(<wbr><span class="parameter" id="addDataNode-param-params"><span class="parameter-name">params</span></span>, <span class="parameter" id="addDataNode-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="addDataNode-param-response"><span class="type-annotation"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="addDataNode-param-parentNode"><span class="type-annotation"><a class="" href="dslink.browser/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
+        <span class="name ">addDataNode</span>(<wbr><span class="parameter" id="addDataNode-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, <span class="parameter" id="addDataNode-param-responder"><span class="type-annotation"><a class="" href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="addDataNode-param-response"><span class="type-annotation"><a class="" href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="addDataNode-param-parentNode"><span class="type-annotation"><a class="" href="dslink.browser/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">parentNode</span></span>)
     </section>
 
     <section class="desc markdown">
@@ -152,35 +152,35 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-48'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/data_nodes.dart.html#line-52'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">InvokeResponse addDataNode(Map params, Responder responder,
-    InvokeResponse response, LocalNode parentNode) {
+  InvokeResponse response, LocalNode parentNode) {
   Object name = params[&apos;Name&apos;];
   Object type = params[&apos;Type&apos;];
   Object editor = params[&apos;Editor&apos;];
   if (parentNode is BrokerDataNode &amp;&amp;
-      parentNode.parent != null &amp;&amp; // make sure parent node itself is in tree
-      name is String &amp;&amp;
-      name != &apos;&apos; &amp;&amp;
-      !name.contains(Path.invalidNameChar) &amp;&amp;
-      !name.startsWith(r&apos;$&apos;) &amp;&amp;
-      !name.startsWith(r&apos;!&apos;)) {
+    parentNode.parent != null &amp;&amp; // make sure parent node itself is in tree
+    name is String &amp;&amp;
+    name != &apos;&apos; &amp;&amp;
+    !name.contains(Path.invalidNameChar) &amp;&amp;
+    !name.startsWith(r&apos;$&apos;) &amp;&amp;
+    !name.startsWith(r&apos;!&apos;)) {
     if (parentNode.children.containsKey(name)) {
       return response
         ..close(new DSError(&apos;invalidParameter&apos;, msg: &apos;node already exist&apos;));
     }
     BrokerDataNode node = responder.nodeProvider.getOrCreateNode(
-        &apos;${parentNode.path}/$name&apos;, false);
+      &apos;${parentNode.path}/$name&apos;, false);
     if (type is String &amp;&amp;
-        const [
-      &apos;string&apos;,
-      &apos;number&apos;,
-      &apos;bool&apos;,
-      &apos;array&apos;,
-      &apos;map&apos;,
-      &apos;binary&apos;,
-      &apos;dynamic&apos;
-    ].contains(type)) {
+      const [
+        &apos;string&apos;,
+        &apos;number&apos;,
+        &apos;bool&apos;,
+        &apos;array&apos;,
+        &apos;map&apos;,
+        &apos;binary&apos;,
+        &apos;dynamic&apos;
+      ].contains(type)) {
       node.configs[r&apos;$type&apos;] = type;
       if (editor is String) {
         node.configs[r&apos;$editor&apos;] = editor;
@@ -190,7 +190,7 @@
     node.parent = parentNode;
     parentNode.updateList(name);
     DsTimer.timerOnceBefore(
-        (responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
+      (responder.nodeProvider as BrokerNodeProvider).saveDataNodes, 1000);
     return response..close();
   }
   return response..close(DSError.INVALID_PARAMETER);
