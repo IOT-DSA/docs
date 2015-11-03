@@ -102,6 +102,7 @@
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/name.html">name</a></li>
+      <li><a class="" href="dslink.nodes/DeleteActionNode/onDelete.html">onDelete</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Node/profile.html">profile</a></li>
@@ -190,10 +191,13 @@
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-17'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-21'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 Object onInvoke(Map&lt;String, dynamic&gt; params) {
   provider.removeNode(targetPath);
+  if (onDelete != null) {
+    onDelete();
+  }
   return {};
 }</code></pre>
     </section>

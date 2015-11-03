@@ -107,6 +107,8 @@
       <li><a class="" href="dslink.nodes/CallbackNode/onCreatedCallback.html">onCreatedCallback</a></li>
       <li><a class="" href="dslink.nodes/CallbackNode/onLoadChildCallback.html">onLoadChildCallback</a></li>
       <li><a class="" href="dslink.nodes/CallbackNode/onRemovingCallback.html">onRemovingCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSubscribeCallback.html">onSubscribeCallback</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onUnsubscribeCallback.html">onUnsubscribeCallback</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Node/profile.html">profile</a></li>
@@ -155,8 +157,8 @@
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/onSetConfig.html">onSetConfig</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
-      <li class="inherited"><a class="" href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a></li>
-      <li class="inherited"><a class="" href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onSubscribe.html">onSubscribe</a></li>
+      <li><a class="" href="dslink.nodes/CallbackNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/removeChild.html">removeChild</a></li>
@@ -206,7 +208,7 @@ You can return the following types from this method:
     </section>
 
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-150'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-163'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onInvoke(Map&lt;String, dynamic&gt; params) {
   if (onActionInvoke != null) {

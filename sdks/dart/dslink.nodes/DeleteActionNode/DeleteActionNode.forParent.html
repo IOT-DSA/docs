@@ -103,6 +103,7 @@
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/name.html">name</a></li>
+      <li><a class="" href="dslink.nodes/DeleteActionNode/onDelete.html">onDelete</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Node/profile.html">profile</a></li>
@@ -176,7 +177,7 @@
 
       <section class="multi-line-signature">
         
-                <span class="name ">DeleteActionNode.forParent</span>(<wbr><span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
+                <span class="name ">DeleteActionNode.forParent</span>(<wbr><span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a class="" href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></span> <span class="parameter-name">provider</span></span>, {<span class="parameter" id="forParent-param-onDelete"><span class="type-annotation">Function</span> <span class="parameter-name">onDelete</span></span>})
       </section>
 
     <section class="desc markdown">
@@ -186,9 +187,10 @@
     </section>
 
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-13'>Link to Crossdart</a></h2>
-        <pre><code class="prettyprint lang-dart">DeleteActionNode.forParent(String path, SimpleNodeProvider provider)
-    : this(path, provider, new Path(path).parentPath);</code></pre>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-16'>Link to Crossdart</a></h2>
+        <pre><code class="prettyprint lang-dart">DeleteActionNode.forParent(String path, MutableNodeProvider provider, {
+  Function onDelete
+}) : this(path, provider, new Path(path).parentPath, onDelete: onDelete);</code></pre>
       </section>
 
   </div> <!-- /.main-content -->

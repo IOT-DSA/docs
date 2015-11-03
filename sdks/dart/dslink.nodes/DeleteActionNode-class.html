@@ -133,13 +133,13 @@
 
       <dl class="constructor-summary-list">
         <dt id="DeleteActionNode" class="callable">
-          <span class="name"><a class="" href="dslink.nodes/DeleteActionNode/DeleteActionNode.html">DeleteActionNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-targetPath"><span class="type-annotation">String</span> <span class="parameter-name">targetPath</span></span>)</span>
+          <span class="name"><a class="" href="dslink.nodes/DeleteActionNode/DeleteActionNode.html">DeleteActionNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-targetPath"><span class="type-annotation">String</span> <span class="parameter-name">targetPath</span></span>, {<span class="parameter" id="-param-onDelete"><span class="type-annotation">Function</span> <span class="parameter-name">onDelete</span></span>})</span>
         </dt>
         <dd>
           <p>When this action is invoked, <code>provider.removeNode</code> will be called with <a class="" href="dslink.nodes/DeleteActionNode/targetPath.html">targetPath</a>.</p>
         </dd>
         <dt id="DeleteActionNode.forParent" class="callable">
-          <span class="name"><a class="" href="dslink.nodes/DeleteActionNode/DeleteActionNode.forParent.html">DeleteActionNode.forParent</a></span><span class="signature">(<span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)</span>
+          <span class="name"><a class="" href="dslink.nodes/DeleteActionNode/DeleteActionNode.forParent.html">DeleteActionNode.forParent</a></span><span class="signature">(<span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a class="" href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></span> <span class="parameter-name">provider</span></span>, {<span class="parameter" id="forParent-param-onDelete"><span class="type-annotation">Function</span> <span class="parameter-name">onDelete</span></span>})</span>
         </dt>
         <dd>
           <p>When this action is invoked, <code>provider.removeNode</code> will be called with the parent of this action.</p>
@@ -310,6 +310,16 @@ See <code>listChangeController</code>.</p>
 This is the last component of this node's path.</p>
           <div class="features">
     read-only, inherited
+  </div>
+</dd>
+        <dt id="onDelete" class="property">
+          <span class="name"><a class="" href="dslink.nodes/DeleteActionNode/onDelete.html">onDelete</a></span>
+          <span class="signature">&#8594; Function</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
   </div>
 </dd>
         <dt id="parent" class="property inherited">
@@ -944,6 +954,7 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/name.html">name</a></li>
+      <li><a class="" href="dslink.nodes/DeleteActionNode/onDelete.html">onDelete</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a class="" href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Node/profile.html">profile</a></li>

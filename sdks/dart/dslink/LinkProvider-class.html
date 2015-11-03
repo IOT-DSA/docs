@@ -662,6 +662,14 @@ There is no guarantee that the link will be ready when this method returns.
 If the <a class="" href="dslink/LinkProvider/configure.html">configure</a> method is not called prior to calling this method, it is called.<a href="dslink/LinkProvider/init.html">&hellip;</a>
 </p>
         </dd>
+        <dt id="loadNodesFile" class="callable">
+          <span class="name "><a class="" href="dslink/LinkProvider/loadNodesFile.html">loadNodesFile</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name "><a class="" href="dslink/LinkProvider/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
@@ -675,6 +683,14 @@ If <code>noSuchMethod</code> returns a value, that value becomes the result of
 the original invocation.<a href="dslink/LinkProvider/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
+        </dd>
+        <dt id="onNodesDeserialized" class="callable">
+          <span class="name "><a class="" href="dslink/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></span><span class="signature">(<wbr><span class="parameter" id="onNodesDeserialized-param-json"><span class="type-annotation">Map</span> <span class="parameter-name">json</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Handles deserialization of node data.</p>
         </dd>
         <dt id="onValueChange" class="callable">
           <span class="name "><a class="" href="dslink/LinkProvider/onValueChange.html">onValueChange</a></span><span class="signature">(<wbr><span class="parameter" id="onValueChange-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="onValueChange-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span>: <span class="default-value">1</span></span>})
@@ -820,7 +836,9 @@ node at the given path to the specified value, and return that value.</p>
       <li><a class="" href="dslink/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a class="" href="dslink/LinkProvider/getNode.html">getNode</a></li>
       <li><a class="" href="dslink/LinkProvider/init.html">init</a></li>
+      <li><a class="" href="dslink/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
       <li class="inherited"><a class="" href="dslink/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="dslink/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a class="" href="dslink/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a class="" href="dslink/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink/LinkProvider/save.html">save</a></li>
