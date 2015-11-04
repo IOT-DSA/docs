@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> drain
+            <span class="kind">method</span> drain
           </h1>
         </div>
         <ul class="subnav">
@@ -165,17 +165,15 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Discards all data on the stream, but signals when it's done or an error
+      <p>Discards all data on the stream, but signals when it's done or an error
 occured.</p>
 <p>When subscribing using <code>drain</code>, cancelOnError will be true. This means
 that the future will complete with the first error on the stream and then
 cancel the subscription.</p>
 <p>In case of a <code>done</code> event the future completes with the given
 <code>futureValue</code>.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-809'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future drain([var futureValue]) =&gt; listen(null, cancelOnError: true)

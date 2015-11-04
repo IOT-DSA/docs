@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> expand
+            <span class="kind">method</span> expand
           </h1>
         </div>
         <ul class="subnav">
@@ -144,8 +144,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Creates a new stream from this stream that converts each element
+      <p>Creates a new stream from this stream that converts each element
 into zero or more events.</p>
 <p>Each incoming event is converted to an <code>Iterable</code> of new events,
 and each of these new events are then sent by the returned stream
@@ -153,9 +152,8 @@ in order.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually call <code>convert</code> and expand the events.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-131'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream expand(Iterable convert(T value)) =&gt; _stream.expand(convert);</code></pre>

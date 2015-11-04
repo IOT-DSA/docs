@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">constructor</div> TokenGroupNode
+            <span class="kind">constructor</span> TokenGroupNode
           </h1>
         </div>
         <ul class="subnav">
@@ -81,11 +81,11 @@
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-properties">Static properties</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/tokens.html">tokens</a></li>
-      <li><a class="" href="dslink.broker/TokenGroupNode/trustedToken.html">trustedToken</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/trustedTokens.html">trustedTokens</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#static-methods">Static methods</a></li>
+      <li><a class="" href="dslink.broker/TokenGroupNode/createTrustedToken.html">createTrustedToken</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/findTokenNode.html">findTokenNode</a></li>
-      <li><a class="" href="dslink.broker/TokenGroupNode/initSecretToken.html">initSecretToken</a></li>
       <li><a class="" href="dslink.broker/TokenGroupNode/makeToken.html">makeToken</a></li>
     
       <li class="section-title"><a href="dslink.broker/TokenGroupNode-class.html#constructors">Constructors</a></li>
@@ -167,14 +167,9 @@
                 <span class="name ">TokenGroupNode</span>(<wbr><span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-provider"><span class="type-annotation"><a class="" href="dslink.broker/BrokerNodeProvider-class.html">BrokerNodeProvider</a></span> <span class="parameter-name">provider</span></span>, <span class="parameter" id="-param-groupId"><span class="type-annotation">String</span> <span class="parameter-name">groupId</span></span>)
       </section>
 
-    <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
-    
-    </section>
-
       <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-68'>Link to Crossdart</a></h2>
+        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/broker/tokens.dart.html#line-73'>Link to Crossdart</a></h2>
         <pre><code class="prettyprint lang-dart">TokenGroupNode(String path, BrokerNodeProvider provider, this.groupId)
     : super(path, provider) {
   configs[r&apos;$is&apos;] = &apos;broker/tokenGroup&apos;;

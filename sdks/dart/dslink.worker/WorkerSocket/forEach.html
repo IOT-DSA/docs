@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> forEach
+            <span class="kind">method</span> forEach
           </h1>
         </div>
         <ul class="subnav">
@@ -165,14 +165,12 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Executes <code>action</code> on each data event of the stream.</p>
+      <p>Executes <code>action</code> on each data event of the stream.</p>
 <p>Completes the returned <code>Future</code> when all events of the stream
 have been processed. Completes the future with an error if the
 stream has an error event, or if <code>action</code> throws.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-638'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future forEach(void action(T element)) {

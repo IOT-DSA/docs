@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">property</div> first
+            <span class="kind">property</span> first
           </h1>
         </div>
         <ul class="subnav">
@@ -166,8 +166,7 @@
         <span class="name ">first</span></section>
       
       <section class="desc markdown">
-
-    <p>Returns the first element of the stream.</p>
+  <p>Returns the first element of the stream.</p>
 <p>Stops listening to the stream after the first element has been received.</p>
 <p>Internally the method cancels its subscription after the first element.
 This means that single-subscription (non-broadcast) streams are closed
@@ -178,7 +177,6 @@ is completed with that error.</p>
 the resulting future completes with a <code>StateError</code>.</p>
 <p>Except for the type of the error, this method is equivalent to
 <code>this.elementAt(0)</code>.</p>
-
 </section>
 </section>
 

@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> map
+            <span class="kind">method</span> map
           </h1>
         </div>
         <ul class="subnav">
@@ -165,15 +165,13 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Creates a new stream that converts each element of this stream
+      <p>Creates a new stream that converts each element of this stream
 to a new value using the <code>convert</code> function.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually execute <code>map</code> for each event.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-305'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream map(convert(T event)) {

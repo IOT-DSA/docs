@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> handleError
+            <span class="kind">method</span> handleError
           </h1>
         </div>
         <ul class="subnav">
@@ -165,8 +165,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
+      <p>Creates a wrapper Stream that intercepts some errors from this stream.</p>
 <p>If this stream sends an error that matches <code>test</code>, then it is intercepted
 by the <code>handle</code> function.</p>
 <p>The <code>onError</code> callback must be of type <code>void onError(error)</code> or
@@ -185,9 +184,8 @@ the output sink.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually perform the <code>test</code> and handle the error.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-432'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; handleError(Function onError, { bool test(error) }) {

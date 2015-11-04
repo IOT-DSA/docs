@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> any
+            <span class="kind">method</span> any
           </h1>
         </div>
         <ul class="subnav">
@@ -144,8 +144,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Checks whether <code>test</code> accepts any element provided by this stream.</p>
+      <p>Checks whether <code>test</code> accepts any element provided by this stream.</p>
 <p>Completes the <code>Future</code> when the answer is known.</p>
 <p>If this stream reports an error, the <code>Future</code> reports that error.</p>
 <p>Stops listening to the stream after the first matching element has been
@@ -153,9 +152,8 @@ found.</p>
 <p>Internally the method cancels its subscription after this element. This
 means that single-subscription (non-broadcast) streams are closed and
 cannot be reused after a call to this method.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-108'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;bool&gt; any(bool test(T element)) =&gt; _stream.any(test);</code></pre>

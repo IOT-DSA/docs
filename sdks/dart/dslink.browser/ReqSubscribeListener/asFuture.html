@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> asFuture
+            <span class="kind">method</span> asFuture
           </h1>
         </div>
         <ul class="subnav">
@@ -118,17 +118,15 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Returns a future that handles the <code>onDone</code> and <code>onError</code> callbacks.</p>
+      <p>Returns a future that handles the <code>onDone</code> and <code>onError</code> callbacks.</p>
 <p>This method <em>overwrites</em> the existing <code>onDone</code> and <code>onError</code> callbacks
 with new ones that complete the returned future.</p>
 <p>In case of an error the subscription will automatically cancel (even
 when it was listening with <code>cancelOnError</code> set to <code>false</code>).</p>
 <p>In case of a <code>done</code> event the future completes with the given
 <code>futureValue</code>.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/subscribe.dart.html#line-16'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future asFuture([futureValue]) {

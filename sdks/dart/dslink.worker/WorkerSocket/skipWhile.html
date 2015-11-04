@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> skipWhile
+            <span class="kind">method</span> skipWhile
           </h1>
         </div>
         <ul class="subnav">
@@ -165,17 +165,15 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Skip data events from this stream while they are matched by <code>test</code>.</p>
+      <p>Skip data events from this stream while they are matched by <code>test</code>.</p>
 <p>Error and done events are provided by the returned stream unmodified.</p>
 <p>Starting with the first data event where <code>test</code> returns false for the
 event data, the returned stream will have the same events as this stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 For a broadcast stream, the events are only tested from the time
 the returned stream is listened to.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-880'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; skipWhile(bool test(T element)) {

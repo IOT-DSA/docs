@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> noSuchMethod
+            <span class="kind">method</span> noSuchMethod
           </h1>
         </div>
         <ul class="subnav">
@@ -178,17 +178,15 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+      <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
 on an object. The name of the method and the arguments of the
 invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
 If <code>noSuchMethod</code> returns a value, that value becomes the result of
 the original invocation.</p>
 <p>The default behavior of <code>noSuchMethod</code> is to throw a
 <code>NoSuchMethodError</code>.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/core/object.dart.html#line-79'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">external dynamic noSuchMethod(Invocation invocation);</code></pre>

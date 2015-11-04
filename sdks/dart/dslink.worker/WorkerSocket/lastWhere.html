@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> lastWhere
+            <span class="kind">method</span> lastWhere
           </h1>
         </div>
         <ul class="subnav">
@@ -165,14 +165,12 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Finds the last element in this stream matching <code>test</code>.</p>
+      <p>Finds the last element in this stream matching <code>test</code>.</p>
 <p>As <code>firstWhere</code>, except that the last matching element is found.
 That means that the result cannot be provided before this stream
 is done.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-1079'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;dynamic&gt; lastWhere(bool test(T element), {Object defaultValue()}) {

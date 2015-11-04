@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> transform
+            <span class="kind">method</span> transform
           </h1>
         </div>
         <ul class="subnav">
@@ -165,14 +165,12 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Chains this stream as the input of the provided <code>StreamTransformer</code>.</p>
+      <p>Chains this stream as the input of the provided <code>StreamTransformer</code>.</p>
 <p>Returns the result of <code>streamTransformer.bind</code> itself.</p>
 <p>The <code>streamTransformer</code> can decide whether it wants to return a
 broadcast stream or not.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-501'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream transform(StreamTransformer&lt;T, dynamic&gt; streamTransformer) {

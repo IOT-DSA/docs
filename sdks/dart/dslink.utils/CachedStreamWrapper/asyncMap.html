@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> asyncMap
+            <span class="kind">method</span> asyncMap
           </h1>
         </div>
         <ul class="subnav">
@@ -144,16 +144,14 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Creates a new stream with each data event of this stream asynchronously
+      <p>Creates a new stream with each data event of this stream asynchronously
 mapped to a new event.</p>
 <p>This acts like <code>map</code>, except that <code>convert</code> may return a <code>Future</code>,
 and in that case, the stream waits for that future to complete before
 continuing with its result.</p>
 <p>The returned stream is a broadcast stream if this stream is.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-118'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream asyncMap(convert(T event)) =&gt; _stream.asyncMap(convert);</code></pre>

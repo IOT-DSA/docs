@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> addStream
+            <span class="kind">method</span> addStream
           </h1>
         </div>
         <ul class="subnav">
@@ -170,8 +170,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Consumes the elements of <code>stream</code>.</p>
+      <p>Consumes the elements of <code>stream</code>.</p>
 <p>Listens on <code>stream</code> and does something for each event.</p>
 <p>Returns a future which is completed when the stream is done being added,
 and the consumer is ready to accept a new stream.
@@ -183,9 +182,8 @@ or it may be canceled early if the receiver don't want any further events.</p>
 <p>If the consumer stops listening because of some error preventing it
 from continuing, it may report this error in the returned future,
 otherwise it will just complete the future with <code>null</code>.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/worker.dart.html#line-491'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override

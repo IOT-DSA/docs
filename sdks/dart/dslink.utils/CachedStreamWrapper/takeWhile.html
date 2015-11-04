@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> takeWhile
+            <span class="kind">method</span> takeWhile
           </h1>
         </div>
         <ul class="subnav">
@@ -144,8 +144,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Forwards data events while <code>test</code> is successful.</p>
+      <p>Forwards data events while <code>test</code> is successful.</p>
 <p>The returned stream provides the same events as this stream as long
 as <code>test</code> returns <code>true</code> for the event data. The stream is done
 when either this stream is done, or when this stream first provides
@@ -157,9 +156,8 @@ cannot be reused after a call to this method.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 For a broadcast stream, the events are only tested from the time
 the returned stream is listened to.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-184'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; takeWhile(bool test(T element)) =&gt; _stream.takeWhile(test);</code></pre>

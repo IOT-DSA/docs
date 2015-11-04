@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> pause
+            <span class="kind">method</span> pause
           </h1>
         </div>
         <ul class="subnav">
@@ -118,8 +118,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Request that the stream pauses events until further notice.</p>
+      <p>Request that the stream pauses events until further notice.</p>
 <p>While paused, the subscription will not fire any events.
 If it receives events from its source, they will be buffered until
 the subscription is resumed.
@@ -136,9 +135,8 @@ the stream will resume, but the error will not be handled!</p>
 of resumes must be performed to resume the stream.</p>
 <p>Currently DOM streams silently drop events when the stream is paused. This
 is a bug and will be fixed.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/subscribe.dart.html#line-28'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void pause([Future resumeSignal]) {}</code></pre>

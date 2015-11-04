@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> asBroadcastStream
+            <span class="kind">method</span> asBroadcastStream
           </h1>
         </div>
         <ul class="subnav">
@@ -165,8 +165,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Returns a multi-subscription stream that produces the same events as this.</p>
+      <p>Returns a multi-subscription stream that produces the same events as this.</p>
 <p>The returned stream will subscribe to this stream when its first
 subscriber is added, and will stay subscribed until this stream ends,
 or a callback cancels the subscription.</p>
@@ -181,9 +180,8 @@ a new listener, the <code>onListen</code> function is called again.</p>
 <p>Use the callbacks, for example, for pausing the underlying subscription
 while having no subscribers to prevent losing events, or canceling the
 subscription when there are no listeners.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-239'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; asBroadcastStream({

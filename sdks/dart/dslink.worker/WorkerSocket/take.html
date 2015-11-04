@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> take
+            <span class="kind">method</span> take
           </h1>
         </div>
         <ul class="subnav">
@@ -165,8 +165,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Provides at most the first <code>n</code> values of this stream.</p>
+      <p>Provides at most the first <code>n</code> values of this stream.</p>
 <p>Forwards the first <code>n</code> data events of this stream, and all error
 events, to the returned stream, and ends with a done event.</p>
 <p>If this stream produces fewer than <code>count</code> values before it's done,
@@ -179,9 +178,8 @@ cannot be reused after a call to this method.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 For a broadcast stream, the events are only counted from the time
 the returned stream is listened to.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-823'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; take(int count) {

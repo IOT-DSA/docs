@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> toSet
+            <span class="kind">method</span> toSet
           </h1>
         </div>
         <ul class="subnav">
@@ -144,16 +144,14 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Collects the data of this stream in a <code>Set</code>.</p>
+      <p>Collects the data of this stream in a <code>Set</code>.</p>
 <p>The returned set is the same type as returned by <code>new Set&lt;T&gt;()</code>.
 If another type of set is needed, either use <code>forEach</code> to add each
 element to the set, or use
 <code>toList().then((list) =&gt; new SomeOtherSet.from(list))</code>
 to create the set.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-191'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;Set&lt;T&gt;&gt; toSet() =&gt; _stream.toSet();</code></pre>

@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> asyncExpand
+            <span class="kind">method</span> asyncExpand
           </h1>
         </div>
         <ul class="subnav">
@@ -165,8 +165,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Creates a new stream with the events of a stream per original event.</p>
+      <p>Creates a new stream with the events of a stream per original event.</p>
 <p>This acts like <code>expand</code>, except that <code>convert</code> returns a <code>Stream</code>
 instead of an <code>Iterable</code>.
 The events of the returned stream becomes the events of the returned
@@ -174,9 +173,8 @@ stream, in the order they are produced.</p>
 <p>If <code>convert</code> returns <code>null</code>, no value is put on the output stream,
 just as if it returned an empty stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-375'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream asyncExpand(Stream convert(T event)) {

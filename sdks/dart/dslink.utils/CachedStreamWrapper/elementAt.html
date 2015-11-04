@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> elementAt
+            <span class="kind">method</span> elementAt
           </h1>
         </div>
         <ul class="subnav">
@@ -144,8 +144,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Returns the value of the <code>index</code>th data event of this stream.</p>
+      <p>Returns the value of the <code>index</code>th data event of this stream.</p>
 <p>Stops listening to the stream after the <code>index</code>th data event has been
 received.</p>
 <p>Internally the method cancels its subscription after these elements. This
@@ -155,9 +154,8 @@ cannot be reused after a call to this method.</p>
 with this error.</p>
 <p>If a done event occurs before the value is found, the future completes
 with a <code>RangeError</code>.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-127'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;T&gt; elementAt(int index) =&gt; _stream.elementAt(index);</code></pre>

@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> cancel
+            <span class="kind">method</span> cancel
           </h1>
         </div>
         <ul class="subnav">
@@ -118,8 +118,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Cancels this subscription. It will no longer receive events.</p>
+      <p>Cancels this subscription. It will no longer receive events.</p>
 <p>May return a future which completes when the stream is done cleaning up.
 This can be used if the stream needs to release some resources
 that are needed for a following operation,
@@ -130,9 +129,8 @@ until the returned future has completed.</p>
 If the cleanup throws, which it really shouldn't, the returned future
 will be completed with that error.</p>
 <p>Returns <code>null</code> if there is no need to wait.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/subscribe.dart.html#line-7'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future cancel() {

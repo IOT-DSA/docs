@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> handleWsUpdate
+            <span class="kind">method</span> handleWsUpdate
           </h1>
         </div>
         <ul class="subnav">
@@ -134,14 +134,9 @@
         <span class="name ">handleWsUpdate</span>(<wbr><span class="parameter" id="handleWsUpdate-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, <span class="parameter" id="handleWsUpdate-param-trusted"><span class="type-annotation">bool</span> <span class="parameter-name">trusted</span></span>)
     </section>
 
-    <section class="desc markdown">
     
-        <p class="no-docs">Not documented.</p>
-    
-    </section>
-
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/server_link.dart.html#line-179'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/server_link.dart.html#line-178'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void handleWsUpdate(HttpRequest request, bool trusted) {
   if (!trusted &amp;&amp; !verifySalt(0, request.uri.queryParameters[&apos;auth&apos;])) {
     logger.warning(&quot;$dsId was rejected due to an improper auth value&quot;);

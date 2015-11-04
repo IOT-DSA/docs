@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> join
+            <span class="kind">method</span> join
           </h1>
         </div>
         <ul class="subnav">
@@ -165,16 +165,14 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Collects string of data events' string representations.</p>
+      <p>Collects string of data events' string representations.</p>
 <p>If <code>separator</code> is provided, it is inserted between any two
 elements.</p>
 <p>Any error in the stream causes the future to complete with that
 error. Otherwise it completes with the collected string when
 the "done" event arrives.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-572'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;String&gt; join([String separator = &quot;&quot;]) {

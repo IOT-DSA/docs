@@ -133,10 +133,6 @@ p {
   margin-bottom: 1em;
 }
 
-p.no-docs {
-  font-style: italic;
-}
-
 a, a:hover {
   color: rgb(0, 102, 152);
 }
@@ -226,6 +222,7 @@ header h1 .kind {
   color: #ddd;
   text-transform: uppercase;
   font-size: 15px;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {

@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> distinct
+            <span class="kind">method</span> distinct
           </h1>
         </div>
         <ul class="subnav">
@@ -165,8 +165,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Skips data events if they are equal to the previous data event.</p>
+      <p>Skips data events if they are equal to the previous data event.</p>
 <p>The returned stream provides the same events as this stream, except
 that it never provides two consequtive data events that are equal.</p>
 <p>Equality is determined by the provided <code>equals</code> method. If that is
@@ -174,9 +173,8 @@ omitted, the '==' operator on the last provided data element is used.</p>
 <p>The returned stream is a broadcast stream if this stream is.
 If a broadcast stream is listened to more than once, each subscription
 will individually perform the <code>equals</code> test.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-896'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; distinct([bool equals(T previous, T next)]) {

@@ -56,7 +56,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <div class="kind">method</div> firstWhere
+            <span class="kind">method</span> firstWhere
           </h1>
         </div>
         <ul class="subnav">
@@ -144,8 +144,7 @@
     </section>
 
     <section class="desc markdown">
-    
-        <p>Finds the first element of this stream matching <code>test</code>.</p>
+      <p>Finds the first element of this stream matching <code>test</code>.</p>
 <p>Returns a future that is filled with the first element of this stream
 that <code>test</code> returns true for.</p>
 <p>If no such element is found before this stream is done, and a
@@ -159,9 +158,8 @@ streams are closed and cannot be reused after a call to this method.</p>
 <p>If an error occurs, or if this stream ends without finding a match and
 with no <code>defaultValue</code> function provided, the future will receive an
 error.</p>
-    
     </section>
-
+    
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-135'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future firstWhere(bool test(T element), {Object defaultValue()}) =&gt;
