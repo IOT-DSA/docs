@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.0-dev">
+  <meta name="generator" content="made with love by dartdoc 0.8.1-dev">
   <title>onUpdate method - InvokeController class - dslink library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -90,6 +90,7 @@
         <a href="dslink/InvokeController-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a class="" href="dslink/InvokeController/hashCode.html">hashCode</a></li>
+      <li><a class="" href="dslink/InvokeController/lastStatus.html">lastStatus</a></li>
       <li><a class="" href="dslink/InvokeController/mode.html">mode</a></li>
       <li><a class="" href="dslink/InvokeController/node.html">node</a></li>
       <li><a class="" href="dslink/InvokeController/requester.html">requester</a></li>
@@ -117,7 +118,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/invoke.dart.html#line-114'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/invoke.dart.html#line-115'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
   if (meta != null &amp;&amp; meta[&apos;mode&apos;] is String) {
     mode = meta[&apos;mode&apos;];
@@ -137,11 +138,11 @@
     streamStatus = StreamStatus.closed;
     _controller.add(
         new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
-  } else if (updates != null || meta != null || streamStatus == StreamStatus.closed) {
+  } else if (updates != null || meta != null || streamStatus != lastStatus) {
     _controller.add(new RequesterInvokeUpdate(
         updates, columns, _cachedColumns, streamStatus, meta:meta));
   }
-
+  lastStatus = streamStatus;
   if (streamStatus == StreamStatus.closed) {
     _controller.close();
   }
