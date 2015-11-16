@@ -140,6 +140,8 @@
       <li><a class="" href="dslink/ListController-class.html">ListController</a></li>
       <li><a class="" href="dslink/ListDefListener-class.html">ListDefListener</a></li>
       <li><a class="" href="dslink/ListResponse-class.html">ListResponse</a></li>
+      <li><a class="" href="dslink/LiveTable-class.html">LiveTable</a></li>
+      <li><a class="" href="dslink/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a class="" href="dslink/LocalNode-class.html">LocalNode</a></li>
       <li><a class="" href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a class="" href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -226,7 +228,7 @@
       <dl class="properties">
         <dt id="instance" class="property">
           <span class="name"><a class="" href="dslink/SimpleNodeProvider/instance.html">instance</a></span>
-          <span class="signature">&#8594; <a class="" href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
+          <span class="signature">&#8594; <a class="" href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
         </dt>
         <dd>
           <p>Global instance.
@@ -297,6 +299,16 @@ the provider is initialized with these values.</p>
           <p>Permissions</p>
           <div class="features">
     read / write
+  </div>
+</dd>
+        <dt id="profileMap" class="property">
+          <span class="name"><a class="" href="dslink/SimpleNodeProvider/profileMap.html">profileMap</a></span>
+          <span class="signature">&#8594; Map&lt;String, _NodeFactory&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
   </div>
 </dd>
         <dt id="root" class="property">
@@ -459,7 +471,7 @@ the original invocation.<a href="dslink/SimpleNodeProvider/noSuchMethod.html">&h
           <p>Save the node provider to a map.</p>
         </dd>
         <dt id="setNode" class="callable">
-          <span class="name "><a class="" href="dslink/SimpleNodeProvider/setNode.html">setNode</a></span><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a class="" href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>)
+          <span class="name "><a class="" href="dslink/SimpleNodeProvider/setNode.html">setNode</a></span><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a class="" href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>, {<span class="parameter" id="setNode-param-registerChildren"><span class="type-annotation">bool</span> <span class="parameter-name">registerChildren</span>: <span class="default-value">false</span></span>})
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -506,6 +518,7 @@ the original invocation.<a href="dslink/SimpleNodeProvider/noSuchMethod.html">&h
       <li class="inherited"><a class="" href="dslink/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/permissions.html">permissions</a></li>
+      <li><a class="" href="dslink/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a class="" href="dslink/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a class="" href="dslink/SimpleNodeProvider/sys.html">sys</a></li>

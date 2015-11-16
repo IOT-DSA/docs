@@ -118,11 +118,11 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/subscribe.dart.html#line-291'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/subscribe.dart.html#line-304'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">bool updateQos() {
   int qosCache = 0;
   callbacks.forEach((callback, qos) {
-    qosCache |=  qos;
+    qosCache |= qos;
   });
   if (qosCache != currentQos) {
     currentQos = qosCache;

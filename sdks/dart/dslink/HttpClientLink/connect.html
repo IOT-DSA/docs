@@ -91,6 +91,8 @@
       </li>
       <li><a class="" href="dslink/HttpClientLink/dsId.html">dsId</a></li>
       <li><a class="" href="dslink/HttpClientLink/enableAck.html">enableAck</a></li>
+      <li><a class="" href="dslink/HttpClientLink/format.html">format</a></li>
+      <li><a class="" href="dslink/HttpClientLink/formats.html">formats</a></li>
       <li class="inherited"><a class="" href="dslink/HttpClientLink/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink/HttpClientLink/home.html">home</a></li>
       <li><a class="" href="dslink/HttpClientLink/linkData.html">linkData</a></li>
@@ -129,7 +131,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-83'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-91'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
 
@@ -158,6 +160,7 @@
       &apos;publicKey&apos;: privateKey.publicKey.qBase64,
       &apos;isRequester&apos;: requester != null,
       &apos;isResponder&apos;: responder != null,
+      &apos;formats&apos;:formats,
       &apos;version&apos;: DSA_VERSION
     };
     if (linkData != null) {
@@ -195,6 +198,9 @@
       }
     }
 
+    if (serverConfig[&apos;format&apos;] is String) {
+      format = serverConfig[&apos;format&apos;];
+    }
 //      if (serverConfig[&apos;httpUri&apos;] is String) {
 //        _httpUpdateUri =
 //            &apos;${connUri.resolve(serverConfig[&apos;httpUri&apos;])}?dsId=$dsId&apos;;

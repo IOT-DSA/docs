@@ -120,14 +120,16 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/list.dart.html#line-20'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/list.dart.html#line-22'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void changed(String key) {
   if (_permission == Permission.NONE) {
     return;
   }
+
   if (_permission &lt; Permission.CONFIG &amp;&amp; key.startsWith(r&apos;$$&apos;)) {
     return;
   }
+
   if (changes.isEmpty) {
     changes.add(key);
     prepareSending();

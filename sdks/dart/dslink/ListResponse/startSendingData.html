@@ -125,7 +125,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/list.dart.html#line-36'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/list.dart.html#line-41'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 void startSendingData(int currentTime, int waitingAckId) {
   _pendingSending = false;
@@ -158,8 +158,8 @@ void startSendingData(int currentTime, int waitingAckId) {
       node.configs.remove(r&apos;$disconnectedTs&apos;);
     }
   }
-  // TODO handle permission and permission change
 
+  // TODO: handle permission and permission change
   if (initialResponse || changes.contains(r&apos;$is&apos;)) {
     initialResponse = false;
     node.configs.forEach((name, value) {
@@ -221,10 +221,8 @@ void startSendingData(int currentTime, int waitingAckId) {
   if (updateIs != null) {
     updates.add(updateIs);
   }
-  updates
-    ..addAll(updateConfigs)
-    ..addAll(updateAttributes)
-    ..addAll(updateChildren);
+  updates..addAll(updateConfigs)..addAll(updateAttributes)..addAll(
+      updateChildren);
 
   responder.updateResponse(this, updates, streamStatus: StreamStatus.open);
 }</code></pre>

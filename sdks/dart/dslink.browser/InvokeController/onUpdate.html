@@ -118,12 +118,13 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/invoke.dart.html#line-115'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/requester/request/invoke.dart.html#line-123'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta,
+    DSError error) {
   if (meta != null &amp;&amp; meta[&apos;mode&apos;] is String) {
     mode = meta[&apos;mode&apos;];
   }
-  // TODO implement error
+  // TODO: implement error
   if (columns != null) {
     if (_cachedColumns == null || mode == &apos;refresh&apos;) {
       _cachedColumns = TableColumn.parseColumns(columns);
@@ -137,10 +138,11 @@
   if (error != null) {
     streamStatus = StreamStatus.closed;
     _controller.add(
-        new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
+        new RequesterInvokeUpdate(
+            null, null, null, streamStatus, error: error, meta: meta));
   } else if (updates != null || meta != null || streamStatus != lastStatus) {
     _controller.add(new RequesterInvokeUpdate(
-        updates, columns, _cachedColumns, streamStatus, meta:meta));
+        updates, columns, _cachedColumns, streamStatus, meta: meta));
   }
   lastStatus = streamStatus;
   if (streamStatus == StreamStatus.closed) {

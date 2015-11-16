@@ -92,6 +92,7 @@
         <a href="dslink.browser_client/BrowserUserLink-class.html#instance-properties">Properties</a>
       </li>
       <li><a class="" href="dslink.browser_client/BrowserUserLink/enableAck.html">enableAck</a></li>
+      <li><a class="" href="dslink.browser_client/BrowserUserLink/format.html">format</a></li>
       <li class="inherited"><a class="" href="dslink.browser_client/BrowserUserLink/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.browser_client/BrowserUserLink/httpUpdateUri.html">httpUpdateUri</a></li>
       <li><a class="" href="dslink.browser_client/BrowserUserLink/nonce.html">nonce</a></li>
@@ -124,13 +125,13 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_user_link.dart.html#line-54'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_user_link.dart.html#line-62'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) {
 //    if (reconnect &amp;&amp; _httpConnection == null) {
 //      initHttp();
 //    }
-  var socket = new WebSocket(&apos;$wsUpdateUri?session=$session&apos;);
-  _wsConnection = new WebSocketConnection(socket, this, enableAck:enableAck);
+  var socket = new WebSocket(&apos;$wsUpdateUri?session=$session&amp;format=$format&apos;);
+  _wsConnection = new WebSocketConnection(socket, this, enableAck:enableAck, useCodec:DsCodec.getCodec(format));
 
   if (responder != null) {
     responder.connection = _wsConnection.responderChannel;

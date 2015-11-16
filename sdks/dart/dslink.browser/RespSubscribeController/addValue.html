@@ -124,7 +124,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-239'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-241'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
   if (_caching &amp;&amp; _isCacheValid) {
     lastValues.add(val);
@@ -164,7 +164,7 @@
        waitingValues..clear()..add(lastValue);
     }
   }
-  // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
+  // TODO, don&apos;t allow this to be called from same controller more often than 100ms
   // the first response can happen ASAP, but
   if (_permitted &amp;&amp; sid &gt; -1) {
     response.subscriptionChanged(this);

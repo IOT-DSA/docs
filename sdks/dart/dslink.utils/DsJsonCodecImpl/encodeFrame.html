@@ -120,12 +120,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/codec.dart.html#line-225'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/codec.dart.html#line-239'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Object encodeFrame(Object val) {
   if (_encoder == null) {
     _encoder = (value) {
       if (value is ByteData) {
-        return &apos;\u001Bbytes:${Base64.encode(ByteDataUtil.toUint8List(value))}&apos;;
+        return &quot;\u001Bbytes:${Base64.encode(
+            ByteDataUtil.toUint8List(value))}&quot;;
       }
       return null;
     };

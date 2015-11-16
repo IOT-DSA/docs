@@ -91,6 +91,8 @@
       </li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/dsId.html">dsId</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/enableAck.html">enableAck</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/format.html">format</a></li>
+      <li><a class="" href="dslink.browser/BrowserECDHLink/formats.html">formats</a></li>
       <li class="inherited"><a class="" href="dslink.browser/BrowserECDHLink/hashCode.html">hashCode</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/nonce.html">nonce</a></li>
       <li><a class="" href="dslink.browser/BrowserECDHLink/onConnected.html">onConnected</a></li>
@@ -126,7 +128,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-65'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-74'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
   lockCryptoProvider();
@@ -141,6 +143,7 @@
       &apos;publicKey&apos;: privateKey.publicKey.qBase64,
       &apos;isRequester&apos;: requester != null,
       &apos;isResponder&apos;: responder != null,
+      &apos;formats&apos;: formats,
       &apos;version&apos;: DSA_VERSION
     };
     HttpRequest request = await HttpRequest.request(connUrl,
@@ -162,7 +165,6 @@
       if (tokenHash != null) {
         _wsUpdateUri = &apos;$_wsUpdateUri$tokenHash&apos;;
       }
-
     }
 
     if (serverConfig[&apos;httpUri&apos;] is String) {
@@ -177,7 +179,9 @@
     // server start to support version since 1.0.4
     // and this is the version ack is added
     enableAck = serverConfig.containsKey(&apos;version&apos;);
-
+    if (serverConfig[&apos;format&apos;] is String) {
+     format = serverConfig[&apos;format&apos;];
+    }
     initWebsocket(false);
     _connDelay = 1;
     _wsDelay = 1;
