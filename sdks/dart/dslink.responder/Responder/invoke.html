@@ -136,7 +136,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-231'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-234'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void invoke(Map m) {
   Path path = Path.getValidNodePath(m[&apos;path&apos;]);
   if (path != null &amp;&amp; path.isAbsolute) {
@@ -145,22 +145,55 @@
 
     parentNode = nodeProvider.getOrCreateNode(path.parentPath, false);
 
-    LocalNode node = parentNode.getChild(path.name);
-    if (node == null) {
-      _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
-      return;
+    doInvoke([LocalNode overriden]) {
+      LocalNode node = overriden == null ? parentNode.getChild(path.name) : overriden;
+      if (node == null) {
+        if (overriden == null) {
+          node = nodeProvider.getNode(path.path);
+          if (node == null) {
+            _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+            return;
+          }
+
+          if (node is WaitForMe) {
+            (node as WaitForMe).onLoaded.then((_) =&gt; doInvoke(node));
+            return;
+          } else {
+            doInvoke(node);
+            return;
+          }
+        } else {
+          _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+          return;
+        }
+      }
+      int permission = nodeProvider.permissions.getPermission(path.path, this);
+      int maxPermit = Permission.parse(m[&apos;permit&apos;]);
+      if (maxPermit &lt; permission) {
+        permission = maxPermit;
+      }
+
+      if (node.getInvokePermission() &lt;= permission) {
+        node.invoke(m[&apos;params&apos;], this,
+            addResponse(new InvokeResponse(this, rid, parentNode, node, path.name)), parentNode,
+            permission);
+      } else {
+        _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+      }
     }
-    int permission = nodeProvider.permissions.getPermission(path.path, this);
-    int maxPermit = Permission.parse(m[&apos;permit&apos;]);
-    if (maxPermit &lt; permission) {
-      permission = maxPermit;
-    }
-    if (node.getInvokePermission() &lt;= permission) {
-      node.invoke(m[&apos;params&apos;], this,
-          addResponse(new InvokeResponse(this, rid, parentNode, node, path.name)), parentNode,
-          permission);
+
+    if (parentNode is WaitForMe) {
+      (parentNode as WaitForMe).onLoaded.then((_) {
+        doInvoke();
+      }).catchError((e, stack) {
+        var err = new DSError(&quot;resolveError&quot;, msg: e.toString(), detail: stack.toString());
+        _closeResponse(
+            m[&apos;rid&apos;],
+            error: err
+        );
+      });
     } else {
-      _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+      doInvoke();
     }
   } else {
     _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);

@@ -141,12 +141,15 @@
   Path path = Path.getValidNodePath(m[&apos;path&apos;]);
   if (path != null &amp;&amp; path.isAbsolute) {
     int rid = m[&apos;rid&apos;];
-
     LocalNode node;
-
     node = nodeProvider.getOrCreateNode(path.path, false);
-
-    addResponse(new ListResponse(this, rid, node));
+    if (node is WaitForMe) {
+      (node as WaitForMe).onLoaded.then((_) {
+        addResponse(new ListResponse(this, rid, node));
+      });
+    } else {
+      addResponse(new ListResponse(this, rid, node));
+    }
   } else {
     _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);
   }

@@ -129,7 +129,7 @@
           </ol>
         </div>
         <span class="returntype"><a class="" href="dslink/LocalNode-class.html">LocalNode</a></span>
-        <span class="name ">getNode</span>(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+        <span class="name ">getNode</span>(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="getNode-param-onLoaded"><span class="type-annotation">Completer&lt;<a class="" href="dslink.nodes/CallbackNode-class.html">CallbackNode</a>&gt;</span> <span class="parameter-name">onLoaded</span></span>})
     </section>
 
     <section class="desc markdown">
@@ -139,17 +139,25 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-146'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-LocalNode getNode(String path) {
+LocalNode getNode(String path, {Completer&lt;CallbackNode&gt; onLoaded}) {
   LocalNode node = super.getNode(path);
   if (path != &quot;/&quot; &amp;&amp; node != null) {
+    if (onLoaded != null &amp;&amp; !onLoaded.isCompleted) {
+      onLoaded.complete(node);
+    }
     return node;
   }
 
   if (handler == null) {
+    if (onLoaded != null &amp;&amp; !onLoaded.isCompleted) {
+      onLoaded.complete(null);
+    }
     return null;
   }
 
+  Completer c = new Completer();
   CallbackNode n = new CallbackNode(path, provider: this);
+  n.onLoadedCompleter = c;
   bool isListReady = false;
   n.isListReady = () =&gt; isListReady;
   handler(n).then((m) {
@@ -158,16 +166,35 @@ LocalNode getNode(String path) {
       String ts = ValueUpdate.getTs();
       n.getDisconnectedStatus = () =&gt; ts;
       n.listChangeController.add(r&quot;$is&quot;);
+
+      if (onLoaded != null &amp;&amp; !onLoaded.isCompleted) {
+        onLoaded.complete(n);
+      }
+
+      if (c != null &amp;&amp; !c.isCompleted) {
+        c.complete();
+      }
+
       return;
     }
     isListReady = true;
     n.listChangeController.add(r&quot;$is&quot;);
-  }).catchError((e) {
+    if (onLoaded != null &amp;&amp; !onLoaded.isCompleted) {
+      onLoaded.complete(n);
+    }
+
+    if (c != null &amp;&amp; !c.isCompleted) {
+      c.complete();
+    }
+  }).catchError((e, stack) {
     isListReady = true;
     String ts = ValueUpdate.getTs();
     n.getDisconnectedStatus = () =&gt; ts;
     n.listChangeController.add(r&quot;$is&quot;);
-    throw e;
+
+    if (c != null &amp;&amp; !c.isCompleted) {
+      c.completeError(e, stack);
+    }
   });
   return n;
 }</code></pre>
