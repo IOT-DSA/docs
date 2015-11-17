@@ -179,6 +179,7 @@ void startSendingData(int currentTime, int waitingAckId) {
     node.children.forEach((name, LocalNode value) {
       updateChildren.add([name, value.getSimpleMap()]);
     });
+
     if (updateIs == null) {
       updateIs = [r&apos;$is&apos;, &apos;node&apos;];
     }

@@ -136,7 +136,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-234'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-236'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void invoke(Map m) {
   Path path = Path.getValidNodePath(m[&apos;path&apos;]);
   if (path != null &amp;&amp; path.isAbsolute) {
@@ -146,10 +146,10 @@
     parentNode = nodeProvider.getOrCreateNode(path.parentPath, false);
 
     doInvoke([LocalNode overriden]) {
-      LocalNode node = overriden == null ? parentNode.getChild(path.name) : overriden;
+      LocalNode node = overriden == null ? nodeProvider.getNode(path.path) : overriden;
       if (node == null) {
         if (overriden == null) {
-          node = nodeProvider.getNode(path.path);
+          node = parentNode.getChild(path.name);
           if (node == null) {
             _closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
             return;

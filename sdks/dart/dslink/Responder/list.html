@@ -143,8 +143,12 @@
     int rid = m[&apos;rid&apos;];
     LocalNode node;
     node = nodeProvider.getOrCreateNode(path.path, false);
+    if (node == null) node = new SimpleNode(path.path);
     if (node is WaitForMe) {
-      (node as WaitForMe).onLoaded.then((_) {
+      (node as WaitForMe).onLoaded.then((n) {
+        if (n is LocalNode) {
+          node = n;
+        }
         addResponse(new ListResponse(this, rid, node));
       });
     } else {

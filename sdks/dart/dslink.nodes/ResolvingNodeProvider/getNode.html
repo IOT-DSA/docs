@@ -129,7 +129,7 @@
           </ol>
         </div>
         <span class="returntype"><a class="" href="dslink/LocalNode-class.html">LocalNode</a></span>
-        <span class="name ">getNode</span>(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="getNode-param-onLoaded"><span class="type-annotation">Completer&lt;<a class="" href="dslink.nodes/CallbackNode-class.html">CallbackNode</a>&gt;</span> <span class="parameter-name">onLoaded</span></span>})
+        <span class="name ">getNode</span>(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="getNode-param-onLoaded"><span class="type-annotation">Completer&lt;<a class="" href="dslink.nodes/CallbackNode-class.html">CallbackNode</a>&gt;</span> <span class="parameter-name">onLoaded</span></span>, <span class="parameter" id="getNode-param-forceHandle"><span class="type-annotation">bool</span> <span class="parameter-name">forceHandle</span>: <span class="default-value">false</span></span>})
     </section>
 
     <section class="desc markdown">
@@ -139,9 +139,9 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/nodes.dart.html#line-146'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-LocalNode getNode(String path, {Completer&lt;CallbackNode&gt; onLoaded}) {
+LocalNode getNode(String path, {Completer&lt;CallbackNode&gt; onLoaded, bool forceHandle: false}) {
   LocalNode node = super.getNode(path);
-  if (path != &quot;/&quot; &amp;&amp; node != null) {
+  if (path != &quot;/&quot; &amp;&amp; node != null &amp;&amp; !forceHandle) {
     if (onLoaded != null &amp;&amp; !onLoaded.isCompleted) {
       onLoaded.complete(node);
     }
