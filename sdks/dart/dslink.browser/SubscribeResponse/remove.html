@@ -92,8 +92,8 @@
       <li class="inherited"><a class="" href="dslink.browser/Response/responder.html">responder</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Response/rid.html">rid</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SubscribeResponse/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink.browser/SubscribeResponse/subscriptions.html">subscriptions</a></li>
       <li><a class="" href="dslink.browser/SubscribeResponse/subsriptionids.html">subsriptionids</a></li>
-      <li><a class="" href="dslink.browser/SubscribeResponse/subsriptions.html">subsriptions</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser/SubscribeResponse-class.html#operators">Operators</a></li>
       <li class="inherited"><a class="" href="dslink.browser/SubscribeResponse/operator_equals.html">operator ==</a></li>
@@ -123,13 +123,13 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-62'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-64'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void remove(int sid) {
   if (subsriptionids[sid] != null) {
     RespSubscribeController controller = subsriptionids[sid];
     subsriptionids[sid].destroy();
     subsriptionids.remove(sid);
-    subsriptions.remove(controller.node.path);
+    subscriptions.remove(controller.node.path);
     if (responder._traceCallbacks != null){
       ResponseTrace update = new ResponseTrace(controller.node.path,&apos;subscribe&apos;,0,&apos;-&apos;);
       for (ResponseTraceCallback callback in responder._traceCallbacks) {

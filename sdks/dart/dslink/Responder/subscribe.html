@@ -136,7 +136,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-189'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-179'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void subscribe(Map m) {
   if (m[&apos;paths&apos;] is List) {
     for (Object p in m[&apos;paths&apos;]) {
@@ -161,22 +161,16 @@
       Path path = Path.getValidNodePath(pathstr);
 
       if (path != null &amp;&amp; path.isAbsolute) {
-        LocalNode node = nodeProvider.getOrCreateNode(path.path, false);
-
-        if (node is WaitForMe) {
-          (node as WaitForMe).onLoaded.then((n) {
-            if (n is LocalNode) {
-              node = n;
-            }
-
-            _subscription.add(path.path, node, sid, qos);
-          });
-        } else {
+        _getNode(path).then((node) {
           _subscription.add(path.path, node, sid, qos);
-        }
+          _closeResponse(m[&apos;rid&apos;]);
+        }).catchError((e) {
+          _closeResponse(m[&apos;rid&apos;], error: new DSError(&quot;nodeError&quot;, msg: e.toString()));
+        });
+      } else {
+        _closeResponse(m[&apos;rid&apos;]);
       }
     }
-    _closeResponse(m[&apos;rid&apos;]);
   } else {
     _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATHS);
   }

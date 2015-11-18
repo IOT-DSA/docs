@@ -92,8 +92,8 @@
       <li class="inherited"><a class="" href="dslink.browser/Response/responder.html">responder</a></li>
       <li class="inherited"><a class="" href="dslink.browser/Response/rid.html">rid</a></li>
       <li class="inherited"><a class="" href="dslink/SubscribeResponse/runtimeType.html">runtimeType</a></li>
+      <li><a class="" href="dslink/SubscribeResponse/subscriptions.html">subscriptions</a></li>
       <li><a class="" href="dslink/SubscribeResponse/subsriptionids.html">subsriptionids</a></li>
-      <li><a class="" href="dslink/SubscribeResponse/subsriptions.html">subsriptions</a></li>
     
       <li class="section-title inherited"><a href="dslink/SubscribeResponse-class.html#operators">Operators</a></li>
       <li class="inherited"><a class="" href="dslink/SubscribeResponse/operator_equals.html">operator ==</a></li>
@@ -126,8 +126,8 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-26'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">RespSubscribeController add(String path, LocalNode node, int sid, int qos) {
   RespSubscribeController controller;
-  if (subsriptions[path] != null) {
-    controller = subsriptions[path];
+  if (subscriptions[path] != null) {
+    controller = subscriptions[path];
     if (controller.sid != sid) {
       if (controller.sid &gt;= 0) {
         subsriptionids.remove(controller.sid);
@@ -146,12 +146,14 @@
         .getPermission(node.path, responder);
     controller = new RespSubscribeController(
         this, node, sid, permission &gt;= Permission.READ, qos);
-    subsriptions[path] = controller;
+    subscriptions[path] = controller;
+
     if (sid &gt;= 0) {
       subsriptionids[sid] = controller;
     }
+
     if (responder._traceCallbacks != null){
-      ResponseTrace update = new ResponseTrace(path,&apos;subscribe&apos;,0,&apos;+&apos;);
+      ResponseTrace update = new ResponseTrace(path, &apos;subscribe&apos;, 0, &apos;+&apos;);
       for (ResponseTraceCallback callback in responder._traceCallbacks) {
         callback(update);
       }

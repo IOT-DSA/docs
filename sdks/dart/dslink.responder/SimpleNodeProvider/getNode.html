@@ -112,10 +112,12 @@
       <li><a class="" href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a class="" href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a class="" href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/save.html">save</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a class="" href="dslink.responder/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a class="" href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a class="" href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -138,12 +140,22 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-217'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-219'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 LocalNode getNode(String path) {
   if (nodes.containsKey(path)) {
     return nodes[path];
   }
+
+  if (_resolverFactories.isNotEmpty) {
+    for (var f in _resolverFactories) {
+      var node = f(path);
+      if (node != null) {
+        return node;
+      }
+    }
+  }
+
   return null;
 }</code></pre>
     </section>
