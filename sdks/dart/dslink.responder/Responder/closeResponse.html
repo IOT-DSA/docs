@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="made with love by dartdoc 0.8.1-dev">
-  <title>operator == method - Responder class - dslink.responder library - Dart API</title>
+  <title>closeResponse method - Responder class - dslink.responder library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="static-assets/styles.css">
 
-  <meta name="description" content="API docs for the operator == method from the Responder class, for the Dart programming language.">
+  <meta name="description" content="API docs for the closeResponse method from the Responder class, for the Dart programming language.">
   <link rel="icon" href="static-assets/favicon.png">
 
   <!-- Do not remove placeholder -->
@@ -35,9 +35,9 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
             <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
-            <li class="self-crumb">operator ==</li>
+            <li class="self-crumb">closeResponse</li>
           </ol>
-          <div class="self-name">operator ==</div>
+          <div class="self-name">closeResponse</div>
           <form class="search navbar-right" role="search">
             <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
           </form>
@@ -53,15 +53,15 @@
           <li><a href="index.html">dslink</a></li>
           <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
           <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
-          <li class="self-crumb">operator ==</li>
+          <li class="self-crumb">closeResponse</li>
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">method</span> operator ==
+            <span class="kind">method</span> closeResponse
           </h1>
         </div>
         <ul class="subnav">
-          <li><a href="dslink.responder/Responder/operator_equals.html#source">Source</a></li>
+          <li><a href="dslink.responder/Responder/closeResponse.html#source">Source</a></li>
         </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
@@ -131,34 +131,31 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-        <span class="returntype">bool</span>
-        <span class="name ">operator ==</span>(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+        <span class="returntype">void</span>
+        <span class="name ">closeResponse</span>(<wbr><span class="parameter" id="closeResponse-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, {<span class="parameter" id="closeResponse-param-response"><span class="type-annotation"><a href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="closeResponse-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>})
     </section>
 
     <section class="desc markdown">
-      <p>The equality operator.</p>
-<p>The default behavior for all <code>Object</code>s is to return true if and
-only if <code>this</code> and <code>other</code> are the same object.</p>
-<p>Override this method to specify a different equality relation on
-a class. The overriding method must still be an equivalence relation.
-That is, it must be:</p><ul><li>
-<p>Total: It must return a boolean for all arguments. It should never throw
-   or return <code>null</code>.</p></li><li>
-<p>Reflexive: For all objects <code>o</code>, <code>o == o</code> must be true.</p></li><li>
-<p>Symmetric: For all objects <code>o1</code> and <code>o2</code>, <code>o1 == o2</code> and <code>o2 == o1</code> must
-   either both be true, or both be false.</p></li><li>
-<p>Transitive: For all objects <code>o1</code>, <code>o2</code>, and <code>o3</code>, if <code>o1 == o2</code> and
-   <code>o2 == o3</code> are true, then <code>o1 == o3</code> must be true.</p></li></ul>
-<p>The method should also be consistent over time, so equality of two objects
-should not change over time, or at least only change if one of the objects
-was modified.</p>
-<p>If a subclass overrides the equality operator it should override
-the <code>hashCode</code> method as well to maintain consistency.</p>
+      <p>close the response from responder side and notify requester</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/core/object.dart.html#line-30'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">bool operator ==(other) =&gt; identical(this, other);</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-123'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void closeResponse(int rid, {Response response, DSError error}) {
+  if (response != null) {
+    if (_responses[response.rid] != response) {
+      // this response is no longer valid
+      return;
+    }
+    response._sentStreamStatus = StreamStatus.closed;
+    rid = response.rid;
+  }
+  Map m = {&apos;rid&apos;: rid, &apos;stream&apos;: StreamStatus.closed};
+  if (error != null) {
+    m[&apos;error&apos;] = error.serialize();
+  }
+  addToSendList(m);
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

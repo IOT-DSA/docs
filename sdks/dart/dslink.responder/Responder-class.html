@@ -323,6 +323,14 @@ inside processor, send() data that only need to appear once per data frame</p>
         <dd>
           <p></p>
         </dd>
+        <dt id="closeResponse" class="callable">
+          <span class="name "><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></span><span class="signature">(<wbr><span class="parameter" id="closeResponse-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, {<span class="parameter" id="closeResponse-param-response"><span class="type-annotation"><a href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="closeResponse-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>})
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>close the response from responder side and notify requester</p>
+        </dd>
         <dt id="getSendingData" class="callable inherited">
           <span class="name "><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></span><span class="signature">(<wbr><span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/ProcessorResult-class.html">ProcessorResult</a></span>
@@ -503,6 +511,7 @@ the original invocation.<a href="dslink.responder/Responder/noSuchMethod.html">&
       <li><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.responder/Responder/close.html">close</a></li>
+      <li><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li><a href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
       <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>

@@ -106,6 +106,7 @@
       <li><a href="dslink.browser/Responder/addTraceCallback.html">addTraceCallback</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.browser/Responder/close.html">close</a></li>
+      <li><a href="dslink.browser/Responder/closeResponse.html">closeResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li><a href="dslink.browser/Responder/initStorage.html">initStorage</a></li>
       <li><a href="dslink.browser/Responder/invoke.html">invoke</a></li>
@@ -163,16 +164,16 @@
       if (path != null &amp;&amp; path.isAbsolute) {
         _getNode(path).then((node) {
           _subscription.add(path.path, node, sid, qos);
-          _closeResponse(m[&apos;rid&apos;]);
+          closeResponse(m[&apos;rid&apos;]);
         }).catchError((e) {
-          _closeResponse(m[&apos;rid&apos;], error: new DSError(&quot;nodeError&quot;, msg: e.toString()));
+          closeResponse(m[&apos;rid&apos;], error: new DSError(&quot;nodeError&quot;, msg: e.toString()));
         });
       } else {
-        _closeResponse(m[&apos;rid&apos;]);
+        closeResponse(m[&apos;rid&apos;]);
       }
     }
   } else {
-    _closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATHS);
+    closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATHS);
   }
 }</code></pre>
     </section>

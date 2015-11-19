@@ -89,25 +89,25 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
       <section class="desc markdown">
-        <h1>DSLink SDK for Dart <a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart"><a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"><img alt="Build Status" src="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"></img></a></a> <a href="https://coveralls.io/github/IOT-DSA/sdk-dslink-dart?branch=develop"><a href="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"><img alt="Coverage Status" src="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"></img></a></a> <a href="https://dsa-slack.herokuapp.com/"><a href="https://dsa-slack.herokuapp.com/badge.svg"><img alt="Slack" src="https://dsa-slack.herokuapp.com/badge.svg"></img></a></a></h1>
+        <h1>DSLink SDK for Dart <a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart"></a><a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"><img alt="Build Status" src="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"></a> <a href="https://coveralls.io/github/IOT-DSA/sdk-dslink-dart?branch=develop"></a><a href="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"><img alt="Coverage Status" src="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"></a> <a href="https://dsa-slack.herokuapp.com/"></a><a href="https://dsa-slack.herokuapp.com/badge.svg"><img alt="Slack" src="https://dsa-slack.herokuapp.com/badge.svg"></a></h1>
 <p>DSLink SDK for Dart</p>
 <h2>Getting Started</h2>
 <h3>Prerequisites</h3><ul><li><a href="https://git-scm.com/downloads">Git</a></li><li><a href="https://www.dartlang.org/downloads/">Dart SDK</a></li></ul>
 <h3>Install</h3>
-<pre class="bash"><code>pub global activate -sgit https://github.com/IOT-DSA/sdk-dslink-dart.git # Globally install the DSA Dart SDK
+<pre class="bash prettyprint"><code>pub global activate -sgit https://github.com/IOT-DSA/sdk-dslink-dart.git # Globally install the DSA Dart SDK
 </code></pre>
 <h3>Start a Broker</h3>
-<pre class="bash"><code>dsbroker # If you have the pub global executable path setup.
+<pre class="bash prettyprint"><code>dsbroker # If you have the pub global executable path setup.
 pub global run dslink:broker # If you do not have the pub global executable path setup.
 </code></pre>
 <p>To connect a broker to another broker:</p>
-<pre class="bash"><code>dsbroker --broker http://my.broker.org:8080/conn # Connect a broker to another broker
+<pre class="bash prettyprint"><code>dsbroker --broker http://my.broker.org:8080/conn # Connect a broker to another broker
 </code></pre>
 <p>You can edit the server configuration using <code>broker.json</code>. For more information about broker configuration, see <a href="https://github.com/IOT-DSA/sdk-dslink-dart/wiki/Configuring-a-Broker">this page</a>.</p>
 <h3>Create a Link</h3>
 <p>For documentation, see <a href="http://iot-dsa.github.io/docs/sdks/dart/">this page</a>.
 For more examples, see <a href="https://github.com/IOT-DSA/sdk-dslink-dart/tree/master/example">this page</a>.</p>
-<pre class="dart"><code>import "package:dslink/dslink.dart";
+<pre class="dart prettyprint"><code>import "package:dslink/dslink.dart";
 
 LinkProvider link;
 
@@ -129,11 +129,10 @@ main(List&lt;String&gt; args) async {
 }
 </code></pre>
 <h3>Start a Link</h3>
-<pre class="bash"><code>dart path/to/link.dart # Start a link that connects to a broker at http://127.0.0.1:8080/conn
+<pre class="bash prettyprint"><code>dart path/to/link.dart # Start a link that connects to a broker at http://127.0.0.1:8080/conn
 dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that connects to the specified broker.
 </code></pre>
 <h2>Links</h2><ul><li><a href="http://iot-dsa.org/">DSA Site</a></li><li><a href="https://github.com/IOT-DSA/docs/wiki">DSA Wiki</a></li><li><a href="http://iot-dsa.github.io/docs/sdks/dart/">Documentation</a></li></ul>
-
       </section>
       
     <section class="summary" id="libraries">

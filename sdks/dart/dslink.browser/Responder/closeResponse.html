@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="made with love by dartdoc 0.8.1-dev">
-  <title>initStorage method - Responder class - dslink.browser library - Dart API</title>
+  <title>closeResponse method - Responder class - dslink.browser library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="static-assets/styles.css">
 
-  <meta name="description" content="API docs for the initStorage method from the Responder class, for the Dart programming language.">
+  <meta name="description" content="API docs for the closeResponse method from the Responder class, for the Dart programming language.">
   <link rel="icon" href="static-assets/favicon.png">
 
   <!-- Do not remove placeholder -->
@@ -35,9 +35,9 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
             <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
-            <li class="self-crumb">initStorage</li>
+            <li class="self-crumb">closeResponse</li>
           </ol>
-          <div class="self-name">initStorage</div>
+          <div class="self-name">closeResponse</div>
           <form class="search navbar-right" role="search">
             <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
           </form>
@@ -53,15 +53,15 @@
           <li><a href="index.html">dslink</a></li>
           <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
           <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
-          <li class="self-crumb">initStorage</li>
+          <li class="self-crumb">closeResponse</li>
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">method</span> initStorage
+            <span class="kind">method</span> closeResponse
           </h1>
         </div>
         <ul class="subnav">
-          <li><a href="dslink.browser/Responder/initStorage.html#source">Source</a></li>
+          <li><a href="dslink.browser/Responder/closeResponse.html#source">Source</a></li>
         </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
@@ -132,27 +132,29 @@
 
     <section class="multi-line-signature">
         <span class="returntype">void</span>
-        <span class="name ">initStorage</span>(<wbr><span class="parameter" id="initStorage-param-s"><span class="type-annotation"><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>, <span class="parameter" id="initStorage-param-nodes"><span class="type-annotation">List&lt;<a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a>&gt;</span> <span class="parameter-name">nodes</span></span>)
+        <span class="name ">closeResponse</span>(<wbr><span class="parameter" id="closeResponse-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, {<span class="parameter" id="closeResponse-param-response"><span class="type-annotation"><a href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="closeResponse-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>})
     </section>
 
+    <section class="desc markdown">
+      <p>close the response from responder side and notify requester</p>
+    </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-11'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void initStorage(ISubscriptionResponderStorage s, List&lt;ISubscriptionNodeStorage&gt; nodes) {
-  if (storage != null) {
-    storage.destroy();
-  }
-  storage = s;
-  if (storage != null &amp;&amp; nodes != null) {
-    for (ISubscriptionNodeStorage node in nodes) {
-      var values = node.getLoadedValues();
-      LocalNode localnode = nodeProvider.getOrCreateNode(node.path, false);
-      RespSubscribeController controller = _subscription.add(node.path, localnode, -1, node.qos);
-      if (values.isNotEmpty) {
-        controller.resetCache(values);
-      }
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/responder.dart.html#line-123'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void closeResponse(int rid, {Response response, DSError error}) {
+  if (response != null) {
+    if (_responses[response.rid] != response) {
+      // this response is no longer valid
+      return;
     }
+    response._sentStreamStatus = StreamStatus.closed;
+    rid = response.rid;
   }
+  Map m = {&apos;rid&apos;: rid, &apos;stream&apos;: StreamStatus.closed};
+  if (error != null) {
+    m[&apos;error&apos;] = error.serialize();
+  }
+  addToSendList(m);
 }</code></pre>
     </section>
 
