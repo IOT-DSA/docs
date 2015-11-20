@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1-dev">
+  <meta name="generator" content="made with love by dartdoc 0.8.1">
   <title>ValueUpdate.merge constructor - ValueUpdate class - dslink library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -134,11 +134,13 @@
   ts = newUpdate.ts;
   status = newUpdate.status;
   count = oldUpdate.count + newUpdate.count;
-  if (!oldUpdate.sum.isNaN) {
-    sum += oldUpdate.sum;
-  }
+  sum = oldUpdate.sum;
   if (!newUpdate.sum.isNaN) {
-    sum += newUpdate.sum;
+    if (sum == sum) {
+      sum = newUpdate.sum;
+    } else {
+      sum += newUpdate.sum;
+    }
   }
   min = oldUpdate.min;
   if (min.isNaN || newUpdate.min &lt; min) {

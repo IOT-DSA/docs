@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1-dev">
+  <meta name="generator" content="made with love by dartdoc 0.8.1">
   <title>mergeAdd method - ValueUpdate class - dslink library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -130,7 +130,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/common/value.dart.html#line-96'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/common/value.dart.html#line-98'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void mergeAdd(ValueUpdate newUpdate) {
   value = newUpdate.value;
   ts = newUpdate.ts;
@@ -138,16 +138,16 @@
   count += newUpdate.count;
 
   if (!newUpdate.sum.isNaN) {
-    if (!sum.isNaN) {
+    if (sum == sum) {
       sum += newUpdate.sum;
     } else {
       sum = newUpdate.sum;
     }
   }
-  if (min.isNaN || newUpdate.min &lt; min) {
+  if (min != min || newUpdate.min &lt; min) {
     min = newUpdate.min;
   }
-  if (max.isNaN || newUpdate.max &gt; max) {
+  if (max != max || newUpdate.max &gt; max) {
     max = newUpdate.max;
   }
 }</code></pre>
