@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>asBroadcastStream method - WorkerSocket class - dslink.worker library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -159,12 +159,10 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
     <section class="multi-line-signature">
-        <span class="returntype">Stream</span>
-        <span class="name ">asBroadcastStream</span>(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
+      <span class="returntype">Stream</span>
+      <span class="name ">asBroadcastStream</span>(<wbr>{<span class="parameter" id="asBroadcastStream-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>, <span class="parameter" id="asBroadcastStream-param-onCancel"><span class="type-annotation">void</span> <span class="parameter-name">onCancel</span>(<span class="parameter" id="onCancel-param-subscription"><span class="type-annotation">StreamSubscription&lt;T&gt;</span> <span class="parameter-name">subscription</span></span>)</span>})
     </section>
-
     <section class="desc markdown">
       <p>Returns a multi-subscription stream that produces the same events as this.</p>
 <p>The returned stream will subscribe to this stream when its first
@@ -184,7 +182,7 @@ subscription when there are no listeners.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-239'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-245'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; asBroadcastStream({
     void onListen(StreamSubscription&lt;T&gt; subscription),
     void onCancel(StreamSubscription&lt;T&gt; subscription) }) {

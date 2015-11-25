@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>pipe method - WorkerSocket class - dslink.worker library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -159,12 +159,10 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
     <section class="multi-line-signature">
-        <span class="returntype">Future</span>
-        <span class="name ">pipe</span>(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer</span> <span class="parameter-name">streamConsumer</span></span>)
+      <span class="returntype">Future</span>
+      <span class="name ">pipe</span>(<wbr><span class="parameter" id="pipe-param-streamConsumer"><span class="type-annotation">StreamConsumer</span> <span class="parameter-name">streamConsumer</span></span>)
     </section>
-
     <section class="desc markdown">
       <p>Pipe the events of this stream into <code>streamConsumer</code>.</p>
 <p>The events of this stream are added to <code>streamConsumer</code> using
@@ -182,7 +180,7 @@ In that case the returned future completes with the error from calling
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-479'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-485'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future pipe(StreamConsumer&lt;T&gt; streamConsumer) {
   return streamConsumer.addStream(this).then((_) =&gt; streamConsumer.close());
 }</code></pre>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>WorkerSocket class - dslink.worker library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="..">
@@ -337,7 +337,7 @@
           <p>Send an async error to a stream.</p>
         </dd>
         <dt id="addMethod" class="callable">
-          <span class="name "><a href="dslink.worker/WorkerSocket/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-producer"><span class="type-annotation">dynamic</span> <span class="parameter-name">producer</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
+          <span class="name "><a href="dslink.worker/WorkerSocket/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-producer"><span class="type-annotation">Producer</span> <span class="parameter-name">producer</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -598,11 +598,7 @@ to a new value using the <code>convert</code> function.<a href="dslink.worker/Wo
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -625,7 +621,7 @@ the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&
           <div class="features">inherited</div>
         </dd>
         <dt id="reduce" class="callable inherited">
-          <span class="name "><a href="dslink.worker/WorkerSocket/reduce.html">reduce</a></span><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">T</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
+          <span class="name "><a href="dslink.worker/WorkerSocket/reduce.html">reduce</a></span><span class="signature">(<wbr><span class="parameter" id="reduce-param-combine"><span class="type-annotation">dynamic</span> <span class="parameter-name">combine</span>(<span class="parameter" id="combine-param-previous"><span class="type-annotation">T</span> <span class="parameter-name">previous</span></span>, <span class="parameter" id="combine-param-element"><span class="type-annotation">T</span> <span class="parameter-name">element</span></span>)</span>)
             <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>

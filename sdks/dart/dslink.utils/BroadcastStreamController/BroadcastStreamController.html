@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>BroadcastStreamController constructor - BroadcastStreamController class - dslink.utils library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -117,16 +117,15 @@
   </div><!--/.sidebar-offcanvas-left-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
-      <section class="multi-line-signature">
-        
-                <span class="name ">BroadcastStreamController</span>(<wbr>[<span class="parameter" id="-param-onStartListen"><span class="type-annotation">void</span> <span class="parameter-name">onStartListen</span>()</span>, <span class="parameter" id="-param-onAllCancel"><span class="type-annotation">void</span> <span class="parameter-name">onAllCancel</span>()</span>, <span class="parameter" id="-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-T"><span class="parameter-name">T</span></span>)</span>)</span>, <span class="parameter" id="-param-sync"><span class="type-annotation">bool</span> <span class="parameter-name">sync</span> = <span class="default-value">false</span></span>])
-      </section>
+    <section class="multi-line-signature">
+      
+            <span class="name ">BroadcastStreamController</span>(<wbr>[<span class="parameter" id="-param-onStartListen"><span class="type-annotation">void</span> <span class="parameter-name">onStartListen</span>()</span>, <span class="parameter" id="-param-onAllCancel"><span class="type-annotation">void</span> <span class="parameter-name">onAllCancel</span>()</span>, <span class="parameter" id="-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-T"><span class="parameter-name">T</span></span>)</span>)</span>, <span class="parameter" id="-param-sync"><span class="type-annotation">bool</span> <span class="parameter-name">sync</span> = <span class="default-value">false</span></span>])
+    </section>
 
     
-      <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-10'>Link to Crossdart</a></h2>
-        <pre><code class="prettyprint lang-dart">BroadcastStreamController(
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/stream_controller.dart.html#line-10'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">BroadcastStreamController(
     [void onStartListen(), void onAllCancel(), void onListen(callback(T)), bool sync = false]) {
   _controller = new StreamController&lt;T&gt;(sync:sync);
   _stream = new CachedStreamWrapper(
@@ -136,7 +135,7 @@
   _onStartListen = onStartListen;
   _onAllCancel = onAllCancel;
 }</code></pre>
-      </section>
+    </section>
 
   </div> <!-- /.main-content -->
 

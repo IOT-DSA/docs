@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>where method - WorkerSocket class - dslink.worker library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -159,12 +159,10 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
     <section class="multi-line-signature">
-        <span class="returntype">Stream</span>
-        <span class="name ">where</span>(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
+      <span class="returntype">Stream</span>
+      <span class="name ">where</span>(<wbr><span class="parameter" id="where-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-event"><span class="type-annotation">T</span> <span class="parameter-name">event</span></span>)</span>)
     </section>
-
     <section class="desc markdown">
       <p>Creates a new stream from this stream that discards some data events.</p>
 <p>The new stream sends the same error and done events as this stream,
@@ -175,7 +173,7 @@ will individually perform the <code>test</code>.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-291'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-297'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; where(bool test(T event)) {
   return new _WhereStream&lt;T&gt;(this, test);
 }</code></pre>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>WebSocketConnection constructor - WebSocketConnection class - dslink.browser library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -118,19 +118,18 @@
   </div><!--/.sidebar-offcanvas-left-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
-      <section class="multi-line-signature">
-        
-                <span class="name ">WebSocketConnection</span>(<wbr><span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>, <span class="parameter" id="-param-clientLink"><span class="type-annotation"><a href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">clientLink</span></span>, {<span class="parameter" id="-param-onConnect"><span class="type-annotation">Function</span> <span class="parameter-name">onConnect</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-useCodec"><span class="type-annotation"><a href="dslink.utils/DsCodec-class.html">DsCodec</a></span> <span class="parameter-name">useCodec</span></span>})
-      </section>
+    <section class="multi-line-signature">
+      
+            <span class="name ">WebSocketConnection</span>(<wbr><span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>, <span class="parameter" id="-param-clientLink"><span class="type-annotation"><a href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">clientLink</span></span>, {<span class="parameter" id="-param-onConnect"><span class="type-annotation">Function</span> <span class="parameter-name">onConnect</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-useCodec"><span class="type-annotation"><a href="dslink.utils/DsCodec-class.html">DsCodec</a></span> <span class="parameter-name">useCodec</span></span>})
+    </section>
 
     <section class="desc markdown">
       <p>clientLink is not needed when websocket works in server link</p>
     </section>
     
-      <section class="summary source-code" id="source">
-        <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ws_conn.dart.html#line-26'>Link to Crossdart</a></h2>
-        <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect, bool enableAck:false, DsCodec useCodec}) {
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ws_conn.dart.html#line-26'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect, bool enableAck:false, DsCodec useCodec}) {
   if (useCodec != null) {
     codec = useCodec;
   }
@@ -148,7 +147,7 @@
 
   pingTimer = new Timer.periodic(new Duration(seconds: 20), onPingTimer);
 }</code></pre>
-      </section>
+    </section>
 
   </div> <!-- /.main-content -->
 

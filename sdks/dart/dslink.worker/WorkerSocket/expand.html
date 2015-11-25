@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.1">
+  <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
   <title>expand method - WorkerSocket class - dslink.worker library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
@@ -159,12 +159,10 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
     <section class="multi-line-signature">
-        <span class="returntype">Stream</span>
-        <span class="name ">expand</span>(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+      <span class="returntype">Stream</span>
+      <span class="name ">expand</span>(<wbr><span class="parameter" id="expand-param-convert"><span class="type-annotation">Iterable</span> <span class="parameter-name">convert</span>(<span class="parameter" id="convert-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
     </section>
-
     <section class="desc markdown">
       <p>Creates a new stream from this stream that converts each element
 into zero or more events.</p>
@@ -177,7 +175,7 @@ will individually call <code>convert</code> and expand the events.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-463'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/home/travis/dart-sdk/lib/async/stream.dart.html#line-469'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream expand(Iterable convert(T value)) {
   return new _ExpandStream&lt;T, dynamic&gt;(this, convert);
 }</code></pre>
