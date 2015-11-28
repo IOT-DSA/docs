@@ -120,12 +120,14 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-119'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-121'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void clear() {
   rows.clear();
-  _resp.updateStream([], meta: {
-    &quot;mode&quot;: &quot;refresh&quot;
-  }, columns: []);
+  if (_resp != null) {
+    _resp.updateStream([], meta: {
+      &quot;mode&quot;: &quot;refresh&quot;
+    }, columns: []);
+  }
 }</code></pre>
     </section>
 

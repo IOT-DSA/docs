@@ -122,9 +122,11 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-94'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void onRowUpdate(LiveTableRow row) {
-  _resp.updateStream([row.values], meta: {
-    &quot;modify&quot;: &quot;replace ${row.index}-${row.index}&quot;
-  });
+  if (_resp != null) {
+    _resp.updateStream([row.values], meta: {
+      &quot;modify&quot;: &quot;replace ${row.index}-${row.index}&quot;
+    });
+  }
 }</code></pre>
     </section>
 
