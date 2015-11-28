@@ -113,7 +113,7 @@
           <li>override</li>
         </ol>
       </div>
-      <span class="returntype">bool</span>
+      <span class="returntype">Future&lt;bool&gt;</span>
       <span class="name ">has</span>(<wbr><span class="parameter" id="has-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
     </section>
     <section class="desc markdown">
@@ -121,9 +121,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-41'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-42'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-bool has(String key) =&gt; window.localStorage.containsKey(key);</code></pre>
+Future&lt;bool&gt; has(String key) async =&gt; window.localStorage.containsKey(key);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

@@ -113,7 +113,7 @@
           <li>override</li>
         </ol>
       </div>
-      <span class="returntype">void</span>
+      <span class="returntype">Future</span>
       <span class="name ">store</span>(<wbr><span class="parameter" id="store-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="store-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
     </section>
     <section class="desc markdown">
@@ -121,10 +121,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-44'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-45'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-void store(String key, String value) {
-    window.localStorage[key] = value;
+Future store(String key, String value) async {
+  window.localStorage[key] = value;
 }</code></pre>
     </section>
 
