@@ -129,7 +129,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-97'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-95'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
 
@@ -171,7 +171,7 @@
     request.add(const Utf8Encoder().convert(DsJson.encode(requestJson)));
     HttpClientResponse response = await request.close();
     List&lt;int&gt; merged = await response.fold([], foldList);
-    String rslt = UTF8.decode(merged);
+    String rslt = const Utf8Decoder().convert(merged);
     Map serverConfig = DsJson.decode(rslt);
     saltNameMap.forEach((name, idx) {
       //read salts
