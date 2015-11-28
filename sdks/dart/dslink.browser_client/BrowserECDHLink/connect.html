@@ -126,7 +126,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-74'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-72'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
   lockCryptoProvider();
@@ -165,26 +165,15 @@
       }
     }
 
-    if (serverConfig[&apos;httpUri&apos;] is String) {
-      // TODO implement http
-      _httpUpdateUri =
-          &apos;${connUri.resolve(serverConfig[&apos;httpUri&apos;])}?dsId=$dsId&apos;;
-      if (tokenHash != null) {
-        _httpUpdateUri = &apos;$_httpUpdateUri$tokenHash&apos;;
-      }
-    }
-
     // server start to support version since 1.0.4
     // and this is the version ack is added
     enableAck = serverConfig.containsKey(&apos;version&apos;);
     if (serverConfig[&apos;format&apos;] is String) {
-     format = serverConfig[&apos;format&apos;];
+      format = serverConfig[&apos;format&apos;];
     }
     initWebsocket(false);
     _connDelay = 1;
     _wsDelay = 1;
-    // initHttp();
-
   } catch (err) {
     DsTimer.timerOnceAfter(connect, _connDelay * 1000);
     if (_connDelay &lt; 60) _connDelay++;

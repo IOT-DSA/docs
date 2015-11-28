@@ -165,7 +165,7 @@ This includes:
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/client.dart.html#line-161'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/client.dart.html#line-160'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">bool configure({ArgParser argp, OptionResultsHandler optionsHandler}) {
   _configured = true;
 
@@ -292,7 +292,7 @@ This includes:
     }
   }
 
-  brokerUrl = opts[&apos;broker&apos;];
+  brokerUrl = opts[&quot;broker&quot;];
   if (brokerUrl == null &amp;&amp; !opts[&quot;discover&quot;]) {
     print(
         &quot;No Broker URL Specified. One of [--broker, --discover] is required.&quot;);
@@ -342,16 +342,14 @@ This includes:
   }
 
   if (brokerUrl != null) {
-    if (!brokerUrl.startsWith(&apos;http&apos;)) {
-      brokerUrl = &apos;http://$brokerUrl&apos;;
+    if (!brokerUrl.startsWith(&quot;http&quot;)) {
+      brokerUrl = &quot;http://$brokerUrl&quot;;
     }
   }
 
-  Uri brokerUri = Uri.parse(brokerUrl);
-
-  File keyFile = getConfig(&apos;key&apos;) == null
+  File keyFile = getConfig(&quot;key&quot;) == null
       ? new File(&quot;${_basePath}/.dslink.key&quot;)
-      : new File.fromUri(Uri.parse(getConfig(&apos;key&apos;)));
+      : new File.fromUri(Uri.parse(getConfig(&quot;key&quot;)));
   String key;
 
   try {

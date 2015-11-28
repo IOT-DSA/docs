@@ -103,7 +103,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-55'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/browser_client.dart.html#line-54'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
   if (_cachedPrivateKey != null) {
     return _cachedPrivateKey;
@@ -112,9 +112,9 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     storage = LocalDataStorage.INSTANCE;
   }
 
-  String keyPath = &apos;dsa_key:${window.location.pathname}&apos;;
-  String keyLockPath = &apos;dsa_key_lock:${window.location.pathname}&apos;;
-  String randomToken = &apos;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&apos;;
+  String keyPath = &quot;dsa_key:${window.location.pathname}&quot;;
+  String keyLockPath = &quot;dsa_key_lock:${window.location.pathname}&quot;;
+  String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&quot;;
 
   if (storage.has(keyPath)) {
     storage.store(keyLockPath, randomToken);
@@ -124,7 +124,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
       _cachedPrivateKey = new PrivateKey.loadFromString(storage.get(keyPath));
       return _cachedPrivateKey;
     } else {
-      // use temp key, don&apos;t lock it;
+      // use temp key, don&quot;t lock it;
       keyLockPath = null;
     }
   }

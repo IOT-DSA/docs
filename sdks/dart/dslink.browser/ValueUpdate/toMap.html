@@ -126,23 +126,23 @@
     
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/common/value.dart.html#line-144'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Map toMap(){
+      <pre><code class="prettyprint lang-dart">Map toMap() {
   Map m = {&apos;ts&apos;: ts, &apos;value&apos;: value};
-   if (count == 0) {
-     m[&apos;count&apos;] = 0;
-   } else if (count &gt; 1) {
-     m[&apos;count&apos;] = count;
-     if (sum.isFinite) {
-       m[&apos;sum&apos;] = sum;
-     }
-     if (max.isFinite) {
-       m[&apos;max&apos;] = max;
-     }
-     if (min.isFinite) {
-       m[&apos;min&apos;] = min;
-     }
-   }
-   return m;
+  if (count == 0) {
+    m[&apos;count&apos;] = 0;
+  } else if (count &gt; 1) {
+    m[&apos;count&apos;] = count;
+    if (sum.isFinite) {
+      m[&apos;sum&apos;] = sum;
+    }
+    if (max.isFinite) {
+      m[&apos;max&apos;] = max;
+    }
+    if (min.isFinite) {
+      m[&apos;min&apos;] = min;
+    }
+  }
+  return m;
 }</code></pre>
     </section>
 

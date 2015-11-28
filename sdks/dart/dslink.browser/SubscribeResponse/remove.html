@@ -121,15 +121,16 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-64'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-65'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void remove(int sid) {
   if (subsriptionids[sid] != null) {
     RespSubscribeController controller = subsriptionids[sid];
     subsriptionids[sid].destroy();
     subsriptionids.remove(sid);
     subscriptions.remove(controller.node.path);
-    if (responder._traceCallbacks != null){
-      ResponseTrace update = new ResponseTrace(controller.node.path,&apos;subscribe&apos;,0,&apos;-&apos;);
+    if (responder._traceCallbacks != null) {
+      ResponseTrace update = new ResponseTrace(
+          controller.node.path, &apos;subscribe&apos;, 0, &apos;-&apos;);
       for (ResponseTraceCallback callback in responder._traceCallbacks) {
         callback(update);
       }

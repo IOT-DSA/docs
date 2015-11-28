@@ -121,7 +121,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-26'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-27'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">RespSubscribeController add(String path, LocalNode node, int sid, int qos) {
   RespSubscribeController controller;
   if (subscriptions[path] != null) {
@@ -150,7 +150,7 @@
       subsriptionids[sid] = controller;
     }
 
-    if (responder._traceCallbacks != null){
+    if (responder._traceCallbacks != null) {
       ResponseTrace update = new ResponseTrace(path, &apos;subscribe&apos;, 0, &apos;+&apos;);
       for (ResponseTraceCallback callback in responder._traceCallbacks) {
         callback(update);

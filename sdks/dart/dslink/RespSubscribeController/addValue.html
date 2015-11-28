@@ -122,44 +122,48 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-243'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/response/subscribe.dart.html#line-253'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
   if (_caching &amp;&amp; _isCacheValid) {
     lastValues.add(val);
     if (lastValues.length &gt; response.responder.maxCacheLength) {
       // cache is no longer valid, fallback to rollup mode
       _isCacheValid = false;
-      lastValue = new ValueUpdate(null,ts:&apos;&apos;);
+      lastValue = new ValueUpdate(null, ts: &apos;&apos;);
       for (ValueUpdate update in lastValues) {
         lastValue.mergeAdd(update);
       }
       lastValues.clear();
       if (_qosLevel &gt; 0) {
         if (_storage != null) {
-            _storage.setValue(waitingValues, lastValue);
+          _storage.setValue(waitingValues, lastValue);
         }
-        waitingValues..clear()..add(lastValue);
+        waitingValues
+          ..clear()
+          ..add(lastValue);
       }
     } else {
       lastValue = val;
       if (_qosLevel &gt; 0) {
         waitingValues.add(lastValue);
         if (_storage != null) {
-            _storage.addValue(lastValue);
+          _storage.addValue(lastValue);
         }
       }
     }
   } else {
     if (lastValue != null) {
-      lastValue =  new ValueUpdate.merge(lastValue, val);
+      lastValue = new ValueUpdate.merge(lastValue, val);
     } else {
       lastValue = val;
     }
     if (_qosLevel &gt; 0) {
-       if (_storage != null) {
-           _storage.setValue(waitingValues, lastValue);
-       }
-       waitingValues..clear()..add(lastValue);
+      if (_storage != null) {
+        _storage.setValue(waitingValues, lastValue);
+      }
+      waitingValues
+        ..clear()
+        ..add(lastValue);
     }
   }
   // TODO, don&apos;t allow this to be called from same controller more often than 100ms

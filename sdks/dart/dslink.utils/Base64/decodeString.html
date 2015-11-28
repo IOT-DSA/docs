@@ -121,7 +121,7 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/utils/base64.dart.html#line-45'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static String decodeString(String input) {
-  return UTF8.decode(decode(input));
+  return const Utf8Decoder().convert(decode(input));
 }</code></pre>
     </section>
 

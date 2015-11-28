@@ -156,19 +156,19 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/client.dart.html#line-517'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/client.dart.html#line-514'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void loadNodesFile() {
   if (provider is SerializableNodeProvider &amp;&amp;
     !_reconnecting) {
-    _nodesFile = getConfig(&apos;nodes&apos;) == null
+    _nodesFile = getConfig(&quot;nodes&quot;) == null
       ? new File(&quot;${_basePath}/nodes.json&quot;)
-      : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+      : new File.fromUri(Uri.parse(getConfig(&quot;nodes&quot;)));
     Map loadedNodesData;
 
     if (loadNodesJson) {
-      _nodesFile = getConfig(&apos;nodes&apos;) == null
+      _nodesFile = getConfig(&quot;nodes&quot;) == null
         ? new File(&quot;${_basePath}/nodes.json&quot;)
-        : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+        : new File.fromUri(Uri.parse(getConfig(&quot;nodes&quot;)));
       try {
         String nodesStr = _nodesFile.readAsStringSync();
         loadedNodesData = DsJson.decode(nodesStr);

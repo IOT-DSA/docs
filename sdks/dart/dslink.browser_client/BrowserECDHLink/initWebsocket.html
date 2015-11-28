@@ -126,12 +126,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-139'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-126'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) {
   if (_closed) return;
-//    if (reconnect &amp;&amp; _httpConnection == null) {
-//      initHttp();
-//    }
   String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&amp;format=$format&apos;;
   var socket = new WebSocket(wsUrl);
   _wsConnection = new WebSocketConnection(socket, this, enableAck:enableAck, onConnect: () {
@@ -172,7 +169,6 @@
         if (_wsDelay &lt; 60) _wsDelay++;
       }
     } else {
-//        initHttp();
       _wsDelay = 5;
       DsTimer.timerOnceAfter(initWebsocket, 5000);
     }

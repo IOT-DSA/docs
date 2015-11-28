@@ -124,15 +124,15 @@
     
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/common/node.dart.html#line-5'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String getDisplayName(String nameOrPath){
+      <pre><code class="prettyprint lang-dart">static String getDisplayName(String nameOrPath) {
   if (nameOrPath.contains(&apos;/&apos;)) {
     List names = nameOrPath.split(&apos;/&apos;);
     nameOrPath = names.removeLast();
-    while(nameOrPath == &apos;&apos; &amp;&amp; !names.isEmpty) {
+    while (nameOrPath == &apos;&apos; &amp;&amp; !names.isEmpty) {
       nameOrPath = names.removeLast();
     }
   }
-  if (nameOrPath.contains(&apos;%&apos;)){
+  if (nameOrPath.contains(&apos;%&apos;)) {
     nameOrPath = UriComponentDecoder.decode(nameOrPath);
   }
   return nameOrPath;

@@ -180,12 +180,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-931'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/responder/simple/simple_node.dart.html#line-932'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Response setConfig(
     String name, Object value, Responder responder, Response response) {
-  if (onSetConfig(name, value) != true)
+  if (onSetConfig(name, value) != true) {
     // when callback returns true, value is rejected
-    Response resp = super.setConfig(name, value, responder, response);
+    super.setConfig(name, value, responder, response);
+  }
   return response;
 }</code></pre>
     </section>

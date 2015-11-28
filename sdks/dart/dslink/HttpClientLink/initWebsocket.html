@@ -129,13 +129,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-178'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-173'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
   if (_closed) return;
 
-//    if (reconnect &amp;&amp; _httpConnection == null) {
-//      initHttp();
-//    }
   try {
     String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&amp;format=$format&apos;;
     if (tokenHash != null) {
@@ -176,11 +173,6 @@
       DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);
       if (_wsDelay &lt; 60) _wsDelay++;
     }
-//      else {
-//        initHttp();
-//        _wsDelay = 5;
-//        DsTimer.timerOnceAfter(initWebsocket, 5000);
-//      }
   }
 }</code></pre>
     </section>
