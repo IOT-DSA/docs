@@ -136,7 +136,7 @@
   if (!enableAck) {
     nextMsgId = -1;
   }
-  socket.binaryType = &apos;arraybuffer&apos;;
+  socket.binaryType = &quot;arraybuffer&quot;;
   _responderChannel = new PassiveChannel(this);
   _requesterChannel = new PassiveChannel(this);
   socket.onMessage.listen(_onData, onDone: _onDone);

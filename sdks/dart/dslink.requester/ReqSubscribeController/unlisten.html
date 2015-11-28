@@ -121,7 +121,7 @@
   if (callbacks.containsKey(callback)) {
     int cacheLevel = callbacks.remove(callback);
     if (callbacks.isEmpty) {
-      requester._subsciption.removeSubscription(this);
+      requester._subscription.removeSubscription(this);
     } else if (cacheLevel == currentQos &amp;&amp; currentQos &gt; 1) {
       updateQos();
     }

@@ -126,16 +126,18 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-126'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-135'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) {
   if (_closed) return;
-  String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&amp;format=$format&apos;;
+  String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(
+      salts[0])}&amp;format=$format&apos;;
   var socket = new WebSocket(wsUrl);
-  _wsConnection = new WebSocketConnection(socket, this, enableAck:enableAck, onConnect: () {
+  _wsConnection =
+  new WebSocketConnection(socket, this, enableAck: enableAck, onConnect: () {
     if (!_onConnectedCompleter.isCompleted) {
       _onConnectedCompleter.complete();
     }
-  }, useCodec:DsCodec.getCodec(format));
+  }, useCodec: DsCodec.getCodec(format));
 
   if (responder != null) {
     responder.connection = _wsConnection.responderChannel;

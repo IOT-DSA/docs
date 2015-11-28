@@ -128,7 +128,7 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-43'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/browser/browser_ecdh_link.dart.html#line-49'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">BrowserECDHLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
     {NodeProvider nodeProvider,
     bool isRequester: true,
@@ -140,22 +140,23 @@
       responder = (isResponder &amp;&amp; nodeProvider != null)
           ? new Responder(nodeProvider)
           : null {
-            if (!_conn.contains(&apos;://&apos;)) {
-              _conn = &apos;http://$_conn&apos;;
-            }
-            if (token != null &amp;&amp; token.length &gt; 16) {
-              // pre-generate tokenHash
-              String tokenId = token.substring(0, 16);
-              String hashStr = CryptoProvider.sha256(const Utf8Encoder().convert(&apos;$dsId$token&apos;));
-              tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
-            }
-            if (formats != null) {
-              this.formats = formats;
-            }
-            if (window.location.hash.contains(&apos;dsa_json&apos;)) {
-              formats = [&apos;json&apos;];
-            }
-          }</code></pre>
+  if (!_conn.contains(&apos;://&apos;)) {
+    _conn = &apos;http://$_conn&apos;;
+  }
+  if (token != null &amp;&amp; token.length &gt; 16) {
+    // pre-generate tokenHash
+    String tokenId = token.substring(0, 16);
+    String hashStr = CryptoProvider.sha256(
+        const Utf8Encoder().convert(&apos;$dsId$token&apos;));
+    tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
+  }
+  if (formats != null) {
+    this.formats = formats;
+  }
+  if (window.location.hash.contains(&apos;dsa_json&apos;)) {
+    formats = [&apos;json&apos;];
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

@@ -137,7 +137,7 @@
   _connected = false;
 
   var newRequests = new Map&lt;int, Request&gt;();
-  newRequests[0] = _subsciption;
+  newRequests[0] = _subscription;
   _requests.forEach((n, req) {
     if (req.rid &lt;= lastRid &amp;&amp; req.updater is! ListController) {
       req._close(DSError.DISCONNECTED);
