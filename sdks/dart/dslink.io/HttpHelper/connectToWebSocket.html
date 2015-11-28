@@ -177,8 +177,7 @@
       request.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocols.toList());
     }
     return request.close();
-  })
-  .then((response) {
+  }).then((response) {
     void error(String message) {
       // Flush data.
       response.detachSocket().then((socket) {

@@ -123,7 +123,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
       <pre><code class="prettyprint lang-dart">static Future&lt;String&gt; fetchUrl(String url, {Map&lt;String, String&gt; headers}) async {
   var request = await createRequest(&quot;GET&quot;, url, headers: headers);
   var response = await request.close();
-  return UTF8.decode(await readBytesFromResponse(response));
+  return const Utf8Decoder().convert(await readBytesFromResponse(response));
 }</code></pre>
     </section>
 
