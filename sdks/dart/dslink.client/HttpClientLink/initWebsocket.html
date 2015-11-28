@@ -129,18 +129,22 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-173'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-179'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
   if (_closed) return;
 
   try {
-    String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&amp;format=$format&apos;;
+    String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(
+        salts[0])}&amp;format=$format&apos;;
     if (tokenHash != null) {
       wsUrl = &apos;$wsUrl$tokenHash&apos;;
     }
     var socket = await HttpHelper.connectToWebSocket(wsUrl);
     _wsConnection = new WebSocketConnection(socket,
-        clientLink: this, enableTimeout: true, enableAck: enableAck, useCodec:DsCodec.getCodec(format));
+        clientLink: this,
+        enableTimeout: true,
+        enableAck: enableAck,
+        useCodec: DsCodec.getCodec(format));
 
     logger.info(&quot;Connected&quot;);
     if (!_onConnectedCompleter.isCompleted) {
@@ -165,9 +169,9 @@
   } catch (error) {
     logger.fine(error);
     if (error is WebSocketException &amp;&amp; (
-          error.message.contains(&apos;not upgraded to websocket&apos;) // error from dart
+        error.message.contains(&apos;not upgraded to websocket&apos;) // error from dart
             || error.message.contains(&apos;(401)&apos;) // error from nodejs
-        )) {
+    )) {
       DsTimer.timerOnceAfter(connect, _connDelay * 1000);
     } else if (reconnect) {
       DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);

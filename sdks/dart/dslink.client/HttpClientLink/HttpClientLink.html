@@ -131,12 +131,12 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-56'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/1.0.0/src/http/client_link.dart.html#line-58'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
-    {NodeProvider nodeProvider, bool isRequester: true,
+    {
+    NodeProvider nodeProvider, bool isRequester: true,
     bool isResponder: true, Requester overrideRequester,
     Responder overrideResponder, this.home, this.token, this.linkData, List formats
-    //this.enableHttp: false
     })
     : privateKey = privateKey,
       dsId = &apos;$dsIdPrefix${privateKey.publicKey.qHash64}&apos; {
@@ -147,9 +147,11 @@
       requester = new Requester();
     }
   }
+
   if (formats != null) {
     this.formats = formats;
   }
+
   if (isResponder) {
     if (overrideResponder != null) {
       responder = overrideResponder;
@@ -157,10 +159,12 @@
       responder = new Responder(nodeProvider);
     }
   }
+
   if (token != null &amp;&amp; token.length &gt; 16) {
     // pre-generate tokenHash
     String tokenId = token.substring(0, 16);
-    String hashStr = CryptoProvider.sha256(const Utf8Encoder().convert(&apos;$dsId$token&apos;));
+    String hashStr = CryptoProvider.sha256(
+        const Utf8Encoder().convert(&apos;$dsId$token&apos;));
     tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
   }
 }</code></pre>
