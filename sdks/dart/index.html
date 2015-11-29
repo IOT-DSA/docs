@@ -94,11 +94,11 @@
 <h2>Getting Started</h2>
 <h3>Prerequisites</h3><ul><li><a href="https://git-scm.com/downloads">Git</a></li><li><a href="https://www.dartlang.org/downloads/">Dart SDK</a></li></ul>
 <h3>Install</h3>
-<pre class="bash prettyprint"><code>pub global activate -sgit https://github.com/IOT-DSA/sdk-dslink-dart.git # Globally install the DSA Dart SDK
+<pre class="bash prettyprint"><code>pub global activate -sgit https://github.com/IOT-DSA/broker-dart.git # Globally install the DSA Broker
 </code></pre>
 <h3>Start a Broker</h3>
 <pre class="bash prettyprint"><code>dsbroker # If you have the pub global executable path setup.
-pub global run dslink:broker # If you do not have the pub global executable path setup.
+pub global run dsbroker:broker # If you do not have the pub global executable path setup.
 </code></pre>
 <p>To connect a broker to another broker:</p>
 <pre class="bash prettyprint"><code>dsbroker --broker http://my.broker.org:8080/conn # Connect a broker to another broker
@@ -280,7 +280,7 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0
+          dslink 0.5.0+1
         </span>
         &bull;
         <span class="no-break">
