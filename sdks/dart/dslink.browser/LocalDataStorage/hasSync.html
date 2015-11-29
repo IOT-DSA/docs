@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="made with love by dartdoc 0.8.3-dev">
-  <title>INSTANCE property - LocalDataStorage class - dslink.browser library - Dart API</title>
+  <title>hasSync method - LocalDataStorage class - dslink.browser library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="static-assets/styles.css">
 
-  <meta name="description" content="API docs for the INSTANCE property from the LocalDataStorage class, for the Dart programming language.">
+  <meta name="description" content="API docs for the hasSync method from the LocalDataStorage class, for the Dart programming language.">
   <link rel="icon" href="static-assets/favicon.png">
 
   <!-- Do not remove placeholder -->
@@ -35,9 +35,9 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
             <li><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></li>
-            <li class="self-crumb">INSTANCE</li>
+            <li class="self-crumb">hasSync</li>
           </ol>
-          <div class="self-name">INSTANCE</div>
+          <div class="self-name">hasSync</div>
           <form class="search navbar-right" role="search">
             <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
           </form>
@@ -53,13 +53,16 @@
           <li><a href="index.html">dslink</a></li>
           <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
           <li><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></li>
-          <li class="self-crumb">INSTANCE</li>
+          <li class="self-crumb">hasSync</li>
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">property</span> INSTANCE
+            <span class="kind">method</span> hasSync
           </h1>
         </div>
+        <ul class="subnav">
+          <li><a href="dslink.browser/LocalDataStorage/hasSync.html#source">Source</a></li>
+        </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
   </div> <!-- /container -->
@@ -105,16 +108,15 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></span>
-        <span class="name ">INSTANCE</span>        <div class="features">
-          read-only
-        </div>
+      <span class="returntype">bool</span>
+      <span class="name ">hasSync</span>(<wbr><span class="parameter" id="hasSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
     </section>
-
     
-
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-45'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">bool hasSync(String key) =&gt; window.localStorage.containsKey(key);</code></pre>
+    </section>
 
   </div> <!-- /.main-content -->
 

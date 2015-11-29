@@ -199,11 +199,12 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-55'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-57'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
   if (_cachedPrivateKey != null) {
     return _cachedPrivateKey;
   }
+
   if (storage == null) {
     storage = LocalDataStorage.INSTANCE;
   }
@@ -212,11 +213,15 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
   String keyLockPath = &quot;dsa_key_lock:${window.location.pathname}&quot;;
   String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&quot;;
 
-  if (await storage.has(keyPath)) {
-    storage.store(keyLockPath, randomToken);
-    await new Future.delayed(new Duration(milliseconds: 20));
-    if (storage.get(keyLockPath) == randomToken) {
-      _startStorageLock(keyLockPath, randomToken);
+  var hasKeyPath = storage is LocalDataStorage ? storage.hasSync(keyPath) : await storage.has(keyPath);
+
+  if (hasKeyPath) {
+    await storage.store(keyLockPath, randomToken);
+    await new Future.delayed(const Duration(milliseconds: 20));
+    if (await storage.get(keyLockPath) == randomToken) {
+      if (storage is LocalDataStorage) {
+        _startStorageLock(keyLockPath, randomToken);
+      }
       _cachedPrivateKey = new PrivateKey.loadFromString(await storage.get(keyPath));
       return _cachedPrivateKey;
     } else {
@@ -230,7 +235,9 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
   if (keyLockPath != null) {
     await storage.store(keyPath, _cachedPrivateKey.saveToString());
     await storage.store(keyLockPath, randomToken);
-    _startStorageLock(keyLockPath, randomToken);
+    if (storage is LocalDataStorage) {
+      _startStorageLock(keyLockPath, randomToken);
+    }
   }
 
   return _cachedPrivateKey;
