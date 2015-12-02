@@ -97,6 +97,7 @@
     
       <li class="section-title"><a href="dslink.browser_client/LocalDataStorage-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/get.html">get</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/getSync.html">getSync</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/has.html">has</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/hasSync.html">hasSync</a></li>
       <li class="inherited"><a href="dslink.browser_client/LocalDataStorage/noSuchMethod.html">noSuchMethod</a></li>
@@ -122,10 +123,11 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-47'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-48'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-Future store(String key, String value) async {
+Future store(String key, String value) {
   window.localStorage[key] = value;
+  return new Future.value();
 }</code></pre>
     </section>
 

@@ -112,12 +112,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">listen</span>(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, <span class="parameter" id="listen-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
+      <span class="name ">listen</span>(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, <span class="parameter" id="listen-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/subscribe.dart.html#line-263'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate), int qos) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/subscribe.dart.html#line-266'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate update), int qos) {
   if (qos &lt; 0 || qos &gt; 3) {
     qos = 0;
   }
@@ -142,6 +142,7 @@
       callback(_lastUpdate);
     }
   }
+
   if (qosChanged) {
     requester._subscription.addSubscription(this, currentQos);
   }

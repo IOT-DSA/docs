@@ -124,11 +124,12 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/subscribe.dart.html#line-303'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">List process(int waitingAckId) {
-  List rslts = [];
+  List rslts = new List();
   if (_caching &amp;&amp; _isCacheValid) {
     for (ValueUpdate lastValue in lastValues) {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
+
     if (_qosLevel &gt; 0) {
       for (ValueUpdate update in lastValues) {
         update.waitingAck = waitingAckId;

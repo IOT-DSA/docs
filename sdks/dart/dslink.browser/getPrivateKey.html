@@ -199,7 +199,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-57'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-59'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
   if (_cachedPrivateKey != null) {
     return _cachedPrivateKey;
@@ -218,11 +218,13 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
   if (hasKeyPath) {
     await storage.store(keyLockPath, randomToken);
     await new Future.delayed(const Duration(milliseconds: 20));
-    if (await storage.get(keyLockPath) == randomToken) {
+    var existingToken = storage is LocalDataStorage ? storage.getSync(keyLockPath) : await storage.get(keyLockPath);
+    var existingKey = storage is LocalDataStorage ? storage.getSync(keyPath) : await storage.get(keyPath);
+    if (existingToken == randomToken) {
       if (storage is LocalDataStorage) {
         _startStorageLock(keyLockPath, randomToken);
       }
-      _cachedPrivateKey = new PrivateKey.loadFromString(await storage.get(keyPath));
+      _cachedPrivateKey = new PrivateKey.loadFromString(existingKey);
       return _cachedPrivateKey;
     } else {
       // use temp key, don&apos;t lock it;
@@ -233,8 +235,8 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
   _cachedPrivateKey = await PrivateKey.generate();
 
   if (keyLockPath != null) {
-    await storage.store(keyPath, _cachedPrivateKey.saveToString());
-    await storage.store(keyLockPath, randomToken);
+    storage.store(keyPath, _cachedPrivateKey.saveToString());
+    storage.store(keyLockPath, randomToken);
     if (storage is LocalDataStorage) {
       _startStorageLock(keyLockPath, randomToken);
     }

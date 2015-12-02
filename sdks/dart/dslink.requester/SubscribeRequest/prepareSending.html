@@ -95,8 +95,8 @@
       <li class="inherited"><a href="dslink.browser/Request/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.requester/SubscribeRequest/runtimeType.html">runtimeType</a></li>
       <li class="inherited"><a href="dslink.browser/Request/streamStatus.html">streamStatus</a></li>
-      <li><a href="dslink.requester/SubscribeRequest/subsriptionids.html">subsriptionids</a></li>
-      <li><a href="dslink.requester/SubscribeRequest/subsriptions.html">subsriptions</a></li>
+      <li><a href="dslink.requester/SubscribeRequest/subscriptionIds.html">subscriptionIds</a></li>
+      <li><a href="dslink.requester/SubscribeRequest/subscriptions.html">subscriptions</a></li>
       <li><a href="dslink.requester/SubscribeRequest/toRemove.html">toRemove</a></li>
       <li class="inherited"><a href="dslink.browser/Request/updater.html">updater</a></li>
     
@@ -125,15 +125,17 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/subscribe.dart.html#line-236'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/subscribe.dart.html#line-237'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void prepareSending() {
   if (_sendingAfterAck) {
     return;
   }
+
   if (_waitingAckCount &gt; ConnectionProcessor.ACK_WAIT_COUNT) {
     _sendingAfterAck = true;
     return;
   }
+
   if (!_pendingSending) {
     _pendingSending = true;
     requester.addProcessor(this);

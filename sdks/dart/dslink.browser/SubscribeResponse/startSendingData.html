@@ -133,10 +133,10 @@ void startSendingData(int currentTime, int waitingAckId) {
 
   if (waitingAckId != -1) {
     _waitingAckCount++;
-    _lastWatingAckId = waitingAckId;
+    _lastWaitingAckId = waitingAckId;
   }
 
-  List updates = [];
+  List updates = new List();
   for (RespSubscribeController controller in changed) {
     updates.addAll(controller.process(waitingAckId));
   }

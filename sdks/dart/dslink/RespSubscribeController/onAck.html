@@ -122,16 +122,15 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/subscribe.dart.html#line-332'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/subscribe.dart.html#line-333'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void onAck(int ackId) {
   if (waitingValues.isEmpty) {
     return;
   }
   bool valueRemoved = false;
   if (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck != ackId) {
-    logger.warning(
-        &apos;invalid ack ${waitingValues.first.value} ${waitingValues.first
-            .waitingAck}&apos;);
+    var msg = &apos;${waitingValues.first.value} ${waitingValues.first.waitingAck}&apos;;
+    logger.warning(&apos;invalid ack ${msg}&apos;);
 
     ValueUpdate matchUpdate;
     for (ValueUpdate update in waitingValues) {
@@ -151,6 +150,7 @@
       }
     }
   }
+
   while (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck == ackId) {
     ValueUpdate removed = waitingValues.removeFirst();
     if (_storage != null) {
@@ -158,6 +158,7 @@
       valueRemoved = true;
     }
   }
+
   if (valueRemoved &amp;&amp; _storage != null) {
     _storage.valueRemoved(waitingValues);
   }
