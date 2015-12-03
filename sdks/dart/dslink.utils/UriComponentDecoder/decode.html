@@ -111,6 +111,7 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/utils/uri_component.dart.html#line-7'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static String decode(String text) {
+  print(text);
   List codes = new List();
   List bytes = new List();
   int len = text.length;
@@ -118,10 +119,16 @@
     var codeUnit = text.codeUnitAt(i);
     if (codeUnit == _PERCENT) {
       if (i + 3 &gt; text.length) {
-        throw new ArgumentError(&apos;Truncated URI&apos;);
+        bytes.add(_PERCENT);
+        continue;
       }
-      bytes.add(_hexCharPairToByte(text, i + 1));
-      i += 2;
+      int hexdecoded = _hexCharPairToByte(text, i + 1);
+      if (hexdecoded &gt; 0) {
+        bytes.add(hexdecoded);
+        i += 2;
+      } else {
+        bytes.add(_PERCENT);
+      }
     } else {
       if (!bytes.isEmpty) {
         codes.addAll(const Utf8Decoder(allowMalformed: true).convert(bytes).codeUnits);
