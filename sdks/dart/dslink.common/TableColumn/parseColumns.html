@@ -121,12 +121,12 @@
       <pre><code class="prettyprint lang-dart">static List&lt;TableColumn&gt; parseColumns(List list) {
   List&lt;TableColumn&gt; rslt = &lt;TableColumn&gt;[];
   for (Object m in list) {
-    if (m is Map &amp;&amp; m[&apos;name&apos;] is String) {
-      String type = &apos;string&apos;;
-      if (m[&apos;type&apos;] is String) {
-        type = m[&apos;type&apos;];
+    if (m is Map &amp;&amp; m[&quot;name&quot;] is String) {
+      String type = &quot;string&quot;;
+      if (m[&quot;type&quot;] is String) {
+        type = m[&quot;type&quot;];
       }
-      rslt.add(new TableColumn(m[&apos;name&apos;], type, m[&apos;default&apos;]));
+      rslt.add(new TableColumn(m[&quot;name&quot;], type, m[&quot;default&quot;]));
     } else if (m is TableColumn) {
       rslt.add(m);
     } else {

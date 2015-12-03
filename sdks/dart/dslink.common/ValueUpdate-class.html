@@ -120,6 +120,9 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
+    <section class="desc markdown">
+      <p>Represents an update to a value subscription.</p>
+    </section>
     
 
 
@@ -132,7 +135,7 @@
           <span class="signature">&#8594; String</span>
         </dt>
         <dd>
-          <p></p>
+          <p>DSA formatted timezone.</p>
           <div class="features">
     read-only
   </div>
@@ -149,7 +152,7 @@
           </span>
         </dt>
         <dd>
-          <p></p>
+          <p>Generates a timestamp in the proper DSA format.</p>
         </dd>
       </dl>
     </section>
@@ -182,7 +185,17 @@
           <span class="signature">&#8594; int</span>
         </dt>
         <dd>
-          <p></p>
+          <p>How many updates have happened since the last response.</p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="created" class="property">
+          <span class="name"><a href="dslink.common/ValueUpdate/created.html">created</a></span>
+          <span class="signature">&#8594; DateTime</span>
+        </dt>
+        <dd>
+          <p>The timestamp for when this value update was created.</p>
           <div class="features">
     read / write
   </div>
@@ -203,7 +216,7 @@
           <span class="signature">&#8594; Duration</span>
         </dt>
         <dd>
-          <p></p>
+          <p>Calculates the latency</p>
           <div class="features">
     read-only
   </div>
@@ -213,7 +226,7 @@
           <span class="signature">&#8594; num</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The maximum value if one or more numeric values has been skipped.</p>
           <div class="features">
     read / write
   </div>
@@ -223,7 +236,7 @@
           <span class="signature">&#8594; num</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The minimum value if one or more numeric values has been skipped.</p>
           <div class="features">
     read / write
   </div>
@@ -243,7 +256,7 @@
           <span class="signature">&#8594; String</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The current status of this value.</p>
           <div class="features">
     read / write
   </div>
@@ -263,9 +276,19 @@
           <span class="signature">&#8594; num</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The sum value if one or more numeric values has been skipped.</p>
           <div class="features">
     read / write
+  </div>
+</dd>
+        <dt id="timestamp" class="property">
+          <span class="name"><a href="dslink.common/ValueUpdate/timestamp.html">timestamp</a></span>
+          <span class="signature">&#8594; DateTime</span>
+        </dt>
+        <dd>
+          <p>Gets a <code>DateTime</code> representation of the timestamp for this value.</p>
+          <div class="features">
+    read-only
   </div>
 </dd>
         <dt id="ts" class="property">
@@ -273,7 +296,7 @@
           <span class="signature">&#8594; String</span>
         </dt>
         <dd>
-          <p></p>
+          <p>A <code>String</code> representation of the timestamp for this value.</p>
           <div class="features">
     read / write
   </div>
@@ -283,7 +306,7 @@
           <span class="signature">&#8594; Object</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The value for this update.</p>
           <div class="features">
     read / write
   </div>
@@ -293,7 +316,7 @@
           <span class="signature">&#8594; int</span>
         </dt>
         <dd>
-          <p></p>
+          <p>The id of the ack we are waiting for.</p>
           <div class="features">
     read / write
   </div>
@@ -352,7 +375,7 @@
           </span>
         </dt>
         <dd>
-          <p></p>
+          <p>Generates a map representation of this value update.</p>
         </dd>
         <dt id="toString" class="callable inherited">
           <span class="name "><a href="dslink.common/ValueUpdate/toString.html">toString</a></span><span class="signature">(<wbr>)
@@ -386,6 +409,7 @@
         <a href="dslink.common/ValueUpdate-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.common/ValueUpdate/count.html">count</a></li>
+      <li><a href="dslink.common/ValueUpdate/created.html">created</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/ValueUpdate/latency.html">latency</a></li>
       <li><a href="dslink.common/ValueUpdate/max.html">max</a></li>
@@ -394,6 +418,7 @@
       <li><a href="dslink.common/ValueUpdate/status.html">status</a></li>
       <li><a href="dslink.common/ValueUpdate/storedData.html">storedData</a></li>
       <li><a href="dslink.common/ValueUpdate/sum.html">sum</a></li>
+      <li><a href="dslink.common/ValueUpdate/timestamp.html">timestamp</a></li>
       <li><a href="dslink.common/ValueUpdate/ts.html">ts</a></li>
       <li><a href="dslink.common/ValueUpdate/value.html">value</a></li>
       <li><a href="dslink.common/ValueUpdate/waitingAck.html">waitingAck</a></li>
