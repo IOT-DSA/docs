@@ -102,7 +102,9 @@
       <li><a href="dslink.browser_client/LocalDataStorage/hasSync.html">hasSync</a></li>
       <li class="inherited"><a href="dslink.browser_client/LocalDataStorage/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/remove.html">remove</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/removeSync.html">removeSync</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/store.html">store</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/storeSync.html">storeSync</a></li>
       <li class="inherited"><a href="dslink.browser_client/LocalDataStorage/toString.html">toString</a></li>
     </ol>
 
@@ -110,13 +112,22 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
+      <div>
+        <ol class="annotation-list">
+          <li>override</li>
+        </ol>
+      </div>
       <span class="returntype">String</span>
       <span class="name ">getSync</span>(<wbr><span class="parameter" id="getSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
     </section>
+    <section class="desc markdown">
+      <p>Get a key's value.</p>
+    </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-46'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">String getSync(String key) =&gt; window.localStorage[key];</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-84'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">@override
+String getSync(String key) =&gt; window.localStorage[key];</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
