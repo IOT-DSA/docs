@@ -83,6 +83,7 @@
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.responder/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
       <li><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
@@ -198,6 +199,16 @@
         <dt id="onClose" class="property">
           <span class="name"><a href="dslink.responder/InvokeResponse/onClose.html">onClose</a></span>
           <span class="signature">&#8594; <a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="onReqParams" class="property">
+          <span class="name"><a href="dslink.responder/InvokeResponse/onReqParams.html">onReqParams</a></span>
+          <span class="signature">&#8594; <a href="dslink/OnReqParams.html">OnReqParams</a></span>
         </dt>
         <dd>
           <p></p>
@@ -338,13 +349,21 @@
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
         </dd>
+        <dt id="updateReqParams" class="callable">
+          <span class="name"><a href="dslink.responder/InvokeResponse/updateReqParams.html">updateReqParams</a></span><span class="signature">(<wbr><span class="parameter" id="updateReqParams-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>new parameter from the requester</p>
+        </dd>
         <dt id="updateStream" class="callable">
           <span class="name"><a href="dslink.responder/InvokeResponse/updateStream.html">updateStream</a></span><span class="signature">(<wbr><span class="parameter" id="updateStream-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateStream-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateStream-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>: <span class="default-value">StreamStatus.open</span></span>, <span class="parameter" id="updateStream-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
-          <p></p>
+          <p>update data for the responder stream</p>
         </dd>
       </dl>
     </section>
@@ -367,6 +386,7 @@
       <li><a href="dslink.responder/InvokeResponse/name.html">name</a></li>
       <li><a href="dslink.responder/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.responder/InvokeResponse/onClose.html">onClose</a></li>
+      <li><a href="dslink.responder/InvokeResponse/onReqParams.html">onReqParams</a></li>
       <li><a href="dslink.responder/InvokeResponse/parentNode.html">parentNode</a></li>
       <li><a href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
@@ -384,6 +404,7 @@
       <li class="inherited"><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.responder/InvokeResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/toString.html">toString</a></li>
+      <li><a href="dslink.responder/InvokeResponse/updateReqParams.html">updateReqParams</a></li>
       <li><a href="dslink.responder/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

@@ -173,8 +173,8 @@ will individually execute <code>map</code> for each event.</p>
     
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/home/travis/dart-sdk/lib/async/stream.dart.html#line-311'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Stream map(convert(T event)) {
-  return new _MapStream&lt;T, dynamic&gt;(this, convert);
+      <pre><code class="prettyprint lang-dart">Stream/*&lt;S&gt;*/ map/*&lt;S&gt;*/(/*=S*/ convert(T event)) {
+  return new _MapStream&lt;T, dynamic/*=S*/&gt;(this, convert);
 }</code></pre>
     </section>
 

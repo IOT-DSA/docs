@@ -85,6 +85,7 @@
       <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.browser/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
       <li><a href="dslink.browser/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
@@ -382,7 +383,7 @@ inside processor, send() data that only need to appear once per data frame</p>
           <p>gather all the changes from</p>
         </dd>
         <dt id="invoke" class="callable">
-          <span class="name"><a href="dslink.browser/Requester/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])
+          <span class="name"><a href="dslink.browser/Requester/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="invoke-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="invoke-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>, <span class="parameter" id="invoke-param-fetchRawReq"><span class="type-annotation">void</span> <span class="parameter-name">fetchRawReq</span>(<span class="parameter" id="fetchRawReq-param-Request"><span class="parameter-name">Request</span></span>)</span>])
             <span class="returntype parameter">&#8594; Stream&lt;<a href="dslink/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a>&gt;</span>
           </span>
         </dt>

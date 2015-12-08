@@ -91,6 +91,7 @@
       <li><a href="dslink.responder/InvokeResponse/name.html">name</a></li>
       <li><a href="dslink.responder/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.responder/InvokeResponse/onClose.html">onClose</a></li>
+      <li><a href="dslink.responder/InvokeResponse/onReqParams.html">onReqParams</a></li>
       <li><a href="dslink.responder/InvokeResponse/parentNode.html">parentNode</a></li>
       <li><a href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
@@ -108,6 +109,7 @@
       <li class="inherited"><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.responder/InvokeResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/toString.html">toString</a></li>
+      <li><a href="dslink.responder/InvokeResponse/updateReqParams.html">updateReqParams</a></li>
       <li><a href="dslink.responder/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
 
@@ -118,9 +120,12 @@
       <span class="returntype">void</span>
       <span class="name ">updateStream</span>(<wbr><span class="parameter" id="updateStream-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateStream-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateStream-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>: <span class="default-value">StreamStatus.open</span></span>, <span class="parameter" id="updateStream-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
     </section>
+    <section class="desc markdown">
+      <p>update data for the responder stream</p>
+    </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/invoke.dart.html#line-21'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/invoke.dart.html#line-25'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void updateStream(List updates,
     {List columns, String streamStatus: StreamStatus.open, Map meta}) {
   if (meta != null &amp;&amp; meta[&apos;mode&apos;] == &apos;refresh&apos;) {
