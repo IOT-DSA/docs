@@ -4,17 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.4-dev">
+  <meta name="description" content="API docs for the subscribe method from the Responder class, for the Dart programming language.">
   <title>subscribe method - Responder class - dslink library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
   <link rel="stylesheet" href="static-assets/prettify.css">
   <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="static-assets/styles.css">
-
-  <meta name="description" content="API docs for the subscribe method from the Responder class, for the Dart programming language.">
   <link rel="icon" href="static-assets/favicon.png">
 
   <!-- Do not remove placeholder -->
@@ -136,7 +134,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/responder.dart.html#line-181'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/responder.dart.html#line-189'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void subscribe(Map m) {
   if (m[&apos;paths&apos;] is List) {
     for (Object p in m[&apos;paths&apos;]) {
@@ -161,11 +159,16 @@
       Path path = Path.getValidNodePath(pathstr);
 
       if (path != null &amp;&amp; path.isAbsolute) {
-        _getNode(path).then((node) {
+        _getNode(path, (LocalNode node) {
           _subscription.add(path.path, node, sid, qos);
           closeResponse(m[&apos;rid&apos;]);
-        }).catchError((e) {
-          closeResponse(m[&apos;rid&apos;], error: new DSError(&quot;nodeError&quot;, msg: e.toString()));
+        }, (e, stack) {
+          var error = new DSError(
+            &quot;nodeError&quot;,
+            msg: e.toString(),
+            detail: stack.toString()
+          );
+          closeResponse(m[&apos;rid&apos;], error: error);
         });
       } else {
         closeResponse(m[&apos;rid&apos;]);

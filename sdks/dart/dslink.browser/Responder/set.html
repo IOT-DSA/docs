@@ -4,17 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.4-dev">
+  <meta name="description" content="API docs for the set method from the Responder class, for the Dart programming language.">
   <title>set method - Responder class - dslink.browser library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
-  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
   <link rel="stylesheet" href="static-assets/prettify.css">
   <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="static-assets/styles.css">
-
-  <meta name="description" content="API docs for the set method from the Responder class, for the Dart programming language.">
   <link rel="icon" href="static-assets/favicon.png">
 
   <!-- Do not remove placeholder -->
@@ -136,34 +134,43 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/responder.dart.html#line-321'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/responder.dart.html#line-351'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void set(Map m) {
   Path path = Path.getValidPath(m[&apos;path&apos;]);
   if (path == null || !path.isAbsolute) {
     closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);
     return;
   }
+
   if (!m.containsKey(&apos;value&apos;)) {
     closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_VALUE);
     return;
   }
+
   Object value = m[&apos;value&apos;];
   int rid = m[&apos;rid&apos;];
   if (path.isNode) {
-    LocalNode node;
+    _getNode(path, (LocalNode node) {
+      int permission = nodeProvider.permissions.getPermission(node.path, this);
+      int maxPermit = Permission.parse(m[&apos;permit&apos;]);
+      if (maxPermit &lt; permission) {
+        permission = maxPermit;
+      }
 
-    node = nodeProvider.getOrCreateNode(path.path, false);
-
-    int permission = nodeProvider.permissions.getPermission(node.path, this);
-    int maxPermit = Permission.parse(m[&apos;permit&apos;]);
-    if (maxPermit &lt; permission) {
-      permission = maxPermit;
-    }
-    if (node.getSetPermission() &lt;= permission) {
-      node.setValue(value, this, addResponse(new Response(this, rid)));
-    } else {
-      closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
-    }
+      if (node.getSetPermission() &lt;= permission) {
+        node.setValue(value, this, addResponse(new Response(this, rid)));
+      } else {
+        closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+      }
+      closeResponse(m[&apos;rid&apos;]);
+    }, (e, stack) {
+      var error = new DSError(
+        &quot;nodeError&quot;,
+        msg: e.toString(),
+        detail: stack.toString()
+      );
+      closeResponse(m[&apos;rid&apos;], error: error);
+    });
   } else if (path.isConfig) {
     LocalNode node;
 
