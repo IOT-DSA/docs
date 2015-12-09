@@ -137,7 +137,7 @@
     
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser.dart.html#line-64'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future init() {
+      <pre><code class="prettyprint lang-dart">Future init() async {
   _initCalled = true;
 
   if (provider == null) {
@@ -145,11 +145,11 @@
   }
 
   if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {
-    if (!(dataStore.has(&quot;dsa_nodes&quot;))) {
+    if (!(await dataStore.has(&quot;dsa_nodes&quot;))) {
       (provider as SerializableNodeProvider).init(defaultNodes);
     } else {
       (provider as SerializableNodeProvider)
-          .init(DsJson.decode(dataStore.get(&quot;dsa_nodes&quot;)));
+          .init(DsJson.decode(await dataStore.get(&quot;dsa_nodes&quot;)));
     }
   } else {
     (provider as SerializableNodeProvider).init(defaultNodes);
@@ -158,7 +158,7 @@
   // move the waiting part of init into a later frame
   // we need to make sure provider is created at the first frame
   // not affected by any async code
-  return initLinkWithPrivateKey();
+  return await initLinkWithPrivateKey();
 }</code></pre>
     </section>
 
