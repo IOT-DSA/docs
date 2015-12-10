@@ -128,9 +128,15 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/common/value.dart.html#line-17'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/common/value.dart.html#line-19'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static String getTs() {
-  return &quot;${(new DateTime.now()).toIso8601String()}$TIME_ZONE&quot;;
+  DateTime d = new DateTime.now();
+  if (d.millisecondsSinceEpoch == _lastTs) {
+    return _lastTsStr;
+  }
+  _lastTs = d.millisecondsSinceEpoch;
+  _lastTsStr = &quot;${d.toIso8601String()}$TIME_ZONE&quot;;
+  return _lastTsStr;
 }</code></pre>
     </section>
 
