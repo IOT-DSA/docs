@@ -111,7 +111,10 @@
   var workers = [];
   for (var i = 1; i &lt;= count; i++) {
     workers.add(createWorkerScript(uri,
-        metadata: {&quot;workerId&quot;: i}..addAll(metadata == null ? {} : metadata)));
+      metadata: {
+        &quot;workerId&quot;: i
+      }..addAll(metadata == null ? {} : metadata)
+    ));
   }
   return new WorkerPool(workers);
 }</code></pre>
