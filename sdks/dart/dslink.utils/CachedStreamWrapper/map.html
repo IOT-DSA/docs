@@ -143,9 +143,15 @@
     <section class="desc markdown">
       <p>Creates a new stream that converts each element of this stream
 to a new value using the <code>convert</code> function.</p>
+<p>For each data event, <code>o</code>, in this stream, the returned stream
+provides a data event with the value <code>convert(o)</code>.
+If <code>convert</code> throws, the returned stream reports the exception as an error
+event instead.</p>
+<p>Error and done events are passed through unchanged to the returned stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.
+The <code>convert</code> function is called once per data event per listener.
 If a broadcast stream is listened to more than once, each subscription
-will individually execute <code>map</code> for each event.</p>
+will individually call <code>convert</code> on each data event.</p>
     </section>
     
     <section class="summary source-code" id="source">
