@@ -101,11 +101,15 @@
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/SubscribeRequest-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/ackReceived.html">ackReceived</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.browser/SubscribeRequest/addSubscription.html">addSubscription</a></li>
       <li class="inherited"><a href="dslink.browser/Request/close.html">close</a></li>
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.browser/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
       <li><a href="dslink.browser/SubscribeRequest/resend.html">resend</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/toString.html">toString</a></li>
     </ol>
 
@@ -123,7 +127,7 @@
   String path = controller.node.remotePath;
   if (subsriptions.containsKey(path)) {
     toRemove[subsriptions[path].sid] = subsriptions[path];
-    requester.addProcessor(_sendSubscriptionReuests);
+    prepareSending();
   } else if (subsriptionids.containsKey(controller.sid)) {
     logger.severe(
         &apos;unexpected remoteSubscription in the requester, sid: ${controller.sid}&apos;);

@@ -96,9 +96,12 @@
       <li class="inherited"><a href="dslink.responder/InvokeResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/InvokeResponse-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.responder/InvokeResponse/close.html">close</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.responder/InvokeResponse/processor.html">processor</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
+      <li><a href="dslink.responder/InvokeResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/toString.html">toString</a></li>
       <li><a href="dslink.responder/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
@@ -121,7 +124,7 @@
     _err = err;
   }
   _sendingStreamStatus = StreamStatus.closed;
-  responder.addProcessor(processor);
+  prepareSendingData();
 }</code></pre>
     </section>
 

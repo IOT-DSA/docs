@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the exec function from the dslink.io library, for the Dart programming language.">
+  <title>exec function - dslink.io library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+            <li class="self-crumb">exec</li>
+          </ol>
+          <div class="self-name">exec</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+          <li class="self-crumb">exec</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">function</span> exec
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.io/exec.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.io/dslink.io-library.html">dslink.io</a></h5>
+    <ol>
+    
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.io/OutputHandler.html">OutputHandler</a></li>
+      <li><a href="dslink.io/ProcessHandler.html">ProcessHandler</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#functions">Functions</a></li>
+      <li><a href="dslink.io/canUseSmartUnzip.html">canUseSmartUnzip</a></li>
+      <li><a href="dslink.io/createFileChecksum.html">createFileChecksum</a></li>
+      <li><a href="dslink.io/decompressTarFiles.html">decompressTarFiles</a></li>
+      <li><a href="dslink.io/decompressZipFiles.html">decompressZipFiles</a></li>
+      <li><a href="dslink.io/doFileChecksum.html">doFileChecksum</a></li>
+      <li><a href="dslink.io/exec.html">exec</a></li>
+      <li><a href="dslink.io/extractArchive.html">extractArchive</a></li>
+      <li><a href="dslink.io/extractArchiveSmart.html">extractArchiveSmart</a></li>
+      <li><a href="dslink.io/fetchUrl.html">fetchUrl</a></li>
+      <li><a href="dslink.io/findExecutable.html">findExecutable</a></li>
+      <li><a href="dslink.io/forceKill.html">forceKill</a></li>
+      <li><a href="dslink.io/generateSnapshotFile.html">generateSnapshotFile</a></li>
+      <li><a href="dslink.io/getDartExecutable.html">getDartExecutable</a></li>
+      <li><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></li>
+      <li><a href="dslink.io/isPortOpen.html">isPortOpen</a></li>
+      <li><a href="dslink.io/readStdinLines.html">readStdinLines</a></li>
+      <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
+      <li><a href="dslink.io/verifyFileChecksum.html">verifyFileChecksum</a></li>
+      <li><a href="dslink.io/writeFileChecksum.html">writeFileChecksum</a></li>
+    
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#enums">Enums</a></li>
+      <li><a href="dslink.io/ChecksumState-class.html">ChecksumState</a></li>
+    
+      <li class="section-title"><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
+      <li><a href="dslink.io/BetterProcessResult-class.html">BetterProcessResult</a></li>
+      <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+        <span class="returntype">Future&lt;<a href="dslink.io/BetterProcessResult-class.html">BetterProcessResult</a>&gt;</span>
+        <span class="name ">exec</span>(<wbr><span class="parameter" id="exec-param-executable"><span class="type-annotation">String</span> <span class="parameter-name">executable</span></span>, {<span class="parameter" id="exec-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span>: <span class="default-value">const []</span></span>, <span class="parameter" id="exec-param-workingDirectory"><span class="type-annotation">String</span> <span class="parameter-name">workingDirectory</span></span>, <span class="parameter" id="exec-param-environment"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">environment</span></span>, <span class="parameter" id="exec-param-includeParentEnvironment"><span class="type-annotation">bool</span> <span class="parameter-name">includeParentEnvironment</span>: <span class="default-value">true</span></span>, <span class="parameter" id="exec-param-runInShell"><span class="type-annotation">bool</span> <span class="parameter-name">runInShell</span>: <span class="default-value">false</span></span>, <span class="parameter" id="exec-param-stdin"><span class="parameter-name">stdin</span></span>, <span class="parameter" id="exec-param-handler"><span class="type-annotation">ProcessHandler</span> <span class="parameter-name">handler</span>(<span class="parameter" id="ProcessHandler-param-process"><span class="type-annotation">Process</span> <span class="parameter-name">process</span></span>)</span>, <span class="parameter" id="exec-param-stdoutHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">stdoutHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-stderrHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">stderrHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-outputHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">outputHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-outputFile"><span class="type-annotation">File</span> <span class="parameter-name">outputFile</span></span>, <span class="parameter" id="exec-param-inherit"><span class="type-annotation">bool</span> <span class="parameter-name">inherit</span>: <span class="default-value">false</span></span>, <span class="parameter" id="exec-param-writeToBuffer"><span class="type-annotation">bool</span> <span class="parameter-name">writeToBuffer</span>: <span class="default-value">false</span></span>})
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;BetterProcessResult&gt; exec(
+    String executable,
+    {
+    List&lt;String&gt; args: const [],
+    String workingDirectory,
+    Map&lt;String, String&gt; environment,
+    bool includeParentEnvironment: true,
+    bool runInShell: false,
+    stdin,
+    ProcessHandler handler,
+    OutputHandler stdoutHandler,
+    OutputHandler stderrHandler,
+    OutputHandler outputHandler,
+    File outputFile,
+    bool inherit: false,
+    bool writeToBuffer: false
+    }) async {
+  IOSink raf;
+
+  if (outputFile != null) {
+    if (!(await outputFile.exists())) {
+      await outputFile.create(recursive: true);
+    }
+
+    raf = await outputFile.openWrite(mode: FileMode.APPEND);
+  }
+
+  try {
+    Process process = await Process.start(
+        executable,
+        args,
+        workingDirectory: workingDirectory,
+        environment: environment,
+        includeParentEnvironment: includeParentEnvironment,
+        runInShell: runInShell
+    );
+
+    if (raf != null) {
+      await raf.writeln(&quot;[${currentTimestamp}] == Executing ${executable} with arguments ${args} (pid: ${process.pid}) ==&quot;);
+    }
+
+    var buff = new StringBuffer();
+    var ob = new StringBuffer();
+    var eb = new StringBuffer();
+
+    process.stdout.transform(UTF8.decoder).listen((str) async {
+      if (writeToBuffer) {
+        ob.write(str);
+        buff.write(str);
+      }
+
+      if (stdoutHandler != null) {
+        stdoutHandler(str);
+      }
+
+      if (outputHandler != null) {
+        outputHandler(str);
+      }
+
+      if (inherit) {
+        stdout.write(str);
+      }
+
+      if (raf != null) {
+        await raf.write(&quot;[${currentTimestamp}] ${str}&quot;);
+      }
+    });
+
+    process.stderr.transform(UTF8.decoder).listen((str) async {
+      if (writeToBuffer) {
+        eb.write(str);
+        buff.write(str);
+      }
+
+      if (stderrHandler != null) {
+        stderrHandler(str);
+      }
+
+      if (outputHandler != null) {
+        outputHandler(str);
+      }
+
+      if (inherit) {
+        stderr.write(str);
+      }
+
+      if (raf != null) {
+        await raf.write(&quot;[${currentTimestamp}] ${str}&quot;);
+      }
+    });
+
+    if (handler != null) {
+      handler(process);
+    }
+
+    if (stdin != null) {
+      if (stdin is Stream) {
+        stdin.listen(process.stdin.add, onDone: process.stdin.close);
+      } else if (stdin is List) {
+        process.stdin.add(stdin);
+      } else {
+        process.stdin.write(stdin);
+        await process.stdin.close();
+      }
+    } else if (inherit) {
+      _stdin.listen(process.stdin.add, onDone: process.stdin.close);
+    }
+
+    var code = await process.exitCode;
+    var pid = process.pid;
+
+    if (raf != null) {
+      await raf.writeln(&quot;[${currentTimestamp}] == Exited with status ${code} ==&quot;);
+      await raf.flush();
+      await raf.close();
+    }
+
+    return new BetterProcessResult(
+        pid,
+        code,
+        ob.toString(),
+        eb.toString(),
+        buff.toString()
+    );
+  } finally {
+    if (raf != null) {
+      await raf.flush();
+      await raf.close();
+    }
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 1.0.0
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

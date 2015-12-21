@@ -98,10 +98,13 @@
       <li class="inherited"><a href="dslink.responder/ListResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
       <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.responder/ListResponse/processor.html">processor</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
+      <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/toString.html">toString</a></li>
     </ol>
 
@@ -122,9 +125,9 @@
       responder.nodeProvider.permissions.getPermission(node.path, responder);
   _nodeChangeListener = node.listStream.listen(changed);
   if (node.listReady) {
-    responder.addProcessor(processor);
+    prepareSendingData();
   } else if (node.disconnected != null) {
-    responder.addProcessor(processor);
+    prepareSendingData();
   }
 }</code></pre>
     </section>

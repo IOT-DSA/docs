@@ -98,6 +98,7 @@
       <li><a href="dslink.broker/BrokerNodeProvider/rootStructure.html">rootStructure</a></li>
       <li class="inherited"><a href="dslink.broker/BrokerNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/shouldSaveFiles.html">shouldSaveFiles</a></li>
+      <li><a href="dslink.broker/BrokerNodeProvider/upstream.html">upstream</a></li>
       <li><a href="dslink.broker/BrokerNodeProvider/usersNode.html">usersNode</a></li>
     
       <li class="section-title inherited"><a href="dslink.broker/BrokerNodeProvider-class.html#operators">Operators</a></li>
@@ -145,6 +146,8 @@
   setNode(&quot;/sys/startTime&quot;, new StartTimeNode(&quot;/sys/startTime&quot;, this));
   setNode(&quot;/sys/clearConns&quot;, new ClearConnsAction(&quot;/sys/clearConns&quot;, this));
   setNode(&quot;/sys/throughput&quot;, new ThroughPutNode(&quot;/sys/throughput&quot;, this));
+  upstream = new UpstreamNode(&quot;/sys/upstream&quot;, this);
+  setNode(&quot;/sys/upstream&quot;, upstream);
 }</code></pre>
     </section>
 

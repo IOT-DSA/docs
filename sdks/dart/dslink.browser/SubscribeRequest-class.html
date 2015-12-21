@@ -104,8 +104,10 @@
       <li><a href="dslink.browser/Configs-class.html">Configs</a></li>
       <li><a href="dslink.browser/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
+      <li><a href="dslink.browser/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink.browser/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.browser/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -134,6 +136,7 @@
       <li><a href="dslink.browser/Permission-class.html">Permission</a></li>
       <li><a href="dslink.browser/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink.browser/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.browser/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
       <li><a href="dslink.browser/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
@@ -186,6 +189,12 @@
           <li>SubscribeRequest</li>
         </ul></dd>
 
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+          </ul>
+        </dd>
 
 
 
@@ -345,6 +354,22 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
+        <dt id="ackReceived" class="callable">
+          <span class="name"><a href="dslink.browser/SubscribeRequest/ackReceived.html">ackReceived</a></span><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ackWaiting" class="callable">
+          <span class="name"><a href="dslink.browser/SubscribeRequest/ackWaiting.html">ackWaiting</a></span><span class="signature">(<wbr><span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="addSubscription" class="callable">
           <span class="name"><a href="dslink.browser/SubscribeRequest/addSubscription.html">addSubscription</a></span><span class="signature">(<wbr><span class="parameter" id="addSubscription-param-controller"><span class="type-annotation"><a href="dslink/ReqSubscribeController-class.html">ReqSubscribeController</a></span> <span class="parameter-name">controller</span></span>, <span class="parameter" id="addSubscription-param-level"><span class="type-annotation">int</span> <span class="parameter-name">level</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -376,6 +401,14 @@ the original invocation.<a href="dslink.browser/SubscribeRequest/noSuchMethod.ht
 </p>
           <div class="features">inherited</div>
         </dd>
+        <dt id="prepareSending" class="callable">
+          <span class="name"><a href="dslink.browser/SubscribeRequest/prepareSending.html">prepareSending</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="removeSubscription" class="callable">
           <span class="name"><a href="dslink.browser/SubscribeRequest/removeSubscription.html">removeSubscription</a></span><span class="signature">(<wbr><span class="parameter" id="removeSubscription-param-controller"><span class="type-annotation"><a href="dslink/ReqSubscribeController-class.html">ReqSubscribeController</a></span> <span class="parameter-name">controller</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -391,6 +424,14 @@ the original invocation.<a href="dslink.browser/SubscribeRequest/noSuchMethod.ht
         </dt>
         <dd>
           <p>resend the data if previous sending failed</p>
+        </dd>
+        <dt id="startSendingData" class="callable">
+          <span class="name"><a href="dslink.browser/SubscribeRequest/startSendingData.html">startSendingData</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
         </dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.browser/SubscribeRequest/toString.html">toString</a></span><span class="signature">(<wbr>)
@@ -434,11 +475,15 @@ the original invocation.<a href="dslink.browser/SubscribeRequest/noSuchMethod.ht
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/SubscribeRequest-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/ackReceived.html">ackReceived</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.browser/SubscribeRequest/addSubscription.html">addSubscription</a></li>
       <li class="inherited"><a href="dslink.browser/Request/close.html">close</a></li>
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.browser/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
       <li><a href="dslink.browser/SubscribeRequest/resend.html">resend</a></li>
+      <li><a href="dslink.browser/SubscribeRequest/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.browser/SubscribeRequest/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

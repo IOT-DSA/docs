@@ -86,12 +86,8 @@
         <a href="dslink.browser/InvokeResponse-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.browser/InvokeResponse/name.html">name</a></li>
       <li><a href="dslink.browser/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.browser/InvokeResponse/onClose.html">onClose</a></li>
-      <li><a href="dslink.browser/InvokeResponse/onReqParams.html">onReqParams</a></li>
-      <li><a href="dslink.browser/InvokeResponse/parentNode.html">parentNode</a></li>
-      <li><a href="dslink.browser/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/runtimeType.html">runtimeType</a></li>
@@ -101,13 +97,12 @@
     
       <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.browser/InvokeResponse/close.html">close</a></li>
-      <li><a href="dslink.browser/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
       <li><a href="dslink.browser/InvokeResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/toString.html">toString</a></li>
-      <li><a href="dslink.browser/InvokeResponse/updateReqParams.html">updateReqParams</a></li>
       <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
 
@@ -121,35 +116,32 @@
         </ol>
       </div>
       <span class="returntype">void</span>
-      <span class="name ">startSendingData</span>(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
+      <span class="name ">startSendingData</span>(<wbr>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/invoke.dart.html#line-43'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">@override
-void startSendingData(int currentTime, int waitingAckId) {
-  _pendingSending = false;
+void startSendingData() {
+  _pendingSendingData = false;
   if (_err != null) {
-    responder.closeResponse(rid, response: this, error: _err);
+    responder._closeResponse(rid, response: this, error: _err);
     if (_sentStreamStatus == StreamStatus.closed) {
       _close();
     }
     return;
   }
 
-  for (_InvokeResponseUpdate update in pendingData) {
-    List outColumns;
-    if (update.columns != null) {
-      outColumns = TableColumn.serializeColumns(update.columns);
-    }
-    responder.updateResponse(this, update.updates,
-        streamStatus: update.status, columns: outColumns, meta:update.meta);
-    if (_sentStreamStatus == StreamStatus.closed) {
-      _close();
-      break;
-    }
+  if (_columns != null) {
+    _columns = TableColumn.serializeColumns(_columns);
   }
-  pendingData.clear();
+  responder.updateResponse(this, _updates,
+      streamStatus: _sendingStreamStatus, columns: _columns, meta:_meta);
+  _columns = null;
+  _updates = null;
+  if (_sentStreamStatus == StreamStatus.closed) {
+    _close();
+  }
 }</code></pre>
     </section>
 
@@ -163,7 +155,7 @@ void startSendingData(int currentTime, int waitingAckId) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -106,8 +106,10 @@
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
+      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -139,6 +141,7 @@
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -182,6 +185,20 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     
+    <section>
+      <dl class="dl-horizontal">
+
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+          </ul>
+        </dd>
+
+
+
+      </dl>
+    </section>
 
 
 
@@ -266,6 +283,22 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
+        <dt id="ackReceived" class="callable">
+          <span class="name"><a href="dslink/Response/ackReceived.html">ackReceived</a></span><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ackWaiting" class="callable">
+          <span class="name"><a href="dslink/Response/ackWaiting.html">ackWaiting</a></span><span class="signature">(<wbr><span class="parameter" id="ackWaiting-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="close" class="callable">
           <span class="name"><a href="dslink/Response/close.html">close</a></span><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
             <span class="returntype parameter">&#8594; void</span>
@@ -287,6 +320,22 @@ If <code>noSuchMethod</code> returns a value, that value becomes the result of
 the original invocation.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
+        </dd>
+        <dt id="prepareSendingData" class="callable">
+          <span class="name"><a href="dslink/Response/prepareSendingData.html">prepareSendingData</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="startSendingData" class="callable">
+          <span class="name"><a href="dslink/Response/startSendingData.html">startSendingData</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
         </dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink/Response/toString.html">toString</a></span><span class="signature">(<wbr>)
@@ -323,8 +372,12 @@ the original invocation.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
       <li class="inherited"><a href="dslink/Response/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/Response-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/Response/ackReceived.html">ackReceived</a></li>
+      <li><a href="dslink/Response/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink/Response/close.html">close</a></li>
       <li class="inherited"><a href="dslink/Response/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/Response/prepareSendingData.html">prepareSendingData</a></li>
+      <li><a href="dslink/Response/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/Response/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->

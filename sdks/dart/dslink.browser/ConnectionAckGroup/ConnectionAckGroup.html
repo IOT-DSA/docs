@@ -87,11 +87,9 @@
         <a href="dslink.browser/ConnectionAckGroup-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.browser/ConnectionAckGroup/ackId.html">ackId</a></li>
-      <li><a href="dslink.browser/ConnectionAckGroup/expectedAckTime.html">expectedAckTime</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionAckGroup/hashCode.html">hashCode</a></li>
       <li><a href="dslink.browser/ConnectionAckGroup/processors.html">processors</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionAckGroup/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.browser/ConnectionAckGroup/startTime.html">startTime</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser/ConnectionAckGroup-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionAckGroup/operator_equals.html">operator ==</a></li>
@@ -107,13 +105,17 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">ConnectionAckGroup</span>(<wbr><span class="parameter" id="-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>, <span class="parameter" id="-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>, <span class="parameter" id="-param-processors"><span class="type-annotation">List&lt;<a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a>&gt;</span> <span class="parameter-name">processors</span></span>)
+            <span class="name ">ConnectionAckGroup</span>(<wbr><span class="parameter" id="-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>, <span class="parameter" id="-param-processors"><span class="type-annotation">List&lt;<a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a>&gt;</span> <span class="parameter-name">processors</span></span>)
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/common.dart.html#line-84'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">ConnectionAckGroup(this.ackId, this.startTime, this.processors);</code></pre>
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">ConnectionAckGroup(this.ackId, this.processors) {
+  for (ConnectionProcessor processor in processors) {
+    processor.ackWaiting(ackId);
+  }
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -126,7 +128,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

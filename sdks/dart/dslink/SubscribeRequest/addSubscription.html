@@ -101,11 +101,15 @@
       <li class="inherited"><a href="dslink/SubscribeRequest/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/SubscribeRequest/ackReceived.html">ackReceived</a></li>
+      <li><a href="dslink/SubscribeRequest/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink/SubscribeRequest/addSubscription.html">addSubscription</a></li>
       <li class="inherited"><a href="dslink.browser/Request/close.html">close</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/SubscribeRequest/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
       <li><a href="dslink/SubscribeRequest/resend.html">resend</a></li>
+      <li><a href="dslink/SubscribeRequest/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/toString.html">toString</a></li>
     </ol>
 
@@ -123,7 +127,7 @@
   String path = controller.node.remotePath;
   subsriptions[path] = controller;
   subsriptionids[controller.sid] = controller;
-  requester.addProcessor(_sendSubscriptionReuests);
+  prepareSending();
   _changedPaths.add(path);
 }</code></pre>
     </section>

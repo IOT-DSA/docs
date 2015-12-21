@@ -97,12 +97,12 @@
       <li class="inherited"><a href="dslink.responder/ListResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-methods">Methods</a></li>
-      <li><a href="dslink.responder/ListResponse/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackWaiting.html">ackWaiting</a></li>
       <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
       <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
-      <li><a href="dslink.responder/ListResponse/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/prepareSendingData.html">prepareSendingData</a></li>
       <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/toString.html">toString</a></li>
     </ol>
@@ -117,20 +117,14 @@
         </ol>
       </div>
       <span class="returntype">void</span>
-      <span class="name ">startSendingData</span>(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
+      <span class="name ">startSendingData</span>(<wbr>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/list.dart.html#line-41'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">@override
-void startSendingData(int currentTime, int waitingAckId) {
-  _pendingSending = false;
-
-  if (waitingAckId != -1) {
-    _waitingAckCount++;
-    _lastWatingAckId = waitingAckId;
-  }
-
+void startSendingData() {
+  _pendingSendingData = false;
   Object updateIs;
   Object updateBase;
   List updateConfigs = [];
@@ -154,8 +148,8 @@ void startSendingData(int currentTime, int waitingAckId) {
       node.configs.remove(r&apos;$disconnectedTs&apos;);
     }
   }
+  // TODO handle permission and permission change
 
-  // TODO: handle permission and permission change
   if (initialResponse || changes.contains(r&apos;$is&apos;)) {
     initialResponse = false;
     node.configs.forEach((name, value) {
@@ -175,7 +169,6 @@ void startSendingData(int currentTime, int waitingAckId) {
     node.children.forEach((name, LocalNode value) {
       updateChildren.add([name, value.getSimpleMap()]);
     });
-
     if (updateIs == null) {
       updateIs = [r&apos;$is&apos;, &apos;node&apos;];
     }
@@ -218,8 +211,10 @@ void startSendingData(int currentTime, int waitingAckId) {
   if (updateIs != null) {
     updates.add(updateIs);
   }
-  updates..addAll(updateConfigs)..addAll(updateAttributes)..addAll(
-      updateChildren);
+  updates
+    ..addAll(updateConfigs)
+    ..addAll(updateAttributes)
+    ..addAll(updateChildren);
 
   responder.updateResponse(this, updates, streamStatus: StreamStatus.open);
 }</code></pre>
@@ -235,7 +230,7 @@ void startSendingData(int currentTime, int waitingAckId) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

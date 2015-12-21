@@ -85,7 +85,6 @@
       <li class="section-title">
         <a href="dslink/Connection-class.html#instance-properties">Properties</a>
       </li>
-      <li><a href="dslink/Connection/codec.html">codec</a></li>
       <li class="inherited"><a href="dslink/Connection/hashCode.html">hashCode</a></li>
       <li><a href="dslink/Connection/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink/Connection/onRequesterReady.html">onRequesterReady</a></li>
@@ -115,27 +114,21 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/common.dart.html#line-45'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void ack(int ackId) {
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">void ack(int ackId){
   ConnectionAckGroup findAckGroup;
   for (ConnectionAckGroup ackGroup in pendingAcks) {
     if (ackGroup.ackId == ackId) {
       findAckGroup = ackGroup;
       break;
-    } else if (ackGroup.ackId &lt; ackId) {
-      findAckGroup = ackGroup;
     }
   }
-
-  if (findAckGroup != null) {
-    int ts = (new DateTime.now()).millisecondsSinceEpoch;
-    do {
-      ConnectionAckGroup ackGroup = pendingAcks.removeFirst();
-      ackGroup.ackAll(ackId, ts);
-      if (ackGroup == findAckGroup) {
-        break;
-      }
-    } while (findAckGroup != null);
+  while (findAckGroup != null) {
+    ConnectionAckGroup ackGroup = pendingAcks.removeFirst();
+    ackGroup.ackAll(ackId);
+    if (ackGroup == findAckGroup) {
+      break;
+    }
   }
 }</code></pre>
     </section>
@@ -150,7 +143,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

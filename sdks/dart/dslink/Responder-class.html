@@ -106,8 +106,10 @@
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
+      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -139,6 +141,7 @@
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -304,7 +307,7 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="addProcessor" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></span><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
+          <span class="name"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></span><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -339,9 +342,9 @@ inside processor, send() data that only need to appear once per data frame</p>
         <dd>
           <p></p>
         </dd>
-        <dt id="doSend" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; List</span>
+        <dt id="getSendingData" class="callable inherited">
+          <span class="name"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="dslink/ProcessorResult-class.html">ProcessorResult</a></span>
           </span>
         </dt>
         <dd class="inherited">
@@ -491,7 +494,7 @@ the original invocation.<a href="dslink/Responder/noSuchMethod.html">&hellip;</a
       <li><a href="dslink/Responder/addResponse.html">addResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
       <li><a href="dslink/Responder/close.html">close</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></li>
+      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li><a href="dslink/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink/Responder/list.html">list</a></li>
       <li class="inherited"><a href="dslink/Responder/noSuchMethod.html">noSuchMethod</a></li>

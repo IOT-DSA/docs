@@ -115,7 +115,9 @@
     
       <li class="section-title"><a href="dslink.broker/BrokerNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/Node/addChild.html">addChild</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
@@ -161,7 +163,7 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">@override
-int getPermission (Iterator&lt;String&gt; paths, Responder responder, int permission) {
+int getPermission(Iterator&lt;String&gt; paths, Responder responder, int permission) {
   permission = super.getPermission(paths, responder, permission);
   if (permission == Permission.CONFIG) {
     return Permission.CONFIG;

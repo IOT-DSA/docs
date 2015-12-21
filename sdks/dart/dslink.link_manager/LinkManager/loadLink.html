@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the loadLink method from the LinkManager class, for the Dart programming language.">
+  <title>loadLink method - LinkManager class - dslink.link_manager library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.link_manager/dslink.link_manager-library.html">dslink.link_manager</a></li>
+            <li><a href="dslink.link_manager/LinkManager-class.html">LinkManager</a></li>
+            <li class="self-crumb">loadLink</li>
+          </ol>
+          <div class="self-name">loadLink</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.link_manager/dslink.link_manager-library.html">dslink.link_manager</a></li>
+          <li><a href="dslink.link_manager/LinkManager-class.html">LinkManager</a></li>
+          <li class="self-crumb">loadLink</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">method</span> loadLink
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.link_manager/LinkManager/loadLink.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.link_manager/dslink.link_manager-library.html">dslink.link_manager</a></h5>
+    <h5><a href="dslink.link_manager/LinkManager-class.html">LinkManager</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink.link_manager/LinkManager-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.link_manager/LinkManager/LinkManager.html">LinkManager</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.link_manager/LinkManager-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dslink.link_manager/LinkManager/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.link_manager/LinkManager/linkCommanders.html">linkCommanders</a></li>
+      <li class="inherited"><a href="dslink.link_manager/LinkManager/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.link_manager/LinkManager-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dslink.link_manager/LinkManager/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="dslink.link_manager/LinkManager-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.link_manager/LinkManager/addLink.html">addLink</a></li>
+      <li><a href="dslink.link_manager/LinkManager/disable.html">disable</a></li>
+      <li><a href="dslink.link_manager/LinkManager/enable.html">enable</a></li>
+      <li><a href="dslink.link_manager/LinkManager/getBrokerUrl.html">getBrokerUrl</a></li>
+      <li><a href="dslink.link_manager/LinkManager/getLinkConfig.html">getLinkConfig</a></li>
+      <li><a href="dslink.link_manager/LinkManager/getUseRuntimeManager.html">getUseRuntimeManager</a></li>
+      <li><a href="dslink.link_manager/LinkManager/isLinkDisabled.html">isLinkDisabled</a></li>
+      <li><a href="dslink.link_manager/LinkManager/loadLink.html">loadLink</a></li>
+      <li class="inherited"><a href="dslink.link_manager/LinkManager/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.link_manager/LinkManager/removeLink.html">removeLink</a></li>
+      <li><a href="dslink.link_manager/LinkManager/setLinkEnabled.html">setLinkEnabled</a></li>
+      <li><a href="dslink.link_manager/LinkManager/setLinkState.html">setLinkState</a></li>
+      <li class="inherited"><a href="dslink.link_manager/LinkManager/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <section class="multi-line-signature">
+      <span class="returntype">Future</span>
+      <span class="name ">loadLink</span>(<wbr><span class="parameter" id="loadLink-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="loadLink-param-shouldStartNow"><span class="type-annotation">bool</span> <span class="parameter-name">shouldStartNow</span> = <span class="default-value">false</span></span>, <span class="parameter" id="loadLink-param-skipDuplicates"><span class="type-annotation">bool</span> <span class="parameter-name">skipDuplicates</span> = <span class="default-value">false</span></span>])
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">loadLink(String path, [bool shouldStartNow = false, bool skipDuplicates = false]) async {
+  var name = pathlib.basename(path);
+  var logFile = new File(&quot;logs/${name}.log&quot;);
+
+  var gitDir = new Directory(&quot;${path}/.git&quot;);
+  var gitExe = await findExecutable(&quot;git&quot;);
+  var isGitLink = await gitDir.exists();
+  var isUpdatableGit = isGitLink &amp;&amp; gitExe != null;
+  var updateType = isUpdatableGit ? &quot;git&quot; : &quot;none&quot;;
+
+  if (isUpdatableGit) {
+    BetterProcessResult result = await exec(gitExe, args: [&quot;pull&quot;], workingDirectory: path, outputFile: logFile);
+    if (result.exitCode != 0) {
+      print(&quot;Warning: Tried to run &apos;git pull&apos; in &apos;${path}&apos;, but it failed.&quot;);
+    }
+  }
+
+  var dslinkJsonFile = new File(&quot;${path}/dslink.json&quot;);
+  var linkDir = new Directory(path).absolute;
+
+  if (!(await dslinkJsonFile.exists())) {
+    return;
+  }
+
+  Map json;
+
+  try {
+    json = Convert.JSON.decode(await dslinkJsonFile.readAsString());
+  } catch (e) {
+    print(&quot;ERROR while loading dslink.json at ${dslinkJsonFile.path}: ${e}&quot;);
+    return;
+  }
+
+  DSUtils.DSLinkJSON c = new DSUtils.DSLinkJSON.from(json);
+
+  try {
+    c.verify();
+  } catch (e) {
+    print(&quot;ERROR while verifying dslink.json at ${dslinkJsonFile.path}: ${e}&quot;);
+    return;
+  }
+
+  try {
+    if (_basicLinkData != null &amp;&amp; updateType == &quot;none&quot;) {
+      var rn = c.name;
+      if (_basicLinkData.any((x) =&gt; x[&quot;name&quot;] == rn)) {
+        updateType = &quot;repository&quot;;
+      }
+    }
+  } catch (e) {}
+
+  if (_loadedLinks.contains(name)) {
+    if (!skipDuplicates) {
+      print(&quot;ERROR while loading &apos;${name}&apos;: duplicate link found! (path: ${path})&quot;);
+    }
+    return;
+  }
+
+  _loadedLinks.add(name);
+
+  if (!(await logFile.exists())) {
+    await logFile.create(recursive: true);
+  }
+
+  await addLink(name, c.description, c.version, updateType, !(await isLinkDisabled(name)));
+
+  await setLinkState(name, &quot;getting dependencies&quot;);
+
+  if (c.getDependencies != null &amp;&amp; c.getDependencies.isNotEmpty) {
+    var deps = c.getDependencies;
+    if (c.engines != null &amp;&amp; c.engines.isNotEmpty &amp;&amp; c.engines.keys.first == &quot;dart&quot; &amp;&amp; deps.every((x) =&gt; x.startsWith(&quot;pub &quot;))) {
+      var pubspecFile = new File(pathlib.join(path, &quot;pubspec.yaml&quot;));
+
+      if (!(await pubspecFile.exists())) {
+        deps = [];
+      }
+    }
+
+    if (deps.isNotEmpty) {
+      print(&quot;Fetching Dependencies for DSLink &apos;${name}&apos;&quot;);
+
+      for (var cmd in deps) {
+        var parts = cmd.split(&quot; &quot;);
+        var exe = parts[0];
+
+        if (!pathlib.isAbsolute(exe) &amp;&amp; !exe.contains(&quot;/&quot;) &amp;&amp; !exe.contains(&quot;\\&quot;)) {
+          exe = await findExecutable(exe);
+
+          if (exe == null) {
+            print(&quot;ERROR while fetching dependencies for link &apos;${name}:&apos;&quot;);
+            print(&quot;This DSLink requires &apos;${exe}&apos; to fetch it&apos;s dependencies.&quot;);
+            return;
+          }
+        }
+
+        var args = parts.skip(1).toList();
+
+        var result = await exec(exe, args: args, outputFile: logFile, workingDirectory: path, environment: {
+          &quot;DSA_LINK_NAME&quot;: name
+        });
+
+        if (result.exitCode != 0) {
+          print(&quot;ERROR while fetching dependencies for link &apos;${name}&apos;:&quot;);
+          print(&quot;Process &apos;${exe}&apos; with arugments ${args} exited with status ${result.exitCode}&quot;);
+          return;
+        }
+      }
+      print(&quot;Fetched Dependencies for DSLink &apos;${name}&apos;&quot;);
+    }
+  }
+
+  await setLinkState(name, &quot;stopped&quot;);
+
+  Process ourProc;
+  RuntimeManager runtime;
+
+  bool reloadForced = false;
+  bool running = false;
+  bool noRestart = false;
+
+  Function starter;
+  Function commander;
+
+  commander = linkCommanders[name] = (String cmd) async {
+    if (cmd == &quot;restart&quot;) {
+      if (!running) {
+        await commander(&quot;start&quot;);
+      } else {
+        reloadForced = true;
+        noRestart = false;
+        await commander(&quot;stop&quot;);
+        reloadForced = true;
+        noRestart = false;
+      }
+    } else if (cmd == &quot;start&quot;) {
+      var isDisabled = await isLinkDisabled(name);
+
+      if (isDisabled) {
+        await setLinkEnabled(name);
+      }
+
+      if (!running &amp;&amp; starter != null) {
+        starter();
+      }
+    } else if (cmd == &quot;stop&quot;) {
+      if (!reloadForced) {
+        noRestart = true;
+      }
+
+      if (ourProc != null) {
+        var mpid = ourProc.pid;
+        await forceKill(mpid);
+      } else if (runtime != null) {
+        runtime.stopLink(linkDir.path);
+      }
+    } else if (cmd == &quot;enable&quot;) {
+      enable(name);
+    } else if (cmd == &quot;disable&quot;) {
+      if (!(await isLinkDisabled(name))) {
+        disable(name);
+      }
+    } else if (cmd == &quot;update-git&quot;) {
+      BetterProcessResult result = await exec(gitExe, args: [&quot;pull&quot;], workingDirectory: path, outputFile: logFile);
+      if (result.exitCode != 0) {
+        return &quot;Failed.&quot;;
+      } else {
+        return &quot;Success!&quot;;
+      }
+    } else if (cmd == &quot;uninstall&quot;) {
+      await linkCommanders[name](&quot;stop&quot;);
+
+      while (running) {
+        await new Future.delayed(const Duration(milliseconds: 25));
+      }
+
+      await removeLink(name);
+      _loadedLinks.remove(name);
+      linkCommanders.remove(name);
+
+      var dir = new Directory(path);
+      if (await dir.exists()) {
+        await dir.delete(recursive: true);
+      }
+
+      print(&quot;DSLink &apos;${name}&apos; has been uninstalled.&quot;);
+    } else if (cmd == &quot;update-repo&quot;) {
+      await linkCommanders[name](&quot;stop&quot;);
+      try {
+        var rname = json[&quot;name&quot;];
+        var info = await fetchLinkRepositoryInfo();
+        var entry = info.firstWhere((x) =&gt; x[&quot;name&quot;] == rname, orElse: () =&gt; null);
+
+        if (entry == null) {
+          return &quot;${rname} was not found in the repository.&quot;;
+        }
+
+        var zipUrl = entry[&quot;zip&quot;];
+
+        return await updateLinkFromZip(linkDir, zipUrl, json);
+      } catch (e) {
+        return e.toString();
+      }
+    } else if (cmd == &quot;getLinkDirectory&quot;) {
+      return linkDir;
+    } else if (cmd == &quot;getLinkJson&quot;) {
+      return json;
+    }
+  };
+
+  var canUseRuntime = json[&quot;useRuntimeManager&quot;] != null ? json[&quot;useRuntimeManager&quot;] : true;
+
+  canUseRuntime = canUseRuntime &amp;&amp; !Platform.isWindows &amp;&amp; await getUseRuntimeManager();
+
+  if (canUseRuntime &amp;&amp; c.engines != null &amp;&amp; c.engines.isNotEmpty &amp;&amp; c.engines.keys.contains(&quot;dart&quot;)) {
+    runtime = await getDartRuntimeManager(_linkProcesses);
+  }
+
+  if (canUseRuntime &amp;&amp;
+  (
+      (c.engines != null &amp;&amp; c.engines.isNotEmpty &amp;&amp; c.engines.keys.contains(&quot;java&quot;)) ||
+      c.name.startsWith(&quot;dslink-java-&quot;) &amp;&amp; c.configs.containsKey(&quot;handler_class&quot;) &amp;&amp;
+      c.configs.containsKey(&quot;name&quot;) &amp;&amp; c.configs.containsKey(&quot;log&quot;))) {
+    String jpath = pathlib.join(&quot;bin&quot;, &quot;runtimes&quot;, &quot;java.jar&quot;);
+
+    if (await new File(jpath).exists()) {
+      runtime = await getJavaRuntimeManager(_linkProcesses);
+    }
+  }
+
+  starter = ([onReady()]) async {
+    if (await isLinkDisabled(name)) {
+      if (onReady != null) {
+        onReady();
+      }
+      return null;
+    }
+
+    await setLinkState(name, &quot;starting&quot;);
+
+    String exe;
+    var args = [];
+
+    if (c.engines == null || c.engines.isEmpty) {
+      exe = c.main;
+
+      if ((exe.endsWith(&quot;.bat&quot;) || exe.endsWith(&quot;.exe&quot;)) &amp;&amp; !Platform.isWindows) {
+        exe = exe.substring(0, exe.length - 4);
+      } else if (Platform.isWindows) {
+        if (!exe.endsWith(&quot;.bat&quot;)) {
+          exe = &quot;${exe}.bat&quot;;
+        }
+      }
+
+      if (Platform.isWindows) {
+        exe = exe.replaceAll(&quot;/&quot;, &quot;\\&quot;);
+      }
+
+      if (!pathlib.isAbsolute(exe)) {
+        exe = pathlib.join(linkDir.path, exe);
+      }
+    } else {
+      exe = c.engines.keys.first;
+
+      if (exe == &quot;dart&quot;) {
+        try {
+          exe = Platform.resolvedExecutable;
+        } catch (e) {
+          exe = Platform.executable;
+        }
+
+        if (exe == null || exe.isEmpty) {
+          exe = await findExecutable(&quot;dart&quot;);
+        }
+      }
+
+      if (exe == &quot;java&quot;) {
+        exe = await findExecutable(&quot;java&quot;);
+
+        if (exe == null) {
+          exe = &quot;java&quot;;
+        }
+
+        args.add(&quot;-jar&quot;);
+      }
+
+      args.add(c.main);
+    }
+
+    var cfg = {};
+
+    c.configs.keys.where((it) =&gt; c.configs[it][&quot;value&quot;] != null || c.configs[it][&quot;default&quot;] != null).forEach((x) {
+      cfg[x] = c.configs[x][&quot;value&quot;] == null ? c.configs[x][&quot;default&quot;] : c.configs[x][&quot;value&quot;];
+    });
+
+    var previousConfig = await getLinkConfig(name);
+
+    cfg.addAll(previousConfig == null ? {} : previousConfig);
+
+    if (c.configs.containsKey(&quot;broker&quot;) &amp;&amp; !cfg.containsKey(&quot;broker&quot;))  {
+      cfg[&quot;broker&quot;] = getBrokerUrl();
+
+      if (canUseRuntime &amp;&amp; runtime != null &amp;&amp; c.engines != null &amp;&amp; c.engines.containsKey(&quot;dart&quot;)) {
+        cfg[&quot;log-file&quot;] = logFile.absolute.path;
+      }
+    }
+
+    for (var m in c.configs.keys) {
+      var l = c.configs[m];
+      if (l[&quot;required&quot;] == true &amp;&amp; l[&quot;value&quot;] == null &amp;&amp; !cfg.containsKey(m)) {
+        print(&quot;Error: DSLink &apos;${name}&apos; requires the config &apos;${m}&apos; to be specified.&quot;);
+        if (onReady != null) {
+          onReady();
+        }
+        return null;
+      }
+    }
+
+    for (var cx in cfg.keys) {
+      if (!c.configs.containsKey(cx) &amp;&amp; cx != &quot;log-file&quot;) {
+        print(&quot;Warning: DSLink &apos;${name}&apos; was configured to have &apos;${cx}&apos; be &apos;${cfg[cx]}&apos;, but that option was not found for this link.&quot;);
+      }
+
+      args.addAll([&quot;--${cx}&quot;, &quot;${cfg[cx]}&quot;]);
+    }
+
+    doStart() async {
+      if (runtime != null) {
+        await runtime.startLink(linkDir.path, c.main, cfg);
+        running = true;
+        await setLinkState(name, &quot;started&quot;);
+        print(&quot;DSLink &apos;${name}&apos; started.&quot;);
+        if (onReady != null) {
+          onReady();
+        }
+        await runtime.onLinkEnd(linkDir.path).first;
+        running = false;
+        return null;
+      }
+
+      try {
+        await exec(exe, args: args, outputFile: logFile, workingDirectory: path, handler: (Process proc) {
+          if (onReady != null) {
+            onReady();
+          }
+          print(&quot;DSLink &apos;${name}&apos; started.&quot;);
+          running = true;
+          setLinkState(name, &quot;started&quot;);
+          ourProc = proc;
+          _linkProcesses.add(proc);
+        }, outputHandler: (String stuff) {
+          if (stuff.toLowerCase().contains(&quot;connected&quot;)) {
+            setLinkState(name, &quot;connected&quot;);
+          }
+        }, environment: {
+          &quot;DSA_LINK_NAME&quot;: name
+        });
+      } catch (e) {
+        if (e is ProcessException) {
+          if ((Platform.isLinux || Platform.isMacOS) &amp;&amp; exe != &quot;bash&quot;) {
+            args.insert(0, exe);
+            exe = &quot;bash&quot;;
+            return await doStart();
+          }
+
+          print(&quot;DSLink &apos;${name}&apos; errored during startup.&quot;);
+          _linkProcesses.remove(ourProc);
+
+          running = false;
+          await setLinkState(name, &quot;errored&quot;);
+          noRestart = true;
+          return null;
+        }
+      }
+    }
+
+    await doStart();
+
+    try {
+      if (ourProc != null) {
+        await forceKill(ourProc.pid);
+      }
+    } catch (e) {}
+
+    _linkProcesses.remove(ourProc);
+
+    running = false;
+    await setLinkState(name, &quot;stopped&quot;);
+
+    if (!reloadForced &amp;&amp; !noRestart) {
+      print(&quot;DSLink &apos;${name}&apos; suddenly stopped.&quot;);
+      await new Future.delayed(const Duration(seconds: 1));
+    } else {
+      if (noRestart) {
+        print(&quot;DSLink &apos;${name}&apos; is now stopped.&quot;);
+      } else {
+        print(&quot;DSLink &apos;${name}&apos; is now restarting.&quot;);
+      }
+    }
+
+    if (!noRestart) {
+      await starter();
+    }
+
+    noRestart = false;
+  };
+
+  if (shouldStartNow) {
+    starter();
+  } else {
+    _startLinks.add(starter);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 1.0.0
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

@@ -94,6 +94,10 @@
       <li><a href="dslink.broker/BrokerPermissions-class.html">BrokerPermissions</a></li>
       <li><a href="dslink.broker/BrokerVersionNode-class.html">BrokerVersionNode</a></li>
       <li><a href="dslink.broker/ClearConnsAction-class.html">ClearConnsAction</a></li>
+      <li><a href="dslink.broker/CreateUpstreamBrokerNode-class.html">CreateUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/DeleteUpstreamConnectionNode-class.html">DeleteUpstreamConnectionNode</a></li>
+      <li><a href="dslink.broker/DisableUpstreamBrokerNode-class.html">DisableUpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/EnableUpstreamBrokerNode-class.html">EnableUpstreamBrokerNode</a></li>
       <li><a href="dslink.broker/PermissionPair-class.html">PermissionPair</a></li>
       <li><a href="dslink.broker/RemoteLinkListController-class.html">RemoteLinkListController</a></li>
       <li><a href="dslink.broker/RemoteLinkManager-class.html">RemoteLinkManager</a></li>
@@ -103,6 +107,8 @@
       <li><a href="dslink.broker/RemoteRequester-class.html">RemoteRequester</a></li>
       <li><a href="dslink.broker/RootNode-class.html">RootNode</a></li>
       <li><a href="dslink.broker/StartTimeNode-class.html">StartTimeNode</a></li>
+      <li><a href="dslink.broker/UpstreamBrokerNode-class.html">UpstreamBrokerNode</a></li>
+      <li><a href="dslink.broker/UpstreamNode-class.html">UpstreamNode</a></li>
       <li><a href="dslink.broker/UserNode-class.html">UserNode</a></li>
       <li><a href="dslink.broker/UserRootNode-class.html">UserRootNode</a></li>
       <li><a href="dslink.broker/VirtualNodePermissioin-class.html">VirtualNodePermissioin</a></li>
@@ -439,6 +445,15 @@ See <code>listChangeController</code>.</p>
           <p>Adds a child to this node.</p>
           <div class="features">inherited</div>
         </dd>
+        <dt id="forEachAttribute" class="callable inherited">
+          <span class="name"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></span><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">inherited</div>
+        </dd>
         <dt id="forEachChild" class="callable inherited">
           <span class="name"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></span><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -446,6 +461,15 @@ See <code>listChangeController</code>.</p>
         </dt>
         <dd class="inherited">
           <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="forEachConfig" class="callable inherited">
+          <span class="name"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></span><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
           <div class="features">inherited</div>
         </dd>
         <dt id="get" class="callable inherited">
@@ -748,7 +772,9 @@ the original invocation.<a href="dslink.broker/UserRootNode/noSuchMethod.html">&
     
       <li class="section-title inherited"><a href="dslink.broker/UserRootNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/Node/addChild.html">addChild</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
