@@ -91,7 +91,6 @@
       <li class="inherited"><a href="dslink/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink/SimpleNodeProvider/permissions.html">permissions</a></li>
-      <li><a href="dslink/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/SimpleNodeProvider/sys.html">sys</a></li>
@@ -103,19 +102,16 @@
     
       <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/SimpleNodeProvider/addNode.html">addNode</a></li>
-      <li><a href="dslink/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
-      <li><a href="dslink/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -133,18 +129,16 @@ If it does not exist, create a new node and return it.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/simple/simple_node.dart.html#line-243'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
-  LocalNode node = getNode(path);
-
-  if (node != null) {
-    return node;
+  if (nodes.containsKey(path)) {
+    return nodes[path];
   }
 
   if (addToTree) {
     return createNode(path);
   } else {
-    node = new SimpleNode(path, this);
+    var node = new SimpleNode(path, this);
     return node;
   }
 }</code></pre>
@@ -160,7 +154,7 @@ If it does not exist, create a new node and return it.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

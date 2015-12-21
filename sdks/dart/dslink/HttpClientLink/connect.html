@@ -88,23 +88,17 @@
         <a href="dslink/HttpClientLink-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/HttpClientLink/dsId.html">dsId</a></li>
-      <li><a href="dslink/HttpClientLink/enableAck.html">enableAck</a></li>
-      <li><a href="dslink/HttpClientLink/format.html">format</a></li>
-      <li><a href="dslink/HttpClientLink/formats.html">formats</a></li>
+      <li><a href="dslink/HttpClientLink/enableHttp.html">enableHttp</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink/HttpClientLink/home.html">home</a></li>
-      <li><a href="dslink/HttpClientLink/linkData.html">linkData</a></li>
       <li><a href="dslink/HttpClientLink/nonce.html">nonce</a></li>
       <li><a href="dslink/HttpClientLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink/HttpClientLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink/HttpClientLink/privateKey.html">privateKey</a></li>
-      <li><a href="dslink/HttpClientLink/remotePath.html">remotePath</a></li>
       <li><a href="dslink/HttpClientLink/requester.html">requester</a></li>
       <li><a href="dslink/HttpClientLink/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/HttpClientLink/salts.html">salts</a></li>
-      <li><a href="dslink/HttpClientLink/token.html">token</a></li>
-      <li><a href="dslink/HttpClientLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title inherited"><a href="dslink/HttpClientLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/operator_equals.html">operator ==</a></li>
@@ -127,7 +121,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/http/client_link.dart.html#line-95'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">connect() async {
   if (_closed) return;
 
@@ -136,17 +130,13 @@
 
   HttpClient client = new HttpClient();
 
-  client.badCertificateCallback = (X509Certificate cert, String host,
-      int port) {
+  client.badCertificateCallback = (X509Certificate cert, String host, int port) {
     return true;
   };
 
   String connUrl = &apos;$_conn?dsId=$dsId&apos;;
   if (home != null) {
     connUrl = &apos;$connUrl&amp;home=$home&apos;;
-  }
-  if (tokenHash != null) {
-    connUrl = &apos;$connUrl$tokenHash&apos;;
   }
   Uri connUri = Uri.parse(connUrl);
   logger.info(&quot;Connecting to ${_conn}&quot;);
@@ -156,20 +146,15 @@
       &apos;publicKey&apos;: privateKey.publicKey.qBase64,
       &apos;isRequester&apos;: requester != null,
       &apos;isResponder&apos;: responder != null,
-      &apos;formats&apos;:formats,
       &apos;version&apos;: DSA_VERSION
     };
 
-    if (linkData != null) {
-      requestJson[&apos;linkData&apos;] = linkData;
-    }
-
     logger.fine(&quot;DS ID: ${dsId}&quot;);
 
-    request.add(const Utf8Encoder().convert(DsJson.encode(requestJson)));
+    request.add(UTF8.encode(DsJson.encode(requestJson)));
     HttpClientResponse response = await request.close();
     List&lt;int&gt; merged = await response.fold([], foldList);
-    String rslt = const Utf8Decoder().convert(merged);
+    String rslt = UTF8.decode(merged);
     Map serverConfig = DsJson.decode(rslt);
     saltNameMap.forEach((name, idx) {
       //read salts
@@ -182,10 +167,7 @@
     } else {
       _nonce = await privateKey.getSecret(tempKey);
     }
-    // server start to support version since 1.0.4
-    // and this is the version ack is added
-    enableAck = serverConfig.containsKey(&apos;version&apos;);
-    remotePath = serverConfig[&apos;path&apos;];
+
 
     if (serverConfig[&apos;wsUri&apos;] is String) {
       _wsUpdateUri = &apos;${connUri.resolve(serverConfig[&apos;wsUri&apos;])}?dsId=$dsId&apos;
@@ -195,13 +177,16 @@
       }
     }
 
-    if (serverConfig[&apos;format&apos;] is String) {
-      format = serverConfig[&apos;format&apos;];
-    }
+//      if (serverConfig[&apos;httpUri&apos;] is String) {
+//        _httpUpdateUri =
+//            &apos;${connUri.resolve(serverConfig[&apos;httpUri&apos;])}?dsId=$dsId&apos;;
+//      }
 
     initWebsocket(false);
     _connDelay = 1;
     _wsDelay = 1;
+    //initHttp();
+
   } catch (err) {
     DsTimer.timerOnceAfter(connect, _connDelay * 1000);
     if (_connDelay &lt; 60) _connDelay++;
@@ -219,7 +204,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

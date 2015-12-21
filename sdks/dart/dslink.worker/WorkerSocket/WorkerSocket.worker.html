@@ -96,7 +96,6 @@
       <li><a href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/last.html">last</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
       <li><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
@@ -127,7 +126,6 @@
       <li class="inherited"><a href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
-      <li><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a href="dslink.worker/WorkerSocket/init.html">init</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/join.html">join</a></li>
@@ -165,14 +163,86 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/worker.dart.html#line-279'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">WorkerSocket.worker(SendPort port)
     : _sendPort = port,
       receiver = new ReceivePort(),
       isWorker = true {
-  _sendPort.send({&quot;t&quot;: &quot;send_port&quot;, &quot;port&quot;: receiver.sendPort});
+  _sendPort.send({&quot;type&quot;: &quot;send_port&quot;, &quot;port&quot;: receiver.sendPort});
 
-  receiver.listen(handleData);
+  receiver.listen((msg) {
+    if (msg == null || msg is! Map) {
+      return;
+    }
+
+    String type = msg[&quot;type&quot;];
+
+    if (type == null) {
+      return;
+    }
+
+    if (type == &quot;data&quot;) {
+      _controller.add(msg[&quot;data&quot;]);
+    } else if (type == &quot;error&quot;) {
+      _controller.addError(msg[&quot;error&quot;]);
+    } else if (type == &quot;stop&quot;) {
+      _stopCompleter.complete();
+      _sendPort.send({&quot;type&quot;: &quot;stopped&quot;});
+    } else if (type == &quot;ping&quot;) {
+      _sendPort.send({&quot;type&quot;: &quot;pong&quot;, &quot;id&quot;: msg[&quot;id&quot;]});
+    } else if (type == &quot;pong&quot;) {
+      var id = msg[&quot;id&quot;];
+      if (_pings.containsKey(id)) {
+        _pings[id].complete();
+        _pings.remove(id);
+      }
+    } else if (type == &quot;request&quot;) {
+      _handleRequest(msg[&quot;name&quot;], msg[&quot;id&quot;], msg[&quot;argument&quot;]);
+    } else if (type == &quot;session.created&quot;) {
+      var id = msg[&quot;session&quot;];
+      _remoteSessions[id] = new _WorkerSession(this, id, false);
+      _sendPort.send({&quot;type&quot;: &quot;session.ready&quot;, &quot;session&quot;: id});
+      _sessionController.add(_remoteSessions[id]);
+    } else if (type == &quot;session.ready&quot;) {
+      var id = msg[&quot;session&quot;];
+      if (_sessionReady.containsKey(id)) {
+        _sessionReady[id].complete();
+        _sessionReady.remove(id);
+      }
+    } else if (type == &quot;session.data&quot;) {
+      var id = msg[&quot;session&quot;];
+      if (_ourSessions.containsKey(id)) {
+        (_ourSessions[id] as _WorkerSession)._messages.add(msg[&quot;data&quot;]);
+      } else if (_remoteSessions.containsKey(id)) {
+        (_remoteSessions[id] as _WorkerSession)._messages.add(msg[&quot;data&quot;]);
+      }
+    } else if (type == &quot;session.done&quot;) {
+      var id = msg[&quot;session&quot;];
+      if (_ourSessions.containsKey(id)) {
+        var c = (_ourSessions[id] as _WorkerSession)._doneCompleter;
+        if (!c.isCompleted) {
+          c.complete();
+        }
+        _ourSessions.remove(id);
+      } else if (_remoteSessions.containsKey(id)) {
+        var c = (_remoteSessions[id] as _WorkerSession)._doneCompleter;
+        if (!c.isCompleted) {
+          c.complete();
+        }
+        _remoteSessions.remove(id);
+      }
+    } else if (type == &quot;response&quot;) {
+      var id = msg[&quot;id&quot;];
+      var result = msg[&quot;result&quot;];
+      if (_responseHandlers.containsKey(id)) {
+        _responseHandlers.remove(id).complete(result);
+      } else {
+        throw new Exception(&quot;Invalid Request ID: ${id}&quot;);
+      }
+    } else {
+      throw new Exception(&quot;Unknown message: ${msg}&quot;);
+    }
+  });
 }</code></pre>
     </section>
 
@@ -186,7 +256,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

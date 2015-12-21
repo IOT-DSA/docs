@@ -120,11 +120,8 @@
       <li class="section-title"><a href="dslink.responder/SimpleNode-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNode/addChild.html">addChild</a></li>
       <li><a href="dslink.responder/SimpleNode/attach.html">attach</a></li>
-      <li class="inherited"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></li>
       <li><a href="dslink.responder/SimpleNode/createChild.html">createChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
@@ -149,7 +146,6 @@
       <li><a href="dslink.responder/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
       <li><a href="dslink.responder/SimpleNode/onSubscribe.html">onSubscribe</a></li>
-      <li><a href="dslink.responder/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li><a href="dslink.responder/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li><a href="dslink.responder/SimpleNode/removeChild.html">removeChild</a></li>
@@ -161,7 +157,7 @@
       <li><a href="dslink.responder/SimpleNode/setValue.html">setValue</a></li>
       <li><a href="dslink.responder/SimpleNode/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNode/toString.html">toString</a></li>
-      <li><a href="dslink.responder/SimpleNode/unsubscribe.html">unsubscribe</a></li>
+      <li class="inherited"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
     </ol>
@@ -179,7 +175,7 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/simple/simple_node.dart.html#line-524'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">InvokeResponse invoke(Map params, Responder responder,
     InvokeResponse response, LocalNode parentNode,
     [int maxPermission = Permission.CONFIG]) {
@@ -205,9 +201,9 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
     if (rtype == &quot;values&quot;) {
       rslt = {};
     } else if (rtype == &quot;table&quot;) {
-      rslt = [];
+      rtype = [];
     } else if (rtype == &quot;stream&quot;) {
-      rslt = [];
+      rtype = [];
     }
   }
 
@@ -259,13 +255,13 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
         }
 
         if (v is Iterable) {
-          r.update(v.toList(), StreamStatus.open);
+          r.update(v.toList());
         } else if (v is Map) {
           var meta;
           if (v.containsKey(&quot;__META__&quot;)) {
             meta = v[&quot;__META__&quot;];
           }
-          r.update([v], StreamStatus.open, meta);
+          r.update([v], null, meta);
         } else {
           throw new Exception(&quot;Unknown Value from Stream&quot;);
         }
@@ -329,10 +325,7 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
     };
 
     rslt.then((value) {
-      if (value is LiveTable) {
-        r = null;
-        value.sendTo(response);
-      } else if (value is Stream) {
+      if (value is Stream) {
         Stream stream = value;
         StreamSubscription sub;
 
@@ -358,7 +351,7 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
             if (v.containsKey(&quot;__META__&quot;)) {
               meta = v[&quot;__META__&quot;];
             }
-            r.update([v], StreamStatus.open, meta);
+            r.update([v], null, meta);
           } else {
             throw new Exception(&quot;Unknown Value from Stream&quot;);
           }
@@ -368,7 +361,8 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
           var error = new DSError(&quot;invokeException&quot;, msg: e.toString());
           try {
             error.detail = stack.toString();
-          } catch (e) {}
+          } catch (e) {
+          }
           response.close(error);
         }, cancelOnError: true);
       } else if (value is Table) {
@@ -389,8 +383,6 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
     });
     r.write(response);
     return response;
-  } else if (rslt is LiveTable) {
-    rslt.sendTo(response);
   } else {
     response.close();
   }
@@ -409,7 +401,7 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

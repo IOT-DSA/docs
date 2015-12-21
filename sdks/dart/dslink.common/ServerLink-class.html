@@ -86,21 +86,18 @@
     
     
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#classes">Classes</a></li>
-      <li><a href="dslink.common/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink.common/ClientLink-class.html">ClientLink</a></li>
       <li><a href="dslink.common/Connection-class.html">Connection</a></li>
-      <li><a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.common/ConnectionHandler-class.html">ConnectionHandler</a></li>
-      <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.common/DSError-class.html">DSError</a></li>
       <li><a href="dslink.common/ErrorPhase-class.html">ErrorPhase</a></li>
+      <li><a href="dslink.common/Link-class.html">Link</a></li>
       <li><a href="dslink.common/Node-class.html">Node</a></li>
       <li><a href="dslink.common/PassiveChannel-class.html">PassiveChannel</a></li>
       <li><a href="dslink.common/Path-class.html">Path</a></li>
       <li><a href="dslink.common/Permission-class.html">Permission</a></li>
       <li><a href="dslink.common/PermissionList-class.html">PermissionList</a></li>
-      <li><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.common/ServerLink-class.html">ServerLink</a></li>
       <li><a href="dslink.common/ServerLinkManager-class.html">ServerLinkManager</a></li>
       <li><a href="dslink.common/StreamStatus-class.html">StreamStatus</a></li>
@@ -125,12 +122,16 @@
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>Object</li>
-          <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
+          <li><a href="dslink.browser/Link-class.html">Link</a></li>
           <li>ServerLink</li>
         </ul></dd>
 
 
 
+        <dt>Implemented by</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="dslink.server/HttpServerLink-class.html">HttpServerLink</a></li>
+        </ul></dd>
 
       </dl>
     </section>
@@ -160,7 +161,7 @@
           <span class="signature">&#8594; String</span>
         </dt>
         <dd>
-          <p>dsId or username</p>
+          <p></p>
           <div class="features">
     read-only
   </div>
@@ -177,7 +178,7 @@
   </div>
 </dd>
         <dt id="nonce" class="property inherited">
-          <span class="name"><a href="dslink.browser/BaseLink/nonce.html">nonce</a></span>
+          <span class="name"><a href="dslink.browser/Link/nonce.html">nonce</a></span>
           <span class="signature">&#8594; <a href="dslink/ECDH-class.html">ECDH</a></span>
         </dt>
         <dd class="inherited">
@@ -187,7 +188,7 @@
   </div>
 </dd>
         <dt id="onRequesterReady" class="property inherited">
-          <span class="name"><a href="dslink.browser/BaseLink/onRequesterReady.html">onRequesterReady</a></span>
+          <span class="name"><a href="dslink.browser/Link/onRequesterReady.html">onRequesterReady</a></span>
           <span class="signature">&#8594; Future&lt;<a href="dslink/Requester-class.html">Requester</a>&gt;</span>
         </dt>
         <dd class="inherited">
@@ -207,8 +208,8 @@
   </div>
 </dd>
         <dt id="requester" class="property inherited">
-          <span class="name"><a href="dslink.browser/BaseLink/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+          <span class="name"><a href="dslink.browser/Link/requester.html">requester</a></span>
+          <span class="signature">&#8594; <a href="dslink.browser/Requester-class.html">Requester</a></span>
         </dt>
         <dd class="inherited">
           <p></p>
@@ -217,7 +218,7 @@
   </div>
 </dd>
         <dt id="responder" class="property inherited">
-          <span class="name"><a href="dslink.browser/BaseLink/responder.html">responder</a></span>
+          <span class="name"><a href="dslink.browser/Link/responder.html">responder</a></span>
           <span class="signature">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
         </dt>
         <dd class="inherited">
@@ -282,7 +283,11 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.common/ServerLink/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.common/ServerLink/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -314,11 +319,11 @@
       </li>
       <li><a href="dslink.common/ServerLink/dsId.html">dsId</a></li>
       <li class="inherited"><a href="dslink.common/ServerLink/hashCode.html">hashCode</a></li>
-      <li class="inherited"><a href="dslink.browser/BaseLink/nonce.html">nonce</a></li>
-      <li class="inherited"><a href="dslink.browser/BaseLink/onRequesterReady.html">onRequesterReady</a></li>
+      <li class="inherited"><a href="dslink.browser/Link/nonce.html">nonce</a></li>
+      <li class="inherited"><a href="dslink.browser/Link/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.common/ServerLink/publicKey.html">publicKey</a></li>
-      <li class="inherited"><a href="dslink.browser/BaseLink/requester.html">requester</a></li>
-      <li class="inherited"><a href="dslink.browser/BaseLink/responder.html">responder</a></li>
+      <li class="inherited"><a href="dslink.browser/Link/requester.html">requester</a></li>
+      <li class="inherited"><a href="dslink.browser/Link/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.common/ServerLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/ServerLink/session.html">session</a></li>
     
@@ -340,7 +345,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

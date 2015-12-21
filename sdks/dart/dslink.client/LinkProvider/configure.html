@@ -101,21 +101,15 @@
       <li><a href="dslink.client/LinkProvider/isRequester.html">isRequester</a></li>
       <li><a href="dslink.client/LinkProvider/isResponder.html">isResponder</a></li>
       <li><a href="dslink.client/LinkProvider/link.html">link</a></li>
-      <li><a href="dslink.client/LinkProvider/linkData.html">linkData</a></li>
       <li><a href="dslink.client/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
       <li><a href="dslink.client/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
-      <li><a href="dslink.client/LinkProvider/overrideRequester.html">overrideRequester</a></li>
-      <li><a href="dslink.client/LinkProvider/overrideResponder.html">overrideResponder</a></li>
       <li><a href="dslink.client/LinkProvider/prefix.html">prefix</a></li>
       <li><a href="dslink.client/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a href="dslink.client/LinkProvider/profiles.html">profiles</a></li>
       <li><a href="dslink.client/LinkProvider/provider.html">provider</a></li>
-      <li><a href="dslink.client/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a href="dslink.client/LinkProvider/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.client/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a href="dslink.client/LinkProvider/strictOptions.html">strictOptions</a></li>
-      <li><a href="dslink.client/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
@@ -131,9 +125,7 @@
       <li><a href="dslink.client/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink.client/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.client/LinkProvider/init.html">init</a></li>
-      <li><a href="dslink.client/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.client/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a href="dslink.client/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.client/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.client/LinkProvider/save.html">save</a></li>
@@ -163,7 +155,7 @@ This includes:
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/client.dart.html#line-160'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">bool configure({ArgParser argp, OptionResultsHandler optionsHandler}) {
   _configured = true;
 
@@ -181,8 +173,6 @@ This includes:
       help: &quot;Broker URL&quot;,
       defaultsTo: &quot;http://127.0.0.1:8080/conn&quot;);
   argp.addOption(&quot;name&quot;, abbr: &quot;n&quot;, help: &quot;Link Name&quot;);
-  argp.addOption(&quot;home&quot;, help: &quot;Home&quot;);
-  argp.addOption(&quot;token&quot;, help: &quot;Token&quot;);
   argp.addOption(&quot;base-path&quot;, help: &quot;Base Path for DSLink&quot;);
   argp.addOption(&quot;watch-file&quot;, help: &quot;Watch File for DSLink&quot;, hide: true);
   argp.addOption(&quot;log-file&quot;, help: &quot;Log File for DSLink&quot;);
@@ -259,24 +249,6 @@ This includes:
     });
   }
 
-  if (const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false)) {
-    var runtimeConfig = Zone.current[&quot;dslink.runtime.config&quot;];
-
-    if (runtimeConfig != null) {
-      var closeHandler = () {
-        close();
-
-        if (_logFileOut != null) {
-          try {
-            _logFileOut.close();
-          } catch (e) {}
-        }
-      };
-
-      runtimeConfig[&quot;closeHandler&quot;] = closeHandler;
-    }
-  }
-
   String helpStr =
       &quot;usage: $command [--broker URL] [--log LEVEL] [--name NAME] [--discover]&quot;;
 
@@ -290,7 +262,7 @@ This includes:
     }
   }
 
-  brokerUrl = opts[&quot;broker&quot;];
+  brokerUrl = opts[&apos;broker&apos;];
   if (brokerUrl == null &amp;&amp; !opts[&quot;discover&quot;]) {
     print(
         &quot;No Broker URL Specified. One of [--broker, --discover] is required.&quot;);
@@ -304,8 +276,6 @@ This includes:
   }
 
   String name = opts[&quot;name&quot;];
-  home = opts[&quot;home&quot;];
-  token = opts[&quot;token&quot;];
 
   if (name != null) {
     if (name.endsWith(&quot;-&quot;)) {
@@ -340,14 +310,16 @@ This includes:
   }
 
   if (brokerUrl != null) {
-    if (!brokerUrl.startsWith(&quot;http&quot;)) {
-      brokerUrl = &quot;http://$brokerUrl&quot;;
+    if (!brokerUrl.startsWith(&apos;http&apos;)) {
+      brokerUrl = &apos;http://$brokerUrl&apos;;
     }
   }
 
-  File keyFile = getConfig(&quot;key&quot;) == null
+  Uri brokerUri = Uri.parse(brokerUrl);
+
+  File keyFile = getConfig(&apos;key&apos;) == null
       ? new File(&quot;${_basePath}/.dslink.key&quot;)
-      : new File.fromUri(Uri.parse(getConfig(&quot;key&quot;)));
+      : new File.fromUri(Uri.parse(getConfig(&apos;key&apos;)));
   String key;
 
   try {
@@ -380,9 +352,7 @@ This includes:
     }
     privateKey = new PrivateKey.generateSync();
     key = privateKey.saveToString();
-    if (savePrivateKey) {
-      keyFile.writeAsStringSync(key);
-    }
+    keyFile.writeAsStringSync(key);
   }
 
   if (opts[&quot;discover&quot;]) {
@@ -407,7 +377,7 @@ This includes:
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

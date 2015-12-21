@@ -105,16 +105,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/worker.dart.html#line-59'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">WorkerPool createWorkerScriptPool(int count, Uri uri,
     {Map&lt;String, dynamic&gt; metadata}) {
   var workers = [];
   for (var i = 1; i &lt;= count; i++) {
     workers.add(createWorkerScript(uri,
-      metadata: {
-        &quot;workerId&quot;: i
-      }..addAll(metadata == null ? {} : metadata)
-    ));
+        metadata: {&quot;workerId&quot;: i}..addAll(metadata == null ? {} : metadata)));
   }
   return new WorkerPool(workers);
 }</code></pre>
@@ -130,7 +127,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

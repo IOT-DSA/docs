@@ -101,21 +101,15 @@
       <li><a href="dslink.client/LinkProvider/isRequester.html">isRequester</a></li>
       <li><a href="dslink.client/LinkProvider/isResponder.html">isResponder</a></li>
       <li><a href="dslink.client/LinkProvider/link.html">link</a></li>
-      <li><a href="dslink.client/LinkProvider/linkData.html">linkData</a></li>
       <li><a href="dslink.client/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
       <li><a href="dslink.client/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
-      <li><a href="dslink.client/LinkProvider/overrideRequester.html">overrideRequester</a></li>
-      <li><a href="dslink.client/LinkProvider/overrideResponder.html">overrideResponder</a></li>
       <li><a href="dslink.client/LinkProvider/prefix.html">prefix</a></li>
       <li><a href="dslink.client/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a href="dslink.client/LinkProvider/profiles.html">profiles</a></li>
       <li><a href="dslink.client/LinkProvider/provider.html">provider</a></li>
-      <li><a href="dslink.client/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a href="dslink.client/LinkProvider/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.client/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a href="dslink.client/LinkProvider/strictOptions.html">strictOptions</a></li>
-      <li><a href="dslink.client/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
@@ -131,9 +125,7 @@
       <li><a href="dslink.client/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink.client/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.client/LinkProvider/init.html">init</a></li>
-      <li><a href="dslink.client/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
       <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.client/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a href="dslink.client/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.client/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.client/LinkProvider/save.html">save</a></li>
@@ -165,7 +157,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/client.dart.html#line-443'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void init() {
   if (!_configured) {
     if (!configure()) {
@@ -179,7 +171,15 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     for (var key in profiles.keys.toList()) {
       var value = profiles[key];
 
-      if (value is _TwoArgumentProfileFunction) {
+      if (value is Type) {
+        var mirror = reflectClass(value);
+        profiles[key] = (String path) {
+          MethodMirror cm = mirror.declarations[mirror.simpleName];
+          var paramCount = cm.parameters.length;
+          var m = mirror.newInstance(const Symbol(&quot;&quot;), paramCount == 1 ? [path] : [path, provider]);
+          return m.reflectee;
+        };
+      } else if (value is _TwoArgumentProfileFunction) {
         profiles[key] = (String path) {
           return value(path, provider);
         };
@@ -191,16 +191,37 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     provider = new SimpleNodeProvider(null, profiles);
   }
 
-  loadNodesFile();
+  if (provider is SerializableNodeProvider &amp;&amp;
+      !_reconnecting) {
+    _nodesFile = getConfig(&apos;nodes&apos;) == null
+        ? new File(&quot;${_basePath}/nodes.json&quot;)
+        : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+    Map loadedNodesData;
+
+    if (loadNodesJson) {
+      _nodesFile = getConfig(&apos;nodes&apos;) == null
+        ? new File(&quot;${_basePath}/nodes.json&quot;)
+        : new File.fromUri(Uri.parse(getConfig(&apos;nodes&apos;)));
+      try {
+        String nodesStr = _nodesFile.readAsStringSync();
+        loadedNodesData = DsJson.decode(nodesStr);
+      } catch (err) {}
+    }
+
+    if (loadedNodesData != null) {
+      (provider as SerializableNodeProvider).init(loadedNodesData);
+    } else if (defaultNodes != null) {
+      (provider as SerializableNodeProvider).init(defaultNodes);
+    }
+  }
 
   void doRun() {
     link = new HttpClientLink(brokerUrl, prefix, privateKey,
         isRequester: isRequester,
         isResponder: isResponder,
         nodeProvider: provider,
-        overrideRequester:overrideRequester,
-        overrideResponder:overrideResponder,
-        home: home, token:token, linkData:linkData);
+        enableHttp: enableHttp,
+        home: home);
     _ready = true;
 
     if (_connectOnReady) {
@@ -238,7 +259,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

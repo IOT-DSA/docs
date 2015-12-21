@@ -268,21 +268,12 @@ Map of Child Name to Child Node</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="createListController" class="callable inherited">
-          <span class="name"><a href="dslink.browser/RemoteNode/createListController.html">createListController</a></span><span class="signature">(<wbr><span class="parameter" id="createListController-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)
+          <span class="name"><a href="dslink.browser/RemoteNode/createListController.html">createListController</a></span><span class="signature">(<wbr><span class="parameter" id="createListController-param-requester"><span class="type-annotation"><a href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/ListController-class.html">ListController</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>need a factory function for children class to override</p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="forEachAttribute" class="callable inherited">
-          <span class="name"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></span><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
           <div class="features">inherited</div>
         </dd>
         <dt id="forEachChild" class="callable inherited">
@@ -292,15 +283,6 @@ Map of Child Name to Child Node</p>
         </dt>
         <dd class="inherited">
           <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="forEachConfig" class="callable inherited">
-          <span class="name"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></span><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
           <div class="features">inherited</div>
         </dd>
         <dt id="get" class="callable inherited">
@@ -375,7 +357,11 @@ Otherwise this will fetch a child.</p>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.requester/RemoteDefNode/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.requester/RemoteDefNode/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -449,9 +435,7 @@ Otherwise this will fetch a child.</p>
       <li class="section-title inherited"><a href="dslink.requester/RemoteDefNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/Node/addChild.html">addChild</a></li>
       <li class="inherited"><a href="dslink.browser/RemoteNode/createListController.html">createListController</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
@@ -475,7 +459,7 @@ Otherwise this will fetch a child.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

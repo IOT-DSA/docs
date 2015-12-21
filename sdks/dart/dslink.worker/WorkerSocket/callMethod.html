@@ -95,7 +95,6 @@
       <li><a href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/last.html">last</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
       <li><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
@@ -126,7 +125,6 @@
       <li class="inherited"><a href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
-      <li><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a href="dslink.worker/WorkerSocket/init.html">init</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/join.html">join</a></li>
@@ -163,49 +161,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/worker.dart.html#line-430'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">Future callMethod(String name, [argument]) {
-  if (isWorker &amp;&amp; _master != null) {
-    var handler = _master._requestHandlers[name];
-    if (handler == null) {
-      handler = _master._pool._methods[name];
-    }
-
-    var result = handler(argument);
-    if (result is! Future) {
-      return new Future.value(result);
-    } else {
-      return result;
-    }
-  } else if (_targetWorker != null) {
-    var handler = _targetWorker._requestHandlers[name];
-    if (handler == null) {
-      handler = _targetWorker._pool._methods[name];
-    }
-
-    var result = handler(argument);
-    if (result is! Future) {
-      return new Future.value(result);
-    } else {
-      return result;
-    }
-  }
-
   var completer = new Completer();
-
-  var rid = 0;
-  while (_responseHandlers[rid] != null) {
-    rid++;
-  }
-
-  _responseHandlers[rid] = completer;
-  if (argument == null) {
-    _sendPort.send(
-        {&quot;t&quot;: &quot;req&quot;, &quot;i&quot;: rid, &quot;n&quot;: name});
-  } else {
-    _sendPort.send(
-        {&quot;t&quot;: &quot;req&quot;, &quot;i&quot;: rid, &quot;n&quot;: name, &quot;a&quot;: argument});
-  }
+  _responseHandlers[_reqId] = completer;
+  _sendPort.send(
+      {&quot;type&quot;: &quot;request&quot;, &quot;id&quot;: _reqId, &quot;name&quot;: name, &quot;argument&quot;: argument});
+  _reqId++;
   return completer.future;
 }</code></pre>
     </section>
@@ -220,7 +182,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

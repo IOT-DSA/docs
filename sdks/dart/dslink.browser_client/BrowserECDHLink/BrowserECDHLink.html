@@ -89,9 +89,6 @@
         <a href="dslink.browser_client/BrowserECDHLink-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.browser_client/BrowserECDHLink/dsId.html">dsId</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/format.html">format</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/formats.html">formats</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></li>
@@ -101,8 +98,6 @@
       <li><a href="dslink.browser_client/BrowserECDHLink/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/salts.html">salts</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/token.html">token</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserECDHLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/operator_equals.html">operator ==</a></li>
@@ -121,40 +116,22 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">BrowserECDHLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span>})
+            <span class="name ">BrowserECDHLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>})
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/browser/browser_ecdh_link.dart.html#line-49'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">BrowserECDHLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
     {NodeProvider nodeProvider,
     bool isRequester: true,
-    bool isResponder: true,
-    this.token, List formats})
+    bool isResponder: true})
     : privateKey = privateKey,
       dsId = &apos;$dsIdPrefix${privateKey.publicKey.qHash64}&apos;,
       requester = isRequester ? new Requester() : null,
       responder = (isResponder &amp;&amp; nodeProvider != null)
           ? new Responder(nodeProvider)
-          : null {
-  if (!_conn.contains(&apos;://&apos;)) {
-    _conn = &apos;http://$_conn&apos;;
-  }
-  if (token != null &amp;&amp; token.length &gt; 16) {
-    // pre-generate tokenHash
-    String tokenId = token.substring(0, 16);
-    String hashStr = CryptoProvider.sha256(
-        const Utf8Encoder().convert(&apos;$dsId$token&apos;));
-    tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
-  }
-  if (formats != null) {
-    this.formats = formats;
-  }
-  if (window.location.hash.contains(&apos;dsa_json&apos;)) {
-    formats = [&apos;json&apos;];
-  }
-}</code></pre>
+          : null {}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -167,7 +144,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -91,7 +91,6 @@
       <li class="inherited"><a href="dslink/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink/SimpleNodeProvider/permissions.html">permissions</a></li>
-      <li><a href="dslink/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/SimpleNodeProvider/sys.html">sys</a></li>
@@ -103,19 +102,16 @@
     
       <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/SimpleNodeProvider/addNode.html">addNode</a></li>
-      <li><a href="dslink/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
-      <li><a href="dslink/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -136,22 +132,12 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/simple/simple_node.dart.html#line-225'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">@override
 LocalNode getNode(String path) {
   if (nodes.containsKey(path)) {
     return nodes[path];
   }
-
-  if (_resolverFactories.isNotEmpty) {
-    for (var f in _resolverFactories) {
-      var node = f(path);
-      if (node != null) {
-        return node;
-      }
-    }
-  }
-
   return null;
 }</code></pre>
     </section>
@@ -166,7 +152,7 @@ LocalNode getNode(String path) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

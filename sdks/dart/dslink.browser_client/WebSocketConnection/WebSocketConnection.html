@@ -86,14 +86,14 @@
       <li class="section-title">
         <a href="dslink.browser_client/WebSocketConnection-class.html#instance-properties">Properties</a>
       </li>
+      <li><a href="dslink.browser_client/WebSocketConnection/binaryInCache.html">binaryInCache</a></li>
+      <li><a href="dslink.browser_client/WebSocketConnection/binaryOutCache.html">binaryOutCache</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/clientLink.html">clientLink</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/codec.html">codec</a></li>
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.browser_client/WebSocketConnection/nextMsgId.html">nextMsgId</a></li>
+      <li><a href="dslink.browser_client/WebSocketConnection/msgId.html">msgId</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onConnect.html">onConnect</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onRequesterReady.html">onRequesterReady</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/pendingAcks.html">pendingAcks</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/pingTimer.html">pingTimer</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/requesterChannel.html">requesterChannel</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/responderChannel.html">responderChannel</a></li>
@@ -104,7 +104,6 @@
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser_client/WebSocketConnection-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/ack.html">ack</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/addConnCommand.html">addConnCommand</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/close.html">close</a></li>
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/noSuchMethod.html">noSuchMethod</a></li>
@@ -118,7 +117,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">WebSocketConnection</span>(<wbr><span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>, <span class="parameter" id="-param-clientLink"><span class="type-annotation"><a href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">clientLink</span></span>, {<span class="parameter" id="-param-onConnect"><span class="type-annotation">Function</span> <span class="parameter-name">onConnect</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-useCodec"><span class="type-annotation"><a href="dslink.utils/DsCodec-class.html">DsCodec</a></span> <span class="parameter-name">useCodec</span></span>})
+            <span class="name ">WebSocketConnection</span>(<wbr><span class="parameter" id="-param-socket"><span class="type-annotation">WebSocket</span> <span class="parameter-name">socket</span></span>, <span class="parameter" id="-param-clientLink"><span class="type-annotation"><a href="dslink/ClientLink-class.html">ClientLink</a></span> <span class="parameter-name">clientLink</span></span>, {<span class="parameter" id="-param-onConnect"><span class="type-annotation">Function</span> <span class="parameter-name">onConnect</span></span>})
     </section>
 
     <section class="desc markdown">
@@ -126,15 +125,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/browser/browser_ws_conn.dart.html#line-26'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect, bool enableAck:false, DsCodec useCodec}) {
-  if (useCodec != null) {
-    codec = useCodec;
-  }
-  if (!enableAck) {
-    nextMsgId = -1;
-  }
-  socket.binaryType = &quot;arraybuffer&quot;;
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">WebSocketConnection(this.socket, this.clientLink, {this.onConnect}) {
+  socket.binaryType = &apos;arraybuffer&apos;;
   _responderChannel = new PassiveChannel(this);
   _requesterChannel = new PassiveChannel(this);
   socket.onMessage.listen(_onData, onDone: _onDone);
@@ -157,7 +150,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

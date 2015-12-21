@@ -86,12 +86,8 @@
         <a href="dslink.browser/InvokeResponse-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.browser/InvokeResponse/name.html">name</a></li>
       <li><a href="dslink.browser/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.browser/InvokeResponse/onClose.html">onClose</a></li>
-      <li><a href="dslink.browser/InvokeResponse/onReqParams.html">onReqParams</a></li>
-      <li><a href="dslink.browser/InvokeResponse/parentNode.html">parentNode</a></li>
-      <li><a href="dslink.browser/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/runtimeType.html">runtimeType</a></li>
@@ -100,14 +96,10 @@
       <li class="inherited"><a href="dslink.browser/InvokeResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/InvokeResponse-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.browser/InvokeResponse/close.html">close</a></li>
-      <li><a href="dslink.browser/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
-      <li><a href="dslink.browser/InvokeResponse/startSendingData.html">startSendingData</a></li>
+      <li><a href="dslink.browser/InvokeResponse/processor.html">processor</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeResponse/toString.html">toString</a></li>
-      <li><a href="dslink.browser/InvokeResponse/updateReqParams.html">updateReqParams</a></li>
       <li><a href="dslink.browser/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
 
@@ -123,17 +115,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/invoke.dart.html#line-69'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void close([DSError err = null]) {
   if (err != null) {
     _err = err;
   }
-  if (!pendingData.isEmpty) {
-    pendingData.last.status = StreamStatus.closed;
-  } else {
-    pendingData.add(new _InvokeResponseUpdate(StreamStatus.closed, null, null, null));
-    prepareSending();
-  }
+  _sendingStreamStatus = StreamStatus.closed;
+  responder.addProcessor(processor);
 }</code></pre>
     </section>
 
@@ -147,7 +135,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

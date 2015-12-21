@@ -92,28 +92,20 @@
         <a href="dslink.common/ValueUpdate-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.common/ValueUpdate/count.html">count</a></li>
-      <li><a href="dslink.common/ValueUpdate/created.html">created</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.common/ValueUpdate/latency.html">latency</a></li>
       <li><a href="dslink.common/ValueUpdate/max.html">max</a></li>
       <li><a href="dslink.common/ValueUpdate/min.html">min</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/ValueUpdate/status.html">status</a></li>
-      <li><a href="dslink.common/ValueUpdate/storedData.html">storedData</a></li>
       <li><a href="dslink.common/ValueUpdate/sum.html">sum</a></li>
-      <li><a href="dslink.common/ValueUpdate/timestamp.html">timestamp</a></li>
       <li><a href="dslink.common/ValueUpdate/ts.html">ts</a></li>
       <li><a href="dslink.common/ValueUpdate/value.html">value</a></li>
-      <li><a href="dslink.common/ValueUpdate/waitingAck.html">waitingAck</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/ValueUpdate-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/operator_equals.html">operator ==</a></li>
     
-      <li class="section-title"><a href="dslink.common/ValueUpdate-class.html#instance-methods">Methods</a></li>
-      <li><a href="dslink.common/ValueUpdate/equals.html">equals</a></li>
-      <li><a href="dslink.common/ValueUpdate/mergeAdd.html">mergeAdd</a></li>
+      <li class="section-title inherited"><a href="dslink.common/ValueUpdate-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.common/ValueUpdate/toMap.html">toMap</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/toString.html">toString</a></li>
     </ol>
 
@@ -127,19 +119,17 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/common/value.dart.html#line-112'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">ValueUpdate.merge(ValueUpdate oldUpdate, ValueUpdate newUpdate) {
   value = newUpdate.value;
   ts = newUpdate.ts;
   status = newUpdate.status;
   count = oldUpdate.count + newUpdate.count;
-  sum = oldUpdate.sum;
+  if (!oldUpdate.sum.isNaN) {
+    sum += oldUpdate.sum;
+  }
   if (!newUpdate.sum.isNaN) {
-    if (sum == sum) {
-      sum = newUpdate.sum;
-    } else {
-      sum += newUpdate.sum;
-    }
+    sum += newUpdate.sum;
   }
   min = oldUpdate.min;
   if (min.isNaN || newUpdate.min &lt; min) {
@@ -149,8 +139,6 @@
   if (max.isNaN || newUpdate.max &gt; max) {
     max = newUpdate.max;
   }
-
-  created = newUpdate.created;
 }</code></pre>
     </section>
 
@@ -164,7 +152,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -80,12 +80,8 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink/InvokeCallback.html">InvokeCallback</a></li>
-      <li><a href="dslink/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
-      <li><a href="dslink/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
-      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
-      <li><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -102,7 +98,6 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#classes">Classes</a></li>
       <li><a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></li>
-      <li><a href="dslink/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a href="dslink/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a href="dslink/ByteDataUtil-class.html">ByteDataUtil</a></li>
@@ -110,10 +105,8 @@
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
-      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
-      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -129,17 +122,11 @@
       <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink/IStorageManager-class.html">IStorageManager</a></li>
-      <li><a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
-      <li><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
-      <li><a href="dslink/IValueStorage-class.html">IValueStorage</a></li>
-      <li><a href="dslink/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
+      <li><a href="dslink/Link-class.html">Link</a></li>
       <li><a href="dslink/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink/ListController-class.html">ListController</a></li>
       <li><a href="dslink/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink/ListResponse-class.html">ListResponse</a></li>
-      <li><a href="dslink/LiveTable-class.html">LiveTable</a></li>
-      <li><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -151,7 +138,6 @@
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
-      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -167,7 +153,6 @@
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
-      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -189,7 +174,6 @@
       <li><a href="dslink/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></li>
-      <li><a href="dslink/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div>
@@ -263,23 +247,15 @@
       <dl class="callables">
         <dt id="addLink" class="callable">
           <span class="name"><a href="dslink/ServerLinkManager/addLink.html">addLink</a></span><span class="signature">(<wbr><span class="parameter" id="addLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
-            <span class="returntype parameter">&#8594; bool</span>
-          </span>
-        </dt>
-        <dd>
-          <p>return true if link is added</p>
-        </dd>
-        <dt id="getLinkAndConnectNode" class="callable">
-          <span class="name"><a href="dslink/ServerLinkManager/getLinkAndConnectNode.html">getLinkAndConnectNode</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkAndConnectNode-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLinkAndConnectNode-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">""</span></span>})
-            <span class="returntype parameter">&#8594; <a href="dslink/ServerLink-class.html">ServerLink</a></span>
+            <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
           <p></p>
         </dd>
-        <dt id="getLinkPath" class="callable">
-          <span class="name"><a href="dslink/ServerLinkManager/getLinkPath.html">getLinkPath</a></span><span class="signature">(<wbr><span class="parameter" id="getLinkPath-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getLinkPath-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>)
-            <span class="returntype parameter">&#8594; String</span>
+        <dt id="getLink" class="callable">
+          <span class="name"><a href="dslink/ServerLinkManager/getLink.html">getLink</a></span><span class="signature">(<wbr><span class="parameter" id="getLink-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, {<span class="parameter" id="getLink-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span>: <span class="default-value">''</span></span>})
+            <span class="returntype parameter">&#8594; <a href="dslink/ServerLink-class.html">ServerLink</a></span>
           </span>
         </dt>
         <dd>
@@ -294,7 +270,7 @@
           <p></p>
         </dd>
         <dt id="getResponder" class="callable">
-          <span class="name"><a href="dslink/ServerLinkManager/getResponder.html">getResponder</a></span><span class="signature">(<wbr><span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">""</span></span>])
+          <span class="name"><a href="dslink/ServerLinkManager/getResponder.html">getResponder</a></span><span class="signature">(<wbr><span class="parameter" id="getResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="getResponder-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, [<span class="parameter" id="getResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span> = <span class="default-value">''</span></span>])
             <span class="returntype parameter">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
           </span>
         </dt>
@@ -307,12 +283,16 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink/ServerLinkManager/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink/ServerLinkManager/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
         <dt id="removeLink" class="callable">
-          <span class="name"><a href="dslink/ServerLinkManager/removeLink.html">removeLink</a></span><span class="signature">(<wbr><span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>, <span class="parameter" id="removeLink-param-id"><span class="type-annotation">String</span> <span class="parameter-name">id</span></span>)
+          <span class="name"><a href="dslink/ServerLinkManager/removeLink.html">removeLink</a></span><span class="signature">(<wbr><span class="parameter" id="removeLink-param-link"><span class="type-annotation"><a href="dslink/ServerLink-class.html">ServerLink</a></span> <span class="parameter-name">link</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -327,14 +307,6 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="updateLinkData" class="callable">
-          <span class="name"><a href="dslink/ServerLinkManager/updateLinkData.html">updateLinkData</a></span><span class="signature">(<wbr><span class="parameter" id="updateLinkData-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="updateLinkData-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
       </dl>
     </section>
@@ -361,14 +333,12 @@
     
       <li class="section-title"><a href="dslink/ServerLinkManager-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/ServerLinkManager/addLink.html">addLink</a></li>
-      <li><a href="dslink/ServerLinkManager/getLinkAndConnectNode.html">getLinkAndConnectNode</a></li>
-      <li><a href="dslink/ServerLinkManager/getLinkPath.html">getLinkPath</a></li>
+      <li><a href="dslink/ServerLinkManager/getLink.html">getLink</a></li>
       <li><a href="dslink/ServerLinkManager/getRequester.html">getRequester</a></li>
       <li><a href="dslink/ServerLinkManager/getResponder.html">getResponder</a></li>
       <li class="inherited"><a href="dslink/ServerLinkManager/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink/ServerLinkManager/removeLink.html">removeLink</a></li>
       <li class="inherited"><a href="dslink/ServerLinkManager/toString.html">toString</a></li>
-      <li><a href="dslink/ServerLinkManager/updateLinkData.html">updateLinkData</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -380,7 +350,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -117,11 +117,11 @@ If <code>headers</code> is specified, the headers will be added onto the request
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/io.dart.html#line-43'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;String&gt; fetchUrl(String url, {Map&lt;String, String&gt; headers}) async {
   var request = await createRequest(&quot;GET&quot;, url, headers: headers);
   var response = await request.close();
-  return const Utf8Decoder().convert(await readBytesFromResponse(response));
+  return UTF8.decode(await readBytesFromResponse(response));
 }</code></pre>
     </section>
 
@@ -135,7 +135,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

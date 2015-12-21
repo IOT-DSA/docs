@@ -245,16 +245,6 @@
     read-only, inherited
   </div>
 </dd>
-        <dt id="onReceivedMessageHandler" class="property">
-          <span class="name"><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></span>
-          <span class="signature">&#8594; Function</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
         <dt id="receiver" class="property">
           <span class="name"><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></span>
           <span class="signature">&#8594; ReceivePort</span>
@@ -406,7 +396,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
           </span>
         </dt>
         <dd>
-          <p>Tells the stream sink that no further streams will be added.<a href="dslink.worker/WorkerSocket/close.html">&hellip;</a>
+          <p>Tells the stream sink that no futher streams will be added.<a href="dslink.worker/WorkerSocket/close.html">&hellip;</a>
 </p>
         </dd>
         <dt id="contains" class="callable inherited">
@@ -516,14 +506,6 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
         <dd>
           <p></p>
         </dd>
-        <dt id="handleData" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></span><span class="signature">(<wbr><span class="parameter" id="handleData-param-msg"><span class="parameter-name">msg</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="handleError" class="callable inherited">
           <span class="name"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></span><span class="signature">(<wbr><span class="parameter" id="handleError-param-onError"><span class="type-annotation">Function</span> <span class="parameter-name">onError</span></span>, {<span class="parameter" id="handleError-param-test"><span class="type-annotation">bool</span> <span class="parameter-name">test</span>(<span class="parameter" id="test-param-error"><span class="parameter-name">error</span></span>)</span>})
             <span class="returntype parameter">&#8594; Stream</span>
@@ -596,7 +578,11 @@ to a new value using the <code>convert</code> function.<a href="dslink.worker/Wo
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.worker/WorkerSocket/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -786,7 +772,6 @@ to a new value using the <code>convert</code> function.<a href="dslink.worker/Wo
       <li><a href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/last.html">last</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
       <li><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
@@ -817,7 +802,6 @@ to a new value using the <code>convert</code> function.<a href="dslink.worker/Wo
       <li class="inherited"><a href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
-      <li><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a href="dslink.worker/WorkerSocket/init.html">init</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/join.html">join</a></li>
@@ -854,7 +838,7 @@ to a new value using the <code>convert</code> function.<a href="dslink.worker/Wo
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -76,14 +76,13 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
-      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -130,14 +129,6 @@
         <dd>
           <p></p>
         </dd>
-        <dt id="NodeFactory" class="callable">
-          <span class="name"><a href="dslink/NodeFactory.html">NodeFactory</a></span><span class="signature">(<wbr><span class="parameter" id="NodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="OnInvokeClosed" class="callable">
           <span class="name"><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -146,14 +137,6 @@
         <dd>
           <p></p>
         </dd>
-        <dt id="OnReqParams" class="callable">
-          <span class="name"><a href="dslink/OnReqParams.html">OnReqParams</a></span><span class="signature">(<wbr><span class="parameter" id="OnReqParams-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-            <span class="returntype parameter">&#8594; bool</span>
-          </span>
-        </dt>
-        <dd>
-          <p>return true if params are valid</p>
-        </dd>
         <dt id="OptionResultsHandler" class="callable">
           <span class="name"><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></span><span class="signature">(<wbr><span class="parameter" id="OptionResultsHandler-param-results"><span class="type-annotation">ArgResults</span> <span class="parameter-name">results</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -161,22 +144,6 @@
         </dt>
         <dd>
           <p>A Handler for Argument Results</p>
-        </dd>
-        <dt id="ResponseTraceCallback" class="callable">
-          <span class="name"><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></span><span class="signature">(<wbr><span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="SimpleNodeFactory" class="callable">
-          <span class="name"><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></span><span class="signature">(<wbr><span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
       </dl>
     </section>
@@ -273,12 +240,6 @@
           <p>An Asynchronous Table Result
 This can be used to return asynchronous tables from actions.</p>
         </dd>
-        <dt id="BaseLink">
-          <span class="name "><a href="dslink/BaseLink-class.html">BaseLink</a></span>
-        </dt>
-        <dd>
-          <p>Base Class for Links</p>
-        </dd>
         <dt id="BrokerDiscoverRequest">
           <span class="name "><a href="dslink/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></span>
         </dt>
@@ -321,12 +282,6 @@ This can be used to return asynchronous tables from actions.</p>
         <dd>
           <p></p>
         </dd>
-        <dt id="ConnectionAckGroup">
-          <span class="name "><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="ConnectionChannel">
           <span class="name "><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></span>
         </dt>
@@ -335,12 +290,6 @@ This can be used to return asynchronous tables from actions.</p>
         </dd>
         <dt id="ConnectionHandler">
           <span class="name "><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="ConnectionProcessor">
-          <span class="name "><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span>
         </dt>
         <dd>
           <p></p>
@@ -361,7 +310,7 @@ This can be used to return asynchronous tables from actions.</p>
           <span class="name "><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></span>
         </dt>
         <dd>
-          <p>definition nodes are serializable node that won"t change
+          <p>definition nodes are serializable node that won't change
 the only change will be a global upgrade</p>
         </dd>
         <dt id="DSError">
@@ -436,36 +385,11 @@ the only change will be a global upgrade</p>
         <dd>
           <p></p>
         </dd>
-        <dt id="IStorageManager">
-          <span class="name "><a href="dslink/IStorageManager-class.html">IStorageManager</a></span>
+        <dt id="Link">
+          <span class="name "><a href="dslink/Link-class.html">Link</a></span>
         </dt>
         <dd>
-          <p>general purpose storage class</p>
-        </dd>
-        <dt id="ISubscriptionNodeStorage">
-          <span class="name "><a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></span>
-        </dt>
-        <dd>
-          <p>the storage of one value</p>
-        </dd>
-        <dt id="ISubscriptionResponderStorage">
-          <span class="name "><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
-        </dt>
-        <dd>
-          <p>a storage container for one dslink
-different dslink will have different ISubscriptionResponderStorage</p>
-        </dd>
-        <dt id="IValueStorage">
-          <span class="name "><a href="dslink/IValueStorage-class.html">IValueStorage</a></span>
-        </dt>
-        <dd>
-          <p>basic value storage</p>
-        </dd>
-        <dt id="IValueStorageBucket">
-          <span class="name "><a href="dslink/IValueStorageBucket-class.html">IValueStorageBucket</a></span>
-        </dt>
-        <dd>
-          <p>a storage class for general purpose key/value pair</p>
+          <p>Base Class for Links</p>
         </dd>
         <dt id="LinkProvider">
           <span class="name "><a href="dslink/LinkProvider-class.html">LinkProvider</a></span>
@@ -487,18 +411,6 @@ different dslink will have different ISubscriptionResponderStorage</p>
         </dd>
         <dt id="ListResponse">
           <span class="name "><a href="dslink/ListResponse-class.html">ListResponse</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="LiveTable">
-          <span class="name "><a href="dslink/LiveTable-class.html">LiveTable</a></span>
-        </dt>
-        <dd>
-          <p>A Live-Updating Table</p>
-        </dd>
-        <dt id="LiveTableRow">
-          <span class="name "><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></span>
         </dt>
         <dd>
           <p></p>
@@ -570,13 +482,6 @@ A single node provider can be reused by multiple responder.</p>
         </dt>
         <dd>
           <p></p>
-        </dd>
-        <dt id="ProcessorResult">
-          <span class="name "><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></span>
-        </dt>
-        <dd>
-          <p>generate message right before sending to get the latest update
-return messages and the processors that need ack callback</p>
         </dd>
         <dt id="PublicKey">
           <span class="name "><a href="dslink/PublicKey-class.html">PublicKey</a></span>
@@ -665,12 +570,6 @@ TODO: cleanup nodes that are no longer in use</p>
         </dd>
         <dt id="Response">
           <span class="name "><a href="dslink/Response-class.html">Response</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="ResponseTrace">
-          <span class="name "><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span>
         </dt>
         <dd>
           <p></p>
@@ -802,12 +701,6 @@ real logic is in SubscribeRequest itself</p>
           <span class="name "><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span>
         </dt>
         <dd>
-          <p>Represents an update to a value subscription.</p>
-        </dd>
-        <dt id="WaitForMe">
-          <span class="name "><a href="dslink/WaitForMe-class.html">WaitForMe</a></span>
-        </dt>
-        <dd>
           <p></p>
         </dd>
       </dl>
@@ -824,12 +717,8 @@ real logic is in SubscribeRequest itself</p>
     
       <li class="section-title"><a href="dslink/dslink-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink/InvokeCallback.html">InvokeCallback</a></li>
-      <li><a href="dslink/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
-      <li><a href="dslink/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
-      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
-      <li><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -846,7 +735,6 @@ real logic is in SubscribeRequest itself</p>
     
       <li class="section-title"><a href="dslink/dslink-library.html#classes">Classes</a></li>
       <li><a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></li>
-      <li><a href="dslink/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a href="dslink/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a href="dslink/ByteDataUtil-class.html">ByteDataUtil</a></li>
@@ -854,10 +742,8 @@ real logic is in SubscribeRequest itself</p>
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
-      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
-      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -873,17 +759,11 @@ real logic is in SubscribeRequest itself</p>
       <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink/IStorageManager-class.html">IStorageManager</a></li>
-      <li><a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
-      <li><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
-      <li><a href="dslink/IValueStorage-class.html">IValueStorage</a></li>
-      <li><a href="dslink/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
+      <li><a href="dslink/Link-class.html">Link</a></li>
       <li><a href="dslink/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink/ListController-class.html">ListController</a></li>
       <li><a href="dslink/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink/ListResponse-class.html">ListResponse</a></li>
-      <li><a href="dslink/LiveTable-class.html">LiveTable</a></li>
-      <li><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -895,7 +775,6 @@ real logic is in SubscribeRequest itself</p>
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
-      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -911,7 +790,6 @@ real logic is in SubscribeRequest itself</p>
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
-      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -933,7 +811,6 @@ real logic is in SubscribeRequest itself</p>
       <li><a href="dslink/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></li>
-      <li><a href="dslink/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div><!--/sidebar-offcanvas-right-->
@@ -946,7 +823,7 @@ real logic is in SubscribeRequest itself</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -82,7 +82,6 @@
       <li><a href="dslink.nodes/ChildChangedCallback.html">ChildChangedCallback</a></li>
       <li><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></li>
       <li><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></li>
-      <li><a href="dslink.nodes/ResolveNodeHandler.html">ResolveNodeHandler</a></li>
       <li><a href="dslink.nodes/SimpleCallback.html">SimpleCallback</a></li>
     
     
@@ -91,9 +90,6 @@
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#classes">Classes</a></li>
       <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></li>
-      <li><a href="dslink.nodes/LazyValueNode-class.html">LazyValueNode</a></li>
-      <li><a href="dslink.nodes/NodeNamer-class.html">NodeNamer</a></li>
-      <li><a href="dslink.nodes/ResolvingNodeProvider-class.html">ResolvingNodeProvider</a></li>
       <li><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider-class.html">SingleNodeProvider</a></li>
       <li><a href="dslink.nodes/UpgradableNode-class.html">UpgradableNode</a></li>
@@ -224,7 +220,7 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="createResponder" class="callable">
-          <span class="name"><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
+          <span class="name"><a href="dslink.nodes/SingleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
           </span>
         </dt>
@@ -255,7 +251,11 @@ If it does not exist, create a new node and return it.<a href="dslink.nodes/Sing
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.nodes/SingleNodeProvider/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.nodes/SingleNodeProvider/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -312,7 +312,7 @@ If it does not exist, create a new node and return it.<a href="dslink.nodes/Sing
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

@@ -82,14 +82,10 @@
       <li><a href="dslink.utils/numbers-constant.html">numbers</a></li>
       <li><a href="dslink.utils/specials-constant.html">specials</a></li>
     
-      <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.utils/ExecutableFunction.html">ExecutableFunction</a></li>
-      <li><a href="dslink.utils/Producer.html">Producer</a></li>
-      <li><a href="dslink.utils/Taker.html">Taker</a></li>
-      <li><a href="dslink.utils/TwoTaker.html">TwoTaker</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
       <li><a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a></li>
+      <li><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></li>
       <li><a href="dslink.utils/logger.html">logger</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
@@ -106,21 +102,18 @@
       <li><a href="dslink.utils/Base64-class.html">Base64</a></li>
       <li><a href="dslink.utils/BetterIterator-class.html">BetterIterator</a></li>
       <li><a href="dslink.utils/BinaryData-class.html">BinaryData</a></li>
+      <li><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></li>
+      <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
       <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
       <li><a href="dslink.utils/ByteDataUtil-class.html">ByteDataUtil</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-      <li><a href="dslink.utils/Disposable-class.html">Disposable</a></li>
-      <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
       <li><a href="dslink.utils/DsJson-class.html">DsJson</a></li>
       <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
       <li><a href="dslink.utils/DSLinkJSON-class.html">DSLinkJSON</a></li>
-      <li><a href="dslink.utils/DsMsgPackCodecImpl-class.html">DsMsgPackCodecImpl</a></li>
       <li><a href="dslink.utils/DsTimer-class.html">DsTimer</a></li>
-      <li><a href="dslink.utils/FunctionDisposable-class.html">FunctionDisposable</a></li>
       <li><a href="dslink.utils/Interval-class.html">Interval</a></li>
       <li><a href="dslink.utils/Scheduler-class.html">Scheduler</a></li>
       <li><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></li>
-      <li><a href="dslink.utils/UriComponentDecoder-class.html">UriComponentDecoder</a></li>
     
     </ol>
   </div>
@@ -198,7 +191,7 @@
           </span>
         </dt>
         <dd>
-          <p>do nothing if the callback is already in the list and will get called after N or more ms</p>
+          <p>do nothng if the callback is already in the list and will get called after N or more ms</p>
         </dd>
         <dt id="timerOnceBefore" class="callable">
           <span class="name"><a href="dslink.utils/DsTimer/timerOnceBefore.html">timerOnceBefore</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
@@ -206,7 +199,7 @@
           </span>
         </dt>
         <dd>
-          <p>do nothing if the callback is already in the list and will get called after 0 ~ N ms</p>
+          <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
         </dd>
         <dt id="timerOnceBetween" class="callable">
           <span class="name"><a href="dslink.utils/DsTimer/timerOnceBetween.html">timerOnceBetween</a></span><span class="signature">(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>, <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
@@ -293,7 +286,11 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.utils/DsTimer/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.utils/DsTimer/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -355,7 +352,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

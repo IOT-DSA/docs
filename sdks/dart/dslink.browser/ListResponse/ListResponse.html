@@ -98,13 +98,10 @@
       <li class="inherited"><a href="dslink.browser/ListResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser/ListResponse-class.html#instance-methods">Methods</a></li>
-      <li><a href="dslink.browser/ListResponse/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.browser/ListResponse/changed.html">changed</a></li>
       <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
-      <li><a href="dslink.browser/ListResponse/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink.browser/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.browser/ListResponse/prepareSending.html">prepareSending</a></li>
-      <li><a href="dslink.browser/ListResponse/startSendingData.html">startSendingData</a></li>
+      <li><a href="dslink.browser/ListResponse/processor.html">processor</a></li>
       <li class="inherited"><a href="dslink.browser/ListResponse/toString.html">toString</a></li>
     </ol>
 
@@ -118,16 +115,16 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/list.dart.html#line-7'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">ListResponse(Responder responder, int rid, this.node)
     : super(responder, rid) {
   _permission =
       responder.nodeProvider.permissions.getPermission(node.path, responder);
   _nodeChangeListener = node.listStream.listen(changed);
   if (node.listReady) {
-    prepareSending();
+    responder.addProcessor(processor);
   } else if (node.disconnected != null) {
-    prepareSending();
+    responder.addProcessor(processor);
   }
 }</code></pre>
     </section>
@@ -142,7 +139,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

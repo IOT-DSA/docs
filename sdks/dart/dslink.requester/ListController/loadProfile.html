@@ -118,17 +118,12 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/list.dart.html#line-148'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void loadProfile(String defName) {
   _ready = true;
   String defPath = defName;
   if (!defPath.startsWith(&apos;/&apos;)) {
-    Object base = node.configs[r&apos;$base&apos;];
-    if (base is String) {
-      defPath = &apos;$base/defs/profile/$defPath&apos;;
-    } else {
-      defPath = &apos;/defs/profile/$defPath&apos;;
-    }
+    defPath = &apos;/defs/profile/$defPath&apos;;
   }
   if (node.profile is RemoteNode &amp;&amp;
       (node.profile as RemoteNode).remotePath == defPath) {
@@ -141,7 +136,7 @@
   if ((node.profile is RemoteNode) &amp;&amp; !(node.profile as RemoteNode).listed) {
     _ready = false;
     _profileLoader =
-    new ListDefListener(node.profile, requester, _onProfileUpdate);
+        new ListDefListener(node.profile, requester, _onProfileUpdate);
   }
 }</code></pre>
     </section>
@@ -156,7 +151,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

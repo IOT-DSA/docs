@@ -79,11 +79,7 @@
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
-      <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
-      <li><a href="dslink.responder/OnReqParams.html">OnReqParams</a></li>
-      <li><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
-      <li><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
     
     
@@ -96,14 +92,7 @@
       <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
       <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink.responder/IStorageManager-class.html">IStorageManager</a></li>
-      <li><a href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
-      <li><a href="dslink.responder/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
-      <li><a href="dslink.responder/IValueStorage-class.html">IValueStorage</a></li>
-      <li><a href="dslink.responder/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
-      <li><a href="dslink.responder/LiveTable-class.html">LiveTable</a></li>
-      <li><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -111,7 +100,6 @@
       <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
       <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
       <li><a href="dslink.responder/Response-class.html">Response</a></li>
-      <li><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
@@ -120,7 +108,6 @@
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
-      <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div>
@@ -197,16 +184,6 @@
     read-only, inherited
   </div>
 </dd>
-        <dt id="maxCacheLength" class="property">
-          <span class="name"><a href="dslink.responder/Responder/maxCacheLength.html">maxCacheLength</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
         <dt id="nodeProvider" class="property">
           <span class="name"><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></span>
           <span class="signature">&#8594; <a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span>
@@ -237,16 +214,6 @@
     read-only, inherited
   </div>
 </dd>
-        <dt id="storage" class="property">
-          <span class="name"><a href="dslink.responder/Responder/storage.html">storage</a></span>
-          <span class="signature">&#8594; <a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
       </dl>
     </section>
 
@@ -270,7 +237,7 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="addProcessor" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></span><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>)
+          <span class="name"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></span><span class="signature">(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -297,23 +264,6 @@ inside processor, send() data that only need to appear once per data frame</p>
           <p></p>
           <div class="features">inherited</div>
         </dd>
-        <dt id="addTraceCallback" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></span><span class="signature">(<wbr><span class="parameter" id="addTraceCallback-param-_traceCallback"><span class="type-annotation">ResponseTraceCallback</span> <span class="parameter-name">_traceCallback</span>(<span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="clearProcessors" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">inherited</div>
-        </dd>
         <dt id="close" class="callable">
           <span class="name"><a href="dslink.responder/Responder/close.html">close</a></span><span class="signature">(<wbr><span class="parameter" id="close-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -322,30 +272,14 @@ inside processor, send() data that only need to appear once per data frame</p>
         <dd>
           <p></p>
         </dd>
-        <dt id="closeResponse" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></span><span class="signature">(<wbr><span class="parameter" id="closeResponse-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, {<span class="parameter" id="closeResponse-param-response"><span class="type-annotation"><a href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>, <span class="parameter" id="closeResponse-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>})
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p>close the response from responder side and notify requester</p>
-        </dd>
-        <dt id="getSendingData" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></span><span class="signature">(<wbr><span class="parameter" id="getSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="getSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/ProcessorResult-class.html">ProcessorResult</a></span>
+        <dt id="doSend" class="callable inherited">
+          <span class="name"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; List</span>
           </span>
         </dt>
         <dd class="inherited">
           <p>gather all the changes from</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="initStorage" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/initStorage.html">initStorage</a></span><span class="signature">(<wbr><span class="parameter" id="initStorage-param-s"><span class="type-annotation"><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">s</span></span>, <span class="parameter" id="initStorage-param-nodes"><span class="type-annotation">List&lt;<a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a>&gt;</span> <span class="parameter-name">nodes</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
         <dt id="invoke" class="callable">
           <span class="name"><a href="dslink.responder/Responder/invoke.html">invoke</a></span><span class="signature">(<wbr><span class="parameter" id="invoke-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
@@ -369,7 +303,11 @@ inside processor, send() data that only need to appear once per data frame</p>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/Responder/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.responder/Responder/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -405,14 +343,6 @@ inside processor, send() data that only need to appear once per data frame</p>
         <dd>
           <p></p>
         </dd>
-        <dt id="removeTraceCallback" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/removeTraceCallback.html">removeTraceCallback</a></span><span class="signature">(<wbr><span class="parameter" id="removeTraceCallback-param-_traceCallback"><span class="type-annotation">ResponseTraceCallback</span> <span class="parameter-name">_traceCallback</span>(<span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="set" class="callable">
           <span class="name"><a href="dslink.responder/Responder/set.html">set</a></span><span class="signature">(<wbr><span class="parameter" id="set-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -438,14 +368,6 @@ inside processor, send() data that only need to appear once per data frame</p>
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
         </dd>
-        <dt id="traceResponseRemoved" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/traceResponseRemoved.html">traceResponseRemoved</a></span><span class="signature">(<wbr><span class="parameter" id="traceResponseRemoved-param-response"><span class="type-annotation"><a href="dslink.browser/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="unsubscribe" class="callable">
           <span class="name"><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -456,14 +378,6 @@ inside processor, send() data that only need to appear once per data frame</p>
         </dd>
         <dt id="updateGroups" class="callable">
           <span class="name"><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></span><span class="signature">(<wbr><span class="parameter" id="updateGroups-param-vals"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">vals</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="updateInvoke" class="callable">
-          <span class="name"><a href="dslink.responder/Responder/updateInvoke.html">updateInvoke</a></span><span class="signature">(<wbr><span class="parameter" id="updateInvoke-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -498,11 +412,9 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
       <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.responder/Responder/maxCacheLength.html">maxCacheLength</a></li>
       <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
       <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.responder/Responder/storage.html">storage</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/Responder-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/operator_equals.html">operator ==</a></li>
@@ -511,12 +423,8 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.responder/Responder/close.html">close</a></li>
-      <li><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
-      <li><a href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
+      <li class="inherited"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></li>
       <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink.responder/Responder/list.html">list</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
@@ -524,14 +432,11 @@ inside processor, send() data that only need to appear once per data frame</p>
       <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
       <li><a href="dslink.responder/Responder/remove.html">remove</a></li>
-      <li><a href="dslink.responder/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a href="dslink.responder/Responder/set.html">set</a></li>
       <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
-      <li><a href="dslink.responder/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
-      <li><a href="dslink.responder/Responder/updateInvoke.html">updateInvoke</a></li>
       <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -544,7 +449,7 @@ inside processor, send() data that only need to appear once per data frame</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

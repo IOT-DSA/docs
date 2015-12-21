@@ -82,7 +82,6 @@
       <li><a href="dslink.nodes/ChildChangedCallback.html">ChildChangedCallback</a></li>
       <li><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></li>
       <li><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></li>
-      <li><a href="dslink.nodes/ResolveNodeHandler.html">ResolveNodeHandler</a></li>
       <li><a href="dslink.nodes/SimpleCallback.html">SimpleCallback</a></li>
     
     
@@ -91,9 +90,6 @@
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#classes">Classes</a></li>
       <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></li>
-      <li><a href="dslink.nodes/LazyValueNode-class.html">LazyValueNode</a></li>
-      <li><a href="dslink.nodes/NodeNamer-class.html">NodeNamer</a></li>
-      <li><a href="dslink.nodes/ResolvingNodeProvider-class.html">ResolvingNodeProvider</a></li>
       <li><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider-class.html">SingleNodeProvider</a></li>
       <li><a href="dslink.nodes/UpgradableNode-class.html">UpgradableNode</a></li>
@@ -130,7 +126,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="UpgradableNode" class="callable">
-          <span class="name"><a href="dslink.nodes/UpgradableNode/UpgradableNode.html">UpgradableNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-latestVersion"><span class="type-annotation">int</span> <span class="parameter-name">latestVersion</span></span>, <span class="parameter" id="-param-upgrader"><span class="type-annotation">NodeUpgradeFunction</span> <span class="parameter-name">upgrader</span>(<span class="parameter" id="NodeUpgradeFunction-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span></span>)</span>, [<span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>])</span>
+          <span class="name"><a href="dslink.nodes/UpgradableNode/UpgradableNode.html">UpgradableNode</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-latestVersion"><span class="type-annotation">int</span> <span class="parameter-name">latestVersion</span></span>, <span class="parameter" id="-param-upgrader"><span class="type-annotation">NodeUpgradeFunction</span> <span class="parameter-name">upgrader</span>(<span class="parameter" id="NodeUpgradeFunction-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span></span>)</span>, [<span class="parameter" id="-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>])</span>
         </dt>
         <dd>
           <p></p>
@@ -345,7 +341,7 @@ This is the last component of this node's path.</p>
 </dd>
         <dt id="provider" class="property inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/provider.html">provider</a></span>
-          <span class="signature">&#8594; <a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
+          <span class="signature">&#8594; <a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
         </dt>
         <dd class="inherited">
           <p></p>
@@ -499,15 +495,6 @@ If <code>input</code> is a String, it is interpreted as a node path and resolved
 If <code>input</code> is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>, it will be attached to that.</p>
           <div class="features">inherited</div>
         </dd>
-        <dt id="clearValue" class="callable inherited">
-          <span class="name"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">inherited</div>
-        </dd>
         <dt id="createChild" class="callable inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/createChild.html">createChild</a></span><span class="signature">(<wbr><span class="parameter" id="createChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, [<span class="parameter" id="createChild-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>])
             <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
@@ -518,15 +505,6 @@ If <code>input</code> is a <a href="dslink/SimpleNode-class.html">SimpleNode</a>
 If <code>m</code> is specified, the node is loaded with that map.</p>
           <div class="features">inherited</div>
         </dd>
-        <dt id="forEachAttribute" class="callable inherited">
-          <span class="name"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></span><span class="signature">(<wbr><span class="parameter" id="forEachAttribute-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">inherited</div>
-        </dd>
         <dt id="forEachChild" class="callable inherited">
           <span class="name"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></span><span class="signature">(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -534,15 +512,6 @@ If <code>m</code> is specified, the node is loaded with that map.</p>
         </dt>
         <dd class="inherited">
           <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="forEachConfig" class="callable inherited">
-          <span class="name"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></span><span class="signature">(<wbr><span class="parameter" id="forEachConfig-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
           <div class="features">inherited</div>
         </dd>
         <dt id="get" class="callable inherited">
@@ -654,7 +623,11 @@ Use <a href="dslink/SimpleNode/onInvoke.html">onInvoke</a> to handle when a node
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.nodes/UpgradableNode/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.nodes/UpgradableNode/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -712,7 +685,7 @@ You can return the following types from this method:
           <div class="features">inherited</div>
         </dd>
         <dt id="onLoadChild" class="callable inherited">
-          <span class="name"><a href="dslink.browser/SimpleNode/onLoadChild.html">onLoadChild</a></span><span class="signature">(<wbr><span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
+          <span class="name"><a href="dslink.browser/SimpleNode/onLoadChild.html">onLoadChild</a></span><span class="signature">(<wbr><span class="parameter" id="onLoadChild-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onLoadChild-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="onLoadChild-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
           </span>
         </dt>
@@ -771,15 +744,6 @@ Return true to reject the value, and false to accept it.</p>
         </dd>
         <dt id="onSubscribe" class="callable inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="onUnsubscribe" class="callable inherited">
-          <span class="name"><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -872,7 +836,7 @@ The name of the removed node is returned.</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="subscribe" class="callable inherited">
-          <span class="name"><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a></span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
+          <span class="name"><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a></span><span class="signature">(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span> = <span class="default-value">1</span></span>])
             <span class="returntype parameter">&#8594; <a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
           </span>
         </dt>
@@ -890,7 +854,7 @@ The name of the removed node is returned.</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="unsubscribe" class="callable inherited">
-          <span class="name"><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
+          <span class="name"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></span><span class="signature">(<wbr><span class="parameter" id="unsubscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -970,11 +934,8 @@ The name of the removed node is returned.</p>
       <li class="section-title"><a href="dslink.nodes/UpgradableNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/addChild.html">addChild</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/attach.html">attach</a></li>
-      <li class="inherited"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/createChild.html">createChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
@@ -999,7 +960,6 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/removeChild.html">removeChild</a></li>
@@ -1011,7 +971,7 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a href="dslink.browser/SimpleNode/setValue.html">setValue</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.nodes/UpgradableNode/toString.html">toString</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a></li>
+      <li class="inherited"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
     </ol>
@@ -1025,7 +985,7 @@ The name of the removed node is returned.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

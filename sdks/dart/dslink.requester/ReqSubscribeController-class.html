@@ -119,7 +119,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="ReqSubscribeController" class="callable">
-          <span class="name"><a href="dslink.requester/ReqSubscribeController/ReqSubscribeController.html">ReqSubscribeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)</span>
+          <span class="name"><a href="dslink.requester/ReqSubscribeController/ReqSubscribeController.html">ReqSubscribeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>)</span>
         </dt>
         <dd>
           <p></p>
@@ -141,16 +141,6 @@
     read / write
   </div>
 </dd>
-        <dt id="currentQos" class="property">
-          <span class="name"><a href="dslink.requester/ReqSubscribeController/currentQos.html">currentQos</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
         <dt id="hashCode" class="property inherited">
           <span class="name"><a href="dslink.requester/ReqSubscribeController/hashCode.html">hashCode</a></span>
           <span class="signature">&#8594; int</span>
@@ -160,6 +150,16 @@
 </p>
           <div class="features">
     read-only, inherited
+  </div>
+</dd>
+        <dt id="maxCache" class="property">
+          <span class="name"><a href="dslink.requester/ReqSubscribeController/maxCache.html">maxCache</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
   </div>
 </dd>
         <dt id="node" class="property">
@@ -174,7 +174,7 @@
 </dd>
         <dt id="requester" class="property">
           <span class="name"><a href="dslink.requester/ReqSubscribeController/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+          <span class="signature">&#8594; <a href="dslink.browser/Requester-class.html">Requester</a></span>
         </dt>
         <dd>
           <p></p>
@@ -233,7 +233,7 @@
           <p></p>
         </dd>
         <dt id="listen" class="callable">
-          <span class="name"><a href="dslink.requester/ReqSubscribeController/listen.html">listen</a></span><span class="signature">(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, <span class="parameter" id="listen-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
+          <span class="name"><a href="dslink.requester/ReqSubscribeController/listen.html">listen</a></span><span class="signature">(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, <span class="parameter" id="listen-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -246,7 +246,11 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.requester/ReqSubscribeController/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.requester/ReqSubscribeController/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -260,16 +264,16 @@
           <div class="features">inherited</div>
         </dd>
         <dt id="unlisten" class="callable">
-          <span class="name"><a href="dslink.requester/ReqSubscribeController/unlisten.html">unlisten</a></span><span class="signature">(<wbr><span class="parameter" id="unlisten-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
+          <span class="name"><a href="dslink.requester/ReqSubscribeController/unlisten.html">unlisten</a></span><span class="signature">(<wbr><span class="parameter" id="unlisten-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
           <p></p>
         </dd>
-        <dt id="updateQos" class="callable">
-          <span class="name"><a href="dslink.requester/ReqSubscribeController/updateQos.html">updateQos</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; bool</span>
+        <dt id="updateCacheLevel" class="callable">
+          <span class="name"><a href="dslink.requester/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
@@ -293,8 +297,8 @@
         <a href="dslink.requester/ReqSubscribeController-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.requester/ReqSubscribeController/callbacks.html">callbacks</a></li>
-      <li><a href="dslink.requester/ReqSubscribeController/currentQos.html">currentQos</a></li>
       <li class="inherited"><a href="dslink.requester/ReqSubscribeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.requester/ReqSubscribeController/maxCache.html">maxCache</a></li>
       <li><a href="dslink.requester/ReqSubscribeController/node.html">node</a></li>
       <li><a href="dslink.requester/ReqSubscribeController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.requester/ReqSubscribeController/runtimeType.html">runtimeType</a></li>
@@ -309,7 +313,7 @@
       <li class="inherited"><a href="dslink.requester/ReqSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.requester/ReqSubscribeController/toString.html">toString</a></li>
       <li><a href="dslink.requester/ReqSubscribeController/unlisten.html">unlisten</a></li>
-      <li><a href="dslink.requester/ReqSubscribeController/updateQos.html">updateQos</a></li>
+      <li><a href="dslink.requester/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -321,7 +325,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

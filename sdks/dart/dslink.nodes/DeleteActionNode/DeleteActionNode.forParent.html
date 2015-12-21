@@ -102,7 +102,6 @@
       <li class="inherited"><a href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/name.html">name</a></li>
-      <li><a href="dslink.nodes/DeleteActionNode/onDelete.html">onDelete</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
@@ -124,11 +123,8 @@
       <li class="section-title"><a href="dslink.nodes/DeleteActionNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/addChild.html">addChild</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/attach.html">attach</a></li>
-      <li class="inherited"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/createChild.html">createChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/get.html">get</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getAttribute.html">getAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
@@ -153,7 +149,6 @@
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/removeChild.html">removeChild</a></li>
@@ -165,7 +160,7 @@
       <li class="inherited"><a href="dslink.browser/SimpleNode/setValue.html">setValue</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.nodes/DeleteActionNode/toString.html">toString</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a></li>
+      <li class="inherited"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
     </ol>
@@ -175,7 +170,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">DeleteActionNode.forParent</span>(<wbr><span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></span> <span class="parameter-name">provider</span></span>, {<span class="parameter" id="forParent-param-onDelete"><span class="type-annotation">Function</span> <span class="parameter-name">onDelete</span></span>})
+            <span class="name ">DeleteActionNode.forParent</span>(<wbr><span class="parameter" id="forParent-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="forParent-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
     </section>
 
     <section class="desc markdown">
@@ -183,10 +178,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/nodes.dart.html#line-21'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">DeleteActionNode.forParent(String path, MutableNodeProvider provider, {
-  Function onDelete
-}) : this(path, provider, new Path(path).parentPath, onDelete: onDelete);</code></pre>
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">DeleteActionNode.forParent(String path, SimpleNodeProvider provider)
+    : this(path, provider, new Path(path).parentPath);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -199,7 +193,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

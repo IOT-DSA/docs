@@ -147,7 +147,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="InvokeController" class="callable">
-          <span class="name"><a href="dslink.requester/InvokeController/InvokeController.html">InvokeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>, <span class="parameter" id="-param-fetchRawReq"><span class="type-annotation">void</span> <span class="parameter-name">fetchRawReq</span>(<span class="parameter" id="fetchRawReq-param-Request"><span class="parameter-name">Request</span></span>)</span>])</span>
+          <span class="name"><a href="dslink.requester/InvokeController/InvokeController.html">InvokeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink.browser/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>])</span>
         </dt>
         <dd>
           <p></p>
@@ -170,26 +170,6 @@
     read-only, inherited
   </div>
 </dd>
-        <dt id="lastStatus" class="property">
-          <span class="name"><a href="dslink.requester/InvokeController/lastStatus.html">lastStatus</a></span>
-          <span class="signature">&#8594; String</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="mode" class="property">
-          <span class="name"><a href="dslink.requester/InvokeController/mode.html">mode</a></span>
-          <span class="signature">&#8594; String</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
         <dt id="node" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/node.html">node</a></span>
           <span class="signature">&#8594; <a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span>
@@ -202,7 +182,7 @@
 </dd>
         <dt id="requester" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+          <span class="signature">&#8594; <a href="dslink.browser/Requester-class.html">Requester</a></span>
         </dt>
         <dd>
           <p></p>
@@ -248,7 +228,11 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.requester/InvokeController/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.requester/InvokeController/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -305,8 +289,6 @@
         <a href="dslink.requester/InvokeController-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a href="dslink.requester/InvokeController/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.requester/InvokeController/lastStatus.html">lastStatus</a></li>
-      <li><a href="dslink.requester/InvokeController/mode.html">mode</a></li>
       <li><a href="dslink.requester/InvokeController/node.html">node</a></li>
       <li><a href="dslink.requester/InvokeController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.requester/InvokeController/runtimeType.html">runtimeType</a></li>
@@ -331,7 +313,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

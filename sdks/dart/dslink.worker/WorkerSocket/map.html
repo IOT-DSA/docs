@@ -95,7 +95,6 @@
       <li><a href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/last.html">last</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
       <li><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
@@ -126,7 +125,6 @@
       <li class="inherited"><a href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
-      <li><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a href="dslink.worker/WorkerSocket/init.html">init</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/join.html">join</a></li>
@@ -164,21 +162,15 @@
     <section class="desc markdown">
       <p>Creates a new stream that converts each element of this stream
 to a new value using the <code>convert</code> function.</p>
-<p>For each data event, <code>o</code>, in this stream, the returned stream
-provides a data event with the value <code>convert(o)</code>.
-If <code>convert</code> throws, the returned stream reports the exception as an error
-event instead.</p>
-<p>Error and done events are passed through unchanged to the returned stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.
-The <code>convert</code> function is called once per data event per listener.
 If a broadcast stream is listened to more than once, each subscription
-will individually call <code>convert</code> on each data event.</p>
+will individually execute <code>map</code> for each event.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/home/travis/dart-sdk/lib/async/stream.dart.html#line-311'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Stream/*&lt;S&gt;*/ map/*&lt;S&gt;*/(/*=S*/ convert(T event)) {
-  return new _MapStream&lt;T, dynamic/*=S*/&gt;(this, convert);
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">Stream map(convert(T event)) {
+  return new _MapStream&lt;T, dynamic&gt;(this, convert);
 }</code></pre>
     </section>
 
@@ -192,7 +184,7 @@ will individually call <code>convert</code> on each data event.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

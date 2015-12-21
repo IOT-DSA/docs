@@ -85,18 +85,14 @@
       <li class="section-title">
         <a href="dslink/RespSubscribeController-class.html#instance-properties">Properties</a>
       </li>
-      <li><a href="dslink/RespSubscribeController/caching.html">caching</a></li>
+      <li><a href="dslink/RespSubscribeController/cacheLevel.html">cacheLevel</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/hashCode.html">hashCode</a></li>
-      <li><a href="dslink/RespSubscribeController/lastValue.html">lastValue</a></li>
       <li><a href="dslink/RespSubscribeController/lastValues.html">lastValues</a></li>
       <li><a href="dslink/RespSubscribeController/node.html">node</a></li>
       <li><a href="dslink/RespSubscribeController/permitted.html">permitted</a></li>
-      <li><a href="dslink/RespSubscribeController/persist.html">persist</a></li>
-      <li><a href="dslink/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a href="dslink/RespSubscribeController/response.html">response</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/RespSubscribeController/sid.html">sid</a></li>
-      <li><a href="dslink/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title inherited"><a href="dslink/RespSubscribeController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/operator_equals.html">operator ==</a></li>
@@ -104,10 +100,9 @@
       <li class="section-title"><a href="dslink/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a href="dslink/RespSubscribeController/destroy.html">destroy</a></li>
+      <li><a href="dslink/RespSubscribeController/mergeValues.html">mergeValues</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a href="dslink/RespSubscribeController/process.html">process</a></li>
-      <li><a href="dslink/RespSubscribeController/resetCache.html">resetCache</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/toString.html">toString</a></li>
     </ol>
 
@@ -120,13 +115,8 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/responder/response/subscribe.dart.html#line-394'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void destroy() {
-  if (_storage != null) {
-    ISubscriptionResponderStorage storageM = response.responder.storage;
-    storageM.destroyValue(node.path);
-    _storage = null;
-  }
   _listener.cancel();
 }</code></pre>
     </section>
@@ -141,7 +131,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

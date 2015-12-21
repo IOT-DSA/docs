@@ -117,9 +117,9 @@ If <code>headers</code> is specified, the headers will be added onto the request
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/io.dart.html#line-51'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;dynamic&gt; fetchJSON(String url, {Map&lt;String, String&gt; headers}) async {
-  return const JsonDecoder().convert(await fetchUrl(url, headers: headers));
+  return JSON.decode(await fetchUrl(url, headers: headers));
 }</code></pre>
     </section>
 
@@ -133,7 +133,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

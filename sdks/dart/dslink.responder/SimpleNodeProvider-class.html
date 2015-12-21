@@ -80,11 +80,7 @@
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
-      <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
-      <li><a href="dslink.responder/OnReqParams.html">OnReqParams</a></li>
-      <li><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
-      <li><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
     
     
@@ -97,14 +93,7 @@
       <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
       <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink.responder/IStorageManager-class.html">IStorageManager</a></li>
-      <li><a href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
-      <li><a href="dslink.responder/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
-      <li><a href="dslink.responder/IValueStorage-class.html">IValueStorage</a></li>
-      <li><a href="dslink.responder/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
-      <li><a href="dslink.responder/LiveTable-class.html">LiveTable</a></li>
-      <li><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -112,7 +101,6 @@
       <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
       <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
       <li><a href="dslink.responder/Response-class.html">Response</a></li>
-      <li><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
@@ -121,7 +109,6 @@
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
-      <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div>
@@ -159,7 +146,7 @@
       <dl class="properties">
         <dt id="instance" class="property">
           <span class="name"><a href="dslink.responder/SimpleNodeProvider/instance.html">instance</a></span>
-          <span class="signature">&#8594; <a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
+          <span class="signature">&#8594; <a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span>
         </dt>
         <dd>
           <p>Global instance.
@@ -177,7 +164,7 @@ This is by default always the first instance of <a href="dslink/SimpleNodeProvid
 
       <dl class="constructor-summary-list">
         <dt id="SimpleNodeProvider" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])</span>
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/SimpleNodeProvider.html">SimpleNodeProvider</a></span><span class="signature">([<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])</span>
         </dt>
         <dd>
           <p>Creates a <a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a>.
@@ -230,16 +217,6 @@ the provider is initialized with these values.</p>
           <p>Permissions</p>
           <div class="features">
     read / write
-  </div>
-</dd>
-        <dt id="profileMap" class="property">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/profileMap.html">profileMap</a></span>
-          <span class="signature">&#8594; Map&lt;String, _NodeFactory&gt;</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read-only
   </div>
 </dd>
         <dt id="root" class="property">
@@ -320,14 +297,6 @@ the provider is initialized with these values.</p>
         <dd>
           <p>Adds a node at the given <code>path</code> that is initialized with the given data in <code>m</code>.</p>
         </dd>
-        <dt id="addProfile" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/addProfile.html">addProfile</a></span><span class="signature">(<wbr><span class="parameter" id="addProfile-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addProfile-param-factory"><span class="type-annotation">SimpleNodeFactory</span> <span class="parameter-name">factory</span>(<span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="createNode" class="callable">
           <span class="name"><a href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></span><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
@@ -338,7 +307,7 @@ the provider is initialized with these values.</p>
 If a node already exists at this path, an exception is thrown.</p>
         </dd>
         <dt id="createResponder" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
           </span>
         </dt>
@@ -364,7 +333,7 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
 </p>
         </dd>
         <dt id="init" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map&lt;String, <a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></span><span class="signature">(<wbr>[<span class="parameter" id="init-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="init-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -377,17 +346,13 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">&hellip;</a>
+          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.<a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="registerResolver" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></span><span class="signature">(<wbr><span class="parameter" id="registerResolver-param-factory"><span class="type-annotation">SimpleNodeFactory</span> <span class="parameter-name">factory</span>(<span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
         <dt id="removeNode" class="callable">
           <span class="name"><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></span><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
@@ -406,7 +371,7 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
           <p>Save the node provider to a map.</p>
         </dd>
         <dt id="setNode" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></span><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>, {<span class="parameter" id="setNode-param-registerChildren"><span class="type-annotation">bool</span> <span class="parameter-name">registerChildren</span>: <span class="default-value">false</span></span>})
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></span><span class="signature">(<wbr><span class="parameter" id="setNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="setNode-param-node"><span class="type-annotation"><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span> <span class="parameter-name">node</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -421,14 +386,6 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="unregisterResolver" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></span><span class="signature">(<wbr><span class="parameter" id="unregisterResolver-param-factory"><span class="type-annotation">SimpleNodeFactory</span> <span class="parameter-name">factory</span>(<span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
         <dt id="updateValue" class="callable">
           <span class="name"><a href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></span><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
@@ -461,7 +418,6 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/permissions.html">permissions</a></li>
-      <li><a href="dslink.responder/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/sys.html">sys</a></li>
@@ -473,19 +429,16 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
-      <li><a href="dslink.responder/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/toString.html">toString</a></li>
-      <li><a href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -498,7 +451,7 @@ If it does not exist, create a new node and return it.<a href="dslink.responder/
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

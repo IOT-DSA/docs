@@ -95,7 +95,6 @@
       <li><a href="dslink.worker/WorkerSocket/isWorker.html">isWorker</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/last.html">last</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/length.html">length</a></li>
-      <li><a href="dslink.worker/WorkerSocket/onReceivedMessageHandler.html">onReceivedMessageHandler</a></li>
       <li><a href="dslink.worker/WorkerSocket/receiver.html">receiver</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerSocket/sessions.html">sessions</a></li>
@@ -126,7 +125,6 @@
       <li class="inherited"><a href="dslink.worker/WorkerSocket/fold.html">fold</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/forEach.html">forEach</a></li>
       <li><a href="dslink.worker/WorkerSocket/getMethod.html">getMethod</a></li>
-      <li><a href="dslink.worker/WorkerSocket/handleData.html">handleData</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/handleError.html">handleError</a></li>
       <li><a href="dslink.worker/WorkerSocket/init.html">init</a></li>
       <li class="inherited"><a href="dslink.worker/WorkerSocket/join.html">join</a></li>
@@ -164,7 +162,7 @@
     <section class="desc markdown">
       <p>Skips data events if they are equal to the previous data event.</p>
 <p>The returned stream provides the same events as this stream, except
-that it never provides two consecutive data events that are equal.</p>
+that it never provides two consequtive data events that are equal.</p>
 <p>Equality is determined by the provided <code>equals</code> method. If that is
 omitted, the '==' operator on the last provided data element is used.</p>
 <p>The returned stream is a broadcast stream if this stream is.
@@ -173,7 +171,7 @@ will individually perform the <code>equals</code> test.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/home/travis/dart-sdk/lib/async/stream.dart.html#line-912'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">Stream&lt;T&gt; distinct([bool equals(T previous, T next)]) {
   return new _DistinctStream&lt;T&gt;(this, equals);
 }</code></pre>
@@ -189,7 +187,7 @@ will individually perform the <code>equals</code> test.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

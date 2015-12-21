@@ -88,11 +88,9 @@
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
       <li><a href="dslink.browser/Responder/groups.html">groups</a></li>
       <li class="inherited"><a href="dslink.browser/Responder/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.browser/Responder/maxCacheLength.html">maxCacheLength</a></li>
       <li><a href="dslink.browser/Responder/nodeProvider.html">nodeProvider</a></li>
       <li><a href="dslink.browser/Responder/reqId.html">reqId</a></li>
       <li class="inherited"><a href="dslink.browser/Responder/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.browser/Responder/storage.html">storage</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser/Responder-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser/Responder/operator_equals.html">operator ==</a></li>
@@ -101,12 +99,8 @@
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.browser/Responder/addResponse.html">addResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.browser/Responder/addTraceCallback.html">addTraceCallback</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.browser/Responder/close.html">close</a></li>
-      <li><a href="dslink.browser/Responder/closeResponse.html">closeResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
-      <li><a href="dslink.browser/Responder/initStorage.html">initStorage</a></li>
+      <li class="inherited"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></li>
       <li><a href="dslink.browser/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink.browser/Responder/list.html">list</a></li>
       <li class="inherited"><a href="dslink.browser/Responder/noSuchMethod.html">noSuchMethod</a></li>
@@ -114,14 +108,11 @@
       <li><a href="dslink.browser/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.browser/Responder/onReconnected.html">onReconnected</a></li>
       <li><a href="dslink.browser/Responder/remove.html">remove</a></li>
-      <li><a href="dslink.browser/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a href="dslink.browser/Responder/set.html">set</a></li>
       <li><a href="dslink.browser/Responder/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.browser/Responder/toString.html">toString</a></li>
-      <li><a href="dslink.browser/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a href="dslink.browser/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a href="dslink.browser/Responder/updateGroups.html">updateGroups</a></li>
-      <li><a href="dslink.browser/Responder/updateInvoke.html">updateInvoke</a></li>
       <li><a href="dslink.browser/Responder/updateResponse.html">updateResponse</a></li>
     </ol>
 
@@ -133,14 +124,17 @@
       <span class="name ">noSuchMethod</span>(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
     </section>
     <section class="desc markdown">
-      <p>Invoked when a non-existent method or property is accessed.</p>
-<p>Classes can override <code>noSuchMethod</code> to provide custom behavior.</p>
-<p>If a value is returned, it becomes the result of the original invocation.</p>
-<p>The default behavior is to throw a <code>NoSuchMethodError</code>.</p>
+      <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.</p>
+<p>The default behavior of <code>noSuchMethod</code> is to throw a
+<code>NoSuchMethodError</code>.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/home/travis/dart-sdk/lib/core/object.dart.html#line-79'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">external dynamic noSuchMethod(Invocation invocation);</code></pre>
     </section>
 
@@ -154,7 +148,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

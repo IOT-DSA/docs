@@ -86,8 +86,8 @@
         <a href="dslink/ReqSubscribeController-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/ReqSubscribeController/callbacks.html">callbacks</a></li>
-      <li><a href="dslink/ReqSubscribeController/currentQos.html">currentQos</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink/ReqSubscribeController/maxCache.html">maxCache</a></li>
       <li><a href="dslink/ReqSubscribeController/node.html">node</a></li>
       <li><a href="dslink/ReqSubscribeController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/runtimeType.html">runtimeType</a></li>
@@ -102,7 +102,7 @@
       <li class="inherited"><a href="dslink/ReqSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/toString.html">toString</a></li>
       <li><a href="dslink/ReqSubscribeController/unlisten.html">unlisten</a></li>
-      <li><a href="dslink/ReqSubscribeController/updateQos.html">updateQos</a></li>
+      <li><a href="dslink/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -110,39 +110,31 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">listen</span>(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, <span class="parameter" id="listen-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
+      <span class="name ">listen</span>(<wbr><span class="parameter" id="listen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, <span class="parameter" id="listen-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/src/requester/request/subscribe.dart.html#line-266'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate update), int qos) {
-  if (qos &lt; 0 || qos &gt; 3) {
-    qos = 0;
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">void listen(callback(ValueUpdate), int cacheLevel) {
+  if (cacheLevel &lt; 1) cacheLevel = 1;
+  if (cacheLevel &gt; 1000000) cacheLevel = 1000000;
+  if (cacheLevel &gt; maxCache) {
+    maxCache = cacheLevel;
+    requester._subsciption.addSubscription(this, maxCache);
   }
-  bool qosChanged = false;
 
   if (callbacks.containsKey(callback)) {
-    if (callbacks[callback] != 0) {
-      callbacks[callback] = qos;
-      qosChanged = updateQos();
+    if (callbacks[callback] == maxCache &amp;&amp; cacheLevel &lt; maxCache) {
+      callbacks[callback] = cacheLevel;
+      updateCacheLevel();
     } else {
-      callbacks[callback] = qos;
+      callbacks[callback] = cacheLevel;
     }
   } else {
-    callbacks[callback] = qos;
-    int neededQos = qos;
-    if (currentQos &gt; -1) {
-      neededQos |= currentQos;
-    }
-    qosChanged = neededQos &gt; currentQos;
-    currentQos = neededQos;
+    callbacks[callback] = cacheLevel;
     if (_lastUpdate != null) {
       callback(_lastUpdate);
     }
-  }
-
-  if (qosChanged) {
-    requester._subscription.addSubscription(this, currentQos);
   }
 }</code></pre>
     </section>
@@ -157,7 +149,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

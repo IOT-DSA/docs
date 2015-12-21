@@ -56,7 +56,6 @@
         </div>
         <ul class="subnav">
           <li><a href="dslink.utils/dslink.utils-library.html#constants">Constants</a></li>
-          <li><a href="dslink.utils/dslink.utils-library.html#typedefs">Typedefs</a></li>
           <li><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
           <li><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
           <li><a href="dslink.utils/dslink.utils-library.html#classes">Classes</a></li>
@@ -76,14 +75,13 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
+      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
-      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -123,7 +121,7 @@
           <p>The DSA Version</p>
           <div>
             <span class="features">const</span>
-            <span class="signature"><code>"1.1.2"</code></span>
+            <span class="signature"><code>'1.0.4'</code></span>
           </div>
         </dd>
         <dt id="numbers" class="constant">
@@ -151,44 +149,6 @@
       </dl>
     </section>
 
-    <section class="summary offset-anchor" id="typedefs">
-      <h2>Typedefs</h2>
-
-      <dl class="callables">
-        <dt id="ExecutableFunction" class="callable">
-          <span class="name"><a href="dslink.utils/ExecutableFunction.html">ExecutableFunction</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="Producer" class="callable">
-          <span class="name"><a href="dslink.utils/Producer.html">Producer</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; T</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="Taker" class="callable">
-          <span class="name"><a href="dslink.utils/Taker.html">Taker</a></span><span class="signature">(<wbr><span class="parameter" id="Taker-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="TwoTaker" class="callable">
-          <span class="name"><a href="dslink.utils/TwoTaker.html">TwoTaker</a></span><span class="signature">(<wbr><span class="parameter" id="TwoTaker-param-a"><span class="type-annotation">A</span> <span class="parameter-name">a</span></span>, <span class="parameter" id="TwoTaker-param-b"><span class="type-annotation">B</span> <span class="parameter-name">b</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-      </dl>
-    </section>
 
     <section class="summary offset-anchor" id="properties">
       <h2>Properties</h2>
@@ -200,6 +160,16 @@
         </dt>
         <dd>
           <p>Gets if we are in checked mode.</p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="fixedBlankData" class="property">
+          <span class="name"><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></span>
+          <span class="signature">&#8594; List&lt;int&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
           <div class="features">
     read-only
   </div>
@@ -306,6 +276,18 @@
         <dd>
           <p></p>
         </dd>
+        <dt id="BinaryInCache">
+          <span class="name "><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="BinaryOutCache">
+          <span class="name "><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="BroadcastStreamController">
           <span class="name "><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></span>
         </dt>
@@ -320,18 +302,6 @@
         </dd>
         <dt id="CachedStreamWrapper">
           <span class="name "><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="Disposable">
-          <span class="name "><a href="dslink.utils/Disposable-class.html">Disposable</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="DsCodec">
-          <span class="name "><a href="dslink.utils/DsCodec-class.html">DsCodec</a></span>
         </dt>
         <dd>
           <p></p>
@@ -354,20 +324,8 @@
         <dd>
           <p></p>
         </dd>
-        <dt id="DsMsgPackCodecImpl">
-          <span class="name "><a href="dslink.utils/DsMsgPackCodecImpl-class.html">DsMsgPackCodecImpl</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="DsTimer">
           <span class="name "><a href="dslink.utils/DsTimer-class.html">DsTimer</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="FunctionDisposable">
-          <span class="name "><a href="dslink.utils/FunctionDisposable-class.html">FunctionDisposable</a></span>
         </dt>
         <dd>
           <p></p>
@@ -390,12 +348,6 @@
         <dd>
           <p></p>
         </dd>
-        <dt id="UriComponentDecoder">
-          <span class="name "><a href="dslink.utils/UriComponentDecoder-class.html">UriComponentDecoder</a></span>
-        </dt>
-        <dd>
-          <p>a decoder class to decode malformed url encoded string</p>
-        </dd>
       </dl>
     </section>
 
@@ -411,14 +363,10 @@
       <li><a href="dslink.utils/numbers-constant.html">numbers</a></li>
       <li><a href="dslink.utils/specials-constant.html">specials</a></li>
     
-      <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.utils/ExecutableFunction.html">ExecutableFunction</a></li>
-      <li><a href="dslink.utils/Producer.html">Producer</a></li>
-      <li><a href="dslink.utils/Taker.html">Taker</a></li>
-      <li><a href="dslink.utils/TwoTaker.html">TwoTaker</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
       <li><a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a></li>
+      <li><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></li>
       <li><a href="dslink.utils/logger.html">logger</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
@@ -435,21 +383,18 @@
       <li><a href="dslink.utils/Base64-class.html">Base64</a></li>
       <li><a href="dslink.utils/BetterIterator-class.html">BetterIterator</a></li>
       <li><a href="dslink.utils/BinaryData-class.html">BinaryData</a></li>
+      <li><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></li>
+      <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
       <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
       <li><a href="dslink.utils/ByteDataUtil-class.html">ByteDataUtil</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
-      <li><a href="dslink.utils/Disposable-class.html">Disposable</a></li>
-      <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
       <li><a href="dslink.utils/DsJson-class.html">DsJson</a></li>
       <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
       <li><a href="dslink.utils/DSLinkJSON-class.html">DSLinkJSON</a></li>
-      <li><a href="dslink.utils/DsMsgPackCodecImpl-class.html">DsMsgPackCodecImpl</a></li>
       <li><a href="dslink.utils/DsTimer-class.html">DsTimer</a></li>
-      <li><a href="dslink.utils/FunctionDisposable-class.html">FunctionDisposable</a></li>
       <li><a href="dslink.utils/Interval-class.html">Interval</a></li>
       <li><a href="dslink.utils/Scheduler-class.html">Scheduler</a></li>
       <li><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></li>
-      <li><a href="dslink.utils/UriComponentDecoder-class.html">UriComponentDecoder</a></li>
     
     </ol>
   </div><!--/sidebar-offcanvas-right-->
@@ -462,7 +407,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

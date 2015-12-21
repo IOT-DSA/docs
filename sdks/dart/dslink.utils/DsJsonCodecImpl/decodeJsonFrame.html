@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the decodeJsonFrame method from the DsJsonCodecImpl class, for the Dart programming language.">
+  <title>decodeJsonFrame method - DsJsonCodecImpl class - dslink.utils library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+            <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
+            <li class="self-crumb">decodeJsonFrame</li>
+          </ol>
+          <div class="self-name">decodeJsonFrame</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+          <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
+          <li class="self-crumb">decodeJsonFrame</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">method</span> decodeJsonFrame
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></h5>
+    <h5><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></h5>
+
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/DsJsonCodecImpl.html">DsJsonCodecImpl</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.utils/DsJsonCodecImpl-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/decoder.html">decoder</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/encoder.html">encoder</a></li>
+      <li class="inherited"><a href="dslink.utils/DsJsonCodecImpl/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.utils/DsJsonCodecImpl/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.utils/DsJsonCodecImpl-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dslink.utils/DsJsonCodecImpl/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="dslink.utils/DsJsonCodecImpl-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/decodeJson.html">decodeJson</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/decodeJsonFrame.html">decodeJsonFrame</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/encodeJson.html">encodeJson</a></li>
+      <li><a href="dslink.utils/DsJsonCodecImpl/encodeJsonFrame.html">encodeJsonFrame</a></li>
+      <li class="inherited"><a href="dslink.utils/DsJsonCodecImpl/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.utils/DsJsonCodecImpl/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <section class="multi-line-signature">
+      <span class="returntype">Object</span>
+      <span class="name ">decodeJsonFrame</span>(<wbr><span class="parameter" id="decodeJsonFrame-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>, <span class="parameter" id="decodeJsonFrame-param-cache"><span class="type-annotation"><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></span> <span class="parameter-name">cache</span></span>)
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> </h2>
+      <pre><code class="prettyprint lang-dart">Object decodeJsonFrame(String str, BinaryInCache cache) {
+  dynamic _reviver(key, value) {
+    if (value is String &amp;&amp; value.startsWith(&apos;\u001Bbytes,&apos;)) {
+      return cache.fetchData(value.substring(7));
+    }
+    return value;
+  }
+  JsonDecoder decoder = new JsonDecoder(_reviver);
+  return decoder.convert(str);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 1.0.0
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

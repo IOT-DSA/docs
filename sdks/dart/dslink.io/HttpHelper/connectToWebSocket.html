@@ -116,15 +116,14 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/io.dart.html#line-59'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; connectToWebSocket(
     String url, {Iterable&lt;String&gt; protocols, Map&lt;String, dynamic&gt; headers, HttpClient httpClient}) async {
-  Uri uri = Uri.parse(url);
-
-  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false) || uri.scheme == &quot;http&quot; || uri.scheme == &quot;ws&quot;) {
+  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false)) {
     return await WebSocket.connect(url, protocols: protocols, headers: headers);
   }
 
+  Uri uri = Uri.parse(url);
   if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
     throw new WebSocketException(&quot;Unsupported URL scheme &apos;${uri.scheme}&apos;&quot;);
   }
@@ -137,18 +136,14 @@
   }
   String nonce = CryptoUtils.bytesToBase64(nonceData);
 
-  int port = uri.port;
-  if (port == 0) {
-    port = uri.scheme == &quot;wss&quot; ? 443 : 80;
-  }
-
   uri = new Uri(
       scheme: uri.scheme == &quot;wss&quot; ? &quot;https&quot; : &quot;http&quot;,
       userInfo: uri.userInfo,
       host: uri.host,
-      port: port,
+      port: uri.port,
       path: uri.path,
-      query: uri.query
+      query: uri.query,
+    fragment: uri.fragment
   );
 
   HttpClient _client = httpClient == null ? (new HttpClient()
@@ -175,7 +170,8 @@
       request.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocols.toList());
     }
     return request.close();
-  }).then((response) {
+  })
+  .then((response) {
     void error(String message) {
       // Flush data.
       response.detachSocket().then((socket) {
@@ -199,7 +195,7 @@
     List&lt;int&gt; expectedAccept = sha1.close();
     List&lt;int&gt; receivedAccept = CryptoUtils.base64StringToBytes(accept);
     if (expectedAccept.length != receivedAccept.length) {
-      error(&quot;Response header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
+      error(&quot;Reasponse header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
     }
     for (int i = 0; i &lt; expectedAccept.length; i++) {
       if (expectedAccept[i] != receivedAccept[i]) {
@@ -223,7 +219,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">

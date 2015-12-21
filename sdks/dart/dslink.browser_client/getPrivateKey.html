@@ -84,7 +84,6 @@
       <li><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></li>
       <li><a href="dslink.browser_client/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage-class.html">LocalDataStorage</a></li>
-      <li><a href="dslink.browser_client/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></li>
     
     </ol>
@@ -102,76 +101,21 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.0+1/browser_client.dart.html#line-89'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
-  if (_cachedPrivateKey != null) {
-    return _cachedPrivateKey;
-  }
-
   if (storage == null) {
     storage = LocalDataStorage.INSTANCE;
   }
 
-  String keyPath = &quot;dsa_key:${window.location.pathname}&quot;;
-  String keyLockPath = &quot;dsa_key_lock:${window.location.pathname}&quot;;
-  String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&quot;;
-
-  bool hasKeyPath = false;
-
-  if (storage is SynchronousDataStorage) {
-    hasKeyPath = (storage as SynchronousDataStorage).hasSync(keyPath);
-  } else {
-    hasKeyPath = await storage.has(keyPath);
+  if (await storage.has(&quot;dsa_key&quot;)) {
+    return new PrivateKey.loadFromString(await storage.get(&quot;dsa_key&quot;));
   }
 
-  if (hasKeyPath) {
-    if (storage is SynchronousDataStorage) {
-      (storage as SynchronousDataStorage).storeSync(keyLockPath, randomToken);
-    } else {
-      await storage.store(keyLockPath, randomToken);
-    }
+  var key = await PrivateKey.generate();
 
-    await new Future.delayed(const Duration(milliseconds: 20));
-    String existingToken;
-    String existingKey;
+  await storage.store(&quot;dsa_key&quot;, key.saveToString());
 
-    if (storage is SynchronousDataStorage) {
-      existingToken = (storage as SynchronousDataStorage).getSync(keyLockPath);
-      existingKey = (storage as SynchronousDataStorage).getSync(keyPath);
-    } else {
-      existingToken = await storage.get(keyLockPath);
-      existingKey = await storage.get(keyPath);
-    }
-
-    if (existingToken == randomToken) {
-      if (storage is LocalDataStorage) {
-        _startStorageLock(keyLockPath, randomToken);
-      }
-      _cachedPrivateKey = new PrivateKey.loadFromString(existingKey);
-      return _cachedPrivateKey;
-    } else {
-      // use temp key, don&apos;t lock it;
-      keyLockPath = null;
-    }
-  }
-
-  _cachedPrivateKey = await PrivateKey.generate();
-
-  if (keyLockPath != null) {
-    if (storage is SynchronousDataStorage) {
-      (storage as SynchronousDataStorage).storeSync(keyPath, _cachedPrivateKey.saveToString());
-      (storage as SynchronousDataStorage).storeSync(keyLockPath, randomToken);
-    } else {
-      await storage.store(keyPath, _cachedPrivateKey.saveToString());
-      await storage.store(keyLockPath, randomToken);
-    }
-
-    if (storage is LocalDataStorage) {
-      _startStorageLock(keyLockPath, randomToken);
-    }
-  }
-
-  return _cachedPrivateKey;
+  return key;
 }</code></pre>
     </section>
 
@@ -185,7 +129,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.0+1
+          dslink 1.0.0
         </span>
         &bull;
         <span class="no-break">
