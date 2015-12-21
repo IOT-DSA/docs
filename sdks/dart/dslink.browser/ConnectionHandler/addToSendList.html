@@ -95,7 +95,7 @@
       <li class="section-title"><a href="dslink.browser/ConnectionHandler-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+      <li><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser/ConnectionHandler/onData.html">onData</a></li>
       <li><a href="dslink.browser/ConnectionHandler/onDisconnected.html">onDisconnected</a></li>
@@ -116,7 +116,7 @@
       <pre><code class="prettyprint lang-dart">void addToSendList(Map m) {
   _toSendList.add(m);
   if (!_pendingSend &amp;&amp; _conn != null) {
-    _conn.sendWhenReady(this);
+    _conn.sendWhenReady(doSend);
     _pendingSend = true;
   }
 }</code></pre>

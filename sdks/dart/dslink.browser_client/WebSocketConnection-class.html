@@ -98,13 +98,13 @@
     
     <section>
       <dl class="dl-horizontal">
-        <dt>Inheritance</dt>
-        <dd><ul class="gt-separated dark clazz-relationships">
-          <li>Object</li>
-          <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
-          <li>WebSocketConnection</li>
-        </ul></dd>
 
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="dslink.common/Connection-class.html">Connection</a></li>
+          </ul>
+        </dd>
 
 
 
@@ -212,16 +212,6 @@
     read-only
   </div>
 </dd>
-        <dt id="pendingAcks" class="property inherited">
-          <span class="name"><a href="dslink.browser/Connection/pendingAcks.html">pendingAcks</a></span>
-          <span class="signature">&#8594; ListQueue&lt;<a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">
-    read / write, inherited
-  </div>
-</dd>
         <dt id="pingTimer" class="property">
           <span class="name"><a href="dslink.browser_client/WebSocketConnection/pingTimer.html">pingTimer</a></span>
           <span class="signature">&#8594; Timer</span>
@@ -294,15 +284,6 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
-        <dt id="ack" class="callable inherited">
-          <span class="name"><a href="dslink.browser/Connection/ack.html">ack</a></span><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">inherited</div>
-        </dd>
         <dt id="addConnCommand" class="callable">
           <span class="name"><a href="dslink.browser_client/WebSocketConnection/addConnCommand.html">addConnCommand</a></span><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -383,7 +364,6 @@ the original invocation.<a href="dslink.browser_client/WebSocketConnection/noSuc
       <li><a href="dslink.browser_client/WebSocketConnection/onConnect.html">onConnect</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onRequesterReady.html">onRequesterReady</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/pendingAcks.html">pendingAcks</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/pingTimer.html">pingTimer</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/requesterChannel.html">requesterChannel</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/responderChannel.html">responderChannel</a></li>
@@ -394,7 +374,6 @@ the original invocation.<a href="dslink.browser_client/WebSocketConnection/noSuc
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser_client/WebSocketConnection-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/ack.html">ack</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/addConnCommand.html">addConnCommand</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/close.html">close</a></li>
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/noSuchMethod.html">noSuchMethod</a></li>

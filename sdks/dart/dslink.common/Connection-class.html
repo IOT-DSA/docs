@@ -88,10 +88,8 @@
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#classes">Classes</a></li>
       <li><a href="dslink.common/ClientLink-class.html">ClientLink</a></li>
       <li><a href="dslink.common/Connection-class.html">Connection</a></li>
-      <li><a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.common/ConnectionHandler-class.html">ConnectionHandler</a></li>
-      <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.common/DSError-class.html">DSError</a></li>
       <li><a href="dslink.common/ErrorPhase-class.html">ErrorPhase</a></li>
       <li><a href="dslink.common/Link-class.html">Link</a></li>
@@ -100,7 +98,6 @@
       <li><a href="dslink.common/Path-class.html">Path</a></li>
       <li><a href="dslink.common/Permission-class.html">Permission</a></li>
       <li><a href="dslink.common/PermissionList-class.html">PermissionList</a></li>
-      <li><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.common/ServerLink-class.html">ServerLink</a></li>
       <li><a href="dslink.common/ServerLinkManager-class.html">ServerLinkManager</a></li>
       <li><a href="dslink.common/StreamStatus-class.html">StreamStatus</a></li>
@@ -117,6 +114,18 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     
+    <section>
+      <dl class="dl-horizontal">
+
+
+
+        <dt>Implemented by</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></li>
+        </ul></dd>
+
+      </dl>
+    </section>
 
 
 
@@ -167,16 +176,6 @@
           <p>trigger when requester channel is Ready</p>
           <div class="features">
     read-only
-  </div>
-</dd>
-        <dt id="pendingAcks" class="property">
-          <span class="name"><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></span>
-          <span class="signature">&#8594; ListQueue&lt;<a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a>&gt;</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read / write
   </div>
 </dd>
         <dt id="requesterChannel" class="property">
@@ -231,14 +230,6 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
-        <dt id="ack" class="callable">
-          <span class="name"><a href="dslink.common/Connection/ack.html">ack</a></span><span class="signature">(<wbr><span class="parameter" id="ack-param-ackId"><span class="type-annotation">int</span> <span class="parameter-name">ackId</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="addConnCommand" class="callable">
           <span class="name"><a href="dslink.common/Connection/addConnCommand.html">addConnCommand</a></span><span class="signature">(<wbr><span class="parameter" id="addConnCommand-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="addConnCommand-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -306,7 +297,6 @@ the original invocation.<a href="dslink.common/Connection/noSuchMethod.html">&he
       <li class="inherited"><a href="dslink.common/Connection/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/Connection/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.common/Connection/onRequesterReady.html">onRequesterReady</a></li>
-      <li><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></li>
       <li><a href="dslink.common/Connection/requesterChannel.html">requesterChannel</a></li>
       <li><a href="dslink.common/Connection/responderChannel.html">responderChannel</a></li>
       <li class="inherited"><a href="dslink.common/Connection/runtimeType.html">runtimeType</a></li>
@@ -315,7 +305,6 @@ the original invocation.<a href="dslink.common/Connection/noSuchMethod.html">&he
       <li class="inherited"><a href="dslink.common/Connection/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.common/Connection-class.html#instance-methods">Methods</a></li>
-      <li><a href="dslink.common/Connection/ack.html">ack</a></li>
       <li><a href="dslink.common/Connection/addConnCommand.html">addConnCommand</a></li>
       <li><a href="dslink.common/Connection/close.html">close</a></li>
       <li class="inherited"><a href="dslink.common/Connection/noSuchMethod.html">noSuchMethod</a></li>

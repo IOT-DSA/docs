@@ -55,9 +55,7 @@
           </h1>
         </div>
         <ul class="subnav">
-          <li><a href="dslink.io/dslink.io-library.html#typedefs">Typedefs</a></li>
           <li><a href="dslink.io/dslink.io-library.html#functions">Functions</a></li>
-          <li><a href="dslink.io/dslink.io-library.html#enums">Enums</a></li>
           <li><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
         </ul>
       </div> <!-- /col -->
@@ -81,7 +79,6 @@
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
-      <li><a href="dslink.link_manager/dslink.link_manager-library.html">dslink.link_manager</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
@@ -100,138 +97,12 @@
     </section>
     
 
-    <section class="summary offset-anchor" id="typedefs">
-      <h2>Typedefs</h2>
-
-      <dl class="callables">
-        <dt id="OutputHandler" class="callable">
-          <span class="name"><a href="dslink.io/OutputHandler.html">OutputHandler</a></span><span class="signature">(<wbr><span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="ProcessHandler" class="callable">
-          <span class="name"><a href="dslink.io/ProcessHandler.html">ProcessHandler</a></span><span class="signature">(<wbr><span class="parameter" id="ProcessHandler-param-process"><span class="type-annotation">Process</span> <span class="parameter-name">process</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-      </dl>
-    </section>
 
 
     <section class="summary offset-anchor" id="functions">
       <h2>Functions</h2>
 
       <dl class="callables">
-        <dt id="canUseSmartUnzip" class="callable">
-          <span class="name"><a href="dslink.io/canUseSmartUnzip.html">canUseSmartUnzip</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; Future&lt;bool&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="createFileChecksum" class="callable">
-          <span class="name"><a href="dslink.io/createFileChecksum.html">createFileChecksum</a></span><span class="signature">(<wbr><span class="parameter" id="createFileChecksum-param-file"><span class="type-annotation">File</span> <span class="parameter-name">file</span></span>)
-            <span class="returntype parameter">&#8594; Future&lt;String&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="decompressTarFiles" class="callable">
-          <span class="name"><a href="dslink.io/decompressTarFiles.html">decompressTarFiles</a></span><span class="signature">(<wbr><span class="parameter" id="decompressTarFiles-param-data"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">data</span></span>)
-            <span class="returntype parameter">&#8594; Stream&lt;ArchiveFile&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="decompressZipFiles" class="callable">
-          <span class="name"><a href="dslink.io/decompressZipFiles.html">decompressZipFiles</a></span><span class="signature">(<wbr><span class="parameter" id="decompressZipFiles-param-data"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">data</span></span>)
-            <span class="returntype parameter">&#8594; Stream&lt;ArchiveFile&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="doFileChecksum" class="callable">
-          <span class="name"><a href="dslink.io/doFileChecksum.html">doFileChecksum</a></span><span class="signature">(<wbr><span class="parameter" id="doFileChecksum-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; Future&lt;<a href="dslink.io/ChecksumState-class.html">ChecksumState</a>&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="exec" class="callable">
-          <span class="name"><a href="dslink.io/exec.html">exec</a></span><span class="signature">(<wbr><span class="parameter" id="exec-param-executable"><span class="type-annotation">String</span> <span class="parameter-name">executable</span></span>, {<span class="parameter" id="exec-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span>: <span class="default-value">const []</span></span>, <span class="parameter" id="exec-param-workingDirectory"><span class="type-annotation">String</span> <span class="parameter-name">workingDirectory</span></span>, <span class="parameter" id="exec-param-environment"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">environment</span></span>, <span class="parameter" id="exec-param-includeParentEnvironment"><span class="type-annotation">bool</span> <span class="parameter-name">includeParentEnvironment</span>: <span class="default-value">true</span></span>, <span class="parameter" id="exec-param-runInShell"><span class="type-annotation">bool</span> <span class="parameter-name">runInShell</span>: <span class="default-value">false</span></span>, <span class="parameter" id="exec-param-stdin"><span class="parameter-name">stdin</span></span>, <span class="parameter" id="exec-param-handler"><span class="type-annotation">ProcessHandler</span> <span class="parameter-name">handler</span>(<span class="parameter" id="ProcessHandler-param-process"><span class="type-annotation">Process</span> <span class="parameter-name">process</span></span>)</span>, <span class="parameter" id="exec-param-stdoutHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">stdoutHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-stderrHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">stderrHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-outputHandler"><span class="type-annotation">OutputHandler</span> <span class="parameter-name">outputHandler</span>(<span class="parameter" id="OutputHandler-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)</span>, <span class="parameter" id="exec-param-outputFile"><span class="type-annotation">File</span> <span class="parameter-name">outputFile</span></span>, <span class="parameter" id="exec-param-inherit"><span class="type-annotation">bool</span> <span class="parameter-name">inherit</span>: <span class="default-value">false</span></span>, <span class="parameter" id="exec-param-writeToBuffer"><span class="type-annotation">bool</span> <span class="parameter-name">writeToBuffer</span>: <span class="default-value">false</span></span>})
-            <span class="returntype parameter">&#8594; Future&lt;<a href="dslink.io/BetterProcessResult-class.html">BetterProcessResult</a>&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="extractArchive" class="callable">
-          <span class="name"><a href="dslink.io/extractArchive.html">extractArchive</a></span><span class="signature">(<wbr><span class="parameter" id="extractArchive-param-files"><span class="type-annotation">Stream&lt;ArchiveFile&gt;</span> <span class="parameter-name">files</span></span>, <span class="parameter" id="extractArchive-param-dir"><span class="type-annotation">Directory</span> <span class="parameter-name">dir</span></span>, {<span class="parameter" id="extractArchive-param-handleSingleDirectory"><span class="type-annotation">bool</span> <span class="parameter-name">handleSingleDirectory</span>: <span class="default-value">false</span></span>})
-            <span class="returntype parameter">&#8594; Future</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="extractArchiveSmart" class="callable">
-          <span class="name"><a href="dslink.io/extractArchiveSmart.html">extractArchiveSmart</a></span><span class="signature">(<wbr><span class="parameter" id="extractArchiveSmart-param-bytes"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">bytes</span></span>, <span class="parameter" id="extractArchiveSmart-param-dir"><span class="type-annotation">Directory</span> <span class="parameter-name">dir</span></span>, {<span class="parameter" id="extractArchiveSmart-param-handleSingleDirectory"><span class="type-annotation">bool</span> <span class="parameter-name">handleSingleDirectory</span>: <span class="default-value">false</span></span>})
-            <span class="returntype parameter">&#8594; Future</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="fetchUrl" class="callable">
-          <span class="name"><a href="dslink.io/fetchUrl.html">fetchUrl</a></span><span class="signature">(<wbr><span class="parameter" id="fetchUrl-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>)
-            <span class="returntype parameter">&#8594; Future&lt;List&lt;int&gt;&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="findExecutable" class="callable">
-          <span class="name"><a href="dslink.io/findExecutable.html">findExecutable</a></span><span class="signature">(<wbr><span class="parameter" id="findExecutable-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-            <span class="returntype parameter">&#8594; Future&lt;String&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="forceKill" class="callable">
-          <span class="name"><a href="dslink.io/forceKill.html">forceKill</a></span><span class="signature">(<wbr><span class="parameter" id="forceKill-param-pid"><span class="type-annotation">int</span> <span class="parameter-name">pid</span></span>)
-            <span class="returntype parameter">&#8594; Future</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="generateSnapshotFile" class="callable">
-          <span class="name"><a href="dslink.io/generateSnapshotFile.html">generateSnapshotFile</a></span><span class="signature">(<wbr><span class="parameter" id="generateSnapshotFile-param-target"><span class="type-annotation">String</span> <span class="parameter-name">target</span></span>, <span class="parameter" id="generateSnapshotFile-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
-            <span class="returntype parameter">&#8594; Future</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="getDartExecutable" class="callable">
-          <span class="name"><a href="dslink.io/getDartExecutable.html">getDartExecutable</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; String</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="getRandomSocketPort" class="callable">
           <span class="name"><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; Future&lt;int&gt;</span>
@@ -239,14 +110,6 @@
         </dt>
         <dd>
           <p>Generates a random socket port.</p>
-        </dd>
-        <dt id="isPortOpen" class="callable">
-          <span class="name"><a href="dslink.io/isPortOpen.html">isPortOpen</a></span><span class="signature">(<wbr><span class="parameter" id="isPortOpen-param-port"><span class="type-annotation">int</span> <span class="parameter-name">port</span></span>, {<span class="parameter" id="isPortOpen-param-host"><span class="type-annotation">String</span> <span class="parameter-name">host</span>: <span class="default-value">"0.0.0.0"</span></span>})
-            <span class="returntype parameter">&#8594; Future&lt;bool&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
         </dd>
         <dt id="readStdinLines" class="callable">
           <span class="name"><a href="dslink.io/readStdinLines.html">readStdinLines</a></span><span class="signature">(<wbr>)
@@ -264,48 +127,14 @@
         <dd>
           <p>Read raw text from stdin.</p>
         </dd>
-        <dt id="verifyFileChecksum" class="callable">
-          <span class="name"><a href="dslink.io/verifyFileChecksum.html">verifyFileChecksum</a></span><span class="signature">(<wbr><span class="parameter" id="verifyFileChecksum-param-file"><span class="type-annotation">File</span> <span class="parameter-name">file</span></span>, <span class="parameter" id="verifyFileChecksum-param-expected"><span class="type-annotation">String</span> <span class="parameter-name">expected</span></span>)
-            <span class="returntype parameter">&#8594; Future&lt;bool&gt;</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-        <dt id="writeFileChecksum" class="callable">
-          <span class="name"><a href="dslink.io/writeFileChecksum.html">writeFileChecksum</a></span><span class="signature">(<wbr><span class="parameter" id="writeFileChecksum-param-file"><span class="type-annotation">File</span> <span class="parameter-name">file</span></span>)
-            <span class="returntype parameter">&#8594; Future</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
       </dl>
     </section>
 
-    <section class="summary offset-anchor" id="enums">
-      <h2>Enums</h2>
-
-      <dl>
-        <dt id="ChecksumState">
-          <a href="dslink.io/ChecksumState-class.html">ChecksumState</a>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
-      </dl>
-    </section>
 
     <section class="summary offset-anchor" id="classes">
       <h2>Classes</h2>
 
       <dl>
-        <dt id="BetterProcessResult">
-          <span class="name "><a href="dslink.io/BetterProcessResult-class.html">BetterProcessResult</a></span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
         <dt id="HttpHelper">
           <span class="name "><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></span>
         </dt>
@@ -322,37 +151,15 @@
     <h5>dslink.io</h5>
     <ol>
     
-      <li class="section-title"><a href="dslink.io/dslink.io-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.io/OutputHandler.html">OutputHandler</a></li>
-      <li><a href="dslink.io/ProcessHandler.html">ProcessHandler</a></li>
     
     
       <li class="section-title"><a href="dslink.io/dslink.io-library.html#functions">Functions</a></li>
-      <li><a href="dslink.io/canUseSmartUnzip.html">canUseSmartUnzip</a></li>
-      <li><a href="dslink.io/createFileChecksum.html">createFileChecksum</a></li>
-      <li><a href="dslink.io/decompressTarFiles.html">decompressTarFiles</a></li>
-      <li><a href="dslink.io/decompressZipFiles.html">decompressZipFiles</a></li>
-      <li><a href="dslink.io/doFileChecksum.html">doFileChecksum</a></li>
-      <li><a href="dslink.io/exec.html">exec</a></li>
-      <li><a href="dslink.io/extractArchive.html">extractArchive</a></li>
-      <li><a href="dslink.io/extractArchiveSmart.html">extractArchiveSmart</a></li>
-      <li><a href="dslink.io/fetchUrl.html">fetchUrl</a></li>
-      <li><a href="dslink.io/findExecutable.html">findExecutable</a></li>
-      <li><a href="dslink.io/forceKill.html">forceKill</a></li>
-      <li><a href="dslink.io/generateSnapshotFile.html">generateSnapshotFile</a></li>
-      <li><a href="dslink.io/getDartExecutable.html">getDartExecutable</a></li>
       <li><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></li>
-      <li><a href="dslink.io/isPortOpen.html">isPortOpen</a></li>
       <li><a href="dslink.io/readStdinLines.html">readStdinLines</a></li>
       <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
-      <li><a href="dslink.io/verifyFileChecksum.html">verifyFileChecksum</a></li>
-      <li><a href="dslink.io/writeFileChecksum.html">writeFileChecksum</a></li>
     
-      <li class="section-title"><a href="dslink.io/dslink.io-library.html#enums">Enums</a></li>
-      <li><a href="dslink.io/ChecksumState-class.html">ChecksumState</a></li>
     
       <li class="section-title"><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
-      <li><a href="dslink.io/BetterProcessResult-class.html">BetterProcessResult</a></li>
       <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
     
     </ol>

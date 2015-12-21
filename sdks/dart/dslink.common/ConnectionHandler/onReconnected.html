@@ -95,7 +95,7 @@
       <li class="section-title"><a href="dslink.common/ConnectionHandler-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+      <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
       <li class="inherited"><a href="dslink.common/ConnectionHandler/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/ConnectionHandler/onData.html">onData</a></li>
       <li><a href="dslink.common/ConnectionHandler/onDisconnected.html">onDisconnected</a></li>
@@ -115,7 +115,7 @@
       <h2><span>Source</span> </h2>
       <pre><code class="prettyprint lang-dart">void onReconnected() {
   if (_pendingSend) {
-    _conn.sendWhenReady(this);
+    _conn.sendWhenReady(doSend);
   }
 }</code></pre>
     </section>
