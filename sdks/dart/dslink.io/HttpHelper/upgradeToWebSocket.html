@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the upgradeToWebSocket method from the HttpHelper class, for the Dart programming language.">
+  <title>upgradeToWebSocket method - HttpHelper class - dslink.io library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="../..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+            <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
+            <li class="self-crumb">upgradeToWebSocket</li>
+          </ol>
+          <div class="self-name">upgradeToWebSocket</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+          <li><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></li>
+          <li class="self-crumb">upgradeToWebSocket</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">method</span> upgradeToWebSocket
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.io/HttpHelper/upgradeToWebSocket.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.io/dslink.io-library.html">dslink.io</a></h5>
+    <h5><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constants">Constants</a></li>
+      <li><a href="dslink.io/HttpHelper/enableStandardWebSocket-constant.html">enableStandardWebSocket</a></li>
+    
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-properties">Static properties</a></li>
+      <li><a href="dslink.io/HttpHelper/client.html">client</a></li>
+    
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-methods">Static methods</a></li>
+      <li><a href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></li>
+      <li><a href="dslink.io/HttpHelper/createRequest.html">createRequest</a></li>
+      <li><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></li>
+      <li><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></li>
+      <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></li>
+      <li><a href="dslink.io/HttpHelper/tokenizeFieldValue.html">tokenizeFieldValue</a></li>
+      <li><a href="dslink.io/HttpHelper/upgradeToWebSocket.html">upgradeToWebSocket</a></li>
+    
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></li>
+    
+      <li class="section-title inherited">
+        <a href="dslink.io/HttpHelper-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dslink.io/HttpHelper/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.io/HttpHelper/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.io/HttpHelper-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dslink.io/HttpHelper/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.io/HttpHelper-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dslink.io/HttpHelper/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.io/HttpHelper/toString.html">toString</a></li>
+    </ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+    <section class="multi-line-signature">
+      <span class="returntype">Future&lt;WebSocket&gt;</span>
+      <span class="name ">upgradeToWebSocket</span>(<wbr><span class="parameter" id="upgradeToWebSocket-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, [<span class="parameter" id="upgradeToWebSocket-param-protocolSelector"><span class="type-annotation">dynamic</span> <span class="parameter-name">protocolSelector</span>(<span class="parameter" id="protocolSelector-param-protocols"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>)</span>])
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/io.dart.html#line-159'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; upgradeToWebSocket(HttpRequest request, [
+  protocolSelector(List&lt;String&gt; protocols)
+]) {
+  if (enableStandardWebSocket) {
+    return WebSocketTransformer.upgrade(request, protocolSelector: protocolSelector);
+  }
+
+  var response = request.response;
+  if (!WebSocketTransformer.isUpgradeRequest(request)) {
+    // Send error response.
+    response
+      ..statusCode = HttpStatus.BAD_REQUEST
+      ..close();
+    return new Future.error(
+      new WebSocketException(&quot;Invalid WebSocket upgrade request&quot;));
+  }
+
+  Future upgrade(String protocol) {
+    // Send the upgrade response.
+    response
+      ..statusCode = HttpStatus.SWITCHING_PROTOCOLS
+      ..headers.add(HttpHeaders.CONNECTION, &quot;Upgrade&quot;)
+      ..headers.add(HttpHeaders.UPGRADE, &quot;websocket&quot;);
+    String key = request.headers.value(&quot;Sec-WebSocket-Key&quot;);
+    SHA1 sha1 = new SHA1();
+    sha1.add(&quot;$key$_webSocketGUID&quot;.codeUnits);
+    String accept = CryptoUtils.bytesToBase64(sha1.close());
+    response.headers.add(&quot;Sec-WebSocket-Accept&quot;, accept);
+    if (protocol != null) {
+      response.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocol);
+    }
+    response.headers.contentLength = 0;
+    return response.detachSocket()
+      .then((socket) =&gt; new WebSocket.fromUpgradedSocket(
+      socket, protocol: protocol, serverSide: true));
+  }
+
+  var protocols = request.headers[&apos;Sec-WebSocket-Protocol&apos;];
+  if (protocols != null &amp;&amp; protocolSelector != null) {
+    // The suggested protocols can be spread over multiple lines, each
+    // consisting of multiple protocols. To unify all of them, first join
+    // the lists with &apos;, &apos; and then tokenize.
+    protocols = HttpHelper.tokenizeFieldValue(protocols.join(&apos;, &apos;));
+    return new Future(() =&gt; protocolSelector(protocols))
+      .then((protocol) {
+      if (protocols.indexOf(protocol) &lt; 0) {
+        throw new WebSocketException(
+          &quot;Selected protocol is not in the list of available protocols&quot;);
+      }
+      return protocol;
+    })
+      .catchError((error) {
+      response
+        ..statusCode = HttpStatus.INTERNAL_SERVER_ERROR
+        ..close();
+      throw error;
+    })
+      .then(upgrade);
+  } else {
+    return upgrade(null);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 0.5.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

@@ -76,6 +76,8 @@
     <h5><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></h5>
 
     <ol>
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constants">Constants</a></li>
+      <li><a href="dslink.io/HttpHelper/enableStandardWebSocket-constant.html">enableStandardWebSocket</a></li>
     
       <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-properties">Static properties</a></li>
       <li><a href="dslink.io/HttpHelper/client.html">client</a></li>
@@ -86,6 +88,8 @@
       <li><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></li>
       <li><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></li>
       <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></li>
+      <li><a href="dslink.io/HttpHelper/tokenizeFieldValue.html">tokenizeFieldValue</a></li>
+      <li><a href="dslink.io/HttpHelper/upgradeToWebSocket.html">upgradeToWebSocket</a></li>
     
       <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></li>
@@ -116,14 +120,15 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/io.dart.html#line-63'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; connectToWebSocket(
     String url, {Iterable&lt;String&gt; protocols, Map&lt;String, dynamic&gt; headers, HttpClient httpClient}) async {
-  if (const bool.fromEnvironment(&quot;calzone.build&quot;, defaultValue: false)) {
+  Uri uri = Uri.parse(url);
+
+  if (enableStandardWebSocket) {
     return await WebSocket.connect(url, protocols: protocols, headers: headers);
   }
 
-  Uri uri = Uri.parse(url);
   if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
     throw new WebSocketException(&quot;Unsupported URL scheme &apos;${uri.scheme}&apos;&quot;);
   }
@@ -136,14 +141,18 @@
   }
   String nonce = CryptoUtils.bytesToBase64(nonceData);
 
+  int port = uri.port;
+  if (port == 0) {
+    port = uri.scheme == &quot;wss&quot; ? 443 : 80;
+  }
+
   uri = new Uri(
       scheme: uri.scheme == &quot;wss&quot; ? &quot;https&quot; : &quot;http&quot;,
       userInfo: uri.userInfo,
       host: uri.host,
-      port: uri.port,
+      port: port,
       path: uri.path,
-      query: uri.query,
-    fragment: uri.fragment
+      query: uri.query
   );
 
   HttpClient _client = httpClient == null ? (new HttpClient()
@@ -170,8 +179,7 @@
       request.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocols.toList());
     }
     return request.close();
-  })
-  .then((response) {
+  }).then((response) {
     void error(String message) {
       // Flush data.
       response.detachSocket().then((socket) {
@@ -195,7 +203,7 @@
     List&lt;int&gt; expectedAccept = sha1.close();
     List&lt;int&gt; receivedAccept = CryptoUtils.base64StringToBytes(accept);
     if (expectedAccept.length != receivedAccept.length) {
-      error(&quot;Reasponse header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
+      error(&quot;Response header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
     }
     for (int i = 0; i &lt; expectedAccept.length; i++) {
       if (expectedAccept[i] != receivedAccept[i]) {
@@ -219,7 +227,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

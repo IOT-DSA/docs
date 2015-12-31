@@ -116,11 +116,11 @@
       <span class="name ">timerOnceBefore</span>(<wbr><span class="parameter" id="timerOnceBefore-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBefore-param-ms"><span class="type-annotation">int</span> <span class="parameter-name">ms</span></span>)
     </section>
     <section class="desc markdown">
-      <p>do nothng if the callback is already in the list and will get called after 0 ~ N ms</p>
+      <p>do nothing if the callback is already in the list and will get called after 0 ~ N ms</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/utils/timer.dart.html#line-118'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static void timerOnceBefore(Function callback, int ms) {
   int desiredTime50 =
       (((new DateTime.now()).millisecondsSinceEpoch + ms) / 50).ceil();
@@ -132,6 +132,7 @@
       existTf.remove(callback);
     }
   }
+
   if (desiredTime50 &lt;= _lastTimeRun) {
     callLater(callback);
     return;
@@ -152,7 +153,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

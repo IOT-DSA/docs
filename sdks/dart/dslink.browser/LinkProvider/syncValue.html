@@ -100,6 +100,7 @@
       <li><a href="dslink.browser/LinkProvider/provider.html">provider</a></li>
       <li><a href="dslink.browser/LinkProvider/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/runtimeType.html">runtimeType</a></li>
+      <li><a href="dslink.browser/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/operator_equals.html">operator ==</a></li>
@@ -112,6 +113,7 @@
       <li><a href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.browser/LinkProvider/init.html">init</a></li>
+      <li><a href="dslink.browser/LinkProvider/initLinkWithPrivateKey.html">initLinkWithPrivateKey</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
@@ -130,10 +132,15 @@
       <span class="returntype">void</span>
       <span class="name ">syncValue</span>(<wbr><span class="parameter" id="syncValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
     </section>
+    <section class="desc markdown">
+      <p>Remote Path of Responder</p>
+    </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">void syncValue(String path) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/browser.dart.html#line-132'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">//String get remotePath =&gt; link.remotePath;
+
+void syncValue(String path) {
   var n = this[path];
   n.updateValue(n.lastValueUpdate.value, force: true);
 }</code></pre>
@@ -149,7 +156,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

@@ -115,16 +115,16 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/common/table.dart.html#line-30'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static List&lt;TableColumn&gt; parseColumns(List list) {
   List&lt;TableColumn&gt; rslt = &lt;TableColumn&gt;[];
   for (Object m in list) {
-    if (m is Map &amp;&amp; m[&apos;name&apos;] is String) {
-      String type = &apos;string&apos;;
-      if (m[&apos;type&apos;] is String) {
-        type = m[&apos;type&apos;];
+    if (m is Map &amp;&amp; m[&quot;name&quot;] is String) {
+      String type = &quot;string&quot;;
+      if (m[&quot;type&quot;] is String) {
+        type = m[&quot;type&quot;];
       }
-      rslt.add(new TableColumn(m[&apos;name&apos;], type, m[&apos;default&apos;]));
+      rslt.add(new TableColumn(m[&quot;name&quot;], type, m[&quot;default&quot;]));
     } else if (m is TableColumn) {
       rslt.add(m);
     } else {
@@ -146,7 +146,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

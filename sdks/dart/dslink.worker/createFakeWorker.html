@@ -105,13 +105,15 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/worker.dart.html#line-21'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">WorkerSocket createFakeWorker(WorkerFunction function,
     {Map&lt;String, dynamic&gt; metadata}) {
   var receiver = new ReceivePort();
   var socket = new WorkerSocket.master(receiver);
   Timer.run(() {
-    function(new Worker(receiver.sendPort, metadata));
+    var w = new Worker(receiver.sendPort, metadata);
+    w._master = socket;
+    function(w);
   });
   return socket;
 }</code></pre>
@@ -127,7 +129,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

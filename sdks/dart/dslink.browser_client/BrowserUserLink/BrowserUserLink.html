@@ -80,6 +80,8 @@
       <li class="section-title"><a href="dslink.browser_client/BrowserUserLink-class.html#constants">Constants</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/saltNameMap-constant.html">saltNameMap</a></li>
     
+      <li class="section-title"><a href="dslink.browser_client/BrowserUserLink-class.html#static-properties">Static properties</a></li>
+      <li><a href="dslink.browser_client/BrowserUserLink/session.html">session</a></li>
     
     
       <li class="section-title"><a href="dslink.browser_client/BrowserUserLink-class.html#constructors">Constructors</a></li>
@@ -88,21 +90,22 @@
       <li class="section-title">
         <a href="dslink.browser_client/BrowserUserLink-class.html#instance-properties">Properties</a>
       </li>
+      <li><a href="dslink.browser_client/BrowserUserLink/enableAck.html">enableAck</a></li>
+      <li><a href="dslink.browser_client/BrowserUserLink/format.html">format</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/hashCode.html">hashCode</a></li>
-      <li><a href="dslink.browser_client/BrowserUserLink/httpUpdateUri.html">httpUpdateUri</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/privateKey.html">privateKey</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/requester.html">requester</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.browser_client/BrowserUserLink/session.html">session</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/wsUpdateUri.html">wsUpdateUri</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserUserLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser_client/BrowserUserLink-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.browser_client/BrowserUserLink/close.html">close</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/connect.html">connect</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/initWebsocket.html">initWebsocket</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/noSuchMethod.html">noSuchMethod</a></li>
@@ -115,24 +118,32 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">BrowserUserLink</span>(<wbr>{<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-wsUpdateUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUpdateUri</span></span>, <span class="parameter" id="-param-httpUpdateUri"><span class="type-annotation">String</span> <span class="parameter-name">httpUpdateUri</span></span>})
+            <span class="name ">BrowserUserLink</span>(<wbr>{<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-wsUpdateUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUpdateUri</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-format"><span class="type-annotation">String</span> <span class="parameter-name">format</span></span>})
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">BrowserUserLink(
-    {NodeProvider nodeProvider,
-    bool isRequester: true,
-    bool isResponder: true,
-    this.wsUpdateUri,
-    this.httpUpdateUri})
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/browser/browser_user_link.dart.html#line-31'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">BrowserUserLink({NodeProvider nodeProvider,
+bool isRequester: true,
+bool isResponder: true,
+this.wsUpdateUri,
+this.enableAck: false,
+String format})
     : requester = isRequester ? new Requester() : null,
       responder = (isResponder &amp;&amp; nodeProvider != null)
           ? new Responder(nodeProvider)
           : null {
-  if (wsUpdateUri.startsWith(&apos;http&apos;)) {
-    wsUpdateUri = &apos;ws${wsUpdateUri.substring(4)}&apos;;
+  if (wsUpdateUri.startsWith(&quot;http&quot;)) {
+    wsUpdateUri = &quot;ws${wsUpdateUri.substring(4)}&quot;;
+  }
+
+  if (format != null) {
+    this.format = format;
+  }
+
+  if (window.location.hash.contains(&quot;dsa_json&quot;)) {
+    this.format = &quot;json&quot;;
   }
 }</code></pre>
     </section>
@@ -147,7 +158,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

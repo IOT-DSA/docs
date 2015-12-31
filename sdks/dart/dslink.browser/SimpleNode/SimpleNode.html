@@ -121,6 +121,7 @@
       <li class="section-title"><a href="dslink.browser/SimpleNode-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser/SimpleNode/addChild.html">addChild</a></li>
       <li><a href="dslink.browser/SimpleNode/attach.html">attach</a></li>
+      <li class="inherited"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></li>
       <li><a href="dslink.browser/SimpleNode/createChild.html">createChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
@@ -149,6 +150,7 @@
       <li><a href="dslink.browser/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
       <li><a href="dslink.browser/SimpleNode/onSubscribe.html">onSubscribe</a></li>
+      <li><a href="dslink.browser/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li><a href="dslink.browser/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li><a href="dslink.browser/SimpleNode/removeChild.html">removeChild</a></li>
@@ -160,7 +162,7 @@
       <li><a href="dslink.browser/SimpleNode/setValue.html">setValue</a></li>
       <li><a href="dslink.browser/SimpleNode/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/toString.html">toString</a></li>
-      <li class="inherited"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
+      <li><a href="dslink.browser/SimpleNode/unsubscribe.html">unsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
     </ol>
@@ -170,12 +172,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">SimpleNode</span>(<wbr><span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="-param-nodeprovider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">nodeprovider</span></span>])
+            <span class="name ">SimpleNode</span>(<wbr><span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="-param-nodeprovider"><span class="type-annotation"><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">nodeprovider</span></span>])
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/simple/simple_node.dart.html#line-460'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">SimpleNode(String path, [SimpleNodeProvider nodeprovider]) : super(path),
   provider = nodeprovider == null ? SimpleNodeProvider.instance : nodeprovider;</code></pre>
     </section>
@@ -190,7 +192,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

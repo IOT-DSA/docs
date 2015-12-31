@@ -81,8 +81,12 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
+      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -99,6 +103,7 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#classes">Classes</a></li>
       <li><a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a href="dslink/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a href="dslink/ByteDataUtil-class.html">ByteDataUtil</a></li>
@@ -106,8 +111,10 @@
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
+      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -123,11 +130,17 @@
       <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink/Link-class.html">Link</a></li>
+      <li><a href="dslink/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink/ListController-class.html">ListController</a></li>
       <li><a href="dslink/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -139,6 +152,7 @@
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -154,6 +168,7 @@
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
+      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -175,6 +190,7 @@
       <li><a href="dslink/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></li>
+      <li><a href="dslink/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div>
@@ -182,6 +198,20 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     
+    <section>
+      <dl class="dl-horizontal">
+
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+          </ul>
+        </dd>
+
+
+
+      </dl>
+    </section>
 
 
 
@@ -266,6 +296,14 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
+        <dt id="ackReceived" class="callable">
+          <span class="name"><a href="dslink/Response/ackReceived.html">ackReceived</a></span><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-receiveAckId"><span class="type-annotation">int</span> <span class="parameter-name">receiveAckId</span></span>, <span class="parameter" id="ackReceived-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>, <span class="parameter" id="ackReceived-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="close" class="callable">
           <span class="name"><a href="dslink/Response/close.html">close</a></span><span class="signature">(<wbr>[<span class="parameter" id="close-param-err"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">err</span> = <span class="default-value">null</span></span>])
             <span class="returntype parameter">&#8594; void</span>
@@ -274,19 +312,39 @@
         <dd>
           <p>close the request from responder side and also notify the requester</p>
         </dd>
+        <dt id="getTraceData" class="callable">
+          <span class="name"><a href="dslink/Response/getTraceData.html">getTraceData</a></span><span class="signature">(<wbr>[<span class="parameter" id="getTraceData-param-change"><span class="type-annotation">String</span> <span class="parameter-name">change</span> = <span class="default-value">'+'</span></span>])
+            <span class="returntype parameter">&#8594; <a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p>for the broker trace action</p>
+        </dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink/Response/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
+        </dd>
+        <dt id="prepareSending" class="callable">
+          <span class="name"><a href="dslink/Response/prepareSending.html">prepareSending</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="startSendingData" class="callable">
+          <span class="name"><a href="dslink/Response/startSendingData.html">startSendingData</a></span><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
         </dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink/Response/toString.html">toString</a></span><span class="signature">(<wbr>)
@@ -323,8 +381,12 @@ the original invocation.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
       <li class="inherited"><a href="dslink/Response/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/Response-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/Response/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink/Response/close.html">close</a></li>
+      <li><a href="dslink/Response/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink/Response/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/Response/prepareSending.html">prepareSending</a></li>
+      <li><a href="dslink/Response/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/Response/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -337,7 +399,7 @@ the original invocation.<a href="dslink/Response/noSuchMethod.html">&hellip;</a>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

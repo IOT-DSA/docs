@@ -100,6 +100,7 @@
       <li><a href="dslink.browser/LinkProvider/provider.html">provider</a></li>
       <li><a href="dslink.browser/LinkProvider/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/runtimeType.html">runtimeType</a></li>
+      <li><a href="dslink.browser/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink.browser/LinkProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/operator_equals.html">operator ==</a></li>
@@ -112,6 +113,7 @@
       <li><a href="dslink.browser/LinkProvider/connect.html">connect</a></li>
       <li><a href="dslink.browser/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.browser/LinkProvider/init.html">init</a></li>
+      <li><a href="dslink.browser/LinkProvider/initLinkWithPrivateKey.html">initLinkWithPrivateKey</a></li>
       <li class="inherited"><a href="dslink.browser/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.browser/LinkProvider/removeNode.html">removeNode</a></li>
@@ -132,11 +134,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/browser.dart.html#line-64'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future init() async {
   _initCalled = true;
-
-  privateKey = await getPrivateKey(storage: dataStore);
 
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
@@ -152,6 +152,11 @@
   } else {
     (provider as SerializableNodeProvider).init(defaultNodes);
   }
+
+  // move the waiting part of init into a later frame
+  // we need to make sure provider is created at the first frame
+  // not affected by any async code
+  return await initLinkWithPrivateKey();
 }</code></pre>
     </section>
 
@@ -165,7 +170,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

@@ -76,6 +76,8 @@
     <h5><a href="dslink.io/HttpHelper-class.html">HttpHelper</a></h5>
 
     <ol>
+      <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constants">Constants</a></li>
+      <li><a href="dslink.io/HttpHelper/enableStandardWebSocket-constant.html">enableStandardWebSocket</a></li>
     
       <li class="section-title"><a href="dslink.io/HttpHelper-class.html#static-properties">Static properties</a></li>
       <li><a href="dslink.io/HttpHelper/client.html">client</a></li>
@@ -86,6 +88,8 @@
       <li><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></li>
       <li><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></li>
       <li><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></li>
+      <li><a href="dslink.io/HttpHelper/tokenizeFieldValue.html">tokenizeFieldValue</a></li>
+      <li><a href="dslink.io/HttpHelper/upgradeToWebSocket.html">upgradeToWebSocket</a></li>
     
       <li class="section-title"><a href="dslink.io/HttpHelper-class.html#constructors">Constructors</a></li>
       <li><a href="dslink.io/HttpHelper/HttpHelper.html">HttpHelper</a></li>
@@ -117,9 +121,9 @@ If <code>headers</code> is specified, the headers will be added onto the request
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/io.dart.html#line-51'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;dynamic&gt; fetchJSON(String url, {Map&lt;String, String&gt; headers}) async {
-  return JSON.decode(await fetchUrl(url, headers: headers));
+  return const JsonDecoder().convert(await fetchUrl(url, headers: headers));
 }</code></pre>
     </section>
 
@@ -133,7 +137,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

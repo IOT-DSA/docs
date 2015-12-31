@@ -91,6 +91,7 @@
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/permissions.html">permissions</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/sys.html">sys</a></li>
@@ -102,16 +103,19 @@
     
       <li class="section-title"><a href="dslink.browser/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -129,16 +133,18 @@ If it does not exist, create a new node and return it.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/simple/simple_node.dart.html#line-248'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
-  if (nodes.containsKey(path)) {
-    return nodes[path];
+  LocalNode node = getNode(path);
+
+  if (node != null) {
+    return node;
   }
 
   if (addToTree) {
     return createNode(path);
   } else {
-    var node = new SimpleNode(path, this);
+    node = new SimpleNode(path, this);
     return node;
   }
 }</code></pre>
@@ -154,7 +160,7 @@ If it does not exist, create a new node and return it.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

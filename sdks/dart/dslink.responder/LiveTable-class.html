@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the LiveTable class from the dslink.responder library, for the Dart programming language.">
+  <title>LiveTable class - dslink.responder library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+            <li class="self-crumb">LiveTable</li>
+          </ol>
+          <div class="self-name">LiveTable</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+          <li class="self-crumb">LiveTable</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">class</span> LiveTable
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.responder/LiveTable-class.html#instance-properties">Properties</a></li>
+          <li><a href="dslink.responder/LiveTable-class.html#constructors">Constructors</a></li>
+          <li><a href="dslink.responder/LiveTable-class.html#operators">Operators</a></li>
+          <li><a href="dslink.responder/LiveTable-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></h5>
+
+    <ol>
+    
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
+      <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.responder/OnReqParams.html">OnReqParams</a></li>
+      <li><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
+    
+    
+    
+    
+      <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#classes">Classes</a></li>
+      <li><a href="dslink.responder/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.responder/Configs-class.html">Configs</a></li>
+      <li><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></li>
+      <li><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></li>
+      <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
+      <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
+      <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a href="dslink.responder/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink.responder/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink.responder/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink.responder/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
+      <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.responder/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></li>
+      <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
+      <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+      <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
+      <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
+      <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
+      <li><a href="dslink.responder/Response-class.html">Response</a></li>
+      <li><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></li>
+      <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
+      <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
+      <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
+      <li><a href="dslink.responder/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
+      <li><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+      <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
+      <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>A Live-Updating Table</p>
+    </section>
+    
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="LiveTable" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/LiveTable.html">LiveTable</a></span><span class="signature">([<span class="parameter" id="-param-columns"><span class="type-annotation">List&lt;<a href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>])</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="LiveTable.create" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/LiveTable.create.html">LiveTable.create</a></span><span class="signature">(<span class="parameter" id="create-param-columns"><span class="type-annotation">List&lt;<a href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="create-param-rows"><span class="type-annotation">List&lt;<a href="dslink/LiveTableRow-class.html">LiveTableRow</a>&gt;</span> <span class="parameter-name">rows</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="columns" class="property">
+          <span class="name"><a href="dslink.responder/LiveTable/columns.html">columns</a></span>
+          <span class="signature">&#8594; List&lt;<a href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.responder/LiveTable/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>Get a hash code for this object.<a href="dslink.responder/LiveTable/hashCode.html">&hellip;</a>
+</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="response" class="property">
+          <span class="name"><a href="dslink.responder/LiveTable/response.html">response</a></span>
+          <span class="signature">&#8594; <a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="rows" class="property">
+          <span class="name"><a href="dslink.responder/LiveTable/rows.html">rows</a></span>
+          <span class="signature">&#8594; List&lt;<a href="dslink/LiveTableRow-class.html">LiveTableRow</a>&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.responder/LiveTable/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="dslink.responder/LiveTable/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.<a href="dslink.responder/LiveTable/operator_equals.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="clear" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/clear.html">clear</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="close" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/close.html">close</a></span><span class="signature">(<wbr>[<span class="parameter" id="close-param-isFromRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isFromRequester</span> = <span class="default-value">false</span></span>])
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="createRow" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/createRow.html">createRow</a></span><span class="signature">(<wbr><span class="parameter" id="createRow-param-values"><span class="type-annotation">List</span> <span class="parameter-name">values</span></span>, {<span class="parameter" id="createRow-param-ready"><span class="type-annotation">bool</span> <span class="parameter-name">ready</span>: <span class="default-value">true</span></span>})
+            <span class="returntype parameter">&#8594; <a href="dslink/LiveTableRow-class.html">LiveTableRow</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="doOnClose" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/doOnClose.html">doOnClose</a></span><span class="signature">(<wbr><span class="parameter" id="doOnClose-param-f"><span class="type-annotation">Function</span> <span class="parameter-name">f</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="getCurrentState" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/getCurrentState.html">getCurrentState</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; List</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dslink.responder/LiveTable/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/LiveTable/noSuchMethod.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="onRowUpdate" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/onRowUpdate.html">onRowUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="onRowUpdate-param-row"><span class="type-annotation"><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></span> <span class="parameter-name">row</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="override" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/override.html">override</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="resend" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/resend.html">resend</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="sendTo" class="callable">
+          <span class="name"><a href="dslink.responder/LiveTable/sendTo.html">sendTo</a></span><span class="signature">(<wbr><span class="parameter" id="sendTo-param-resp"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">resp</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="dslink.responder/LiveTable/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>LiveTable</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink.responder/LiveTable-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.responder/LiveTable/LiveTable.html">LiveTable</a></li>
+      <li><a href="dslink.responder/LiveTable/LiveTable.create.html">create</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.responder/LiveTable-class.html#instance-properties">Properties</a>
+      </li>
+      <li><a href="dslink.responder/LiveTable/columns.html">columns</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.responder/LiveTable/response.html">response</a></li>
+      <li><a href="dslink.responder/LiveTable/rows.html">rows</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/runtimeType.html">runtimeType</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.responder/LiveTable-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="dslink.responder/LiveTable-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.responder/LiveTable/clear.html">clear</a></li>
+      <li><a href="dslink.responder/LiveTable/close.html">close</a></li>
+      <li><a href="dslink.responder/LiveTable/createRow.html">createRow</a></li>
+      <li><a href="dslink.responder/LiveTable/doOnClose.html">doOnClose</a></li>
+      <li><a href="dslink.responder/LiveTable/getCurrentState.html">getCurrentState</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.responder/LiveTable/onRowUpdate.html">onRowUpdate</a></li>
+      <li><a href="dslink.responder/LiveTable/override.html">override</a></li>
+      <li><a href="dslink.responder/LiveTable/resend.html">resend</a></li>
+      <li><a href="dslink.responder/LiveTable/sendTo.html">sendTo</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/toString.html">toString</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 0.5.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

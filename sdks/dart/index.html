@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="made with love by dartdoc 0.8.4">
+  <meta name="generator" content="made with love by dartdoc 0.8.4-dev">
   <meta name="description" content="dslink API docs, for the Dart programming language.">
   <title>dslink - Dart API docs</title>
 
@@ -67,13 +67,14 @@
     <ol>
       <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -87,19 +88,16 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
       <section class="desc markdown">
-        <h1>DSLink SDK for Dart <a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart"></a><a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg"><img alt="Build Status" src="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg"></a> <a href="https://dsa-slack.herokuapp.com/"></a><a href="https://dsa-slack.herokuapp.com/badge.svg"><img alt="Slack" src="https://dsa-slack.herokuapp.com/badge.svg"></a></h1>
+        <h1>DSLink SDK for Dart <a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart"></a><a href="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"><img alt="Build Status" src="https://travis-ci.org/IOT-DSA/sdk-dslink-dart.svg?branch=master"></a> <a href="https://coveralls.io/github/IOT-DSA/sdk-dslink-dart?branch=develop"></a><a href="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"><img alt="Coverage Status" src="https://coveralls.io/repos/IOT-DSA/sdk-dslink-dart/badge.svg?branch=master&amp;service=github"></a> <a href="https://dsa-slack.herokuapp.com/"></a><a href="https://dsa-slack.herokuapp.com/badge.svg"><img alt="Slack" src="https://dsa-slack.herokuapp.com/badge.svg"></a></h1>
 <p>DSLink SDK for Dart</p>
 <h2>Getting Started</h2>
 <h3>Prerequisites</h3><ul><li><a href="https://git-scm.com/downloads">Git</a></li><li><a href="https://www.dartlang.org/downloads/">Dart SDK</a></li></ul>
 <h3>Install</h3>
-<pre class="bash prettyprint"><code>pub global activate -sgit https://github.com/IOT-DSA/sdk-dslink-dart.git # Globally install the DSA Dart SDK
+<pre class="bash prettyprint"><code>pub global activate -sgit https://github.com/IOT-DSA/broker-dart.git # Globally install the DSA Broker
 </code></pre>
 <h3>Start a Broker</h3>
 <pre class="bash prettyprint"><code>dsbroker # If you have the pub global executable path setup.
-pub global run dslink:broker # If you do not have the pub global executable path setup.
-</code></pre>
-<p>To connect a broker to another broker:</p>
-<pre class="bash prettyprint"><code>dsbroker --broker http://my.broker.org:8080/conn # Connect a broker to another broker
+pub global run dsbroker:broker # If you do not have the pub global executable path setup.
 </code></pre>
 <p>You can edit the server configuration using <code>broker.json</code>. For more information about broker configuration, see <a href="https://github.com/IOT-DSA/sdk-dslink-dart/wiki/Configuring-a-Broker">this page</a>.</p>
 <h3>Create a Link</h3>
@@ -144,13 +142,10 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
               Entry Point for the DSLink SDK for the Dart VM
                           </p>
           </dd>
-          <dt id="dslink.broker">
-            <span class="name"><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></span>
+          <dt id="dslink.broker_discovery">
+            <span class="name"><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></span>
           </dt>
           <dd>
-            <p>
-              DSA Broker Implementation
-                          </p>
           </dd>
           <dt id="dslink.browser">
             <span class="name"><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></span>
@@ -198,6 +193,14 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
           <dd>
             <p>
               Helper Nodes for Responders
+                          </p>
+          </dd>
+          <dt id="dslink.query">
+            <span class="name"><a href="dslink.query/dslink.query-library.html">dslink.query</a></span>
+          </dt>
+          <dd>
+            <p>
+              DSA Query Implementation
                           </p>
           </dd>
           <dt id="dslink.requester">
@@ -273,7 +276,7 @@ dart path/to/link.dart --broker http://my.broker:8080/conn # Start a link that c
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

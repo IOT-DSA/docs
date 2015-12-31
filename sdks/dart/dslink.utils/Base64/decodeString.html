@@ -117,9 +117,9 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/utils/base64.dart.html#line-45'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static String decodeString(String input) {
-  return UTF8.decode(decode(input));
+  return const Utf8Decoder().convert(decode(input));
 }</code></pre>
     </section>
 
@@ -133,7 +133,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

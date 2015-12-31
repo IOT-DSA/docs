@@ -85,14 +85,18 @@
       <li class="section-title">
         <a href="dslink/RespSubscribeController-class.html#instance-properties">Properties</a>
       </li>
-      <li><a href="dslink/RespSubscribeController/cacheLevel.html">cacheLevel</a></li>
+      <li><a href="dslink/RespSubscribeController/caching.html">caching</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink/RespSubscribeController/lastValue.html">lastValue</a></li>
       <li><a href="dslink/RespSubscribeController/lastValues.html">lastValues</a></li>
       <li><a href="dslink/RespSubscribeController/node.html">node</a></li>
       <li><a href="dslink/RespSubscribeController/permitted.html">permitted</a></li>
+      <li><a href="dslink/RespSubscribeController/persist.html">persist</a></li>
+      <li><a href="dslink/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a href="dslink/RespSubscribeController/response.html">response</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/RespSubscribeController/sid.html">sid</a></li>
+      <li><a href="dslink/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title inherited"><a href="dslink/RespSubscribeController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/operator_equals.html">operator ==</a></li>
@@ -100,9 +104,10 @@
       <li class="section-title"><a href="dslink/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a href="dslink/RespSubscribeController/destroy.html">destroy</a></li>
-      <li><a href="dslink/RespSubscribeController/mergeValues.html">mergeValues</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a href="dslink/RespSubscribeController/process.html">process</a></li>
+      <li><a href="dslink/RespSubscribeController/resetCache.html">resetCache</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/toString.html">toString</a></li>
     </ol>
 
@@ -115,15 +120,53 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/response/subscribe.dart.html#line-253'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void addValue(ValueUpdate val) {
-  lastValues.add(val);
-  if (lastValues.length &gt; _cachedLevel) {
-    mergeValues();
+  if (_caching &amp;&amp; _isCacheValid) {
+    lastValues.add(val);
+    if (lastValues.length &gt; response.responder.maxCacheLength) {
+      // cache is no longer valid, fallback to rollup mode
+      _isCacheValid = false;
+      lastValue = new ValueUpdate(null, ts: &apos;&apos;);
+      for (ValueUpdate update in lastValues) {
+        lastValue.mergeAdd(update);
+      }
+      lastValues.clear();
+      if (_qosLevel &gt; 0) {
+        if (_storage != null) {
+          _storage.setValue(waitingValues, lastValue);
+        }
+        waitingValues
+          ..clear()
+          ..add(lastValue);
+      }
+    } else {
+      lastValue = val;
+      if (_qosLevel &gt; 0) {
+        waitingValues.add(lastValue);
+        if (_storage != null) {
+          _storage.addValue(lastValue);
+        }
+      }
+    }
+  } else {
+    if (lastValue != null) {
+      lastValue = new ValueUpdate.merge(lastValue, val);
+    } else {
+      lastValue = val;
+    }
+    if (_qosLevel &gt; 0) {
+      if (_storage != null) {
+        _storage.setValue(waitingValues, lastValue);
+      }
+      waitingValues
+        ..clear()
+        ..add(lastValue);
+    }
   }
-  // TODO, don&apos;t allow this to be called from same controller more oftern than 100ms
+  // TODO, don&apos;t allow this to be called from same controller more often than 100ms
   // the first response can happen ASAP, but
-  if (_permitted) {
+  if (_permitted &amp;&amp; sid &gt; -1) {
     response.subscriptionChanged(this);
   }
 }</code></pre>
@@ -139,7 +182,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

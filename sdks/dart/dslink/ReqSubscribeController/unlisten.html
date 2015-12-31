@@ -86,8 +86,8 @@
         <a href="dslink/ReqSubscribeController-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/ReqSubscribeController/callbacks.html">callbacks</a></li>
+      <li><a href="dslink/ReqSubscribeController/currentQos.html">currentQos</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/hashCode.html">hashCode</a></li>
-      <li><a href="dslink/ReqSubscribeController/maxCache.html">maxCache</a></li>
       <li><a href="dslink/ReqSubscribeController/node.html">node</a></li>
       <li><a href="dslink/ReqSubscribeController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/runtimeType.html">runtimeType</a></li>
@@ -102,7 +102,7 @@
       <li class="inherited"><a href="dslink/ReqSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink/ReqSubscribeController/toString.html">toString</a></li>
       <li><a href="dslink/ReqSubscribeController/unlisten.html">unlisten</a></li>
-      <li><a href="dslink/ReqSubscribeController/updateCacheLevel.html">updateCacheLevel</a></li>
+      <li><a href="dslink/ReqSubscribeController/updateQos.html">updateQos</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -110,18 +110,18 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">unlisten</span>(<wbr><span class="parameter" id="unlisten-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>)
+      <span class="name ">unlisten</span>(<wbr><span class="parameter" id="unlisten-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">void unlisten(callback(ValueUpdate)) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/requester/request/subscribe.dart.html#line-297'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void unlisten(callback(ValueUpdate update)) {
   if (callbacks.containsKey(callback)) {
     int cacheLevel = callbacks.remove(callback);
     if (callbacks.isEmpty) {
-      requester._subsciption.removeSubscription(this);
-    } else if (cacheLevel == maxCache &amp;&amp; maxCache &gt; 1) {
-      updateCacheLevel();
+      requester._subscription.removeSubscription(this);
+    } else if (cacheLevel == currentQos &amp;&amp; currentQos &gt; 1) {
+      updateQos();
     }
   }
 }</code></pre>
@@ -137,7 +137,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

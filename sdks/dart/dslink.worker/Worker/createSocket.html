@@ -111,8 +111,15 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">WorkerSocket createSocket() =&gt; new WorkerSocket.worker(port);</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/worker.dart.html#line-252'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">WorkerSocket createSocket() {
+  var sock = new WorkerSocket.worker(port);
+  if (_master != null) {
+    sock._master = _master;
+    _master._targetWorker = sock;
+  }
+  return sock;
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -125,7 +132,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

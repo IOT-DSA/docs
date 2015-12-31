@@ -73,13 +73,14 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -124,7 +125,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
           <span class="name "><a href="dslink.browser_client/BrowserECDHLink-class.html">BrowserECDHLink</a></span>
         </dt>
         <dd>
-          <p>a client link for both http and ws</p>
+          <p>a client link for websocket</p>
         </dd>
         <dt id="BrowserUserLink">
           <span class="name "><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></span>
@@ -143,6 +144,12 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
         </dt>
         <dd>
           <p>Storage for DSA in Local Storage</p>
+        </dd>
+        <dt id="SynchronousDataStorage">
+          <span class="name "><a href="dslink.browser_client/SynchronousDataStorage-class.html">SynchronousDataStorage</a></span>
+        </dt>
+        <dd>
+          <p>A Synchronous Storage System for DSA Data</p>
         </dd>
         <dt id="WebSocketConnection">
           <span class="name "><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></span>
@@ -171,6 +178,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
       <li><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></li>
       <li><a href="dslink.browser_client/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage-class.html">LocalDataStorage</a></li>
+      <li><a href="dslink.browser_client/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></li>
     
     </ol>
@@ -184,7 +192,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

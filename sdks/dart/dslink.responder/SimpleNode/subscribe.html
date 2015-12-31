@@ -120,6 +120,7 @@
       <li class="section-title"><a href="dslink.responder/SimpleNode-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNode/addChild.html">addChild</a></li>
       <li><a href="dslink.responder/SimpleNode/attach.html">attach</a></li>
+      <li class="inherited"><a href="dslink.browser/LocalNode/clearValue.html">clearValue</a></li>
       <li><a href="dslink.responder/SimpleNode/createChild.html">createChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
@@ -148,6 +149,7 @@
       <li><a href="dslink.responder/SimpleNode/onSetValue.html">onSetValue</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/onStartListListen.html">onStartListListen</a></li>
       <li><a href="dslink.responder/SimpleNode/onSubscribe.html">onSubscribe</a></li>
+      <li><a href="dslink.responder/SimpleNode/onUnsubscribe.html">onUnsubscribe</a></li>
       <li><a href="dslink.responder/SimpleNode/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/removeAttribute.html">removeAttribute</a></li>
       <li><a href="dslink.responder/SimpleNode/removeChild.html">removeChild</a></li>
@@ -159,7 +161,7 @@
       <li><a href="dslink.responder/SimpleNode/setValue.html">setValue</a></li>
       <li><a href="dslink.responder/SimpleNode/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNode/toString.html">toString</a></li>
-      <li class="inherited"><a href="dslink.browser/LocalNode/unsubscribe.html">unsubscribe</a></li>
+      <li><a href="dslink.responder/SimpleNode/unsubscribe.html">unsubscribe</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/updateList.html">updateList</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/updateValue.html">updateValue</a></li>
     </ol>
@@ -174,18 +176,18 @@
         </ol>
       </div>
       <span class="returntype"><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></span>
-      <span class="name ">subscribe</span>(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-ValueUpdate"><span class="parameter-name">ValueUpdate</span></span>)</span>, [<span class="parameter" id="subscribe-param-cacheLevel"><span class="type-annotation">int</span> <span class="parameter-name">cacheLevel</span> = <span class="default-value">1</span></span>])
+      <span class="name ">subscribe</span>(<wbr><span class="parameter" id="subscribe-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-update"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)</span>, [<span class="parameter" id="subscribe-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span> = <span class="default-value">0</span></span>])
     </section>
     <section class="desc markdown">
       <p>Subscribes the given <code>callback</code> to this node.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/simple/simple_node.dart.html#line-815'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-RespSubscribeListener subscribe(callback(ValueUpdate), [int cacheLevel = 1]) {
+RespSubscribeListener subscribe(callback(ValueUpdate update), [int qos = 0]) {
   onSubscribe();
-  return super.subscribe(callback, cacheLevel);
+  return super.subscribe(callback, qos);
 }</code></pre>
     </section>
 
@@ -199,7 +201,7 @@ RespSubscribeListener subscribe(callback(ValueUpdate), [int cacheLevel = 1]) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

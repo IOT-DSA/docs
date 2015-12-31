@@ -82,10 +82,14 @@
       <li><a href="dslink.utils/numbers-constant.html">numbers</a></li>
       <li><a href="dslink.utils/specials-constant.html">specials</a></li>
     
+      <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.utils/ExecutableFunction.html">ExecutableFunction</a></li>
+      <li><a href="dslink.utils/Producer.html">Producer</a></li>
+      <li><a href="dslink.utils/Taker.html">Taker</a></li>
+      <li><a href="dslink.utils/TwoTaker.html">TwoTaker</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#properties">Properties</a></li>
       <li><a href="dslink.utils/DEBUG_MODE.html">DEBUG_MODE</a></li>
-      <li><a href="dslink.utils/fixedBlankData.html">fixedBlankData</a></li>
       <li><a href="dslink.utils/logger.html">logger</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
@@ -102,18 +106,21 @@
       <li><a href="dslink.utils/Base64-class.html">Base64</a></li>
       <li><a href="dslink.utils/BetterIterator-class.html">BetterIterator</a></li>
       <li><a href="dslink.utils/BinaryData-class.html">BinaryData</a></li>
-      <li><a href="dslink.utils/BinaryInCache-class.html">BinaryInCache</a></li>
-      <li><a href="dslink.utils/BinaryOutCache-class.html">BinaryOutCache</a></li>
       <li><a href="dslink.utils/BroadcastStreamController-class.html">BroadcastStreamController</a></li>
       <li><a href="dslink.utils/ByteDataUtil-class.html">ByteDataUtil</a></li>
       <li><a href="dslink.utils/CachedStreamWrapper-class.html">CachedStreamWrapper</a></li>
+      <li><a href="dslink.utils/Disposable-class.html">Disposable</a></li>
+      <li><a href="dslink.utils/DsCodec-class.html">DsCodec</a></li>
       <li><a href="dslink.utils/DsJson-class.html">DsJson</a></li>
       <li><a href="dslink.utils/DsJsonCodecImpl-class.html">DsJsonCodecImpl</a></li>
       <li><a href="dslink.utils/DSLinkJSON-class.html">DSLinkJSON</a></li>
+      <li><a href="dslink.utils/DsMsgPackCodecImpl-class.html">DsMsgPackCodecImpl</a></li>
       <li><a href="dslink.utils/DsTimer-class.html">DsTimer</a></li>
+      <li><a href="dslink.utils/FunctionDisposable-class.html">FunctionDisposable</a></li>
       <li><a href="dslink.utils/Interval-class.html">Interval</a></li>
       <li><a href="dslink.utils/Scheduler-class.html">Scheduler</a></li>
       <li><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></li>
+      <li><a href="dslink.utils/UriComponentDecoder-class.html">UriComponentDecoder</a></li>
     
     </ol>
   </div>
@@ -144,7 +151,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="BroadcastStreamController" class="callable">
-          <span class="name"><a href="dslink.utils/BroadcastStreamController/BroadcastStreamController.html">BroadcastStreamController</a></span><span class="signature">([<span class="parameter" id="-param-onStartListen"><span class="type-annotation">void</span> <span class="parameter-name">onStartListen</span>()</span>, <span class="parameter" id="-param-onAllCancel"><span class="type-annotation">void</span> <span class="parameter-name">onAllCancel</span>()</span>, <span class="parameter" id="-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-T"><span class="parameter-name">T</span></span>)</span>)</span>])</span>
+          <span class="name"><a href="dslink.utils/BroadcastStreamController/BroadcastStreamController.html">BroadcastStreamController</a></span><span class="signature">([<span class="parameter" id="-param-onStartListen"><span class="type-annotation">void</span> <span class="parameter-name">onStartListen</span>()</span>, <span class="parameter" id="-param-onAllCancel"><span class="type-annotation">void</span> <span class="parameter-name">onAllCancel</span>()</span>, <span class="parameter" id="-param-onListen"><span class="type-annotation">void</span> <span class="parameter-name">onListen</span>(<span class="parameter" id="onListen-param-callback"><span class="type-annotation">dynamic</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-T"><span class="parameter-name">T</span></span>)</span>)</span>, <span class="parameter" id="-param-sync"><span class="type-annotation">bool</span> <span class="parameter-name">sync</span> = <span class="default-value">false</span></span>])</span>
         </dt>
         <dd>
           <p></p>
@@ -207,48 +214,44 @@
     read-only
   </div>
 </dd>
-        <dt id="onCancel" class="property inherited">
+        <dt id="onCancel" class="property">
           <span class="name"><a href="dslink.utils/BroadcastStreamController/onCancel.html">onCancel</a></span>
-          <span class="signature">&#8594; ControllerCancelCallback</span>
+          <span class="signature">&#8594; </span>
         </dt>
-        <dd class="inherited">
-          <p>The callback which is called when the stream is canceled.<a href="dslink.utils/BroadcastStreamController/onCancel.html">&hellip;</a>
-</p>
+        <dd>
+          <p></p>
           <div class="features">
-    read / write, inherited
+    write-only
   </div>
 </dd>
-        <dt id="onListen" class="property inherited">
+        <dt id="onListen" class="property">
           <span class="name"><a href="dslink.utils/BroadcastStreamController/onListen.html">onListen</a></span>
-          <span class="signature">&#8594; ControllerCallback</span>
+          <span class="signature">&#8594; </span>
         </dt>
-        <dd class="inherited">
-          <p>The callback which is called when the stream is listened to.<a href="dslink.utils/BroadcastStreamController/onListen.html">&hellip;</a>
-</p>
+        <dd>
+          <p></p>
           <div class="features">
-    read / write, inherited
+    write-only
   </div>
 </dd>
-        <dt id="onPause" class="property inherited">
+        <dt id="onPause" class="property">
           <span class="name"><a href="dslink.utils/BroadcastStreamController/onPause.html">onPause</a></span>
-          <span class="signature">&#8594; ControllerCallback</span>
+          <span class="signature">&#8594; </span>
         </dt>
-        <dd class="inherited">
-          <p>The callback which is called when the stream is paused.<a href="dslink.utils/BroadcastStreamController/onPause.html">&hellip;</a>
-</p>
+        <dd>
+          <p></p>
           <div class="features">
-    read / write, inherited
+    write-only
   </div>
 </dd>
-        <dt id="onResume" class="property inherited">
+        <dt id="onResume" class="property">
           <span class="name"><a href="dslink.utils/BroadcastStreamController/onResume.html">onResume</a></span>
-          <span class="signature">&#8594; ControllerCallback</span>
+          <span class="signature">&#8594; </span>
         </dt>
-        <dd class="inherited">
-          <p>The callback which is called when the stream is resumed.<a href="dslink.utils/BroadcastStreamController/onResume.html">&hellip;</a>
-</p>
+        <dd>
+          <p></p>
           <div class="features">
-    read / write, inherited
+    write-only
   </div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -335,7 +338,7 @@
           </span>
         </dt>
         <dd>
-          <p>Tells the stream sink that no futher streams will be added.<a href="dslink.utils/BroadcastStreamController/close.html">&hellip;</a>
+          <p>Tells the stream sink that no further streams will be added.<a href="dslink.utils/BroadcastStreamController/close.html">&hellip;</a>
 </p>
         </dd>
         <dt id="delayedCheckCancel" class="callable">
@@ -352,11 +355,7 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink.utils/BroadcastStreamController/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.utils/BroadcastStreamController/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -391,10 +390,10 @@ the original invocation.<a href="dslink.utils/BroadcastStreamController/noSuchMe
       <li><a href="dslink.utils/BroadcastStreamController/hasListener.html">hasListener</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/isClosed.html">isClosed</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/isPaused.html">isPaused</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/onCancel.html">onCancel</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/onListen.html">onListen</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/onPause.html">onPause</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/onResume.html">onResume</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onCancel.html">onCancel</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onListen.html">onListen</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onPause.html">onPause</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onResume.html">onResume</a></li>
       <li class="inherited"><a href="dslink.utils/BroadcastStreamController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/sink.html">sink</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/stream.html">stream</a></li>
@@ -421,7 +420,7 @@ the original invocation.<a href="dslink.utils/BroadcastStreamController/noSuchMe
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

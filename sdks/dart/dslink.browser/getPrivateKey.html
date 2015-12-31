@@ -77,7 +77,11 @@
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.browser/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/OnReqParams.html">OnReqParams</a></li>
+      <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink.browser/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
       <li><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -92,6 +96,7 @@
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#classes">Classes</a></li>
       <li><a href="dslink.browser/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></li>
       <li><a href="dslink.browser/BrowserUserLink-class.html">BrowserUserLink</a></li>
       <li><a href="dslink.browser/BrowserUtils-class.html">BrowserUtils</a></li>
@@ -100,8 +105,10 @@
       <li><a href="dslink.browser/Configs-class.html">Configs</a></li>
       <li><a href="dslink.browser/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
+      <li><a href="dslink.browser/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink.browser/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.browser/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -113,11 +120,17 @@
       <li><a href="dslink.browser/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink.browser/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink.browser/Link-class.html">Link</a></li>
+      <li><a href="dslink.browser/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink.browser/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink.browser/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink.browser/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink.browser/ListController-class.html">ListController</a></li>
       <li><a href="dslink.browser/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink.browser/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.browser/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink.browser/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></li>
       <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
@@ -130,6 +143,7 @@
       <li><a href="dslink.browser/Permission-class.html">Permission</a></li>
       <li><a href="dslink.browser/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink.browser/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.browser/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
       <li><a href="dslink.browser/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
@@ -144,6 +158,7 @@
       <li><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
       <li><a href="dslink.browser/Response-class.html">Response</a></li>
+      <li><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.browser/Scheduler-class.html">Scheduler</a></li>
@@ -159,12 +174,14 @@
       <li><a href="dslink.browser/SubscribeController-class.html">SubscribeController</a></li>
       <li><a href="dslink.browser/SubscribeRequest-class.html">SubscribeRequest</a></li>
       <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.browser/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
       <li><a href="dslink.browser/Table-class.html">Table</a></li>
       <li><a href="dslink.browser/TableColumn-class.html">TableColumn</a></li>
       <li><a href="dslink.browser/TableColumns-class.html">TableColumns</a></li>
       <li><a href="dslink.browser/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink.browser/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink.browser/ValueUpdate-class.html">ValueUpdate</a></li>
+      <li><a href="dslink.browser/WaitForMe-class.html">WaitForMe</a></li>
       <li><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></li>
     
     </ol>
@@ -182,21 +199,76 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/browser_client.dart.html#line-89'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future&lt;PrivateKey&gt; getPrivateKey({DataStorage storage}) async {
+  if (_cachedPrivateKey != null) {
+    return _cachedPrivateKey;
+  }
+
   if (storage == null) {
     storage = LocalDataStorage.INSTANCE;
   }
 
-  if (await storage.has(&quot;dsa_key&quot;)) {
-    return new PrivateKey.loadFromString(await storage.get(&quot;dsa_key&quot;));
+  String keyPath = &quot;dsa_key:${window.location.pathname}&quot;;
+  String keyLockPath = &quot;dsa_key_lock:${window.location.pathname}&quot;;
+  String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&quot;;
+
+  bool hasKeyPath = false;
+
+  if (storage is SynchronousDataStorage) {
+    hasKeyPath = (storage as SynchronousDataStorage).hasSync(keyPath);
+  } else {
+    hasKeyPath = await storage.has(keyPath);
   }
 
-  var key = await PrivateKey.generate();
+  if (hasKeyPath) {
+    if (storage is SynchronousDataStorage) {
+      (storage as SynchronousDataStorage).storeSync(keyLockPath, randomToken);
+    } else {
+      await storage.store(keyLockPath, randomToken);
+    }
 
-  await storage.store(&quot;dsa_key&quot;, key.saveToString());
+    await new Future.delayed(const Duration(milliseconds: 20));
+    String existingToken;
+    String existingKey;
 
-  return key;
+    if (storage is SynchronousDataStorage) {
+      existingToken = (storage as SynchronousDataStorage).getSync(keyLockPath);
+      existingKey = (storage as SynchronousDataStorage).getSync(keyPath);
+    } else {
+      existingToken = await storage.get(keyLockPath);
+      existingKey = await storage.get(keyPath);
+    }
+
+    if (existingToken == randomToken) {
+      if (storage is LocalDataStorage) {
+        _startStorageLock(keyLockPath, randomToken);
+      }
+      _cachedPrivateKey = new PrivateKey.loadFromString(existingKey);
+      return _cachedPrivateKey;
+    } else {
+      // use temp key, don&apos;t lock it;
+      keyLockPath = null;
+    }
+  }
+
+  _cachedPrivateKey = await PrivateKey.generate();
+
+  if (keyLockPath != null) {
+    if (storage is SynchronousDataStorage) {
+      (storage as SynchronousDataStorage).storeSync(keyPath, _cachedPrivateKey.saveToString());
+      (storage as SynchronousDataStorage).storeSync(keyLockPath, randomToken);
+    } else {
+      await storage.store(keyPath, _cachedPrivateKey.saveToString());
+      await storage.store(keyLockPath, randomToken);
+    }
+
+    if (storage is LocalDataStorage) {
+      _startStorageLock(keyLockPath, randomToken);
+    }
+  }
+
+  return _cachedPrivateKey;
 }</code></pre>
     </section>
 
@@ -210,7 +282,7 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

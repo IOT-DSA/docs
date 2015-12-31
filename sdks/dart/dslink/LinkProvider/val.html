@@ -101,16 +101,21 @@
       <li><a href="dslink/LinkProvider/isRequester.html">isRequester</a></li>
       <li><a href="dslink/LinkProvider/isResponder.html">isResponder</a></li>
       <li><a href="dslink/LinkProvider/link.html">link</a></li>
+      <li><a href="dslink/LinkProvider/linkData.html">linkData</a></li>
       <li><a href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
       <li><a href="dslink/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
+      <li><a href="dslink/LinkProvider/overrideRequester.html">overrideRequester</a></li>
+      <li><a href="dslink/LinkProvider/overrideResponder.html">overrideResponder</a></li>
       <li><a href="dslink/LinkProvider/prefix.html">prefix</a></li>
       <li><a href="dslink/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a href="dslink/LinkProvider/profiles.html">profiles</a></li>
       <li><a href="dslink/LinkProvider/provider.html">provider</a></li>
+      <li><a href="dslink/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a href="dslink/LinkProvider/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a href="dslink/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a href="dslink/LinkProvider/token.html">token</a></li>
     
       <li class="section-title"><a href="dslink/LinkProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/LinkProvider/operator_equals.html">operator ==</a></li>
@@ -126,7 +131,9 @@
       <li><a href="dslink/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink/LinkProvider/init.html">init</a></li>
+      <li><a href="dslink/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
       <li class="inherited"><a href="dslink/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a href="dslink/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink/LinkProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink/LinkProvider/save.html">save</a></li>
@@ -152,7 +159,7 @@ node at the given path to the specified value, and return that value.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/client.dart.html#line-678'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">dynamic val(String path, [value = unspecified]) {
   if (value is Unspecified) {
     return this[path].lastValueUpdate.value;
@@ -173,7 +180,7 @@ node at the given path to the specified value, and return that value.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

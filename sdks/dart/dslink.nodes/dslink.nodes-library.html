@@ -73,13 +73,14 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -118,7 +119,7 @@
           <p>Represents a function that is called when a child node has changed.</p>
         </dd>
         <dt id="LoadChildCallback" class="callable">
-          <span class="name"><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></span><span class="signature">(<wbr><span class="parameter" id="LoadChildCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="LoadChildCallback-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="LoadChildCallback-param-provider"><span class="type-annotation"><a href="dslink/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
+          <span class="name"><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></span><span class="signature">(<wbr><span class="parameter" id="LoadChildCallback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="LoadChildCallback-param-data"><span class="type-annotation">Map</span> <span class="parameter-name">data</span></span>, <span class="parameter" id="LoadChildCallback-param-provider"><span class="type-annotation"><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></span> <span class="parameter-name">provider</span></span>)
             <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
           </span>
         </dt>
@@ -128,6 +129,14 @@
         <dt id="NodeUpgradeFunction" class="callable">
           <span class="name"><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></span><span class="signature">(<wbr><span class="parameter" id="NodeUpgradeFunction-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span></span>)
             <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ResolveNodeHandler" class="callable">
+          <span class="name"><a href="dslink.nodes/ResolveNodeHandler.html">ResolveNodeHandler</a></span><span class="signature">(<wbr><span class="parameter" id="ResolveNodeHandler-param-node"><span class="type-annotation"><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></span> <span class="parameter-name">node</span></span>)
+            <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
@@ -163,6 +172,24 @@
         <dd>
           <p>An Action for Deleting a Given Node</p>
         </dd>
+        <dt id="LazyValueNode">
+          <span class="name "><a href="dslink.nodes/LazyValueNode-class.html">LazyValueNode</a></span>
+        </dt>
+        <dd>
+          <p>A Lazy Value Node</p>
+        </dd>
+        <dt id="NodeNamer">
+          <span class="name "><a href="dslink.nodes/NodeNamer-class.html">NodeNamer</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ResolvingNodeProvider">
+          <span class="name "><a href="dslink.nodes/ResolvingNodeProvider-class.html">ResolvingNodeProvider</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="SimpleActionNode">
           <span class="name "><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></span>
         </dt>
@@ -196,6 +223,7 @@
       <li><a href="dslink.nodes/ChildChangedCallback.html">ChildChangedCallback</a></li>
       <li><a href="dslink.nodes/LoadChildCallback.html">LoadChildCallback</a></li>
       <li><a href="dslink.nodes/NodeUpgradeFunction.html">NodeUpgradeFunction</a></li>
+      <li><a href="dslink.nodes/ResolveNodeHandler.html">ResolveNodeHandler</a></li>
       <li><a href="dslink.nodes/SimpleCallback.html">SimpleCallback</a></li>
     
     
@@ -204,6 +232,9 @@
       <li class="section-title"><a href="dslink.nodes/dslink.nodes-library.html#classes">Classes</a></li>
       <li><a href="dslink.nodes/CallbackNode-class.html">CallbackNode</a></li>
       <li><a href="dslink.nodes/DeleteActionNode-class.html">DeleteActionNode</a></li>
+      <li><a href="dslink.nodes/LazyValueNode-class.html">LazyValueNode</a></li>
+      <li><a href="dslink.nodes/NodeNamer-class.html">NodeNamer</a></li>
+      <li><a href="dslink.nodes/ResolvingNodeProvider-class.html">ResolvingNodeProvider</a></li>
       <li><a href="dslink.nodes/SimpleActionNode-class.html">SimpleActionNode</a></li>
       <li><a href="dslink.nodes/SingleNodeProvider-class.html">SingleNodeProvider</a></li>
       <li><a href="dslink.nodes/UpgradableNode-class.html">UpgradableNode</a></li>
@@ -219,7 +250,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

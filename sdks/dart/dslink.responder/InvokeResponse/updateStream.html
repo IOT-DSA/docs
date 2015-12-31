@@ -86,8 +86,12 @@
         <a href="dslink.responder/InvokeResponse-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.responder/InvokeResponse/name.html">name</a></li>
       <li><a href="dslink.responder/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.responder/InvokeResponse/onClose.html">onClose</a></li>
+      <li><a href="dslink.responder/InvokeResponse/onReqParams.html">onReqParams</a></li>
+      <li><a href="dslink.responder/InvokeResponse/parentNode.html">parentNode</a></li>
+      <li><a href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/runtimeType.html">runtimeType</a></li>
@@ -96,10 +100,14 @@
       <li class="inherited"><a href="dslink.responder/InvokeResponse/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/InvokeResponse-class.html#instance-methods">Methods</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.responder/InvokeResponse/close.html">close</a></li>
+      <li><a href="dslink.responder/InvokeResponse/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.responder/InvokeResponse/processor.html">processor</a></li>
+      <li class="inherited"><a href="dslink.browser/Response/prepareSending.html">prepareSending</a></li>
+      <li><a href="dslink.responder/InvokeResponse/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink.responder/InvokeResponse/toString.html">toString</a></li>
+      <li><a href="dslink.responder/InvokeResponse/updateReqParams.html">updateReqParams</a></li>
       <li><a href="dslink.responder/InvokeResponse/updateStream.html">updateStream</a></li>
     </ol>
 
@@ -110,27 +118,19 @@
       <span class="returntype">void</span>
       <span class="name ">updateStream</span>(<wbr><span class="parameter" id="updateStream-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, {<span class="parameter" id="updateStream-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="updateStream-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>: <span class="default-value">StreamStatus.open</span></span>, <span class="parameter" id="updateStream-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>})
     </section>
+    <section class="desc markdown">
+      <p>update data for the responder stream</p>
+    </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/response/invoke.dart.html#line-25'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void updateStream(List updates,
     {List columns, String streamStatus: StreamStatus.open, Map meta}) {
-  if (columns != null) {
-    _columns = columns;
+  if (meta != null &amp;&amp; meta[&apos;mode&apos;] == &apos;refresh&apos;) {
+    pendingData.clear();
   }
-  _meta = meta;
-  if (_updates == null) {
-    _updates = updates;
-  } else {
-    _updates.addAll(updates);
-  }
-  if (_sendingStreamStatus == StreamStatus.initialize) {
-    // in case stream can&apos;t return all restult all at once, count the length of initilize
-    _pendingInitializeLength += updates.length;
-  }
-
-  _sendingStreamStatus = streamStatus;
-  responder.addProcessor(processor);
+  pendingData.add(new _InvokeResponseUpdate(streamStatus, updates, columns, meta));
+  prepareSending();
 }</code></pre>
     </section>
 
@@ -144,7 +144,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

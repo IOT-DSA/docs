@@ -88,12 +88,13 @@
       <li class="inherited"><a href="dslink.browser/Request/data.html">data</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.browser/Request/isClosed.html">isClosed</a></li>
+      <li><a href="dslink/SubscribeRequest/lastSid.html">lastSid</a></li>
       <li class="inherited"><a href="dslink.browser/Request/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.browser/Request/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/runtimeType.html">runtimeType</a></li>
       <li class="inherited"><a href="dslink.browser/Request/streamStatus.html">streamStatus</a></li>
-      <li><a href="dslink/SubscribeRequest/subsriptionids.html">subsriptionids</a></li>
-      <li><a href="dslink/SubscribeRequest/subsriptions.html">subsriptions</a></li>
+      <li><a href="dslink/SubscribeRequest/subscriptionIds.html">subscriptionIds</a></li>
+      <li><a href="dslink/SubscribeRequest/subscriptions.html">subscriptions</a></li>
       <li><a href="dslink/SubscribeRequest/toRemove.html">toRemove</a></li>
       <li class="inherited"><a href="dslink.browser/Request/updater.html">updater</a></li>
     
@@ -101,11 +102,16 @@
       <li class="inherited"><a href="dslink/SubscribeRequest/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/SubscribeRequest-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/SubscribeRequest/ackReceived.html">ackReceived</a></li>
+      <li class="inherited"><a href="dslink.browser/Request/addReqParams.html">addReqParams</a></li>
       <li><a href="dslink/SubscribeRequest/addSubscription.html">addSubscription</a></li>
       <li class="inherited"><a href="dslink.browser/Request/close.html">close</a></li>
+      <li><a href="dslink/SubscribeRequest/getNextSid.html">getNextSid</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/SubscribeRequest/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink/SubscribeRequest/removeSubscription.html">removeSubscription</a></li>
       <li><a href="dslink/SubscribeRequest/resend.html">resend</a></li>
+      <li><a href="dslink/SubscribeRequest/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/SubscribeRequest/toString.html">toString</a></li>
     </ol>
 
@@ -118,12 +124,12 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/requester/request/subscribe.dart.html#line-151'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void addSubscription(ReqSubscribeController controller, int level) {
   String path = controller.node.remotePath;
-  subsriptions[path] = controller;
-  subsriptionids[controller.sid] = controller;
-  requester.addProcessor(_sendSubscriptionReuests);
+  subscriptions[path] = controller;
+  subscriptionIds[controller.sid] = controller;
+  prepareSending();
   _changedPaths.add(path);
 }</code></pre>
     </section>
@@ -138,7 +144,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

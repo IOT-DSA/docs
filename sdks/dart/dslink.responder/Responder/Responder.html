@@ -89,9 +89,11 @@
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
       <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.responder/Responder/maxCacheLength.html">maxCacheLength</a></li>
       <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
       <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
+      <li><a href="dslink.responder/Responder/storage.html">storage</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/Responder-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/operator_equals.html">operator ==</a></li>
@@ -100,8 +102,12 @@
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
       <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+      <li><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></li>
+      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.responder/Responder/close.html">close</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/doSend.html">doSend</a></li>
+      <li><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></li>
+      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+      <li><a href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
       <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink.responder/Responder/list.html">list</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
@@ -109,11 +115,14 @@
       <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
       <li><a href="dslink.responder/Responder/remove.html">remove</a></li>
+      <li><a href="dslink.responder/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a href="dslink.responder/Responder/set.html">set</a></li>
       <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
+      <li><a href="dslink.responder/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
+      <li><a href="dslink.responder/Responder/updateInvoke.html">updateInvoke</a></li>
       <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
     </ol>
 
@@ -127,11 +136,11 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/responder.dart.html#line-41'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Responder(this.nodeProvider, [this.reqId]) {
   _subscription = new SubscribeResponse(this, 0);
   _responses[0] = _subscription;
-  // TODO load reqId
+  // TODO: load reqId
   if (reqId != null &amp;&amp; reqId.length &lt; 43) {
     groups = [reqId];
   }
@@ -148,7 +157,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

@@ -88,6 +88,8 @@
         <a href="dslink.browser/InvokeController-class.html#instance-properties">Properties</a>
       </li>
       <li class="inherited"><a href="dslink.browser/InvokeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.browser/InvokeController/lastStatus.html">lastStatus</a></li>
+      <li><a href="dslink.browser/InvokeController/mode.html">mode</a></li>
       <li><a href="dslink.browser/InvokeController/node.html">node</a></li>
       <li><a href="dslink.browser/InvokeController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink.browser/InvokeController/runtimeType.html">runtimeType</a></li>
@@ -112,25 +114,33 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta, DSError error) {
-  // TODO implement error
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/requester/request/invoke.dart.html#line-123'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void onUpdate(String streamStatus, List updates, List columns, Map meta,
+    DSError error) {
+  if (meta != null &amp;&amp; meta[&apos;mode&apos;] is String) {
+    mode = meta[&apos;mode&apos;];
+  }
+  // TODO: implement error
   if (columns != null) {
-    _cachedColumns = TableColumn.parseColumns(columns);
+    if (_cachedColumns == null || mode == &apos;refresh&apos;) {
+      _cachedColumns = TableColumn.parseColumns(columns);
+    } else {
+      _cachedColumns.addAll(TableColumn.parseColumns(columns));
+    }
+  } else if (_cachedColumns == null) {
+    _cachedColumns = getNodeColumns(node);
   }
 
-//    if (_cachedColumns == null) {
-//      _cachedColumns = [];
-//    }
   if (error != null) {
     streamStatus = StreamStatus.closed;
     _controller.add(
-        new RequesterInvokeUpdate(null, null, null, streamStatus, error:error, meta:meta));
-  } else if (updates != null) {
+        new RequesterInvokeUpdate(
+            null, null, null, streamStatus, error: error, meta: meta));
+  } else if (updates != null || meta != null || streamStatus != lastStatus) {
     _controller.add(new RequesterInvokeUpdate(
-        updates, columns, _cachedColumns, streamStatus, meta:meta));
+        updates, columns, _cachedColumns, streamStatus, meta: meta));
   }
-
+  lastStatus = streamStatus;
   if (streamStatus == StreamStatus.closed) {
     _controller.close();
   }
@@ -147,7 +157,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

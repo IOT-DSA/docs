@@ -73,13 +73,14 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -109,9 +110,41 @@
         <dd>
           <p></p>
         </dd>
+        <dt id="NodeFactory" class="callable">
+          <span class="name"><a href="dslink.responder/NodeFactory.html">NodeFactory</a></span><span class="signature">(<wbr><span class="parameter" id="NodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="OnInvokeClosed" class="callable">
           <span class="name"><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></span><span class="signature">(<wbr><span class="parameter" id="OnInvokeClosed-param-response"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">response</span></span>)
             <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="OnReqParams" class="callable">
+          <span class="name"><a href="dslink.responder/OnReqParams.html">OnReqParams</a></span><span class="signature">(<wbr><span class="parameter" id="OnReqParams-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd>
+          <p>return true if params are valid</p>
+        </dd>
+        <dt id="ResponseTraceCallback" class="callable">
+          <span class="name"><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></span><span class="signature">(<wbr><span class="parameter" id="ResponseTraceCallback-param-update"><span class="type-annotation"><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></span> <span class="parameter-name">update</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="SimpleNodeFactory" class="callable">
+          <span class="name"><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></span><span class="signature">(<wbr><span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
           </span>
         </dt>
         <dd>
@@ -150,7 +183,7 @@ This can be used to return asynchronous tables from actions.</p>
           <span class="name "><a href="dslink.responder/DefinitionNode-class.html">DefinitionNode</a></span>
         </dt>
         <dd>
-          <p>definition nodes are serializable node that won't change
+          <p>definition nodes are serializable node that won"t change
 the only change will be a global upgrade</p>
         </dd>
         <dt id="DummyPermissionManager">
@@ -171,8 +204,51 @@ the only change will be a global upgrade</p>
         <dd>
           <p></p>
         </dd>
+        <dt id="IStorageManager">
+          <span class="name "><a href="dslink.responder/IStorageManager-class.html">IStorageManager</a></span>
+        </dt>
+        <dd>
+          <p>general purpose storage class</p>
+        </dd>
+        <dt id="ISubscriptionNodeStorage">
+          <span class="name "><a href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></span>
+        </dt>
+        <dd>
+          <p>the storage of one value</p>
+        </dd>
+        <dt id="ISubscriptionResponderStorage">
+          <span class="name "><a href="dslink.responder/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
+        </dt>
+        <dd>
+          <p>a storage container for one dslink
+different dslink will have different ISubscriptionResponderStorage</p>
+        </dd>
+        <dt id="IValueStorage">
+          <span class="name "><a href="dslink.responder/IValueStorage-class.html">IValueStorage</a></span>
+        </dt>
+        <dd>
+          <p>basic value storage</p>
+        </dd>
+        <dt id="IValueStorageBucket">
+          <span class="name "><a href="dslink.responder/IValueStorageBucket-class.html">IValueStorageBucket</a></span>
+        </dt>
+        <dd>
+          <p>a storage class for general purpose key/value pair</p>
+        </dd>
         <dt id="ListResponse">
           <span class="name "><a href="dslink.responder/ListResponse-class.html">ListResponse</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="LiveTable">
+          <span class="name "><a href="dslink.responder/LiveTable-class.html">LiveTable</a></span>
+        </dt>
+        <dd>
+          <p>A Live-Updating Table</p>
+        </dd>
+        <dt id="LiveTableRow">
+          <span class="name "><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></span>
         </dt>
         <dd>
           <p></p>
@@ -216,6 +292,12 @@ A single node provider can be reused by multiple responder.</p>
         </dd>
         <dt id="Response">
           <span class="name "><a href="dslink.responder/Response-class.html">Response</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ResponseTrace">
+          <span class="name "><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></span>
         </dt>
         <dd>
           <p></p>
@@ -270,6 +352,12 @@ This is used to return simple tables from an action.</p>
         <dd>
           <p></p>
         </dd>
+        <dt id="WaitForMe">
+          <span class="name "><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
       </dl>
     </section>
 
@@ -282,7 +370,11 @@ This is used to return simple tables from an action.</p>
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.responder/OnReqParams.html">OnReqParams</a></li>
+      <li><a href="dslink.responder/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink.responder/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
     
     
@@ -295,7 +387,14 @@ This is used to return simple tables from an action.</p>
       <li><a href="dslink.responder/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
       <li><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a href="dslink.responder/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink.responder/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink.responder/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink.responder/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink.responder/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink.responder/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.responder/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink.responder/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink.responder/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -303,6 +402,7 @@ This is used to return simple tables from an action.</p>
       <li><a href="dslink.responder/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
       <li><a href="dslink.responder/Responder-class.html">Responder</a></li>
       <li><a href="dslink.responder/Response-class.html">Response</a></li>
+      <li><a href="dslink.responder/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.responder/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.responder/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.responder/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
@@ -311,6 +411,7 @@ This is used to return simple tables from an action.</p>
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div><!--/sidebar-offcanvas-right-->
@@ -323,7 +424,7 @@ This is used to return simple tables from an action.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

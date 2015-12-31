@@ -91,6 +91,7 @@
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/permissions.html">permissions</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/sys.html">sys</a></li>
@@ -102,16 +103,19 @@
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -123,17 +127,14 @@
       <span class="name ">noSuchMethod</span>(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
     </section>
     <section class="desc markdown">
-      <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.</p>
-<p>The default behavior of <code>noSuchMethod</code> is to throw a
-<code>NoSuchMethodError</code>.</p>
+      <p>Invoked when a non-existent method or property is accessed.</p>
+<p>Classes can override <code>noSuchMethod</code> to provide custom behavior.</p>
+<p>If a value is returned, it becomes the result of the original invocation.</p>
+<p>The default behavior is to throw a <code>NoSuchMethodError</code>.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/home/travis/dart-sdk/lib/core/object.dart.html#line-79'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">external dynamic noSuchMethod(Invocation invocation);</code></pre>
     </section>
 
@@ -147,7 +148,7 @@ the original invocation.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

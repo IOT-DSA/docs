@@ -94,8 +94,12 @@
       <li class="inherited"><a href="dslink/Response/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/Response-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/Response/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink/Response/close.html">close</a></li>
+      <li><a href="dslink/Response/getTraceData.html">getTraceData</a></li>
       <li class="inherited"><a href="dslink/Response/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/Response/prepareSending.html">prepareSending</a></li>
+      <li><a href="dslink/Response/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/Response/toString.html">toString</a></li>
     </ol>
 
@@ -111,10 +115,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/response.dart.html#line-9'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void close([DSError err = null]) {
   _sentStreamStatus = StreamStatus.closed;
-  responder._closeResponse(rid, error: err, response: this);
+  responder.closeResponse(rid, error: err, response: this);
 }</code></pre>
     </section>
 
@@ -128,7 +132,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

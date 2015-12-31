@@ -143,13 +143,19 @@
     <section class="desc markdown">
       <p>Creates a new stream that converts each element of this stream
 to a new value using the <code>convert</code> function.</p>
+<p>For each data event, <code>o</code>, in this stream, the returned stream
+provides a data event with the value <code>convert(o)</code>.
+If <code>convert</code> throws, the returned stream reports the exception as an error
+event instead.</p>
+<p>Error and done events are passed through unchanged to the returned stream.</p>
 <p>The returned stream is a broadcast stream if this stream is.
+The <code>convert</code> function is called once per data event per listener.
 If a broadcast stream is listened to more than once, each subscription
-will individually execute <code>map</code> for each event.</p>
+will individually call <code>convert</code> on each data event.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/utils/stream_controller.dart.html#line-184'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Stream map(convert(T event)) =&gt; _stream.map(convert);</code></pre>
     </section>
 
@@ -163,7 +169,7 @@ will individually execute <code>map</code> for each event.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

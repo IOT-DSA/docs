@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the ISubscriptionNodeStorage class from the dslink.browser library, for the Dart programming language.">
+  <title>ISubscriptionNodeStorage class - dslink.browser library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+            <li class="self-crumb">ISubscriptionNodeStorage</li>
+          </ol>
+          <div class="self-name">ISubscriptionNodeStorage</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+          <li class="self-crumb">ISubscriptionNodeStorage</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">abstract class</span> ISubscriptionNodeStorage
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html#instance-properties">Properties</a></li>
+          <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html#constructors">Constructors</a></li>
+          <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html#operators">Operators</a></li>
+          <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html#instance-methods">Methods</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#constants">Constants</a></li>
+      <li><a href="dslink.browser/unspecified-constant.html">unspecified</a></li>
+    
+      <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.browser/NodeFactory.html">NodeFactory</a></li>
+      <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/OnReqParams.html">OnReqParams</a></li>
+      <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink.browser/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
+    
+      <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
+      <li><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
+    
+      <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#functions">Functions</a></li>
+      <li><a href="dslink.browser/buildActionIO.html">buildActionIO</a></li>
+      <li><a href="dslink.browser/buildEnumType.html">buildEnumType</a></li>
+      <li><a href="dslink.browser/getPrivateKey.html">getPrivateKey</a></li>
+      <li><a href="dslink.browser/parseEnumType.html">parseEnumType</a></li>
+      <li><a href="dslink.browser/updateLogLevel.html">updateLogLevel</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#classes">Classes</a></li>
+      <li><a href="dslink.browser/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
+      <li><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></li>
+      <li><a href="dslink.browser/BrowserUserLink-class.html">BrowserUserLink</a></li>
+      <li><a href="dslink.browser/BrowserUtils-class.html">BrowserUtils</a></li>
+      <li><a href="dslink.browser/ByteDataUtil-class.html">ByteDataUtil</a></li>
+      <li><a href="dslink.browser/ClientLink-class.html">ClientLink</a></li>
+      <li><a href="dslink.browser/Configs-class.html">Configs</a></li>
+      <li><a href="dslink.browser/ConfigSetting-class.html">ConfigSetting</a></li>
+      <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
+      <li><a href="dslink.browser/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
+      <li><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></li>
+      <li><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink.browser/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
+      <li><a href="dslink.browser/DataStorage-class.html">DataStorage</a></li>
+      <li><a href="dslink.browser/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
+      <li><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></li>
+      <li><a href="dslink.browser/DSError-class.html">DSError</a></li>
+      <li><a href="dslink.browser/DSLinkJSON-class.html">DSLinkJSON</a></li>
+      <li><a href="dslink.browser/DummyPermissionManager-class.html">DummyPermissionManager</a></li>
+      <li><a href="dslink.browser/ErrorPhase-class.html">ErrorPhase</a></li>
+      <li><a href="dslink.browser/Interval-class.html">Interval</a></li>
+      <li><a href="dslink.browser/InvokeController-class.html">InvokeController</a></li>
+      <li><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></li>
+      <li><a href="dslink.browser/IPermissionManager-class.html">IPermissionManager</a></li>
+      <li><a href="dslink.browser/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink.browser/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink.browser/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink.browser/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
+      <li><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></li>
+      <li><a href="dslink.browser/ListController-class.html">ListController</a></li>
+      <li><a href="dslink.browser/ListDefListener-class.html">ListDefListener</a></li>
+      <li><a href="dslink.browser/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.browser/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink.browser/LiveTableRow-class.html">LiveTableRow</a></li>
+      <li><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></li>
+      <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
+      <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
+      <li><a href="dslink.browser/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
+      <li><a href="dslink.browser/Node-class.html">Node</a></li>
+      <li><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></li>
+      <li><a href="dslink.browser/NodeProviderImpl-class.html">NodeProviderImpl</a></li>
+      <li><a href="dslink.browser/PassiveChannel-class.html">PassiveChannel</a></li>
+      <li><a href="dslink.browser/Path-class.html">Path</a></li>
+      <li><a href="dslink.browser/Permission-class.html">Permission</a></li>
+      <li><a href="dslink.browser/PermissionList-class.html">PermissionList</a></li>
+      <li><a href="dslink.browser/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></li>
+      <li><a href="dslink.browser/RemoteDefNode-class.html">RemoteDefNode</a></li>
+      <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
+      <li><a href="dslink.browser/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
+      <li><a href="dslink.browser/RemoveController-class.html">RemoveController</a></li>
+      <li><a href="dslink.browser/ReqSubscribeController-class.html">ReqSubscribeController</a></li>
+      <li><a href="dslink.browser/ReqSubscribeListener-class.html">ReqSubscribeListener</a></li>
+      <li><a href="dslink.browser/Request-class.html">Request</a></li>
+      <li><a href="dslink.browser/Requester-class.html">Requester</a></li>
+      <li><a href="dslink.browser/RequesterInvokeUpdate-class.html">RequesterInvokeUpdate</a></li>
+      <li><a href="dslink.browser/RequesterListUpdate-class.html">RequesterListUpdate</a></li>
+      <li><a href="dslink.browser/RequesterUpdate-class.html">RequesterUpdate</a></li>
+      <li><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></li>
+      <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
+      <li><a href="dslink.browser/Response-class.html">Response</a></li>
+      <li><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></li>
+      <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
+      <li><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
+      <li><a href="dslink.browser/Scheduler-class.html">Scheduler</a></li>
+      <li><a href="dslink.browser/SerializableNodeProvider-class.html">SerializableNodeProvider</a></li>
+      <li><a href="dslink.browser/ServerLink-class.html">ServerLink</a></li>
+      <li><a href="dslink.browser/ServerLinkManager-class.html">ServerLinkManager</a></li>
+      <li><a href="dslink.browser/SetController-class.html">SetController</a></li>
+      <li><a href="dslink.browser/SimpleHiddenNode-class.html">SimpleHiddenNode</a></li>
+      <li><a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+      <li><a href="dslink.browser/SimpleTableResult-class.html">SimpleTableResult</a></li>
+      <li><a href="dslink.browser/StreamStatus-class.html">StreamStatus</a></li>
+      <li><a href="dslink.browser/SubscribeController-class.html">SubscribeController</a></li>
+      <li><a href="dslink.browser/SubscribeRequest-class.html">SubscribeRequest</a></li>
+      <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.browser/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
+      <li><a href="dslink.browser/Table-class.html">Table</a></li>
+      <li><a href="dslink.browser/TableColumn-class.html">TableColumn</a></li>
+      <li><a href="dslink.browser/TableColumns-class.html">TableColumns</a></li>
+      <li><a href="dslink.browser/TableMetadata-class.html">TableMetadata</a></li>
+      <li><a href="dslink.browser/Unspecified-class.html">Unspecified</a></li>
+      <li><a href="dslink.browser/ValueUpdate-class.html">ValueUpdate</a></li>
+      <li><a href="dslink.browser/WaitForMe-class.html">WaitForMe</a></li>
+      <li><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></li>
+    
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="desc markdown">
+      <p>the storage of one value</p>
+    </section>
+    
+
+
+
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="ISubscriptionNodeStorage" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/ISubscriptionNodeStorage.html">ISubscriptionNodeStorage</a></span><span class="signature">(<span class="parameter" id="-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="-param-storage"><span class="type-annotation"><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span> <span class="parameter-name">storage</span></span>)</span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>Get a hash code for this object.<a href="dslink.browser/ISubscriptionNodeStorage/hashCode.html">&hellip;</a>
+</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="path" class="property">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/path.html">path</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="qos" class="property">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/qos.html">qos</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">
+    read-only, inherited
+  </div>
+</dd>
+        <dt id="storage" class="property">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/storage.html">storage</a></span>
+          <span class="signature">&#8594; <a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>The equality operator.<a href="dslink.browser/ISubscriptionNodeStorage/operator_equals.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="addValue" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/addValue.html">addValue</a></span><span class="signature">(<wbr><span class="parameter" id="addValue-param-value"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>add data to List of values</p>
+        </dd>
+        <dt id="clear" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/clear.html">clear</a></span><span class="signature">(<wbr><span class="parameter" id="clear-param-qos"><span class="type-annotation">int</span> <span class="parameter-name">qos</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>clear the values, but still leave the qos data in storage</p>
+        </dd>
+        <dt id="destroy" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/destroy.html">destroy</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="getLoadedValues" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/getLoadedValues.html">getLoadedValues</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; List&lt;<a href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span>
+          </span>
+        </dt>
+        <dd>
+          <p>return the existing storage values
+should be called only during application initialization
+and value will only be available after parent's load() function is finished</p>
+        </dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.browser/ISubscriptionNodeStorage/noSuchMethod.html">&hellip;</a>
+</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="removeValue" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/removeValue.html">removeValue</a></span><span class="signature">(<wbr><span class="parameter" id="removeValue-param-value"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>for some database it's easier to remove data one by one
+removeValue and valueRemoved will be both called, either one can be used</p>
+        </dd>
+        <dt id="setValue" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/setValue.html">setValue</a></span><span class="signature">(<wbr><span class="parameter" id="setValue-param-removes"><span class="type-annotation">Iterable&lt;<a href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">removes</span></span>, <span class="parameter" id="setValue-param-newValue"><span class="type-annotation"><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">newValue</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>set value to newValue and clear all existing values in the storage
+<code>removes</code> is only designed for database that can't directly remove all data in a key.
+ValueUpdate.storedData can be used to store any helper data for the storage class</p>
+        </dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Returns a string representation of this object.</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="valueRemoved" class="callable">
+          <span class="name"><a href="dslink.browser/ISubscriptionNodeStorage/valueRemoved.html">valueRemoved</a></span><span class="signature">(<wbr><span class="parameter" id="valueRemoved-param-updates"><span class="type-annotation">Iterable&lt;<a href="dslink/ValueUpdate-class.html">ValueUpdate</a>&gt;</span> <span class="parameter-name">updates</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>for some database it's easier to remove multiple data together
+removeValue and valueRemoved will be both called, either one can be used
+<code>updates</code> are all the remaining value that are still in the list</p>
+        </dd>
+      </dl>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>ISubscriptionNodeStorage</h5>
+    <ol>
+    
+    
+    
+      <li class="section-title"><a href="dslink.browser/ISubscriptionNodeStorage-class.html#constructors">Constructors</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/ISubscriptionNodeStorage.html">ISubscriptionNodeStorage</a></li>
+    
+      <li class="section-title">
+        <a href="dslink.browser/ISubscriptionNodeStorage-class.html#instance-properties">Properties</a>
+      </li>
+      <li class="inherited"><a href="dslink.browser/ISubscriptionNodeStorage/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/path.html">path</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/qos.html">qos</a></li>
+      <li class="inherited"><a href="dslink.browser/ISubscriptionNodeStorage/runtimeType.html">runtimeType</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/storage.html">storage</a></li>
+    
+      <li class="section-title inherited"><a href="dslink.browser/ISubscriptionNodeStorage-class.html#operators">Operators</a></li>
+      <li class="inherited"><a href="dslink.browser/ISubscriptionNodeStorage/operator_equals.html">operator ==</a></li>
+    
+      <li class="section-title"><a href="dslink.browser/ISubscriptionNodeStorage-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/addValue.html">addValue</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/clear.html">clear</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/destroy.html">destroy</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/getLoadedValues.html">getLoadedValues</a></li>
+      <li class="inherited"><a href="dslink.browser/ISubscriptionNodeStorage/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/removeValue.html">removeValue</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/setValue.html">setValue</a></li>
+      <li class="inherited"><a href="dslink.browser/ISubscriptionNodeStorage/toString.html">toString</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage/valueRemoved.html">valueRemoved</a></li>
+    </ol>
+  </div><!--/.sidebar-offcanvas-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 0.5.1
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

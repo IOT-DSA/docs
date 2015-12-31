@@ -85,14 +85,18 @@
       <li class="section-title">
         <a href="dslink/RespSubscribeController-class.html#instance-properties">Properties</a>
       </li>
-      <li><a href="dslink/RespSubscribeController/cacheLevel.html">cacheLevel</a></li>
+      <li><a href="dslink/RespSubscribeController/caching.html">caching</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink/RespSubscribeController/lastValue.html">lastValue</a></li>
       <li><a href="dslink/RespSubscribeController/lastValues.html">lastValues</a></li>
       <li><a href="dslink/RespSubscribeController/node.html">node</a></li>
       <li><a href="dslink/RespSubscribeController/permitted.html">permitted</a></li>
+      <li><a href="dslink/RespSubscribeController/persist.html">persist</a></li>
+      <li><a href="dslink/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a href="dslink/RespSubscribeController/response.html">response</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/RespSubscribeController/sid.html">sid</a></li>
+      <li><a href="dslink/RespSubscribeController/waitingValues.html">waitingValues</a></li>
     
       <li class="section-title inherited"><a href="dslink/RespSubscribeController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/operator_equals.html">operator ==</a></li>
@@ -100,9 +104,10 @@
       <li class="section-title"><a href="dslink/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a href="dslink/RespSubscribeController/destroy.html">destroy</a></li>
-      <li><a href="dslink/RespSubscribeController/mergeValues.html">mergeValues</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a href="dslink/RespSubscribeController/process.html">process</a></li>
+      <li><a href="dslink/RespSubscribeController/resetCache.html">resetCache</a></li>
       <li class="inherited"><a href="dslink/RespSubscribeController/toString.html">toString</a></li>
     </ol>
 
@@ -111,34 +116,38 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">List</span>
-      <span class="name ">process</span>(<wbr>)
+      <span class="name ">process</span>(<wbr><span class="parameter" id="process-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">List process() {
-  List rslts = [];
-  for (ValueUpdate lastValue in lastValues) {
-    if (lastValue.count &gt; 1 || lastValue.status != null) {
-      Map m = {&apos;ts&apos;: lastValue.ts, &apos;value&apos;: lastValue.value, &apos;sid&apos;: sid};
-      if (lastValue.count == 0) {} else if (lastValue.count &gt; 1) {
-        m[&apos;count&apos;] = lastValue.count;
-        if (lastValue.sum.isFinite) {
-          m[&apos;sum&apos;] = lastValue.sum;
-        }
-        if (lastValue.max.isFinite) {
-          m[&apos;max&apos;] = lastValue.max;
-        }
-        if (lastValue.min.isFinite) {
-          m[&apos;min&apos;] = lastValue.min;
-        }
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/response/subscribe.dart.html#line-303'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">List process(int waitingAckId) {
+  List rslts = new List();
+  if (_caching &amp;&amp; _isCacheValid) {
+    for (ValueUpdate lastValue in lastValues) {
+      rslts.add([sid, lastValue.value, lastValue.ts]);
+    }
+
+    if (_qosLevel &gt; 0) {
+      for (ValueUpdate update in lastValues) {
+        update.waitingAck = waitingAckId;
       }
+    }
+    lastValues.clear();
+  } else {
+    if (lastValue.count &gt; 1 || lastValue.status != null) {
+      Map m = lastValue.toMap();
+      m[&apos;sid&apos;] = sid;
       rslts.add(m);
     } else {
       rslts.add([sid, lastValue.value, lastValue.ts]);
     }
+    if (_qosLevel &gt; 0) {
+      lastValue.waitingAck = waitingAckId;
+    }
+    _isCacheValid = true;
   }
-  lastValues.clear();
+  lastValue = null;
   return rslts;
 }</code></pre>
     </section>
@@ -153,7 +162,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

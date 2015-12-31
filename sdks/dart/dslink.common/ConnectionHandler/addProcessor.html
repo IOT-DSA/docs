@@ -95,7 +95,8 @@
       <li class="section-title"><a href="dslink.common/ConnectionHandler-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li><a href="dslink.common/ConnectionHandler/doSend.html">doSend</a></li>
+      <li><a href="dslink.common/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
+      <li><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li class="inherited"><a href="dslink.common/ConnectionHandler/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/ConnectionHandler/onData.html">onData</a></li>
       <li><a href="dslink.common/ConnectionHandler/onDisconnected.html">onDisconnected</a></li>
@@ -108,7 +109,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">addProcessor</span>(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation">void</span> <span class="parameter-name">processor</span>()</span>)
+      <span class="name ">addProcessor</span>(<wbr><span class="parameter" id="addProcessor-param-processor"><span class="type-annotation"><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></span> <span class="parameter-name">processor</span></span>)
     </section>
     <section class="desc markdown">
       <p>a processor function that's called just before the data is sent
@@ -117,14 +118,13 @@ inside processor, send() data that only need to appear once per data frame</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">void addProcessor(void processor()) {
-  if (!_processors.contains(processor)) {
-    _processors.add(processor);
-  }
-
-  if (!_pendingSend &amp;&amp; _conn != null) {
-    _conn.sendWhenReady(doSend);
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/common/connection_handler.dart.html#line-66'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void addProcessor(ConnectionProcessor processor) {
+  _processors.add(processor);
+  if (!_pendingSend) {
+    if (_conn != null) {
+      _conn.sendWhenReady(this);
+    }
     _pendingSend = true;
   }
 }</code></pre>
@@ -140,7 +140,7 @@ inside processor, send() data that only need to appear once per data frame</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

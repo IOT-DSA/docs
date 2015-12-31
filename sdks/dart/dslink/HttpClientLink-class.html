@@ -82,8 +82,12 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink/OnReqParams.html">OnReqParams</a></li>
       <li><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></li>
+      <li><a href="dslink/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink/dslink-library.html#properties">Properties</a></li>
       <li><a href="dslink/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -100,6 +104,7 @@
     
       <li class="section-title"><a href="dslink/dslink-library.html#classes">Classes</a></li>
       <li><a href="dslink/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink/BrokerDiscoverRequest-class.html">BrokerDiscoverRequest</a></li>
       <li><a href="dslink/BrokerDiscoveryClient-class.html">BrokerDiscoveryClient</a></li>
       <li><a href="dslink/ByteDataUtil-class.html">ByteDataUtil</a></li>
@@ -107,8 +112,10 @@
       <li><a href="dslink/Configs-class.html">Configs</a></li>
       <li><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink/Connection-class.html">Connection</a></li>
+      <li><a href="dslink/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -124,11 +131,17 @@
       <li><a href="dslink/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink/Link-class.html">Link</a></li>
+      <li><a href="dslink/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink/ListController-class.html">ListController</a></li>
       <li><a href="dslink/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
       <li><a href="dslink/MutableNodeProvider-class.html">MutableNodeProvider</a></li>
@@ -140,6 +153,7 @@
       <li><a href="dslink/Permission-class.html">Permission</a></li>
       <li><a href="dslink/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink/PublicKey-class.html">PublicKey</a></li>
       <li><a href="dslink/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink/RemoteNode-class.html">RemoteNode</a></li>
@@ -155,6 +169,7 @@
       <li><a href="dslink/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink/Responder-class.html">Responder</a></li>
       <li><a href="dslink/Response-class.html">Response</a></li>
+      <li><a href="dslink/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink/Scheduler-class.html">Scheduler</a></li>
@@ -176,6 +191,7 @@
       <li><a href="dslink/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink/ValueUpdate-class.html">ValueUpdate</a></li>
+      <li><a href="dslink/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
   </div>
@@ -226,7 +242,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="HttpClientLink" class="callable">
-          <span class="name"><a href="dslink/HttpClientLink/HttpClientLink.html">HttpClientLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-enableHttp"><span class="type-annotation">bool</span> <span class="parameter-name">enableHttp</span>: <span class="default-value">false</span></span>})</span>
+          <span class="name"><a href="dslink/HttpClientLink/HttpClientLink.html">HttpClientLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>, <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span>})</span>
         </dt>
         <dd>
           <p></p>
@@ -248,12 +264,32 @@
     read-only
   </div>
 </dd>
-        <dt id="enableHttp" class="property">
-          <span class="name"><a href="dslink/HttpClientLink/enableHttp.html">enableHttp</a></span>
+        <dt id="enableAck" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/enableAck.html">enableAck</a></span>
           <span class="signature">&#8594; bool</span>
         </dt>
         <dd>
           <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="format" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/format.html">format</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p>format received from broker</p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="formats" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/formats.html">formats</a></span>
+          <span class="signature">&#8594; List</span>
+        </dt>
+        <dd>
+          <p>formats sent to broker</p>
           <div class="features">
     read / write
   </div>
@@ -277,6 +313,16 @@
           <p></p>
           <div class="features">
     read-only
+  </div>
+</dd>
+        <dt id="linkData" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/linkData.html">linkData</a></span>
+          <span class="signature">&#8594; Map</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
   </div>
 </dd>
         <dt id="nonce" class="property">
@@ -319,14 +365,24 @@
     read-only
   </div>
 </dd>
-        <dt id="requester" class="property">
-          <span class="name"><a href="dslink/HttpClientLink/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink.browser/Requester-class.html">Requester</a></span>
+        <dt id="remotePath" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/remotePath.html">remotePath</a></span>
+          <span class="signature">&#8594; String</span>
         </dt>
         <dd>
           <p></p>
           <div class="features">
-    read-only
+    read / write
+  </div>
+</dd>
+        <dt id="requester" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/requester.html">requester</a></span>
+          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
   </div>
 </dd>
         <dt id="responder" class="property">
@@ -336,7 +392,7 @@
         <dd>
           <p></p>
           <div class="features">
-    read-only
+    read / write
   </div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -357,6 +413,26 @@
           <p>2 salts, salt and saltS</p>
           <div class="features">
     read-only
+  </div>
+</dd>
+        <dt id="token" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/token.html">token</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="tokenHash" class="property">
+          <span class="name"><a href="dslink/HttpClientLink/tokenHash.html">tokenHash</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
   </div>
 </dd>
       </dl>
@@ -411,11 +487,7 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink/HttpClientLink/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink/HttpClientLink/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -457,17 +529,23 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
         <a href="dslink/HttpClientLink-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/HttpClientLink/dsId.html">dsId</a></li>
-      <li><a href="dslink/HttpClientLink/enableHttp.html">enableHttp</a></li>
+      <li><a href="dslink/HttpClientLink/enableAck.html">enableAck</a></li>
+      <li><a href="dslink/HttpClientLink/format.html">format</a></li>
+      <li><a href="dslink/HttpClientLink/formats.html">formats</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink/HttpClientLink/home.html">home</a></li>
+      <li><a href="dslink/HttpClientLink/linkData.html">linkData</a></li>
       <li><a href="dslink/HttpClientLink/nonce.html">nonce</a></li>
       <li><a href="dslink/HttpClientLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink/HttpClientLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink/HttpClientLink/privateKey.html">privateKey</a></li>
+      <li><a href="dslink/HttpClientLink/remotePath.html">remotePath</a></li>
       <li><a href="dslink/HttpClientLink/requester.html">requester</a></li>
       <li><a href="dslink/HttpClientLink/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/HttpClientLink/salts.html">salts</a></li>
+      <li><a href="dslink/HttpClientLink/token.html">token</a></li>
+      <li><a href="dslink/HttpClientLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title inherited"><a href="dslink/HttpClientLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/operator_equals.html">operator ==</a></li>
@@ -490,7 +568,7 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

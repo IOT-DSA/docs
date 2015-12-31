@@ -88,6 +88,9 @@
         <a href="dslink.browser_client/BrowserECDHLink-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.browser_client/BrowserECDHLink/dsId.html">dsId</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/format.html">format</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/formats.html">formats</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></li>
@@ -97,6 +100,8 @@
       <li><a href="dslink.browser_client/BrowserECDHLink/responder.html">responder</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/salts.html">salts</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/token.html">token</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserECDHLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/operator_equals.html">operator ==</a></li>
@@ -119,19 +124,18 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/browser/browser_ecdh_link.dart.html#line-135'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) {
   if (_closed) return;
-//    if (reconnect &amp;&amp; _httpConnection == null) {
-//      initHttp();
-//    }
-  var socket =
-      new WebSocket(&apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(salts[0])}&apos;);
-  _wsConnection = new WebSocketConnection(socket, this, onConnect: () {
+  String wsUrl = &apos;$_wsUpdateUri&amp;auth=${_nonce.hashSalt(
+      salts[0])}&amp;format=$format&apos;;
+  var socket = new WebSocket(wsUrl);
+  _wsConnection =
+  new WebSocketConnection(socket, this, enableAck: enableAck, onConnect: () {
     if (!_onConnectedCompleter.isCompleted) {
       _onConnectedCompleter.complete();
     }
-  });
+  }, useCodec: DsCodec.getCodec(format));
 
   if (responder != null) {
     responder.connection = _wsConnection.responderChannel;
@@ -158,10 +162,13 @@
         initWebsocket(false);
       }
     } else if (reconnect) {
-      DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);
-      if (_wsDelay &lt; 60) _wsDelay++;
+      if (authError) {
+        connect();
+      } else {
+        DsTimer.timerOnceAfter(initWebsocket, _wsDelay * 1000);
+        if (_wsDelay &lt; 60) _wsDelay++;
+      }
     } else {
-//        initHttp();
       _wsDelay = 5;
       DsTimer.timerOnceAfter(initWebsocket, 5000);
     }
@@ -179,7 +186,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

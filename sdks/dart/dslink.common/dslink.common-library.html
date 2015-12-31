@@ -74,13 +74,14 @@
     <ol>
       <li class="section-title"><a href="index.html">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
-      <li><a href="dslink.broker/dslink.broker-library.html">dslink.broker</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
       <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
       <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
       <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
       <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
       <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
       <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
       <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
       <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
@@ -139,6 +140,12 @@
       <h2>Classes</h2>
 
       <dl>
+        <dt id="BaseLink">
+          <span class="name "><a href="dslink.common/BaseLink-class.html">BaseLink</a></span>
+        </dt>
+        <dd>
+          <p>Base Class for Links</p>
+        </dd>
         <dt id="ClientLink">
           <span class="name "><a href="dslink.common/ClientLink-class.html">ClientLink</a></span>
         </dt>
@@ -147,6 +154,12 @@
         </dd>
         <dt id="Connection">
           <span class="name "><a href="dslink.common/Connection-class.html">Connection</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ConnectionAckGroup">
+          <span class="name "><a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a></span>
         </dt>
         <dd>
           <p></p>
@@ -163,6 +176,12 @@
         <dd>
           <p></p>
         </dd>
+        <dt id="ConnectionProcessor">
+          <span class="name "><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="DSError">
           <span class="name "><a href="dslink.common/DSError-class.html">DSError</a></span>
         </dt>
@@ -174,12 +193,6 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
-        <dt id="Link">
-          <span class="name "><a href="dslink.common/Link-class.html">Link</a></span>
-        </dt>
-        <dd>
-          <p>Base Class for Links</p>
         </dd>
         <dt id="Node">
           <span class="name "><a href="dslink.common/Node-class.html">Node</a></span>
@@ -211,6 +224,13 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
         </dt>
         <dd>
           <p></p>
+        </dd>
+        <dt id="ProcessorResult">
+          <span class="name "><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></span>
+        </dt>
+        <dd>
+          <p>generate message right before sending to get the latest update
+return messages and the processors that need ack callback</p>
         </dd>
         <dt id="ServerLink">
           <span class="name "><a href="dslink.common/ServerLink-class.html">ServerLink</a></span>
@@ -264,7 +284,7 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
           <span class="name "><a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a></span>
         </dt>
         <dd>
-          <p></p>
+          <p>Represents an update to a value subscription.</p>
         </dd>
       </dl>
     </section>
@@ -285,18 +305,21 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
     
     
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#classes">Classes</a></li>
+      <li><a href="dslink.common/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink.common/ClientLink-class.html">ClientLink</a></li>
       <li><a href="dslink.common/Connection-class.html">Connection</a></li>
+      <li><a href="dslink.common/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.common/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.common/DSError-class.html">DSError</a></li>
       <li><a href="dslink.common/ErrorPhase-class.html">ErrorPhase</a></li>
-      <li><a href="dslink.common/Link-class.html">Link</a></li>
       <li><a href="dslink.common/Node-class.html">Node</a></li>
       <li><a href="dslink.common/PassiveChannel-class.html">PassiveChannel</a></li>
       <li><a href="dslink.common/Path-class.html">Path</a></li>
       <li><a href="dslink.common/Permission-class.html">Permission</a></li>
       <li><a href="dslink.common/PermissionList-class.html">PermissionList</a></li>
+      <li><a href="dslink.common/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.common/ServerLink-class.html">ServerLink</a></li>
       <li><a href="dslink.common/ServerLinkManager-class.html">ServerLinkManager</a></li>
       <li><a href="dslink.common/StreamStatus-class.html">StreamStatus</a></li>
@@ -318,7 +341,7 @@ If you are writing a link, please look at the <code>dslink.responder.SimpleNode<
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

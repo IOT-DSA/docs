@@ -82,7 +82,11 @@
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.browser/InvokeCallback.html">InvokeCallback</a></li>
+      <li><a href="dslink.browser/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.browser/OnInvokeClosed.html">OnInvokeClosed</a></li>
+      <li><a href="dslink.browser/OnReqParams.html">OnReqParams</a></li>
+      <li><a href="dslink.browser/ResponseTraceCallback.html">ResponseTraceCallback</a></li>
+      <li><a href="dslink.browser/SimpleNodeFactory.html">SimpleNodeFactory</a></li>
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#properties">Properties</a></li>
       <li><a href="dslink.browser/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -97,6 +101,7 @@
     
       <li class="section-title"><a href="dslink.browser/dslink.browser-library.html#classes">Classes</a></li>
       <li><a href="dslink.browser/AsyncTableResult-class.html">AsyncTableResult</a></li>
+      <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
       <li><a href="dslink.browser/BrowserECDHLink-class.html">BrowserECDHLink</a></li>
       <li><a href="dslink.browser/BrowserUserLink-class.html">BrowserUserLink</a></li>
       <li><a href="dslink.browser/BrowserUtils-class.html">BrowserUtils</a></li>
@@ -105,8 +110,10 @@
       <li><a href="dslink.browser/Configs-class.html">Configs</a></li>
       <li><a href="dslink.browser/ConfigSetting-class.html">ConfigSetting</a></li>
       <li><a href="dslink.browser/Connection-class.html">Connection</a></li>
+      <li><a href="dslink.browser/ConnectionAckGroup-class.html">ConnectionAckGroup</a></li>
       <li><a href="dslink.browser/ConnectionChannel-class.html">ConnectionChannel</a></li>
       <li><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></li>
+      <li><a href="dslink.browser/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
       <li><a href="dslink.browser/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser/DefaultDefNodes-class.html">DefaultDefNodes</a></li>
       <li><a href="dslink.browser/DefinitionNode-class.html">DefinitionNode</a></li>
@@ -118,11 +125,17 @@
       <li><a href="dslink.browser/InvokeController-class.html">InvokeController</a></li>
       <li><a href="dslink.browser/InvokeResponse-class.html">InvokeResponse</a></li>
       <li><a href="dslink.browser/IPermissionManager-class.html">IPermissionManager</a></li>
-      <li><a href="dslink.browser/Link-class.html">Link</a></li>
+      <li><a href="dslink.browser/IStorageManager-class.html">IStorageManager</a></li>
+      <li><a href="dslink.browser/ISubscriptionNodeStorage-class.html">ISubscriptionNodeStorage</a></li>
+      <li><a href="dslink.browser/ISubscriptionResponderStorage-class.html">ISubscriptionResponderStorage</a></li>
+      <li><a href="dslink.browser/IValueStorage-class.html">IValueStorage</a></li>
+      <li><a href="dslink.browser/IValueStorageBucket-class.html">IValueStorageBucket</a></li>
       <li><a href="dslink.browser/LinkProvider-class.html">LinkProvider</a></li>
       <li><a href="dslink.browser/ListController-class.html">ListController</a></li>
       <li><a href="dslink.browser/ListDefListener-class.html">ListDefListener</a></li>
       <li><a href="dslink.browser/ListResponse-class.html">ListResponse</a></li>
+      <li><a href="dslink.browser/LiveTable-class.html">LiveTable</a></li>
+      <li><a href="dslink.browser/LiveTableRow-class.html">LiveTableRow</a></li>
       <li><a href="dslink.browser/LocalDataStorage-class.html">LocalDataStorage</a></li>
       <li><a href="dslink.browser/LocalNode-class.html">LocalNode</a></li>
       <li><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></li>
@@ -135,6 +148,7 @@
       <li><a href="dslink.browser/Permission-class.html">Permission</a></li>
       <li><a href="dslink.browser/PermissionList-class.html">PermissionList</a></li>
       <li><a href="dslink.browser/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink.browser/ProcessorResult-class.html">ProcessorResult</a></li>
       <li><a href="dslink.browser/RemoteDefNode-class.html">RemoteDefNode</a></li>
       <li><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></li>
       <li><a href="dslink.browser/RemoteNodeCache-class.html">RemoteNodeCache</a></li>
@@ -149,6 +163,7 @@
       <li><a href="dslink.browser/RequestUpdater-class.html">RequestUpdater</a></li>
       <li><a href="dslink.browser/Responder-class.html">Responder</a></li>
       <li><a href="dslink.browser/Response-class.html">Response</a></li>
+      <li><a href="dslink.browser/ResponseTrace-class.html">ResponseTrace</a></li>
       <li><a href="dslink.browser/RespSubscribeController-class.html">RespSubscribeController</a></li>
       <li><a href="dslink.browser/RespSubscribeListener-class.html">RespSubscribeListener</a></li>
       <li><a href="dslink.browser/Scheduler-class.html">Scheduler</a></li>
@@ -164,12 +179,14 @@
       <li><a href="dslink.browser/SubscribeController-class.html">SubscribeController</a></li>
       <li><a href="dslink.browser/SubscribeRequest-class.html">SubscribeRequest</a></li>
       <li><a href="dslink.browser/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.browser/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
       <li><a href="dslink.browser/Table-class.html">Table</a></li>
       <li><a href="dslink.browser/TableColumn-class.html">TableColumn</a></li>
       <li><a href="dslink.browser/TableColumns-class.html">TableColumns</a></li>
       <li><a href="dslink.browser/TableMetadata-class.html">TableMetadata</a></li>
       <li><a href="dslink.browser/Unspecified-class.html">Unspecified</a></li>
       <li><a href="dslink.browser/ValueUpdate-class.html">ValueUpdate</a></li>
+      <li><a href="dslink.browser/WaitForMe-class.html">WaitForMe</a></li>
       <li><a href="dslink.browser/WebSocketConnection-class.html">WebSocketConnection</a></li>
     
     </ol>
@@ -279,7 +296,7 @@
           </span>
         </dt>
         <dd>
-          <p></p>
+          <p>get the secret from the remote public key</p>
         </dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.browser/PrivateKey/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
@@ -287,11 +304,7 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink.browser/PrivateKey/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.browser/PrivateKey/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -355,7 +368,7 @@ the original invocation.<a href="dslink.browser/PrivateKey/noSuchMethod.html">&h
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

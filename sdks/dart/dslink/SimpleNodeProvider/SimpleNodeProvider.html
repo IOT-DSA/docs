@@ -92,6 +92,7 @@
       <li class="inherited"><a href="dslink/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink/SimpleNodeProvider/permissions.html">permissions</a></li>
+      <li><a href="dslink/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink/SimpleNodeProvider/root.html">root</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/SimpleNodeProvider/sys.html">sys</a></li>
@@ -103,16 +104,19 @@
     
       <li class="section-title"><a href="dslink/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/SimpleNodeProvider/addNode.html">addNode</a></li>
+      <li><a href="dslink/SimpleNodeProvider/addProfile.html">addProfile</a></li>
       <li><a href="dslink/SimpleNodeProvider/createNode.html">createNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/createResponder.html">createResponder</a></li>
       <li><a href="dslink/SimpleNodeProvider/getNode.html">getNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a href="dslink/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
 
@@ -121,7 +125,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">SimpleNodeProvider</span>(<wbr>[<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map</span> <span class="parameter-name">profiles</span></span>])
+            <span class="name ">SimpleNodeProvider</span>(<wbr>[<span class="parameter" id="-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>, <span class="parameter" id="-param-profiles"><span class="type-annotation">Map&lt;String, <a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a>&gt;</span> <span class="parameter-name">profiles</span></span>])
     </section>
 
     <section class="desc markdown">
@@ -131,8 +135,8 @@ the provider is initialized with these values.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> </h2>
-      <pre><code class="prettyprint lang-dart">SimpleNodeProvider([Map m, Map profiles]) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.1/src/responder/simple/simple_node.dart.html#line-309'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">SimpleNodeProvider([Map m, Map&lt;String, SimpleNodeFactory&gt; profiles]) {
   // by default, the first SimpleNodeProvider is the static instance
   if (instance == null) {
      instance = this;
@@ -159,7 +163,7 @@ the provider is initialized with these values.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">

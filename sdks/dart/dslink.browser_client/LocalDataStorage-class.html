@@ -88,6 +88,7 @@
       <li><a href="dslink.browser_client/BrowserUserLink-class.html">BrowserUserLink</a></li>
       <li><a href="dslink.browser_client/DataStorage-class.html">DataStorage</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage-class.html">LocalDataStorage</a></li>
+      <li><a href="dslink.browser_client/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection-class.html">WebSocketConnection</a></li>
     
     </ol>
@@ -108,6 +109,12 @@
           <li>LocalDataStorage</li>
         </ul></dd>
 
+        <dt>Implements</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="dslink.browser_client/SynchronousDataStorage-class.html">SynchronousDataStorage</a></li>
+          </ul>
+        </dd>
 
 
 
@@ -201,9 +208,25 @@
         <dd>
           <p>Get a key's value.</p>
         </dd>
+        <dt id="getSync" class="callable">
+          <span class="name"><a href="dslink.browser_client/LocalDataStorage/getSync.html">getSync</a></span><span class="signature">(<wbr><span class="parameter" id="getSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Get a key's value.</p>
+        </dd>
         <dt id="has" class="callable">
           <span class="name"><a href="dslink.browser_client/LocalDataStorage/has.html">has</a></span><span class="signature">(<wbr><span class="parameter" id="has-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
             <span class="returntype parameter">&#8594; Future&lt;bool&gt;</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Check if a key is stored.</p>
+        </dd>
+        <dt id="hasSync" class="callable">
+          <span class="name"><a href="dslink.browser_client/LocalDataStorage/hasSync.html">hasSync</a></span><span class="signature">(<wbr><span class="parameter" id="hasSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
+            <span class="returntype parameter">&#8594; bool</span>
           </span>
         </dt>
         <dd>
@@ -215,11 +238,7 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p><code>noSuchMethod</code> is invoked when users invoke a non-existent method
-on an object. The name of the method and the arguments of the
-invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
-If <code>noSuchMethod</code> returns a value, that value becomes the result of
-the original invocation.<a href="dslink.browser_client/LocalDataStorage/noSuchMethod.html">&hellip;</a>
+          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.browser_client/LocalDataStorage/noSuchMethod.html">&hellip;</a>
 </p>
           <div class="features">inherited</div>
         </dd>
@@ -231,9 +250,25 @@ the original invocation.<a href="dslink.browser_client/LocalDataStorage/noSuchMe
         <dd>
           <p>Remove the specified key.</p>
         </dd>
+        <dt id="removeSync" class="callable">
+          <span class="name"><a href="dslink.browser_client/LocalDataStorage/removeSync.html">removeSync</a></span><span class="signature">(<wbr><span class="parameter" id="removeSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Remove the specified key.</p>
+        </dd>
         <dt id="store" class="callable">
           <span class="name"><a href="dslink.browser_client/LocalDataStorage/store.html">store</a></span><span class="signature">(<wbr><span class="parameter" id="store-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="store-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
             <span class="returntype parameter">&#8594; Future</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Store a key value pair.</p>
+        </dd>
+        <dt id="storeSync" class="callable">
+          <span class="name"><a href="dslink.browser_client/LocalDataStorage/storeSync.html">storeSync</a></span><span class="signature">(<wbr><span class="parameter" id="storeSync-param-key"><span class="type-annotation">String</span> <span class="parameter-name">key</span></span>, <span class="parameter" id="storeSync-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
@@ -275,10 +310,14 @@ the original invocation.<a href="dslink.browser_client/LocalDataStorage/noSuchMe
     
       <li class="section-title"><a href="dslink.browser_client/LocalDataStorage-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/get.html">get</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/getSync.html">getSync</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/has.html">has</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/hasSync.html">hasSync</a></li>
       <li class="inherited"><a href="dslink.browser_client/LocalDataStorage/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/remove.html">remove</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/removeSync.html">removeSync</a></li>
       <li><a href="dslink.browser_client/LocalDataStorage/store.html">store</a></li>
+      <li><a href="dslink.browser_client/LocalDataStorage/storeSync.html">storeSync</a></li>
       <li class="inherited"><a href="dslink.browser_client/LocalDataStorage/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -291,7 +330,7 @@ the original invocation.<a href="dslink.browser_client/LocalDataStorage/noSuchMe
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 1.0.0
+          dslink 0.5.1
         </span>
         &bull;
         <span class="no-break">
