@@ -173,6 +173,10 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     }
   }
 
+  if (_initialized) {
+    return;
+  }
+
   _initialized = true;
 
   if (profiles != null) {
