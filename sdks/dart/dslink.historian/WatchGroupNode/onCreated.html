@@ -178,7 +178,7 @@
           <li>override</li>
         </ol>
       </div>
-      <span class="returntype">dynamic</span>
+      <span class="returntype">Future</span>
       <span class="name ">onCreated</span>(<wbr>)
     </section>
     <section class="desc markdown">
@@ -189,13 +189,19 @@ This is called after a node is deserialized as well.</p>
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-753'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-onCreated() {
+onCreated() async {
   var p = new Path(path);
   db = link[p.parentPath];
   _watchName = configs[r&quot;$name&quot;];
 
   if (_watchName == null) {
     _watchName = NodeNamer.decodeName(p.name);
+  }
+
+  if (db.database == null) {
+    Completer c = new Completer();
+    db.onDatabaseReady.add(c.complete);
+    await c.future;
   }
 
   link.addNode(&quot;${path}/addWatchPath&quot;, {
