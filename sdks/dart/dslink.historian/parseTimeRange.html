@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="API docs for the parseTimeRange function from the dslink.historian library, for the Dart programming language.">
+  <title>parseTimeRange function - dslink.historian library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li><a href="dslink.historian/dslink.historian-library.html">dslink.historian</a></li>
+            <li class="self-crumb">parseTimeRange</li>
+          </ol>
+          <div class="self-name">parseTimeRange</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li><a href="dslink.historian/dslink.historian-library.html">dslink.historian</a></li>
+          <li class="self-crumb">parseTimeRange</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">function</span> parseTimeRange
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.historian/parseTimeRange.html#source">Source</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+    <h5><a href="dslink.historian/dslink.historian-library.html">dslink.historian</a></h5>
+    <ol>
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#constants">Constants</a></li>
+      <li><a href="dslink.historian/INTERVAL_TYPES-constant.html">INTERVAL_TYPES</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.historian/RollupFactory.html">RollupFactory</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#properties">Properties</a></li>
+      <li><a href="dslink.historian/historian.html">historian</a></li>
+      <li><a href="dslink.historian/INTERVAL_ALL_TYPES.html">INTERVAL_ALL_TYPES</a></li>
+      <li><a href="dslink.historian/INTERVAL_REGEX.html">INTERVAL_REGEX</a></li>
+      <li><a href="dslink.historian/link.html">link</a></li>
+      <li><a href="dslink.historian/ROLLUPS.html">ROLLUPS</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#functions">Functions</a></li>
+      <li><a href="dslink.historian/historianMain.html">historianMain</a></li>
+      <li><a href="dslink.historian/parseInterval.html">parseInterval</a></li>
+      <li><a href="dslink.historian/parseTimeRange.html">parseTimeRange</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#classes">Classes</a></li>
+      <li><a href="dslink.historian/AddDatabaseNode-class.html">AddDatabaseNode</a></li>
+      <li><a href="dslink.historian/AddWatchPathNode-class.html">AddWatchPathNode</a></li>
+      <li><a href="dslink.historian/AvgRollup-class.html">AvgRollup</a></li>
+      <li><a href="dslink.historian/CountRollup-class.html">CountRollup</a></li>
+      <li><a href="dslink.historian/CreateWatchGroupNode-class.html">CreateWatchGroupNode</a></li>
+      <li><a href="dslink.historian/DatabaseNode-class.html">DatabaseNode</a></li>
+      <li><a href="dslink.historian/FirstRollup-class.html">FirstRollup</a></li>
+      <li><a href="dslink.historian/GetHistoryNode-class.html">GetHistoryNode</a></li>
+      <li><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></li>
+      <li><a href="dslink.historian/HistorianDatabaseAdapter-class.html">HistorianDatabaseAdapter</a></li>
+      <li><a href="dslink.historian/HistorySummary-class.html">HistorySummary</a></li>
+      <li><a href="dslink.historian/LastRollup-class.html">LastRollup</a></li>
+      <li><a href="dslink.historian/MaxRollup-class.html">MaxRollup</a></li>
+      <li><a href="dslink.historian/MinRollup-class.html">MinRollup</a></li>
+      <li><a href="dslink.historian/PurgeGroupNode-class.html">PurgeGroupNode</a></li>
+      <li><a href="dslink.historian/PurgePathNode-class.html">PurgePathNode</a></li>
+      <li><a href="dslink.historian/Rollup-class.html">Rollup</a></li>
+      <li><a href="dslink.historian/SumRollup-class.html">SumRollup</a></li>
+      <li><a href="dslink.historian/TimeRange-class.html">TimeRange</a></li>
+      <li><a href="dslink.historian/ValueEntry-class.html">ValueEntry</a></li>
+      <li><a href="dslink.historian/ValuePair-class.html">ValuePair</a></li>
+      <li><a href="dslink.historian/WatchGroupNode-class.html">WatchGroupNode</a></li>
+      <li><a href="dslink.historian/WatchPathNode-class.html">WatchPathNode</a></li>
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="dslink.historian/TimeRange-class.html">TimeRange</a></span>
+        <span class="name ">parseTimeRange</span>(<wbr><span class="parameter" id="parseTimeRange-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-821'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">TimeRange parseTimeRange(String input) {
+  TimeRange tr;
+  if (input != null) {
+    List&lt;String&gt; l = input.split(&quot;/&quot;);
+    DateTime start = DateTime.parse(l[0]);
+    DateTime end = DateTime.parse(l[1]);
+
+    tr = new TimeRange(start, end);
+  }
+  return tr;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 0.5.2
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>

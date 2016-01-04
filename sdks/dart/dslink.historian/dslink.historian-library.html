@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="dslink.historian library API docs, for the Dart programming language.">
+  <title>dslink.historian library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:500,400italic,300,400' type='text/css'>
+  <link rel="stylesheet" href="static-assets/prettify.css">
+  <link rel="stylesheet" href="static-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  <!-- Do not remove placeholder -->
+  <!-- Header Placeholder -->
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header class="container-fluid" id="title">
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 contents">
+          <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+          <ol class="breadcrumbs gt-separated hidden-xs">
+            <li><a href="index.html">dslink</a></li>
+            <li class="self-crumb">dslink.historian</li>
+          </ol>
+          <div class="self-name">dslink.historian</div>
+          <form class="search navbar-right" role="search">
+            <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+          </form>
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </nav>
+
+  <div class="container masthead">
+    <div class="row">
+      <div class="col-sm-12 contents">
+        <ol class="breadcrumbs gt-separated visible-xs">
+          <li><a href="index.html">dslink</a></li>
+          <li class="self-crumb">dslink.historian</li>
+        </ol>
+        <div class="title-description">
+          <h1 class="title">
+            <span class="kind">library</span> dslink.historian
+          </h1>
+        </div>
+        <ul class="subnav">
+          <li><a href="dslink.historian/dslink.historian-library.html#constants">Constants</a></li>
+          <li><a href="dslink.historian/dslink.historian-library.html#typedefs">Typedefs</a></li>
+          <li><a href="dslink.historian/dslink.historian-library.html#properties">Properties</a></li>
+          <li><a href="dslink.historian/dslink.historian-library.html#functions">Functions</a></li>
+          <li><a href="dslink.historian/dslink.historian-library.html#classes">Classes</a></li>
+        </ul>
+      </div> <!-- /col -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+
+</header>
+
+<div class="container body">
+  <div class="row">
+
+  <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <h5><a href="index.html">dslink</a></h5>
+
+    <ol>
+      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li><a href="dslink/dslink-library.html">dslink</a></li>
+      <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
+      <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
+      <li><a href="dslink.browser_client/dslink.browser_client-library.html">dslink.browser_client</a></li>
+      <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
+      <li><a href="dslink.common/dslink.common-library.html">dslink.common</a></li>
+      <li><a href="dslink.historian/dslink.historian-library.html">dslink.historian</a></li>
+      <li><a href="dslink.io/dslink.io-library.html">dslink.io</a></li>
+      <li><a href="dslink.nodes/dslink.nodes-library.html">dslink.nodes</a></li>
+      <li><a href="dslink.query/dslink.query-library.html">dslink.query</a></li>
+      <li><a href="dslink.requester/dslink.requester-library.html">dslink.requester</a></li>
+      <li><a href="dslink.responder/dslink.responder-library.html">dslink.responder</a></li>
+      <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
+      <li><a href="dslink.socket_client/dslink.socket_client-library.html">dslink.socket_client</a></li>
+      <li><a href="dslink.socket_server/dslink.socket_server-library.html">dslink.socket_server</a></li>
+      <li><a href="dslink.utils/dslink.utils-library.html">dslink.utils</a></li>
+      <li><a href="dslink.worker/dslink.worker-library.html">dslink.worker</a></li>
+    </ol>
+  </div>
+
+  <div class="col-xs-12 col-sm-9 col-md-8 main-content">
+
+    
+    <section class="summary offset-anchor" id="constants">
+      <h2>Constants</h2>
+
+      <dl class="properties">
+        <dt id="INTERVAL_TYPES" class="constant">
+          <span class="name "><a href="dslink.historian/INTERVAL_TYPES-constant.html">INTERVAL_TYPES</a></span>
+          <span class="signature">&#8594; Map&lt;dynamic, int&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div>
+            <span class="features">const</span>
+            <span class="signature"><code>const {const ["ms", "millis", "millisecond", "milliseconds"] : 1, const ["s", "second", "seconds"] : 1000, const ["m", "min", "minute", "minutes"] : 60000, const ["h", "hr", "hour", "hours"] : 3600000, const ["d", "day", "days"] : 86400000, const ["wk", "week", "weeks"] : 604800000, const ["n", "month", "months"] : 2628000000, const ["year", "years", "y"] : 31536000000}</code></span>
+          </div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl class="callables">
+        <dt id="RollupFactory" class="callable">
+          <span class="name"><a href="dslink.historian/RollupFactory.html">RollupFactory</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="dslink.historian/Rollup-class.html">Rollup</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="historian" class="property">
+          <span class="name"><a href="dslink.historian/historian.html">historian</a></span>
+          <span class="signature">&#8594; <a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="INTERVAL_ALL_TYPES" class="property">
+          <span class="name"><a href="dslink.historian/INTERVAL_ALL_TYPES.html">INTERVAL_ALL_TYPES</a></span>
+          <span class="signature">&#8594; List&lt;String&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="INTERVAL_REGEX" class="property">
+          <span class="name"><a href="dslink.historian/INTERVAL_REGEX.html">INTERVAL_REGEX</a></span>
+          <span class="signature">&#8594; RegExp</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+        <dt id="link" class="property">
+          <span class="name"><a href="dslink.historian/link.html">link</a></span>
+          <span class="signature">&#8594; <a href="dslink/LinkProvider-class.html">LinkProvider</a></span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
+        <dt id="ROLLUPS" class="property">
+          <span class="name"><a href="dslink.historian/ROLLUPS.html">ROLLUPS</a></span>
+          <span class="signature">&#8594; Map&lt;String, <a href="dslink.historian/RollupFactory.html">RollupFactory</a>&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read-only
+  </div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="historianMain" class="callable">
+          <span class="name"><a href="dslink.historian/historianMain.html">historianMain</a></span><span class="signature">(<wbr><span class="parameter" id="historianMain-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span></span>, <span class="parameter" id="historianMain-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="historianMain-param-adapter"><span class="type-annotation"><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></span> <span class="parameter-name">adapter</span></span>)
+            <span class="returntype parameter">&#8594; Future</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="parseInterval" class="callable">
+          <span class="name"><a href="dslink.historian/parseInterval.html">parseInterval</a></span><span class="signature">(<wbr><span class="parameter" id="parseInterval-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+            <span class="returntype parameter">&#8594; int</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="parseTimeRange" class="callable">
+          <span class="name"><a href="dslink.historian/parseTimeRange.html">parseTimeRange</a></span><span class="signature">(<wbr><span class="parameter" id="parseTimeRange-param-input"><span class="type-annotation">String</span> <span class="parameter-name">input</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.historian/TimeRange-class.html">TimeRange</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+
+    <section class="summary offset-anchor" id="classes">
+      <h2>Classes</h2>
+
+      <dl>
+        <dt id="AddDatabaseNode">
+          <span class="name "><a href="dslink.historian/AddDatabaseNode-class.html">AddDatabaseNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="AddWatchPathNode">
+          <span class="name "><a href="dslink.historian/AddWatchPathNode-class.html">AddWatchPathNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="AvgRollup">
+          <span class="name "><a href="dslink.historian/AvgRollup-class.html">AvgRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="CountRollup">
+          <span class="name "><a href="dslink.historian/CountRollup-class.html">CountRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="CreateWatchGroupNode">
+          <span class="name "><a href="dslink.historian/CreateWatchGroupNode-class.html">CreateWatchGroupNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="DatabaseNode">
+          <span class="name "><a href="dslink.historian/DatabaseNode-class.html">DatabaseNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="FirstRollup">
+          <span class="name "><a href="dslink.historian/FirstRollup-class.html">FirstRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="GetHistoryNode">
+          <span class="name "><a href="dslink.historian/GetHistoryNode-class.html">GetHistoryNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="HistorianAdapter">
+          <span class="name "><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="HistorianDatabaseAdapter">
+          <span class="name "><a href="dslink.historian/HistorianDatabaseAdapter-class.html">HistorianDatabaseAdapter</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="HistorySummary">
+          <span class="name "><a href="dslink.historian/HistorySummary-class.html">HistorySummary</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="LastRollup">
+          <span class="name "><a href="dslink.historian/LastRollup-class.html">LastRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="MaxRollup">
+          <span class="name "><a href="dslink.historian/MaxRollup-class.html">MaxRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="MinRollup">
+          <span class="name "><a href="dslink.historian/MinRollup-class.html">MinRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="PurgeGroupNode">
+          <span class="name "><a href="dslink.historian/PurgeGroupNode-class.html">PurgeGroupNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="PurgePathNode">
+          <span class="name "><a href="dslink.historian/PurgePathNode-class.html">PurgePathNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="Rollup">
+          <span class="name "><a href="dslink.historian/Rollup-class.html">Rollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="SumRollup">
+          <span class="name "><a href="dslink.historian/SumRollup-class.html">SumRollup</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="TimeRange">
+          <span class="name "><a href="dslink.historian/TimeRange-class.html">TimeRange</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ValueEntry">
+          <span class="name "><a href="dslink.historian/ValueEntry-class.html">ValueEntry</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="ValuePair">
+          <span class="name "><a href="dslink.historian/ValuePair-class.html">ValuePair</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="WatchGroupNode">
+          <span class="name "><a href="dslink.historian/WatchGroupNode-class.html">WatchGroupNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+        <dt id="WatchPathNode">
+          <span class="name "><a href="dslink.historian/WatchPathNode-class.html">WatchPathNode</a></span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
+      </dl>
+    </section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>dslink.historian</h5>
+    <ol>
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#constants">Constants</a></li>
+      <li><a href="dslink.historian/INTERVAL_TYPES-constant.html">INTERVAL_TYPES</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.historian/RollupFactory.html">RollupFactory</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#properties">Properties</a></li>
+      <li><a href="dslink.historian/historian.html">historian</a></li>
+      <li><a href="dslink.historian/INTERVAL_ALL_TYPES.html">INTERVAL_ALL_TYPES</a></li>
+      <li><a href="dslink.historian/INTERVAL_REGEX.html">INTERVAL_REGEX</a></li>
+      <li><a href="dslink.historian/link.html">link</a></li>
+      <li><a href="dslink.historian/ROLLUPS.html">ROLLUPS</a></li>
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#functions">Functions</a></li>
+      <li><a href="dslink.historian/historianMain.html">historianMain</a></li>
+      <li><a href="dslink.historian/parseInterval.html">parseInterval</a></li>
+      <li><a href="dslink.historian/parseTimeRange.html">parseTimeRange</a></li>
+    
+    
+      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#classes">Classes</a></li>
+      <li><a href="dslink.historian/AddDatabaseNode-class.html">AddDatabaseNode</a></li>
+      <li><a href="dslink.historian/AddWatchPathNode-class.html">AddWatchPathNode</a></li>
+      <li><a href="dslink.historian/AvgRollup-class.html">AvgRollup</a></li>
+      <li><a href="dslink.historian/CountRollup-class.html">CountRollup</a></li>
+      <li><a href="dslink.historian/CreateWatchGroupNode-class.html">CreateWatchGroupNode</a></li>
+      <li><a href="dslink.historian/DatabaseNode-class.html">DatabaseNode</a></li>
+      <li><a href="dslink.historian/FirstRollup-class.html">FirstRollup</a></li>
+      <li><a href="dslink.historian/GetHistoryNode-class.html">GetHistoryNode</a></li>
+      <li><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></li>
+      <li><a href="dslink.historian/HistorianDatabaseAdapter-class.html">HistorianDatabaseAdapter</a></li>
+      <li><a href="dslink.historian/HistorySummary-class.html">HistorySummary</a></li>
+      <li><a href="dslink.historian/LastRollup-class.html">LastRollup</a></li>
+      <li><a href="dslink.historian/MaxRollup-class.html">MaxRollup</a></li>
+      <li><a href="dslink.historian/MinRollup-class.html">MinRollup</a></li>
+      <li><a href="dslink.historian/PurgeGroupNode-class.html">PurgeGroupNode</a></li>
+      <li><a href="dslink.historian/PurgePathNode-class.html">PurgePathNode</a></li>
+      <li><a href="dslink.historian/Rollup-class.html">Rollup</a></li>
+      <li><a href="dslink.historian/SumRollup-class.html">SumRollup</a></li>
+      <li><a href="dslink.historian/TimeRange-class.html">TimeRange</a></li>
+      <li><a href="dslink.historian/ValueEntry-class.html">ValueEntry</a></li>
+      <li><a href="dslink.historian/ValuePair-class.html">ValuePair</a></li>
+      <li><a href="dslink.historian/WatchGroupNode-class.html">WatchGroupNode</a></li>
+      <li><a href="dslink.historian/WatchPathNode-class.html">WatchPathNode</a></li>
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="container">
+      <p class="text-center">
+        <span class="no-break">
+          dslink 0.5.2
+        </span>
+        &bull;
+        <span class="no-break">
+          <a href="https://www.dartlang.org">
+            <img src="static-assets/favicon.png" alt="Dart" title="Dart" width="16" height="16">
+          </a>
+        </span>
+        &bull;
+        <span class="copyright no-break">
+          <a href="http://creativecommons.org/licenses/by-sa/4.0/">cc license</a>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/prettify.js"></script>
+<script src="static-assets/script.js"></script>
+<!-- Do not remove placeholder -->
+<!-- Footer Placeholder -->
+
+</body>
+
+</html>
