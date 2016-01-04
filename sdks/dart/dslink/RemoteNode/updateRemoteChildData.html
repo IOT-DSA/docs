@@ -114,6 +114,7 @@
       <li class="inherited"><a href="dslink/RemoteNode/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.browser/Node/removeChild.html">removeChild</a></li>
       <li><a href="dslink/RemoteNode/resetNodeCache.html">resetNodeCache</a></li>
+      <li><a href="dslink/RemoteNode/save.html">save</a></li>
       <li class="inherited"><a href="dslink/RemoteNode/toString.html">toString</a></li>
       <li><a href="dslink/RemoteNode/updateRemoteChildData.html">updateRemoteChildData</a></li>
     </ol>
@@ -130,7 +131,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/src/requester/node_cache.dart.html#line-129'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/src/requester/node_cache.dart.html#line-131'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void updateRemoteChildData(Map m, RemoteNodeCache cache) {
   String childPathPre;
   if (remotePath == &apos;/&apos;) {
@@ -138,6 +139,7 @@
   } else {
     childPathPre = &apos;$remotePath/&apos;;
   }
+
   m.forEach((String key, value) {
     if (key.startsWith(r&apos;$&apos;)) {
       configs[key] = value;
