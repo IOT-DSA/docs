@@ -103,6 +103,8 @@
       <li class="inherited"><a href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/name.html">name</a></li>
+      <li><a href="dslink.historian/WatchPathNode/onRemoveCallbacks.html">onRemoveCallbacks</a></li>
+      <li><a href="dslink.historian/WatchPathNode/onSaveCallbacks.html">onSaveCallbacks</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
@@ -194,7 +196,7 @@ This is called after a node is deserialized as well.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-547'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-598'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onCreated() async {
   String rp = configs[r&quot;$value_path&quot;];
@@ -233,7 +235,10 @@ onCreated() async {
     await c.future;
   }
 
-  HistorySummary summary = await group.db.database.getSummary(groupName, valuePath);
+  HistorySummary summary = await group.db.database.getSummary(
+    groupName,
+    valuePath
+  );
 
   if (summary.first != null) {
     link.updateValue(&quot;${path}/startDate&quot;, summary.first.timestamp);
@@ -241,7 +246,10 @@ onCreated() async {
   }
 
   if (summary.last != null) {
-    ValueUpdate update = new ValueUpdate(summary.last.value, ts: summary.last.timestamp);
+    ValueUpdate update = new ValueUpdate(
+      summary.last.value,
+      ts: summary.last.timestamp
+    );
     link.updateValue(&quot;${path}/lwv&quot;, update);
     updateValue(update);
   }

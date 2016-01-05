@@ -335,6 +335,16 @@ This is the last component of this node's path.</p>
     read-only, inherited
   </div>
 </dd>
+        <dt id="onRemoveCallbacks" class="property">
+          <span class="name"><a href="dslink.historian/WatchGroupNode/onRemoveCallbacks.html">onRemoveCallbacks</a></span>
+          <span class="signature">&#8594; List&lt;Function&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
         <dt id="parent" class="property inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/parent.html">parent</a></span>
           <span class="signature">&#8594; <a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span>
@@ -741,14 +751,13 @@ You can return the following types from this method:
 If this method returns null, the default strategy is used.</p>
           <div class="features">inherited</div>
         </dd>
-        <dt id="onRemoving" class="callable inherited">
-          <span class="name"><a href="dslink.browser/SimpleNode/onRemoving.html">onRemoving</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; void</span>
+        <dt id="onRemoving" class="callable">
+          <span class="name"><a href="dslink.historian/WatchGroupNode/onRemoving.html">onRemoving</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
-        <dd class="inherited">
+        <dd>
           <p>Callback used to notify a node that it is about to be removed.</p>
-          <div class="features">inherited</div>
         </dd>
         <dt id="onSetAttribute" class="callable inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/onSetAttribute.html">onSetAttribute</a></span><span class="signature">(<wbr><span class="parameter" id="onSetAttribute-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="onSetAttribute-param-value"><span class="type-annotation">String</span> <span class="parameter-name">value</span></span>)
@@ -977,6 +986,7 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNodeImpl/loaded.html">loaded</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/name.html">name</a></li>
+      <li><a href="dslink.historian/WatchGroupNode/onRemoveCallbacks.html">onRemoveCallbacks</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
@@ -1021,7 +1031,7 @@ The name of the removed node is returned.</p>
       <li><a href="dslink.historian/WatchGroupNode/onCreated.html">onCreated</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onInvoke.html">onInvoke</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onLoadChild.html">onLoadChild</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNode/onRemoving.html">onRemoving</a></li>
+      <li><a href="dslink.historian/WatchGroupNode/onRemoving.html">onRemoving</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSetAttribute.html">onSetAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSetConfig.html">onSetConfig</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/onSetValue.html">onSetValue</a></li>
