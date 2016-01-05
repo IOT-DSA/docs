@@ -205,6 +205,7 @@
         <dd>
           <ul class="comma-separated clazz-relationships">
             <li><a href="dslink.requester/RequestUpdater-class.html">RequestUpdater</a></li>
+            <li><a href="dslink.common/ConnectionProcessor-class.html">ConnectionProcessor</a></li>
           </ul>
         </dd>
 
@@ -324,6 +325,16 @@
     read-only
   </div>
 </dd>
+        <dt id="waitToSend" class="property">
+          <span class="name"><a href="dslink/ListController/waitToSend.html">waitToSend</a></span>
+          <span class="signature">&#8594; bool</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">
+    read / write
+  </div>
+</dd>
       </dl>
     </section>
 
@@ -346,6 +357,14 @@
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
+        <dt id="ackReceived" class="callable">
+          <span class="name"><a href="dslink/ListController/ackReceived.html">ackReceived</a></span><span class="signature">(<wbr><span class="parameter" id="ackReceived-param-receiveAckId"><span class="type-annotation">int</span> <span class="parameter-name">receiveAckId</span></span>, <span class="parameter" id="ackReceived-param-startTime"><span class="type-annotation">int</span> <span class="parameter-name">startTime</span></span>, <span class="parameter" id="ackReceived-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="loadProfile" class="callable">
           <span class="name"><a href="dslink/ListController/loadProfile.html">loadProfile</a></span><span class="signature">(<wbr><span class="parameter" id="loadProfile-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -404,6 +423,14 @@
         <dd>
           <p></p>
         </dd>
+        <dt id="startSendingData" class="callable">
+          <span class="name"><a href="dslink/ListController/startSendingData.html">startSendingData</a></span><span class="signature">(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+        </dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink/ListController/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -439,11 +466,13 @@
       <li><a href="dslink/ListController/requester.html">requester</a></li>
       <li class="inherited"><a href="dslink/ListController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink/ListController/stream.html">stream</a></li>
+      <li><a href="dslink/ListController/waitToSend.html">waitToSend</a></li>
     
       <li class="section-title inherited"><a href="dslink/ListController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink/ListController/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink/ListController-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink/ListController/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink/ListController/loadProfile.html">loadProfile</a></li>
       <li class="inherited"><a href="dslink/ListController/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink/ListController/onDisconnect.html">onDisconnect</a></li>
@@ -451,6 +480,7 @@
       <li><a href="dslink/ListController/onReconnect.html">onReconnect</a></li>
       <li><a href="dslink/ListController/onStartListen.html">onStartListen</a></li>
       <li><a href="dslink/ListController/onUpdate.html">onUpdate</a></li>
+      <li><a href="dslink/ListController/startSendingData.html">startSendingData</a></li>
       <li class="inherited"><a href="dslink/ListController/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
