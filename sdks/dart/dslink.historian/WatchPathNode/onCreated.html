@@ -276,6 +276,12 @@ onCreated() async {
     r&quot;$is&quot;: &quot;purgePath&quot;
   });
 
+  link.addNode(&quot;${path}/delete&quot;, {
+    r&quot;$name&quot;: &quot;Delete&quot;,
+    r&quot;$invokable&quot;: &quot;write&quot;,
+    r&quot;$is&quot;: &quot;delete&quot;
+  });
+
   link.onValueChange(&quot;${path}/enabled&quot;).listen((ValueUpdate update) {
     if (update.value == true) {
       sub();
