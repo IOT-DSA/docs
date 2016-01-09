@@ -202,15 +202,13 @@ onInvoke(Map&lt;String, dynamic&gt; params) async {
   String rp = NodeNamer.createName(wp);
   var p = new Path(path);
   var targetPath = &quot;${p.parentPath}/${rp}&quot;;
-  var n = link.addNode(targetPath, {
+  var node = await link.requester.getRemoteNode(wp);
+  link.addNode(targetPath, {
     r&quot;$name&quot;: wp,
     r&quot;$value_path&quot;: wp,
-    r&quot;$is&quot;: &quot;watchPath&quot;
+    r&quot;$is&quot;: &quot;watchPath&quot;,
+    r&quot;$type&quot;: node.configs[r&quot;$type&quot;]
   });
-
-  var node = await link.requester.getRemoteNode(wp);
-  n.configs[r&quot;$type&quot;] = node.configs[r&quot;$type&quot;];
-  n.listChangeController.add(r&quot;$is&quot;);
 
   link.save();
 }</code></pre>
