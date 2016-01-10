@@ -145,7 +145,7 @@
     // pre-generate tokenHash
     String tokenId = token.substring(0, 16);
     String hashStr = CryptoProvider.sha256(
-        const Utf8Encoder().convert(&apos;$dsId$token&apos;));
+        toUTF8(&apos;$dsId$token&apos;));
     tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
   }
   if (formats != null) {

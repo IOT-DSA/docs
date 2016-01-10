@@ -166,7 +166,7 @@
 
     logger.fine(&quot;DS ID: ${dsId}&quot;);
 
-    request.add(const Utf8Encoder().convert(DsJson.encode(requestJson)));
+    request.add(toUTF8(DsJson.encode(requestJson)));
     HttpClientResponse response = await request.close();
     List&lt;int&gt; merged = await response.fold([], foldList);
     String rslt = const Utf8Decoder().convert(merged);
