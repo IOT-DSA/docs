@@ -197,7 +197,7 @@ You can return the following types from this method:
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-300'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/historian.dart.html#line-305'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onInvoke(Map&lt;String, dynamic&gt; params) async* {
   String range = params[&quot;Timerange&quot;];
@@ -206,6 +206,13 @@ onInvoke(Map&lt;String, dynamic&gt; params) async* {
   Rollup rollup = rollupFactory == null ? null : rollupFactory();
   Duration interval = new Duration(
     milliseconds: parseInterval(params[&quot;Interval&quot;]));
+  num batchSize = params[&quot;Batch Size&quot;];
+
+  if (batchSize == null) {
+    batchSize = 0;
+  }
+
+  int batchCount = batchSize.toInt();
 
   TimeRange tr = parseTimeRange(range);
   if (params[&quot;Real Time&quot;] == true) {
@@ -226,7 +233,7 @@ onInvoke(Map&lt;String, dynamic&gt; params) async* {
       await for (ValuePair row in pairs) {
         count++;
         buffer.add(row.toRow());
-        if (count == 10) {
+        if (count != 0 &amp;&amp; count == batchCount) {
           yield buffer;
           buffer = [];
           count = 0;
@@ -235,6 +242,7 @@ onInvoke(Map&lt;String, dynamic&gt; params) async* {
 
       if (buffer.isNotEmpty) {
         yield buffer;
+        buffer.clear();
       }
     }
   } catch (e) {
