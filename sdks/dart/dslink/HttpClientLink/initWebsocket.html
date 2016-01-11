@@ -94,6 +94,7 @@
       <li class="inherited"><a href="dslink/HttpClientLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink/HttpClientLink/home.html">home</a></li>
       <li><a href="dslink/HttpClientLink/linkData.html">linkData</a></li>
+      <li class="inherited"><a href="dslink.browser/ClientLink/logName.html">logName</a></li>
       <li><a href="dslink/HttpClientLink/nonce.html">nonce</a></li>
       <li><a href="dslink/HttpClientLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink/HttpClientLink/onRequesterReady.html">onRequesterReady</a></li>
@@ -112,6 +113,7 @@
       <li class="section-title"><a href="dslink/HttpClientLink-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink/HttpClientLink/close.html">close</a></li>
       <li><a href="dslink/HttpClientLink/connect.html">connect</a></li>
+      <li class="inherited"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li><a href="dslink/HttpClientLink/initWebsocket.html">initWebsocket</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink/HttpClientLink/toString.html">toString</a></li>
@@ -127,7 +129,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/src/http/client_link.dart.html#line-177'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.2/src/http/client_link.dart.html#line-186'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">initWebsocket([bool reconnect = true]) async {
   if (_closed) return;
 
@@ -144,7 +146,7 @@
         enableAck: enableAck,
         useCodec: DsCodec.getCodec(format));
 
-    logger.info(&quot;Connected&quot;);
+    logger.info(formatLogMessage(&quot;Connected&quot;));
     if (!_onConnectedCompleter.isCompleted) {
       _onConnectedCompleter.complete();
     }
@@ -164,8 +166,12 @@
     _wsConnection.onDisconnected.then((connection) {
       initWebsocket();
     });
-  } catch (error) {
-    logger.fine(error);
+  } catch (error, stack) {
+    logger.fine(
+      formatLogMessage(&quot;Error while initializing WebSocket&quot;),
+      error,
+      stack
+    );
     if (error is WebSocketException &amp;&amp; (
         error.message.contains(&apos;not upgraded to websocket&apos;) // error from dart
             || error.message.contains(&apos;(401)&apos;) // error from nodejs
