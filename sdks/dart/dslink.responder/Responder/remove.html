@@ -137,7 +137,7 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/responder.dart.html#line-421'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void remove(Map m) {
   Path path = Path.getValidPath(m[&apos;path&apos;]);
-  if (path == null || path.isAbsolute) {
+  if (path == null || !path.isAbsolute) {
     closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);
     return;
   }
