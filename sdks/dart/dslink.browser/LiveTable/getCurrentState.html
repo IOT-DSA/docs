@@ -104,6 +104,8 @@
       <li class="inherited"><a href="dslink.browser/LiveTable/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser/LiveTable/onRowUpdate.html">onRowUpdate</a></li>
       <li><a href="dslink.browser/LiveTable/override.html">override</a></li>
+      <li><a href="dslink.browser/LiveTable/refresh.html">refresh</a></li>
+      <li><a href="dslink.browser/LiveTable/reindex.html">reindex</a></li>
       <li><a href="dslink.browser/LiveTable/resend.html">resend</a></li>
       <li><a href="dslink.browser/LiveTable/sendTo.html">sendTo</a></li>
       <li class="inherited"><a href="dslink.browser/LiveTable/toString.html">toString</a></li>
@@ -114,13 +116,17 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">List</span>
-      <span class="name ">getCurrentState</span>(<wbr>)
+      <span class="name ">getCurrentState</span>(<wbr>[<span class="parameter" id="getCurrentState-param-from"><span class="type-annotation">int</span> <span class="parameter-name">from</span> = <span class="default-value">-1</span></span>])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-173'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">List getCurrentState() {
-  return rows.map((x) =&gt; x.values).toList();
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-191'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">List getCurrentState([int from = -1]) {
+  List&lt;LiveTableRow&gt; rw = rows;
+  if (from != -1) {
+    rw = rw.sublist(from);
+  }
+  return rw.map((x) =&gt; x.values).toList();
 }</code></pre>
     </section>
 
