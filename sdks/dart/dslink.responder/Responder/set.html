@@ -134,7 +134,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/responder.dart.html#line-356'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/responder.dart.html#line-357'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void set(Map m) {
   Path path = Path.getValidPath(m[&apos;path&apos;]);
   if (path == null || !path.isAbsolute) {
@@ -163,7 +163,7 @@
         closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
       }
       closeResponse(m[&apos;rid&apos;]);
-    }, (e, stack) {
+    }, false, (e, stack) {
       var error = new DSError(
         &quot;nodeError&quot;,
         msg: e.toString(),
@@ -192,7 +192,7 @@
       closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
     } else {
       node.setAttribute(
-          path.name, value, this, addResponse(new Response(this, rid)));
+        path.name, value, this, addResponse(new Response(this, rid)));
     }
   } else {
     // shouldn&apos;t be possible to reach here

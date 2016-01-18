@@ -134,7 +134,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/responder.dart.html#line-194'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/responder.dart.html#line-193'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void subscribe(Map m) {
   if (m[&apos;paths&apos;] is List) {
     for (Object p in m[&apos;paths&apos;]) {
@@ -147,11 +147,13 @@
         } else {
           continue;
         }
+
         if (p[&apos;sid&apos;] is int) {
           sid = p[&apos;sid&apos;];
         } else {
           continue;
         }
+
         if (p[&apos;qos&apos;] is int) {
           qos = p[&apos;qos&apos;];
         }
@@ -162,7 +164,7 @@
         _getNode(path, (LocalNode node) {
           _subscription.add(path.path, node, sid, qos);
           closeResponse(m[&apos;rid&apos;]);
-        }, (e, stack) {
+        }, true, (e, stack) {
           var error = new DSError(
             &quot;nodeError&quot;,
             msg: e.toString(),
