@@ -129,7 +129,7 @@
         </ol>
       </div>
       <span class="returntype">void</span>
-      <span class="name ">removeNode</span>(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+      <span class="name ">removeNode</span>(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, {<span class="parameter" id="removeNode-param-recurse"><span class="type-annotation">bool</span> <span class="parameter-name">recurse</span>: <span class="default-value">true</span></span>})
     </section>
     <section class="desc markdown">
       <p>Removes the node specified at <code>path</code>.</p>
@@ -138,12 +138,32 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-451'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-void removeNode(String path) {
+void removeNode(String path, {bool recurse: true}) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return;
   SimpleNode node = getNode(path);
 
   if (node == null) {
     return;
+  }
+
+  if (recurse) {
+    String base = path;
+    if (!base.endsWith(&quot;/&quot;)) {
+      base += &quot;/&quot;;
+    }
+
+    List&lt;String&gt; targets = nodes.keys.where((String x) {
+      return x.startsWith(base);
+    }).toList();
+    targets.sort((a, b) {
+      return countCharacterFrequency(b, &quot;/&quot;).compareTo(
+        countCharacterFrequency(a, &quot;/&quot;)
+      );
+    });
+
+    for (String target in targets) {
+      removeNode(target, recurse: false);
+    }
   }
 
   node.onRemoving();
