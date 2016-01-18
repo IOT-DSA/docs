@@ -125,7 +125,7 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/utils/stream_controller.dart.html#line-10'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">BroadcastStreamController(
     [void onStartListen(), void onAllCancel(), void onListen(callback(T)), bool sync = false]) {
-  _controller = new StreamController&lt;T&gt;(sync:sync);
+  _controller = new StreamController&lt;T&gt;(sync: sync);
   _stream = new CachedStreamWrapper(
       _controller.stream
           .asBroadcastStream(onListen: _onListen, onCancel: _onCancel),

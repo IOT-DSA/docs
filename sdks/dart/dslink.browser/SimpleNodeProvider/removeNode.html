@@ -152,17 +152,15 @@ void removeNode(String path, {bool recurse: true}) {
       base += &quot;/&quot;;
     }
 
+    int baseSlashFreq = countCharacterFrequency(base, &quot;/&quot;);
+
     List&lt;String&gt; targets = nodes.keys.where((String x) {
-      return x.startsWith(base);
+      return x.startsWith(base) &amp;&amp;
+        baseSlashFreq == countCharacterFrequency(x, &quot;/&quot;);
     }).toList();
-    targets.sort((a, b) {
-      return countCharacterFrequency(b, &quot;/&quot;).compareTo(
-        countCharacterFrequency(a, &quot;/&quot;)
-      );
-    });
 
     for (String target in targets) {
-      removeNode(target, recurse: false);
+      removeNode(target);
     }
   }
 
