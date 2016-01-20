@@ -136,7 +136,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-451'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-446'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 void removeNode(String path, {bool recurse: true}) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return;
@@ -164,10 +164,10 @@ void removeNode(String path, {bool recurse: true}) {
     }
   }
 
-  node.onRemoving();
-  node.removed = true;
   Path p = new Path(path);
   SimpleNode pnode = getNode(p.parentPath);
+  node.onRemoving();
+  node.removed = true;
 
   if (pnode != null) {
     pnode.children.remove(p.name);

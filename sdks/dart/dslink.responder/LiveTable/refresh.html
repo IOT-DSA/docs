@@ -123,17 +123,11 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.3/src/responder/simple/simple_node.dart.html#line-135'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void refresh([int idx = -1]) {
   if (_resp != null) {
-    if (idx == -1) {
-      _resp.updateStream(getCurrentState(), columns: columns.map((x) {
-        return x.getData();
-      }).toList(), streamStatus: StreamStatus.open, meta: {
-        &quot;mode&quot;: &quot;refresh&quot;
-      });
-    } else {
-      _resp.updateStream(getCurrentState(idx), streamStatus: StreamStatus.open, meta: {
-        &quot;modify&quot;: &quot;replace ${idx}-${rows.length}&quot;
-      });
-    }
+    _resp.updateStream(getCurrentState(), columns: columns.map((x) {
+      return x.getData();
+    }).toList(), streamStatus: StreamStatus.open, meta: {
+      &quot;mode&quot;: &quot;refresh&quot;
+    });
   }
 }</code></pre>
     </section>
