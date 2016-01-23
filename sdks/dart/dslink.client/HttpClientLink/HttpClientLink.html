@@ -148,6 +148,12 @@
     }
   }
 
+  if (formats == null &amp;&amp;
+    const String.fromEnvironment(&quot;dsa.codec.formats&quot;) != null) {
+    var formatString = const String.fromEnvironment(&quot;dsa.codec.formats&quot;);
+    formats = formatString.split(&quot;,&quot;);
+  }
+
   if (formats != null) {
     this.formats = formats;
   }
