@@ -211,7 +211,9 @@ If <code>storage</code> is not specified, it uses the <a href="dslink.browser/Lo
 
   String keyPath = &quot;dsa_key:${window.location.pathname}&quot;;
   String keyLockPath = &quot;dsa_key_lock:${window.location.pathname}&quot;;
-  String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch} ${DSRandom.instance.nextUint16()} ${DSRandom.instance.nextUint16()}&quot;;
+  String randomToken = &quot;${new DateTime.now().millisecondsSinceEpoch}&quot;
+    &quot; ${DSRandom.instance.nextUint16()}&quot;
+    &quot; ${DSRandom.instance.nextUint16()}&quot;;
 
   bool hasKeyPath = false;
 
