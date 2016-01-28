@@ -151,6 +151,7 @@
   if (error != null) {
     m[&apos;error&apos;] = error.serialize();
   }
+  _responses.remove(rid);
   addToSendList(m);
 }</code></pre>
     </section>
