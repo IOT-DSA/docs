@@ -103,6 +103,7 @@
       <li><a href="dslink/LinkProvider/link.html">link</a></li>
       <li><a href="dslink/LinkProvider/linkData.html">linkData</a></li>
       <li><a href="dslink/LinkProvider/loadNodesJson.html">loadNodesJson</a></li>
+      <li><a href="dslink/LinkProvider/logTag.html">logTag</a></li>
       <li><a href="dslink/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink/LinkProvider/overrideRequester.html">overrideRequester</a></li>
       <li><a href="dslink/LinkProvider/overrideResponder.html">overrideResponder</a></li>
@@ -128,6 +129,7 @@
       <li><a href="dslink/LinkProvider/close.html">close</a></li>
       <li><a href="dslink/LinkProvider/configure.html">configure</a></li>
       <li><a href="dslink/LinkProvider/connect.html">connect</a></li>
+      <li><a href="dslink/LinkProvider/createHttpLink.html">createHttpLink</a></li>
       <li><a href="dslink/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink/LinkProvider/init.html">init</a></li>
@@ -165,7 +167,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.6+1/client.dart.html#line-443'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.6+1/client.dart.html#line-446'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void init() {
   if (!_configured) {
     if (!configure()) {
@@ -198,13 +200,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
   loadNodesFile();
 
   void doRun() {
-    link = new HttpClientLink(brokerUrl, prefix, privateKey,
-        isRequester: isRequester,
-        isResponder: isResponder,
-        nodeProvider: provider,
-        overrideRequester:overrideRequester,
-        overrideResponder:overrideResponder,
-        home: home, token:token, linkData:linkData);
+    link = createHttpLink();
     _ready = true;
 
     if (_connectOnReady) {
@@ -218,11 +214,11 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
       await discovery.init();
       try {
         var broker = await chooseBroker(discovery.discover());
-        print(&quot;Discovered Broker at ${broker}&quot;);
+        logger.info(&quot;Discovered Broker at ${broker}&quot;);
         brokerUrl = broker;
         doRun();
-      } catch (e) {
-        print(&quot;Failed to discover a broker.&quot;);
+      } catch (e, stack) {
+        logger.severe(&quot;Failed to discover a broker.&quot;, e, stack);
         exit(1);
       }
     });
