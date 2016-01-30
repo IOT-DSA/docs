@@ -122,11 +122,19 @@
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7/io.dart.html#line-63'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; connectToWebSocket(
-    String url, {Iterable&lt;String&gt; protocols, Map&lt;String, dynamic&gt; headers, HttpClient httpClient}) async {
+    String url, {
+    Iterable&lt;String&gt; protocols,
+    Map&lt;String, dynamic&gt; headers,
+    HttpClient httpClient
+  }) async {
   Uri uri = Uri.parse(url);
 
-  if (enableStandardWebSocket) {
-    return await WebSocket.connect(url, protocols: protocols, headers: headers);
+  if (enableStandardWebSocket &amp;&amp; uri.scheme != &quot;wss&quot;) {
+    return await WebSocket.connect(
+      url,
+      protocols: protocols,
+      headers: headers
+    );
   }
 
   if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
