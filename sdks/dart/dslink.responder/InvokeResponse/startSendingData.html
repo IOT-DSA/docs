@@ -90,6 +90,7 @@
       <li><a href="dslink.responder/InvokeResponse/node.html">node</a></li>
       <li><a href="dslink.responder/InvokeResponse/onClose.html">onClose</a></li>
       <li><a href="dslink.responder/InvokeResponse/onReqParams.html">onReqParams</a></li>
+      <li><a href="dslink.responder/InvokeResponse/onSendUpdate.html">onSendUpdate</a></li>
       <li><a href="dslink.responder/InvokeResponse/parentNode.html">parentNode</a></li>
       <li><a href="dslink.responder/InvokeResponse/pendingData.html">pendingData</a></li>
       <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
@@ -125,7 +126,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/response/invoke.dart.html#line-62'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/response/invoke.dart.html#line-64'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 void startSendingData(int currentTime, int waitingAckId) {
   _pendingSending = false;
@@ -142,8 +143,18 @@ void startSendingData(int currentTime, int waitingAckId) {
     if (update.columns != null) {
       outColumns = TableColumn.serializeColumns(update.columns);
     }
-    responder.updateResponse(this, update.updates,
-        streamStatus: update.status, columns: outColumns, meta:update.meta);
+
+    responder.updateResponse(
+      this,
+      update.updates,
+      streamStatus: update.status,
+      columns: outColumns,
+      meta: update.meta, handleMap: (m) {
+      if (onSendUpdate != null) {
+        onSendUpdate(this, m);
+      }
+    });
+
     if (_sentStreamStatus == StreamStatus.closed) {
       _close();
       break;
