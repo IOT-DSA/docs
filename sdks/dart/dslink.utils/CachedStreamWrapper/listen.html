@@ -150,7 +150,11 @@ object describing the error.</p>
 <code>void onError(error, StackTrace stackTrace)</code>. If <code>onError</code> accepts
 two arguments it is called with the stack trace (which could be <code>null</code> if
 the stream itself received an error without stack trace).
-Otherwise it is called with just the error object.</p>
+Otherwise it is called with just the error object.
+If <code>onError</code> is omitted, any errors on the stream are considered unhandled,
+and will be passed to the current <code>Zone</code>'s error handler.
+By default unhandled async errors are treated
+as if they were uncaught top-level errors.</p>
 <p>If this stream closes, the <code>onDone</code> handler is called.</p>
 <p>If <code>cancelOnError</code> is true, the subscription is ended when
 the first error is reported. The default is false.</p>
