@@ -93,7 +93,6 @@
       <li><a href="dslink.requester/RemoteNode/listed.html">listed</a></li>
       <li><a href="dslink.requester/RemoteNode/name.html">name</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
-      <li><a href="dslink.requester/RemoteNode/referenceCount.html">referenceCount</a></li>
       <li><a href="dslink.requester/RemoteNode/remotePath.html">remotePath</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNode/runtimeType.html">runtimeType</a></li>
     
@@ -103,7 +102,6 @@
       <li class="section-title"><a href="dslink.requester/RemoteNode-class.html#instance-methods">Methods</a></li>
       <li class="inherited"><a href="dslink.browser/Node/addChild.html">addChild</a></li>
       <li><a href="dslink.requester/RemoteNode/createListController.html">createListController</a></li>
-      <li><a href="dslink.requester/RemoteNode/decreaseRefCount.html">decreaseRefCount</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachAttribute.html">forEachAttribute</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachChild.html">forEachChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/forEachConfig.html">forEachConfig</a></li>
@@ -112,7 +110,6 @@
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getConfig.html">getConfig</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
-      <li><a href="dslink.requester/RemoteNode/increaseRefCount.html">increaseRefCount</a></li>
       <li><a href="dslink.requester/RemoteNode/isSelfUpdated.html">isSelfUpdated</a></li>
       <li><a href="dslink.requester/RemoteNode/isUpdated.html">isUpdated</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNode/noSuchMethod.html">noSuchMethod</a></li>
@@ -133,8 +130,10 @@
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/node_cache.dart.html#line-137'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">RemoteNode(this.remotePath);</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/node_cache.dart.html#line-69'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">RemoteNode(this.remotePath) {
+  _getRawName();
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
