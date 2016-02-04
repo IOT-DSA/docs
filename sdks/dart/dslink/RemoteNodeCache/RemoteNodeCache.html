@@ -87,9 +87,7 @@
         <a href="dslink/RemoteNodeCache-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/RemoteNodeCache/cachedNodePaths.html">cachedNodePaths</a></li>
-      <li><a href="dslink/RemoteNodeCache/cleanerTimeInterval.html">cleanerTimeInterval</a></li>
       <li class="inherited"><a href="dslink/RemoteNodeCache/hashCode.html">hashCode</a></li>
-      <li><a href="dslink/RemoteNodeCache/isDanglingNode.html">isDanglingNode</a></li>
       <li class="inherited"><a href="dslink/RemoteNodeCache/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink/RemoteNodeCache-class.html#operators">Operators</a></li>
@@ -114,16 +112,14 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">RemoteNodeCache</span>(<wbr>{<span class="parameter" id="-param-enableAutoNodeCleaner"><span class="type-annotation">bool</span> <span class="parameter-name">enableAutoNodeCleaner</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isDanglingNode"><span class="type-annotation">Function</span> <span class="parameter-name">isDanglingNode</span>: <span class="default-value">_clearNodeIfRefZero</span></span>, <span class="parameter" id="-param-cleanerTimeInterval"><span class="parameter-name">cleanerTimeInterval</span></span>})
+            <span class="name ">RemoteNodeCache</span>(<wbr>{<span class="parameter" id="-param-enableAutoNodeCleaner"><span class="type-annotation">bool</span> <span class="parameter-name">enableAutoNodeCleaner</span>: <span class="default-value">true</span></span>})
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/node_cache.dart.html#line-13'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/node_cache.dart.html#line-10'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">RemoteNodeCache({
-  bool enableAutoNodeCleaner: true,
-  this.isDanglingNode: _clearNodeIfRefZero,
-  this.cleanerTimeInterval
+  bool enableAutoNodeCleaner: true
 }) {
   if (enableAutoNodeCleaner) {
     startNodeCleaner();
