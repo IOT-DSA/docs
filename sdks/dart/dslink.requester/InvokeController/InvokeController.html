@@ -128,7 +128,7 @@
     &apos;params&apos;: params
   };
 
-  node._ref();
+  node.increaseRefCount();
 
   if (maxPermission != Permission.CONFIG) {
     reqMap[&apos;permit&apos;] = Permission.names[maxPermission];

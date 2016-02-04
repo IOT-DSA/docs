@@ -120,7 +120,7 @@
       <pre><code class="prettyprint lang-dart">ReqSubscribeController(this.node, this.requester) {
   sid = requester._subscription.getNextSid();
 
-  node._ref();
+  node.increaseRefCount();
 }</code></pre>
     </section>
 
