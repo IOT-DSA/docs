@@ -121,12 +121,14 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/request/list.dart.html#line-214'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/requester/request/list.dart.html#line-213'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void onStartListen() {
   if (request == null &amp;&amp; !waitToSend) {
     waitToSend = true;
     requester.addProcessor(this);
   }
+
+  node._ref();
 }</code></pre>
     </section>
 

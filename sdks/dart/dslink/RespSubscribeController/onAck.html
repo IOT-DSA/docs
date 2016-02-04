@@ -120,7 +120,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/response/subscribe.dart.html#line-333'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/response/subscribe.dart.html#line-342'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void onAck(int ackId) {
   if (waitingValues.isEmpty) {
     return;
@@ -128,7 +128,7 @@
   bool valueRemoved = false;
   if (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck != ackId) {
     var msg = &apos;${waitingValues.first.value} ${waitingValues.first.waitingAck}&apos;;
-    logger.warning(&apos;invalid ack ${msg}&apos;);
+    logger.fine(&apos;invalid ack ${msg}&apos;);
 
     ValueUpdate matchUpdate;
     for (ValueUpdate update in waitingValues) {

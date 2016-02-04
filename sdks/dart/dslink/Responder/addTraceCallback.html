@@ -134,14 +134,17 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/responder.dart.html#line-500'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/responder.dart.html#line-504'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void addTraceCallback(ResponseTraceCallback _traceCallback) {
   _subscription.addTraceCallback(_traceCallback);
   _responses.forEach((int rid, Response response){
     _traceCallback(response.getTraceData());
   });
 
-  if (_traceCallbacks == null) _traceCallbacks = new List&lt;ResponseTraceCallback&gt;();
+  if (_traceCallbacks == null)
+    _traceCallbacks = new LeakProofList&lt;ResponseTraceCallback&gt;.create(
+      &quot;responder trace callbacks&quot;
+    );
 
   _traceCallbacks.add(_traceCallback);
 }</code></pre>
