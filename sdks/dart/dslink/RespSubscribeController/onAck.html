@@ -127,9 +127,6 @@
   }
   bool valueRemoved = false;
   if (!waitingValues.isEmpty &amp;&amp; waitingValues.first.waitingAck != ackId) {
-    var msg = &apos;${waitingValues.first.value} ${waitingValues.first.waitingAck}&apos;;
-    logger.warning(&apos;invalid ack ${msg}&apos;);
-
     ValueUpdate matchUpdate;
     for (ValueUpdate update in waitingValues) {
       if (update.waitingAck == ackId) {
