@@ -134,14 +134,17 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/browser.dart.html#line-127'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/browser.dart.html#line-128'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Future save() async {
   if (provider is! SerializableNodeProvider) {
     return;
   }
 
   await dataStore.store(&quot;dsa_nodes&quot;,
-      DsJson.encode((provider as SerializableNodeProvider).save()));
+    DsJson.encode(
+      (provider as SerializableNodeProvider).save()
+    )
+  );
 }</code></pre>
     </section>
 

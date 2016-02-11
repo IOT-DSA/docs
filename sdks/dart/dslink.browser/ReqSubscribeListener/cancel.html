@@ -115,17 +115,19 @@
       <span class="name ">cancel</span>(<wbr>)
     </section>
     <section class="desc markdown">
-      <p>Cancels this subscription. It will no longer receive events.</p>
-<p>May return a future which completes when the stream is done cleaning up.
-This can be used if the stream needs to release some resources
-that are needed for a following operation,
-for example a file being read, that should be deleted afterwards.
-In that case, the file may not be able to be deleted successfully
-until the returned future has completed.</p>
-<p>The future will be completed with a <code>null</code> value.
+      <p>Cancels this subscription.</p>
+<p>After this call, the subscription no longer receives events.</p>
+<p>The stream may need to shut down the source of events and clean up after
+the subscription is canceled.</p>
+<p>Returns a future that is completed once the stream has finished
+its cleanup. May also return <code>null</code> if no cleanup was necessary.</p>
+<p>Typically, futures are returned when the stream needs to release resources.
+For example, a stream might need to close an open file (as an asynchronous
+operation). If the listener wants to delete the file after having
+canceled the subscription, it must wait for the cleanup future to complete.</p>
+<p>A returned future completes with a <code>null</code> value.
 If the cleanup throws, which it really shouldn't, the returned future
-will be completed with that error.</p>
-<p>Returns <code>null</code> if there is no need to wait.</p>
+completes with that error.</p>
     </section>
     
     <section class="summary source-code" id="source">

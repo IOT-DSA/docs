@@ -154,12 +154,16 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/base_impl/local_node_impl.dart.html#line-70'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/base_impl/local_node_impl.dart.html#line-74'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">Response removeAttribute(String name, Responder responder,
     Response response) {
   if (attributes.containsKey(name)) {
     attributes.remove(name);
     updateList(name);
+
+    if (provider is SerializableNodeProvider) {
+      (provider as SerializableNodeProvider).persist();
+    }
   }
   return response..close();
 }</code></pre>

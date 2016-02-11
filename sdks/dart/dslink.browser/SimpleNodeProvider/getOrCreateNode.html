@@ -110,10 +110,12 @@
       <li><a href="dslink.browser/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/persist.html">persist</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
@@ -133,7 +135,7 @@ If it does not exist, create a new node and return it.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/simple/simple_node.dart.html#line-275'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/src/responder/simple/simple_node.dart.html#line-280'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
   LocalNode node = getNode(path);
 
@@ -141,13 +143,12 @@ If it does not exist, create a new node and return it.</p>
     return node;
   }
 
-  return createNode(path);
-//    if (addToTree) {
-//      return createNode(path);
-//    } else {
-//      node = new SimpleNode(path, this);
-//      return node;
-//    }
+  if (addToTree) {
+    return createNode(path);
+  } else {
+    node = new SimpleNode(path, this);
+    return node;
+  }
 }</code></pre>
     </section>
 

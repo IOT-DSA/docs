@@ -144,6 +144,7 @@
 
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
+    (provider as SimpleNodeProvider).setPersistFunction(save);
   }
 
   if (loadNodes &amp;&amp; provider is SerializableNodeProvider) {

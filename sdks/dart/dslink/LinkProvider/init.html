@@ -86,6 +86,7 @@
         <a href="dslink/LinkProvider-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink/LinkProvider/args.html">args</a></li>
+      <li><a href="dslink/LinkProvider/basePath.html">basePath</a></li>
       <li><a href="dslink/LinkProvider/brokerUrl.html">brokerUrl</a></li>
       <li><a href="dslink/LinkProvider/command.html">command</a></li>
       <li><a href="dslink/LinkProvider/defaultLogLevel.html">defaultLogLevel</a></li>
@@ -167,7 +168,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/client.dart.html#line-446'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/client.dart.html#line-448'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void init() {
   if (!_configured) {
     if (!configure()) {
@@ -195,6 +196,7 @@ If the <a href="dslink/LinkProvider/configure.html">configure</a> method is not 
 
   if (provider == null) {
     provider = new SimpleNodeProvider(null, profiles);
+    (provider as SimpleNodeProvider).setPersistFunction(saveAsync);
   }
 
   loadNodesFile();

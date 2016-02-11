@@ -452,6 +452,16 @@ If it does not exist, create a new node and return it.<a href="dslink/SimpleNode
 </p>
           <div class="features">inherited</div>
         </dd>
+        <dt id="persist" class="callable">
+          <span class="name"><a href="dslink/SimpleNodeProvider/persist.html">persist</a></span><span class="signature">(<wbr>[<span class="parameter" id="persist-param-now"><span class="type-annotation">bool</span> <span class="parameter-name">now</span> = <span class="default-value">false</span></span>])
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Persist the nodes in this provider.
+If you are not using a LinkProvider, then call <a href="dslink/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a> to set
+the function that is called to persist.</p>
+        </dd>
         <dt id="registerResolver" class="callable">
           <span class="name"><a href="dslink/SimpleNodeProvider/registerResolver.html">registerResolver</a></span><span class="signature">(<wbr><span class="parameter" id="registerResolver-param-factory"><span class="type-annotation"><a href="dslink/SimpleNodeFactory.html">SimpleNodeFactory</a></span> <span class="parameter-name">factory</span>(<span class="parameter" id="SimpleNodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -483,6 +493,14 @@ If it does not exist, create a new node and return it.<a href="dslink/SimpleNode
         </dt>
         <dd>
           <p>Sets the given <code>node</code> to the given <code>path</code>.</p>
+        </dd>
+        <dt id="setPersistFunction" class="callable">
+          <span class="name"><a href="dslink/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></span><span class="signature">(<wbr><span class="parameter" id="setPersistFunction-param-doPersist"><span class="type-annotation"><a href="dslink.utils/ExecutableFunction.html">ExecutableFunction</a></span> <span class="parameter-name">doPersist</span>()</span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Sets the function that persists the nodes.</p>
         </dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></span><span class="signature">(<wbr>)
@@ -551,10 +569,12 @@ If it does not exist, create a new node and return it.<a href="dslink/SimpleNode
       <li><a href="dslink/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/init.html">init</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li><a href="dslink/SimpleNodeProvider/persist.html">persist</a></li>
       <li><a href="dslink/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink/SimpleNodeProvider/setNode.html">setNode</a></li>
+      <li><a href="dslink/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
       <li class="inherited"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/updateValue.html">updateValue</a></li>

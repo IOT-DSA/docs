@@ -161,6 +161,11 @@
     }
 
     attributes[name] = value;
+
+    if (provider is SerializableNodeProvider) {
+      (provider as SerializableNodeProvider).persist();
+    }
+
     return null;
   }
 }</code></pre>

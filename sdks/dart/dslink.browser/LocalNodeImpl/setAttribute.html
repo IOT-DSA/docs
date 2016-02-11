@@ -160,6 +160,10 @@
   if (!attributes.containsKey(name) || attributes[name] != value) {
     attributes[name] = value;
     updateList(name);
+
+    if (provider is SerializableNodeProvider) {
+      (provider as SerializableNodeProvider).persist();
+    }
   }
   return response..close();
 }</code></pre>

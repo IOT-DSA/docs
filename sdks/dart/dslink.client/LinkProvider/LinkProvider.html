@@ -87,6 +87,7 @@
         <a href="dslink.client/LinkProvider-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.client/LinkProvider/args.html">args</a></li>
+      <li><a href="dslink.client/LinkProvider/basePath.html">basePath</a></li>
       <li><a href="dslink.client/LinkProvider/brokerUrl.html">brokerUrl</a></li>
       <li><a href="dslink.client/LinkProvider/command.html">command</a></li>
       <li><a href="dslink.client/LinkProvider/defaultLogLevel.html">defaultLogLevel</a></li>
@@ -182,25 +183,25 @@ Both <a href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> and <code>
     this.args,
     this.prefix,
     {
-    this.isRequester: false,
-    this.command: &quot;link&quot;,
-    this.isResponder: true,
-    this.defaultNodes,
-    Map nodes,
-    this.profiles,
-    this.provider,
-    this.enableHttp: true,
-    this.encodePrettyJson: false,
-    bool autoInitialize: true,
-    this.strictOptions: false,
-    this.exitOnFailure: true,
-    this.loadNodesJson: true,
-    this.defaultLogLevel: &quot;INFO&quot;,
-    this.savePrivateKey: true,
-    this.overrideRequester,
-    this.overrideResponder,
-    NodeProvider nodeProvider, // For Backwards Compatibility
-    this.linkData
+      this.isRequester: false,
+      this.command: &quot;link&quot;,
+      this.isResponder: true,
+      this.defaultNodes,
+      Map nodes,
+      this.profiles,
+      this.provider,
+      this.enableHttp: true,
+      this.encodePrettyJson: false,
+      bool autoInitialize: true,
+      this.strictOptions: false,
+      this.exitOnFailure: true,
+      this.loadNodesJson: true,
+      this.defaultLogLevel: &quot;INFO&quot;,
+      this.savePrivateKey: true,
+      this.overrideRequester,
+      this.overrideResponder,
+      NodeProvider nodeProvider, // For Backwards Compatibility
+      this.linkData
     }) {
   exitOnFailure = !(const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false));
 
