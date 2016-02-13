@@ -132,7 +132,7 @@
       waitingValues.addAll(lastValues);
     }
   } else {
-    lastValues.clear();
+    lastValues.length = 0;
     if (waitingValues != null) {
       waitingValues.clear();
       waitingValues.add(values.last);

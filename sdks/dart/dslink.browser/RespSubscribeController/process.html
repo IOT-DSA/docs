@@ -133,7 +133,7 @@
         update.waitingAck = waitingAckId;
       }
     }
-    lastValues.clear();
+    lastValues.length = 0;
   } else {
     if (lastValue.count &gt; 1 || lastValue.status != null) {
       Map m = lastValue.toMap();

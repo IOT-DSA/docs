@@ -131,7 +131,7 @@
       for (ValueUpdate update in lastValues) {
         lastValue.mergeAdd(update);
       }
-      lastValues.clear();
+      lastValues.length = 0;
       if (_qosLevel &gt; 0) {
         if (_storage != null) {
           _storage.setValue(waitingValues, lastValue);
