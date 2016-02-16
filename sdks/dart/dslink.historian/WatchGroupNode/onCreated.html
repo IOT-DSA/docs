@@ -188,7 +188,7 @@ This is called after a node is deserialized as well.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/historian.dart.html#line-802'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/historian.dart.html#line-815'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onCreated() {
   var p = new Path(path);
@@ -207,6 +207,22 @@ onCreated() {
       {
         &quot;name&quot;: &quot;Path&quot;,
         &quot;type&quot;: &quot;string&quot;
+      }
+    ]
+  });
+
+  link.addNode(&quot;${path}/publish&quot;, {
+    r&quot;$name&quot;: &quot;Publish&quot;,
+    r&quot;$invokable&quot;: &quot;write&quot;,
+    r&quot;$is&quot;: &quot;publishValue&quot;,
+    r&quot;$params&quot;: [
+      {
+        &quot;name&quot;: &quot;Path&quot;,
+        &quot;type&quot;: &quot;string&quot;
+      },
+      {
+        &quot;name&quot;: &quot;Value&quot;,
+        &quot;type&quot;: &quot;dynamic&quot;
       }
     ]
   });

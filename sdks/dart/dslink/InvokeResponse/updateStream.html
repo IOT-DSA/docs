@@ -130,7 +130,7 @@
     {List columns, String streamStatus: StreamStatus.open,
       Map meta, bool autoSendColumns: true}) {
   if (meta != null &amp;&amp; meta[&apos;mode&apos;] == &apos;refresh&apos;) {
-    pendingData.clear();
+    pendingData.length = 0;
   }
 
   if (!_hasSentColumns) {
