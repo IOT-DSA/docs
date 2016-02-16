@@ -194,12 +194,15 @@
   List&lt;ValueEntry&gt; entries = buffer.map(asValueEntry).toList();
 
   if (entries.isNotEmpty) {
-    if (!isStartDateFilled) {
-      link.updateValue(&quot;${path}/startDate&quot;, entries.first.timestamp);
-    }
+    try {
+      if (!isStartDateFilled) {
+        link.updateValue(&quot;${path}/startDate&quot;, entries.first.timestamp);
+      }
 
-    link.updateValue(&quot;${path}/lwv&quot;, entries.last.value);
-    link.updateValue(&quot;${path}/endDate&quot;, entries.last.timestamp);
+      link.updateValue(&quot;${path}/lwv&quot;, entries.last.value);
+      link.updateValue(&quot;${path}/endDate&quot;, entries.last.timestamp);
+    } catch (e) {
+    }
   }
   buffer.clear();
   await group.storeValues(entries);
