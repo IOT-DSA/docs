@@ -242,7 +242,7 @@ onInvoke(Map&lt;String, dynamic&gt; params) async* {
 
       if (buffer.isNotEmpty) {
         yield buffer;
-        buffer.clear();
+        buffer.length = 0;
       }
     }
   } catch (e) {

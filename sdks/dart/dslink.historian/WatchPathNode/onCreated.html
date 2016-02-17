@@ -201,10 +201,14 @@ This is called after a node is deserialized as well.</p>
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/historian.dart.html#line-620'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onCreated() async {
-  String rp = configs[r&quot;$value_path&quot;];
+  String rp = configs[r&quot;$path&quot;];
+
+  if (rp == null) {
+    rp = configs[r&quot;$value_path&quot;];
+  }
 
   if (configs[r&quot;$publish&quot;] == true) {
-    isPublishOnly = configs[r&quot;$publish&quot;];
+    isPublishOnly = true;
   }
 
   valuePath = rp;

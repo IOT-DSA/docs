@@ -205,7 +205,7 @@ onInvoke(Map&lt;String, dynamic&gt; params) async {
   var node = await link.requester.getRemoteNode(wp);
   link.addNode(targetPath, {
     r&quot;$name&quot;: wp,
-    r&quot;$value_path&quot;: wp,
+    r&quot;$path&quot;: wp,
     r&quot;$is&quot;: &quot;watchPath&quot;,
     r&quot;$type&quot;: node.configs[r&quot;$type&quot;]
   });

@@ -195,11 +195,16 @@ You can return the following types from this method:
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/historian.dart.html#line-937'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.7+1/historian.dart.html#line-945'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 onInvoke(Map&lt;String, dynamic&gt; params) {
   var inputPath = params[&quot;Path&quot;];
   dynamic val = params[&quot;Value&quot;];
+  String ts = params[&quot;Timestamp&quot;];
+
+  if (ts == null) {
+    ts = ValueUpdate.getTs();
+  }
 
   if (inputPath is! String) {
     throw &quot;Path not provided.&quot;;
@@ -219,14 +224,14 @@ onInvoke(Map&lt;String, dynamic&gt; params) {
       r&quot;$is&quot;: &quot;watchPath&quot;,
       r&quot;$publish&quot;: true,
       r&quot;$type&quot;: &quot;dynamic&quot;,
-      r&quot;$value_path&quot;: inputPath
+      r&quot;$path&quot;: inputPath
     });
     link.save();
   } else {
     pn = node;
   }
 
-  pn.doUpdate(new ValueUpdate(val));
+  pn.doUpdate(new ValueUpdate(val, ts: ts));
 }</code></pre>
     </section>
 
