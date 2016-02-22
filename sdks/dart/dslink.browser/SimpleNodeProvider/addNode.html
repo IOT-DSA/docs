@@ -138,12 +138,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-444'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-447'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 SimpleNode addNode(String path, Map m) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
 
   Path p = new Path(path);
+  SimpleNode oldNode = getNode(path);
   SimpleNode pnode = getNode(p.parentPath);
 
   SimpleNode node;
@@ -159,6 +160,11 @@ SimpleNode addNode(String path, Map m) {
     } else {
       node = getOrCreateNode(path);
     }
+  }
+
+  if (oldNode != null) {
+    logger.fine(&quot;Found old node for ${path}: Copying subscriptions.&quot;);
+    node.callbacks.addAll(oldNode.callbacks);
   }
 
   nodes[path] = node;

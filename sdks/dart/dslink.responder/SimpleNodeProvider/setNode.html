@@ -133,7 +133,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-423'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-424'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">void setNode(String path, SimpleNode node, {bool registerChildren: false}) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
   Path p = new Path(path);
@@ -142,10 +142,12 @@
   nodes[path] = node;
 
   node.onCreated();
-  pnode.children[p.name] = node;
-  pnode.onChildAdded(p.name, node);
 
-  pnode.updateList(p.name);
+  if (pnode != null) {
+    pnode.children[p.name] = node;
+    pnode.onChildAdded(p.name, node);
+    pnode.updateList(p.name);
+  }
 
   if (registerChildren) {
     for (SimpleNode c in node.children.values) {
