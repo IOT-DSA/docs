@@ -135,7 +135,7 @@ If it does not exist, create a new node and return it.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-280'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-287'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
   LocalNode node = getNode(path);
 
@@ -148,8 +148,13 @@ If it does not exist, create a new node and return it.</p>
         if (parent != null &amp;&amp; !parent.children.containsKey(po.name)) {
           parent.addChild(po.name, node);
           parent.listChangeController.add(po.name);
+          node.listChangeController.add(r&quot;$is&quot;);
         }
       }
+    }
+
+    if (node is SimpleNode &amp;&amp; node._stub == true) {
+      node._stub = false;
     }
 
     return node;
@@ -158,7 +163,8 @@ If it does not exist, create a new node and return it.</p>
   if (addToTree) {
     return createNode(path);
   } else {
-    node = new SimpleNode(path, this);
+    node = new SimpleNode(path, this)
+      .._stub = true;
     nodes[path] = node;
     return node;
   }

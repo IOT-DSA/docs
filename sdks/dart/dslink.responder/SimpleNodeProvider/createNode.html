@@ -134,15 +134,24 @@ If a node already exists at this path, an exception is thrown.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-353'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-366'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">SimpleNode createNode(String path) {
   Path p = new Path(path);
+  LocalNode existing = nodes[path];
 
-  if (nodes.containsKey(path)) {
-    throw new Exception(&quot;Node at ${path} already exists.&quot;);
+  if (existing != null) {
+    if (existing is SimpleNode) {
+      if (existing._stub != true) {
+        throw new Exception(&quot;Node at ${path} already exists.&quot;);
+      } else {
+        existing._stub = false;
+      }
+    } else {
+      throw new Exception(&quot;Node at ${path} already exists.&quot;);
+    }
   }
 
-  SimpleNode node = new SimpleNode(path, this);
+  SimpleNode node = existing == null ? new SimpleNode(path, this) : existing;
   nodes[path] = node;
   node.onCreated();
   SimpleNode pnode;

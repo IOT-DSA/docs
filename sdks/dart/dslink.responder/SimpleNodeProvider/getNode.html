@@ -141,20 +141,7 @@
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-262'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 LocalNode getNode(String path) {
-  if (nodes.containsKey(path)) {
-    return nodes[path];
-  }
-
-  if (_resolverFactories.isNotEmpty) {
-    for (var f in _resolverFactories) {
-      var node = f(path);
-      if (node != null) {
-        return node;
-      }
-    }
-  }
-
-  return null;
+  return _getNode(path);
 }</code></pre>
     </section>
 

@@ -262,6 +262,33 @@ This includes:
     });
   }
 
+  if (const bool.fromEnvironment(&quot;dslink.debugger.console&quot;, defaultValue: false)) {
+    readStdinLines().listen((String cmd) {
+      if (cmd == &quot;list-stored-nodes&quot;) {
+        if (provider is SimpleNodeProvider) {
+          SimpleNodeProvider prov = provider;
+          print(prov.nodes.keys.join(&quot;\n&quot;));
+        } else {
+          print(&quot;Not a SimpleNodeProvider.&quot;);
+        }
+      } else if (cmd == &quot;list-stub-nodes&quot;) {
+        if (provider is SimpleNodeProvider) {
+          SimpleNodeProvider prov = provider;
+          for (var node in prov.nodes.values) {
+            Path p = new Path(node.path);
+            if (prov.nodes[p.parentPath] == null) {
+              print(node.path);
+            } else if (!prov.nodes[p.parentPath].children.containsKey(p.name)) {
+              print(node.path);
+            }
+          }
+        } else {
+          print(&quot;Not a SimpleNodeProvider.&quot;);
+        }
+      }
+    });
+  }
+
   if (const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false)) {
     var runtimeConfig = Zone.current[&quot;dslink.runtime.config&quot;];
 
