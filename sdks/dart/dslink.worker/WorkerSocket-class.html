@@ -78,7 +78,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.worker/Producer.html">Producer</a></li>
+      <li><a href="dslink.worker/Taker.html">Taker</a></li>
       <li><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></li>
       <li><a href="dslink.worker/WorkerMethod.html">WorkerMethod</a></li>
     
@@ -94,6 +94,7 @@
     
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#classes">Classes</a></li>
       <li><a href="dslink.worker/Worker-class.html">Worker</a></li>
+      <li><a href="dslink.worker/WorkerBuilder-class.html">WorkerBuilder</a></li>
       <li><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></li>
       <li><a href="dslink.worker/WorkerSession-class.html">WorkerSession</a></li>
       <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
@@ -335,7 +336,7 @@
           <p>Send an async error to a stream.</p>
         </dd>
         <dt id="addMethod" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerSocket/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-producer"><span class="type-annotation"><a href="dslink.utils/Producer.html">Producer</a></span> <span class="parameter-name">producer</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
+          <span class="name"><a href="dslink.worker/WorkerSocket/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-Taker"><span class="type-annotation"><a href="dslink.utils/Taker.html">Taker</a></span> <span class="parameter-name">Taker</span>(<span class="parameter" id="Taker-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -420,7 +421,7 @@ mapped to a new event.<a href="dslink.worker/WorkerSocket/asyncMap.html">&hellip
           <div class="features">inherited</div>
         </dd>
         <dt id="createSession" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerSocket/createSession.html">createSession</a></span><span class="signature">(<wbr>)
+          <span class="name"><a href="dslink.worker/WorkerSocket/createSession.html">createSession</a></span><span class="signature">(<wbr>[<span class="parameter" id="createSession-param-initial"><span class="parameter-name">initial</span></span>])
             <span class="returntype parameter">&#8594; Future&lt;<a href="dslink.worker/WorkerSession-class.html">WorkerSession</a>&gt;</span>
           </span>
         </dt>
@@ -535,7 +536,7 @@ into zero or more events.<a href="dslink.worker/WorkerSocket/expand.html">&helli
           <div class="features">inherited</div>
         </dd>
         <dt id="init" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerSocket/init.html">init</a></span><span class="signature">(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String, <a href="dslink.worker/Producer.html">Producer</a>&gt;</span> <span class="parameter-name">methods</span></span>})
+          <span class="name"><a href="dslink.worker/WorkerSocket/init.html">init</a></span><span class="signature">(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String, <a href="dslink.utils/Taker.html">Taker</a>&gt;</span> <span class="parameter-name">methods</span></span>})
             <span class="returntype parameter">&#8594; Future&lt;<a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a>&gt;</span>
           </span>
         </dt>

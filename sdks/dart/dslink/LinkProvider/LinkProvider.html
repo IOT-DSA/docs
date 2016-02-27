@@ -203,7 +203,7 @@ Both <a href="dslink/LinkProvider/defaultNodes.html">defaultNodes</a> and <code>
       NodeProvider nodeProvider, // For Backwards Compatibility
       this.linkData
     }) {
-  exitOnFailure = !(const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false));
+  exitOnFailure = Zone.current[&quot;dslink.runtime.config&quot;] is! Map;
 
   if (nodeProvider != null) {
     provider = nodeProvider;

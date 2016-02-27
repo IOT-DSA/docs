@@ -78,7 +78,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.worker/Producer.html">Producer</a></li>
+      <li><a href="dslink.worker/Taker.html">Taker</a></li>
       <li><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></li>
       <li><a href="dslink.worker/WorkerMethod.html">WorkerMethod</a></li>
     
@@ -94,6 +94,7 @@
     
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#classes">Classes</a></li>
       <li><a href="dslink.worker/Worker-class.html">Worker</a></li>
+      <li><a href="dslink.worker/WorkerBuilder-class.html">WorkerBuilder</a></li>
       <li><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></li>
       <li><a href="dslink.worker/WorkerSession-class.html">WorkerSession</a></li>
       <li><a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a></li>
@@ -207,7 +208,7 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="addMethod" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerPool/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-handler"><span class="type-annotation"><a href="dslink.utils/Producer.html">Producer</a></span> <span class="parameter-name">handler</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
+          <span class="name"><a href="dslink.worker/WorkerPool/addMethod.html">addMethod</a></span><span class="signature">(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-handler"><span class="type-annotation"><a href="dslink.utils/Taker.html">Taker</a></span> <span class="parameter-name">handler</span>(<span class="parameter" id="Taker-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
@@ -223,7 +224,7 @@
           <p></p>
         </dd>
         <dt id="createSession" class="callable">
-          <span class="name"><a href="dslink.worker/WorkerPool/createSession.html">createSession</a></span><span class="signature">(<wbr>)
+          <span class="name"><a href="dslink.worker/WorkerPool/createSession.html">createSession</a></span><span class="signature">(<wbr>[<span class="parameter" id="createSession-param-initialMessage"><span class="parameter-name">initialMessage</span></span>])
             <span class="returntype parameter">&#8594; Future&lt;<a href="dslink.worker/WorkerSession-class.html">WorkerSession</a>&gt;</span>
           </span>
         </dt>

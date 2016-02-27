@@ -163,7 +163,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-292'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-297'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">handleData(msg) {
   if (onReceivedMessageHandler != null) {
     onReceivedMessageHandler(msg);
@@ -236,7 +236,7 @@
     }
   } else if (type == &quot;session.created&quot;) {
     var id = msg[&quot;s&quot;];
-    _remoteSessions[id] = new _WorkerSession(this, id, false);
+    _remoteSessions[id] = new _WorkerSession(this, id, false, msg[&quot;n&quot;]);
     _sendPort.send({&quot;t&quot;: &quot;session.ready&quot;, &quot;s&quot;: id});
     _sessionController.add(_remoteSessions[id]);
   } else if (type == &quot;session.ready&quot;) {

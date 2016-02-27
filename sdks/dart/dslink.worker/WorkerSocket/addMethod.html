@@ -159,13 +159,13 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">addMethod</span>(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-producer"><span class="type-annotation"><a href="dslink.utils/Producer.html">Producer</a></span> <span class="parameter-name">producer</span>(<span class="parameter" id="Producer-param-input"><span class="parameter-name">input</span></span>)</span>)
+      <span class="name ">addMethod</span>(<wbr><span class="parameter" id="addMethod-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addMethod-param-Taker"><span class="type-annotation"><a href="dslink.utils/Taker.html">Taker</a></span> <span class="parameter-name">Taker</span>(<span class="parameter" id="Taker-param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-423'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void addMethod(String name, Producer producer) {
-  _requestHandlers[name] = producer;
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-428'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">void addMethod(String name, Taker Taker) {
+  _requestHandlers[name] = Taker;
 }</code></pre>
     </section>
 

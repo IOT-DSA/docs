@@ -124,12 +124,14 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSession-class.html">WorkerSession</a>&gt;</span>
-      <span class="name ">createSession</span>(<wbr>)
+      <span class="name ">createSession</span>(<wbr>[<span class="parameter" id="createSession-param-initialMessage"><span class="parameter-name">initialMessage</span></span>])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-191'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future&lt;WorkerSession&gt; createSession() =&gt; getAvailableWorker().createSession();</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-194'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;WorkerSession&gt; createSession([dynamic initialMessage]) {
+  return getAvailableWorker().createSession(initialMessage);
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->

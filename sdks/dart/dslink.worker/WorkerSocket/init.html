@@ -159,12 +159,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Future&lt;<a href="dslink.worker/WorkerSocket-class.html">WorkerSocket</a>&gt;</span>
-      <span class="name ">init</span>(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String, <a href="dslink.worker/Producer.html">Producer</a>&gt;</span> <span class="parameter-name">methods</span></span>})
+      <span class="name ">init</span>(<wbr>{<span class="parameter" id="init-param-methods"><span class="type-annotation">Map&lt;String, <a href="dslink.utils/Taker.html">Taker</a>&gt;</span> <span class="parameter-name">methods</span></span>})
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-414'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future&lt;WorkerSocket&gt; init({Map&lt;String, Producer&gt; methods}) {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-419'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">Future&lt;WorkerSocket&gt; init({Map&lt;String, Taker&gt; methods}) {
   if (methods != null) {
     for (var key in methods.keys) {
       addMethod(key, methods[key]);

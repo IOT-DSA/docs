@@ -289,7 +289,7 @@ This includes:
     });
   }
 
-  if (const bool.fromEnvironment(&quot;dslink.runtime.manager&quot;, defaultValue: false)) {
+  {
     var runtimeConfig = Zone.current[&quot;dslink.runtime.config&quot;];
 
     if (runtimeConfig != null) {
