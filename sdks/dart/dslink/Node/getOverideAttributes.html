@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="API docs for the overideAttributes property from the Node class, for the Dart programming language.">
-  <title>overideAttributes property - Node class - dslink library - Dart API</title>
+  <meta name="description" content="API docs for the getOverideAttributes method from the Node class, for the Dart programming language.">
+  <title>getOverideAttributes method - Node class - dslink library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
@@ -33,9 +33,9 @@
             <li><a href="index.html">dslink</a></li>
             <li><a href="dslink/dslink-library.html">dslink</a></li>
             <li><a href="dslink/Node-class.html">Node</a></li>
-            <li class="self-crumb">overideAttributes</li>
+            <li class="self-crumb">getOverideAttributes</li>
           </ol>
-          <div class="self-name">overideAttributes</div>
+          <div class="self-name">getOverideAttributes</div>
           <form class="search navbar-right" role="search">
             <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
           </form>
@@ -51,13 +51,16 @@
           <li><a href="index.html">dslink</a></li>
           <li><a href="dslink/dslink-library.html">dslink</a></li>
           <li><a href="dslink/Node-class.html">Node</a></li>
-          <li class="self-crumb">overideAttributes</li>
+          <li class="self-crumb">getOverideAttributes</li>
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">property</span> overideAttributes
+            <span class="kind">method</span> getOverideAttributes
           </h1>
         </div>
+        <ul class="subnav">
+          <li><a href="dslink/Node/getOverideAttributes.html#source">Source</a></li>
+        </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
   </div> <!-- /container -->
@@ -88,7 +91,6 @@
       <li><a href="dslink/Node/children.html">children</a></li>
       <li><a href="dslink/Node/configs.html">configs</a></li>
       <li class="inherited"><a href="dslink/Node/hashCode.html">hashCode</a></li>
-      <li><a href="dslink/Node/overideAttributes.html">overideAttributes</a></li>
       <li><a href="dslink/Node/profile.html">profile</a></li>
       <li class="inherited"><a href="dslink/Node/runtimeType.html">runtimeType</a></li>
     
@@ -104,6 +106,7 @@
       <li><a href="dslink/Node/getAttribute.html">getAttribute</a></li>
       <li><a href="dslink/Node/getChild.html">getChild</a></li>
       <li><a href="dslink/Node/getConfig.html">getConfig</a></li>
+      <li><a href="dslink/Node/getOverideAttributes.html">getOverideAttributes</a></li>
       <li><a href="dslink/Node/getSimpleMap.html">getSimpleMap</a></li>
       <li class="inherited"><a href="dslink/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink/Node/removeChild.html">removeChild</a></li>
@@ -113,20 +116,21 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
-
-
-      <section id="getter">
-      
-      <section class="multi-line-signature">
-        <span class="returntype">Map&lt;String, Object&gt;</span>
-        <span class="name ">overideAttributes</span></section>
-      
-      <section class="desc markdown">
-  <p>same as attributes for local node
+    <section class="multi-line-signature">
+      <span class="returntype">Object</span>
+      <span class="name ">getOverideAttributes</span>(<wbr><span class="parameter" id="getOverideAttributes-param-attr"><span class="type-annotation">String</span> <span class="parameter-name">attr</span></span>)
+    </section>
+    <section class="desc markdown">
+      <p>same as attributes for local node
 but different on remote node</p>
-</section>
-</section>
-
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/node.dart.html#line-25'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">Object getOverideAttributes(String attr) {
+  return attributes[attr];
+}</code></pre>
+    </section>
 
   </div> <!-- /.main-content -->
 

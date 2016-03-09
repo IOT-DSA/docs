@@ -373,17 +373,6 @@ See <code>listChangeController</code>.</p>
     read-only
   </div>
 </dd>
-        <dt id="overideAttributes" class="property inherited">
-          <span class="name"><a href="dslink.browser/Node/overideAttributes.html">overideAttributes</a></span>
-          <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
-        </dt>
-        <dd class="inherited">
-          <p>same as attributes for local node
-but different on remote node</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
         <dt id="path" class="property inherited">
           <span class="name"><a href="dslink.browser/LocalNode/path.html">path</a></span>
           <span class="signature">&#8594; String</span>
@@ -575,6 +564,16 @@ Otherwise this will fetch a child.</p>
         </dt>
         <dd class="inherited">
           <p>Gets the invoke permission for this node.</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="getOverideAttributes" class="callable inherited">
+          <span class="name"><a href="dslink.browser/Node/getOverideAttributes.html">getOverideAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="getOverideAttributes-param-attr"><span class="type-annotation">String</span> <span class="parameter-name">attr</span></span>)
+            <span class="returntype parameter">&#8594; Object</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>same as attributes for local node
+but different on remote node</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="getSetPermission" class="callable inherited">
@@ -772,7 +771,6 @@ Otherwise this will fetch a child.</p>
       <li class="inherited"><a href="dslink.browser/LocalNode/listReady.html">listReady</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/listStream.html">listStream</a></li>
       <li><a href="dslink/LocalNodeImpl/loaded.html">loaded</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/overideAttributes.html">overideAttributes</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/provider.html">provider</a></li>
@@ -796,6 +794,7 @@ Otherwise this will fetch a child.</p>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getConfig.html">getConfig</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/getOverideAttributes.html">getOverideAttributes</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/getSetPermission.html">getSetPermission</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/invoke.html">invoke</a></li>

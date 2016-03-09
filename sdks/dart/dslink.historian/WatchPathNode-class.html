@@ -386,17 +386,6 @@ This is the last component of this node's path.</p>
     read / write
   </div>
 </dd>
-        <dt id="overideAttributes" class="property inherited">
-          <span class="name"><a href="dslink.browser/Node/overideAttributes.html">overideAttributes</a></span>
-          <span class="signature">&#8594; Map&lt;String, Object&gt;</span>
-        </dt>
-        <dd class="inherited">
-          <p>same as attributes for local node
-but different on remote node</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
         <dt id="parent" class="property inherited">
           <span class="name"><a href="dslink.browser/SimpleNode/parent.html">parent</a></span>
           <span class="signature">&#8594; <a href="dslink.browser/SimpleNode-class.html">SimpleNode</a></span>
@@ -719,6 +708,16 @@ Otherwise this will fetch a child.</p>
         </dt>
         <dd class="inherited">
           <p>Gets the invoke permission for this node.</p>
+          <div class="features">inherited</div>
+        </dd>
+        <dt id="getOverideAttributes" class="callable inherited">
+          <span class="name"><a href="dslink.browser/Node/getOverideAttributes.html">getOverideAttributes</a></span><span class="signature">(<wbr><span class="parameter" id="getOverideAttributes-param-attr"><span class="type-annotation">String</span> <span class="parameter-name">attr</span></span>)
+            <span class="returntype parameter">&#8594; Object</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>same as attributes for local node
+but different on remote node</p>
           <div class="features">inherited</div>
         </dd>
         <dt id="getSetPermission" class="callable inherited">
@@ -1096,7 +1095,6 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a href="dslink.browser/SimpleNode/name.html">name</a></li>
       <li><a href="dslink.historian/WatchPathNode/onRemoveCallbacks.html">onRemoveCallbacks</a></li>
       <li><a href="dslink.historian/WatchPathNode/onSaveCallbacks.html">onSaveCallbacks</a></li>
-      <li class="inherited"><a href="dslink.browser/Node/overideAttributes.html">overideAttributes</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/parent.html">parent</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/path.html">path</a></li>
       <li class="inherited"><a href="dslink.browser/Node/profile.html">profile</a></li>
@@ -1133,6 +1131,7 @@ The name of the removed node is returned.</p>
       <li class="inherited"><a href="dslink.browser/Node/getChild.html">getChild</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getConfig.html">getConfig</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/getInvokePermission.html">getInvokePermission</a></li>
+      <li class="inherited"><a href="dslink.browser/Node/getOverideAttributes.html">getOverideAttributes</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/getSetPermission.html">getSetPermission</a></li>
       <li class="inherited"><a href="dslink.browser/Node/getSimpleMap.html">getSimpleMap</a></li>
       <li class="inherited"><a href="dslink.browser/SimpleNode/hasAttribute.html">hasAttribute</a></li>
