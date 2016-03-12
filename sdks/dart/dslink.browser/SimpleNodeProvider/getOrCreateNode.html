@@ -117,7 +117,7 @@
       <li><a href="dslink.browser/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
-      <li class="inherited"><a href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a href="dslink.browser/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.browser/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
@@ -138,7 +138,7 @@ If it does not exist, create a new node and return it.</p>
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-287'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">LocalNode getOrCreateNode(String path, [bool addToTree = true]) {
-  LocalNode node = getNode(path);
+  LocalNode node = _getNode(path, allowStubs: true);
 
   if (node != null) {
     if (addToTree) {
@@ -152,10 +152,10 @@ If it does not exist, create a new node and return it.</p>
           node.listChangeController.add(r&quot;$is&quot;);
         }
       }
-    }
 
-    if (node is SimpleNode &amp;&amp; node._stub == true) {
-      node._stub = false;
+      if (node is SimpleNode) {
+        node._stub = false;
+      }
     }
 
     return node;

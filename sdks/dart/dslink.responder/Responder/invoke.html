@@ -144,7 +144,9 @@
     parentNode = nodeProvider.getOrCreateNode(path.parentPath, false);
 
     doInvoke([LocalNode overriden]) {
-      LocalNode node = overriden == null ? nodeProvider.getNode(path.path) : overriden;
+      LocalNode node = overriden == null ?
+        nodeProvider.getNode(path.path) :
+        overriden;
       if (node == null) {
         if (overriden == null) {
           node = parentNode.getChild(path.name);
@@ -172,9 +174,15 @@
       }
 
       if (node.getInvokePermission() &lt;= permission) {
-        node.invoke(m[&apos;params&apos;], this,
-            addResponse(new InvokeResponse(this, rid, parentNode, node, path.name)), parentNode,
-            permission);
+        node.invoke(
+          m[&apos;params&apos;],
+          this,
+          addResponse(
+            new InvokeResponse(this, rid, parentNode, node, path.name)
+          ),
+          parentNode,
+          permission
+        );
       } else {
         closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
       }

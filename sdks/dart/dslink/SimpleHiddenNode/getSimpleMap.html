@@ -94,6 +94,7 @@
       <li class="inherited"><a href="dslink.browser/LocalNode/exists.html">exists</a></li>
       <li class="inherited"><a href="dslink/SimpleHiddenNode/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/hasSubscriber.html">hasSubscriber</a></li>
+      <li class="inherited"><a href="dslink.browser/SimpleNode/isStubNode.html">isStubNode</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/lastValueUpdate.html">lastValueUpdate</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/listChangeController.html">listChangeController</a></li>
       <li class="inherited"><a href="dslink.browser/LocalNode/listReady.html">listReady</a></li>
@@ -171,6 +172,11 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
+      <div>
+        <ol class="annotation-list">
+          <li>override</li>
+        </ol>
+      </div>
       <span class="returntype">Map</span>
       <span class="name ">getSimpleMap</span>(<wbr>)
     </section>
@@ -179,21 +185,26 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-1147'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Map getSimpleMap() {
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-1169'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">@override
+Map getSimpleMap() {
   Map rslt = {r&apos;$hidden&apos;:true};
   if (configs.containsKey(r&apos;$is&apos;)) {
     rslt[r&apos;$is&apos;] = configs[r&apos;$is&apos;];
   }
+
   if (configs.containsKey(r&apos;$type&apos;)) {
     rslt[r&apos;$type&apos;] = configs[r&apos;$type&apos;];
   }
+
   if (configs.containsKey(r&apos;$name&apos;)) {
     rslt[r&apos;$name&apos;] = configs[r&apos;$name&apos;];
   }
+
   if (configs.containsKey(r&apos;$invokable&apos;)) {
     rslt[r&apos;$invokable&apos;] = configs[r&apos;$invokable&apos;];
   }
+
   if (configs.containsKey(r&apos;$writable&apos;)) {
     rslt[r&apos;$writable&apos;] = configs[r&apos;$writable&apos;];
   }

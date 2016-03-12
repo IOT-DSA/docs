@@ -117,7 +117,7 @@
       <li><a href="dslink/SimpleNodeProvider/save.html">save</a></li>
       <li><a href="dslink/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li><a href="dslink/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
-      <li class="inherited"><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
+      <li><a href="dslink/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink/SimpleNodeProvider/updateValue.html">updateValue</a></li>
     </ol>
@@ -126,16 +126,41 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
+      <div>
+        <ol class="annotation-list">
+          <li>override</li>
+        </ol>
+      </div>
       <span class="returntype">String</span>
-      <span class="name ">toString</span>(<wbr>)
+      <span class="name ">toString</span>(<wbr>{<span class="parameter" id="toString-param-showInstances"><span class="type-annotation">bool</span> <span class="parameter-name">showInstances</span>: <span class="default-value">false</span></span>})
     </section>
     <section class="desc markdown">
       <p>Returns a string representation of this object.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/home/travis/dart-sdk/lib/core/object.dart.html#line-74'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">external String toString();</code></pre>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-595'>Link to Crossdart</a></h2>
+      <pre><code class="prettyprint lang-dart">@override
+String toString({bool showInstances: false}) {
+  var buff = new StringBuffer();
+
+  void doNode(LocalNode node, [int depth = 0]) {
+    Path p = new Path(node.path);
+    buff.write(&quot;${&apos;  &apos; * depth}- ${p.name}&quot;);
+
+    if (showInstances) {
+      buff.write(&quot;: ${node}&quot;);
+    }
+
+    buff.writeln();
+    for (var child in node.children.values) {
+      doNode(child, depth + 1);
+    }
+  }
+
+  doNode(root);
+  return buff.toString().trim();
+}</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
