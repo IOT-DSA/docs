@@ -139,7 +139,7 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-496'>Link to Crossdart</a></h2>
+      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-502'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
 SimpleNode addNode(String path, Map m) {
   if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
@@ -159,7 +159,7 @@ SimpleNode addNode(String path, Map m) {
     if (_profiles.containsKey(profile)) {
       node = _profiles[profile](path);
     } else {
-      node = getOrCreateNode(path);
+      node = getOrCreateNode(path, true, false);
     }
   }
 
@@ -170,7 +170,6 @@ SimpleNode addNode(String path, Map m) {
 
   nodes[path] = node;
   node.load(m);
-
   node.onCreated();
 
   if (pnode != null) {

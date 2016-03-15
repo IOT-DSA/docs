@@ -330,13 +330,14 @@ the provider is initialized with these values.</p>
           <p></p>
         </dd>
         <dt id="createNode" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></span><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/createNode.html">createNode</a></span><span class="signature">(<wbr><span class="parameter" id="createNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="createNode-param-init"><span class="type-annotation">bool</span> <span class="parameter-name">init</span> = <span class="default-value">true</span></span>])
             <span class="returntype parameter">&#8594; <a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
           </span>
         </dt>
         <dd>
           <p>Creates a node at <code>path</code>.
-If a node already exists at this path, an exception is thrown.</p>
+If a node already exists at this path, an exception is thrown.
+If <code>init</code> is false, onCreated() is not called.</p>
         </dd>
         <dt id="createResponder" class="callable">
           <span class="name"><a href="dslink.responder/SimpleNodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
@@ -355,7 +356,7 @@ If a node already exists at this path, an exception is thrown.</p>
           <p>Gets an existing node.</p>
         </dd>
         <dt id="getOrCreateNode" class="callable">
-          <span class="name"><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></span><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
+          <span class="name"><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></span><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>, <span class="parameter" id="getOrCreateNode-param-init"><span class="type-annotation">bool</span> <span class="parameter-name">init</span> = <span class="default-value">true</span></span>])
             <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
