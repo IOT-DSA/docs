@@ -173,9 +173,15 @@
         permission = maxPermit;
       }
 
+      Map params = m[&quot;params&quot;];
+
+      if (params == null) {
+        params = {};
+      }
+
       if (node.getInvokePermission() &lt;= permission) {
         node.invoke(
-          m[&apos;params&apos;],
+          params,
           this,
           addResponse(
             new InvokeResponse(this, rid, parentNode, node, path.name)
