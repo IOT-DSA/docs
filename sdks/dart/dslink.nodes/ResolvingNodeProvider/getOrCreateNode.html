@@ -131,7 +131,7 @@
         </ol>
       </div>
       <span class="returntype"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
-      <span class="name ">getOrCreateNode</span>(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
+      <span class="name ">getOrCreateNode</span>(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>, <span class="parameter" id="getOrCreateNode-param-init"><span class="type-annotation">bool</span> <span class="parameter-name">init</span> = <span class="default-value">true</span></span>])
     </section>
     <section class="desc markdown">
       <p>Gets a node at the given <code>path</code> if it exists.
@@ -143,7 +143,7 @@ When <code>init</code> is false, onCreated() is not called.</p>
     <section class="summary source-code" id="source">
       <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/nodes.dart.html#line-247'>Link to Crossdart</a></h2>
       <pre><code class="prettyprint lang-dart">@override
-LocalNode getOrCreateNode(String path, [bool addToTree = true]) =&gt; getNode(path);</code></pre>
+LocalNode getOrCreateNode(String path, [bool addToTree = true, bool init = true]) =&gt; getNode(path);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
