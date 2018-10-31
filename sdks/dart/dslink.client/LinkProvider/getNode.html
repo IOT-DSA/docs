@@ -96,7 +96,6 @@
       <li><a href="dslink.client/LinkProvider/enableHttp.html">enableHttp</a></li>
       <li><a href="dslink.client/LinkProvider/encodePrettyJson.html">encodePrettyJson</a></li>
       <li><a href="dslink.client/LinkProvider/exitOnFailure.html">exitOnFailure</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.client/LinkProvider/home.html">home</a></li>
       <li><a href="dslink.client/LinkProvider/isInitialized.html">isInitialized</a></li>
       <li><a href="dslink.client/LinkProvider/isRequester.html">isRequester</a></li>
@@ -108,34 +107,40 @@
       <li><a href="dslink.client/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.client/LinkProvider/overrideRequester.html">overrideRequester</a></li>
       <li><a href="dslink.client/LinkProvider/overrideResponder.html">overrideResponder</a></li>
+      <li><a href="dslink.client/LinkProvider/parsedArguments.html">parsedArguments</a></li>
       <li><a href="dslink.client/LinkProvider/prefix.html">prefix</a></li>
       <li><a href="dslink.client/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a href="dslink.client/LinkProvider/profiles.html">profiles</a></li>
       <li><a href="dslink.client/LinkProvider/provider.html">provider</a></li>
+      <li><a href="dslink.client/LinkProvider/qosPersistenceEnabled.html">qosPersistenceEnabled</a></li>
       <li><a href="dslink.client/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a href="dslink.client/LinkProvider/requester.html">requester</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.client/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a href="dslink.client/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a href="dslink.client/LinkProvider/strictTls.html">strictTls</a></li>
       <li><a href="dslink.client/LinkProvider/token.html">token</a></li>
+      <li><a href="dslink.client/LinkProvider/valuePersistenceEnabled.html">valuePersistenceEnabled</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#operators">Operators</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
       <li><a href="dslink.client/LinkProvider/operator_get.html">operator []</a></li>
       <li><a href="dslink.client/LinkProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.client/LinkProvider/addCommandLineOption.html">addCommandLineOption</a></li>
       <li><a href="dslink.client/LinkProvider/addNode.html">addNode</a></li>
       <li><a href="dslink.client/LinkProvider/chooseBroker.html">chooseBroker</a></li>
       <li><a href="dslink.client/LinkProvider/close.html">close</a></li>
       <li><a href="dslink.client/LinkProvider/configure.html">configure</a></li>
       <li><a href="dslink.client/LinkProvider/connect.html">connect</a></li>
       <li><a href="dslink.client/LinkProvider/createHttpLink.html">createHttpLink</a></li>
+      <li><a href="dslink.client/LinkProvider/getCommandLineValue.html">getCommandLineValue</a></li>
       <li><a href="dslink.client/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink.client/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.client/LinkProvider/init.html">init</a></li>
       <li><a href="dslink.client/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.client/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a href="dslink.client/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.client/LinkProvider/removeNode.html">removeNode</a></li>
@@ -143,16 +148,17 @@
       <li><a href="dslink.client/LinkProvider/saveAsync.html">saveAsync</a></li>
       <li><a href="dslink.client/LinkProvider/stop.html">stop</a></li>
       <li><a href="dslink.client/LinkProvider/syncValue.html">syncValue</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/toString.html">toString</a></li>
       <li><a href="dslink.client/LinkProvider/updateValue.html">updateValue</a></li>
       <li><a href="dslink.client/LinkProvider/val.html">val</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/LocalNode-class.html">LocalNode</a></span>
+      <span class="returntype"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
       <span class="name ">getNode</span>(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
     </section>
     <section class="desc markdown">
@@ -160,10 +166,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/client.dart.html#line-706'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">LocalNode getNode(String path) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">LocalNode getNode(String path) {
   return provider.getNode(path);
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -176,7 +182,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -196,6 +202,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

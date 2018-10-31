@@ -74,7 +74,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.worker/dslink.worker-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.worker/Taker.html">Taker</a></li>
+      <li><a href="dslink.utils/Taker.html">Taker</a></li>
       <li><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></li>
       <li><a href="dslink.worker/WorkerMethod.html">WorkerMethod</a></li>
     
@@ -102,20 +102,22 @@
 
     <section class="multi-line-signature">
         <span class="returntype"><a href="dslink.worker/WorkerPool-class.html">WorkerPool</a></span>
-        <span class="name ">createWorkerPool</span>(<wbr><span class="parameter" id="createWorkerPool-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span></span>, <span class="parameter" id="createWorkerPool-param-function"><span class="type-annotation"><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></span> <span class="parameter-name">function</span>(<span class="parameter" id="WorkerFunction-param-worker"><span class="type-annotation"><a href="dslink.worker/Worker-class.html">Worker</a></span> <span class="parameter-name">worker</span></span>)</span>, {<span class="parameter" id="createWorkerPool-param-metadata"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">metadata</span></span>})
+        <span class="name ">createWorkerPool</span>(<wbr><span class="parameter" id="createWorkerPool-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>, </span> <span class="parameter" id="createWorkerPool-param-function"><span class="type-annotation"><a href="dslink.worker/WorkerFunction.html">WorkerFunction</a></span> <span class="parameter-name">function</span>, {</span> <span class="parameter" id="createWorkerPool-param-metadata"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">metadata</span></span> })
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-75'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">WorkerPool createWorkerPool(int count, WorkerFunction function,
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">WorkerPool createWorkerPool(int count, WorkerFunction function,
     {Map&lt;String, dynamic&gt; metadata}) {
-  var workers = [];
+  var workers = &lt;WorkerSocket&gt;[];
   for (var i = 1; i &lt;= count; i++) {
-    workers.add(createWorker(function,
-        metadata: {&quot;workerId&quot;: i}..addAll(metadata == null ? {} : metadata)));
+    workers.add(
+      createWorker(function, metadata: {
+        &quot;workerId&quot;: i
+      }..addAll(metadata == null ? {} : metadata)));
   }
   return new WorkerPool(workers);
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -128,7 +130,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -148,6 +150,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

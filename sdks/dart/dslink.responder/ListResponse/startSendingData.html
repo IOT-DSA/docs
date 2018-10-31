@@ -86,13 +86,14 @@
         <a href="dslink.responder/ListResponse-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/ListResponse/changes.html">changes</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/ListResponse/initialResponse.html">initialResponse</a></li>
       <li><a href="dslink.responder/ListResponse/node.html">node</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/responder.html">responder</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/runtimeType.html">runtimeType</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/type.html">type</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/ListResponse-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/operator_equals.html">operator ==</a></li>
@@ -100,11 +101,11 @@
       <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/ListResponse/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
       <li><a href="dslink.responder/ListResponse/getTraceData.html">getTraceData</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/close.html">close</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/toString.html">toString</a></li>
     </ol>
 
@@ -114,16 +115,16 @@
     <section class="multi-line-signature">
       <div>
         <ol class="annotation-list">
-          <li>override</li>
+          <li>@override</li>
         </ol>
       </div>
       <span class="returntype">void</span>
-      <span class="name ">startSendingData</span>(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span></span>, <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
+      <span class="name ">startSendingData</span>(<wbr><span class="parameter" id="startSendingData-param-currentTime"><span class="type-annotation">int</span> <span class="parameter-name">currentTime</span>, </span> <span class="parameter" id="startSendingData-param-waitingAckId"><span class="type-annotation">int</span> <span class="parameter-name">waitingAckId</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/response/list.dart.html#line-41'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">@override
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">@override
 void startSendingData(int currentTime, int waitingAckId) {
   _pendingSending = false;
 
@@ -141,69 +142,115 @@ void startSendingData(int currentTime, int waitingAckId) {
   if (node.disconnected != null) {
     responder.updateResponse(
         this,
-        [
-          [r&apos;$disconnectedTs&apos;, node.disconnected]
-        ],
+        node.getDisconnectedListResponse(),
         streamStatus: StreamStatus.open);
     _disconnectSent = true;
     changes.clear();
     return;
-  } else if (_disconnectSent &amp;&amp; !changes.contains(r&apos;$disconnectedTs&apos;)) {
+  } else if (_disconnectSent &amp;&amp; !changes.contains(r&#39;$disconnectedTs&#39;)) {
     _disconnectSent = false;
-    updateConfigs.add({&apos;name&apos;: r&apos;$disconnectedTs&apos;, &apos;change&apos;: &apos;remove&apos;});
-    if (node.configs.containsKey(r&apos;$disconnectedTs&apos;)) {
-      node.configs.remove(r&apos;$disconnectedTs&apos;);
+    updateConfigs.add({&#39;name&#39;: r&#39;$disconnectedTs&#39;, &#39;change&#39;: &#39;remove&#39;});
+    if (node.configs.containsKey(r&#39;$disconnectedTs&#39;)) {
+      node.configs.remove(r&#39;$disconnectedTs&#39;);
     }
   }
 
-  // TODO: handle permission and permission change
-  if (initialResponse || changes.contains(r&apos;$is&apos;)) {
+  &#47;&#47; TODO: handle permission and permission change
+  if (initialResponse || changes.contains(r&#39;$is&#39;)) {
     initialResponse = false;
-    node.configs.forEach((name, value) {
-      Object update = [name, value];
-      if (name == r&apos;$is&apos;) {
-        updateIs = update;
-      } else if (name == r&apos;$base&apos;) {
-        updateBase = update;
-      } else if (_permission == Permission.CONFIG ||
-          !name.startsWith(r&apos;$$&apos;)) {
-        updateConfigs.add(update);
-      }
-    });
-    node.attributes.forEach((name, value) {
-      updateAttributes.add([name, value]);
-    });
-    node.children.forEach((name, LocalNode value) {
-      updateChildren.add([name, value.getSimpleMap()]);
-    });
-
+    if (_permission == Permission.NONE) {
+      return;
+    } else {
+      node.configs.forEach((name, value) {
+        Object update = [name, value];
+        if (name == r&#39;$is&#39;) {
+          updateIs = update;
+        } else if (name == r&#39;$base&#39;) {
+          updateBase = update;
+        } else if (name.startsWith(r&#39;$$&#39;)) {
+          if (_permission == Permission.CONFIG &amp;&amp; !name.startsWith(r&#39;$$$&#39;)) {
+            updateConfigs.add(update);
+          }
+        } else {
+          if (_permission != Permission.CONFIG) {
+            if (name == r&#39;$writable&#39;) {
+              if (_permission &lt; Permission.WRITE) {
+                return;
+              }
+            }
+            if (name == r&#39;$invokable&#39;) {
+              int invokePermission = Permission.parse(node.getConfig(r&#39;$invokable&#39;));
+              if (invokePermission &gt; _permission) {
+                updateConfigs.add([r&#39;$invokable&#39;, &#39;never&#39;]);
+                return;
+              }
+            }
+          }
+          updateConfigs.add(update);
+        }
+      });
+      node.attributes.forEach((name, value) {
+        updateAttributes.add([name, value]);
+      });
+      node.children.forEach((name, Node value) {
+        Map simpleMap = value.getSimpleMap();
+        if (_permission != Permission.CONFIG) {
+          int invokePermission = Permission.parse(simpleMap[r&#39;$invokable&#39;]);
+          if (invokePermission != Permission.NEVER &amp;&amp; invokePermission &gt; _permission) {
+            simpleMap[r&#39;$invokable&#39;] = &#39;never&#39;;
+          }
+        }
+        updateChildren.add([name, simpleMap]);
+      });
+    }
     if (updateIs == null) {
-      updateIs = [r&apos;$is&apos;, &apos;node&apos;];
+      updateIs = [r&#39;$is&#39;, &#39;node&#39;];
     }
   } else {
     for (String change in changes) {
       Object update;
-      if (change.startsWith(r&apos;$&apos;)) {
+      if (change.startsWith(r&#39;$&#39;)) {
+        if (_permission != Permission.CONFIG) {
+          if (change == r&#39;$writable&#39;) {
+            if (_permission &lt; Permission.WRITE) {
+              continue;
+            }
+          }
+          if (change == r&#39;$invokable&#39;) {
+            int invokePermission = Permission.parse(node.getConfig(r&#39;$invokable&#39;));
+            if (invokePermission &gt; _permission) {
+              updateConfigs.add([r&#39;$invokable&#39;, &#39;never&#39;]);
+              continue;
+            }
+          }
+        }
         if (node.configs.containsKey(change)) {
           update = [change, node.configs[change]];
         } else {
-          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+          update = {&#39;name&#39;: change, &#39;change&#39;: &#39;remove&#39;};
         }
-        if (_permission == Permission.CONFIG || !change.startsWith(r&apos;$$&apos;)) {
+        if (_permission == Permission.CONFIG || !change.startsWith(r&#39;$$&#39;)) {
           updateConfigs.add(update);
         }
-      } else if (change.startsWith(r&apos;@&apos;)) {
+      } else if (change.startsWith(r&#39;@&#39;)) {
         if (node.attributes.containsKey(change)) {
           update = [change, node.attributes[change]];
         } else {
-          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+          update = {&#39;name&#39;: change, &#39;change&#39;: &#39;remove&#39;};
         }
         updateAttributes.add(update);
       } else {
         if (node.children.containsKey(change)) {
-          update = [change, node.children[change].getSimpleMap()];
+          Map simpleMap = node.children[change].getSimpleMap();
+           if (_permission != Permission.CONFIG) {
+             int invokePermission = Permission.parse(simpleMap[r&#39;$invokable&#39;]);
+             if (invokePermission != Permission.NEVER &amp;&amp; invokePermission &gt; _permission) {
+               simpleMap[r&#39;$invokable&#39;] = &#39;never&#39;;
+             }
+           }
+          update = [change, simpleMap ];
         } else {
-          update = {&apos;name&apos;: change, &apos;change&apos;: &apos;remove&apos;};
+          update = {&#39;name&#39;: change, &#39;change&#39;: &#39;remove&#39;};
         }
         updateChildren.add(update);
       }
@@ -223,7 +270,7 @@ void startSendingData(int currentTime, int waitingAckId) {
       updateChildren);
 
   responder.updateResponse(this, updates, streamStatus: StreamStatus.open);
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -236,7 +283,7 @@ void startSendingData(int currentTime, int waitingAckId) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -256,6 +303,7 @@ void startSendingData(int currentTime, int waitingAckId) {
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

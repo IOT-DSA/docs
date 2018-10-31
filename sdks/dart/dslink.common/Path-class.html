@@ -81,6 +81,9 @@
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#constants">Constants</a></li>
       <li><a href="dslink.common/unspecified-constant.html">unspecified</a></li>
     
+      <li class="section-title"><a href="dslink.common/dslink.common-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.common/ValueCallback.html">ValueCallback</a></li>
+      <li><a href="dslink.common/ValueUpdateCallback.html">ValueUpdateCallback</a></li>
     
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#properties">Properties</a></li>
       <li><a href="dslink.common/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -134,9 +137,7 @@
         </dt>
         <dd>
           <p>Regular Expression for invalid characters in paths.</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="invalidNameChar" class="property">
           <span class="name"><a href="dslink.common/Path/invalidNameChar.html">invalidNameChar</a></span>
@@ -144,9 +145,7 @@
         </dt>
         <dd>
           <p>Regular Expression for invalid characters in names.</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
       </dl>
     </section>
@@ -154,38 +153,51 @@
     <section class="summary offset-anchor" id="static-methods">
       <h2>Static Methods</h2>
       <dl class="callables">
+        <dt id="escapeName" class="callable">
+          <span class="name"><a href="dslink.common/Path/escapeName.html">escapeName</a></span><span class="signature">(<wbr><span class="parameter" id="escapeName-param-str"><span class="type-annotation">String</span> <span class="parameter-name">str</span></span>)
+            <span class="returntype parameter">&#8594; String</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+          
+</dd>
         <dt id="getValidAttributePath" class="callable">
-          <span class="name"><a href="dslink.common/Path/getValidAttributePath.html">getValidAttributePath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidAttributePath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getValidAttributePath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span>])
-            <span class="returntype parameter">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+          <span class="name"><a href="dslink.common/Path/getValidAttributePath.html">getValidAttributePath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidAttributePath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span>, [</span> <span class="parameter" id="getValidAttributePath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span> ])
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="getValidConfigPath" class="callable">
-          <span class="name"><a href="dslink.common/Path/getValidConfigPath.html">getValidConfigPath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidConfigPath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getValidConfigPath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span>])
-            <span class="returntype parameter">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+          <span class="name"><a href="dslink.common/Path/getValidConfigPath.html">getValidConfigPath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidConfigPath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span>, [</span> <span class="parameter" id="getValidConfigPath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span> ])
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="getValidNodePath" class="callable">
-          <span class="name"><a href="dslink.common/Path/getValidNodePath.html">getValidNodePath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidNodePath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getValidNodePath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span>])
-            <span class="returntype parameter">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+          <span class="name"><a href="dslink.common/Path/getValidNodePath.html">getValidNodePath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidNodePath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span>, [</span> <span class="parameter" id="getValidNodePath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span> ])
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="getValidPath" class="callable">
-          <span class="name"><a href="dslink.common/Path/getValidPath.html">getValidPath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidPath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getValidPath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span>])
-            <span class="returntype parameter">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+          <span class="name"><a href="dslink.common/Path/getValidPath.html">getValidPath</a></span><span class="signature">(<wbr><span class="parameter" id="getValidPath-param-path"><span class="type-annotation">Object</span> <span class="parameter-name">path</span>, [</span> <span class="parameter" id="getValidPath-param-basePath"><span class="type-annotation">String</span> <span class="parameter-name">basePath</span></span> ])
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
       </dl>
     </section>
 
@@ -206,26 +218,13 @@
       <h2>Properties</h2>
 
       <dl class="properties">
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.common/Path/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.common/Path/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
         <dt id="isAbsolute" class="property">
           <span class="name"><a href="dslink.common/Path/isAbsolute.html">isAbsolute</a></span>
           <span class="signature">&#8594; bool</span>
         </dt>
         <dd>
           <p>Is this an absolute path?</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="isAttribute" class="property">
           <span class="name"><a href="dslink.common/Path/isAttribute.html">isAttribute</a></span>
@@ -233,9 +232,7 @@
         </dt>
         <dd>
           <p>Is this an attribute?</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="isConfig" class="property">
           <span class="name"><a href="dslink.common/Path/isConfig.html">isConfig</a></span>
@@ -243,9 +240,7 @@
         </dt>
         <dd>
           <p>Is this a config?</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="isNode" class="property">
           <span class="name"><a href="dslink.common/Path/isNode.html">isNode</a></span>
@@ -253,9 +248,7 @@
         </dt>
         <dd>
           <p>Is this a node?</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="isRoot" class="property">
           <span class="name"><a href="dslink.common/Path/isRoot.html">isRoot</a></span>
@@ -263,9 +256,7 @@
         </dt>
         <dd>
           <p>Is this the root path?</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="name" class="property">
           <span class="name"><a href="dslink.common/Path/name.html">name</a></span>
@@ -275,19 +266,15 @@
           <p>The name of this path.
 This is the last component of the path.
 For the root node, this is '/'</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="parent" class="property">
           <span class="name"><a href="dslink.common/Path/parent.html">parent</a></span>
-          <span class="signature">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+          <span class="signature">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
         </dt>
         <dd>
           <p>Get the parent of this path.</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="parentPath" class="property">
           <span class="name"><a href="dslink.common/Path/parentPath.html">parentPath</a></span>
@@ -295,9 +282,7 @@ For the root node, this is '/'</p>
         </dt>
         <dd>
           <p>Real Parent Path</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="path" class="property">
           <span class="name"><a href="dslink.common/Path/path.html">path</a></span>
@@ -305,19 +290,7 @@ For the root node, this is '/'</p>
         </dt>
         <dd>
           <p>Real Path</p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="runtimeType" class="property inherited">
-          <span class="name"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></span>
-          <span class="signature">&#8594; Type</span>
-        </dt>
-        <dd class="inherited">
-          <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="valid" class="property">
           <span class="name"><a href="dslink.common/Path/valid.html">valid</a></span>
@@ -325,9 +298,23 @@ For the root node, this is '/'</p>
         </dt>
         <dd>
           <p>If this path is invalid, this will be false. Otherwise this will be true.</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.common/Path/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -341,10 +328,9 @@ For the root node, this is '/'</p>
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.common/Path/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -353,30 +339,31 @@ For the root node, this is '/'</p>
       <dl class="callables">
         <dt id="child" class="callable">
           <span class="name"><a href="dslink.common/Path/child.html">child</a></span><span class="signature">(<wbr><span class="parameter" id="child-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/Path-class.html">Path</a></span>
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Path-class.html">Path</a></span>
           </span>
         </dt>
         <dd>
           <p>Get a child of this path.</p>
-        </dd>
+          
+</dd>
         <dt id="mergeBasePath" class="callable">
-          <span class="name"><a href="dslink.common/Path/mergeBasePath.html">mergeBasePath</a></span><span class="signature">(<wbr><span class="parameter" id="mergeBasePath-param-base"><span class="type-annotation">String</span> <span class="parameter-name">base</span></span>, [<span class="parameter" id="mergeBasePath-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span> = <span class="default-value">false</span></span>])
+          <span class="name"><a href="dslink.common/Path/mergeBasePath.html">mergeBasePath</a></span><span class="signature">(<wbr><span class="parameter" id="mergeBasePath-param-base"><span class="type-annotation">String</span> <span class="parameter-name">base</span>, [</span> <span class="parameter" id="mergeBasePath-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span> = <span class="default-value">false</span></span> ])
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
           <p>Merges the <code>base</code> path with this path.</p>
-        </dd>
+          
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.common/Path/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.common/Path/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.common/Path/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -385,7 +372,7 @@ For the root node, this is '/'</p>
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -400,6 +387,7 @@ For the root node, this is '/'</p>
       <li><a href="dslink.common/Path/invalidNameChar.html">invalidNameChar</a></li>
     
       <li class="section-title"><a href="dslink.common/Path-class.html#static-methods">Static methods</a></li>
+      <li><a href="dslink.common/Path/escapeName.html">escapeName</a></li>
       <li><a href="dslink.common/Path/getValidAttributePath.html">getValidAttributePath</a></li>
       <li><a href="dslink.common/Path/getValidConfigPath.html">getValidConfigPath</a></li>
       <li><a href="dslink.common/Path/getValidNodePath.html">getValidNodePath</a></li>
@@ -411,7 +399,6 @@ For the root node, this is '/'</p>
       <li class="section-title">
         <a href="dslink.common/Path-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.common/Path/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/Path/isAbsolute.html">isAbsolute</a></li>
       <li><a href="dslink.common/Path/isAttribute.html">isAttribute</a></li>
       <li><a href="dslink.common/Path/isConfig.html">isConfig</a></li>
@@ -421,8 +408,9 @@ For the root node, this is '/'</p>
       <li><a href="dslink.common/Path/parent.html">parent</a></li>
       <li><a href="dslink.common/Path/parentPath.html">parentPath</a></li>
       <li><a href="dslink.common/Path/path.html">path</a></li>
-      <li class="inherited"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/Path/valid.html">valid</a></li>
+      <li class="inherited"><a href="dslink.common/Path/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/Path-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/Path/operator_equals.html">operator ==</a></li>
@@ -443,7 +431,7 @@ For the root node, this is '/'</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -463,6 +451,7 @@ For the root node, this is '/'</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -93,6 +93,7 @@
       <li><a href="dslink.utils/logger.html">logger</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
+      <li><a href="dslink.utils/awaitWithTimeout.html">awaitWithTimeout</a></li>
       <li><a href="dslink.utils/buildActionIO.html">buildActionIO</a></li>
       <li><a href="dslink.utils/buildEnumType.html">buildEnumType</a></li>
       <li><a href="dslink.utils/countCharacterFrequency.html">countCharacterFrequency</a></li>
@@ -135,7 +136,7 @@
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>Object</li>
-          <li>LinkedListEntry</li>
+          <li>LinkedListEntry&lt;<a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a>&gt;</li>
           <li>TimerFunctions</li>
         </ul></dd>
 
@@ -165,49 +166,45 @@
       <h2>Properties</h2>
 
       <dl class="properties">
+        <dt id="ts50" class="property">
+          <span class="name"><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd>
+          <p>for better performance, use a low accuracy timer, ts50 is the floor of ts/50</p>
+          <div class="features">final</div>
+</dd>
         <dt id="hashCode" class="property inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/hashCode.html">hashCode</a></span>
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.utils/TimerFunctions/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="list" class="property inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/list.html">list</a></span>
-          <span class="signature">&#8594; LinkedList</span>
+          <span class="signature">&#8594; LinkedList&lt;<a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a>&gt;</span>
         </dt>
         <dd class="inherited">
-          <p>Get the linked list containing this element.<a href="dslink.utils/TimerFunctions/list.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>Get the linked list containing this element.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="next" class="property inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/next.html">next</a></span>
-          <span class="signature">&#8594; dynamic</span>
+          <span class="signature">&#8594; <a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></span>
         </dt>
         <dd class="inherited">
-          <p>Return the succeessor of this element in its linked list.<a href="dslink.utils/TimerFunctions/next.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>Return the successor of this element in its linked list.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="previous" class="property inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/previous.html">previous</a></span>
-          <span class="signature">&#8594; dynamic</span>
+          <span class="signature">&#8594; <a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></span>
         </dt>
         <dd class="inherited">
-          <p>Return the predecessor of this element in its linked list.<a href="dslink.utils/TimerFunctions/previous.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>Return the predecessor of this element in its linked list.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/runtimeType.html">runtimeType</a></span>
@@ -215,19 +212,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
-        <dt id="ts50" class="property">
-          <span class="name"><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd>
-          <p>for better performance, use a low accuracy timer, ts50 is the floor of ts/50</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -241,10 +226,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.utils/TimerFunctions/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -258,37 +242,8 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
-        <dt id="insertAfter" class="callable inherited">
-          <span class="name"><a href="dslink.utils/TimerFunctions/insertAfter.html">insertAfter</a></span><span class="signature">(<wbr><span class="parameter" id="insertAfter-param-entry"><span class="parameter-name">entry</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p>Insert an element after this element in this element's linked list.<a href="dslink.utils/TimerFunctions/insertAfter.html">&hellip;</a>
-</p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="insertBefore" class="callable inherited">
-          <span class="name"><a href="dslink.utils/TimerFunctions/insertBefore.html">insertBefore</a></span><span class="signature">(<wbr><span class="parameter" id="insertBefore-param-entry"><span class="parameter-name">entry</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p>Insert an element before this element in this element's linked list.<a href="dslink.utils/TimerFunctions/insertBefore.html">&hellip;</a>
-</p>
-          <div class="features">inherited</div>
-        </dd>
-        <dt id="noSuchMethod" class="callable inherited">
-          <span class="name"><a href="dslink.utils/TimerFunctions/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.utils/TimerFunctions/noSuchMethod.html">&hellip;</a>
-</p>
-          <div class="features">inherited</div>
-        </dd>
+          
+</dd>
         <dt id="remove" class="callable">
           <span class="name"><a href="dslink.utils/TimerFunctions/remove.html">remove</a></span><span class="signature">(<wbr><span class="parameter" id="remove-param-foo"><span class="type-annotation">Function</span> <span class="parameter-name">foo</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -296,7 +251,35 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
+        <dt id="insertAfter" class="callable inherited">
+          <span class="name"><a href="dslink.utils/TimerFunctions/insertAfter.html">insertAfter</a></span><span class="signature">(<wbr><span class="parameter" id="insertAfter-param-entry"><span class="type-annotation"><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></span> <span class="parameter-name">entry</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Insert an element after this element in this element's linked list.</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="insertBefore" class="callable inherited">
+          <span class="name"><a href="dslink.utils/TimerFunctions/insertBefore.html">insertBefore</a></span><span class="signature">(<wbr><span class="parameter" id="insertBefore-param-entry"><span class="type-annotation"><a href="dslink.utils/TimerFunctions-class.html">TimerFunctions</a></span> <span class="parameter-name">entry</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Insert an element before this element in this element's linked list.</p>
+          <div class="features">inherited</div>
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dslink.utils/TimerFunctions/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -305,17 +288,16 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="unlink" class="callable inherited">
           <span class="name"><a href="dslink.utils/TimerFunctions/unlink.html">unlink</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Unlink the element from its linked list.<a href="dslink.utils/TimerFunctions/unlink.html">&hellip;</a>
-</p>
+          <p>Unlink the element from its linked list.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -333,22 +315,22 @@
       <li class="section-title">
         <a href="dslink.utils/TimerFunctions-class.html#instance-properties">Properties</a>
       </li>
+      <li><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/list.html">list</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/next.html">next</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/previous.html">previous</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/runtimeType.html">runtimeType</a></li>
-      <li><a href="dslink.utils/TimerFunctions/ts50.html">ts50</a></li>
     
       <li class="section-title inherited"><a href="dslink.utils/TimerFunctions-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.utils/TimerFunctions-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.utils/TimerFunctions/add.html">add</a></li>
+      <li><a href="dslink.utils/TimerFunctions/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/insertAfter.html">insertAfter</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/insertBefore.html">insertBefore</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/noSuchMethod.html">noSuchMethod</a></li>
-      <li><a href="dslink.utils/TimerFunctions/remove.html">remove</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/toString.html">toString</a></li>
       <li class="inherited"><a href="dslink.utils/TimerFunctions/unlink.html">unlink</a></li>
     </ol>
@@ -362,7 +344,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -382,6 +364,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

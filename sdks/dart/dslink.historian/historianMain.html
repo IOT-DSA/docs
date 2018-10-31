@@ -72,18 +72,13 @@
     <h5><a href="index.html">dslink</a></h5>
     <h5><a href="dslink.historian/dslink.historian-library.html">dslink.historian</a></h5>
     <ol>
-      <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#constants">Constants</a></li>
-      <li><a href="dslink.historian/INTERVAL_TYPES-constant.html">INTERVAL_TYPES</a></li>
     
       <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#typedefs">Typedefs</a></li>
       <li><a href="dslink.historian/RollupFactory.html">RollupFactory</a></li>
     
       <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#properties">Properties</a></li>
       <li><a href="dslink.historian/historian.html">historian</a></li>
-      <li><a href="dslink.historian/INTERVAL_ALL_TYPES.html">INTERVAL_ALL_TYPES</a></li>
-      <li><a href="dslink.historian/INTERVAL_REGEX.html">INTERVAL_REGEX</a></li>
       <li><a href="dslink.historian/link.html">link</a></li>
-      <li><a href="dslink.historian/ROLLUPS.html">ROLLUPS</a></li>
     
       <li class="section-title"><a href="dslink.historian/dslink.historian-library.html#functions">Functions</a></li>
       <li><a href="dslink.historian/historianMain.html">historianMain</a></li>
@@ -124,14 +119,15 @@
 
     <section class="multi-line-signature">
         <span class="returntype">Future</span>
-        <span class="name ">historianMain</span>(<wbr><span class="parameter" id="historianMain-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span></span>, <span class="parameter" id="historianMain-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="historianMain-param-adapter"><span class="type-annotation"><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></span> <span class="parameter-name">adapter</span></span>)
+        <span class="name ">historianMain</span>(<wbr><span class="parameter" id="historianMain-param-args"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">args</span>, </span> <span class="parameter" id="historianMain-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="historianMain-param-adapter"><span class="type-annotation"><a href="dslink.historian/HistorianAdapter-class.html">HistorianAdapter</a></span> <span class="parameter-name">adapter</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/historian.dart.html#line-984'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">historianMain(List&lt;String&gt; args, String name, HistorianAdapter adapter) async {
-  historian = adapter;
-  link = new LinkProvider(
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">historianMain(List&lt;String&gt; args, String name, HistorianAdapter adapter) async {
+  _historian = adapter;
+
+  _link = new LinkProvider(
     args,
     &quot;${name}-&quot;,
     isRequester: true,
@@ -140,14 +136,13 @@
       &quot;addDatabase&quot;: {
         r&quot;$name&quot;: &quot;Add Database&quot;,
         r&quot;$invokable&quot;: &quot;write&quot;,
-        r&quot;$params&quot;: [
+        r&quot;$params&quot;: &lt;Map&lt;String, dynamic&gt;&gt;[
           {
             &quot;name&quot;: &quot;Name&quot;,
             &quot;type&quot;: &quot;string&quot;,
             &quot;placeholder&quot;: &quot;HistoryData&quot;
           }
-        ]
-          ..addAll(adapter.getCreateDatabaseParameters()),
+        ]..addAll(adapter.getCreateDatabaseParameters()),
         r&quot;$is&quot;: &quot;addDatabase&quot;
       }
     },
@@ -159,8 +154,8 @@
       &quot;watchPath&quot;: (String path) =&gt; new WatchPathNode(path),
       &quot;database&quot;: (String path) =&gt; new DatabaseNode(path),
       &quot;delete&quot;: (String path) =&gt; new DeleteActionNode.forParent(
-        path, link.provider as MutableNodeProvider, onDelete: () {
-        link.save();
+        path, _link.provider as MutableNodeProvider, onDelete: () {
+        _link.save();
       }),
       &quot;purgePath&quot;: (String path) =&gt; new PurgePathNode(path),
       &quot;purgeGroup&quot;: (String path) =&gt; new PurgeGroupNode(path),
@@ -168,9 +163,9 @@
     },
     encodePrettyJson: true
   );
-  link.init();
-  link.connect();
-}</code></pre>
+  _link.init();
+  _link.connect();
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -183,7 +178,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -203,6 +198,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -57,6 +57,7 @@
           </h1>
         </div>
         <ul class="subnav">
+          <li><a href="dslink.responder/MutableNodeProvider-class.html#instance-properties">Properties</a></li>
           <li><a href="dslink.responder/MutableNodeProvider-class.html#constructors">Constructors</a></li>
           <li><a href="dslink.responder/MutableNodeProvider-class.html#operators">Operators</a></li>
           <li><a href="dslink.responder/MutableNodeProvider-class.html#instance-methods">Methods</a></li>
@@ -77,6 +78,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/IconResolver.html">IconResolver</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
@@ -120,6 +122,7 @@
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/SysGetIconNode-class.html">SysGetIconNode</a></li>
       <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
@@ -138,7 +141,7 @@
 
         <dt>Implemented by</dt>
         <dd><ul class="comma-separated clazz-relationships">
-          <li><a href="dslink.browser/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
+          <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
         </ul></dd>
 
       </dl>
@@ -169,11 +172,8 @@
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.responder/MutableNodeProvider/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.responder/MutableNodeProvider/runtimeType.html">runtimeType</a></span>
@@ -181,9 +181,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -197,10 +195,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.responder/MutableNodeProvider/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -208,31 +205,23 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="addNode" class="callable">
-          <span class="name"><a href="dslink.responder/MutableNodeProvider/addNode.html">addNode</a></span><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          <span class="name"><a href="dslink.responder/MutableNodeProvider/addNode.html">addNode</a></span><span class="signature">(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, </span> <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
         <dd>
           <p>Adds a node at the given <code>path</code> that is initialized with the given data in <code>m</code>.</p>
-        </dd>
+          
+</dd>
         <dt id="addProfile" class="callable">
-          <span class="name"><a href="dslink.responder/MutableNodeProvider/addProfile.html">addProfile</a></span><span class="signature">(<wbr><span class="parameter" id="addProfile-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="addProfile-param-factory"><span class="type-annotation"><a href="dslink/NodeFactory.html">NodeFactory</a></span> <span class="parameter-name">factory</span>(<span class="parameter" id="NodeFactory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)</span>)
+          <span class="name"><a href="dslink.responder/MutableNodeProvider/addProfile.html">addProfile</a></span><span class="signature">(<wbr><span class="parameter" id="addProfile-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="addProfile-param-factory"><span class="type-annotation"><a href="dslink.responder/NodeFactory.html">NodeFactory</a></span> <span class="parameter-name">factory</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
-        <dt id="noSuchMethod" class="callable inherited">
-          <span class="name"><a href="dslink.responder/MutableNodeProvider/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/MutableNodeProvider/noSuchMethod.html">&hellip;</a>
-</p>
-          <div class="features">inherited</div>
-        </dd>
+          
+</dd>
         <dt id="removeNode" class="callable">
           <span class="name"><a href="dslink.responder/MutableNodeProvider/removeNode.html">removeNode</a></span><span class="signature">(<wbr><span class="parameter" id="removeNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -240,7 +229,26 @@
         </dt>
         <dd>
           <p>Removes the node specified at <code>path</code>.</p>
-        </dd>
+          
+</dd>
+        <dt id="updateValue" class="callable">
+          <span class="name"><a href="dslink.responder/MutableNodeProvider/updateValue.html">updateValue</a></span><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, </span> <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Updates the value of the node at <code>path</code> to the given <code>value</code>.</p>
+          
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dslink.responder/MutableNodeProvider/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.responder/MutableNodeProvider/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -249,15 +257,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="updateValue" class="callable">
-          <span class="name"><a href="dslink.responder/MutableNodeProvider/updateValue.html">updateValue</a></span><span class="signature">(<wbr><span class="parameter" id="updateValue-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="updateValue-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>)
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p>Updates the value of the node at <code>path</code> to the given <code>value</code>.</p>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -284,10 +284,10 @@
       <li class="section-title"><a href="dslink.responder/MutableNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/MutableNodeProvider/addNode.html">addNode</a></li>
       <li><a href="dslink.responder/MutableNodeProvider/addProfile.html">addProfile</a></li>
-      <li class="inherited"><a href="dslink.responder/MutableNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/MutableNodeProvider/removeNode.html">removeNode</a></li>
-      <li class="inherited"><a href="dslink.responder/MutableNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink.responder/MutableNodeProvider/updateValue.html">updateValue</a></li>
+      <li class="inherited"><a href="dslink.responder/MutableNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.responder/MutableNodeProvider/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -299,7 +299,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -319,6 +319,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

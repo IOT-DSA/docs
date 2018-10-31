@@ -85,20 +85,19 @@
       <li class="section-title">
         <a href="dslink.requester/Requester-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
-      <li class="inherited"><a href="dslink.requester/Requester/hashCode.html">hashCode</a></li>
       <li><a href="dslink.requester/Requester/lastRid.html">lastRid</a></li>
       <li><a href="dslink.requester/Requester/nodeCache.html">nodeCache</a></li>
       <li><a href="dslink.requester/Requester/onError.html">onError</a></li>
+      <li><a href="dslink.requester/Requester/openRequestCount.html">openRequestCount</a></li>
+      <li><a href="dslink.requester/Requester/subscriptionCount.html">subscriptionCount</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
+      <li class="inherited"><a href="dslink.requester/Requester/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.requester/Requester/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.requester/Requester-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.requester/Requester/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.requester/Requester-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.requester/Requester/closeRequest.html">closeRequest</a></li>
       <li><a href="dslink.requester/Requester/getNextRid.html">getNextRid</a></li>
       <li><a href="dslink.requester/Requester/getNodeValue.html">getNodeValue</a></li>
@@ -107,7 +106,6 @@
       <li><a href="dslink.requester/Requester/invoke.html">invoke</a></li>
       <li><a href="dslink.requester/Requester/isNodeCached.html">isNodeCached</a></li>
       <li><a href="dslink.requester/Requester/list.html">list</a></li>
-      <li class="inherited"><a href="dslink.requester/Requester/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.requester/Requester/onData.html">onData</a></li>
       <li><a href="dslink.requester/Requester/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.requester/Requester/onReconnected.html">onReconnected</a></li>
@@ -116,23 +114,27 @@
       <li><a href="dslink.requester/Requester/sendRequest.html">sendRequest</a></li>
       <li><a href="dslink.requester/Requester/set.html">set</a></li>
       <li><a href="dslink.requester/Requester/subscribe.html">subscribe</a></li>
-      <li class="inherited"><a href="dslink.requester/Requester/toString.html">toString</a></li>
       <li><a href="dslink.requester/Requester/unsubscribe.html">unsubscribe</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
+      <li class="inherited"><a href="dslink.requester/Requester/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.requester/Requester/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype">Future&lt;<a href="dslink/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
+      <span class="returntype">Future&lt;<a href="dslink.requester/RequesterUpdate-class.html">RequesterUpdate</a>&gt;</span>
       <span class="name ">remove</span>(<wbr><span class="parameter" id="remove-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/requester/requester.dart.html#line-166'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future&lt;RequesterUpdate&gt; remove(String path) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Future&lt;RequesterUpdate&gt; remove(String path) {
   return new RemoveController(this, path).future;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -145,7 +147,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -165,6 +167,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

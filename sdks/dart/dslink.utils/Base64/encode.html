@@ -113,32 +113,32 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">String</span>
-      <span class="name ">encode</span>(<wbr><span class="parameter" id="encode-param-bytes"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">bytes</span></span>, [<span class="parameter" id="encode-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span></span>, <span class="parameter" id="encode-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span>])
+      <span class="name ">encode</span>(<wbr><span class="parameter" id="encode-param-bytes"><span class="type-annotation">List&lt;int&gt;</span> <span class="parameter-name">bytes</span>, [</span> <span class="parameter" id="encode-param-lineSize"><span class="type-annotation">int</span> <span class="parameter-name">lineSize</span> = <span class="default-value">0</span>, </span> <span class="parameter" id="encode-param-paddingSpace"><span class="type-annotation">int</span> <span class="parameter-name">paddingSpace</span> = <span class="default-value">0</span></span> ])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/utils/base64.dart.html#line-49'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String encode(List&lt;int&gt; bytes,
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static String encode(List&lt;int&gt; bytes,
     [int lineSize = 0, int paddingSpace = 0]) {
   int len = bytes.length;
   if (len == 0) {
     return &quot;&quot;;
   }
-  // Size of 24 bit chunks.
+  &#47;&#47; Size of 24 bit chunks.
   final int remainderLength = len.remainder(3);
   final int chunkLength = len - remainderLength;
-  // Size of base output.
+  &#47;&#47; Size of base output.
   int outputLen =
-      ((len ~/ 3) * 4) + ((remainderLength &gt; 0) ? 4 : 0) + paddingSpace;
-  // Add extra for line separators.
+      ((len ~&#47; 3) * 4) + ((remainderLength &gt; 0) ? 4 : 0) + paddingSpace;
+  &#47;&#47; Add extra for line separators.
   int lineSizeGroup = lineSize &gt;&gt; 2;
   if (lineSizeGroup &gt; 0) {
     outputLen +=
-        ((outputLen - 1) ~/ (lineSizeGroup &lt;&lt; 2)) * (1 + paddingSpace);
+        ((outputLen - 1) ~&#47; (lineSizeGroup &lt;&lt; 2)) * (1 + paddingSpace);
   }
   List&lt;int&gt; out = new List&lt;int&gt;(outputLen);
 
-  // Encode 24 bit chunks.
+  &#47;&#47; Encode 24 bit chunks.
   int j = 0, i = 0, c = 0;
   for (int i = 0; i &lt; paddingSpace; ++i) {
     out[j++] = SP;
@@ -151,7 +151,7 @@
     out[j++] = _encodeTable.codeUnitAt((x &gt;&gt; 12) &amp; 0x3F);
     out[j++] = _encodeTable.codeUnitAt((x &gt;&gt; 6) &amp; 0x3F);
     out[j++] = _encodeTable.codeUnitAt(x &amp; 0x3f);
-    // Add optional line separator for each 76 char output.
+    &#47;&#47; Add optional line separator for each 76 char output.
     if (lineSizeGroup &gt; 0 &amp;&amp; ++c == lineSizeGroup &amp;&amp; j &lt; outputLen - 2) {
       out[j++] = LF;
       for (int i = 0; i &lt; paddingSpace; ++i) {
@@ -161,14 +161,14 @@
     }
   }
 
-  // If input length if not a multiple of 3, encode remaining bytes and
-  // add padding.
+  &#47;&#47; If input length if not a multiple of 3, encode remaining bytes and
+  &#47;&#47; add padding.
   if (remainderLength == 1) {
     int x = bytes[i] % 256;
     out[j++] = _encodeTable.codeUnitAt(x &gt;&gt; 2);
     out[j++] = _encodeTable.codeUnitAt((x &lt;&lt; 4) &amp; 0x3F);
-//     out[j++] = PAD;
-//     out[j++] = PAD;
+&#47;&#47;     out[j++] = PAD;
+&#47;&#47;     out[j++] = PAD;
     return new String.fromCharCodes(out.sublist(0, outputLen - 2));
   } else if (remainderLength == 2) {
     int x = bytes[i] % 256;
@@ -176,12 +176,12 @@
     out[j++] = _encodeTable.codeUnitAt(x &gt;&gt; 2);
     out[j++] = _encodeTable.codeUnitAt(((x &lt;&lt; 4) | (y &gt;&gt; 4)) &amp; 0x3F);
     out[j++] = _encodeTable.codeUnitAt((y &lt;&lt; 2) &amp; 0x3F);
-//     out[j++] = PAD;
+&#47;&#47;     out[j++] = PAD;
     return new String.fromCharCodes(out.sublist(0, outputLen - 1));
   }
 
   return new String.fromCharCodes(out);
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -194,7 +194,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -214,6 +214,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

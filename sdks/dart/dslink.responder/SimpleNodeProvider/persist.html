@@ -88,18 +88,18 @@
         <a href="dslink.responder/SimpleNodeProvider-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/SimpleNodeProvider/defs.html">defs</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/permissions.html">permissions</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/root.html">root</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/sys.html">sys</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/SimpleNodeProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/operator_equals.html">operator ==</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_get.html">operator []</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
@@ -110,16 +110,17 @@
       <li><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/hasNode.html">hasNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/persist.html">persist</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/save.html">save</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/setIconResolver.html">setIconResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -127,17 +128,17 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">persist</span>(<wbr>[<span class="parameter" id="persist-param-now"><span class="type-annotation">bool</span> <span class="parameter-name">now</span> = <span class="default-value">false</span></span>])
+      <span class="name ">persist</span>(<wbr>[<span class="parameter" id="persist-param-now"><span class="type-annotation">bool</span> <span class="parameter-name">now</span> = <span class="default-value">false</span></span> ])
     </section>
     <section class="desc markdown">
       <p>Persist the nodes in this provider.
-If you are not using a LinkProvider, then call <a href="dslink/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a> to set
+If you are not using a LinkProvider, then call <a href="dslink.responder/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a> to set
 the function that is called to persist.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-361'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void persist([bool now = false]) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void persist([bool now = false]) {
   if (now) {
     if (_persist == null) {
       return;
@@ -153,7 +154,7 @@ the function that is called to persist.</p>
       _persist();
     });
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -166,7 +167,7 @@ the function that is called to persist.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -186,6 +187,7 @@ the function that is called to persist.</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

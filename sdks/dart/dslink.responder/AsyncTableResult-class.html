@@ -78,6 +78,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/IconResolver.html">IconResolver</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
@@ -121,6 +122,7 @@
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/SysGetIconNode-class.html">SysGetIconNode</a></li>
       <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
@@ -142,7 +144,7 @@ This can be used to return asynchronous tables from actions.</p>
 
       <dl class="constructor-summary-list">
         <dt id="AsyncTableResult" class="callable">
-          <span class="name"><a href="dslink.responder/AsyncTableResult/AsyncTableResult.html">AsyncTableResult</a></span><span class="signature">([<span class="parameter" id="-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>])</span>
+          <span class="name"><a href="dslink.responder/AsyncTableResult/AsyncTableResult.html">AsyncTableResult</a></span><span class="signature">([<span class="parameter" id="-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span> ])</span>
         </dt>
         <dd>
           <p></p>
@@ -160,20 +162,7 @@ This can be used to return asynchronous tables from actions.</p>
         </dt>
         <dd>
           <p>Table Columns</p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.responder/AsyncTableResult/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.responder/AsyncTableResult/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="meta" class="property">
           <span class="name"><a href="dslink.responder/AsyncTableResult/meta.html">meta</a></span>
@@ -181,29 +170,23 @@ This can be used to return asynchronous tables from actions.</p>
         </dt>
         <dd>
           <p>Table Metadata</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="onClose" class="property">
           <span class="name"><a href="dslink.responder/AsyncTableResult/onClose.html">onClose</a></span>
-          <span class="signature">&#8594; <a href="dslink/OnInvokeClosed.html">OnInvokeClosed</a></span>
+          <span class="signature">&#8594; <a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></span>
         </dt>
         <dd>
           <p>Handler for when this is closed.</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="response" class="property">
           <span class="name"><a href="dslink.responder/AsyncTableResult/response.html">response</a></span>
-          <span class="signature">&#8594; <a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span>
+          <span class="signature">&#8594; <a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span>
         </dt>
         <dd>
           <p>Invoke Response.</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="rows" class="property">
           <span class="name"><a href="dslink.responder/AsyncTableResult/rows.html">rows</a></span>
@@ -211,19 +194,7 @@ This can be used to return asynchronous tables from actions.</p>
         </dt>
         <dd>
           <p>Table Rows</p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="runtimeType" class="property inherited">
-          <span class="name"><a href="dslink.responder/AsyncTableResult/runtimeType.html">runtimeType</a></span>
-          <span class="signature">&#8594; Type</span>
-        </dt>
-        <dd class="inherited">
-          <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="status" class="property">
           <span class="name"><a href="dslink.responder/AsyncTableResult/status.html">status</a></span>
@@ -231,9 +202,23 @@ This can be used to return asynchronous tables from actions.</p>
         </dt>
         <dd>
           <p>Stream Status</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.responder/AsyncTableResult/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.responder/AsyncTableResult/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -247,10 +232,9 @@ This can be used to return asynchronous tables from actions.</p>
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.responder/AsyncTableResult/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -264,17 +248,37 @@ This can be used to return asynchronous tables from actions.</p>
         </dt>
         <dd>
           <p>Closes this response.</p>
-        </dd>
+          
+</dd>
+        <dt id="update" class="callable">
+          <span class="name"><a href="dslink.responder/AsyncTableResult/update.html">update</a></span><span class="signature">(<wbr><span class="parameter" id="update-param-rows"><span class="type-annotation">List</span> <span class="parameter-name">rows</span>, [</span> <span class="parameter" id="update-param-stat"><span class="type-annotation">String</span> <span class="parameter-name">stat</span>, </span> <span class="parameter" id="update-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span> ])
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Updates table rows to <code>rows</code>.
+<code>stat</code> is the stream status.
+<code>meta</code> is the action result metadata.</p>
+          
+</dd>
+        <dt id="write" class="callable">
+          <span class="name"><a href="dslink.responder/AsyncTableResult/write.html">write</a></span><span class="signature">(<wbr>[<span class="parameter" id="write-param-resp"><span class="type-annotation"><a href="dslink.responder/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">resp</span></span> ])
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+        </dt>
+        <dd>
+          <p>Write this result to the result given by <code>resp</code>.</p>
+          
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.responder/AsyncTableResult/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/AsyncTableResult/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.responder/AsyncTableResult/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -283,25 +287,7 @@ This can be used to return asynchronous tables from actions.</p>
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="update" class="callable">
-          <span class="name"><a href="dslink.responder/AsyncTableResult/update.html">update</a></span><span class="signature">(<wbr><span class="parameter" id="update-param-rows"><span class="type-annotation">List</span> <span class="parameter-name">rows</span></span>, [<span class="parameter" id="update-param-stat"><span class="type-annotation">String</span> <span class="parameter-name">stat</span></span>, <span class="parameter" id="update-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>])
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p>Updates table rows to <code>rows</code>.
-<code>stat</code> is the stream status.
-<code>meta</code> is the action result metadata.</p>
-        </dd>
-        <dt id="write" class="callable">
-          <span class="name"><a href="dslink.responder/AsyncTableResult/write.html">write</a></span><span class="signature">(<wbr>[<span class="parameter" id="write-param-resp"><span class="type-annotation"><a href="dslink/InvokeResponse-class.html">InvokeResponse</a></span> <span class="parameter-name">resp</span></span>])
-            <span class="returntype parameter">&#8594; void</span>
-          </span>
-        </dt>
-        <dd>
-          <p>Write this result to the result given by <code>resp</code>.</p>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -320,23 +306,23 @@ This can be used to return asynchronous tables from actions.</p>
         <a href="dslink.responder/AsyncTableResult-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/AsyncTableResult/columns.html">columns</a></li>
-      <li class="inherited"><a href="dslink.responder/AsyncTableResult/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/AsyncTableResult/meta.html">meta</a></li>
       <li><a href="dslink.responder/AsyncTableResult/onClose.html">onClose</a></li>
       <li><a href="dslink.responder/AsyncTableResult/response.html">response</a></li>
       <li><a href="dslink.responder/AsyncTableResult/rows.html">rows</a></li>
-      <li class="inherited"><a href="dslink.responder/AsyncTableResult/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/AsyncTableResult/status.html">status</a></li>
+      <li class="inherited"><a href="dslink.responder/AsyncTableResult/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/AsyncTableResult/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/AsyncTableResult-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/AsyncTableResult/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/AsyncTableResult-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/AsyncTableResult/close.html">close</a></li>
-      <li class="inherited"><a href="dslink.responder/AsyncTableResult/noSuchMethod.html">noSuchMethod</a></li>
-      <li class="inherited"><a href="dslink.responder/AsyncTableResult/toString.html">toString</a></li>
       <li><a href="dslink.responder/AsyncTableResult/update.html">update</a></li>
       <li><a href="dslink.responder/AsyncTableResult/write.html">write</a></li>
+      <li class="inherited"><a href="dslink.responder/AsyncTableResult/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.responder/AsyncTableResult/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -348,7 +334,7 @@ This can be used to return asynchronous tables from actions.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -368,6 +354,7 @@ This can be used to return asynchronous tables from actions.</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

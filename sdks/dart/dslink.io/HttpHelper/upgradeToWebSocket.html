@@ -113,21 +113,29 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Future&lt;WebSocket&gt;</span>
-      <span class="name ">upgradeToWebSocket</span>(<wbr><span class="parameter" id="upgradeToWebSocket-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, [<span class="parameter" id="upgradeToWebSocket-param-protocolSelector"><span class="type-annotation">dynamic</span> <span class="parameter-name">protocolSelector</span>(<span class="parameter" id="protocolSelector-param-protocols"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>)</span>])
+      <span class="name ">upgradeToWebSocket</span>(<wbr><span class="parameter" id="upgradeToWebSocket-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span>, [</span> <span class="parameter" id="upgradeToWebSocket-param-protocolSelector"><span class="type-annotation">dynamic</span> <span class="parameter-name">protocolSelector</span>(<span class="parameter" id="protocolSelector-param-protocols"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>), </span> <span class="parameter" id="upgradeToWebSocket-param-useStandardWebSocket"><span class="type-annotation">bool</span> <span class="parameter-name">useStandardWebSocket</span></span> ])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/io.dart.html#line-167'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; upgradeToWebSocket(HttpRequest request, [
-  protocolSelector(List&lt;String&gt; protocols)
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static Future&lt;WebSocket&gt; upgradeToWebSocket(HttpRequest request, [
+  protocolSelector(List&lt;String&gt; protocols),
+  bool useStandardWebSocket
 ]) {
-  if (enableStandardWebSocket) {
-    return WebSocketTransformer.upgrade(request, protocolSelector: protocolSelector);
+  if (useStandardWebSocket == null) {
+    useStandardWebSocket = enableStandardWebSocket;
+  }
+
+  if (useStandardWebSocket) {
+    return WebSocketTransformer.upgrade(
+      request,
+      protocolSelector: protocolSelector
+    );
   }
 
   var response = request.response;
   if (!WebSocketTransformer.isUpgradeRequest(request)) {
-    // Send error response.
+    &#47;&#47; Send error response.
     response
       ..statusCode = HttpStatus.BAD_REQUEST
       ..close();
@@ -135,51 +143,58 @@
       new WebSocketException(&quot;Invalid WebSocket upgrade request&quot;));
   }
 
-  Future upgrade(String protocol) {
-    // Send the upgrade response.
+  Future&lt;WebSocket&gt; upgrade(String protocol) {
+    &#47;&#47; Send the upgrade response.
     response
       ..statusCode = HttpStatus.SWITCHING_PROTOCOLS
       ..headers.add(HttpHeaders.CONNECTION, &quot;Upgrade&quot;)
       ..headers.add(HttpHeaders.UPGRADE, &quot;websocket&quot;);
     String key = request.headers.value(&quot;Sec-WebSocket-Key&quot;);
-    SHA1 sha1 = new SHA1();
-    sha1.add(&quot;$key$_webSocketGUID&quot;.codeUnits);
-    String accept = CryptoUtils.bytesToBase64(sha1.close());
+    String accept = BASE64.encode(
+      sha1.convert(&quot;$key$_webSocketGUID&quot;.codeUnits).bytes
+    );
     response.headers.add(&quot;Sec-WebSocket-Accept&quot;, accept);
     if (protocol != null) {
       response.headers.add(&quot;Sec-WebSocket-Protocol&quot;, protocol);
     }
     response.headers.contentLength = 0;
     return response.detachSocket()
-      .then((socket) =&gt; new WebSocket.fromUpgradedSocket(
-      socket, protocol: protocol, serverSide: true));
+      .then((socket) {
+      socket.setOption(SocketOption.TCP_NODELAY, _tcpNoDelay);
+      return new WebSocket.fromUpgradedSocket(
+        socket, protocol: protocol, serverSide: true);
+    });
   }
 
-  var protocols = request.headers[&apos;Sec-WebSocket-Protocol&apos;];
+  var protocols = request.headers[&#39;Sec-WebSocket-Protocol&#39;];
   if (protocols != null &amp;&amp; protocolSelector != null) {
-    // The suggested protocols can be spread over multiple lines, each
-    // consisting of multiple protocols. To unify all of them, first join
-    // the lists with &apos;, &apos; and then tokenize.
-    protocols = HttpHelper.tokenizeFieldValue(protocols.join(&apos;, &apos;));
-    return new Future(() =&gt; protocolSelector(protocols))
-      .then((protocol) {
+    &#47;&#47; The suggested protocols can be spread over multiple lines, each
+    &#47;&#47; consisting of multiple protocols. To unify all of them, first join
+    &#47;&#47; the lists with &#39;, &#39; and then tokenize.
+    protocols = HttpHelper.tokenizeFieldValue(protocols.join(&#39;, &#39;));
+    return new Future(() =&gt; protocolSelector(protocols)).then((String protocol) {
       if (protocols.indexOf(protocol) &lt; 0) {
         throw new WebSocketException(
           &quot;Selected protocol is not in the list of available protocols&quot;);
       }
       return protocol;
-    })
-      .catchError((error) {
+    }).catchError((error) {
       response
         ..statusCode = HttpStatus.INTERNAL_SERVER_ERROR
         ..close();
       throw error;
-    })
-      .then(upgrade);
+    }).then((result) {
+      if (result is String) {
+        return upgrade(result);
+      }
+      return null;
+    }).then((WebSocket socket) {
+      return socket;
+    });
   } else {
     return upgrade(null);
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -192,7 +207,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -212,6 +227,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

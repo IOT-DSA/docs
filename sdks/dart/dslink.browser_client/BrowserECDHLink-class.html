@@ -106,8 +106,8 @@
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>Object</li>
-          <li><a href="dslink.browser/BaseLink-class.html">BaseLink</a></li>
-          <li><a href="dslink.browser/ClientLink-class.html">ClientLink</a></li>
+          <li><a href="dslink.common/BaseLink-class.html">BaseLink</a></li>
+          <li><a href="dslink.common/ClientLink-class.html">ClientLink</a></li>
           <li>BrowserECDHLink</li>
         </ul></dd>
 
@@ -127,7 +127,8 @@
         </dt>
         <dd>
           <p></p>
-          <div>
+          
+  <div>
             <span class="signature"><code>const {'salt' : 0, 'saltS' : 1, 'saltL' : 2}</code></span>
           </div>
         </dd>
@@ -141,7 +142,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="BrowserECDHLink" class="callable">
-          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/BrowserECDHLink.html">BrowserECDHLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span>})</span>
+          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/BrowserECDHLink.html">BrowserECDHLink</a></span><span class="signature">(<span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span>, </span> <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span>, </span> <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span>, {</span> <span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span>, </span> <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span>, </span> <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span> })</span>
         </dt>
         <dd>
           <p></p>
@@ -159,9 +160,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="enableAck" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></span>
@@ -169,9 +168,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="format" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/format.html">format</a></span>
@@ -179,9 +176,7 @@
         </dt>
         <dd>
           <p>format received from broker</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="formats" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/formats.html">formats</a></span>
@@ -189,40 +184,15 @@
         </dt>
         <dd>
           <p>formats sent to broker</p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.browser_client/BrowserECDHLink/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
-        <dt id="logName" class="property inherited">
-          <span class="name"><a href="dslink.browser/ClientLink/logName.html">logName</a></span>
-          <span class="signature">&#8594; String</span>
-        </dt>
-        <dd class="inherited">
-          <p></p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="nonce" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></span>
-          <span class="signature">&#8594; <a href="dslink/ECDH-class.html">ECDH</a></span>
+          <span class="signature">&#8594; <a href="dslink.client/ECDH-class.html">ECDH</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="onConnected" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></span>
@@ -230,59 +200,39 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="onRequesterReady" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/onRequesterReady.html">onRequesterReady</a></span>
-          <span class="signature">&#8594; Future&lt;<a href="dslink/Requester-class.html">Requester</a>&gt;</span>
+          <span class="signature">&#8594; Future&lt;<a href="dslink.requester/Requester-class.html">Requester</a>&gt;</span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="privateKey" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/privateKey.html">privateKey</a></span>
-          <span class="signature">&#8594; <a href="dslink/PrivateKey-class.html">PrivateKey</a></span>
+          <span class="signature">&#8594; <a href="dslink.client/PrivateKey-class.html">PrivateKey</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="requester" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+          <span class="signature">&#8594; <a href="dslink.requester/Requester-class.html">Requester</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="responder" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/responder.html">responder</a></span>
-          <span class="signature">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
+          <span class="signature">&#8594; <a href="dslink.responder/Responder-class.html">Responder</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
-</dd>
-        <dt id="runtimeType" class="property inherited">
-          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></span>
-          <span class="signature">&#8594; Type</span>
-        </dt>
-        <dd class="inherited">
-          <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="salts" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/salts.html">salts</a></span>
@@ -290,9 +240,7 @@
         </dt>
         <dd>
           <p>2 salts, salt and saltS</p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="token" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/token.html">token</a></span>
@@ -300,9 +248,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="tokenHash" class="property">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/tokenHash.html">tokenHash</a></span>
@@ -310,9 +256,31 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="logName" class="property inherited">
+          <span class="name"><a href="dslink.common/ClientLink/logName.html">logName</a></span>
+          <span class="signature">&#8594; String</span>
+        </dt>
+        <dd class="inherited">
+          <p></p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -326,10 +294,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.browser_client/BrowserECDHLink/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -343,7 +310,8 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="connect" class="callable">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/connect.html">connect</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; Future</span>
@@ -351,34 +319,45 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
+        <dt id="initWebsocket" class="callable">
+          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/initWebsocket.html">initWebsocket</a></span><span class="signature">(<wbr>[<span class="parameter" id="initWebsocket-param-reconnect"><span class="type-annotation">bool</span> <span class="parameter-name">reconnect</span> = <span class="default-value">true</span></span> ])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+          
+</dd>
+        <dt id="updateSalt" class="callable">
+          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></span><span class="signature">(<wbr><span class="parameter" id="updateSalt-param-salt"><span class="type-annotation">String</span> <span class="parameter-name">salt</span>, [</span> <span class="parameter" id="updateSalt-param-saltId"><span class="type-annotation">int</span> <span class="parameter-name">saltId</span> = <span class="default-value">0</span></span> ])
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd>
+          <p>shortPolling is only valid in http mode
+saltId: 0 salt, 1:saltS, 2:saltL</p>
+          
+</dd>
         <dt id="formatLogMessage" class="callable inherited">
-          <span class="name"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></span><span class="signature">(<wbr><span class="parameter" id="formatLogMessage-param-msg"><span class="type-annotation">String</span> <span class="parameter-name">msg</span></span>)
+          <span class="name"><a href="dslink.common/ClientLink/formatLogMessage.html">formatLogMessage</a></span><span class="signature">(<wbr><span class="parameter" id="formatLogMessage-param-msg"><span class="type-annotation">String</span> <span class="parameter-name">msg</span></span>)
             <span class="returntype parameter">&#8594; String</span>
           </span>
         </dt>
         <dd class="inherited">
           <p></p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="initWebsocket" class="callable">
-          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/initWebsocket.html">initWebsocket</a></span><span class="signature">(<wbr>[<span class="parameter" id="initWebsocket-param-reconnect"><span class="type-annotation">bool</span> <span class="parameter-name">reconnect</span> = <span class="default-value">true</span></span>])
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p></p>
-        </dd>
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.browser_client/BrowserECDHLink/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.browser_client/BrowserECDHLink/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -387,16 +366,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="updateSalt" class="callable">
-          <span class="name"><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></span><span class="signature">(<wbr><span class="parameter" id="updateSalt-param-salt"><span class="type-annotation">String</span> <span class="parameter-name">salt</span></span>, [<span class="parameter" id="updateSalt-param-saltId"><span class="type-annotation">int</span> <span class="parameter-name">saltId</span> = <span class="default-value">0</span></span>])
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd>
-          <p>shortPolling is only valid in http mode
-saltId: 0 salt, 1:saltS, 2:saltL</p>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -420,18 +390,18 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
       <li><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/format.html">format</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/formats.html">formats</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/logName.html">logName</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/privateKey.html">privateKey</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/requester.html">requester</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/salts.html">salts</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/token.html">token</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/logName.html">logName</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserECDHLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/operator_equals.html">operator ==</a></li>
@@ -439,11 +409,11 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
       <li class="section-title"><a href="dslink.browser_client/BrowserECDHLink-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/close.html">close</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/connect.html">connect</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/initWebsocket.html">initWebsocket</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/toString.html">toString</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -455,7 +425,7 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -475,6 +445,7 @@ saltId: 0 salt, 1:saltS, 2:saltL</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

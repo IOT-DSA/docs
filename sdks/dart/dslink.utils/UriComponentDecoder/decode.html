@@ -107,10 +107,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/utils/uri_component.dart.html#line-8'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String decode(String text) {
-  List codes = new List();
-  List bytes = new List();
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static String decode(String text) {
+  List&lt;int&gt; codes = new List&lt;int&gt;();
+  List&lt;int&gt; bytes = new List&lt;int&gt;();
   int len = text.length;
   for (int i = 0; i &lt; len; i++) {
     var codeUnit = text.codeUnitAt(i);
@@ -128,7 +128,10 @@
       }
     } else {
       if (!bytes.isEmpty) {
-        codes.addAll(const Utf8Decoder(allowMalformed: true).convert(bytes).codeUnits);
+        codes.addAll(
+          const Utf8Decoder(allowMalformed: true)
+            .convert(bytes)
+            .codeUnits);
         bytes.clear();
       }
       if (codeUnit == _PLUS) {
@@ -140,11 +143,13 @@
   }
 
   if (!bytes.isEmpty) {
-    codes.addAll(const Utf8Decoder().convert(bytes).codeUnits);
+    codes.addAll(const Utf8Decoder()
+      .convert(bytes)
+      .codeUnits);
     bytes.clear();
   }
   return new String.fromCharCodes(codes);
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -157,7 +162,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -177,6 +182,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

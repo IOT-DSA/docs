@@ -72,10 +72,11 @@ function initSearch() {
     'constructor' : 4
   };
 
-  function findMatches(q, cb) {
+  function findMatches(q) {
     var allMatches = []; // list of matches
 
     function score(element, num) {
+      num -= element.overriddenDepth * 10;
       var weightFactor = weights[element.type] || 4;
       return {e: element, score: (num / weightFactor) >> 0};
     }
@@ -137,10 +138,19 @@ function initSearch() {
       sortedMatches.push(allMatches[i].e);
     }
 
-    cb(sortedMatches);
+    return sortedMatches;
   };
 
   function initTypeahead() {
+    var search = new URI().query(true)["search"];
+    if (search) {
+      var matches = findMatches(search);
+      if (matches.length != 0) {
+        window.location = matches[0].href;
+        return;
+      }
+    }
+
     $('#search-box').prop('disabled', false);
     $('#search-box').prop('placeholder', 'Search');
     $(document).keypress(function(event) {
@@ -158,12 +168,12 @@ function initSearch() {
     {
       name: 'elements',
       limit: 10,
-      source: findMatches,
+      source: function(q, cb) { cb(findMatches(q)); },
       display: function(element) { return element.name; },
       templates: {
         suggestion: function(match) {
           return [
-            '<div>',
+            '<div data-href="' + match.href + '">',
               match.name,
               ' ',
               match.type.toLowerCase(),
@@ -177,7 +187,26 @@ function initSearch() {
       }
     });
 
-    $('#search-box.typeahead').bind('typeahead:select', function(ev, suggestion) {
+    var typeaheadElement = $('#search-box.typeahead');
+    var typeaheadElementParent = typeaheadElement.parent();
+    var selectedSuggestion;
+
+    typeaheadElement.on("keydown", function (e) {
+      if (e.keyCode === 13) { // Enter
+        if (selectedSuggestion == null) {
+          var suggestion = typeaheadElementParent.find(".tt-suggestion.tt-selectable:eq(0)");
+          if (suggestion.length > 0) {
+            var href = suggestion.data("href");
+            if (href != null) {
+              window.location = href;
+            }
+          }
+        }
+      }
+    });
+
+    typeaheadElement.bind('typeahead:select', function(ev, suggestion) {
+        selectedSuggestion = suggestion;
         window.location = suggestion.href;
     });
   }

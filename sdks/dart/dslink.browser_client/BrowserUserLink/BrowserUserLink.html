@@ -92,15 +92,15 @@
       </li>
       <li><a href="dslink.browser_client/BrowserUserLink/enableAck.html">enableAck</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/format.html">format</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/hashCode.html">hashCode</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/logName.html">logName</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/privateKey.html">privateKey</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/requester.html">requester</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/wsUpdateUri.html">wsUpdateUri</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/logName.html">logName</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserUserLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/operator_equals.html">operator ==</a></li>
@@ -108,11 +108,11 @@
       <li class="section-title"><a href="dslink.browser_client/BrowserUserLink-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/close.html">close</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/connect.html">connect</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li><a href="dslink.browser_client/BrowserUserLink/initWebsocket.html">initWebsocket</a></li>
+      <li><a href="dslink.browser_client/BrowserUserLink/updateSalt.html">updateSalt</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserUserLink/toString.html">toString</a></li>
-      <li><a href="dslink.browser_client/BrowserUserLink/updateSalt.html">updateSalt</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-left-->
@@ -120,13 +120,13 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">BrowserUserLink</span>(<wbr>{<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-wsUpdateUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUpdateUri</span></span>, <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span></span>, <span class="parameter" id="-param-format"><span class="type-annotation">String</span> <span class="parameter-name">format</span></span>})
+            <span class="name ">BrowserUserLink</span>(<wbr>{<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span>, </span> <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-wsUpdateUri"><span class="type-annotation">String</span> <span class="parameter-name">wsUpdateUri</span>, </span> <span class="parameter" id="-param-enableAck"><span class="type-annotation">bool</span> <span class="parameter-name">enableAck</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="-param-format"><span class="type-annotation">String</span> <span class="parameter-name">format</span></span> })
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/browser/browser_user_link.dart.html#line-31'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">BrowserUserLink({NodeProvider nodeProvider,
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">BrowserUserLink({NodeProvider nodeProvider,
 bool isRequester: true,
 bool isResponder: true,
 this.wsUpdateUri,
@@ -147,7 +147,7 @@ String format})
   if (window.location.hash.contains(&quot;dsa_json&quot;)) {
     this.format = &quot;json&quot;;
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -160,7 +160,7 @@ String format})
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -180,6 +180,7 @@ String format})
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

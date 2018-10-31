@@ -111,8 +111,8 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/nodes.dart.html#line-451'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String decodeName(String input) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static String decodeName(String input) {
   var out = new StringBuffer();
   cu(String n) =&gt; const Utf8Encoder().convert(n)[0];
   mainLoop: for (var i = 0; i &lt; input.length; i++) {
@@ -121,7 +121,6 @@
     if (char == &quot;%&quot;) {
       String hexA = input[i + 1];
       if ((cu(hexA) &gt;= cu(&quot;0&quot;) &amp;&amp; cu(hexA) &lt;= cu(&quot;9&quot;)) ||
-          (cu(hexA) &gt;= cu(&quot;a&quot;) &amp;&amp; cu(hexA) &lt;= cu(&quot;f&quot;)) ||
           (cu(hexA) &gt;= cu(&quot;A&quot;) &amp;&amp; cu(hexA) &lt;= cu(&quot;F&quot;))
       ) {
         String s = hexA;
@@ -129,7 +128,6 @@
         if (i + 2 &lt; input.length) {
           String hexB = input[i + 2];
           if ((cu(hexB) &gt; cu(&quot;0&quot;) &amp;&amp; cu(hexB) &lt;= cu(&quot;9&quot;)) ||
-              (cu(hexB) &gt;= cu(&quot;a&quot;) &amp;&amp; cu(hexB) &lt;= cu(&quot;f&quot;)) ||
               (cu(hexB) &gt;= cu(&quot;A&quot;) &amp;&amp; cu(hexB) &lt;= cu(&quot;F&quot;))
           ) {
             ++i;
@@ -148,7 +146,7 @@
   }
 
   return out.toString();
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -161,7 +159,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -181,6 +179,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

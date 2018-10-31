@@ -92,7 +92,6 @@
       <li><a href="dslink.client/HttpClientLink/enableAck.html">enableAck</a></li>
       <li><a href="dslink.client/HttpClientLink/format.html">format</a></li>
       <li><a href="dslink.client/HttpClientLink/formats.html">formats</a></li>
-      <li class="inherited"><a href="dslink.client/HttpClientLink/hashCode.html">hashCode</a></li>
       <li><a href="dslink.client/HttpClientLink/home.html">home</a></li>
       <li><a href="dslink.client/HttpClientLink/linkData.html">linkData</a></li>
       <li><a href="dslink.client/HttpClientLink/logName.html">logName</a></li>
@@ -100,25 +99,30 @@
       <li><a href="dslink.client/HttpClientLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink.client/HttpClientLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.client/HttpClientLink/privateKey.html">privateKey</a></li>
+      <li><a href="dslink.client/HttpClientLink/reconnectWSCount.html">reconnectWSCount</a></li>
       <li><a href="dslink.client/HttpClientLink/remotePath.html">remotePath</a></li>
       <li><a href="dslink.client/HttpClientLink/requester.html">requester</a></li>
       <li><a href="dslink.client/HttpClientLink/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.client/HttpClientLink/salts.html">salts</a></li>
+      <li><a href="dslink.client/HttpClientLink/strictTls.html">strictTls</a></li>
       <li><a href="dslink.client/HttpClientLink/token.html">token</a></li>
       <li><a href="dslink.client/HttpClientLink/tokenHash.html">tokenHash</a></li>
+      <li><a href="dslink.client/HttpClientLink/useStandardWebSocket.html">useStandardWebSocket</a></li>
+      <li class="inherited"><a href="dslink.client/HttpClientLink/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.client/HttpClientLink/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.client/HttpClientLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.client/HttpClientLink/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.client/HttpClientLink-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.client/HttpClientLink/close.html">close</a></li>
+      <li><a href="dslink.client/HttpClientLink/connDelay.html">connDelay</a></li>
       <li><a href="dslink.client/HttpClientLink/connect.html">connect</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li><a href="dslink.client/HttpClientLink/initWebsocket.html">initWebsocket</a></li>
+      <li><a href="dslink.client/HttpClientLink/updateSalt.html">updateSalt</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li class="inherited"><a href="dslink.client/HttpClientLink/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.client/HttpClientLink/toString.html">toString</a></li>
-      <li><a href="dslink.client/HttpClientLink/updateSalt.html">updateSalt</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-left-->
@@ -126,20 +130,25 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">HttpClientLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span></span>, <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span></span>, <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span></span>, {<span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span></span>, <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span></span>, <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span></span>, <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span></span>, <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span></span>, <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span></span>, <span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span></span>, <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span>})
+            <span class="name ">HttpClientLink</span>(<wbr><span class="parameter" id="-param-_conn"><span class="type-annotation">String</span> <span class="parameter-name">_conn</span>, </span> <span class="parameter" id="-param-dsIdPrefix"><span class="type-annotation">String</span> <span class="parameter-name">dsIdPrefix</span>, </span> <span class="parameter" id="-param-privateKey"><span class="type-annotation"><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></span> <span class="parameter-name">privateKey</span>, {</span> <span class="parameter" id="-param-nodeProvider"><span class="type-annotation"><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span> <span class="parameter-name">nodeProvider</span>, </span> <span class="parameter" id="-param-isRequester"><span class="type-annotation">bool</span> <span class="parameter-name">isRequester</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-isResponder"><span class="type-annotation">bool</span> <span class="parameter-name">isResponder</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="-param-overrideRequester"><span class="type-annotation"><a href="dslink.requester/Requester-class.html">Requester</a></span> <span class="parameter-name">overrideRequester</span>, </span> <span class="parameter" id="-param-overrideResponder"><span class="type-annotation"><a href="dslink.responder/Responder-class.html">Responder</a></span> <span class="parameter-name">overrideResponder</span>, </span> <span class="parameter" id="-param-strictTls"><span class="type-annotation">bool</span> <span class="parameter-name">strictTls</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="-param-home"><span class="type-annotation">String</span> <span class="parameter-name">home</span>, </span> <span class="parameter" id="-param-token"><span class="type-annotation">String</span> <span class="parameter-name">token</span>, </span> <span class="parameter" id="-param-linkData"><span class="type-annotation">Map</span> <span class="parameter-name">linkData</span>, </span> <span class="parameter" id="-param-formats"><span class="type-annotation">List</span> <span class="parameter-name">formats</span></span> })
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/http/client_link.dart.html#line-59'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey,
-    {
-    NodeProvider nodeProvider, bool isRequester: true,
-    bool isResponder: true, Requester overrideRequester,
-    Responder overrideResponder, this.home, this.token, this.linkData, List formats
-    })
-    : privateKey = privateKey,
-      dsId = &apos;$dsIdPrefix${privateKey.publicKey.qHash64}&apos; {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">HttpClientLink(this._conn, String dsIdPrefix, PrivateKey privateKey, {
+  NodeProvider nodeProvider,
+  bool isRequester: true,
+  bool isResponder: true,
+  Requester overrideRequester,
+  Responder overrideResponder,
+  this.strictTls: false,
+  this.home,
+  this.token,
+  this.linkData,
+  List formats
+}) : privateKey = privateKey,
+      dsId = &#39;${Path.escapeName(dsIdPrefix)}${privateKey.publicKey.qHash64}&#39; {
   if (isRequester) {
     if (overrideRequester != null) {
       requester = overrideRequester;
@@ -167,13 +176,13 @@
   }
 
   if (token != null &amp;&amp; token.length &gt; 16) {
-    // pre-generate tokenHash
+    &#47;&#47; pre-generate tokenHash
     String tokenId = token.substring(0, 16);
     String hashStr = CryptoProvider.sha256(
-        toUTF8(&apos;$dsId$token&apos;));
-    tokenHash = &apos;&amp;token=$tokenId$hashStr&apos;;
+        toUTF8(&#39;$dsId$token&#39;));
+    tokenHash = &#39;&amp;token=$tokenId$hashStr&#39;;
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -186,7 +195,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -206,6 +215,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

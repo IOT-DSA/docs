@@ -96,7 +96,6 @@
       <li><a href="dslink.client/LinkProvider/enableHttp.html">enableHttp</a></li>
       <li><a href="dslink.client/LinkProvider/encodePrettyJson.html">encodePrettyJson</a></li>
       <li><a href="dslink.client/LinkProvider/exitOnFailure.html">exitOnFailure</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.client/LinkProvider/home.html">home</a></li>
       <li><a href="dslink.client/LinkProvider/isInitialized.html">isInitialized</a></li>
       <li><a href="dslink.client/LinkProvider/isRequester.html">isRequester</a></li>
@@ -108,34 +107,40 @@
       <li><a href="dslink.client/LinkProvider/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.client/LinkProvider/overrideRequester.html">overrideRequester</a></li>
       <li><a href="dslink.client/LinkProvider/overrideResponder.html">overrideResponder</a></li>
+      <li><a href="dslink.client/LinkProvider/parsedArguments.html">parsedArguments</a></li>
       <li><a href="dslink.client/LinkProvider/prefix.html">prefix</a></li>
       <li><a href="dslink.client/LinkProvider/privateKey.html">privateKey</a></li>
       <li><a href="dslink.client/LinkProvider/profiles.html">profiles</a></li>
       <li><a href="dslink.client/LinkProvider/provider.html">provider</a></li>
+      <li><a href="dslink.client/LinkProvider/qosPersistenceEnabled.html">qosPersistenceEnabled</a></li>
       <li><a href="dslink.client/LinkProvider/remotePath.html">remotePath</a></li>
       <li><a href="dslink.client/LinkProvider/requester.html">requester</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.client/LinkProvider/savePrivateKey.html">savePrivateKey</a></li>
       <li><a href="dslink.client/LinkProvider/strictOptions.html">strictOptions</a></li>
+      <li><a href="dslink.client/LinkProvider/strictTls.html">strictTls</a></li>
       <li><a href="dslink.client/LinkProvider/token.html">token</a></li>
+      <li><a href="dslink.client/LinkProvider/valuePersistenceEnabled.html">valuePersistenceEnabled</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#operators">Operators</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
       <li><a href="dslink.client/LinkProvider/operator_get.html">operator []</a></li>
       <li><a href="dslink.client/LinkProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.client/LinkProvider-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.client/LinkProvider/addCommandLineOption.html">addCommandLineOption</a></li>
       <li><a href="dslink.client/LinkProvider/addNode.html">addNode</a></li>
       <li><a href="dslink.client/LinkProvider/chooseBroker.html">chooseBroker</a></li>
       <li><a href="dslink.client/LinkProvider/close.html">close</a></li>
       <li><a href="dslink.client/LinkProvider/configure.html">configure</a></li>
       <li><a href="dslink.client/LinkProvider/connect.html">connect</a></li>
       <li><a href="dslink.client/LinkProvider/createHttpLink.html">createHttpLink</a></li>
+      <li><a href="dslink.client/LinkProvider/getCommandLineValue.html">getCommandLineValue</a></li>
       <li><a href="dslink.client/LinkProvider/getConfig.html">getConfig</a></li>
       <li><a href="dslink.client/LinkProvider/getNode.html">getNode</a></li>
       <li><a href="dslink.client/LinkProvider/init.html">init</a></li>
       <li><a href="dslink.client/LinkProvider/loadNodesFile.html">loadNodesFile</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.client/LinkProvider/onNodesDeserialized.html">onNodesDeserialized</a></li>
       <li><a href="dslink.client/LinkProvider/onValueChange.html">onValueChange</a></li>
       <li><a href="dslink.client/LinkProvider/removeNode.html">removeNode</a></li>
@@ -143,9 +148,10 @@
       <li><a href="dslink.client/LinkProvider/saveAsync.html">saveAsync</a></li>
       <li><a href="dslink.client/LinkProvider/stop.html">stop</a></li>
       <li><a href="dslink.client/LinkProvider/syncValue.html">syncValue</a></li>
-      <li class="inherited"><a href="dslink.client/LinkProvider/toString.html">toString</a></li>
       <li><a href="dslink.client/LinkProvider/updateValue.html">updateValue</a></li>
       <li><a href="dslink.client/LinkProvider/val.html">val</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.client/LinkProvider/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -153,21 +159,17 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">bool</span>
-      <span class="name ">configure</span>(<wbr>{<span class="parameter" id="configure-param-argp"><span class="type-annotation">ArgParser</span> <span class="parameter-name">argp</span></span>, <span class="parameter" id="configure-param-optionsHandler"><span class="type-annotation"><a href="dslink/OptionResultsHandler.html">OptionResultsHandler</a></span> <span class="parameter-name">optionsHandler</span>(<span class="parameter" id="OptionResultsHandler-param-results"><span class="type-annotation">ArgResults</span> <span class="parameter-name">results</span></span>)</span>})
+      <span class="name ">configure</span>(<wbr>{<span class="parameter" id="configure-param-argp"><span class="type-annotation">ArgParser</span> <span class="parameter-name">argp</span>, </span> <span class="parameter" id="configure-param-optionsHandler"><span class="type-annotation"><a href="dslink.client/OptionResultsHandler.html">OptionResultsHandler</a></span> <span class="parameter-name">optionsHandler</span></span> })
     </section>
     <section class="desc markdown">
       <p>Configure the link.
 If <code>argp</code> is provided for argument parsing, it is used.
-This includes:
-- processing command-line arguments
-- setting broker urls
-- loading dslink.json files
-- loading or creating private keys</p>
+This includes:</p><ul><li>processing command-line arguments</li><li>setting broker urls</li><li>loading dslink.json files</li><li>loading or creating private keys</li></ul>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/client.dart.html#line-165'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">bool configure({ArgParser argp, OptionResultsHandler optionsHandler}) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">bool configure({ArgParser argp, OptionResultsHandler optionsHandler}) {
   _configured = true;
 
   if (link != null) {
@@ -176,31 +178,37 @@ This includes:
   }
 
   if (argp == null) {
-    argp = new ArgParser(allowTrailingOptions: !strictOptions);
+    argp = _argp == null ? _argp = new ArgParser(allowTrailingOptions: !strictOptions) : _argp;
   }
 
   argp.addOption(&quot;broker&quot;,
       abbr: &quot;b&quot;,
       help: &quot;Broker URL&quot;,
-      defaultsTo: &quot;http://127.0.0.1:8080/conn&quot;);
+      defaultsTo: &quot;http:&#47;&#47;127.0.0.1:8080&#47;conn&quot;);
   argp.addOption(&quot;name&quot;, abbr: &quot;n&quot;, help: &quot;Link Name&quot;);
   argp.addOption(&quot;home&quot;, help: &quot;Home&quot;);
   argp.addOption(&quot;token&quot;, help: &quot;Token&quot;);
   argp.addOption(&quot;base-path&quot;, help: &quot;Base Path for DSLink&quot;);
   argp.addOption(&quot;watch-file&quot;, help: &quot;Watch File for DSLink&quot;, hide: true);
   argp.addOption(&quot;log-file&quot;, help: &quot;Log File for DSLink&quot;);
+
+  List&lt;String&gt; logLevelNames = Level.LEVELS.map(_logLevelToName).toList();
+  logLevelNames.addAll([&quot;auto&quot;, &quot;debug&quot;]);
+
   argp.addOption(&quot;log&quot;,
       abbr: &quot;l&quot;,
-      allowed: Level.LEVELS.map((it) =&gt; it.name.toLowerCase()).toList()
-        ..addAll([&quot;auto&quot;, &quot;debug&quot;]),
+      allowed: logLevelNames,
       help: &quot;Log Level&quot;,
       defaultsTo: &quot;AUTO&quot;);
   argp.addFlag(&quot;help&quot;,
       abbr: &quot;h&quot;, help: &quot;Displays this Help Message&quot;, negatable: false);
   argp.addFlag(&quot;discover&quot;,
       abbr: &quot;d&quot;, help: &quot;Automatically Discover a Broker&quot;, negatable: false);
+  argp.addFlag(&quot;strictTls&quot;,
+      help: &quot;Enforces valid SSL&#47;TLS certificates for secure connections to &quot; +
+          &quot;broker.&quot;);
 
-  ArgResults opts = argp.parse(args);
+  ArgResults opts = _parsedArguments = argp.parse(args);
 
   if (opts[&quot;log&quot;] == &quot;auto&quot;) {
     if (DEBUG_MODE) {
@@ -215,7 +223,7 @@ This includes:
   if (opts[&quot;base-path&quot;] != null) {
     _basePath = opts[&quot;base-path&quot;];
 
-    if (_basePath.endsWith(&quot;/&quot;)) {
+    if (_basePath.endsWith(&quot;&#47;&quot;)) {
       _basePath = _basePath.substring(0, _basePath.length - 1);
     }
   }
@@ -225,6 +233,9 @@ This includes:
   }
 
   _logFile = opts[&quot;log-file&quot;];
+  if (opts[&quot;strictTls&quot;]) {
+    strictTls = true;
+  }
 
   if (_logFile != null) {
     var file = new File(_logFile);
@@ -345,8 +356,8 @@ This includes:
     }
   }
 
-  // load configs
-  File dslinkFile = new File(&quot;${_basePath}/dslink.json&quot;);
+  &#47;&#47; load configs
+  File dslinkFile = new File(&quot;${_basePath}&#47;dslink.json&quot;);
 
   if (dslinkFile.existsSync()) {
     var e;
@@ -371,12 +382,12 @@ This includes:
 
   if (brokerUrl != null) {
     if (!brokerUrl.startsWith(&quot;http&quot;)) {
-      brokerUrl = &quot;http://$brokerUrl&quot;;
+      brokerUrl = &quot;http:&#47;&#47;$brokerUrl&quot;;
     }
   }
 
   File keyFile = getConfig(&quot;key&quot;) == null
-      ? new File(&quot;${_basePath}/.dslink.key&quot;)
+      ? new File(&quot;${_basePath}&#47;.dslink.key&quot;)
       : new File.fromUri(Uri.parse(getConfig(&quot;key&quot;)));
   String key;
 
@@ -386,8 +397,8 @@ This includes:
   } catch (err) {}
 
   if (key == null || key.length != 131) {
-    // 43 bytes d, 87 bytes Q, 1 space
-    // generate the key
+    &#47;&#47; 43 bytes d, 87 bytes Q, 1 space
+    &#47;&#47; generate the key
     if (DSRandom.instance.needsEntropy) {
       String macs;
       if (Platform.isWindows) {
@@ -405,7 +416,7 @@ This includes:
           } catch (e) {}
         }
       }
-      // randomize the PRNG with the system mac (as well as timestamp)
+      &#47;&#47; randomize the PRNG with the system mac (as well as timestamp)
       DSRandom.instance.addEntropy(macs);
     }
     privateKey = new PrivateKey.generateSync();
@@ -414,6 +425,7 @@ This includes:
       keyFile.writeAsStringSync(key);
     }
   }
+  SimpleNode.initEncryption(privateKey.saveToString());
 
   if (opts[&quot;discover&quot;]) {
     _discoverBroker = true;
@@ -424,7 +436,7 @@ This includes:
   }
 
   return true;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -437,7 +449,7 @@ This includes:
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -457,6 +469,7 @@ This includes:
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

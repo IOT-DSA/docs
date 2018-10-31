@@ -88,18 +88,18 @@
         <a href="dslink.responder/SimpleNodeProvider-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/SimpleNodeProvider/defs.html">defs</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/nodes.html">nodes</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/permissions.html">permissions</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/profileMap.html">profileMap</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/root.html">root</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/sys.html">sys</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/SimpleNodeProvider-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/operator_equals.html">operator ==</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_get.html">operator []</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
       <li class="section-title"><a href="dslink.responder/SimpleNodeProvider-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/addNode.html">addNode</a></li>
@@ -110,16 +110,17 @@
       <li><a href="dslink.responder/SimpleNodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/hasNode.html">hasNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/init.html">init</a></li>
-      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/persist.html">persist</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/registerResolver.html">registerResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/removeNode.html">removeNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/save.html">save</a></li>
+      <li><a href="dslink.responder/SimpleNodeProvider/setIconResolver.html">setIconResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setNode.html">setNode</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/setPersistFunction.html">setPersistFunction</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/toString.html">toString</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/unregisterResolver.html">unregisterResolver</a></li>
       <li><a href="dslink.responder/SimpleNodeProvider/updateValue.html">updateValue</a></li>
+      <li class="inherited"><a href="dslink.responder/SimpleNodeProvider/noSuchMethod.html">noSuchMethod</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -128,21 +129,21 @@
     <section class="multi-line-signature">
       <div>
         <ol class="annotation-list">
-          <li>override</li>
+          <li>@override</li>
         </ol>
       </div>
-      <span class="returntype"><a href="dslink/SimpleNode-class.html">SimpleNode</a></span>
-      <span class="name ">addNode</span>(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+      <span class="returntype"><a href="dslink.responder/SimpleNode-class.html">SimpleNode</a></span>
+      <span class="name ">addNode</span>(<wbr><span class="parameter" id="addNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, </span> <span class="parameter" id="addNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
     </section>
     <section class="desc markdown">
       <p>Adds a node at the given <code>path</code> that is initialized with the given data in <code>m</code>.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-502'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">@override
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">@override
 SimpleNode addNode(String path, Map m) {
-  if (path == &apos;/&apos; || !path.startsWith(&apos;/&apos;)) return null;
+  if (path == &#39;&#47;&#39; || !path.startsWith(&#39;&#47;&#39;)) return null;
 
   Path p = new Path(path);
   SimpleNode oldNode = _getNode(path, allowStubs: true);
@@ -155,7 +156,7 @@ SimpleNode addNode(String path, Map m) {
   }
 
   if (node == null) {
-    String profile = m[r&apos;$is&apos;];
+    String profile = m[r&#39;$is&#39;];
     if (_profiles.containsKey(profile)) {
       node = _profiles[profile](path);
     } else {
@@ -165,7 +166,26 @@ SimpleNode addNode(String path, Map m) {
 
   if (oldNode != null) {
     logger.fine(&quot;Found old node for ${path}: Copying subscriptions.&quot;);
-    node.callbacks.addAll(oldNode.callbacks);
+
+    for (ValueUpdateCallback func in oldNode.callbacks.keys) {
+      node.subscribe(func, oldNode.callbacks[func]);
+    }
+
+    if (node is SimpleNode) {
+      try {
+        node._listChangeController = oldNode._listChangeController;
+        node._listChangeController.onStartListen = () {
+          node.onStartListListen();
+        };
+        node._listChangeController.onAllCancel = () {
+          node.onAllListCancel();
+        };
+      } catch (e) {}
+
+      if (node._hasListListener) {
+        node.onStartListListen();
+      }
+    }
   }
 
   nodes[path] = node;
@@ -185,7 +205,7 @@ SimpleNode addNode(String path, Map m) {
   }
 
   return node;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -198,7 +218,7 @@ SimpleNode addNode(String path, Map m) {
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -218,6 +238,7 @@ SimpleNode addNode(String path, Map m) {
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

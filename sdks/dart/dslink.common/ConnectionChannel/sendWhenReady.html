@@ -55,7 +55,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">method</span> sendWhenReady
+            <span class="kind">abstract method</span> sendWhenReady
           </h1>
         </div>
         <ul class="subnav">
@@ -86,19 +86,19 @@
         <a href="dslink.common/ConnectionChannel-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.common/ConnectionChannel/connected.html">connected</a></li>
-      <li class="inherited"><a href="dslink.common/ConnectionChannel/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/ConnectionChannel/isReady.html">isReady</a></li>
       <li><a href="dslink.common/ConnectionChannel/onConnected.html">onConnected</a></li>
       <li><a href="dslink.common/ConnectionChannel/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.common/ConnectionChannel/onReceive.html">onReceive</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionChannel/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.common/ConnectionChannel/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/ConnectionChannel-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/ConnectionChannel/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.common/ConnectionChannel-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.common/ConnectionChannel/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/ConnectionChannel/sendWhenReady.html">sendWhenReady</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionChannel/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.common/ConnectionChannel/toString.html">toString</a></li>
     </ol>
 
@@ -107,7 +107,7 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">sendWhenReady</span>(<wbr><span class="parameter" id="sendWhenReady-param-handler"><span class="type-annotation"><a href="dslink.browser/ConnectionHandler-class.html">ConnectionHandler</a></span> <span class="parameter-name">handler</span></span>)
+      <span class="name ">sendWhenReady</span>(<wbr><span class="parameter" id="sendWhenReady-param-handler"><span class="type-annotation"><a href="dslink.common/ConnectionHandler-class.html">ConnectionHandler</a></span> <span class="parameter-name">handler</span></span>)
     </section>
     <section class="desc markdown">
       <p>raw connection need to handle error and resending of data, so it can only send one map at a time
@@ -116,8 +116,8 @@ requester and responder should handle the merging of methods</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/common.dart.html#line-94'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void sendWhenReady(ConnectionHandler handler);</code></pre>
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void sendWhenReady(ConnectionHandler handler);</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -130,7 +130,7 @@ requester and responder should handle the merging of methods</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -150,6 +150,7 @@ requester and responder should handle the merging of methods</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -85,15 +85,15 @@
       <li class="section-title">
         <a href="dslink.worker/WorkerPool-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.worker/WorkerPool/hashCode.html">hashCode</a></li>
       <li><a href="dslink.worker/WorkerPool/onMessageReceivedHandler.html">onMessageReceivedHandler</a></li>
-      <li class="inherited"><a href="dslink.worker/WorkerPool/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.worker/WorkerPool/sessions.html">sessions</a></li>
       <li><a href="dslink.worker/WorkerPool/sockets.html">sockets</a></li>
+      <li class="inherited"><a href="dslink.worker/WorkerPool/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.worker/WorkerPool/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#operators">Operators</a></li>
-      <li class="inherited"><a href="dslink.worker/WorkerPool/operator_equals.html">operator ==</a></li>
       <li><a href="dslink.worker/WorkerPool/operator_get.html">operator []</a></li>
+      <li class="inherited"><a href="dslink.worker/WorkerPool/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.worker/WorkerPool-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.worker/WorkerPool/addMethod.html">addMethod</a></li>
@@ -106,7 +106,6 @@
       <li><a href="dslink.worker/WorkerPool/getAvailableWorkerId.html">getAvailableWorkerId</a></li>
       <li><a href="dslink.worker/WorkerPool/init.html">init</a></li>
       <li><a href="dslink.worker/WorkerPool/listen.html">listen</a></li>
-      <li class="inherited"><a href="dslink.worker/WorkerPool/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.worker/WorkerPool/ping.html">ping</a></li>
       <li><a href="dslink.worker/WorkerPool/reduceWorkers.html">reduceWorkers</a></li>
       <li><a href="dslink.worker/WorkerPool/resetDistributionCache.html">resetDistributionCache</a></li>
@@ -114,9 +113,10 @@
       <li><a href="dslink.worker/WorkerPool/resync.html">resync</a></li>
       <li><a href="dslink.worker/WorkerPool/send.html">send</a></li>
       <li><a href="dslink.worker/WorkerPool/stop.html">stop</a></li>
-      <li class="inherited"><a href="dslink.worker/WorkerPool/toString.html">toString</a></li>
       <li><a href="dslink.worker/WorkerPool/waitFor.html">waitFor</a></li>
       <li><a href="dslink.worker/WorkerPool/workerAt.html">workerAt</a></li>
+      <li class="inherited"><a href="dslink.worker/WorkerPool/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.worker/WorkerPool/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -128,10 +128,10 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/worker.dart.html#line-103'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future ping() {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Future ping() {
   return Future.wait(sockets.map((it) =&gt; it.ping()).toList());
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -144,7 +144,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -164,6 +164,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -56,6 +56,7 @@
         </div>
         <ul class="subnav">
           <li><a href="dslink.common/dslink.common-library.html#constants">Constants</a></li>
+          <li><a href="dslink.common/dslink.common-library.html#typedefs">Typedefs</a></li>
           <li><a href="dslink.common/dslink.common-library.html#properties">Properties</a></li>
           <li><a href="dslink.common/dslink.common-library.html#classes">Classes</a></li>
         </ul>
@@ -71,8 +72,9 @@
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
 
+
     <ol>
-      <li class="section-title"><a href="index.html">Libraries</a></li>
+      <li class="section-title"><a href="index.html#libraries">Libraries</a></li>
       <li><a href="dslink/dslink-library.html">dslink</a></li>
       <li><a href="dslink.broker_discovery/dslink.broker_discovery-library.html">dslink.broker_discovery</a></li>
       <li><a href="dslink.browser/dslink.browser-library.html">dslink.browser</a></li>
@@ -105,17 +107,42 @@
       <dl class="properties">
         <dt id="unspecified" class="constant">
           <span class="name "><a href="dslink.common/unspecified-constant.html">unspecified</a></span>
-          <span class="signature">&#8594; <a href="dslink/Unspecified-class.html">Unspecified</a></span>
+          <span class="signature">&#8594; <a href="dslink.common/Unspecified-class.html">Unspecified</a></span>
         </dt>
         <dd>
           <p>Marks something as being unspecified.</p>
-          <div>
-            <span class="signature"><code>const <a href="dslink/Unspecified-class.html">Unspecified</a>()</code></span>
+          
+  <div>
+            <span class="signature"><code>const <a href="dslink.common/Unspecified-class.html">Unspecified</a>()</code></span>
           </div>
         </dd>
       </dl>
     </section>
 
+    <section class="summary offset-anchor" id="typedefs">
+      <h2>Typedefs</h2>
+
+      <dl class="callables">
+        <dt id="ValueCallback" class="callable">
+          <span class="name"><a href="dslink.common/ValueCallback.html">ValueCallback</a></span><span class="signature">(<wbr><span class="parameter" id="ValueCallback-param-value"><span class="parameter-name">value</span></span>)
+            <span class="returntype parameter">&#8594; T</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+          
+</dd>
+        <dt id="ValueUpdateCallback" class="callable">
+          <span class="name"><a href="dslink.common/ValueUpdateCallback.html">ValueUpdateCallback</a></span><span class="signature">(<wbr><span class="parameter" id="ValueUpdateCallback-param-update"><span class="type-annotation"><a href="dslink.common/ValueUpdate-class.html">ValueUpdate</a></span> <span class="parameter-name">update</span></span>)
+            <span class="returntype parameter">&#8594; T</span>
+          </span>
+        </dt>
+        <dd>
+          <p></p>
+          
+</dd>
+      </dl>
+    </section>
 
     <section class="summary offset-anchor" id="properties">
       <h2>Properties</h2>
@@ -127,9 +154,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
       </dl>
     </section>
@@ -199,7 +224,7 @@
         </dt>
         <dd>
           <p>Base Class for any and all nodes in the SDK.
-If you are writing a link, please look at the <code>dslink.responder.SimpleNode</code> class.</p>
+If you are writing a link, please look at the <a href="dslink.responder/SimpleNode-class.html">SimpleNode</a> class.</p>
         </dd>
         <dt id="PassiveChannel">
           <span class="name "><a href="dslink.common/PassiveChannel-class.html">PassiveChannel</a></span>
@@ -298,6 +323,9 @@ return messages and the processors that need ack callback</p>
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#constants">Constants</a></li>
       <li><a href="dslink.common/unspecified-constant.html">unspecified</a></li>
     
+      <li class="section-title"><a href="dslink.common/dslink.common-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.common/ValueCallback.html">ValueCallback</a></li>
+      <li><a href="dslink.common/ValueUpdateCallback.html">ValueUpdateCallback</a></li>
     
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#properties">Properties</a></li>
       <li><a href="dslink.common/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -341,7 +369,7 @@ return messages and the processors that need ack callback</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -361,6 +389,7 @@ return messages and the processors that need ack callback</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

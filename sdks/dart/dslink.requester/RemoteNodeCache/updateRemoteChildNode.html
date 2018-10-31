@@ -98,30 +98,30 @@
       <li><a href="dslink.requester/RemoteNodeCache/getDefNode.html">getDefNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/getRemoteNode.html">getRemoteNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/isNodeCached.html">isNodeCached</a></li>
+      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/toString.html">toString</a></li>
-      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span>
-      <span class="name ">updateRemoteChildNode</span>(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+      <span class="returntype"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
+      <span class="name ">updateRemoteChildNode</span>(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span>, </span> <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
     </section>
     <section class="desc markdown">
       <p>update node with a map.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/requester/node_cache.dart.html#line-41'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">RemoteNode updateRemoteChildNode(RemoteNode parent, String name, Map m) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">RemoteNode updateRemoteChildNode(RemoteNode parent, String name, Map m) {
   String path;
-  if (parent.remotePath == &apos;/&apos;) {
-    path = &apos;/$name&apos;;
+  if (parent.remotePath == &#39;&#47;&#39;) {
+    path = &#39;&#47;$name&#39;;
   } else {
-    path = &apos;${parent.remotePath}/$name&apos;;
+    path = &#39;${parent.remotePath}&#47;$name&#39;;
   }
   RemoteNode rslt;
   if (_nodes.containsKey(path)) {
@@ -133,7 +133,7 @@
     rslt.updateRemoteChildData(m, this);
   }
   return rslt;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -146,7 +146,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -166,6 +166,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

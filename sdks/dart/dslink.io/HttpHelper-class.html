@@ -60,8 +60,10 @@
           <li><a href="dslink.io/HttpHelper-class.html#constants">Constants</a></li>
           <li><a href="dslink.io/HttpHelper-class.html#static-properties">Static Properties</a></li>
           <li><a href="dslink.io/HttpHelper-class.html#static-methods">Static Methods</a></li>
+          <li><a href="dslink.io/HttpHelper-class.html#instance-properties">Properties</a></li>
           <li><a href="dslink.io/HttpHelper-class.html#constructors">Constructors</a></li>
           <li><a href="dslink.io/HttpHelper-class.html#operators">Operators</a></li>
+          <li><a href="dslink.io/HttpHelper-class.html#instance-methods">Methods</a></li>
         </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
@@ -84,6 +86,8 @@
       <li><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></li>
       <li><a href="dslink.io/readStdinLines.html">readStdinLines</a></li>
       <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
+      <li><a href="dslink.io/safeWriteAsBytes.html">safeWriteAsBytes</a></li>
+      <li><a href="dslink.io/safeWriteAsString.html">safeWriteAsString</a></li>
     
     
       <li class="section-title"><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
@@ -109,7 +113,8 @@
         </dt>
         <dd>
           <p></p>
-          <div>
+          
+  <div>
             <span class="signature"><code>const bool.fromEnvironment("calzone.build", defaultValue: false) || const bool.fromEnvironment("websocket.standard", defaultValue: true)</code></span>
           </div>
         </dd>
@@ -126,9 +131,7 @@
         </dt>
         <dd>
           <p>Main HTTP Client</p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
       </dl>
     </section>
@@ -137,15 +140,16 @@
       <h2>Static Methods</h2>
       <dl class="callables">
         <dt id="connectToWebSocket" class="callable">
-          <span class="name"><a href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>, <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span></span>, <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span></span>})
+          <span class="name"><a href="dslink.io/HttpHelper/connectToWebSocket.html">connectToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span>, {</span> <span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span>, </span> <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span>, </span> <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span>, </span> <span class="parameter" id="connectToWebSocket-param-useStandardWebSocket"><span class="type-annotation">bool</span> <span class="parameter-name">useStandardWebSocket</span></span> })
             <span class="returntype parameter">&#8594; Future&lt;WebSocket&gt;</span>
           </span>
         </dt>
         <dd>
           <p>Custom WebSocket Connection logic.</p>
-        </dd>
+          
+</dd>
         <dt id="createRequest" class="callable">
-          <span class="name"><a href="dslink.io/HttpHelper/createRequest.html">createRequest</a></span><span class="signature">(<wbr><span class="parameter" id="createRequest-param-method"><span class="type-annotation">String</span> <span class="parameter-name">method</span></span>, <span class="parameter" id="createRequest-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="createRequest-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+          <span class="name"><a href="dslink.io/HttpHelper/createRequest.html">createRequest</a></span><span class="signature">(<wbr><span class="parameter" id="createRequest-param-method"><span class="type-annotation">String</span> <span class="parameter-name">method</span>, </span> <span class="parameter" id="createRequest-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span>, {</span> <span class="parameter" id="createRequest-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span> })
             <span class="returntype parameter">&#8594; Future&lt;HttpClientRequest&gt;</span>
           </span>
         </dt>
@@ -154,25 +158,28 @@
 <code>method</code> is the HTTP method.
 <code>url</code> is the URL to make the request to.
 <code>headers</code> specifies additional headers to set.</p>
-        </dd>
+          
+</dd>
         <dt id="fetchJSON" class="callable">
-          <span class="name"><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></span><span class="signature">(<wbr><span class="parameter" id="fetchJSON-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchJSON-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+          <span class="name"><a href="dslink.io/HttpHelper/fetchJSON.html">fetchJSON</a></span><span class="signature">(<wbr><span class="parameter" id="fetchJSON-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span>, {</span> <span class="parameter" id="fetchJSON-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span> })
             <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p>Fetches the specified <code>url</code> from HTTP as JSON.
 If <code>headers</code> is specified, the headers will be added onto the request.</p>
-        </dd>
+          
+</dd>
         <dt id="fetchUrl" class="callable">
-          <span class="name"><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></span><span class="signature">(<wbr><span class="parameter" id="fetchUrl-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="fetchUrl-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span>})
+          <span class="name"><a href="dslink.io/HttpHelper/fetchUrl.html">fetchUrl</a></span><span class="signature">(<wbr><span class="parameter" id="fetchUrl-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span>, {</span> <span class="parameter" id="fetchUrl-param-headers"><span class="type-annotation">Map&lt;String, String&gt;</span> <span class="parameter-name">headers</span></span> })
             <span class="returntype parameter">&#8594; Future&lt;String&gt;</span>
           </span>
         </dt>
         <dd>
           <p>Fetches the specified <code>url</code> from HTTP.
 If <code>headers</code> is specified, the headers will be added onto the request.</p>
-        </dd>
+          
+</dd>
         <dt id="readBytesFromResponse" class="callable">
           <span class="name"><a href="dslink.io/HttpHelper/readBytesFromResponse.html">readBytesFromResponse</a></span><span class="signature">(<wbr><span class="parameter" id="readBytesFromResponse-param-response"><span class="type-annotation">HttpClientResponse</span> <span class="parameter-name">response</span></span>)
             <span class="returntype parameter">&#8594; Future&lt;List&lt;int&gt;&gt;</span>
@@ -180,7 +187,8 @@ If <code>headers</code> is specified, the headers will be added onto the request
         </dt>
         <dd>
           <p>Reads the entire <code>response</code> as a list of bytes.</p>
-        </dd>
+          
+</dd>
         <dt id="tokenizeFieldValue" class="callable">
           <span class="name"><a href="dslink.io/HttpHelper/tokenizeFieldValue.html">tokenizeFieldValue</a></span><span class="signature">(<wbr><span class="parameter" id="tokenizeFieldValue-param-headerValue"><span class="type-annotation">String</span> <span class="parameter-name">headerValue</span></span>)
             <span class="returntype parameter">&#8594; List&lt;String&gt;</span>
@@ -188,15 +196,17 @@ If <code>headers</code> is specified, the headers will be added onto the request
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="upgradeToWebSocket" class="callable">
-          <span class="name"><a href="dslink.io/HttpHelper/upgradeToWebSocket.html">upgradeToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="upgradeToWebSocket-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, [<span class="parameter" id="upgradeToWebSocket-param-protocolSelector"><span class="type-annotation">dynamic</span> <span class="parameter-name">protocolSelector</span>(<span class="parameter" id="protocolSelector-param-protocols"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>)</span>])
+          <span class="name"><a href="dslink.io/HttpHelper/upgradeToWebSocket.html">upgradeToWebSocket</a></span><span class="signature">(<wbr><span class="parameter" id="upgradeToWebSocket-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span>, [</span> <span class="parameter" id="upgradeToWebSocket-param-protocolSelector"><span class="type-annotation">dynamic</span> <span class="parameter-name">protocolSelector</span>(<span class="parameter" id="protocolSelector-param-protocols"><span class="type-annotation">List&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>), </span> <span class="parameter" id="upgradeToWebSocket-param-useStandardWebSocket"><span class="type-annotation">bool</span> <span class="parameter-name">useStandardWebSocket</span></span> ])
             <span class="returntype parameter">&#8594; Future&lt;WebSocket&gt;</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
       </dl>
     </section>
 
@@ -222,11 +232,8 @@ If <code>headers</code> is specified, the headers will be added onto the request
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.io/HttpHelper/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.io/HttpHelper/runtimeType.html">runtimeType</a></span>
@@ -234,9 +241,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -250,10 +255,9 @@ If <code>headers</code> is specified, the headers will be added onto the request
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.io/HttpHelper/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -266,10 +270,9 @@ If <code>headers</code> is specified, the headers will be added onto the request
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.io/HttpHelper/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.io/HttpHelper/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -278,7 +281,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -328,7 +331,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -348,6 +351,7 @@ If <code>headers</code> is specified, the headers will be added onto the request
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

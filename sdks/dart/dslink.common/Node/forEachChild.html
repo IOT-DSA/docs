@@ -90,8 +90,8 @@
       <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
       <li><a href="dslink.common/Node/children.html">children</a></li>
       <li><a href="dslink.common/Node/configs.html">configs</a></li>
-      <li class="inherited"><a href="dslink.common/Node/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/Node/profile.html">profile</a></li>
+      <li class="inherited"><a href="dslink.common/Node/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.common/Node/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/Node-class.html#operators">Operators</a></li>
@@ -108,8 +108,8 @@
       <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
       <li><a href="dslink.common/Node/getOverideAttributes.html">getOverideAttributes</a></li>
       <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
-      <li class="inherited"><a href="dslink.common/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
+      <li class="inherited"><a href="dslink.common/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.common/Node/toString.html">toString</a></li>
     </ol>
 
@@ -118,15 +118,15 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">forEachChild</span>(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
+      <span class="name ">forEachChild</span>(<wbr><span class="parameter" id="forEachChild-param-callback"><span class="type-annotation">void</span> <span class="parameter-name">callback</span>(<span class="parameter" id="callback-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="callback-param-node"><span class="type-annotation"><a href="dslink.common/Node-class.html">Node</a></span> <span class="parameter-name">node</span></span>)</span>)
     </section>
     <section class="desc markdown">
       <p>Iterates over all the children of this node and passes them to the specified <code>callback</code>.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/node.dart.html#line-110'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void forEachChild(void callback(String name, Node node)) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void forEachChild(void callback(String name, Node node)) {
   children.forEach(callback);
   if (profile != null) {
     profile.children.forEach((String str, Node n) {
@@ -135,7 +135,7 @@
       }
     });
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -148,7 +148,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -168,6 +168,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

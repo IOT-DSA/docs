@@ -85,8 +85,8 @@
       <li class="section-title">
         <a href="dslink.broker_discovery/BrokerDiscoveryClient-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.broker_discovery/BrokerDiscoveryClient/hashCode.html">hashCode</a></li>
       <li><a href="dslink.broker_discovery/BrokerDiscoveryClient/requests.html">requests</a></li>
+      <li class="inherited"><a href="dslink.broker_discovery/BrokerDiscoveryClient/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.broker_discovery/BrokerDiscoveryClient/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.broker_discovery/BrokerDiscoveryClient-class.html#operators">Operators</a></li>
@@ -105,12 +105,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Future</span>
-      <span class="name ">init</span>(<wbr>[<span class="parameter" id="init-param-broadcast"><span class="type-annotation">bool</span> <span class="parameter-name">broadcast</span> = <span class="default-value">false</span></span>])
+      <span class="name ">init</span>(<wbr>[<span class="parameter" id="init-param-broadcast"><span class="type-annotation">bool</span> <span class="parameter-name">broadcast</span> = <span class="default-value">false</span></span> ])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/broker_discovery.dart.html#line-11'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future init([bool broadcast = false]) async {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Future init([bool broadcast = false]) async {
   _socket = await RawDatagramSocket.bind(&quot;0.0.0.0&quot;, broadcast ? 1900 : 0);
 
   _socket.multicastHops = 10;
@@ -126,6 +126,10 @@
 
       var data = UTF8.decode(packet.data);
       _onMessage(packet, data);
+    } else if (event == RawSocketEvent.CLOSED) {
+      if (!_brokerController.isClosed) {
+        _brokerController.close();
+      }
     }
   });
 
@@ -143,7 +147,7 @@
   } catch (e) {
     _socket.joinMulticast(new InternetAddress(&quot;239.255.255.230&quot;));
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -156,7 +160,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -176,6 +180,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -86,7 +86,7 @@
         <a href="dslink.responder/RespSubscribeController-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/RespSubscribeController/caching.html">caching</a></li>
-      <li class="inherited"><a href="dslink.responder/RespSubscribeController/hashCode.html">hashCode</a></li>
+      <li><a href="dslink.responder/RespSubscribeController/cachingQueue.html">cachingQueue</a></li>
       <li><a href="dslink.responder/RespSubscribeController/lastValue.html">lastValue</a></li>
       <li><a href="dslink.responder/RespSubscribeController/lastValues.html">lastValues</a></li>
       <li><a href="dslink.responder/RespSubscribeController/node.html">node</a></li>
@@ -94,9 +94,10 @@
       <li><a href="dslink.responder/RespSubscribeController/persist.html">persist</a></li>
       <li><a href="dslink.responder/RespSubscribeController/qosLevel.html">qosLevel</a></li>
       <li><a href="dslink.responder/RespSubscribeController/response.html">response</a></li>
-      <li class="inherited"><a href="dslink.responder/RespSubscribeController/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/RespSubscribeController/sid.html">sid</a></li>
       <li><a href="dslink.responder/RespSubscribeController/waitingValues.html">waitingValues</a></li>
+      <li class="inherited"><a href="dslink.responder/RespSubscribeController/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/RespSubscribeController/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/RespSubscribeController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/RespSubscribeController/operator_equals.html">operator ==</a></li>
@@ -104,10 +105,10 @@
       <li class="section-title"><a href="dslink.responder/RespSubscribeController-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/RespSubscribeController/addValue.html">addValue</a></li>
       <li><a href="dslink.responder/RespSubscribeController/destroy.html">destroy</a></li>
-      <li class="inherited"><a href="dslink.responder/RespSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/RespSubscribeController/onAck.html">onAck</a></li>
       <li><a href="dslink.responder/RespSubscribeController/process.html">process</a></li>
       <li><a href="dslink.responder/RespSubscribeController/resetCache.html">resetCache</a></li>
+      <li class="inherited"><a href="dslink.responder/RespSubscribeController/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/RespSubscribeController/toString.html">toString</a></li>
     </ol>
 
@@ -120,8 +121,8 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/response/subscribe.dart.html#line-303'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">List process(int waitingAckId) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">List process(int waitingAckId) {
   List rslts = new List();
   if (_caching &amp;&amp; _isCacheValid) {
     for (ValueUpdate lastValue in lastValues) {
@@ -137,7 +138,7 @@
   } else {
     if (lastValue.count &gt; 1 || lastValue.status != null) {
       Map m = lastValue.toMap();
-      m[&apos;sid&apos;] = sid;
+      m[&#39;sid&#39;] = sid;
       rslts.add(m);
     } else {
       rslts.add([sid, lastValue.value, lastValue.ts]);
@@ -149,7 +150,7 @@
   }
   lastValue = null;
   return rslts;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -162,7 +163,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -182,6 +183,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -83,29 +83,30 @@
         <a href="dslink.browser_client/WebSocketConnection-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.browser_client/WebSocketConnection/clientLink.html">clientLink</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/codec.html">codec</a></li>
-      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/hashCode.html">hashCode</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/nextMsgId.html">nextMsgId</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onConnect.html">onConnect</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onRequesterReady.html">onRequesterReady</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/pendingAcks.html">pendingAcks</a></li>
+      <li><a href="dslink.browser_client/WebSocketConnection/opened.html">opened</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/pingTimer.html">pingTimer</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/requesterChannel.html">requesterChannel</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/responderChannel.html">responderChannel</a></li>
-      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/socket.html">socket</a></li>
+      <li class="inherited"><a href="dslink.common/Connection/codec.html">codec</a></li>
+      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/Connection/pendingAcks.html">pendingAcks</a></li>
+      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/WebSocketConnection-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.browser_client/WebSocketConnection-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/Connection/ack.html">ack</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/addConnCommand.html">addConnCommand</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/close.html">close</a></li>
-      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/onPingTimer.html">onPingTimer</a></li>
       <li><a href="dslink.browser_client/WebSocketConnection/requireSend.html">requireSend</a></li>
+      <li class="inherited"><a href="dslink.common/Connection/ack.html">ack</a></li>
+      <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.browser_client/WebSocketConnection/toString.html">toString</a></li>
     </ol>
 
@@ -117,9 +118,17 @@
       <section id="getter">
       
       <section class="multi-line-signature">
-        <span class="returntype">Future&lt;<a href="dslink/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
+        <span class="returntype">Future&lt;<a href="dslink.common/ConnectionChannel-class.html">ConnectionChannel</a>&gt;</span>
         <span class="name ">onRequesterReady</span></section>
       
+      <section class="desc markdown">
+  <p>trigger when requester channel is Ready</p>
+</section>
+</section>
+      <section class="summary source-code" id="source">
+        <h2><span>Source</span> </h2>
+        <pre class="prettyprint language-dart">Future&lt;ConnectionChannel&gt; get onRequesterReady =&gt;
+    _onRequestReadyCompleter.future;</pre>
       </section>
 
 
@@ -133,7 +142,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -153,6 +162,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -80,6 +80,9 @@
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#constants">Constants</a></li>
       <li><a href="dslink.common/unspecified-constant.html">unspecified</a></li>
     
+      <li class="section-title"><a href="dslink.common/dslink.common-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.common/ValueCallback.html">ValueCallback</a></li>
+      <li><a href="dslink.common/ValueUpdateCallback.html">ValueUpdateCallback</a></li>
     
       <li class="section-title"><a href="dslink.common/dslink.common-library.html#properties">Properties</a></li>
       <li><a href="dslink.common/defaultProfileMap.html">defaultProfileMap</a></li>
@@ -126,20 +129,22 @@
       <dl class="callables">
         <dt id="parseColumns" class="callable">
           <span class="name"><a href="dslink.common/TableColumn/parseColumns.html">parseColumns</a></span><span class="signature">(<wbr><span class="parameter" id="parseColumns-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
-            <span class="returntype parameter">&#8594; List&lt;<a href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span>
+            <span class="returntype parameter">&#8594; List&lt;<a href="dslink.common/TableColumn-class.html">TableColumn</a>&gt;</span>
           </span>
         </dt>
         <dd>
           <p>parse List of Map into TableColumn</p>
-        </dd>
+          
+</dd>
         <dt id="serializeColumns" class="callable">
           <span class="name"><a href="dslink.common/TableColumn/serializeColumns.html">serializeColumns</a></span><span class="signature">(<wbr><span class="parameter" id="serializeColumns-param-list"><span class="type-annotation">List</span> <span class="parameter-name">list</span></span>)
-            <span class="returntype parameter">&#8594; List</span>
+            <span class="returntype parameter">&#8594; List&lt;Map&lt;String, dynamic&gt;&gt;</span>
           </span>
         </dt>
         <dd>
           <p>convert tableColumns into List of Map</p>
-        </dd>
+          
+</dd>
       </dl>
     </section>
 
@@ -148,7 +153,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="TableColumn" class="callable">
-          <span class="name"><a href="dslink.common/TableColumn/TableColumn.html">TableColumn</a></span><span class="signature">(<span class="parameter" id="-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span></span>, [<span class="parameter" id="-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span></span>])</span>
+          <span class="name"><a href="dslink.common/TableColumn/TableColumn.html">TableColumn</a></span><span class="signature">(<span class="parameter" id="-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span>, [</span> <span class="parameter" id="-param-defaultValue"><span class="type-annotation">Object</span> <span class="parameter-name">defaultValue</span></span> ])</span>
         </dt>
         <dd>
           <p></p>
@@ -166,20 +171,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.common/TableColumn/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="name" class="property">
           <span class="name"><a href="dslink.common/TableColumn/name.html">name</a></span>
@@ -187,19 +179,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
-</dd>
-        <dt id="runtimeType" class="property inherited">
-          <span class="name"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></span>
-          <span class="signature">&#8594; Type</span>
-        </dt>
-        <dd class="inherited">
-          <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="type" class="property">
           <span class="name"><a href="dslink.common/TableColumn/type.html">type</a></span>
@@ -207,9 +187,23 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; Type</span>
+        </dt>
+        <dd class="inherited">
+          <p>A representation of the runtime type of the object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -223,10 +217,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.common/TableColumn/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -235,22 +228,22 @@
       <dl class="callables">
         <dt id="getData" class="callable">
           <span class="name"><a href="dslink.common/TableColumn/getData.html">getData</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; Map</span>
+            <span class="returntype parameter">&#8594; Map&lt;String, dynamic&gt;</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.common/TableColumn/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.common/TableColumn/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.common/TableColumn/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -259,7 +252,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -281,10 +274,10 @@
         <a href="dslink.common/TableColumn-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.common/TableColumn/defaultValue.html">defaultValue</a></li>
-      <li class="inherited"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/TableColumn/name.html">name</a></li>
-      <li class="inherited"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/TableColumn/type.html">type</a></li>
+      <li class="inherited"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/TableColumn-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/TableColumn/operator_equals.html">operator ==</a></li>
@@ -304,7 +297,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -324,6 +317,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

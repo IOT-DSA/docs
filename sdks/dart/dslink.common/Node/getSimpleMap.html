@@ -90,8 +90,8 @@
       <li><a href="dslink.common/Node/attributes.html">attributes</a></li>
       <li><a href="dslink.common/Node/children.html">children</a></li>
       <li><a href="dslink.common/Node/configs.html">configs</a></li>
-      <li class="inherited"><a href="dslink.common/Node/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/Node/profile.html">profile</a></li>
+      <li class="inherited"><a href="dslink.common/Node/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.common/Node/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/Node-class.html#operators">Operators</a></li>
@@ -108,8 +108,8 @@
       <li><a href="dslink.common/Node/getConfig.html">getConfig</a></li>
       <li><a href="dslink.common/Node/getOverideAttributes.html">getOverideAttributes</a></li>
       <li><a href="dslink.common/Node/getSimpleMap.html">getSimpleMap</a></li>
-      <li class="inherited"><a href="dslink.common/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/Node/removeChild.html">removeChild</a></li>
+      <li class="inherited"><a href="dslink.common/Node/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.common/Node/toString.html">toString</a></li>
     </ol>
 
@@ -117,7 +117,7 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype">Map</span>
+      <span class="returntype">Map&lt;String, dynamic&gt;</span>
       <span class="name ">getSimpleMap</span>(<wbr>)
     </section>
     <section class="desc markdown">
@@ -125,27 +125,44 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/node.dart.html#line-144'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Map getSimpleMap() {
-  Map rslt = {};
-  if (configs.containsKey(r&apos;$is&apos;)) {
-    rslt[r&apos;$is&apos;] = configs[r&apos;$is&apos;];
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Map&lt;String, dynamic&gt; getSimpleMap() {
+  var rslt = &lt;String, dynamic&gt;{};
+  if (configs.containsKey(r&#39;$is&#39;)) {
+    rslt[r&#39;$is&#39;] = configs[r&#39;$is&#39;];
   }
-  if (configs.containsKey(r&apos;$type&apos;)) {
-    rslt[r&apos;$type&apos;] = configs[r&apos;$type&apos;];
+
+  if (configs.containsKey(r&#39;$type&#39;)) {
+    rslt[r&#39;$type&#39;] = configs[r&#39;$type&#39;];
   }
-  if (configs.containsKey(r&apos;$name&apos;)) {
-    rslt[r&apos;$name&apos;] = configs[r&apos;$name&apos;];
+
+  if (configs.containsKey(r&#39;$name&#39;)) {
+    rslt[r&#39;$name&#39;] = configs[r&#39;$name&#39;];
   }
-  if (configs.containsKey(r&apos;$invokable&apos;)) {
-    rslt[r&apos;$invokable&apos;] = configs[r&apos;$invokable&apos;];
+
+  if (configs.containsKey(r&#39;$invokable&#39;)) {
+    rslt[r&#39;$invokable&#39;] = configs[r&#39;$invokable&#39;];
   }
-  if (configs.containsKey(r&apos;$writable&apos;)) {
-    rslt[r&apos;$writable&apos;] = configs[r&apos;$writable&apos;];
+
+  if (configs.containsKey(r&#39;$writable&#39;)) {
+    rslt[r&#39;$writable&#39;] = configs[r&#39;$writable&#39;];
   }
-  // TODO(rick): add permission of current requester
+
+  if (configs.containsKey(r&#39;$params&#39;)) {
+    rslt[r&#39;$params&#39;] = configs[r&#39;$params&#39;];
+  }
+
+  if (configs.containsKey(r&#39;$columns&#39;)) {
+    rslt[r&#39;$columns&#39;] = configs[r&#39;$columns&#39;];
+  }
+
+  if (configs.containsKey(r&#39;$result&#39;)) {
+    rslt[r&#39;$result&#39;] = configs[r&#39;$result&#39;];
+  }
+
+  &#47;&#47; TODO(rick): add permission of current requester
   return rslt;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -158,7 +175,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -178,6 +195,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -85,31 +85,30 @@
       <li class="section-title">
         <a href="dslink.responder/Responder-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
+      <li><a href="dslink.responder/Responder/disabled.html">disabled</a></li>
       <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/Responder/maxCacheLength.html">maxCacheLength</a></li>
+      <li><a href="dslink.responder/Responder/maxPermission.html">maxPermission</a></li>
       <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
+      <li><a href="dslink.responder/Responder/openResponseCount.html">openResponseCount</a></li>
       <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/Responder/storage.html">storage</a></li>
+      <li><a href="dslink.responder/Responder/subscriptionCount.html">subscriptionCount</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/Responder-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/Responder-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
       <li><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.responder/Responder/close.html">close</a></li>
       <li><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li><a href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
       <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink.responder/Responder/list.html">list</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/Responder/onData.html">onData</a></li>
       <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
@@ -117,12 +116,17 @@
       <li><a href="dslink.responder/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a href="dslink.responder/Responder/set.html">set</a></li>
       <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
       <li><a href="dslink.responder/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
       <li><a href="dslink.responder/Responder/updateInvoke.html">updateInvoke</a></li>
       <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -134,11 +138,11 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/responder.dart.html#line-289'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void invoke(Map m) {
-  Path path = Path.getValidNodePath(m[&apos;path&apos;]);
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void invoke(Map m) {
+  Path path = Path.getValidNodePath(m[&#39;path&#39;]);
   if (path != null &amp;&amp; path.isAbsolute) {
-    int rid = m[&apos;rid&apos;];
+    int rid = m[&#39;rid&#39;];
     LocalNode parentNode;
 
     parentNode = nodeProvider.getOrCreateNode(path.parentPath, false);
@@ -151,7 +155,7 @@
         if (overriden == null) {
           node = parentNode.getChild(path.name);
           if (node == null) {
-            closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+            closeResponse(m[&#39;rid&#39;], error: DSError.PERMISSION_DENIED);
             return;
           }
 
@@ -163,17 +167,21 @@
             return;
           }
         } else {
-          closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+          closeResponse(m[&#39;rid&#39;], error: DSError.PERMISSION_DENIED);
           return;
         }
       }
       int permission = nodeProvider.permissions.getPermission(path.path, this);
-      int maxPermit = Permission.parse(m[&apos;permit&apos;]);
+      int maxPermit = Permission.parse(m[&#39;permit&#39;]);
       if (maxPermit &lt; permission) {
         permission = maxPermit;
       }
 
-      Map params = m[&quot;params&quot;];
+      Map&lt;String, dynamic&gt; params;
+
+      if (m[&quot;params&quot;] is Map&lt;String, dynamic&gt;) {
+        params = m[&quot;params&quot;] as Map&lt;String, dynamic&gt;;
+      }
 
       if (params == null) {
         params = {};
@@ -184,13 +192,15 @@
           params,
           this,
           addResponse(
-            new InvokeResponse(this, rid, parentNode, node, path.name)
+            new InvokeResponse(this, rid, parentNode, node, path.name),
+            path,
+            params
           ),
           parentNode,
           permission
         );
       } else {
-        closeResponse(m[&apos;rid&apos;], error: DSError.PERMISSION_DENIED);
+        closeResponse(m[&#39;rid&#39;], error: DSError.PERMISSION_DENIED);
       }
     }
 
@@ -204,7 +214,7 @@
           detail: stack.toString()
         );
         closeResponse(
-          m[&apos;rid&apos;],
+          m[&#39;rid&#39;],
           error: err
         );
       });
@@ -212,9 +222,9 @@
       doInvoke();
     }
   } else {
-    closeResponse(m[&apos;rid&apos;], error: DSError.INVALID_PATH);
+    closeResponse(m[&#39;rid&#39;], error: DSError.INVALID_PATH);
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -227,7 +237,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -247,6 +257,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

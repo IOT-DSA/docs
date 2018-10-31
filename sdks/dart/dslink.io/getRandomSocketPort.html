@@ -79,6 +79,8 @@
       <li><a href="dslink.io/getRandomSocketPort.html">getRandomSocketPort</a></li>
       <li><a href="dslink.io/readStdinLines.html">readStdinLines</a></li>
       <li><a href="dslink.io/readStdinText.html">readStdinText</a></li>
+      <li><a href="dslink.io/safeWriteAsBytes.html">safeWriteAsBytes</a></li>
+      <li><a href="dslink.io/safeWriteAsString.html">safeWriteAsString</a></li>
     
     
       <li class="section-title"><a href="dslink.io/dslink.io-library.html#classes">Classes</a></li>
@@ -98,13 +100,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/io.dart.html#line-248'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Future&lt;int&gt; getRandomSocketPort() async {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Future&lt;int&gt; getRandomSocketPort() async {
   var server = await ServerSocket.bind(InternetAddress.LOOPBACK_IP_V4.address, 0);
   var port = server.port;
   await server.close();
   return port;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -117,7 +119,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -137,6 +139,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

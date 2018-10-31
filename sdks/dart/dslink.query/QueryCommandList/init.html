@@ -85,11 +85,11 @@
       <li class="section-title">
         <a href="dslink.query/QueryCommandList-class.html#instance-properties">Properties</a>
       </li>
+      <li><a href="dslink.query/QueryCommandList/parsedpath.html">parsedpath</a></li>
+      <li><a href="dslink.query/QueryCommandList/rawpath.html">rawpath</a></li>
       <li class="inherited"><a href="dslink.query/BrokerQueryCommand/base.html">base</a></li>
       <li class="inherited"><a href="dslink.query/QueryCommandList/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.query/BrokerQueryCommand/nexts.html">nexts</a></li>
-      <li><a href="dslink.query/QueryCommandList/parsedpath.html">parsedpath</a></li>
-      <li><a href="dslink.query/QueryCommandList/rawpath.html">rawpath</a></li>
       <li class="inherited"><a href="dslink.query/BrokerQueryCommand/responses.html">responses</a></li>
       <li class="inherited"><a href="dslink.query/QueryCommandList/runtimeType.html">runtimeType</a></li>
     
@@ -98,15 +98,15 @@
     
       <li class="section-title"><a href="dslink.query/QueryCommandList-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.query/QueryCommandList/addNext.html">addNext</a></li>
-      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/addResponse.html">addResponse</a></li>
       <li><a href="dslink.query/QueryCommandList/destroy.html">destroy</a></li>
-      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/getQueryId.html">getQueryId</a></li>
       <li><a href="dslink.query/QueryCommandList/init.html">init</a></li>
-      <li class="inherited"><a href="dslink.query/QueryCommandList/noSuchMethod.html">noSuchMethod</a></li>
-      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/removeNext.html">removeNext</a></li>
       <li><a href="dslink.query/QueryCommandList/toString.html">toString</a></li>
       <li><a href="dslink.query/QueryCommandList/updateFromBase.html">updateFromBase</a></li>
       <li><a href="dslink.query/QueryCommandList/updateRow.html">updateRow</a></li>
+      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/addResponse.html">addResponse</a></li>
+      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/getQueryId.html">getQueryId</a></li>
+      <li class="inherited"><a href="dslink.query/QueryCommandList/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.query/BrokerQueryCommand/removeNext.html">removeNext</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -121,13 +121,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/query/query_list_command.dart.html#line-174'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void init() {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void init() {
   parsedpath = new List&lt;_ListNodeMatch&gt;(rawpath.length);
   for (int i = 0; i &lt; rawpath.length; ++i) {
     parsedpath[i] = new _ListNodeMatch(rawpath[i]);
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -140,7 +140,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -160,6 +160,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

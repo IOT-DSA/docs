@@ -98,31 +98,38 @@
       <li><a href="dslink.requester/RemoteNodeCache/getDefNode.html">getDefNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/getRemoteNode.html">getRemoteNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/isNodeCached.html">isNodeCached</a></li>
+      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/toString.html">toString</a></li>
-      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/RemoteNode-class.html">RemoteNode</a></span>
+      <span class="returntype"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
       <span class="name ">getRemoteNode</span>(<wbr><span class="parameter" id="getRemoteNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/requester/node_cache.dart.html#line-9'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">RemoteNode getRemoteNode(String path) {
-  if (!_nodes.containsKey(path)) {
-    if (path.startsWith(&apos;defs&apos;)) {
-      _nodes[path] = new RemoteDefNode(path);
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">RemoteNode getRemoteNode(String path) {
+  var node = _nodes[path];
+
+  if (node == null) {
+    if ((_nodes.length % 1000) == 0) {
+      logger.fine(&quot;Node Cache hit ${_nodes.length} nodes in size.&quot;);
+    }
+
+    if (path.startsWith(&quot;defs&quot;)) {
+      node = _nodes[path] = new RemoteDefNode(path);
     } else {
-      _nodes[path] = new RemoteNode(path);
+      node = _nodes[path] = new RemoteNode(path);
     }
   }
-  return _nodes[path];
-}</code></pre>
+
+  return node;
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -135,7 +142,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -155,6 +162,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

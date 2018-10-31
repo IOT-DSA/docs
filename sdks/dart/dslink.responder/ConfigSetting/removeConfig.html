@@ -87,18 +87,18 @@
         <a href="dslink.responder/ConfigSetting-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/ConfigSetting/defaultValue.html">defaultValue</a></li>
-      <li class="inherited"><a href="dslink.responder/ConfigSetting/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/ConfigSetting/name.html">name</a></li>
-      <li class="inherited"><a href="dslink.responder/ConfigSetting/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/ConfigSetting/type.html">type</a></li>
+      <li class="inherited"><a href="dslink.responder/ConfigSetting/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/ConfigSetting/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/ConfigSetting-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/ConfigSetting/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/ConfigSetting-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.responder/ConfigSetting/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/ConfigSetting/removeConfig.html">removeConfig</a></li>
       <li><a href="dslink.responder/ConfigSetting/setConfig.html">setConfig</a></li>
+      <li class="inherited"><a href="dslink.responder/ConfigSetting/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/ConfigSetting/toString.html">toString</a></li>
     </ol>
 
@@ -106,19 +106,19 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/DSError-class.html">DSError</a></span>
-      <span class="name ">removeConfig</span>(<wbr><span class="parameter" id="removeConfig-param-node"><span class="type-annotation"><a href="dslink.browser/LocalNodeImpl-class.html">LocalNodeImpl</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>)
+      <span class="returntype"><a href="dslink.common/DSError-class.html">DSError</a></span>
+      <span class="name ">removeConfig</span>(<wbr><span class="parameter" id="removeConfig-param-node"><span class="type-annotation"><a href="dslink.responder/LocalNodeImpl-class.html">LocalNodeImpl</a></span> <span class="parameter-name">node</span>, </span> <span class="parameter" id="removeConfig-param-responder"><span class="type-annotation"><a href="dslink.responder/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/base_impl/config_setting.dart.html#line-25'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">DSError removeConfig(LocalNodeImpl node, Responder responder) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">DSError removeConfig(LocalNodeImpl node, Responder responder) {
   if (node.configs.containsKey(name)) {
     node.configs.remove(name);
     node.updateList(name);
   }
   return null;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -131,7 +131,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -151,6 +151,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

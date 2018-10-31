@@ -77,10 +77,12 @@
 
     <ol>
     
+      <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.requester/RequestConsumer.html">RequestConsumer</a></li>
     
     
       <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#functions">Functions</a></li>
-      <li><a href="dslink.requester/parseEnumType.html">parseEnumType</a></li>
+      <li><a href="dslink.utils/parseEnumType.html">parseEnumType</a></li>
     
     
       <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#classes">Classes</a></li>
@@ -141,20 +143,15 @@ TODO: cleanup nodes that are no longer in use</p>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
         <dt id="hashCode" class="property inherited">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/hashCode.html">hashCode</a></span>
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.requester/RemoteNodeCache/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/runtimeType.html">runtimeType</a></span>
@@ -162,9 +159,7 @@ TODO: cleanup nodes that are no longer in use</p>
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -178,10 +173,9 @@ TODO: cleanup nodes that are no longer in use</p>
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.requester/RemoteNodeCache/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -195,7 +189,8 @@ TODO: cleanup nodes that are no longer in use</p>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="clearCachedNode" class="callable">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/clearCachedNode.html">clearCachedNode</a></span><span class="signature">(<wbr><span class="parameter" id="clearCachedNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -203,23 +198,26 @@ TODO: cleanup nodes that are no longer in use</p>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="getDefNode" class="callable">
-          <span class="name"><a href="dslink.requester/RemoteNodeCache/getDefNode.html">getDefNode</a></span><span class="signature">(<wbr><span class="parameter" id="getDefNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="getDefNode-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/Node-class.html">Node</a></span>
+          <span class="name"><a href="dslink.requester/RemoteNodeCache/getDefNode.html">getDefNode</a></span><span class="signature">(<wbr><span class="parameter" id="getDefNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, </span> <span class="parameter" id="getDefNode-param-defName"><span class="type-annotation">String</span> <span class="parameter-name">defName</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.common/Node-class.html">Node</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="getRemoteNode" class="callable">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/getRemoteNode.html">getRemoteNode</a></span><span class="signature">(<wbr><span class="parameter" id="getRemoteNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/RemoteNode-class.html">RemoteNode</a></span>
+            <span class="returntype parameter">&#8594; <a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="isNodeCached" class="callable">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/isNodeCached.html">isNodeCached</a></span><span class="signature">(<wbr><span class="parameter" id="isNodeCached-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
             <span class="returntype parameter">&#8594; bool</span>
@@ -227,17 +225,26 @@ TODO: cleanup nodes that are no longer in use</p>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
+        <dt id="updateRemoteChildNode" class="callable">
+          <span class="name"><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></span><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span>, </span> <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
+          </span>
+        </dt>
+        <dd>
+          <p>update node with a map.</p>
+          
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.requester/RemoteNodeCache/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.requester/RemoteNodeCache/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -246,15 +253,7 @@ TODO: cleanup nodes that are no longer in use</p>
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
-        <dt id="updateRemoteChildNode" class="callable">
-          <span class="name"><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></span><span class="signature">(<wbr><span class="parameter" id="updateRemoteChildNode-param-parent"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">parent</span></span>, <span class="parameter" id="updateRemoteChildNode-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="updateRemoteChildNode-param-m"><span class="type-annotation">Map</span> <span class="parameter-name">m</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/RemoteNode-class.html">RemoteNode</a></span>
-          </span>
-        </dt>
-        <dd>
-          <p>update node with a map.</p>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -285,9 +284,9 @@ TODO: cleanup nodes that are no longer in use</p>
       <li><a href="dslink.requester/RemoteNodeCache/getDefNode.html">getDefNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/getRemoteNode.html">getRemoteNode</a></li>
       <li><a href="dslink.requester/RemoteNodeCache/isNodeCached.html">isNodeCached</a></li>
+      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.requester/RemoteNodeCache/toString.html">toString</a></li>
-      <li><a href="dslink.requester/RemoteNodeCache/updateRemoteChildNode.html">updateRemoteChildNode</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
 
@@ -299,7 +298,7 @@ TODO: cleanup nodes that are no longer in use</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -319,6 +318,7 @@ TODO: cleanup nodes that are no longer in use</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

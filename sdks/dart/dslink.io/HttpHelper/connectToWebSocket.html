@@ -113,41 +113,48 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Future&lt;WebSocket&gt;</span>
-      <span class="name ">connectToWebSocket</span>(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span></span>, {<span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span></span>, <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span></span>, <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span></span>})
+      <span class="name ">connectToWebSocket</span>(<wbr><span class="parameter" id="connectToWebSocket-param-url"><span class="type-annotation">String</span> <span class="parameter-name">url</span>, {</span> <span class="parameter" id="connectToWebSocket-param-protocols"><span class="type-annotation">Iterable&lt;String&gt;</span> <span class="parameter-name">protocols</span>, </span> <span class="parameter" id="connectToWebSocket-param-headers"><span class="type-annotation">Map&lt;String, dynamic&gt;</span> <span class="parameter-name">headers</span>, </span> <span class="parameter" id="connectToWebSocket-param-httpClient"><span class="type-annotation">HttpClient</span> <span class="parameter-name">httpClient</span>, </span> <span class="parameter" id="connectToWebSocket-param-useStandardWebSocket"><span class="type-annotation">bool</span> <span class="parameter-name">useStandardWebSocket</span></span> })
     </section>
     <section class="desc markdown">
       <p>Custom WebSocket Connection logic.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/io.dart.html#line-63'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static Future&lt;WebSocket&gt; connectToWebSocket(
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static Future&lt;WebSocket&gt; connectToWebSocket(
     String url, {
     Iterable&lt;String&gt; protocols,
     Map&lt;String, dynamic&gt; headers,
-    HttpClient httpClient
+    HttpClient httpClient,
+    bool useStandardWebSocket
   }) async {
   Uri uri = Uri.parse(url);
 
-  if (enableStandardWebSocket &amp;&amp; uri.scheme != &quot;wss&quot;) {
-    return await WebSocket.connect(
+  if (useStandardWebSocket == null) {
+    useStandardWebSocket = enableStandardWebSocket;
+  }
+
+  if (useStandardWebSocket == true &amp;&amp; uri.scheme != &quot;wss&quot;) {
+    return await awaitWithTimeout(WebSocket.connect(
       url,
       protocols: protocols,
       headers: headers
-    );
+    ), 60000, onSuccessAfterTimeout: (WebSocket socket){
+      socket.close();
+    });
   }
 
   if (uri.scheme != &quot;ws&quot; &amp;&amp; uri.scheme != &quot;wss&quot;) {
-    throw new WebSocketException(&quot;Unsupported URL scheme &apos;${uri.scheme}&apos;&quot;);
+    throw new WebSocketException(&quot;Unsupported URL scheme &#39;${uri.scheme}&#39;&quot;);
   }
 
   Random random = new Random();
-  // Generate 16 random bytes.
+  &#47;&#47; Generate 16 random bytes.
   Uint8List nonceData = new Uint8List(16);
   for (int i = 0; i &lt; 16; i++) {
     nonceData[i] = random.nextInt(256);
   }
-  String nonce = CryptoUtils.bytesToBase64(nonceData);
+  String nonce = BASE64.encode(nonceData);
 
   int port = uri.port;
   if (port == 0) {
@@ -155,28 +162,30 @@
   }
 
   uri = new Uri(
-      scheme: uri.scheme == &quot;wss&quot; ? &quot;https&quot; : &quot;http&quot;,
-      userInfo: uri.userInfo,
-      host: uri.host,
-      port: port,
-      path: uri.path,
-      query: uri.query
+    scheme: uri.scheme == &quot;wss&quot; ? &quot;https&quot; : &quot;http&quot;,
+    userInfo: uri.userInfo,
+    host: uri.host,
+    port: port,
+    path: uri.path,
+    query: uri.query
   );
 
-  HttpClient _client = httpClient == null ? (new HttpClient()
-      ..badCertificateCallback = (a, b, c) =&gt; true) : httpClient;
+  HttpClient _client = httpClient == null ? (
+    new HttpClient()
+      ..badCertificateCallback = (a, b, c) =&gt; true
+  ) : httpClient;
 
-  return _client.openUrl(&quot;GET&quot;, uri).then((HttpClientRequest request) {
+  return _client.openUrl(&quot;GET&quot;, uri).then((HttpClientRequest request) async {
     if (uri.userInfo != null &amp;&amp; !uri.userInfo.isEmpty) {
-      // If the URL contains user information use that for basic
-      // authorization.
-      String auth = CryptoUtils.bytesToBase64(UTF8.encode(uri.userInfo));
+      &#47;&#47; If the URL contains user information use that for basic
+      &#47;&#47; authorization.
+      String auth = BASE64.encode(UTF8.encode(uri.userInfo));
       request.headers.set(HttpHeaders.AUTHORIZATION, &quot;Basic $auth&quot;);
     }
     if (headers != null) {
       headers.forEach((field, value) =&gt; request.headers.add(field, value));
     }
-    // Setup the initial handshake.
+    &#47;&#47; Setup the initial handshake.
     request.headers
       ..set(HttpHeaders.CONNECTION, &quot;Upgrade&quot;)
       ..set(HttpHeaders.UPGRADE, &quot;websocket&quot;)
@@ -188,9 +197,11 @@
     }
     return request.close();
   }).then((response) {
+    return response;
+  }).then((HttpClientResponse response) {
     void error(String message) {
-      // Flush data.
-      response.detachSocket().then((socket) {
+      &#47;&#47; Flush data.
+      response.detachSocket().then((Socket socket) {
         socket.destroy();
       });
       throw new WebSocketException(message);
@@ -200,29 +211,36 @@
       !response.headers[HttpHeaders.CONNECTION].any(
             (value) =&gt; value.toLowerCase() == &quot;upgrade&quot;) ||
       response.headers.value(HttpHeaders.UPGRADE).toLowerCase() != &quot;websocket&quot;) {
-      error(&quot;Connection to &apos;$uri&apos; was not upgraded to websocket&quot;);
+      error(&quot;Connection to &#39;$uri&#39; was not upgraded to websocket&quot;);
     }
     String accept = response.headers.value(&quot;Sec-WebSocket-Accept&quot;);
     if (accept == null) {
-      error(&quot;Response did not contain a &apos;Sec-WebSocket-Accept&apos; header&quot;);
+      error(&quot;Response did not contain a &#39;Sec-WebSocket-Accept&#39; header&quot;);
     }
-    SHA1 sha1 = new SHA1();
-    sha1.add(&quot;$nonce$_webSocketGUID&quot;.codeUnits);
-    List&lt;int&gt; expectedAccept = sha1.close();
-    List&lt;int&gt; receivedAccept = CryptoUtils.base64StringToBytes(accept);
+    List&lt;int&gt; expectedAccept = sha1.convert(&quot;$nonce$_webSocketGUID&quot;.codeUnits).bytes;
+    List&lt;int&gt; receivedAccept = BASE64.decode(accept);
     if (expectedAccept.length != receivedAccept.length) {
-      error(&quot;Response header &apos;Sec-WebSocket-Accept&apos; is the wrong length&quot;);
+      error(&quot;Response header &#39;Sec-WebSocket-Accept&#39; is the wrong length&quot;);
     }
     for (int i = 0; i &lt; expectedAccept.length; i++) {
       if (expectedAccept[i] != receivedAccept[i]) {
-        error(&quot;Bad response &apos;Sec-WebSocket-Accept&apos; header&quot;);
+        error(&quot;Bad response &#39;Sec-WebSocket-Accept&#39; header&quot;);
       }
     }
-    var protocol = response.headers.value(&apos;Sec-WebSocket-Protocol&apos;);
-    return response.detachSocket()
-      .then((socket) =&gt; new WebSocket.fromUpgradedSocket(socket, protocol: protocol, serverSide: false));
+    var protocol = response.headers.value(&#39;Sec-WebSocket-Protocol&#39;);
+    return response.detachSocket().then((socket) {
+      socket.setOption(SocketOption.TCP_NODELAY, _tcpNoDelay);
+      return new WebSocket.fromUpgradedSocket(
+        socket,
+        protocol: protocol,
+        serverSide: false
+      );
+    });
+  }).timeout(new Duration(minutes: 1), onTimeout:(){
+    _client.close(force: true);
+    throw new WebSocketException(&#39;timeout&#39;);
   });
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -235,7 +253,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -255,6 +273,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

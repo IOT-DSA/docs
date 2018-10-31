@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="API docs for the DSRandom class from the dslink.client library, for the Dart programming language.">
-  <title>DSRandom class - dslink.client library - Dart API</title>
+  <meta name="description" content="API docs for the DSRandom class from the dslink.server library, for the Dart programming language.">
+  <title>DSRandom class - dslink.server library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="..">
 
@@ -31,7 +31,7 @@
           <button id="sidenav-left-toggle" type="button">&nbsp;</button>
           <ol class="breadcrumbs gt-separated hidden-xs">
             <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
+            <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
             <li class="self-crumb">DSRandom</li>
           </ol>
           <div class="self-name">DSRandom</div>
@@ -48,7 +48,7 @@
       <div class="col-sm-12 contents">
         <ol class="breadcrumbs gt-separated visible-xs">
           <li><a href="index.html">dslink</a></li>
-          <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
+          <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
           <li class="self-crumb">DSRandom</li>
         </ol>
         <div class="title-description">
@@ -74,27 +74,24 @@
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
-    <h5><a href="dslink.client/dslink.client-library.html">dslink.client</a></h5>
+    <h5><a href="dslink.server/dslink.server-library.html">dslink.server</a></h5>
 
     <ol>
     
-      <li class="section-title"><a href="dslink.client/dslink.client-library.html#typedefs">Typedefs</a></li>
-      <li><a href="dslink.client/OptionResultsHandler.html">OptionResultsHandler</a></li>
     
     
-      <li class="section-title"><a href="dslink.client/dslink.client-library.html#functions">Functions</a></li>
-      <li><a href="dslink.client/getKeyFromFile.html">getKeyFromFile</a></li>
+      <li class="section-title"><a href="dslink.server/dslink.server-library.html#functions">Functions</a></li>
       <li><a href="dslink.client/lockCryptoProvider.html">lockCryptoProvider</a></li>
       <li><a href="dslink.client/setCryptoProvider.html">setCryptoProvider</a></li>
+      <li><a href="dslink.server/updateResponseBeforeWrite.html">updateResponseBeforeWrite</a></li>
     
     
-      <li class="section-title"><a href="dslink.client/dslink.client-library.html#classes">Classes</a></li>
+      <li class="section-title"><a href="dslink.server/dslink.server-library.html#classes">Classes</a></li>
       <li><a href="dslink.client/CryptoProvider-class.html">CryptoProvider</a></li>
       <li><a href="dslink.client/DSRandom-class.html">DSRandom</a></li>
       <li><a href="dslink.client/DummyECDH-class.html">DummyECDH</a></li>
       <li><a href="dslink.client/ECDH-class.html">ECDH</a></li>
-      <li><a href="dslink.client/HttpClientLink-class.html">HttpClientLink</a></li>
-      <li><a href="dslink.client/LinkProvider-class.html">LinkProvider</a></li>
+      <li><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></li>
       <li><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></li>
       <li><a href="dslink.client/PublicKey-class.html">PublicKey</a></li>
     
@@ -112,13 +109,11 @@
       <dl class="properties">
         <dt id="instance" class="property">
           <span class="name"><a href="dslink.client/DSRandom/instance.html">instance</a></span>
-          <span class="signature">&#8594; <a href="dslink/DSRandom-class.html">DSRandom</a></span>
+          <span class="signature">&#8594; <a href="dslink.client/DSRandom-class.html">DSRandom</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
       </dl>
     </section>
@@ -141,26 +136,21 @@
       <h2>Properties</h2>
 
       <dl class="properties">
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.client/DSRandom/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.client/DSRandom/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
         <dt id="needsEntropy" class="property">
           <span class="name"><a href="dslink.client/DSRandom/needsEntropy.html">needsEntropy</a></span>
           <span class="signature">&#8594; bool</span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.client/DSRandom/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.client/DSRandom/runtimeType.html">runtimeType</a></span>
@@ -168,9 +158,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -184,10 +172,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.client/DSRandom/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -201,7 +188,8 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="nextUint8" class="callable">
           <span class="name"><a href="dslink.client/DSRandom/nextUint8.html">nextUint8</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; int</span>
@@ -209,7 +197,8 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="nextUint16" class="callable">
           <span class="name"><a href="dslink.client/DSRandom/nextUint16.html">nextUint16</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; int</span>
@@ -217,17 +206,17 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.client/DSRandom/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.client/DSRandom/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.client/DSRandom/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -236,7 +225,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -256,8 +245,8 @@
       <li class="section-title">
         <a href="dslink.client/DSRandom-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.client/DSRandom/hashCode.html">hashCode</a></li>
       <li><a href="dslink.client/DSRandom/needsEntropy.html">needsEntropy</a></li>
+      <li class="inherited"><a href="dslink.client/DSRandom/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.client/DSRandom/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.client/DSRandom-class.html#operators">Operators</a></li>
@@ -280,7 +269,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -300,6 +289,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

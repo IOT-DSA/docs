@@ -111,13 +111,13 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/utils/codec.dart.html#line-160'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Map decodeBinaryFrame(List&lt;int&gt; input) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Map decodeBinaryFrame(List&lt;int&gt; input) {
   Uint8List data = ByteDataUtil.list2Uint8List(input);
   if (_unpacker == null) {
     _unpacker = new Unpacker(data.buffer, data.offsetInBytes);
   } else {
-    _unpacker.reset(data.buffer);
+    _unpacker.reset(data.buffer, 0);
     _unpacker.offset = data.offsetInBytes;
   }
   Object rslt = _unpacker.unpack();
@@ -126,7 +126,7 @@
   }
   _unpacker.data = null;
   return {};
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -139,7 +139,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -159,6 +159,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

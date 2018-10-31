@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="API docs for the operator == method from the PrivateKey class, for the Dart programming language.">
-  <title>operator == method - PrivateKey class - dslink.client library - Dart API</title>
+  <title>operator == method - PrivateKey class - dslink.server library - Dart API</title>
   <!-- required because all the links are pseudo-absolute -->
   <base href="../..">
 
@@ -31,7 +31,7 @@
           <button id="sidenav-left-toggle" type="button">&nbsp;</button>
           <ol class="breadcrumbs gt-separated hidden-xs">
             <li><a href="index.html">dslink</a></li>
-            <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
+            <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
             <li><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></li>
             <li class="self-crumb">operator ==</li>
           </ol>
@@ -49,7 +49,7 @@
       <div class="col-sm-12 contents">
         <ol class="breadcrumbs gt-separated visible-xs">
           <li><a href="index.html">dslink</a></li>
-          <li><a href="dslink.client/dslink.client-library.html">dslink.client</a></li>
+          <li><a href="dslink.server/dslink.server-library.html">dslink.server</a></li>
           <li><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></li>
           <li class="self-crumb">operator ==</li>
         </ol>
@@ -72,7 +72,7 @@
 
   <div class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
     <h5><a href="index.html">dslink</a></h5>
-    <h5><a href="dslink.client/dslink.client-library.html">dslink.client</a></h5>
+    <h5><a href="dslink.server/dslink.server-library.html">dslink.server</a></h5>
     <h5><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></h5>
 
     <ol>
@@ -88,8 +88,8 @@
       <li class="section-title">
         <a href="dslink.client/PrivateKey-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.client/PrivateKey/hashCode.html">hashCode</a></li>
       <li><a href="dslink.client/PrivateKey/publicKey.html">publicKey</a></li>
+      <li class="inherited"><a href="dslink.client/PrivateKey/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.client/PrivateKey/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.client/PrivateKey-class.html#operators">Operators</a></li>
@@ -97,8 +97,8 @@
     
       <li class="section-title"><a href="dslink.client/PrivateKey-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.client/PrivateKey/getSecret.html">getSecret</a></li>
-      <li class="inherited"><a href="dslink.client/PrivateKey/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.client/PrivateKey/saveToString.html">saveToString</a></li>
+      <li class="inherited"><a href="dslink.client/PrivateKey/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.client/PrivateKey/toString.html">toString</a></li>
     </ol>
 
@@ -117,22 +117,22 @@ only if <code>this</code> and <code>other</code> are the same object.</p>
 a class. The overriding method must still be an equivalence relation.
 That is, it must be:</p><ul><li>
 <p>Total: It must return a boolean for all arguments. It should never throw
-   or return <code>null</code>.</p></li><li>
+or return <code>null</code>.</p></li><li>
 <p>Reflexive: For all objects <code>o</code>, <code>o == o</code> must be true.</p></li><li>
 <p>Symmetric: For all objects <code>o1</code> and <code>o2</code>, <code>o1 == o2</code> and <code>o2 == o1</code> must
-   either both be true, or both be false.</p></li><li>
+either both be true, or both be false.</p></li><li>
 <p>Transitive: For all objects <code>o1</code>, <code>o2</code>, and <code>o3</code>, if <code>o1 == o2</code> and
-   <code>o2 == o3</code> are true, then <code>o1 == o3</code> must be true.</p></li></ul>
-<p>The method should also be consistent over time, so equality of two objects
-should not change over time, or at least only change if one of the objects
-was modified.</p>
+<code>o2 == o3</code> are true, then <code>o1 == o3</code> must be true.</p></li></ul>
+<p>The method should also be consistent over time,
+so whether two objects are equal should only change
+if at least one of the objects was modified.</p>
 <p>If a subclass overrides the equality operator it should override
 the <code>hashCode</code> method as well to maintain consistency.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/home/travis/dart-sdk/lib/core/object.dart.html#line-30'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">bool operator ==(other) =&gt; identical(this, other);</code></pre>
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">external bool operator ==(other);</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -145,7 +145,7 @@ the <code>hashCode</code> method as well to maintain consistency.</p>
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -165,6 +165,7 @@ the <code>hashCode</code> method as well to maintain consistency.</p>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -76,19 +76,19 @@
     
     
       <li class="section-title"><a href="dslink.server/dslink.server-library.html#functions">Functions</a></li>
-      <li><a href="dslink.server/lockCryptoProvider.html">lockCryptoProvider</a></li>
-      <li><a href="dslink.server/setCryptoProvider.html">setCryptoProvider</a></li>
+      <li><a href="dslink.client/lockCryptoProvider.html">lockCryptoProvider</a></li>
+      <li><a href="dslink.client/setCryptoProvider.html">setCryptoProvider</a></li>
       <li><a href="dslink.server/updateResponseBeforeWrite.html">updateResponseBeforeWrite</a></li>
     
     
       <li class="section-title"><a href="dslink.server/dslink.server-library.html#classes">Classes</a></li>
-      <li><a href="dslink.server/CryptoProvider-class.html">CryptoProvider</a></li>
-      <li><a href="dslink.server/DSRandom-class.html">DSRandom</a></li>
-      <li><a href="dslink.server/DummyECDH-class.html">DummyECDH</a></li>
-      <li><a href="dslink.server/ECDH-class.html">ECDH</a></li>
+      <li><a href="dslink.client/CryptoProvider-class.html">CryptoProvider</a></li>
+      <li><a href="dslink.client/DSRandom-class.html">DSRandom</a></li>
+      <li><a href="dslink.client/DummyECDH-class.html">DummyECDH</a></li>
+      <li><a href="dslink.client/ECDH-class.html">ECDH</a></li>
       <li><a href="dslink.server/IRemoteRequester-class.html">IRemoteRequester</a></li>
-      <li><a href="dslink.server/PrivateKey-class.html">PrivateKey</a></li>
-      <li><a href="dslink.server/PublicKey-class.html">PublicKey</a></li>
+      <li><a href="dslink.client/PrivateKey-class.html">PrivateKey</a></li>
+      <li><a href="dslink.client/PublicKey-class.html">PublicKey</a></li>
     
     </ol>
   </div><!--/.sidebar-offcanvas-left-->
@@ -97,12 +97,12 @@
 
     <section class="multi-line-signature">
         <span class="returntype">void</span>
-        <span class="name ">updateResponseBeforeWrite</span>(<wbr><span class="parameter" id="updateResponseBeforeWrite-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span></span>, [<span class="parameter" id="updateResponseBeforeWrite-param-statusCode"><span class="type-annotation">int</span> <span class="parameter-name">statusCode</span> = <span class="default-value">HttpStatus.OK</span></span>, <span class="parameter" id="updateResponseBeforeWrite-param-contentType"><span class="type-annotation">ContentType</span> <span class="parameter-name">contentType</span></span>, <span class="parameter" id="updateResponseBeforeWrite-param-noContentType"><span class="type-annotation">bool</span> <span class="parameter-name">noContentType</span> = <span class="default-value">false</span></span>])
+        <span class="name ">updateResponseBeforeWrite</span>(<wbr><span class="parameter" id="updateResponseBeforeWrite-param-request"><span class="type-annotation">HttpRequest</span> <span class="parameter-name">request</span>, [</span> <span class="parameter" id="updateResponseBeforeWrite-param-statusCode"><span class="type-annotation">int</span> <span class="parameter-name">statusCode</span> = <span class="default-value">HttpStatus.OK</span>, </span> <span class="parameter" id="updateResponseBeforeWrite-param-contentType"><span class="type-annotation">ContentType</span> <span class="parameter-name">contentType</span>, </span> <span class="parameter" id="updateResponseBeforeWrite-param-noContentType"><span class="type-annotation">bool</span> <span class="parameter-name">noContentType</span> = <span class="default-value">false</span></span> ])
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/server.dart.html#line-14'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void updateResponseBeforeWrite(HttpRequest request,
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void updateResponseBeforeWrite(HttpRequest request,
     [int statusCode = HttpStatus.OK,
     ContentType contentType,
     bool noContentType = false]) {
@@ -132,7 +132,7 @@
     }
     response.headers.contentType = contentType;
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -145,7 +145,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -165,6 +165,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

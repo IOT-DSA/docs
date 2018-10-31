@@ -78,10 +78,12 @@
 
     <ol>
     
+      <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.requester/RequestConsumer.html">RequestConsumer</a></li>
     
     
       <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#functions">Functions</a></li>
-      <li><a href="dslink.requester/parseEnumType.html">parseEnumType</a></li>
+      <li><a href="dslink.utils/parseEnumType.html">parseEnumType</a></li>
     
     
       <li class="section-title"><a href="dslink.requester/dslink.requester-library.html#classes">Classes</a></li>
@@ -132,13 +134,14 @@
       <h2>Static Methods</h2>
       <dl class="callables">
         <dt id="getNodeColumns" class="callable">
-          <span class="name"><a href="dslink.requester/InvokeController/getNodeColumns.html">getNodeColumns</a></span><span class="signature">(<wbr><span class="parameter" id="getNodeColumns-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>)
-            <span class="returntype parameter">&#8594; List&lt;<a href="dslink/TableColumn-class.html">TableColumn</a>&gt;</span>
+          <span class="name"><a href="dslink.requester/InvokeController/getNodeColumns.html">getNodeColumns</a></span><span class="signature">(<wbr><span class="parameter" id="getNodeColumns-param-node"><span class="type-annotation"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>)
+            <span class="returntype parameter">&#8594; List&lt;<a href="dslink.common/TableColumn-class.html">TableColumn</a>&gt;</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
       </dl>
     </section>
 
@@ -147,7 +150,7 @@
 
       <dl class="constructor-summary-list">
         <dt id="InvokeController" class="callable">
-          <span class="name"><a href="dslink.requester/InvokeController/InvokeController.html">InvokeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span></span>, <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span></span>, <span class="parameter" id="-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span></span>, [<span class="parameter" id="-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span></span>, <span class="parameter" id="-param-fetchRawReq"><span class="type-annotation">void</span> <span class="parameter-name">fetchRawReq</span>(<span class="parameter" id="fetchRawReq-param-Request"><span class="parameter-name">Request</span></span>)</span>])</span>
+          <span class="name"><a href="dslink.requester/InvokeController/InvokeController.html">InvokeController</a></span><span class="signature">(<span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span> <span class="parameter-name">node</span>, </span> <span class="parameter" id="-param-requester"><span class="type-annotation"><a href="dslink.requester/Requester-class.html">Requester</a></span> <span class="parameter-name">requester</span>, </span> <span class="parameter" id="-param-params"><span class="type-annotation">Map</span> <span class="parameter-name">params</span>, [</span> <span class="parameter" id="-param-maxPermission"><span class="type-annotation">int</span> <span class="parameter-name">maxPermission</span> = <span class="default-value">Permission.CONFIG</span>, </span> <span class="parameter" id="-param-fetchRawReq"><span class="type-annotation"><a href="dslink.requester/RequestConsumer.html">RequestConsumer</a></span> <span class="parameter-name">fetchRawReq</span></span> ])</span>
         </dt>
         <dd>
           <p></p>
@@ -159,26 +162,13 @@
       <h2>Properties</h2>
 
       <dl class="properties">
-        <dt id="hashCode" class="property inherited">
-          <span class="name"><a href="dslink.requester/InvokeController/hashCode.html">hashCode</a></span>
-          <span class="signature">&#8594; int</span>
-        </dt>
-        <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.requester/InvokeController/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
         <dt id="lastStatus" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/lastStatus.html">lastStatus</a></span>
           <span class="signature">&#8594; String</span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="mode" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/mode.html">mode</a></span>
@@ -186,29 +176,31 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read / write
-  </div>
+          <div class="features">read / write</div>
 </dd>
         <dt id="node" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/node.html">node</a></span>
-          <span class="signature">&#8594; <a href="dslink.browser/RemoteNode-class.html">RemoteNode</a></span>
+          <span class="signature">&#8594; <a href="dslink.requester/RemoteNode-class.html">RemoteNode</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
 </dd>
         <dt id="requester" class="property">
           <span class="name"><a href="dslink.requester/InvokeController/requester.html">requester</a></span>
-          <span class="signature">&#8594; <a href="dslink/Requester-class.html">Requester</a></span>
+          <span class="signature">&#8594; <a href="dslink.requester/Requester-class.html">Requester</a></span>
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">final</div>
+</dd>
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="dslink.requester/InvokeController/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; int</span>
+        </dt>
+        <dd class="inherited">
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.requester/InvokeController/runtimeType.html">runtimeType</a></span>
@@ -216,9 +208,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -232,26 +222,15 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.requester/InvokeController/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
     <section class="summary offset-anchor" id="instance-methods">
       <h2>Methods</h2>
       <dl class="callables">
-        <dt id="noSuchMethod" class="callable inherited">
-          <span class="name"><a href="dslink.requester/InvokeController/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-        </dt>
-        <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.requester/InvokeController/noSuchMethod.html">&hellip;</a>
-</p>
-          <div class="features">inherited</div>
-        </dd>
         <dt id="onDisconnect" class="callable">
           <span class="name"><a href="dslink.requester/InvokeController/onDisconnect.html">onDisconnect</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; void</span>
@@ -259,7 +238,8 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="onReconnect" class="callable">
           <span class="name"><a href="dslink.requester/InvokeController/onReconnect.html">onReconnect</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; void</span>
@@ -267,15 +247,26 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="onUpdate" class="callable">
-          <span class="name"><a href="dslink.requester/InvokeController/onUpdate.html">onUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="onUpdate-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span></span>, <span class="parameter" id="onUpdate-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span></span>, <span class="parameter" id="onUpdate-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span></span>, <span class="parameter" id="onUpdate-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>, <span class="parameter" id="onUpdate-param-error"><span class="type-annotation"><a href="dslink/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>)
+          <span class="name"><a href="dslink.requester/InvokeController/onUpdate.html">onUpdate</a></span><span class="signature">(<wbr><span class="parameter" id="onUpdate-param-streamStatus"><span class="type-annotation">String</span> <span class="parameter-name">streamStatus</span>, </span> <span class="parameter" id="onUpdate-param-updates"><span class="type-annotation">List</span> <span class="parameter-name">updates</span>, </span> <span class="parameter" id="onUpdate-param-columns"><span class="type-annotation">List</span> <span class="parameter-name">columns</span>, </span> <span class="parameter" id="onUpdate-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span>, </span> <span class="parameter" id="onUpdate-param-error"><span class="type-annotation"><a href="dslink.common/DSError-class.html">DSError</a></span> <span class="parameter-name">error</span></span>)
             <span class="returntype parameter">&#8594; void</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="dslink.requester/InvokeController/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+        </dt>
+        <dd class="inherited">
+          <p>Invoked when a non-existent method or property is accessed.</p>
+          <div class="features">inherited</div>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.requester/InvokeController/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -284,7 +275,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -304,21 +295,21 @@
       <li class="section-title">
         <a href="dslink.requester/InvokeController-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.requester/InvokeController/hashCode.html">hashCode</a></li>
       <li><a href="dslink.requester/InvokeController/lastStatus.html">lastStatus</a></li>
       <li><a href="dslink.requester/InvokeController/mode.html">mode</a></li>
       <li><a href="dslink.requester/InvokeController/node.html">node</a></li>
       <li><a href="dslink.requester/InvokeController/requester.html">requester</a></li>
+      <li class="inherited"><a href="dslink.requester/InvokeController/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.requester/InvokeController/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.requester/InvokeController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.requester/InvokeController/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.requester/InvokeController-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.requester/InvokeController/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.requester/InvokeController/onDisconnect.html">onDisconnect</a></li>
       <li><a href="dslink.requester/InvokeController/onReconnect.html">onReconnect</a></li>
       <li><a href="dslink.requester/InvokeController/onUpdate.html">onUpdate</a></li>
+      <li class="inherited"><a href="dslink.requester/InvokeController/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.requester/InvokeController/toString.html">toString</a></li>
     </ol>
   </div><!--/.sidebar-offcanvas-->
@@ -331,7 +322,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -351,6 +342,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

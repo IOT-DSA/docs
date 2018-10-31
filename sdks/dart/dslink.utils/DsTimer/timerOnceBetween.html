@@ -113,19 +113,19 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">timerOnceBetween</span>(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span></span>, <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span></span>, <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
+      <span class="name ">timerOnceBetween</span>(<wbr><span class="parameter" id="timerOnceBetween-param-callback"><span class="type-annotation">Function</span> <span class="parameter-name">callback</span>, </span> <span class="parameter" id="timerOnceBetween-param-after"><span class="type-annotation">int</span> <span class="parameter-name">after</span>, </span> <span class="parameter" id="timerOnceBetween-param-before"><span class="type-annotation">int</span> <span class="parameter-name">before</span></span>)
     </section>
     <section class="desc markdown">
       <p>do nothing if the callback is already in the list and will get called after M to N ms</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/utils/timer.dart.html#line-161'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static void timerOnceBetween(Function callback, int after, int before) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static void timerOnceBetween(Function callback, int after, int before) {
   int desiredTime50_0 =
-      (((new DateTime.now()).millisecondsSinceEpoch + after) / 50).ceil();
+      (((new DateTime.now()).millisecondsSinceEpoch + after) &#47; 50).ceil();
   int desiredTime50_1 =
-      (((new DateTime.now()).millisecondsSinceEpoch + before) / 50).ceil();
+      (((new DateTime.now()).millisecondsSinceEpoch + before) &#47; 50).ceil();
   if (_functionsMap.containsKey(callback)) {
     TimerFunctions existTf = _functionsMap[callback];
     if (existTf.ts50 &gt;= desiredTime50_0 &amp;&amp; existTf.ts50 &lt;= desiredTime50_1) {
@@ -141,7 +141,7 @@
   TimerFunctions tf = _getTimerFunctions(desiredTime50_1);
   tf.add(callback);
   _functionsMap[callback] = tf;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -154,7 +154,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -174,6 +174,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

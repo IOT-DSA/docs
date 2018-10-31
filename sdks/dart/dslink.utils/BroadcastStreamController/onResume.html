@@ -83,17 +83,19 @@
         <a href="dslink.utils/BroadcastStreamController-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.utils/BroadcastStreamController/done.html">done</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/hashCode.html">hashCode</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/hasListener.html">hasListener</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/isClosed.html">isClosed</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/isPaused.html">isPaused</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onAllCancel.html">onAllCancel</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/onCancel.html">onCancel</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/onListen.html">onListen</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/onPause.html">onPause</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/onResume.html">onResume</a></li>
-      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/runtimeType.html">runtimeType</a></li>
+      <li><a href="dslink.utils/BroadcastStreamController/onStartListen.html">onStartListen</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/sink.html">sink</a></li>
       <li><a href="dslink.utils/BroadcastStreamController/stream.html">stream</a></li>
+      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.utils/BroadcastStreamController/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.utils/BroadcastStreamController-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.utils/BroadcastStreamController/operator_equals.html">operator ==</a></li>
@@ -119,6 +121,15 @@
         <span class="returntype">ControllerCallback</span>
         <span class="name ">onResume</span></section>
       
+      <section class="desc markdown">
+  <p>The callback which is called when the stream is resumed.</p>
+<p>May be set to <code>null</code>, in which case no callback will happen.</p>
+<p>Pause related callbacks are not supported on broadcast stream controllers.</p>
+</section>
+</section>
+      <section class="summary source-code" id="source">
+        <h2><span>Source</span> </h2>
+        <pre class="prettyprint language-dart">ControllerCallback get onResume =&gt; null;</pre>
       </section>
 
       <section id="setter">
@@ -128,6 +139,12 @@
           <span class="name ">onResume=</span><span class="signature">(<wbr><span class="parameter" id="onResume=-param-onResumeHandler"><span class="type-annotation">void</span> <span class="parameter-name">onResumeHandler</span>()</span>)</span>
       </section>
       
+      </section>
+      <section class="summary source-code" id="source">
+        <h2><span>Source</span> </h2>
+        <pre class="prettyprint language-dart">void set onResume(void onResumeHandler()) {
+  throw(&#39;BroadcastStreamController.onResume not implemented&#39;);
+}</pre>
       </section>
 
   </div> <!-- /.main-content -->
@@ -140,7 +157,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -160,6 +177,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

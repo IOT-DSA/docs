@@ -107,13 +107,13 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/ConfigSetting-class.html">ConfigSetting</a></span>
-      <span class="name ">getConfig</span>(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span></span>, <span class="parameter" id="getConfig-param-profile"><span class="type-annotation"><a href="dslink.browser/Node-class.html">Node</a></span> <span class="parameter-name">profile</span></span>)
+      <span class="returntype"><a href="dslink.responder/ConfigSetting-class.html">ConfigSetting</a></span>
+      <span class="name ">getConfig</span>(<wbr><span class="parameter" id="getConfig-param-name"><span class="type-annotation">String</span> <span class="parameter-name">name</span>, </span> <span class="parameter" id="getConfig-param-profile"><span class="type-annotation"><a href="dslink.common/Node-class.html">Node</a></span> <span class="parameter-name">profile</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/base_impl/config_setting.dart.html#line-76'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static ConfigSetting getConfig(String name, Node profile) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static ConfigSetting getConfig(String name, Node profile) {
   if (global.configs.containsKey(name)) {
     return global.configs[name];
   }
@@ -121,7 +121,7 @@
     return profile.configs[name];
   }
   return defaultConfig;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -134,7 +134,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -154,6 +154,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

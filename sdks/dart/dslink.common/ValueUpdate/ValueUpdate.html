@@ -93,11 +93,9 @@
       </li>
       <li><a href="dslink.common/ValueUpdate/count.html">count</a></li>
       <li><a href="dslink.common/ValueUpdate/created.html">created</a></li>
-      <li class="inherited"><a href="dslink.common/ValueUpdate/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/ValueUpdate/latency.html">latency</a></li>
       <li><a href="dslink.common/ValueUpdate/max.html">max</a></li>
       <li><a href="dslink.common/ValueUpdate/min.html">min</a></li>
-      <li class="inherited"><a href="dslink.common/ValueUpdate/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/ValueUpdate/status.html">status</a></li>
       <li><a href="dslink.common/ValueUpdate/storedData.html">storedData</a></li>
       <li><a href="dslink.common/ValueUpdate/sum.html">sum</a></li>
@@ -105,15 +103,18 @@
       <li><a href="dslink.common/ValueUpdate/ts.html">ts</a></li>
       <li><a href="dslink.common/ValueUpdate/value.html">value</a></li>
       <li><a href="dslink.common/ValueUpdate/waitingAck.html">waitingAck</a></li>
+      <li class="inherited"><a href="dslink.common/ValueUpdate/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/ValueUpdate/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/ValueUpdate-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.common/ValueUpdate-class.html#instance-methods">Methods</a></li>
+      <li><a href="dslink.common/ValueUpdate/cloneForAckQueue.html">cloneForAckQueue</a></li>
       <li><a href="dslink.common/ValueUpdate/equals.html">equals</a></li>
       <li><a href="dslink.common/ValueUpdate/mergeAdd.html">mergeAdd</a></li>
-      <li class="inherited"><a href="dslink.common/ValueUpdate/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.common/ValueUpdate/toMap.html">toMap</a></li>
+      <li class="inherited"><a href="dslink.common/ValueUpdate/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.common/ValueUpdate/toString.html">toString</a></li>
     </ol>
 
@@ -122,13 +123,13 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">ValueUpdate</span>(<wbr><span class="parameter" id="-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span></span>, {<span class="parameter" id="-param-ts"><span class="type-annotation">String</span> <span class="parameter-name">ts</span></span>, <span class="parameter" id="-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span></span>, <span class="parameter" id="-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span></span>, <span class="parameter" id="-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>: <span class="default-value">1</span></span>, <span class="parameter" id="-param-sum"><span class="type-annotation">num</span> <span class="parameter-name">sum</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-min"><span class="type-annotation">num</span> <span class="parameter-name">min</span>: <span class="default-value">double.NAN</span></span>, <span class="parameter" id="-param-max"><span class="type-annotation">num</span> <span class="parameter-name">max</span>: <span class="default-value">double.NAN</span></span>})
+            <span class="name ">ValueUpdate</span>(<wbr><span class="parameter" id="-param-value"><span class="type-annotation">Object</span> <span class="parameter-name">value</span>, {</span> <span class="parameter" id="-param-ts"><span class="type-annotation">String</span> <span class="parameter-name">ts</span>, </span> <span class="parameter" id="-param-meta"><span class="type-annotation">Map</span> <span class="parameter-name">meta</span>, </span> <span class="parameter" id="-param-status"><span class="type-annotation">String</span> <span class="parameter-name">status</span>, </span> <span class="parameter" id="-param-count"><span class="type-annotation">int</span> <span class="parameter-name">count</span>: <span class="default-value">1</span>, </span> <span class="parameter" id="-param-sum"><span class="type-annotation">num</span> <span class="parameter-name">sum</span>: <span class="default-value">double.NAN</span>, </span> <span class="parameter" id="-param-min"><span class="type-annotation">num</span> <span class="parameter-name">min</span>: <span class="default-value">double.NAN</span>, </span> <span class="parameter" id="-param-max"><span class="type-annotation">num</span> <span class="parameter-name">max</span>: <span class="default-value">double.NAN</span></span> })
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/value.dart.html#line-67'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">ValueUpdate(this.value,
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">ValueUpdate(this.value,
     {this.ts,
     Map meta,
     this.status,
@@ -171,7 +172,7 @@
     if (max != max) max = value;
     if (min != min) min = value;
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -184,7 +185,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -204,6 +205,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

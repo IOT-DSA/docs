@@ -86,13 +86,14 @@
         <a href="dslink.responder/ListResponse-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/ListResponse/changes.html">changes</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/ListResponse/initialResponse.html">initialResponse</a></li>
       <li><a href="dslink.responder/ListResponse/node.html">node</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/responder.html">responder</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/runtimeType.html">runtimeType</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/type.html">type</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/ListResponse-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/operator_equals.html">operator ==</a></li>
@@ -100,11 +101,11 @@
       <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/ListResponse/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
       <li><a href="dslink.responder/ListResponse/getTraceData.html">getTraceData</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/close.html">close</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/toString.html">toString</a></li>
     </ol>
 
@@ -117,14 +118,19 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/response/list.dart.html#line-22'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void changed(String key) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void changed(String key) {
   if (_permission == Permission.NONE) {
     return;
   }
 
-  if (_permission &lt; Permission.CONFIG &amp;&amp; key.startsWith(r&apos;$$&apos;)) {
-    return;
+  if (key.startsWith(r&#39;$$&#39;)) {
+    if (_permission &lt; Permission.CONFIG) {
+      return;
+    }
+    if (key.startsWith(r&#39;$$$&#39;)) {
+      return;
+    }
   }
 
   if (changes.isEmpty) {
@@ -133,7 +139,7 @@
   } else {
     changes.add(key);
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -146,7 +152,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -166,6 +172,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

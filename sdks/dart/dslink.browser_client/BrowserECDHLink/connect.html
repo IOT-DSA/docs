@@ -91,18 +91,18 @@
       <li><a href="dslink.browser_client/BrowserECDHLink/enableAck.html">enableAck</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/format.html">format</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/formats.html">formats</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/logName.html">logName</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/nonce.html">nonce</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onConnected.html">onConnected</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/onRequesterReady.html">onRequesterReady</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/privateKey.html">privateKey</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/requester.html">requester</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/salts.html">salts</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/token.html">token</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/tokenHash.html">tokenHash</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/logName.html">logName</a></li>
+      <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.browser_client/BrowserECDHLink-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/operator_equals.html">operator ==</a></li>
@@ -110,11 +110,11 @@
       <li class="section-title"><a href="dslink.browser_client/BrowserECDHLink-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/close.html">close</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/connect.html">connect</a></li>
-      <li class="inherited"><a href="dslink.browser/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li><a href="dslink.browser_client/BrowserECDHLink/initWebsocket.html">initWebsocket</a></li>
+      <li><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></li>
+      <li class="inherited"><a href="dslink.common/ClientLink/formatLogMessage.html">formatLogMessage</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.browser_client/BrowserECDHLink/toString.html">toString</a></li>
-      <li><a href="dslink.browser_client/BrowserECDHLink/updateSalt.html">updateSalt</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -126,50 +126,51 @@
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/browser/browser_ecdh_link.dart.html#line-80'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">connect() async {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">connect() async {
   if (_closed) return;
   lockCryptoProvider();
-  String connUrl = &apos;$_conn?dsId=$dsId&apos;;
+  String connUrl = &#39;$_conn?dsId=$dsId&#39;;
   if (tokenHash != null) {
-    connUrl = &apos;$connUrl$tokenHash&apos;;
+    connUrl = &#39;$connUrl$tokenHash&#39;;
   }
   Uri connUri = Uri.parse(connUrl);
-  logger.info(&apos;Connecting: $connUri&apos;);
+  logger.info(&#39;Connecting: $connUri&#39;);
   try {
     Map requestJson = {
-      &apos;publicKey&apos;: privateKey.publicKey.qBase64,
-      &apos;isRequester&apos;: requester != null,
-      &apos;isResponder&apos;: responder != null,
-      &apos;formats&apos;: formats,
-      &apos;version&apos;: DSA_VERSION
+      &#39;publicKey&#39;: privateKey.publicKey.qBase64,
+      &#39;isRequester&#39;: requester != null,
+      &#39;isResponder&#39;: responder != null,
+      &#39;formats&#39;: formats,
+      &#39;version&#39;: DSA_VERSION,
+      &#39;enableWebSocketCompression&#39;: true
     };
     HttpRequest request = await HttpRequest.request(connUrl,
-        method: &apos;POST&apos;,
+        method: &#39;POST&#39;,
         withCredentials: false,
-        mimeType: &apos;application/json&apos;,
+        mimeType: &#39;application&#47;json&#39;,
         sendData: DsJson.encode(requestJson));
     Map serverConfig = DsJson.decode(request.responseText);
     saltNameMap.forEach((name, idx) {
-      //read salts
+      &#47;&#47;read salts
       salts[idx] = serverConfig[name];
     });
-    String tempKey = serverConfig[&apos;tempKey&apos;];
+    String tempKey = serverConfig[&#39;tempKey&#39;];
     _nonce = await privateKey.getSecret(tempKey);
 
-    if (serverConfig[&apos;wsUri&apos;] is String) {
-      _wsUpdateUri = &apos;${connUri.resolve(serverConfig[&apos;wsUri&apos;])}?dsId=$dsId&apos;
-          .replaceFirst(&apos;http&apos;, &apos;ws&apos;);
+    if (serverConfig[&#39;wsUri&#39;] is String) {
+      _wsUpdateUri = &#39;${connUri.resolve(serverConfig[&#39;wsUri&#39;])}?dsId=$dsId&#39;
+          .replaceFirst(&#39;http&#39;, &#39;ws&#39;);
       if (tokenHash != null) {
-        _wsUpdateUri = &apos;$_wsUpdateUri$tokenHash&apos;;
+        _wsUpdateUri = &#39;$_wsUpdateUri$tokenHash&#39;;
       }
     }
 
-    // server start to support version since 1.0.4
-    // and this is the version ack is added
-    enableAck = serverConfig.containsKey(&apos;version&apos;);
-    if (serverConfig[&apos;format&apos;] is String) {
-      format = serverConfig[&apos;format&apos;];
+    &#47;&#47; server start to support version since 1.0.4
+    &#47;&#47; and this is the version ack is added
+    enableAck = serverConfig.containsKey(&#39;version&#39;);
+    if (serverConfig[&#39;format&#39;] is String) {
+      format = serverConfig[&#39;format&#39;];
     }
     initWebsocket(false);
     _connDelay = 1;
@@ -178,7 +179,7 @@
     DsTimer.timerOnceAfter(connect, _connDelay * 1000);
     if (_connDelay &lt; 60) _connDelay++;
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -191,7 +192,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -211,6 +212,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

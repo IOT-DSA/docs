@@ -104,16 +104,16 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">String</span>
-      <span class="name ">createBinaryUrl</span>(<wbr><span class="parameter" id="createBinaryUrl-param-input"><span class="type-annotation">ByteData</span> <span class="parameter-name">input</span></span>, {<span class="parameter" id="createBinaryUrl-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span>: <span class="default-value">"application/octet-stream"</span></span>})
+      <span class="name ">createBinaryUrl</span>(<wbr><span class="parameter" id="createBinaryUrl-param-input"><span class="type-annotation">ByteData</span> <span class="parameter-name">input</span>, {</span> <span class="parameter" id="createBinaryUrl-param-type"><span class="type-annotation">String</span> <span class="parameter-name">type</span>: <span class="default-value">"application/octet-stream"</span></span> })
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/browser.dart.html#line-221'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static String createBinaryUrl(ByteData input,
-    {String type: &quot;application/octet-stream&quot;}) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static String createBinaryUrl(ByteData input,
+    {String type: &quot;application&#47;octet-stream&quot;}) {
   Uint8List data = ByteDataUtil.toUint8List(input);
-  return &quot;data:${type};base64,${CryptoUtils.bytesToBase64(data)}&quot;;
-}</code></pre>
+  return &quot;data:${type};base64,${Base64.encode(data)}&quot;;
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -126,7 +126,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -146,6 +146,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

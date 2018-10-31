@@ -59,8 +59,10 @@
         <ul class="subnav">
           <li><a href="dslink.utils/Scheduler-class.html#static-properties">Static Properties</a></li>
           <li><a href="dslink.utils/Scheduler-class.html#static-methods">Static Methods</a></li>
+          <li><a href="dslink.utils/Scheduler-class.html#instance-properties">Properties</a></li>
           <li><a href="dslink.utils/Scheduler-class.html#constructors">Constructors</a></li>
           <li><a href="dslink.utils/Scheduler-class.html#operators">Operators</a></li>
+          <li><a href="dslink.utils/Scheduler-class.html#instance-methods">Methods</a></li>
         </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
@@ -93,6 +95,7 @@
       <li><a href="dslink.utils/logger.html">logger</a></li>
     
       <li class="section-title"><a href="dslink.utils/dslink.utils-library.html#functions">Functions</a></li>
+      <li><a href="dslink.utils/awaitWithTimeout.html">awaitWithTimeout</a></li>
       <li><a href="dslink.utils/buildActionIO.html">buildActionIO</a></li>
       <li><a href="dslink.utils/buildEnumType.html">buildEnumType</a></li>
       <li><a href="dslink.utils/countCharacterFrequency.html">countCharacterFrequency</a></li>
@@ -145,9 +148,7 @@
         </dt>
         <dd>
           <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <div class="features">read-only</div>
 </dd>
       </dl>
     </section>
@@ -156,13 +157,14 @@
       <h2>Static Methods</h2>
       <dl class="callables">
         <dt id="after" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/after.html">after</a></span><span class="signature">(<wbr><span class="parameter" id="after-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="after-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/after.html">after</a></span><span class="signature">(<wbr><span class="parameter" id="after-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span>, </span> <span class="parameter" id="after-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="cancelCurrentTimer" class="callable">
           <span class="name"><a href="dslink.utils/Scheduler/cancelCurrentTimer.html">cancelCurrentTimer</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; void</span>
@@ -170,15 +172,17 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="every" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/every.html">every</a></span><span class="signature">(<wbr><span class="parameter" id="every-param-interval"><span class="parameter-name">interval</span></span>, <span class="parameter" id="every-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/every.html">every</a></span><span class="signature">(<wbr><span class="parameter" id="every-param-interval"><span class="parameter-name">interval</span>, </span> <span class="parameter" id="every-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Timer</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="later" class="callable">
           <span class="name"><a href="dslink.utils/Scheduler/later.html">later</a></span><span class="signature">(<wbr><span class="parameter" id="later-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Future</span>
@@ -186,23 +190,26 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="repeat" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/repeat.html">repeat</a></span><span class="signature">(<wbr><span class="parameter" id="repeat-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="repeat-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/repeat.html">repeat</a></span><span class="signature">(<wbr><span class="parameter" id="repeat-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span>, </span> <span class="parameter" id="repeat-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="runAfter" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/runAfter.html">runAfter</a></span><span class="signature">(<wbr><span class="parameter" id="runAfter-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span></span>, <span class="parameter" id="runAfter-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/runAfter.html">runAfter</a></span><span class="signature">(<wbr><span class="parameter" id="runAfter-param-duration"><span class="type-annotation">Duration</span> <span class="parameter-name">duration</span>, </span> <span class="parameter" id="runAfter-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Timer</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="runLater" class="callable">
           <span class="name"><a href="dslink.utils/Scheduler/runLater.html">runLater</a></span><span class="signature">(<wbr><span class="parameter" id="runLater-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; void</span>
@@ -210,23 +217,26 @@
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="safeEvery" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/safeEvery.html">safeEvery</a></span><span class="signature">(<wbr><span class="parameter" id="safeEvery-param-interval"><span class="parameter-name">interval</span></span>, <span class="parameter" id="safeEvery-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/safeEvery.html">safeEvery</a></span><span class="signature">(<wbr><span class="parameter" id="safeEvery-param-interval"><span class="parameter-name">interval</span>, </span> <span class="parameter" id="safeEvery-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; <a href="dslink.utils/Disposable-class.html">Disposable</a></span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
         <dt id="tick" class="callable">
-          <span class="name"><a href="dslink.utils/Scheduler/tick.html">tick</a></span><span class="signature">(<wbr><span class="parameter" id="tick-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span></span>, <span class="parameter" id="tick-param-interval"><span class="type-annotation"><a href="dslink/Interval-class.html">Interval</a></span> <span class="parameter-name">interval</span></span>, <span class="parameter" id="tick-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+          <span class="name"><a href="dslink.utils/Scheduler/tick.html">tick</a></span><span class="signature">(<wbr><span class="parameter" id="tick-param-times"><span class="type-annotation">int</span> <span class="parameter-name">times</span>, </span> <span class="parameter" id="tick-param-interval"><span class="type-annotation"><a href="dslink.utils/Interval-class.html">Interval</a></span> <span class="parameter-name">interval</span>, </span> <span class="parameter" id="tick-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
             <span class="returntype parameter">&#8594; Future</span>
           </span>
         </dt>
         <dd>
           <p></p>
-        </dd>
+          
+</dd>
       </dl>
     </section>
 
@@ -252,11 +262,8 @@
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.utils/Scheduler/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.utils/Scheduler/runtimeType.html">runtimeType</a></span>
@@ -264,9 +271,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -280,10 +285,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.utils/Scheduler/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -296,10 +300,9 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.utils/Scheduler/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.utils/Scheduler/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -308,7 +311,7 @@
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -358,7 +361,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -378,6 +381,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

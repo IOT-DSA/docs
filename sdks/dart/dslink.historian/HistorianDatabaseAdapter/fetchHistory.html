@@ -55,7 +55,7 @@
         </ol>
         <div class="title-description">
           <h1 class="title">
-            <span class="kind">method</span> fetchHistory
+            <span class="kind">abstract method</span> fetchHistory
           </h1>
         </div>
         <ul class="subnav">
@@ -97,10 +97,10 @@
       <li><a href="dslink.historian/HistorianDatabaseAdapter/close.html">close</a></li>
       <li><a href="dslink.historian/HistorianDatabaseAdapter/fetchHistory.html">fetchHistory</a></li>
       <li><a href="dslink.historian/HistorianDatabaseAdapter/getSummary.html">getSummary</a></li>
-      <li class="inherited"><a href="dslink.historian/HistorianDatabaseAdapter/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.historian/HistorianDatabaseAdapter/purgeGroup.html">purgeGroup</a></li>
       <li><a href="dslink.historian/HistorianDatabaseAdapter/purgePath.html">purgePath</a></li>
       <li><a href="dslink.historian/HistorianDatabaseAdapter/store.html">store</a></li>
+      <li class="inherited"><a href="dslink.historian/HistorianDatabaseAdapter/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.historian/HistorianDatabaseAdapter/toString.html">toString</a></li>
     </ol>
 
@@ -109,12 +109,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Stream&lt;<a href="dslink.historian/ValuePair-class.html">ValuePair</a>&gt;</span>
-      <span class="name ">fetchHistory</span>(<wbr><span class="parameter" id="fetchHistory-param-group"><span class="type-annotation">String</span> <span class="parameter-name">group</span></span>, <span class="parameter" id="fetchHistory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, <span class="parameter" id="fetchHistory-param-range"><span class="type-annotation"><a href="dslink.historian/TimeRange-class.html">TimeRange</a></span> <span class="parameter-name">range</span></span>)
+      <span class="name ">fetchHistory</span>(<wbr><span class="parameter" id="fetchHistory-param-group"><span class="type-annotation">String</span> <span class="parameter-name">group</span>, </span> <span class="parameter" id="fetchHistory-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, </span> <span class="parameter" id="fetchHistory-param-range"><span class="type-annotation"><a href="dslink.historian/TimeRange-class.html">TimeRange</a></span> <span class="parameter-name">range</span></span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/historian.dart.html#line-480'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Stream&lt;ValuePair&gt; fetchHistory(String group, String path, TimeRange range);</code></pre>
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Stream&lt;ValuePair&gt; fetchHistory(String group, String path, TimeRange range);</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -127,7 +127,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -147,6 +147,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

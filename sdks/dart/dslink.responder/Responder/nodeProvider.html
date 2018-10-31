@@ -82,31 +82,30 @@
       <li class="section-title">
         <a href="dslink.responder/Responder-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/connection.html">connection</a></li>
+      <li><a href="dslink.responder/Responder/disabled.html">disabled</a></li>
       <li><a href="dslink.responder/Responder/groups.html">groups</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/Responder/maxCacheLength.html">maxCacheLength</a></li>
+      <li><a href="dslink.responder/Responder/maxPermission.html">maxPermission</a></li>
       <li><a href="dslink.responder/Responder/nodeProvider.html">nodeProvider</a></li>
+      <li><a href="dslink.responder/Responder/openResponseCount.html">openResponseCount</a></li>
       <li><a href="dslink.responder/Responder/reqId.html">reqId</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.responder/Responder/storage.html">storage</a></li>
+      <li><a href="dslink.responder/Responder/subscriptionCount.html">subscriptionCount</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/connection.html">connection</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/Responder-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/Responder/operator_equals.html">operator ==</a></li>
     
       <li class="section-title"><a href="dslink.responder/Responder-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addProcessor.html">addProcessor</a></li>
       <li><a href="dslink.responder/Responder/addResponse.html">addResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/addToSendList.html">addToSendList</a></li>
       <li><a href="dslink.responder/Responder/addTraceCallback.html">addTraceCallback</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
       <li><a href="dslink.responder/Responder/close.html">close</a></li>
       <li><a href="dslink.responder/Responder/closeResponse.html">closeResponse</a></li>
-      <li class="inherited"><a href="dslink.browser/ConnectionHandler/getSendingData.html">getSendingData</a></li>
       <li><a href="dslink.responder/Responder/initStorage.html">initStorage</a></li>
       <li><a href="dslink.responder/Responder/invoke.html">invoke</a></li>
       <li><a href="dslink.responder/Responder/list.html">list</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/Responder/onData.html">onData</a></li>
       <li><a href="dslink.responder/Responder/onDisconnected.html">onDisconnected</a></li>
       <li><a href="dslink.responder/Responder/onReconnected.html">onReconnected</a></li>
@@ -114,12 +113,17 @@
       <li><a href="dslink.responder/Responder/removeTraceCallback.html">removeTraceCallback</a></li>
       <li><a href="dslink.responder/Responder/set.html">set</a></li>
       <li><a href="dslink.responder/Responder/subscribe.html">subscribe</a></li>
-      <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
       <li><a href="dslink.responder/Responder/traceResponseRemoved.html">traceResponseRemoved</a></li>
       <li><a href="dslink.responder/Responder/unsubscribe.html">unsubscribe</a></li>
       <li><a href="dslink.responder/Responder/updateGroups.html">updateGroups</a></li>
       <li><a href="dslink.responder/Responder/updateInvoke.html">updateInvoke</a></li>
       <li><a href="dslink.responder/Responder/updateResponse.html">updateResponse</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addProcessor.html">addProcessor</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/addToSendList.html">addToSendList</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/clearProcessors.html">clearProcessors</a></li>
+      <li class="inherited"><a href="dslink.common/ConnectionHandler/getSendingData.html">getSendingData</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/noSuchMethod.html">noSuchMethod</a></li>
+      <li class="inherited"><a href="dslink.responder/Responder/toString.html">toString</a></li>
     </ol>
 
   </div><!--/.sidebar-offcanvas-->
@@ -127,10 +131,8 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
 
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></span>
-        <span class="name ">nodeProvider</span>        <div class="features">
-          read-only
-        </div>
+      <span class="returntype"><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></span>
+        <span class="name ">nodeProvider</span>        <div class="features">final</div>
     </section>
 
     <section class="desc markdown">
@@ -149,7 +151,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -169,6 +171,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -84,13 +84,13 @@
       </li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/columns.html">columns</a></li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/error.html">error</a></li>
-      <li class="inherited"><a href="dslink.requester/RequesterInvokeUpdate/hashCode.html">hashCode</a></li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/meta.html">meta</a></li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/rawColumns.html">rawColumns</a></li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/rows.html">rows</a></li>
-      <li class="inherited"><a href="dslink.requester/RequesterInvokeUpdate/runtimeType.html">runtimeType</a></li>
-      <li class="inherited"><a href="dslink.browser/RequesterUpdate/streamStatus.html">streamStatus</a></li>
       <li><a href="dslink.requester/RequesterInvokeUpdate/updates.html">updates</a></li>
+      <li class="inherited"><a href="dslink.requester/RequesterInvokeUpdate/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.requester/RequesterInvokeUpdate/runtimeType.html">runtimeType</a></li>
+      <li class="inherited"><a href="dslink.requester/RequesterUpdate/streamStatus.html">streamStatus</a></li>
     
       <li class="section-title inherited"><a href="dslink.requester/RequesterInvokeUpdate-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.requester/RequesterInvokeUpdate/operator_equals.html">operator ==</a></li>
@@ -112,6 +112,60 @@
         <span class="name ">rows</span></section>
       
       </section>
+      <section class="summary source-code" id="source">
+        <h2><span>Source</span> </h2>
+        <pre class="prettyprint language-dart">List&lt;List&gt; get rows {
+  int colLen = -1;
+  if (columns != null) {
+    colLen = columns.length;
+  }
+  if (_rows == null) {
+    _rows = [];
+    if (updates == null) {
+      return _rows;
+    }
+    for (Object obj in updates) {
+      List&lt;dynamic&gt; row;
+      if (obj is List) {
+        if (obj.length &lt; colLen) {
+          row = obj.toList();
+          for (int i = obj.length; i &lt; colLen; ++i) {
+            row.add(columns[i].defaultValue);
+          }
+        } else if (obj.length &gt; colLen) {
+          if (colLen == -1) {
+            &#47;&#47; when column is unknown, just return all values
+            row = obj.toList();
+          } else {
+            row = obj.sublist(0, colLen);
+          }
+        } else {
+          row = obj;
+        }
+      } else if (obj is Map) {
+        row = [];
+        if (columns == null) {
+          Map map = obj;
+          List&lt;String&gt; keys = map.keys.map((k) =&gt; k.toString()).toList();
+          columns = keys.map((x) =&gt; new TableColumn(x, &quot;dynamic&quot;)).toList();
+        }
+
+        if (columns != null) {
+          for (TableColumn column in columns) {
+            if (obj.containsKey(column.name)) {
+              row.add(obj[column.name]);
+            } else {
+              row.add(column.defaultValue);
+            }
+          }
+        }
+      }
+      _rows.add(row);
+    }
+  }
+  return _rows;
+}</pre>
+      </section>
 
 
   </div> <!-- /.main-content -->
@@ -124,7 +178,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -144,6 +198,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

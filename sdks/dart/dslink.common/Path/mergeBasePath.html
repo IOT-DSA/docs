@@ -82,6 +82,7 @@
       <li><a href="dslink.common/Path/invalidNameChar.html">invalidNameChar</a></li>
     
       <li class="section-title"><a href="dslink.common/Path-class.html#static-methods">Static methods</a></li>
+      <li><a href="dslink.common/Path/escapeName.html">escapeName</a></li>
       <li><a href="dslink.common/Path/getValidAttributePath.html">getValidAttributePath</a></li>
       <li><a href="dslink.common/Path/getValidConfigPath.html">getValidConfigPath</a></li>
       <li><a href="dslink.common/Path/getValidNodePath.html">getValidNodePath</a></li>
@@ -93,7 +94,6 @@
       <li class="section-title">
         <a href="dslink.common/Path-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.common/Path/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/Path/isAbsolute.html">isAbsolute</a></li>
       <li><a href="dslink.common/Path/isAttribute.html">isAttribute</a></li>
       <li><a href="dslink.common/Path/isConfig.html">isConfig</a></li>
@@ -103,8 +103,9 @@
       <li><a href="dslink.common/Path/parent.html">parent</a></li>
       <li><a href="dslink.common/Path/parentPath.html">parentPath</a></li>
       <li><a href="dslink.common/Path/path.html">path</a></li>
-      <li class="inherited"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/Path/valid.html">valid</a></li>
+      <li class="inherited"><a href="dslink.common/Path/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/Path/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/Path-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/Path/operator_equals.html">operator ==</a></li>
@@ -121,38 +122,38 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">void</span>
-      <span class="name ">mergeBasePath</span>(<wbr><span class="parameter" id="mergeBasePath-param-base"><span class="type-annotation">String</span> <span class="parameter-name">base</span></span>, [<span class="parameter" id="mergeBasePath-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span> = <span class="default-value">false</span></span>])
+      <span class="name ">mergeBasePath</span>(<wbr><span class="parameter" id="mergeBasePath-param-base"><span class="type-annotation">String</span> <span class="parameter-name">base</span>, [</span> <span class="parameter" id="mergeBasePath-param-force"><span class="type-annotation">bool</span> <span class="parameter-name">force</span> = <span class="default-value">false</span></span> ])
     </section>
     <section class="desc markdown">
       <p>Merges the <code>base</code> path with this path.</p>
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/node.dart.html#line-298'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">void mergeBasePath(String base, [bool force = false]) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">void mergeBasePath(String base, [bool force = false]) {
   if (base == null) {
     return;
   }
 
   if (!isAbsolute) {
-    if (parentPath == &apos;&apos;) {
+    if (parentPath == &#39;&#39;) {
       parentPath = base;
     } else {
-      parentPath = &apos;$base/$parentPath&apos;;
+      parentPath = &#39;$base&#47;$parentPath&#39;;
     }
-    path = &apos;$parentPath/$name&apos;;
+    path = &#39;$parentPath&#47;$name&#39;;
   } else if (force) {
-    // apply base path on a absolute path
-    if (name == &apos;&apos;) {
-      // map the root path
+    &#47;&#47; apply base path on a absolute path
+    if (name == &#39;&#39;) {
+      &#47;&#47; map the root path
       path = base;
       _parse();
     } else {
-      parentPath = &apos;$base$parentPath&apos;;
-      path = &apos;$parentPath/$name&apos;;
+      parentPath = &#39;$base$parentPath&#39;;
+      path = &#39;$parentPath&#47;$name&#39;;
     }
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -165,7 +166,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -185,6 +186,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

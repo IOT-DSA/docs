@@ -60,6 +60,7 @@
           <li><a href="dslink.responder/NodeProviderImpl-class.html#instance-properties">Properties</a></li>
           <li><a href="dslink.responder/NodeProviderImpl-class.html#constructors">Constructors</a></li>
           <li><a href="dslink.responder/NodeProviderImpl-class.html#operators">Operators</a></li>
+          <li><a href="dslink.responder/NodeProviderImpl-class.html#instance-methods">Methods</a></li>
         </ul>
       </div> <!-- /col -->
     </div> <!-- /row -->
@@ -77,6 +78,7 @@
     <ol>
     
       <li class="section-title"><a href="dslink.responder/dslink.responder-library.html#typedefs">Typedefs</a></li>
+      <li><a href="dslink.responder/IconResolver.html">IconResolver</a></li>
       <li><a href="dslink.responder/InvokeCallback.html">InvokeCallback</a></li>
       <li><a href="dslink.responder/NodeFactory.html">NodeFactory</a></li>
       <li><a href="dslink.responder/OnInvokeClosed.html">OnInvokeClosed</a></li>
@@ -120,6 +122,7 @@
       <li><a href="dslink.responder/SimpleNodeProvider-class.html">SimpleNodeProvider</a></li>
       <li><a href="dslink.responder/SimpleTableResult-class.html">SimpleTableResult</a></li>
       <li><a href="dslink.responder/SubscribeResponse-class.html">SubscribeResponse</a></li>
+      <li><a href="dslink.responder/SysGetIconNode-class.html">SysGetIconNode</a></li>
       <li><a href="dslink.responder/WaitForMe-class.html">WaitForMe</a></li>
     
     </ol>
@@ -133,7 +136,7 @@
         <dt>Inheritance</dt>
         <dd><ul class="gt-separated dark clazz-relationships">
           <li>Object</li>
-          <li><a href="dslink.browser/NodeProvider-class.html">NodeProvider</a></li>
+          <li><a href="dslink.responder/NodeProvider-class.html">NodeProvider</a></li>
           <li>NodeProviderImpl</li>
         </ul></dd>
 
@@ -163,36 +166,29 @@
       <h2>Properties</h2>
 
       <dl class="properties">
+        <dt id="nodes" class="property">
+          <span class="name"><a href="dslink.responder/NodeProviderImpl/nodes.html">nodes</a></span>
+          <span class="signature">&#8594; Map&lt;String, <a href="dslink.responder/LocalNode-class.html">LocalNode</a>&gt;</span>
+        </dt>
+        <dd>
+          <p></p>
+          <div class="features">read-only</div>
+</dd>
         <dt id="hashCode" class="property inherited">
           <span class="name"><a href="dslink.responder/NodeProviderImpl/hashCode.html">hashCode</a></span>
           <span class="signature">&#8594; int</span>
         </dt>
         <dd class="inherited">
-          <p>Get a hash code for this object.<a href="dslink.responder/NodeProviderImpl/hashCode.html">&hellip;</a>
-</p>
-          <div class="features">
-    read-only, inherited
-  </div>
-</dd>
-        <dt id="nodes" class="property">
-          <span class="name"><a href="dslink.responder/NodeProviderImpl/nodes.html">nodes</a></span>
-          <span class="signature">&#8594; Map&lt;String, <a href="dslink/LocalNode-class.html">LocalNode</a>&gt;</span>
-        </dt>
-        <dd>
-          <p></p>
-          <div class="features">
-    read-only
-  </div>
+          <p>The hash code for this object.</p>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="permissions" class="property inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/permissions.html">permissions</a></span>
-          <span class="signature">&#8594; <a href="dslink/IPermissionManager-class.html">IPermissionManager</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/permissions.html">permissions</a></span>
+          <span class="signature">&#8594; <a href="dslink.responder/IPermissionManager-class.html">IPermissionManager</a></span>
         </dt>
         <dd class="inherited">
           <p>Get Permissions.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
           <span class="name"><a href="dslink.responder/NodeProviderImpl/runtimeType.html">runtimeType</a></span>
@@ -200,9 +196,7 @@
         </dt>
         <dd class="inherited">
           <p>A representation of the runtime type of the object.</p>
-          <div class="features">
-    read-only, inherited
-  </div>
+          <div class="features">read-only, inherited</div>
 </dd>
       </dl>
     </section>
@@ -216,28 +210,27 @@
           </span>
         </dt>
         <dd class="inherited">
-          <p>The equality operator.<a href="dslink.responder/NodeProviderImpl/operator_equals.html">&hellip;</a>
-</p>
+          <p>The equality operator.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="operator []" class="callable inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/operator_get.html">operator []</a></span><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></span><span class="signature">(<wbr><span class="parameter" id="[]-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>Gets an existing node, or creates a dummy node for a requester to listen on.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="operator ~" class="callable inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>Get the root node.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -245,44 +238,42 @@
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="createResponder" class="callable inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span></span>, <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/Responder-class.html">Responder</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/createResponder.html">createResponder</a></span><span class="signature">(<wbr><span class="parameter" id="createResponder-param-dsId"><span class="type-annotation">String</span> <span class="parameter-name">dsId</span>, </span> <span class="parameter" id="createResponder-param-sessionId"><span class="type-annotation">String</span> <span class="parameter-name">sessionId</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/Responder-class.html">Responder</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>Create a Responder</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="getNode" class="callable inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/getNode.html">getNode</a></span><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/getNode.html">getNode</a></span><span class="signature">(<wbr><span class="parameter" id="getNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>)
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>Gets an existing node.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="getOrCreateNode" class="callable inherited">
-          <span class="name"><a href="dslink.browser/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></span><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span></span>, [<span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span>])
-            <span class="returntype parameter">&#8594; <a href="dslink/LocalNode-class.html">LocalNode</a></span>
+          <span class="name"><a href="dslink.responder/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></span><span class="signature">(<wbr><span class="parameter" id="getOrCreateNode-param-path"><span class="type-annotation">String</span> <span class="parameter-name">path</span>, [</span> <span class="parameter" id="getOrCreateNode-param-addToTree"><span class="type-annotation">bool</span> <span class="parameter-name">addToTree</span> = <span class="default-value">true</span></span> ])
+            <span class="returntype parameter">&#8594; <a href="dslink.responder/LocalNode-class.html">LocalNode</a></span>
           </span>
         </dt>
         <dd class="inherited">
           <p>Gets a node at the given <code>path</code> if it exists.
-If it does not exist, create a new node and return it.<a href="dslink.browser/NodeProvider/getOrCreateNode.html">&hellip;</a>
-</p>
+If it does not exist, create a new node and return it.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="dslink.responder/NodeProviderImpl/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation">Invocation</span> <span class="parameter-name">invocation</span></span>)
             <span class="returntype parameter">&#8594; dynamic</span>
           </span>
         </dt>
         <dd class="inherited">
-          <p>Invoked when a non-existent method or property is accessed.<a href="dslink.responder/NodeProviderImpl/noSuchMethod.html">&hellip;</a>
-</p>
+          <p>Invoked when a non-existent method or property is accessed.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="dslink.responder/NodeProviderImpl/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; String</span>
@@ -291,7 +282,7 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/No
         <dd class="inherited">
           <p>Returns a string representation of this object.</p>
           <div class="features">inherited</div>
-        </dd>
+</dd>
       </dl>
     </section>
 
@@ -309,20 +300,20 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/No
       <li class="section-title">
         <a href="dslink.responder/NodeProviderImpl-class.html#instance-properties">Properties</a>
       </li>
-      <li class="inherited"><a href="dslink.responder/NodeProviderImpl/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/NodeProviderImpl/nodes.html">nodes</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/permissions.html">permissions</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProviderImpl/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/permissions.html">permissions</a></li>
       <li class="inherited"><a href="dslink.responder/NodeProviderImpl/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/NodeProviderImpl-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/NodeProviderImpl/operator_equals.html">operator ==</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_get.html">operator []</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_get.html">operator []</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/operator_bitwise_negate.html">operator ~</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/NodeProviderImpl-class.html#instance-methods">Methods</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/createResponder.html">createResponder</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/getNode.html">getNode</a></li>
-      <li class="inherited"><a href="dslink.browser/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/createResponder.html">createResponder</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/getNode.html">getNode</a></li>
+      <li class="inherited"><a href="dslink.responder/NodeProvider/getOrCreateNode.html">getOrCreateNode</a></li>
       <li class="inherited"><a href="dslink.responder/NodeProviderImpl/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/NodeProviderImpl/toString.html">toString</a></li>
     </ol>
@@ -336,7 +327,7 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/No
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -356,6 +347,7 @@ If it does not exist, create a new node and return it.<a href="dslink.browser/No
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

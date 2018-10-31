@@ -113,12 +113,12 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       <span class="returntype">Timer</span>
-      <span class="name ">every</span>(<wbr><span class="parameter" id="every-param-interval"><span class="parameter-name">interval</span></span>, <span class="parameter" id="every-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
+      <span class="name ">every</span>(<wbr><span class="parameter" id="every-param-interval"><span class="parameter-name">interval</span>, </span> <span class="parameter" id="every-param-action"><span class="type-annotation">dynamic</span> <span class="parameter-name">action</span>()</span>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/utils.dart.html#line-283'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">static Timer every(interval, action()) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">static Timer every(interval, action()) {
   Duration duration;
 
   if (interval is Duration) {
@@ -134,7 +134,7 @@
   return new Timer.periodic(duration, (timer) async {
     await runZoned(action, zoneValues: {&quot;dslink.scheduler.timer&quot;: timer});
   });
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -147,7 +147,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -167,6 +167,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

@@ -87,13 +87,14 @@
         <a href="dslink.responder/ListResponse-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.responder/ListResponse/changes.html">changes</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/ListResponse/initialResponse.html">initialResponse</a></li>
       <li><a href="dslink.responder/ListResponse/node.html">node</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/responder.html">responder</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/rid.html">rid</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/responder.html">responder</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/rid.html">rid</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/runtimeType.html">runtimeType</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/sentStreamStatus.html">sentStreamStatus</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/type.html">type</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/ListResponse-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/operator_equals.html">operator ==</a></li>
@@ -101,11 +102,11 @@
       <li class="section-title"><a href="dslink.responder/ListResponse-class.html#instance-methods">Methods</a></li>
       <li><a href="dslink.responder/ListResponse/ackReceived.html">ackReceived</a></li>
       <li><a href="dslink.responder/ListResponse/changed.html">changed</a></li>
-      <li class="inherited"><a href="dslink.browser/Response/close.html">close</a></li>
       <li><a href="dslink.responder/ListResponse/getTraceData.html">getTraceData</a></li>
-      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/ListResponse/prepareSending.html">prepareSending</a></li>
       <li><a href="dslink.responder/ListResponse/startSendingData.html">startSendingData</a></li>
+      <li class="inherited"><a href="dslink.responder/Response/close.html">close</a></li>
+      <li class="inherited"><a href="dslink.responder/ListResponse/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/ListResponse/toString.html">toString</a></li>
     </ol>
 
@@ -114,14 +115,14 @@
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
       
-            <span class="name ">ListResponse</span>(<wbr><span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span></span>, <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span></span>, <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.browser/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>)
+            <span class="name ">ListResponse</span>(<wbr><span class="parameter" id="-param-responder"><span class="type-annotation"><a href="dslink.responder/Responder-class.html">Responder</a></span> <span class="parameter-name">responder</span>, </span> <span class="parameter" id="-param-rid"><span class="type-annotation">int</span> <span class="parameter-name">rid</span>, </span> <span class="parameter" id="-param-node"><span class="type-annotation"><a href="dslink.responder/LocalNode-class.html">LocalNode</a></span> <span class="parameter-name">node</span></span>)
     </section>
 
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/response/list.dart.html#line-7'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">ListResponse(Responder responder, int rid, this.node)
-    : super(responder, rid) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">ListResponse(Responder responder, int rid, this.node)
+    : super(responder, rid, &#39;list&#39;) {
   _permission =
       responder.nodeProvider.permissions.getPermission(node.path, responder);
   _nodeChangeListener = node.listStream.listen(changed);
@@ -130,7 +131,7 @@
   } else if (node.disconnected != null) {
     prepareSending();
   }
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -143,7 +144,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -163,6 +164,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

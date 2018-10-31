@@ -89,10 +89,10 @@
         <a href="dslink.common/TableColumn-class.html#instance-properties">Properties</a>
       </li>
       <li><a href="dslink.common/TableColumn/defaultValue.html">defaultValue</a></li>
-      <li class="inherited"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></li>
       <li><a href="dslink.common/TableColumn/name.html">name</a></li>
-      <li class="inherited"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></li>
       <li><a href="dslink.common/TableColumn/type.html">type</a></li>
+      <li class="inherited"><a href="dslink.common/TableColumn/hashCode.html">hashCode</a></li>
+      <li class="inherited"><a href="dslink.common/TableColumn/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.common/TableColumn-class.html#operators">Operators</a></li>
       <li class="inherited"><a href="dslink.common/TableColumn/operator_equals.html">operator ==</a></li>
@@ -107,19 +107,23 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype">Map</span>
+      <span class="returntype">Map&lt;String, dynamic&gt;</span>
       <span class="name ">getData</span>(<wbr>)
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/common/table.dart.html#line-9'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">Map getData() {
-  Map rslt = {&quot;type&quot;: type, &quot;name&quot;: name};
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">Map&lt;String, dynamic&gt; getData() {
+  var rslt = &lt;String, dynamic&gt;{
+    &quot;type&quot;: type,
+    &quot;name&quot;: name
+  };
+
   if (defaultValue != null) {
     rslt[&quot;default&quot;] = defaultValue;
   }
   return rslt;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -132,7 +136,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -152,6 +156,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->

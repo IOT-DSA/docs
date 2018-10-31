@@ -88,9 +88,9 @@
       </li>
       <li><a href="dslink.responder/LiveTable/autoStartSend.html">autoStartSend</a></li>
       <li><a href="dslink.responder/LiveTable/columns.html">columns</a></li>
-      <li class="inherited"><a href="dslink.responder/LiveTable/hashCode.html">hashCode</a></li>
       <li><a href="dslink.responder/LiveTable/response.html">response</a></li>
       <li><a href="dslink.responder/LiveTable/rows.html">rows</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/hashCode.html">hashCode</a></li>
       <li class="inherited"><a href="dslink.responder/LiveTable/runtimeType.html">runtimeType</a></li>
     
       <li class="section-title inherited"><a href="dslink.responder/LiveTable-class.html#operators">Operators</a></li>
@@ -102,13 +102,13 @@
       <li><a href="dslink.responder/LiveTable/createRow.html">createRow</a></li>
       <li><a href="dslink.responder/LiveTable/doOnClose.html">doOnClose</a></li>
       <li><a href="dslink.responder/LiveTable/getCurrentState.html">getCurrentState</a></li>
-      <li class="inherited"><a href="dslink.responder/LiveTable/noSuchMethod.html">noSuchMethod</a></li>
       <li><a href="dslink.responder/LiveTable/onRowUpdate.html">onRowUpdate</a></li>
       <li><a href="dslink.responder/LiveTable/override.html">override</a></li>
       <li><a href="dslink.responder/LiveTable/refresh.html">refresh</a></li>
       <li><a href="dslink.responder/LiveTable/reindex.html">reindex</a></li>
       <li><a href="dslink.responder/LiveTable/resend.html">resend</a></li>
       <li><a href="dslink.responder/LiveTable/sendTo.html">sendTo</a></li>
+      <li class="inherited"><a href="dslink.responder/LiveTable/noSuchMethod.html">noSuchMethod</a></li>
       <li class="inherited"><a href="dslink.responder/LiveTable/toString.html">toString</a></li>
     </ol>
 
@@ -116,13 +116,13 @@
 
   <div class="col-xs-12 col-sm-9 col-md-8 main-content">
     <section class="multi-line-signature">
-      <span class="returntype"><a href="dslink/LiveTableRow-class.html">LiveTableRow</a></span>
-      <span class="name ">createRow</span>(<wbr><span class="parameter" id="createRow-param-values"><span class="type-annotation">List</span> <span class="parameter-name">values</span></span>, {<span class="parameter" id="createRow-param-ready"><span class="type-annotation">bool</span> <span class="parameter-name">ready</span>: <span class="default-value">true</span></span>})
+      <span class="returntype"><a href="dslink.responder/LiveTableRow-class.html">LiveTableRow</a></span>
+      <span class="name ">createRow</span>(<wbr><span class="parameter" id="createRow-param-values"><span class="type-annotation">List</span> <span class="parameter-name">values</span>, {</span> <span class="parameter" id="createRow-param-ready"><span class="type-annotation">bool</span> <span class="parameter-name">ready</span>: <span class="default-value">true</span></span> })
     </section>
     
     <section class="summary source-code" id="source">
-      <h2><span>Source</span> <a class='crossdart' href='//crossdart.info/p/dslink/0.5.8/src/responder/simple/simple_node.dart.html#line-113'>Link to Crossdart</a></h2>
-      <pre><code class="prettyprint lang-dart">LiveTableRow createRow(List&lt;dynamic&gt; values, {bool ready: true}) {
+      <h2><span>Source</span> </h2>
+      <pre class="prettyprint language-dart">LiveTableRow createRow(List&lt;dynamic&gt; values, {bool ready: true}) {
   if (values == null) values = [];
   var row = new LiveTableRow(this, values);
   row.index = rows.length;
@@ -133,7 +133,7 @@
     });
   }
   return row;
-}</code></pre>
+}</pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -146,7 +146,7 @@
     <div class="container">
       <p class="text-center">
         <span class="no-break">
-          dslink 0.5.8
+          dslink 1.0.0+1
         </span>
         &bull;
         <span class="no-break">
@@ -166,6 +166,7 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="static-assets/typeahead.bundle.min.js"></script>
 <script src="static-assets/prettify.js"></script>
+<script src="static-assets/URI.js"></script>
 <script src="static-assets/script.js"></script>
 <!-- Do not remove placeholder -->
 <!-- Footer Placeholder -->
